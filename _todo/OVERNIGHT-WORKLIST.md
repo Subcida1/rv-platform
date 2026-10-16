@@ -5014,3 +5014,18 @@ Ty asked the on-grid session to finish the overnight work. The 24 quick wins fro
 **HELD by the Cloud lane (conv-90eeb545), continuing in its stated order:** #5, #1/#4, #2, #3, #10, #23, then directory #20-22. #24 (affiliate disclosure) stays parked until signups exist.
 
 **Rules for both sessions:** `git fetch` before each push; explicit-path commits only; un-claim in this file if an item cannot be finished.
+
+## Market research 1/8 — competitor content landscape (2026-10-16)
+
+Ten RV sites mapped. **Ideas only — no action taken; these feed the content-planning sessions.** Recorded here so the plan starts from them rather than rediscovering them.
+
+1. **Tools-as-traffic is confirmed as the structural opening.** None of the ten competitors run calculators or troubleshooters as a content strategy, and it is our existing asset. The highest-value gap inside it is **solar / lithium / boondocking power**: Gone With The Wynns' flagship solar guides are from 2016 and unmaintained, and TechnoRV's connectivity guides stall around 2022-23. A current solar + lithium + power-draw set, backed by the solar-sizing and battery-bank calculators, is wide open.
+2. **Repair hubs should be diagnosis trees, not blog lists.** No competitor organises plumbing/electrical/HVAC/roof/chassis/appliances as a reference with a diagnostic order. `doityourselfrv` is the closest on repair content and stays article-only with thin category pages.
+3. **Ownership-phase repair-cost content is thin everywhere** — what breaks, what it costs, when it is due. That is the same reader the guides and the directory serve.
+4. **Do not fight etrailer on install and fitment queries.** Their content is catalog-bound. Own the pre-purchase decision layer in plain language.
+5. **RVshare's pattern is worth mirroring for services**: state-by-state guides, comparison posts, FAQ-embedded landing pages — once directory coverage supports it.
+6. **Freshness hygiene works** — rvblogger visibly updates old posts with an updated date. Our date-bump-on-substantive-change policy is the same idea, and it should stay consistent everywhere.
+7. **Repair-services discovery is uncontested.** The closest competitor content is The Dyrt's 2019 mobile-RV-repair piece. Directory SEO — state and city pages, and "mobile rv repair near me" at position 13.2 — is validated as the money lane.
+8. **Working-age full-timers (30-55, remote work) are underserved**; most full-timing content targets retirees. Internet, power and Starlink draw angles reach them.
+
+Full living doc: the digital-nomad goal files, `rv-market-map.md`.
