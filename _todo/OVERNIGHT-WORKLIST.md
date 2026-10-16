@@ -4892,3 +4892,12 @@ Seven pages, verified at tip `91677d99`. **The silo is confirmed closed; two ite
 - **#5 "certifed": VERIFIED VERBATIM -- the typo is Curt's.** Fetched the cited manual (`lci-support-doc.s3.amazonaws.com/aftermarket/curt%20product/ccd-0009269.pdf`) and it reads: "The best way to attain the pin weight is to take your 5th wheel to a certifed scale, i.e. CAT Scale." The page quotes it character for character. **No fix** -- the source wins for quoted material.
 - **#6 lede/short-version duplication on anode-rod and water-heater: recorded** with the other near-verbatim instances.
 - **#7 all seven carry "Last reviewed on Oct 15, 2026"** -- the date pass is real, which is the evidence the /about date claim was asking for.
+
+## Neo tools 16th rotation (2026-10-16, verified from the Cloud lane)
+
+Eight pages, verified at tip `c64f3a93`. **Four fixes confirmed, two applied, the rest clean.**
+
+- **#1-#4 verified fixed:** the brake table is server-rendered (third flag closed), the date/byline split is closed on all seven calculators plus brake-laws, the fuel-cost citation gap is closed, and the brake tool's in-body cross-links are healthy.
+- **#5 rv-loan silo: CONFIRMED, APPLIED.** Its only internal links were /about, /contact and two other tools. It now also links `/guides/rv-towing-capacity` -- the weight question that decides what the loan is even for.
+- **#6 snow-load manuals link: CONFIRMED, APPLIED.** It pointed at the `/manuals/` hub root; it now links `/manuals/exterior-and-body` for the roof and sealant documents, with `/manuals/brands` for the rest.
+- **Verified clean:** the hub's 15 live plus 4 pipeline cards, the Where-to-go-next strip, titles, H1s, dashes, FFFD, voice, and every hub card's arithmetic spot-checked.
