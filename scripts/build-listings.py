@@ -575,6 +575,31 @@ def build(kind):
                             ("stat-emerg", c["emerg"]), ("d-count", c["total"])):
             text, n = re.subn(r'(<b id="%s">)\d+(</b>)' % elem, r"\g<1>%d\g<2>" % value, text)
             assert n == 1, "%s: %s marker not found exactly once" % (slug, elem)
+        # THE MONEY QUERY, ON EVERY STATE PAGE. "mobile rv repair near me" is the site's
+        # nearest page-one ranking (position 13.2) and the state pages are where a local
+        # search lands. The heading is search-shaped on purpose -- Ty's own rule is that a
+        # heading is what people search with -- and the two answers are grounded in what the
+        # rows above actually carry, not in a promise the data cannot keep.
+        if 'Mobile RV repair near me in' not in text:
+            name = data["name"]
+            block = (
+                '<h2 class="sp-44">Mobile RV repair near me in %s</h2>\n'
+                '<div class="sp-14">\n'
+                '<details class="faq"><summary>How do I find a mobile RV technician near me in %s?'
+                '</summary><p>Search the list above. Every row says whether the business travels '
+                'to the RV or works from a shop, and which towns it covers, so you can see who '
+                'reaches you before you call.</p></details>\n'
+                '<details class="faq"><summary>Will a mobile technician come to a campsite in %s?'
+                '</summary><p>That is what mobile means: the work happens where the RV sits, '
+                'whether that is a campsite, a storage lot, a driveway or the side of the road. '
+                'Check the row coverage list against where you are parked.</p></details>\n'
+                '</div>\n') % (name, name, name)
+            marker = '<h2 class=" sp-44">RV repair directory FAQ</h2>'
+            if marker in text:
+                text = text.replace(marker, block + marker, 1)
+            else:
+                assert False, "%s: no FAQ heading to put the local section before" % slug
+
         # The closing line, the same one every guide and tool carries. It is added here
         # rather than in the page files so a new state cannot ship without it; the check
         # is on the class, so a rebuild is a no-op once it is present.
