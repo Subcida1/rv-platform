@@ -413,10 +413,10 @@
     "claims": "a0146313ebc9d955"
   },
   "guides/roof-snow-load.html": {
-    "hash": "a20a4f8da71d1796",
+    "hash": "edd4beca2390d1e5",
     "status": "verified",
-    "verified_by": "guide endings unified, step 2 (Ty 2026-10-14, \"Your recommendation on all\"): the thirty button-only guides now end with the same Related guides prose block the other seventeen use, because a sentence can say why the next page matters and a button can only repeat its title. Tool buttons survive as buttons, relabelled as actions rather than as relations. Every button target was checked against the prose before the row was removed; no link target was lost.",
-    "verified_at": "2026-10-14",
+    "verified_by": "two cross-links added to the Related guides block: condensation and roof leak repair (audit quick win #1)",
+    "verified_at": "2026-10-16",
     "sources": [],
     "spec": "_specs/roof-snow-load.md",
     "spec_waived": false,
