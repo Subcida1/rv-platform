@@ -4786,3 +4786,30 @@ verified character-for-character.
 state-page topic-matched block, the W3 maintenance interpretation (new page vs existing), the
 two-guide renderer's second-slot labels if he wants them curated.
 
+### The W3 build landed (same session, later)
+
+- `cdcd47d4` -- **the rescue page ships**: `guides/rv-black-tank-clogged`, built from the spec.
+  1,170-word body, six sources fetched and quoted verbatim, check-quotes 9/9 across 8 sources,
+  verify.py and ci.sh green. Both maintenance guides link it back; the guides hub, homepage,
+  manuals sanitation page and sitemap carry it; targets.json declares "rv black tank clogged".
+- **The fresh-context review ran on the third dispatch** (the first two failed on the platform:
+  "Listener connection closed", "App-server socket closed"; a headless CLI session failed with
+  "Timed out waiting for runtime-start-1"). It found six defects and all are applied: the H2S
+  callout's death sentence overstated what the agencies document (now mirrors the sibling page:
+  "The fatal cases on record are people who entered tanks and enclosed spaces"); three clearing
+  promises (meta, lede, short version) that no source makes; an unsourced two-round threshold;
+  an unsourced "over weeks"; an unsourced vent-pressure mechanism; and two Sources annotations
+  whose content was not on the page (the paper rule and the PPE line are now in the body).
+  check-quotes after the fixes: 10 quotes against 8 sources, all found.
+- `c062d814` -- **the two-guide renderer** (Ty's ruling). Cards carry up to two extra guides as
+  doc-links labelled from each guide's own h1 (`guide2`/`guide3`, `guide2_label` overrides).
+  Six slots: black-tank (routine + clogged rescue), refrigerator-absorption (fridge leveling),
+  house-battery (battery winter storage), roof-membrane (roof snow load), breaker-panel (two
+  appliances stopped at once). Five previously unreachable guides are now reachable; the four
+  activity guides stay cardless by design.
+
+**Pending Ty (the four live questions, unchanged):** the statewide multi-region repeat (dedupe
+vs label); the state-page topic-matched block; the W3 maintenance interpretation (confirm the
+existing rv-black-tank is the maintenance guide, or ask for a separate page); the two-guide
+second-slot labels (curated vs derived -- currently derived with overrides).
+
