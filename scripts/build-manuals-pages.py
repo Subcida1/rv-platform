@@ -161,10 +161,47 @@ RELATED = {
                                "rv-towing-capacity"],
 }
 
+# THE CURATED LIST IS NO LONGER THE WHOLE LIST (2026-10-15). RELATED kept its order but not its
+# coverage: guides added after it was written were mapped in _data/guide-systems.json -- the same
+# map the guide breadcrumbs use -- and never added here, so rv-heating-off-grid, the three
+# black-tank guides, the frame and window guides and a dozen others had no route in from the page
+# that catalogs their manuals. The primary set is derived from that map now: curated order first,
+# then any mapped guide missing from it. A new guide becomes reachable without anyone remembering
+# to edit this file. Cross-system entries (chassis listing towing guides) stay, because this list
+# is a superset of the map, not a mirror of it.
+GUIDE_SYSTEMS = json.loads(
+    (ROOT / "_data" / "guide-systems.json").read_text(encoding="utf-8"))["guides"]
+
+# The two taxonomies differ by one name: the guide breadcrumbs call the exterior system
+# "roof-and-body" while the manuals page is exterior-and-body. planning-and-travel has no
+# manuals page at all, so its guides are deliberately reachable from nowhere here.
+SYSTEM_ALIAS = {"roof-and-body": "exterior-and-body"}
+NO_PAGE = {"planning-and-travel"}
+
+
+def related_for(system):
+    curated = RELATED.get(system, [])
+    mapped = [g for g, s in GUIDE_SYSTEMS.items() if SYSTEM_ALIAS.get(s, s) == system]
+    return curated + [g for g in mapped if g not in curated]
+
+
+def check_system_coverage():
+    """Every system in the guide map must have a page here, an alias to one, or a stated reason.
+
+    The derivation above silently drops a guide whose system matches nothing, which is exactly
+    how the drift it fixes would look next time. So a system value that is neither a page key
+    nor an alias nor in NO_PAGE fails the build instead."""
+    known = set(RELATED) | set(SYSTEM_ALIAS) | NO_PAGE
+    orphans = sorted({s for s in GUIDE_SYSTEMS.values() if s not in known})
+    if orphans:
+        raise SystemExit("FAIL  guide-systems.json carries system(s) with no manuals page and no "
+                         "alias: %s -- add the page, an alias, or a NO_PAGE entry" % ", ".join(orphans))
+
 # Tools that answer a question the guides on a system page raise. Only where the match is
 # direct: a filter finder on the water page, a board finder on the appliances page.
-# heating-and-cooling has no direct tool match (snow-load is roof-adjacent at best), so it
-# gets none rather than a link that only nearly fits.
+# heating-and-cooling was left out on the snow-load argument (roof-adjacent at best); the
+# 14th rotation flagged it and watts-to-amps is the direct match after all -- the page's own
+# AC guide is half about the unit's draw.
 # ONE ENTRY PER TOOL, and a system can carry more than one. The 8th rotation queued the
 # topic-matched tool links for the five system pages that had none; water-and-plumbing and
 # kitchen-and-appliances landed first, and the rest land here. Power takes four because the
@@ -198,6 +235,10 @@ TOOLS = {
     "kitchen-and-appliances": [
         ("rv-appliance-board-finder", "appliance control board finder",
          "matches a control board to the model"),
+    ],
+    "heating-and-cooling": [
+        ("watts-to-amps", "watts to amps calculator",
+         "converts an appliance label into the draw it becomes"),
     ],
 }
 
@@ -894,7 +935,7 @@ def system_page(slug, title, desc, rows):
                 for i, r in enumerate(rows, 1)]}}
 
     links = []
-    for stem in RELATED.get(slug, []):
+    for stem in related_for(slug):
         t = guide_title(stem)
         if t:
             links.append('<li><a href="guides/%s.html">%s</a></li>' % (stem, esc(t)))
@@ -1496,6 +1537,7 @@ def pill_search(html):
 
 
 def main():
+    check_system_coverage()
     doc, error = R.load(MANIFEST)
     if error:
         print("FAIL  %s: %s" % (MANIFEST.relative_to(ROOT), error))
