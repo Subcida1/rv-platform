@@ -68,6 +68,7 @@
     "rv-frame-cracks": "roof-and-body",
     "rv-engine-overheating": "chassis-and-drivetrain",
     "rv-propane-tank-wont-fill": "heating-and-cooling",
-    "rv-chassis-battery-and-charging": "chassis-and-drivetrain"
+    "rv-chassis-battery-and-charging": "chassis-and-drivetrain",
+    "rv-black-tank-clogged": "sanitation-and-tanks"
   }
 }

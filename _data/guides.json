@@ -61,7 +61,8 @@
       "rv-frame-cracks",
       "rv-engine-overheating",
       "rv-propane-tank-wont-fill",
-      "rv-chassis-battery-and-charging"
+      "rv-chassis-battery-and-charging",
+      "rv-black-tank-clogged"
     ]
   }
 }
