@@ -92,6 +92,27 @@ def main():
           "every second guide on a card links to it (%d slots)" % len(extra_slots)
           + (": missing %s" % missing_extra[:5] if missing_extra else ""))
 
+    # THE CURATED FIVE (Ty, 2026-10-16: "curate, don't auto-derive"). The second slot is
+    # hand-picked per card, so a card losing its guide2 is a silent content regression, not a
+    # data change -- the same class as the brands ItemList and the manuals dates. The test
+    # above only checks that a slot WHICH EXISTS renders; this one names the five pairings.
+    CURATED_SECOND = {
+        "breaker-panel-and-120v-breakers": "rv-two-appliances-stopped",
+        "house-battery": "battery-winter-storage",
+        "black-tank": "rv-black-tank-routine",
+        "roof-membrane": "roof-snow-load",
+        "refrigerator-absorption": "rv-fridge-leveling",
+    }
+    # The black-tank card carries a third: the rescue page the W3 build added.
+    CURATED_THIRD = {"black-tank": "rv-black-tank-clogged"}
+    by_id = {p["id"]: p for s in systems for p in s["parts"]}
+    dropped = ["%s -> %s" % (i, g) for i, g in CURATED_SECOND.items()
+               if by_id.get(i, {}).get("guide2") != g]
+    dropped += ["%s -> %s (third)" % (i, g) for i, g in CURATED_THIRD.items()
+                if by_id.get(i, {}).get("guide3") != g]
+    check(not dropped, "the five curated second guides are still set"
+          + (": dropped or changed %s" % dropped if dropped else ""))
+
     maker_parts = [(s["key"], p) for s in systems for p in s["parts"] if p.get("makers")]
     missing_maker = []
     for _, p in maker_parts:
