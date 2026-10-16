@@ -16,12 +16,35 @@
 
  THE MARGIN: Battle Born recommends 20-30% extra capacity when
  space allows; the tool shows the raw and the +25% figure.
+
+ THE BANK (added 2026-10-16): Renogy's bank sizing method, daily
+ Wh / volts = daily Ah, then daily Ah / usable share = bank Ah,
+ with 80% usable for lithium and 50% for lead-acid (Renogy and
+ Battle Born both publish those). One day of autonomy is the
+ baseline; Renogy suggests 2-3 days in sunny areas.
  ============================================================ */
 (function () {
  'use strict';
 
  var DERATE = 0.77;   // NREL PVWatts default
  var MARGIN = 0.25;    // Battle Born: add 20-30%
+ var BANK = {
+   lifepo4: { usable: 0.80, volts: 12.8 },
+   lead:    { usable: 0.50, volts: 12.0 }
+ };
+ /* The appliance builder's rows: typical running watts from the tables this page cites
+    (Ask The RV Engineer's 12-volt draw table), each one editable. */
+ var APPLIANCES = [
+   ['LED lights (a few)', 30],
+   ['Furnace fan', 50],
+   ['Water pump', 80],
+   ['12-volt TV', 40],
+   ['Ceiling or vent fan', 30],
+   ['Fridge on propane (controls and fans)', 18],
+   ['Stereo', 15],
+   ['Laptop charger (through the inverter)', 65],
+   ['Phone or USB charging', 25]
+ ];
 
  function $(id) { return document.getElementById(id); }
  function num(id) {
@@ -72,6 +95,23 @@
      '<span>Battle Born recommends 20 to 30 percent extra when roof space allows; this is the middle of that</span></div>' +
      '<div class="v-val">' + Math.round(margined) + ' W</div></div>';
 
+   // the battery bank the same day needs, per Renogy's sizing method
+   var chemEl = $('s-chem');
+   var chem = chemEl && BANK[chemEl.value] ? chemEl.value : 'lifepo4';
+   var b = BANK[chem];
+   var dailyAh = wh / b.volts;
+   var bankAh = dailyAh / b.usable;
+   var bank2 = bankAh * 2;
+
+   rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>Battery bank to carry this day</b>' +
+     '<span>' + fmt(wh, 0) + ' Wh at ' + fmt(b.volts, 1) + ' V is ' + fmt(dailyAh, 0) + ' Ah a day; at ' +
+     Math.round(b.usable * 100) + '% usable that is a ' + Math.round(bankAh).toLocaleString('en-US') + ' Ah bank</span></div>' +
+     '<div class="v-val">' + Math.round(bankAh).toLocaleString('en-US') + ' Ah</div></div>';
+
+   rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>For a cloudy stretch</b>' +
+     '<span>Renogy suggests sizing for 2 to 3 days of autonomy in sunny areas; two days at this chemistry is ' + Math.round(bank2).toLocaleString('en-US') + ' Ah</span></div>' +
+     '<div class="v-val">' + Math.round(bank2).toLocaleString('en-US') + ' Ah</div></div>';
+
    // sanity check row: 200W per 100Ah lithium
    rows += '<div class="v-row ok"><div class="v-dot"></div><div class="v-txt"><b>Sanity check</b>' +
      '<span>Battle Born\'s guideline is roughly 200 W of solar per 100 Ah of lithium battery. If your bank is ' +
@@ -86,6 +126,38 @@
  if (w) w.addEventListener('input', update);
  var r = $('s-region');
  if (r) r.addEventListener('change', update);
+ var c = $('s-chem');
+ if (c) c.addEventListener('change', update);
+
+ /* The appliance builder: rows of typical watts and reader-entered hours. Any hours typed
+    produce a total that fills the daily watt-hours box, so the whole answer recomputes. */
+ var builder = $('s-builder');
+ if (builder) {
+   var bh = '';
+   for (var i = 0; i < APPLIANCES.length; i++) {
+     bh += '<div class="ldg-row">' +
+       '<span class="ldg-n">' + esc(APPLIANCES[i][0]) + '</span>' +
+       '<input class="ldg-w" type="text" inputmode="decimal" value="' + APPLIANCES[i][1] + '" aria-label="Watts for ' + esc(APPLIANCES[i][0]) + '">' +
+       '<input class="ldg-h" type="text" inputmode="decimal" placeholder="0" aria-label="Hours per day for ' + esc(APPLIANCES[i][0]) + '">' +
+       '<span class="ldg-u">W x h</span>' +
+       '</div>';
+   }
+   builder.innerHTML = bh;
+   builder.addEventListener('input', function () {
+     var total = 0, any = false;
+     var rowsEls = builder.querySelectorAll('.ldg-row');
+     for (var j = 0; j < rowsEls.length; j++) {
+       var wv = parseFloat(String(rowsEls[j].querySelector('.ldg-w').value).replace(/[^0-9.]/g, ''));
+       var hv = parseFloat(String(rowsEls[j].querySelector('.ldg-h').value).replace(/[^0-9.]/g, ''));
+       if (!isNaN(wv) && !isNaN(hv) && hv > 0) { total += wv * hv; any = true; }
+     }
+     if (any) {
+       var whEl = $('s-wh');
+       if (whEl) whEl.value = String(Math.round(total));
+       update();
+     }
+   });
+ }
  update();
 
  // test hooks

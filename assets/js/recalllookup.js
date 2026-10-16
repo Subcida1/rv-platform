@@ -366,6 +366,19 @@
       h += '<p class="tool-save"><button class="btn btn-secondary btn-sm" type="button" '
          + 'data-rl="reset">Start over</button></p></div>';
 
+      /* A RECALL IS DEALER WORK, AND THE READER MAY NOT HAVE A DEALER (quick wins #17,
+         2026-10-16). NHTSA's own guidance is to contact your local dealership and that the fix
+         is free to the owner; the directory is where a reader with no local dealer, or a unit
+         that cannot be driven, finds somebody. Shown only when there are campaigns: a CTA on
+         an empty result would be selling a service rather than answering a question. */
+      if (state.campaigns.length) {
+        h += '<div class="panel panel-24"><h3>Getting the work done</h3>'
+           + '<p class="body-15">A recall is repaired by a dealer, and NHTSA\u2019s guidance is '
+           + 'that the fix is free to the owner. If the dealer you would use is far away, or the '
+           + 'unit cannot be driven there, <a class="link" href="/directory/">the RV service '
+           + 'directory</a> lists mobile technicians and service centers by state.</p></div>';
+      }
+
       /* The hazard summary. Four campaigns in NHTSA's order is not something a reader can act on; the
        * question is which one is the fire. The buttons are also the filter, and they hide campaigns
        * rather than re-rendering, so nothing is lost by looking. */

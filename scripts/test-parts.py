@@ -5,8 +5,8 @@
      A reference that quietly drops a part is worse than no reference, and the failure is invisible
      by eye at 210 rows.
   2. EVERY PART LINKS WHERE IT SAYS IT LINKS. A part with a `guide` carries a link to that guide; a
-     part with makers carries one link per maker. Parts with neither are fine and simply carry no
-     link block.
+     part with makers carries one link per maker. Parts with neither carry a line saying so rather
+     than an empty space.
   3. THE INDEX'S INTERNAL FIELDS DO NOT LEAK. `fails` and `demand` are deliberately NOT published:
      the failure modes are written in our own words rather than the maker's, and the site's rule is
      that a claim cites the maker or is cut. This test is what stops them arriving on the page later
@@ -81,6 +81,14 @@ def main():
     check(not missing_guide,
           "every part with a guide links to it (%d parts)" % len(guide_parts)
           + (": missing %s" % missing_guide[:5] if missing_guide else ""))
+
+    # 2b. A CARD WITH NOTHING TO LINK SAYS SO (quick wins #13, 2026-10-16).
+    cards = re.findall(r'<li class="part" id="[^"]*".*?</li>', html, re.S)
+    no_links = [c for c in cards if 'class="part-links"' not in c]
+    check(all('part-none' in c for c in no_links),
+          "every card with no link says so (%d cards)" % len(no_links))
+    check(all('part-none' not in c for c in cards if 'class="part-links"' in c),
+          "no linked card carries the dead-end line")
 
     # THE SECOND SLOT (Ty, 2026-10-15). A card can carry guide2 and guide3 as doc-links;
     # each one must actually be on the card, same rule as the primary.

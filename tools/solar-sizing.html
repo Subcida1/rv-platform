@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/solar-sizing">
   <title>RV Solar Panel Calculator: How Many Watts You Need</title>
-  <meta name="description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied and the maker-recommended margin shown too.">
-  <link rel="stylesheet" href="assets/css/style.css?v=3dd143c3">
+  <meta name="description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied, the maker-recommended margin shown, and the battery bank the day takes.">
+  <link rel="stylesheet" href="assets/css/style.css?v=08931189">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#3d7fc2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RV Solar Panel Calculator: How Many Watts You Need">
-<meta property="og:description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied and the maker-recommended margin shown too.">
+<meta property="og:description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied, the maker-recommended margin shown, and the battery bank the day takes.">
 <meta property="og:url" content="https://originrv.com/tools/solar-sizing">
 <meta property="og:site_name" content="OriginRV">
 <meta property="og:image" content="https://originrv.com/assets/img/brand/og-default.png">
@@ -26,7 +26,7 @@
 <meta name="twitter:image:alt" content="OriginRV">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RV Solar Panel Calculator: How Many Watts You Need">
-<meta name="twitter:description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied and the maker-recommended margin shown too.">
+<meta name="twitter:description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied, the maker-recommended margin shown, and the battery bank the day takes.">
 <script type="application/ld+json">{"dateModified":"2026-10-16","@context": "https://schema.org", "@type": "WebApplication", "name": "RV Solar Sizing Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://originrv.com/tools/solar-sizing", "description": "Size RV solar from your daily watt-hours and your location's peak sun hours.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "OriginRV", "url": "https://originrv.com/"}}</script>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
@@ -60,6 +60,11 @@
        <input id="s-wh" type="text" inputmode="decimal" placeholder="1200">
        <span class="hint">How to get it: multiply each item's label watts by the hours you run it, and add them up. A few LED lights all evening is about 30 watts, the furnace fan is 45 to 60 watts while it runs, the water pump is 50 to 110 watts while it runs, and a 12-volt television is 35 to 50 watts. If you run 120-volt gear through an inverter, the inverter's own draw adds to the total. A battery monitor that counts amp-hours is the best source: its daily amp-hours times 12.8 is your watt-hours.</span>
       </div>
+      <div class="field">
+       <label>Or build it from your appliances</label>
+       <div class="ldg" id="s-builder"></div>
+       <span class="hint">Watts are typical running draws from the appliance tables cited below; change any of them to the number on your own appliance. Hours are per day, and the total fills the box above as you type.</span>
+      </div>
      </div>
 
      <div class="panel panel-24">
@@ -75,6 +80,18 @@
         <option value="4.0">Northwest: OR, WA (about 4.0)</option>
        </select>
        <span class="hint">Peak sun hours are not hours of sunshine: they are the equivalent hours per day at full panel output, and the whole country runs from about 3 to 6.5 of them. The US average is about 5. If you want your exact location, NREL's PVWatts calculator gives it free.</span>
+      </div>
+     </div>
+
+     <div class="panel panel-24">
+      <h2 class="form-legend">Your battery bank</h2>
+      <div class="field">
+       <label for="s-chem">Battery chemistry</label>
+       <select id="s-chem">
+        <option value="lifepo4" selected>Lithium (LiFePO4)</option>
+        <option value="lead">Lead-acid (flooded or AGM)</option>
+       </select>
+       <span class="hint">Lithium is 80% usable; lead-acid is 50%, the recharge point the makers recommend for decent cycle life. The bank figure below uses whichever you pick.</span>
       </div>
      </div>
     </div>
@@ -94,6 +111,7 @@
 
   <h2>What the answer means</h2>
   <p>The result is a starting point for shopping, not a guarantee. Panels flat on an RV roof face the sky rather than the sun, so winter and northern latitudes cut output below the rated hours. Shade, dirt on the panels, and a partially drained battery all cut it further. If the answer says 400 watts, buying 400 watts of panel and expecting a full recharge every day in Oregon in December will disappoint you; the same array in Arizona mostly won't.</p>
+  <p>The bank figure is the other half of the same day. Renogy's sizing method is the one the tool follows: daily watt-hours become amp-hours at the bank's voltage, and the bank is then sized so that the day's use is only part of what it holds, because a battery discharged to empty every night does not last. The tool shows the one-day bank at the chemistry's usable share; Renogy suggests sizing for 2 to 3 days of autonomy in sunny areas if you want to ride out a cloudy stretch.</p>
   <p>Battle Born's rule of thumb: about 200 watts of solar per 100 amp-hours of lithium battery capacity, which is a sanity check on the sizing answer rather than a substitute for it.</p>
 
   <h2>Where to go next</h2>
@@ -105,6 +123,8 @@
     <li><a href="https://www.renogy.com/pages/outdoor-solar-buy-guide-power-for-camping-rv-offgrid-living" target="_blank" rel="noopener">Renogy, outdoor solar buying guide</a>: the daily watt-hours divided by peak sun hours formula, the worked example, and the round-up advice.</li>
     <li><a href="https://battlebornbatteries.com/blogs/academy/how-to-size-solar-panels-for-a-deep-cycle-battery-system-the-battle-born-educational-series" target="_blank" rel="noopener">Battle Born Batteries, how to size solar panels</a>: the same sizing formula, the 20 to 30 percent margin, and the 200 watts per 100 amp-hours guideline.</li>
     <li><a href="https://www.osti.gov/servlets/purl/1096689" target="_blank" rel="noopener">NREL, PVWatts technical reference (PDF via OSTI)</a>: the 0.77 default derate factor this tool applies.</li>
+    <li><a href="https://www.renogy.com/blogs/buyers-guide/how-to-size-your-battery-bank-to-extend-your-solar-batteries-lifespan" target="_blank" rel="noopener">Renogy, how to size your battery bank</a>: the watt-hours to amp-hours step, the 50% depth of discharge for lead-acid and 80% for lithium, and the 2 to 3 days of autonomy guidance the bank figure notes.</li>
+    <li><a href="https://battlebornbatteries.com/blogs/articles/agm-vs-lithium-batteries" target="_blank" rel="noopener">Battle Born Batteries, AGM vs lithium</a>: the 50 percent usable capacity for lead-acid chemistries and 80 to 100 percent for lithium, the basis for the usable share the bank figure applies.</li>
     <li><a href="https://www.thegreenwatt.com/peak-sun-hours-calculator/" target="_blank" rel="noopener">The Green Watt, peak sun hours</a>: the definition of peak sun hours and the state figures, derived from NREL PVWatts data, that the region presets carry.</li>
    </ul>
   </div>
@@ -121,6 +141,6 @@
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="assets/js/config.js?v=ec97ddff"></script>
 <script src="assets/js/site.js?v=e7f99dee"></script>
-<script src="assets/js/solarsizing.js?v=841e4d4b"></script>
+<script src="assets/js/solarsizing.js?v=36d8dc2c"></script>
 </body>
 </html>

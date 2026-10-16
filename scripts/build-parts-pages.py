@@ -248,6 +248,13 @@ def part_html(p):
                          'rel="noopener">%s manuals</a>' % (esc(url), esc(brand)))
     if links:
         out.append('        <p class="part-links">%s</p>' % " ".join(links))
+    else:
+        # A CARD WITH NOTHING TO LINK SAYS SO (quick wins #13, 2026-10-16). The dead-end cards
+        # used to end at the alias line with no sign that anything was missing, which read as a
+        # truncated card rather than an honest gap. The line is emitted from the same `links`
+        # decision the block above uses, so it appears and disappears with the links themselves
+        # and cannot go stale as guides are added.
+        out.append('        <p class="part-links part-none">No repair guide yet</p>')
 
     aka = [a.strip() for a in (p.get("aka") or "").split("|") if a.strip()]
     if aka:

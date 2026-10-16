@@ -20,8 +20,9 @@ function makeEl(id) {
     fire(ev) { (listeners[ev] || []).forEach(fn => fn()); },
   };
 }
-['s-wh', 's-region', 's-result'].forEach(id => { elements[id] = makeEl(id); });
+['s-wh', 's-region', 's-result', 's-chem', 's-builder'].forEach(id => { elements[id] = makeEl(id); });
 elements['s-region'].value = '5.5';
+elements['s-chem'].value = 'lifepo4';
 
 const sandbox = { window: {}, console };
 sandbox.document = { getElementById: id => elements[id] || null };
@@ -58,6 +59,27 @@ check('renders disclaimer', html.indexOf('w-disclaimer') !== -1);
 elements['s-region'].value = '4.0';
 elements['s-region'].fire('change');
 check('region change recomputes', elements['s-result'].innerHTML.indexOf('4.0') !== -1);
+
+// THE BATTERY BANK (quick wins #14, 2026-10-16). Renogy's method: Wh / volts = daily Ah,
+// then / usable share. 2400 Wh at 12.8 V is 187.5 Ah a day; at 80% usable that is 234 Ah.
+elements['s-wh'].value = '2400';
+elements['s-wh'].fire('input');
+let bankHtml = elements['s-result'].innerHTML;
+check('renders the battery bank row', bankHtml.indexOf('Battery bank to carry this day') !== -1);
+check('lithium bank: 2400 Wh -> 234 Ah at 12.8 V / 80%', bankHtml.indexOf('234 Ah') !== -1);
+check('renders the cloudy-stretch row', bankHtml.indexOf('For a cloudy stretch') !== -1);
+
+// Lead-acid is 50% usable at 12.0 V: 2400 / 12 / 0.5 = 400 Ah.
+elements['s-chem'].value = 'lead';
+elements['s-chem'].fire('change');
+bankHtml = elements['s-result'].innerHTML;
+check('lead-acid bank: 2400 Wh -> 400 Ah at 12.0 V / 50%', bankHtml.indexOf('400 Ah') !== -1);
+
+// THE APPLIANCE BUILDER renders its rows when the element is on the page.
+const builderHtml = elements['s-builder'].innerHTML;
+check('the builder renders its appliance rows', builderHtml.indexOf('Furnace fan') !== -1);
+check('  with editable watts', builderHtml.indexOf('ldg-w') !== -1);
+check('  and an hours box per row', builderHtml.indexOf('ldg-h') !== -1);
 
 console.log(`solar-sizing test: ${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

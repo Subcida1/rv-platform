@@ -1061,7 +1061,7 @@
     "sources": []
   },
   "parts/index.html": {
-    "hash": "98fb713a0fafc7c0",
+    "hash": "f816cac1e3038f81",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1192,17 +1192,17 @@
     "claims": []
   },
   "tools/solar-sizing.html": {
-    "hash": "1bfabaf5fd32bcc4",
+    "hash": "c2d1a5cb1bc54dd3",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "tools/state-trailer-brake-laws.html": {
-    "hash": "334e0bd3ab6ab141",
+    "hash": "8e9c6f62357b13c8",
     "status": "verified",
-    "verified_by": "the table rows are emitted into the page between BL-ROWS markers by build-brake-laws-data.py so the table reads without JavaScript, the test holds the static rows equal to the finder render cell for cell, and the rest-of-the-job section now links the weight calculator and the first-timers walkthrough (Neo tools 15th #1 and #4).",
-    "verified_at": "2026-10-15",
+    "verified_by": "quick-wins #17 (Cloud on-grid, 2026-10-16): route mode added, a state picker that builds an ordered route and lists each state's own threshold with the lowest weight figure named and the measurement caveat stated. No threshold, section or quote changed; the test drives the new wiring.",
+    "verified_at": "2026-10-16",
     "sources": [],
     "spec": null,
     "spec_waived": true,

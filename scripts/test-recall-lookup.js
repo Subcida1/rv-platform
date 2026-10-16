@@ -285,5 +285,22 @@ if (fs.existsSync(CA)) {
   check('with no campaigns there is no hazard filter', none.indexOf('data-rl-tag') === -1);
 })();
 
+// 14. the directory CTA on a result with campaigns (quick wins #17, 2026-10-16).
+(function () {
+  const withCampaigns = T.render({ step: 'result',
+    decoded: { make: 'JAYCO', model: 'JAY FLIGHT', year: '2022', kind: 'towable' }, maker: null,
+    campaigns: [{ NHTSACampaignNumber: 'A', Component: 'LPG SYSTEMS', Summary: 's', Consequence: 'risk of a fire' }],
+    complaints: [] });
+  check('a result with campaigns offers the directory for the repair work',
+        /Getting the work done/.test(withCampaigns) && withCampaigns.indexOf('href="/directory/"') !== -1);
+  check('  and says the repair is dealer work, free to the owner',
+        /repaired by a dealer/.test(withCampaigns) && /free to the owner/.test(withCampaigns));
+
+  const noCampaigns = T.render({ step: 'result',
+    decoded: { make: 'X', model: 'Y', year: '2020', kind: 'towable' }, maker: null,
+    campaigns: [], complaints: [] });
+  check('an empty result does not carry the CTA', !/Getting the work done/.test(noCampaigns));
+})();
+
 console.log(failed ? '\n' + failed + ' failure(s)' : '\nRecall lookup: all checks passed');
 process.exit(failed ? 1 : 0);

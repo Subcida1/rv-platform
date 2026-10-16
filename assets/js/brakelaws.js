@@ -55,6 +55,53 @@
     inspection: 'This state puts the threshold in its inspection standard rather than in an equipment mandate, so what a trailer fails is its inspection.',
   };
 
+  /* ROUTE MODE (quick wins #17, 2026-10-16). The single-state answer is for one state; a reader
+     towing from Oregon to Arizona crosses several, and the question becomes which rule binds along
+     the way. The route lists each state's own threshold in order and names the lowest weight figure
+     on it, with the caveat that the states measure differently (gross, unladen, GVWR), so the
+     numbers are not directly comparable. */
+  var route = [];
+
+  function lowestWeight(s) {
+    if (!s || !s.threshold) return null;
+    var m = String(s.threshold).match(/([\d,]+)\s*lb/);
+    return m ? parseInt(m[1].replace(/,/g, ''), 10) : null;
+  }
+
+  function renderRoute() {
+    var host = document.getElementById('bl-route-result');
+    if (!host) return;
+    if (!route.length) {
+      host.innerHTML = '<p class="note-sm">Add the states you will tow through, in order, and each ' +
+        'one\u2019s rule appears here with the lowest weight figure on the route named.</p>';
+      return;
+    }
+    var out = '<div class="panel panel-24"><h3>' + String(route.length) +
+      (route.length === 1 ? ' state' : ' states') + ' on this route</h3>';
+    out += '<div class="table-scroll"><table class="man-table"><thead><tr><th>In order</th>' +
+      '<th>State</th><th>Threshold</th><th>The section</th></tr></thead><tbody>';
+    var lowest = null, lowestState = null;
+    for (var i = 0; i < route.length; i++) {
+      var s = byCode[route[i]];
+      if (!s) continue;
+      out += '<tr><td>' + String(i + 1) + '</td><td>' + esc(s.name) + '</td><td>' +
+        esc(thresholdLine(s)) + '</td><td><a href="' + esc(s.url) + '" target="_blank" ' +
+        'rel="noopener">' + esc(s.section) + '</a></td></tr>';
+      var w = lowestWeight(s);
+      if (w !== null && (lowest === null || w < lowest)) { lowest = w; lowestState = s; }
+    }
+    out += '</tbody></table></div>';
+    if (lowestState) {
+      out += '<p class="note-sm mb-10">The lowest weight figure on this route is <b>' +
+        esc(lowestState.name) + '</b> at ' + esc(lowestState.threshold) + '. The states measure ' +
+        'differently (gross weight, unladen weight, GVWR), so compare the rows rather than the ' +
+        'numbers: a trailer that trips one state\u2019s unladen rule can sit under another\u2019s ' +
+        'gross-weight one.</p>';
+    }
+    out += '</div>';
+    host.innerHTML = out;
+  }
+
   function render(code) {
     var host = document.getElementById('bl-result');
     if (!host) return;
@@ -112,6 +159,39 @@
         }).join('');
       pick.addEventListener('change', function () { render(pick.value); });
       if (pick.value) render(pick.value);
+    }
+    var addSel = document.getElementById('bl-add');
+    var addBtn = document.getElementById('bl-add-btn');
+    var chips = document.getElementById('bl-route');
+    if (addSel && addBtn && chips) {
+      addSel.innerHTML = '<option value="">Choose a state</option>' +
+        DATA.allStates.map(function (pair) {
+          return '<option value="' + pair[0] + '">' + esc(pair[1]) + '</option>';
+        }).join('');
+      var paintChips = function () {
+        chips.innerHTML = route.map(function (code) {
+          var s = byCode[code];
+          var name = s ? s.name : code;
+          return '<span class="bl-chip">' + esc(name) + ' <button type="button" data-bl-rm="' +
+            esc(code) + '" aria-label="Remove ' + esc(name) + '">x</button></span>';
+        }).join('');
+      };
+      addBtn.addEventListener('click', function () {
+        if (addSel.value && route.indexOf(addSel.value) === -1) {
+          route.push(addSel.value);
+          paintChips();
+          renderRoute();
+        }
+      });
+      chips.addEventListener('click', function (e) {
+        var b = e && e.target && e.target.closest ? e.target.closest('button[data-bl-rm]') : null;
+        if (!b) return;
+        var code = b.getAttribute('data-bl-rm');
+        route = route.filter(function (c) { return c !== code; });
+        paintChips();
+        renderRoute();
+      });
+      renderRoute();
     }
     var host = document.getElementById('bl-table');
     if (host) {

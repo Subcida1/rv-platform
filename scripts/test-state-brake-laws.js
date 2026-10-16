@@ -126,6 +126,8 @@ function run(code) {
     result: (byId['bl-result'] || el()).innerHTML,
     table: (byId['bl-table'] || el()).innerHTML,
     pick: pick.innerHTML,
+    add: byId['bl-add'], addBtn: byId['bl-add-btn'],
+    chips: byId['bl-route'], routeResult: byId['bl-route-result'],
   };
 }
 
@@ -185,6 +187,37 @@ const table = run('CA').table;
 check('the table renders one row per state read', (table.match(/<tr>/g) || []).length === DATA.states.length,
   (table.match(/<tr>/g) || []).length + ' vs ' + DATA.states.length);
 check('every table row links to the state it came from', (table.match(/href="https?:\/\//g) || []).length === DATA.states.length);
+
+/* ROUTE MODE (quick wins #17, 2026-10-16). The single-state answer is for one state; a route
+   lists each state's own threshold in order and names the lowest weight figure on it. The test
+   drives the captured handlers rather than reading the source, so the wiring is exercised. */
+(function () {
+  const r = run('CA');
+  check('the route picker offers every state',
+    (r.add.innerHTML.match(/<option/g) || []).length === DATA.allStates.length + 1,
+    (r.add.innerHTML.match(/<option/g) || []).length + ' options');
+  check('an empty route says how to build one',
+    /Add the states you will tow through/.test(r.routeResult.innerHTML));
+
+  r.add.value = 'OR';
+  r.addBtn.fire('click');
+  r.add.value = 'CA';
+  r.addBtn.fire('click');
+  const out = r.routeResult.innerHTML;
+  check('two states make a two-row route', /2 states on this route/.test(out));
+  check('  each state renders its own threshold',
+    /No weight threshold/.test(out) && /1,500 lb gross/.test(out));
+  check('  and the lowest weight figure on the route is named',
+    /lowest weight figure on this route is <b>California<\/b>/.test(out), out.slice(0, 200));
+  check('  and the measurement caveat is stated', /measure differently/.test(out));
+  check('  and the chips carry the states on the route',
+    /bl-chip/.test(r.chips.innerHTML) && /Oregon/.test(r.chips.innerHTML));
+
+  r.add.value = 'OR';
+  r.addBtn.fire('click');
+  check('adding the same state twice does not duplicate it',
+    /2 states on this route/.test(r.routeResult.innerHTML));
+})();
 
 console.log(failed ? '\n' + failed + ' failure(s)' : '\nstate trailer brake laws: all checks passed');
 process.exit(failed ? 1 : 0);

@@ -579,7 +579,7 @@
           "id": "lug-nuts-and-torque",
           "n": "Lug nuts and torque",
           "aka": "wheel torque|lug pattern",
-          "does": "hold the wheel on",
+          "does": "clamp the wheel to the hub, and their torque is what keeps it there",
           "fails": [
             "loosened by heat cycling",
             "over-torqued and stretched",
@@ -2160,7 +2160,7 @@
           "id": "water-heater-tankless",
           "n": "Water heater (tankless)",
           "aka": "on demand|Truma AquaGo|Girard|Fogatti",
-          "does": "heats water as it flows",
+          "does": "heats water as it flows rather than storing it in a tank",
           "fails": [
             "cold then hot cycling",
             "error codes",
@@ -2328,7 +2328,7 @@
           "id": "sinks",
           "n": "Sinks",
           "aka": "kitchen sink|bathroom sink|lavatory sink|bar sink",
-          "does": "where the water lands",
+          "does": "the basin the water lands in, drained to the gray tank rather than the ground",
           "fails": [
             "cracked from a dropped pan",
             "drain basket leaking",
@@ -3875,7 +3875,7 @@
           "id": "roof-coating",
           "n": "Roof coating",
           "aka": "rv roof coating|roof paint|Henry's Tropi-Cool",
-          "does": "recoats an aging roof",
+          "does": "a rolled-on coating that buys an aging roof membrane more years",
           "fails": [
             "applied over a wet or dirty roof and blistered",
             "incompatible product",
@@ -3938,7 +3938,7 @@
           "id": "slide-out-and-mechanism",
           "n": "Slide-out and mechanism",
           "aka": "slide room|slide out|Lippert slide",
-          "does": "extends the living space",
+          "does": "extends the living space sideways, on the mechanism that carries its weight",
           "fails": [
             "will not move",
             "grinds",
@@ -4139,7 +4139,7 @@
           "id": "entry-door-and-lock",
           "n": "Entry door and lock",
           "aka": "rv door|entry door|door latch|deadbolt|door window|friction hinge|door strut",
-          "does": "the way in and out",
+          "does": "the door you live through, and the latch that keeps it shut at highway speed",
           "fails": [
             "out of square and sticking",
             "latch misaligned",
@@ -4674,7 +4674,7 @@
           "id": "awning",
           "n": "Awning",
           "aka": "patio awning|Dometic awning|Carefree|manual awning|power awning|electric awning",
-          "does": "shade outside the door",
+          "does": "rolls out shade over the patio side, and is the first thing wind damages",
           "fails": [
             "will not extend",
             "spring broken",
@@ -4776,7 +4776,7 @@
           "id": "ladder-and-roof-access",
           "n": "Ladder and roof access",
           "aka": "rv ladder|roof ladder",
-          "does": "gets you onto the roof",
+          "does": "the fixed ladder that gets you onto the roof for sealant checks",
           "fails": [
             "loose mounts",
             "steps cracked",
@@ -4892,7 +4892,7 @@
           "id": "roof-cargo-and-ladders",
           "n": "Roof cargo carrier",
           "aka": "roof rack|cargo carrier|ladder rack",
-          "does": "adds storage on the roof",
+          "does": "adds storage on the roof, and adds weight where the roof has to carry it",
           "fails": [
             "mounting through the membrane and leaking",
             "weight over the roof rating",
@@ -5159,7 +5159,7 @@
           "id": "range-hood-and-vent",
           "n": "Range hood and vent",
           "aka": "range hood|stove vent|exhaust fan",
-          "does": "pulls cooking fumes out",
+          "does": "pulls cooking fumes and moisture out through the roof or wall vent",
           "fails": [
             "fan noisy",
             "filter clogged",
@@ -5211,7 +5211,7 @@
           "id": "washer",
           "n": "Washer",
           "aka": "rv washer|washer dryer combo|Splendide|stackable washer",
-          "does": "does the wash on board",
+          "does": "a compact washer that runs on the coach's water and power",
           "fails": [
             "will not drain",
             "leaks",
@@ -5446,7 +5446,7 @@
           "id": "flooring-and-subfloor",
           "n": "Flooring and subfloor",
           "aka": "vinyl flooring|carpet|soft floor|subfloor",
-          "does": "the floor you walk on",
+          "does": "the floor you walk on, laid over the decking that carries the weight",
           "fails": [
             "soft spots from a leak",
             "vinyl peeling",
@@ -5508,7 +5508,7 @@
           "id": "tv-antenna",
           "n": "TV antenna",
           "aka": "rv antenna|batwing antenna|King Jack|over the air",
-          "does": "pulls in local channels",
+          "does": "pulls in local channels over the air, so no subscription is needed",
           "fails": [
             "crank stripped",
             "will not raise",
@@ -5902,7 +5902,7 @@
           "id": "chassis-brakes",
           "n": "Chassis brakes",
           "aka": "air brakes|hydraulic brakes|brake chambers|slack adjusters|ABS|parking brake",
-          "does": "stop a heavy vehicle",
+          "does": "stop the motorhome itself rather than a trailer behind it",
           "fails": [
             "air pressure loss",
             "chamber failure",
