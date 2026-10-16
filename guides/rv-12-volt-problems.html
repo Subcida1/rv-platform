@@ -51,7 +51,7 @@
 
  <div class="sec prose">
  <div class="wrap narrow">
- <div class="callout"><b>The short version:</b> there are two power sources, not one. The battery feeds the panel, and the converter feeds the same panel, and they meet there rather than sitting in a line. A fault kills what is downstream of it. Measure at both ends of a path and compare, because voltage drop only shows up under load. Compare what you measure against the maker's own specification for your converter and your battery.</div>
+ <div class="callout"><b>The short version:</b> there are two power sources, not one. The battery feeds the panel, and the converter feeds the same panel, and they meet there rather than sitting in a line. A fault kills what is downstream of it. Measure at both ends of a path and compare, because voltage drop only shows up under load. Compare what you measure against the maker's specification for your converter and your battery.</div>
 <p><b>If two appliances stopped together,</b> that is evidence of one shared fault rather than two. See <a href="guides/rv-two-appliances-stopped">Two appliances stopped at once</a> before testing either appliance.</p>
 
 
@@ -137,7 +137,7 @@
  <h3>Something tests fine but will not run</h3>
  <p>Suspect the ground return. A bulb can have good power at the socket and still not light because the return path is corroded, which is why grounds deserve their own treatment.</p>
  <h3>Battery flat after sitting</h3>
- <p>Parasitic draw. Something is drawing with the RV switched off, and the <a href="guides/rv-battery-disconnect">battery disconnect</a> is the manufacturer's own answer.</p>
+ <p>Parasitic draw. Something is drawing with the RV switched off, and the <a href="guides/rv-battery-disconnect">battery disconnect</a> is the manufacturer's answer.</p>
  </div>
 
  <figure class="tight">
@@ -171,7 +171,7 @@
  <p><b>Before you take any of those readings,</b> Renogy states the battery must be disconnected from the system and allowed to rest for at least two hours. A reading taken while the charger is running, or minutes after you unplugged, is not a state of charge. This is why people conclude their battery is fine when it is not.</p>
  <h3>Now the converter</h3>
  <div class="callout flag flag-injury"><span class="flag-h">Can injure you</span>
-<b>The pass test runs the converter live.</b> The maker's own procedure connects shore power and meters at the terminals: a 120-volt-energized box with the cover off. Open the cover only with the coach unplugged from shore power.</div>
+<b>The pass test runs the converter live.</b> The maker's procedure connects shore power and meters at the terminals: a 120-volt-energized box with the cover off. Open the cover only with the coach unplugged from shore power.</div>
 <p>WFCO publishes an explicit pass test: if the voltage reads 13.6 to 14.4 volts DC, plus or minus a fifth, with no load, the converter is functioning properly. On the lithium setting, or on an auto-detecting unit that has switched for lithium, the target is higher at 13.6 to 14.6. Progressive Dynamics publishes a nominal 13.6 volts, a boost mode around 14.4, and a storage mode around 13.2. Progressive Dynamics names them boost at about 14.4, normal at 13.6, and storage at 13.2.</p>
  <h3>Why the mode matters for diagnosis</h3>
  <p>A converter sitting at 13.2 volts is not necessarily broken, it may simply be in float because the battery is full. If you measure during float and conclude the converter is weak, you will replace a healthy unit. Force a load, like switching on lights or a fan, and watch whether it climbs into bulk.</p>
@@ -183,7 +183,7 @@
  <h2 id="voltage-drop">The voltage-drop test: Find the link, not the part</h2>
  <div class="card">
  <h3>The rule that makes it work</h3>
- <p>Voltage drop only appears under load. Victron states it plainly: the drop becomes larger when the current increases. A circuit that reads perfectly with everything switched off can fail badly the moment it has to carry real current. This is exactly why a light tests fine at the socket and still will not light.</p>
+ <p>Voltage drop only appears under load. Victron: the drop becomes larger when the current increases. A circuit that reads perfectly with everything switched off can fail badly the moment it has to carry real current. This is exactly why a light tests fine at the socket and still will not light.</p>
  <h3>How to measure it</h3>
  <p>Put the circuit under its normal load, not idle. Measure the voltage at one end of the path, then at the other end, and subtract. Victron's own example is to load an inverter to maximum, measure across the DC connections at the inverter, measure across the battery terminals, and compare. The difference between the two readings is the voltage drop. The same method applies to any long run in the RV.</p>
  <h3>What counts as too much</h3>
@@ -252,7 +252,7 @@
 
  <h2>What fails, and what the manuals cover</h2>
  <div class="card">
- <h3>Converter faults in the maker's own table</h3>
+ <h3>Converter faults in the maker's table</h3>
  <p>Progressive Dynamics publishes a proper troubleshooting table, which is unusual and useful. On no output, their listed causes are that AC power is not connected, that external fuses are blown (typically through reverse polarity), a short circuit, a shutdown from overheating, or a shutdown from over voltage, which on their 230-volt units occurs above 132 volts input. On low output, they list an excessive load for the converter, an input voltage outside 105 to 130 volts, or a battery with a bad cell. WFCO adds that on a short circuit the converter will drop its output to zero, and that under excessive load the current holds constant while the voltage falls. WFCO also notes that if the converter reads zero at the battery, you should check for an open inline fuse in the battery wire circuit.</p>
  <h3>Wear and environmental failures</h3>
  <p>Cooling fan failure leading to a slow heat-related death is widely described in the trade. Pitted contacts in a battery disconnect, corroded terminals and ground points, and converters wearing out from heat, vibration, moisture and surges are all the same category. They are wear and environment problems rather than faults with a listed cause, so treat them as strong suspicion until you have measured something.</p>

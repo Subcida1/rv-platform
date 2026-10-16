@@ -527,7 +527,7 @@ def hub(rows, oem_count, model_count=0):
     <div class="sec-eyebrow">Manuals</div>
     <h1 class="dir-title man-title">RV manuals</h1>
     <p class="man-lede">Owner's manuals, service manuals, parts lists and wiring diagrams
-    for the systems and accessories in your RV. Every row links the maker's own page or
+    for the systems and accessories in your RV. Every row links the maker's page or
     document.</p>
     <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>
   </div>
@@ -559,7 +559,7 @@ def hub(rows, oem_count, model_count=0):
       <a class="card man-pinned" href="manuals/start-here.html">
         <div class="man-pinned-tag">Start here</div>
         <div class="man-pinned-title">New to RV ownership? Start with the expensive mistakes</div>
-        <div class="man-pinned-body">The mistakes that cost money, each one a maker's own
+        <div class="man-pinned-body">The mistakes that cost money, each one a maker's
         instruction, followed by the systems behind them in the order worth learning.</div>
         <div class="guide-go sp-12">Open the walkthrough &#8594;</div>
       </a>
@@ -611,7 +611,7 @@ def hub(rows, oem_count, model_count=0):
         are a paid subscription. Those are marked on the row. Where a maker publishes one
         manual per model year on their own archive, the row links the archive and states the
         years it covers.</p>
-        <p>Every row links the maker's own page or document, and says which models or years
+        <p>Every row links the maker's page or document, and says which models or years
         it covers.</p>
       </div>
     </div>
@@ -1201,7 +1201,7 @@ def brands_page(rows, models_by_brand=None):
     <h1 class="dir-title man-title">RV manuals by brand</h1>
     <p class="man-lede">Where each RV manufacturer publishes its own owner's manual, how
     far back the archive reaches, and how the documents are organized. %d RV brands and %d
-    model lines, each linked to the maker's own manual, parts list, accessory
+    model lines, each linked to the maker's manual, parts list, accessory
     catalog and warranty where it publishes one.</p>
     <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Jan 1, 2026.</p>
   </div>
@@ -1231,10 +1231,10 @@ RECALL_SECTIONS = [
     ("check", "Check your own unit",
      "Start with the lookup on this site. It takes a VIN, or a year and a make and a model, "
      "and reads the federal recall and complaint records. The federal lookup itself, and the "
-     "makers' own lookups, are below it."),
+     "makers' lookups, are below it."),
     ("notices", "Recalls you can read in full",
      "The campaign number is the thread that runs through a recall: the federal report, the "
-     "maker's own notice and any repair instruction all carry it."),
+     "maker's notice and any repair instruction all carry it."),
     ("bulletins", "Service bulletins",
      "A recall is a safety defect. A service bulletin is the maker telling its dealers how "
      "to deal with something, and the federal government collects them alongside the "
