@@ -4813,7 +4813,6 @@ vs label); the state-page topic-matched block; the W3 maintenance interpretation
 existing rv-black-tank is the maintenance guide, or ask for a separate page); the two-guide
 second-slot labels (curated vs derived -- currently derived with overrides).
 
-<<<<<<< HEAD
 
 ## Neo homepage 13th rotation (2026-10-16, verified from the Cloud lane)
 
@@ -4823,7 +4822,7 @@ Four items, verified at tip `9f2a7930`. **One applied, one already answered, two
 - **#2 the hero stat: CONFIRMED SSR-INJECTED, not hardcoded.** The markup is `data-count="2027">2027`, and `build-listings.py` writes that figure from the 50 state files -- its own build log says "homepage: 2027 businesses across 50 states". Same answer as the 12th rotation.
 - **#3 withdrawn by Neo (a regex artifact)** -- recorded, no action.
 - **#4 verified clean** -- the brake tool's 50 states plus DC with citations, the hub counts, the sitemap.
-=======
+
 ### Ty ruled the four live questions (2026-10-15 ~21:11 PDT): all four recommendations accepted
 
 1. **The statewide region repeat: KEEP the repeats, tagged.** The tag turned out to already
@@ -4841,4 +4840,3 @@ Four items, verified at tip `9f2a7930`. **One applied, one already answered, two
 4. **The two-guide labels: derived with overrides** (as built; `guide2_label` exists for the
    clumsy cases, one in use).
 
->>>>>>> 81e70b9c (directory: the repeats stay and read as coverage, and every state page leads with its topic)
