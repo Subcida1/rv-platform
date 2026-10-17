@@ -120,6 +120,9 @@
    rows += '<div class="w-disclaimer">A starting point for shopping, not a guarantee. Panels flat on a roof, winter sun, shade, and a battery that is not empty all cut the harvest below the rated hours.</div>';
 
    host.innerHTML = rows;
+   if (window.RV && window.RV.track) {
+     window.RV.track('tool_result', { tool: 'solar-sizing', page: location.pathname });
+   }
  }
 
  var w = $('s-wh');

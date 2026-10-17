@@ -296,6 +296,9 @@
  '<div class="w-disclaimer">Informational estimates. Always confirm at a certified scale before towing.</div>';
  }
  host.innerHTML = html;
+ if (html.indexOf('w-idle') < 0 && window.RV && window.RV.track) {
+   window.RV.track('tool_result', { tool: 'weight-calculator', page: location.pathname });
+ }
  }
 
  /* live recompute on any change */

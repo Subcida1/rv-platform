@@ -12,10 +12,10 @@
  var CFG = window.RV_CONFIG || {};
 
  /* ---------- analytics ----------
-   Four events, and they exist because the page-view count cannot answer any of
+   Six events, and they exist because the page-view count cannot answer any of
    the questions we actually have. GA4 knows a page loaded; it does not know what
-   someone typed, which question they opened, or whether a document link was
-   worth their click.
+   someone typed, which question they opened, whether a document link was
+   worth their click, or whether a tool produced an answer.
 
       site_search   the typed query, where the router sent them, and whether the
                     router fell through to the generic index. A fall-through is
@@ -25,6 +25,20 @@
                     only evidence we will get about which manuals matter.
       js_error      the calculators are client-side, so a broken script would
                     otherwise fail silently with nothing recorded anywhere.
+      listing_claim  a "Claim your listing" form actually delivered (sent by
+                    worker, or the mailto fallback). This is one of the two
+                    conversion events the site tracks.
+      tool_result   a tool produced a real answer (the tool scripts call
+                    RV.track('tool_result', ...) when they render results). A
+                    page view cannot say whether anyone used a calculator;
+                    this can. The second of the two conversion events.
+
+   INTERNAL-TRAFFIC MARKER. Our own instruments (verify.py, smoke tests, a
+   canary, an outbound checker) hit these pages and would otherwise skew the
+   numbers. initTracking() marks the session as internal traffic when the URL
+   carries ?internal=1, ?test=1 or ?canary=1, which any checker can append. GA4
+   still records the session, but an internal-traffic filter in the admin can
+   now exclude it; the filter itself is Ty's, not this file's.
 
    Every one of these is inert when gtag, window.addEventListener or the event
    target is missing, so the smoke test's DOM stub and any older browser stay
@@ -44,6 +58,9 @@
 
  function initTracking() {
  if (typeof document.addEventListener !== 'function') return;
+ if (/[?&](internal|test|canary)=1/.test(location.search)) {
+   try { if (typeof window.gtag === 'function') window.gtag('set', { traffic_type: 'internal' }); } catch (e) {}
+ }
 
  // 'toggle' does not bubble, so this has to listen in the capture phase.
  document.addEventListener('toggle', function (e) {
@@ -557,8 +574,8 @@
  else setErr('cl-city-err', '');
  if (!ok) return;
  claimSubmit(form).then(function (how) {
- if (how === 'sent') { toast('Request sent. It is in our inbox now.'); form.reset(); }
- else if (how === 'mailto') { toast('Your email app is opening with the details filled in. Send it and the request reaches us.'); form.reset(); }
+ if (how === 'sent') { track('listing_claim', { method: 'sent', page: location.pathname }); toast('Request sent. It is in our inbox now.'); form.reset(); }
+ else if (how === 'mailto') { track('listing_claim', { method: 'mailto', page: location.pathname }); toast('Your email app is opening with the details filled in. Send it and the request reaches us.'); form.reset(); }
  else { toast('Nothing was sent: there is no contact route available right now.', true); }
  });
  });
