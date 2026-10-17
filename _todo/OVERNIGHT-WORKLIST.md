@@ -8,6 +8,25 @@ This file is the queue the **`overnight-driver`** cron reads on every fire. It i
 of truth for what is left. NIGHT-WORKLIST.md is the previous night's list (items 0–6, all closed or
 parked as Ty's call); do not rework those.
 
+## Queue drain — 2026-10-16 evening (on-grid, Ty: "knock out those 3 now")
+
+Closed items from `_todo/`-tracked audit backlog, committed `860b99e1` (ALL CHECKS PASSED local,
+CI green on the same commit):
+
+- **Item 2 (start-here link pass):** `scripts/check-crossrefs.py` scans 146 pages, `0 unlinked
+  references`; external links re-verified. The only 3 unconfirmed URLs (fordpro 403 / coachmen 403
+  / taxa 423) are manufacturer bot-walls, not dead — logged in `_todo/LINK-CHECK-RESULTS.json`.
+- **Item 6 (thin state ledes):** `STATE_INTRO` dict in `scripts/build-listings.py` adds a unique
+  geographic/seasonal opening for the 17 thinnest states (HI, DE, RI, VT, AK, MA, MT, ND, NE, WY,
+  UT, ME, NV, WV, MS, NH, NM), keeping the count-aware closing. Won't over-claim (verified: e.g. WY
+  still reads "along with roadside help from one provider").
+- **Item 23 (trust/UX):** `scripts/check-ux.py` clean — `ok — no vague labels`, focus states and
+  heading structure passing.
+- **Manuals generator backfill:** commit `f3bbd7c9` shipped `manuals/brands.html` (quick-jump #7)
+  without its `scripts/build-manuals-pages.py` change, so the worklist-push CI (`bc67042e`) red on
+  "manuals pages". `860b99e1` re-commits the generator in sync — the page and its source now agree.
+  Lesson: a generated page and its generator ship in the same commit.
+
 ## LIVE TREE STATE — READ BEFORE COMMITTING ANYTHING (check `git status` first, it changes)
 
 **2026-10-10 01:26 PDT:** another session has `assets/js/site.js` **staged** and has regenerated the
