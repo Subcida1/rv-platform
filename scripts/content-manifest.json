@@ -818,9 +818,9 @@
     "claims": "7d8c50b92e428a6c"
   },
   "guides/rv-tire-replacement.html": {
-    "hash": "006bc0b33d2def22",
+    "hash": "4be4c61601da4460",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
+    "verified_by": "Cross-link to wheel bearings added",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": "_specs/rv-tire-replacement.md",
@@ -838,9 +838,9 @@
     "claims": "503f760523fe0f1b"
   },
   "guides/rv-towing-capacity.html": {
-    "hash": "b0b4eb8a0c310f82",
+    "hash": "a5d01506a8c4fd6e",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
+    "verified_by": "Cross-link to pin weight added",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": "_specs/rv-towing-capacity.md",
@@ -858,9 +858,9 @@
     "claims": []
   },
   "guides/rv-trailer-wheel-bearings.html": {
-    "hash": "031e738cdccb91db",
+    "hash": "b94c765fecf06436",
     "status": "verified",
-    "verified_by": "variety pass on the maker-s construction (Ty: avoid repetitive sayings) -- the same phrase no longer repeats within these pages; the manual, the factory, the service documentation and the named maker now carry the attribution in turn.",
+    "verified_by": "Cross-link to tire replacement added",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": "_specs/rv-trailer-wheel-bearings.md",
@@ -945,9 +945,9 @@
     "claims": "afdbfd340b1ab1f0"
   },
   "guides/trailer-brakes-required.html": {
-    "hash": "0dd1c49e3aaf1445",
+    "hash": "6dc80030072f628d",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
+    "verified_by": "Cross-link to pin weight added",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": "_specs/trailer-brakes-required.md",
@@ -955,9 +955,9 @@
     "claims": "7475218f762ec723"
   },
   "guides/winterize-plumbing.html": {
-    "hash": "20b7169a8ac022a5",
+    "hash": "584eb8efd5400452",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
+    "verified_by": "Cross-link to freeze damage triage added",
     "verified_at": "2026-10-16",
     "sources": [],
     "spec": "_specs/winterize-plumbing.md",
