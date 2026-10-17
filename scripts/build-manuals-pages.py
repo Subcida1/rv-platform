@@ -1158,16 +1158,17 @@ def brands_page(rows, models_by_brand=None):
     none = [r for r in rows if r["structure"] in SECTIONS[2][2]]
 
     blocks = []
-    for (heading, blurb, keys), group in zip(SECTIONS, [dated, generic, none]):
+    ids = ["dated", "single", "none"]
+    for (heading, blurb, keys), group, sec_id in zip(SECTIONS, [dated, generic, none], ids):
         rows_html = "\n".join(brand_row(r, models_by_brand.get(r["brand"], []))
                               for r in sorted(
             group, key=lambda r: r["brand"].lower()))
         blocks.append("""
-      <h2 class="man-h2">%s<span class="man-count">%d brands</span></h2>
+      <h2 id="%s" class="man-h2">%s<span class="man-count">%d brands</span></h2>
       <p class="man-status">%s</p>
       <ul class="man-list">
 %s
-      </ul>""" % (esc(heading), len(group), esc(blurb), rows_html))
+      </ul>""" % (sec_id, esc(heading), len(group), esc(blurb), rows_html))
 
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
@@ -1213,11 +1214,17 @@ def brands_page(rows, models_by_brand=None):
                aria-label="Search brands and model lines"
                placeholder="Search a brand or a model line: Jay Flight, Reflection, Winnebago">
       </div>
+      <div class="man-facets" role="navigation" aria-label="Jump to a section">
+        <a class="chip" href="manuals/brands#dated">Dated archives (%d)</a>
+        <a class="chip" href="manuals/brands#single">One manual all years (%d)</a>
+        <a class="chip" href="manuals/brands#none">No manual online (%d)</a>
+      </div>
       <div id="man-status" class="man-status">%d brands and %d model lines shown</div>
 %s
     </div>
   </div>
-""" % (len(rows), model_total, len(rows), model_total, "\n".join(blocks))
+""" % (len(rows), model_total, len(dated), len(generic), len(none),
+       len(rows), model_total, "\n".join(blocks))
 
     return (head(BRANDS_TITLE, desc, "%s/manuals/brands.html" % SITE, [collection])
             + body + foot("assets/js/manuals/filter.js"))

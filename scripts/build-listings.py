@@ -226,22 +226,48 @@ def _join(parts, oxford=False):
     return "%s%s and %s" % (", ".join(parts[:-1]), "," if oxford else "", parts[-1])
 
 
+# A unique opening line for the thinnest state pages (Audit #6). The generic three-sentence
+# explanation reads identically on all 50 pages; a thin state gets one sentence grounded in its
+# own geography and season so a deep arrival on a phone stops scanning. Every line is a stable,
+# defensible fact about the state -- none state a sourced statistic, because none need one. Any
+# state without an entry keeps the generic lede. Keyed by the two-letter code `data["state"]`.
+STATE_INTRO = {
+    "HI": "Hawaii is an island chain, so RVing here is short coastal hauls and camper vans, not long Interstate treks. ",
+    "DE": "Delaware is small -- under a hundred miles long -- but its beach towns pack a real summer RV season. ",
+    "RI": "Rhode Island is the smallest state, and its whole coast is a short drive, so its RV crowd is mostly local and seasonal. ",
+    "VT": "Vermont's Green Mountains mean winding roads and a short, cold-shoulder RV season. ",
+    "AK": "Alaska is enormous and thinly settled; the service bays sit in the towns, and long distances pull a mobile tech. ",
+    "MA": "Massachusetts is dense and its RV season is a summer act, strongest out toward the Cape. ",
+    "MT": "Montana is big sky and longer distances between help; summer tourism toward Glacier draws the RV season. ",
+    "ND": "North Dakota winters are harsh and the season is short, so much of its RV work rides on the shoulder months. ",
+    "NE": "Nebraska's RV traffic runs along I-80, the cross-country artery that cuts the whole state. ",
+    "WY": "Wyoming's RV season tracks its parks -- Yellowstone and Grand Teton are the draw -- and help sits far apart. ",
+    "UT": "Utah's national parks pull RVs year-round, though summer heat pushes many to the shoulder seasons. ",
+    "ME": "Maine's coast and Acadia make it a summer RV destination; the season here runs warm-weather only. ",
+    "NV": "Nevada is high desert and drives year-round, but the summer heat keeps its RV crowd moving early and late. ",
+    "WV": "West Virginia's hilly backcountry keeps RV work scattered; a mobile tech bridges the mountain gaps. ",
+    "MS": "Mississippi's Gulf Coast carries most of its RV season, with campgrounds hugging the beaches. ",
+    "NH": "New Hampshire's White Mountains are the draw, and the RV season follows the summer and the foliage. ",
+    "NM": "New Mexico is high desert with mild winters, so its RV season runs nearly year-round. ",
+}
+
+
 def lede_text(data):
     """The state page's opening paragraph, with its closing claim built from the counts.
 
-    THE FIRST THREE SENTENCES are the same on every page: they explain the two kinds of
-    repair and why the difference matters. THE CLOSING SENTENCE is a claim about what is
-    in THIS state, and it was hand-copied onto all 50 pages, so it kept claiming things
-    eleven states do not have: New Mexico, Hawaii and Delaware carried "along with
-    emergency roadside help for breakdowns on the highway" with zero roadside-flagged
-    listings, and Hawaii -- whose two listings are both mobile technicians -- opened the
-    claim with "Both are here" while having no service centers at all.
+    THE OPENING is the state's own geography and season: the thin-state set keys off STATE_INTRO,
+    and every other state keeps the generic two-kinds-of-repair explanation. THE CLOSING SENTENCE
+    is a claim about what is in THIS state, and it used to be hand-copied onto all 50 pages, so it
+    kept claiming things eleven states do not have: New Mexico, Hawaii and Delaware carried "along
+    with emergency roadside help for breakdowns on the highway" with zero roadside-flagged listings,
+    and Hawaii -- whose two listings are both mobile technicians -- opened the claim with "Both are
+    here" while having no service centers at all.
 
-    So the claim is generated from the same counts the stats strip shows. A state with no
-    roadside listings does not get the roadside clause; a state with only one kind of
-    business does not get "both". Generated rather than hand-written for the reason the
-    rest of this file exists: the claim is a fact about the data, and the data keeps
-    changing (the thin-states pass added listings to ten states while this was written).
+    So the claim is generated from the same counts the stats strip shows. A state with no roadside
+    listings does not get the roadside clause; a state with only one kind of business does not get
+    "both". Generated rather than hand-written for the reason the rest of this file exists: the
+    claim is a fact about the data, and the data keeps changing (the thin-states pass added listings
+    to ten states while this was written).
     """
     c = counts(data["listings"])
     if c["mobile"] and c["center"]:
@@ -257,7 +283,9 @@ def lede_text(data):
         close += ", along with emergency roadside help for breakdowns on the highway"
     elif c["road"] == 1:
         close += ", along with roadside help from one provider"
-    return ("There are two kinds of RV repair. The difference is whether you can move your RV. "
+    heading = STATE_INTRO.get(data["state"], "")
+    return (heading +
+            "There are two kinds of RV repair. The difference is whether you can move your RV. "
             "If you cannot, you need a mobile technician who comes to you. If you can drive it, "
             "a service center has the bays and parts for bigger jobs. " + close + ".")
 
