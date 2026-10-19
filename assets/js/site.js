@@ -212,7 +212,7 @@
  '<a href="' + R(rt.tools) + '">All 15 tools<span class="sm">Finders for valves, converters, recalls</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.guides) + '">Guides</a>' +
  '<div class="drop"><a href="' + R(rt.guideWinterize) + '">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a>' +
- '<a href="' + R(rt.guideBattery) + '">Battery Care in Cold<span class="sm">Lead-acid vs lithium rules</span></a>' +
+ '<a href="' + R(rt.guideBattery) + '">Battery Care in Cold<span class="sm">Lead-acid compared to lithium rules</span></a>' +
  '<a href="' + R(rt.guideTires) + '">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a>' +
  '<a href="' + R(rt.guideRoof) + '">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.parts) + '">Parts</a>' +
