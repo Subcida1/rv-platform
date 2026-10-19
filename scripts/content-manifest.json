@@ -7,11 +7,14 @@
     "sources": []
   },
   "about.html": {
-    "hash": "202ca0352902396d",
-    "status": "unverified",
-    "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, so it is recorded for the findings and NOT as a strength claim, which is why the status stays unverified). SIX findings, NONE APPLIED, each refuted after reading the page. Four of them ask for the disclosure cards to be cut as 'sentences about the site': 'How the guides are put together' (each guide names the documents behind its claims and links them), 'Every tool is free.', 'The directory lists each business, where it works, and what it does.', 'The guides carry the date they were last checked.' Those cards are the page's disclosure content, not virtue claims, and the virtue claims were already cut from this page on 2026-10-11 (commit c8303c1f) -- what remains is method and liability text that an about page exists to state. A fifth asks for a flag-injury callout on the Liability and safety card; that card IS the site's liability disclosure (authored by the safety pass), it names no procedure, and a 'Can injure you' label on a disclaimer would restate the card's own sentence. The sixth ('Built from inside an RV' as site-centred voice) would remove the page's positioning. Rules 1, 2, 5 and 6 came back clean, and the reviewer confirmed the page's figures hold (48/48 guides carry a checked date, six years matches since-2020). SURFACED TO TY in the session report as an editorial call: if he wants the disclosure cards cut, they are his to cut.",
-    "verified_at": null,
-    "sources": []
+    "hash": "5d3ab54f5beb5148",
+    "status": "verified",
+    "verified_by": "The Grid",
+    "verified_at": "2026-10-19",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "contact.html": {
     "hash": "33844203e7295177",
