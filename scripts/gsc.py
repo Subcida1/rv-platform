@@ -354,7 +354,14 @@ def cmd_sitemaps(args):
     if problem:
         sys.exit(problem)
     if getattr(args, "submit", False):
-        feed = urllib.parse.quote(getattr(args, "feed", "/sitemap.xml"), safe="")
+        # The feed must be an absolute URL: a bare "/sitemap.xml" is accepted by the API for a
+        # URL-prefix property but rejected for a Domain property, which is the only property this
+        # credential can write to (2026-10-19: PUT to https://originrv.com/ returned 403
+        # "insufficient permission", the same PUT to sc-domain:originrv.com returned 204).
+        feed = getattr(args, "feed", "/sitemap.xml")
+        if not feed.startswith("http"):
+            feed = BASE_URL + feed
+        feed = urllib.parse.quote(feed, safe="")
         put = requests.put(
             "https://www.googleapis.com/webmasters/v3/sites/%s/sitemaps/%s"
             % (urllib.parse.quote(args.site, safe=""), feed),
