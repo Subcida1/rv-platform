@@ -5064,3 +5064,15 @@ Remaining with the Cloud lane: #1/#4, #2, #3, #10, #23 (content), #20-22 (direct
 **Item 8, manufacturer rows: CLOSED (Grid lane, this batch).** `37274d63` adds seven authoritative component/library rows to `_data/manuals.json`: SHURflo + Flojet (water-and-plumbing), Blue Ox (towing-and-running-gear), Dicor + Alpha Systems (exterior-and-body), and Jabsco + Camco (sanitation-and-tanks). All officially sourced (Pentair/Xylem/Barker makers' own libraries). Regenerated manuals pages, search index, and asset stamps. `verify.py` ALL CHECKS PASSED.
 
 **Item 7, manuals/brands quick-jump nav: CLOSED (Grid lane, this batch).** `f3bbd7c9` adds an anchor jump-nav bar (`#dated`, `#single`, `#none`) at the top of `manuals/brands.html`, chips with live counts (31/9/4) reusing the existing `.man-facets`/`.chip` pattern. Regenerated via `build-manuals-pages.py`; verify ALL CHECKS PASSED.
+
+## Market research 2/8 — competitor tools (2026-10-20)
+
+Patterns only, nothing lifted. **Ideas for the queued tool work; no action taken.**
+
+- **The repair-tool lane is fully unclaimed.** Zero repair troubleshooters exist anywhere online. That is ours to take, and it is the same conclusion the content research reached from the other side.
+- **Four of our fifteen tools trail a best-in-class, and all four are upgrade fights rather than rebuilds:** solar sizing (rvingtoolbox's suite — flat-roof derating, AC-on-batteries modelling, bank sizing), the weight calculator (RigCalc — three-limit check, 80% caution flag), the RV loan calculator (CamperUpgrade — RV-term-aware modelling), and fuel cost (rough parity).
+- **Greenfield builds, ranked by demand times weakness:** (1) an interactive state towing-regulation lookup — speeds, length/height/width, overnight parking; zero interactivity anywhere, and a natural extension of the brake-laws tool; (2) a neutral "which RV is right for me" quiz — no brand-agnostic one exists; (3) an RV tire-pressure calculator (axle weight to PSI, pairs with the tire date decoder); (4) a water-heater recovery calculator; (5) a black/gray tank "days until full" estimator; (6) an interactive winterization checklist (seasonal spikes in Oct/Nov); (7) a free trip-cost estimator (fuel plus trailer-axle tolls — the bundle is paywalled at $65/yr); (8) a truck-vs-trailer comparator; (9) a loan affordability/total-cost calculator; (10) a free AI repair troubleshooter.
+- **The design bar from the best:** a "My Rig" saved profile that pre-fills every tool (only rvingtoolbox does this — genuinely novel), "show the math" cited formulas on every calculation, and everything free and ungated.
+- **Deprioritise:** propane (we own it), maintenance apps, campsite finders.
+
+Full findings: `rv-market-map.md` in the digital-nomad goal files. Next session (Fri): monetization models.
