@@ -36,7 +36,7 @@
     "sources": []
   },
   "directory/alaska.html": {
-    "hash": "6452f96e3317095c",
+    "hash": "4a961a19b2bba632",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -78,7 +78,7 @@
     "sources": []
   },
   "directory/delaware.html": {
-    "hash": "4c224b5a94086e93",
+    "hash": "79797a1196b29fe7",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -99,7 +99,7 @@
     "sources": []
   },
   "directory/hawaii.html": {
-    "hash": "bd9372da01187481",
+    "hash": "0f2c8ae88b6efe19",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -162,7 +162,7 @@
     "sources": []
   },
   "directory/maine.html": {
-    "hash": "80206fcdbc219b37",
+    "hash": "94810c280e25cd3e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -176,7 +176,7 @@
     "sources": []
   },
   "directory/massachusetts.html": {
-    "hash": "3252dfb2800fdf57",
+    "hash": "2b15689efc4200db",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -197,7 +197,7 @@
     "sources": []
   },
   "directory/mississippi.html": {
-    "hash": "63ed3e647da92bc2",
+    "hash": "103594b50350883c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -211,28 +211,28 @@
     "sources": []
   },
   "directory/montana.html": {
-    "hash": "56fa6821b747b033",
+    "hash": "bbf8d74cc413697a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/nebraska.html": {
-    "hash": "56dd309d4c3ffd8d",
+    "hash": "e7b21c623b7de305",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/nevada.html": {
-    "hash": "b2c6ce44691eedde",
+    "hash": "d97517b89277f129",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/newhampshire.html": {
-    "hash": "eb829023fc2b5dcf",
+    "hash": "d362b2d3b4174323",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -246,7 +246,7 @@
     "sources": []
   },
   "directory/newmexico.html": {
-    "hash": "934800d940c594a1",
+    "hash": "52b45439f4bb3dcb",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -267,7 +267,7 @@
     "sources": []
   },
   "directory/northdakota.html": {
-    "hash": "3f30f4a22b9bf931",
+    "hash": "dcea42b1e95e32c5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -302,7 +302,7 @@
     "sources": []
   },
   "directory/rhodeisland.html": {
-    "hash": "a72926e439404c6e",
+    "hash": "59828e796c1316d5",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -337,14 +337,14 @@
     "sources": []
   },
   "directory/utah.html": {
-    "hash": "64bb862f5799f3de",
+    "hash": "6c907b8460b499a8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "directory/vermont.html": {
-    "hash": "e84216b0b15c922c",
+    "hash": "be2d8d109a2ecd95",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -365,7 +365,7 @@
     "sources": []
   },
   "directory/westvirginia.html": {
-    "hash": "6d41cbca4fd5f492",
+    "hash": "c3100550a787751b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -379,7 +379,7 @@
     "sources": []
   },
   "directory/wyoming.html": {
-    "hash": "ecd672650cf09282",
+    "hash": "19c8ccdd46c28734",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -741,10 +741,10 @@
     "claims": "7633b08b24580839"
   },
   "guides/rv-propane-tank-wont-fill.html": {
-    "hash": "91bede3c85c4627e",
+    "hash": "af8eb9ba00341755",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
-    "verified_at": "2026-10-16",
+    "verified_by": "four-causes diagram added and the ordering sentence corrected to match the cards (three valve jobs, one tank); fresh-context subagent review of both, findings applied: the written-notice payoff line removed from the diagram (it is a seal-case requirement, not general), the date line aligned to the page's own wording, and the screen-reader description aligned to the visible text",
+    "verified_at": "2026-10-21",
     "sources": [],
     "spec": "_specs/rv-propane-tank-wont-fill.md",
     "spec_waived": false,
@@ -975,7 +975,7 @@
     "sources": []
   },
   "manuals/brands.html": {
-    "hash": "807c1a04fc3069a2",
+    "hash": "4b6d1840f2d089cf",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -989,7 +989,7 @@
     "sources": []
   },
   "manuals/exterior-and-body.html": {
-    "hash": "a46ae3ac344762e2",
+    "hash": "e75e73a35f740cc4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1003,7 +1003,7 @@
     "sources": []
   },
   "manuals/index.html": {
-    "hash": "4364a80318029e03",
+    "hash": "7a897e730e82a84e",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). FIVE findings, none applied. Four are the 'linked at the source' family that _todo/W19-CALIBRATION-SET.md already records as ONE decision awaiting Ty's ruling ('Every row links the maker's own page or document.', its repeat in the 'need an account or a fee' card, 'The maker documents behind each part' in the nav, and 'Every system, linked at the maker' in the nav) -- a session does not rule on that cluster. The fifth, 'the federal file of manufacturer communications', is a source named without being named and is a candidate when that cluster is ruled on. Rules 1, 2, 3, 5 and 6 came back clean, and the reviewer verified every count against the data: 110 documents and libraries across 94 makers and 654 model lines, the eight tile sums (34+7+8+13+7+27+6+8 = 110), each 'and N more', 44 manufacturers from 1973 to 2027, numberOfItems 8, and the parts nav's 157.",
     "verified_at": null,
@@ -1031,7 +1031,7 @@
     "sources": []
   },
   "manuals/sanitation-and-tanks.html": {
-    "hash": "224e6ec0e419d85a",
+    "hash": "b1fab55e46bde49c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1050,14 +1050,14 @@
     "invalidated_at": "2026-09-26"
   },
   "manuals/towing-and-running-gear.html": {
-    "hash": "3d08fc4cf231bfd7",
+    "hash": "03bb9e5a87055695",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/water-and-plumbing.html": {
-    "hash": "041086a77d8f36bd",
+    "hash": "d2e181acd4b29c7c",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
