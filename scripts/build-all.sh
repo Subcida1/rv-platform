@@ -34,6 +34,9 @@ step() { printf '\n=== %s\n' "$1"; }
 step "build-listings.py: the directory pages and their derived blocks"
 python3 scripts/build-listings.py
 
+step "sync-state-bands.py: the state photograph bands"
+python3 scripts/sync-state-bands.py
+
 step "build-parts-pages.py: the parts hub and its cards"
 python3 scripts/build-parts-pages.py
 

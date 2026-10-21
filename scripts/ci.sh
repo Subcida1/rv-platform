@@ -36,6 +36,11 @@ step "stamp_assets.py --check: every asset hash is current" \
 # could not see, when one coordinate file served three pages.
 step "build-listings.py --check: generated blocks match _data/listings" \
                                                python3 scripts/build-listings.py --check
+# The state photograph band (2026-10-21): every state page carries its photograph
+# between the intro and the finder, and the alt text is the CREDITS.md record, the
+# same one verify.py gates the hub tiles against.
+step "sync-state-bands.py --check: every state page carries its photograph band" \
+                                               python3 scripts/sync-state-bands.py --check
 step "build-coords.py --check: every listing name resolves in its own state" \
                                                python3 scripts/build-coords.py --check
 step "build-search-index.py --check: the site search index is current" \

@@ -719,7 +719,9 @@ for _c in sorted(ROOT.glob("assets/img/**/CREDITS.md")):
 _alt_bad = []
 for _p in pages:
     _ptxt = strip_bodies(_p.read_text(encoding="utf-8"))
-    for _m in re.finditer(r'<img\b[^>]*src="assets/img/states/([a-z0-9-]+)-800\.jpg[^"]*"[^>]*alt="([^"]*)"', _ptxt):
+    # -\d+ covers both sizes: the 800 tile on the hub and the 1600 band on the state
+    # pages (added 2026-10-21). One record in CREDITS.md gates both.
+    for _m in re.finditer(r'<img\b[^>]*src="assets/img/states/([a-z0-9-]+)-\d+\.jpg[^"]*"[^>]*alt="([^"]*)"', _ptxt):
         _slug, _alt = _m.group(1), _m.group(2)
         _want = _tile_alt.get(_slug)
         if _want and _alt.strip() != _want:

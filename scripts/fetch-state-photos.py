@@ -32,7 +32,11 @@ BIAS = 0.5             # 0.5 = centred; lower keeps more sky, higher keeps more 
 # Tiles render at about 380 CSS px, so 800 covers a 2x display. 1600 was tried and
 # dropped: these are highly detailed forest and water scenes and the big version
 # ran 340KB+, which no tile needs. Add a size back here when something displays it.
-SIZES = ((800, 500),)
+#
+# 2026-10-21: something does. The state pages now carry their photograph as a band
+# (`.state-band` in style.css) at up to 1152 CSS px wide, and 800 upscaled 1.44x
+# there. The 1600 size is for the band; the 800 stays for the hub tiles.
+SIZES = ((800, 500), (1600, 1000))
 QUALITY = 76
 
 # slug, Commons file title, licence, author, licence URL
