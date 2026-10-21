@@ -36,14 +36,14 @@ PHOTO_SLUG = {"texas": "westtexas"}
 
 # The block, as it sits on the page: between the intro's closing div and the finder
 # section, with a blank line either side. The band div IS the content column (class
-# "wrap state-band") so check-column.py sees a wrapped block, and the first shape
-# tried (an outer .state-band holding an inner .wrap) is kept here so the script can
-# upgrade pages that carry it. The stamp ( ?v=... ) is allowed in the match and
-# stripped before comparing, because stamp_assets.py owns it.
+# "wrap state-band") so check-column.py sees a wrapped block. The matcher takes any
+# img attributes, so it finds the block across shapes (the first version nested the
+# wrap inside the band div; the second had no srcset) and the comparison below
+# decides whether a refresh is needed. The stamp ( ?v=... ) is allowed in the match
+# and stripped before comparing, because stamp_assets.py owns it.
 BAND_RE = re.compile(
     r'  <div class="wrap state-band">\n'
-    r'    <img src="assets/img/states/[a-z0-9-]+-\d+\.jpg(?:\?v=[0-9a-f]+)?"'
-    r'[^>]*>\n'
+    r'    <img [^>]*>\n'
     r'  </div>\n\n'
 )
 OLD_BAND_RE = re.compile(
@@ -72,11 +72,21 @@ def read_alts():
 
 
 def band(slug, alt):
+    # srcset/sizes added 2026-10-21 (Ty asked whether the sizing met Google's
+    # responsive-image guidance; it did not: one 346 KB file went to every device).
+    # The browser picks: a 2x phone needs about 684px and takes the 800 (94 KB), a
+    # desktop needs 1152 and takes the 1600. sizes is the band's real display width:
+    # the wrap is 1200 max minus its 48px of padding, and 100vw minus 48 below that.
+    # NOTE the srcset URLs are not stamped by stamp_assets.py (it rewrites href/src
+    # only); the state files are static, so the only cost is that a replaced
+    # photograph could serve from a browser cache for up to ten minutes.
     return (
         '  <div class="wrap state-band">\n'
-        '    <img src="assets/img/states/%s-1600.jpg" alt="%s" width="1600"'
+        '    <img src="assets/img/states/%s-1600.jpg"'
+        ' srcset="assets/img/states/%s-800.jpg 800w, assets/img/states/%s-1600.jpg 1600w"'
+        ' sizes="(min-width: 1248px) 1152px, calc(100vw - 48px)" alt="%s" width="1600"'
         ' height="1000" loading="lazy" decoding="async">\n'
-        '  </div>\n\n' % (slug, alt)
+        '  </div>\n\n' % (slug, slug, slug, alt)
     )
 
 
