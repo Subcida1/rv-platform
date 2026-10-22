@@ -751,10 +751,10 @@
     "claims": []
   },
   "guides/rv-refrigerator-not-cooling.html": {
-    "hash": "c57e475244f9df0a",
+    "hash": "035debffb4691f91",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "defrosting check added to the free checks, sourced from the two manuals already in Sources (Norcold's no-heat caution and 3 mm figure from Dometic); anchored by Ty's own frost photograph. The hair-dryer photos are deliberately not used: both makers warn against heat, and Ty agreed not to show it",
+    "verified_at": "2026-10-21",
     "sources": [],
     "spec": "_specs/rv-refrigerator-not-cooling.md",
     "spec_waived": false,
