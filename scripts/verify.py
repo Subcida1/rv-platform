@@ -646,7 +646,9 @@ print("\n=== every photograph is either credited or recorded ===")
 #      credit and a licence link
 #   3. a third-party photograph whose licence does not require attribution: its provenance is
 #      recorded in a CREDITS.md beside the file, which is how the state tiles do it
-OWN_PHOTOS = {"rv-trailer-at-night.jpg"}
+# Ty's own photographs, added 2026-10-21 from /home/user/Pictures/RV stuff: no credit
+# line is deliberate, the same rule as the About page's night shot.
+OWN_PHOTOS = {"rv-trailer-at-night.jpg", "rv-furnace-open.jpg", "rv-roof-vent-seal.jpg"}
 CREDIT_MARKER = re.compile(r"\bcredit\b", re.I)
 LICENCE_LINK = re.compile(r"creativecommons\.org|publicdomain|/licen[cs]es?/|unsplash|pexels", re.I)
 UNUSABLE = re.compile(r"by-nc|by-nd|noncommercial|noderiv", re.I)
