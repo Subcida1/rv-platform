@@ -20,20 +20,21 @@ grown in append order, which is why these sections are not in priority order.
 
 ## 1. Photographs still needed
 
-**Updated 2026-09-22, after a full sweep of Wikimedia Commons and Openverse.**
-Two photographs were added; five guides still have none, and all five need
-shooting rather than searching. The evidence for that is in "Why the free
-sources cannot fill these" below.
+**Updated 2026-10-21.** Two sweeps later, the picture has changed. The GFCI and
+the furnace shots are filled, and Ty supplied a batch of his own photographs
+that covers the tank sensors and more. What remains genuinely open: the ceiling
+light and the converter. The 2026-10-21 sweep's evidence is at the bottom of
+this section.
 
 Wanted, in rough priority order:
 
 | Guide | The shot we want | Status |
 |---|---|---|
-| `rv-outlets-not-working` | A GFCI outlet with test and reset buttons | **Image exists, download blocked** — see below |
-| `rv-lights-not-working` | An RV interior ceiling light, or a 12V LED fixture | Not found |
-| `rv-tank-sensors-reading-wrong` | A holding tank, tank monitor panel, or dump station | Not found |
-| `rv-converter-not-charging` | A converter/charger unit, or a battery on charge | Not found |
-| `rv-furnace-not-working` | An RV furnace, or the exterior furnace vent | Not found |
+| `rv-outlets-not-working` | A GFCI outlet with test and reset buttons | **DONE 2026-10-21** — Wtshymanski, CC BY-SA 3.0, fetched (the 429s cleared) |
+| `rv-lights-not-working` | An RV interior ceiling light, or a 12V LED fixture | **Still open.** Ty's batch has a ceiling VENT, not a light |
+| `rv-tank-sensors-reading-wrong` | A holding tank, tank monitor panel, or dump station | **Ty's photos in hand** — the tank with its sensor wiring, wiring pending his context |
+| `rv-converter-not-charging` | A converter/charger unit, or a battery on charge | **Still open.** Ty's breaker-panel and DC-board shots are the power center; whether they serve this guide is his call |
+| `rv-furnace-not-working` | An RV furnace, or the exterior furnace vent | **DONE 2026-10-21** — Ty's own photograph, the furnace with its access panel off |
 
 Added 2026-09-22, both fetched by `scripts/fetch-guide-photos.py`:
 
@@ -46,6 +47,37 @@ The 12-volt one is a **vehicle** fuse block, not an RV panel. The caption says s
 plainly and gives the fuse colour code, which is the same in an RV. An original
 photo of the real panel will always beat it, so it belongs on the shooting list
 above in spirit even though it now has an image.
+
+### The 2026-10-21 sweep, and Ty's own photographs
+
+Two things happened the same evening:
+
+**The free-source sweep finally paid.** Openverse answered without its usual
+Cloudflare block for the first time, and Commons served the GFCI file that had
+been rate-limited out of every September attempt. Fetched: the GFCI
+(Wtshymanski, CC BY-SA 3.0, on `rv-outlets-not-working`) and a two-cylinder
+changeover regulator (Kolforn, CC BY-SA 4.0, on
+`rv-propane-furnace-wont-light`). The GFCI is the one portrait photo in the
+set, so `fetch-guide-photos.py` gained a per-photo size override; Ty's
+correction set its orientation (vertical, grounds down). Two exclusions worth
+remembering: a LEGO motorhome interior that Ty caught by eye (the "slides
+removed" series by Bill Ward's Brickpile, tagged lego on Flickr), and a Truma
+S3-002 heater panel (real device, European market, would mislead a US reader).
+**Real RVs only** is the standing filter, Ty's words.
+
+**Ty's own photographs arrived**, 33 of them, at
+`/home/user/Pictures/RV stuff`. His words: "those are all my photos btw legal
+wise their green all around just try and not use license plates." So: his
+photos need no credit line (the `OWN_PHOTOS` set in `verify.py` names each one
+as it lands), and **check every exterior shot for plates before using it** —
+the 2026-10-21 motorhome shot has one (4WX132) and needs a crop or a skip.
+Wired so far: the furnace with the access panel off (the shot the cut
+cross-section note asked for) and a resealed roof vent. In hand, wiring pending
+his context: the tank sensor wiring (two shots), the breaker panel, the DC fuse
+board, the tongue-jack set (rusty plate, the replacement going on, the opened
+gearbox with water in the grease — the shot the W5 parts note has been waiting
+for), and a fridge frost/defrost trio. Held for a home: campground and exterior
+atmosphere shots, a night trailer shot, the shower, the ceiling vent.
 
 One more, added the same day, and **licensed from nobody**. The About page now
 carries the site owner's own photograph of his own 33-foot travel trailer at
