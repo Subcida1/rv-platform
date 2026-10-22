@@ -651,10 +651,10 @@
     "sources": []
   },
   "guides/rv-leveling-jacks-not-working.html": {
-    "hash": "0959429bd95d6b34",
+    "hash": "84f0b2b3b4029e7e",
     "status": "verified",
-    "verified_by": "variety pass on the maker-s construction, batch 2 (Ty: avoid repetitive sayings) -- the manual, the factory, the instruction and the named part now carry the attribution in turn.",
-    "verified_at": "2026-10-16",
+    "verified_by": "Ty's photograph of a tongue jack added to the three-systems section",
+    "verified_at": "2026-10-21",
     "sources": [],
     "spec": "_specs/rv-leveling-jacks-not-working.md",
     "spec_waived": false,
@@ -691,9 +691,9 @@
     "claims": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "84db048cc4cad0b1",
+    "hash": "1f51d8f76c2409d4",
     "status": "verified",
-    "verified_by": "GFCI photograph added in the reset section (Wtshymanski, CC BY-SA 3.0, credit in the caption): the device with its test and reset buttons, oriented vertical with the grounds down per Ty's correction",
+    "verified_by": "Ty's photograph of a failed power distribution center added after the branch-breakers paragraph",
     "verified_at": "2026-10-21",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
@@ -811,10 +811,10 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "aecae171b9ce2f04",
+    "hash": "38b2e3e33f18d4e9",
     "status": "verified",
-    "verified_by": "Ty: the costs sentence now states the three choices plainly -- clean the probes, replace them, or call a technician, with the dry test deciding.",
-    "verified_at": "2026-10-16",
+    "verified_by": "Ty's photograph of a gray tank's level sensors added at 'What the wiring looks like'; caption spelling corrected to the site's American style (gray)",
+    "verified_at": "2026-10-22",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
