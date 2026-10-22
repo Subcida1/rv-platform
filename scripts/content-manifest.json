@@ -691,10 +691,10 @@
     "claims": []
   },
   "guides/rv-outlets-not-working.html": {
-    "hash": "af15af2795651532",
+    "hash": "84db048cc4cad0b1",
     "status": "verified",
-    "verified_by": "guide endings unified, step 1 (Ty 2026-10-14, \"Your recommendation on all\"): these twelve guides carried BOTH a Related guides prose block and a button row pointing at the same pages. The duplicate buttons are gone; two prose blocks gained the one target their buttons had that the prose did not (solar not charging on the outlets guide, winterize plumbing on the roof leak guide); the converter finder survives as a button because a tool is an action. No link target was lost.",
-    "verified_at": "2026-10-14",
+    "verified_by": "GFCI photograph added in the reset section (Wtshymanski, CC BY-SA 3.0, credit in the caption): the device with its test and reset buttons, oriented vertical with the grounds down per Ty's correction",
+    "verified_at": "2026-10-21",
     "sources": [],
     "spec": "_specs/rv-outlets-not-working.md",
     "spec_waived": false,
@@ -731,10 +731,10 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "314625dd98bab008",
+    "hash": "7ee24c1a793c95e1",
     "status": "verified",
-    "verified_by": "F4 class fix 2026-10-15: the excess-flow citation moves off a distributor's copy onto RegO's own L-500 catalog, which carries the same bulletin text. No claim changed; only the host.",
-    "verified_at": "2026-10-15",
+    "verified_by": "changeover regulator photograph added in the gas-path section (Kolforn, CC BY-SA 4.0, credit in the caption); the caption names the device and says the installation shown is fixed, not an RV",
+    "verified_at": "2026-10-21",
     "sources": [],
     "spec": null,
     "spec_waived": true,

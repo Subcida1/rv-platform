@@ -23,6 +23,7 @@ Run: python3 scripts/fetch-guide-photos.py
 import io
 import json
 import subprocess
+import sys
 import time
 import urllib.parse
 from pathlib import Path
@@ -54,6 +55,24 @@ PHOTOS = [
      "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/",
      "project Kei",
      "Blade fuses seated in a 12-volt fuse holder"),
+    # Added 2026-10-21, the first finds since the September sweep. The GFCI file
+    # was rate-limited out of every September attempt; it downloads now. It is the
+    # one portrait photo here: a 7th field overrides the output size, and the crop
+    # ratio follows it, so the plate shows upright with the grounds down (Ty,
+    # 2026-10-21: "stand it vertical with the grounds down"). The regulator is a
+    # fixed British installation of the same two-cylinder changeover class US
+    # trailers carry; the caption says what it is.
+    ("rv-gfci-outlet",
+     "NEMA 5-20RA GFCI Tamper Resistant Receptacle.jpg",
+     "CC BY-SA 3.0", "https://creativecommons.org/licenses/by-sa/3.0/",
+     "Wtshymanski",
+     "A GFCI outlet with its test and reset buttons",
+     (600, 900)),
+    ("rv-changeover-regulator",
+     "-2019-12-12 LPG gas automatic changeover regulator, Trimingham.JPG",
+     "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/",
+     "Kolforn",
+     "An automatic changeover regulator with the pigtails from two propane cylinders"),
 ]
 
 
@@ -95,13 +114,22 @@ def crop_to(im, ratio, bias):
 
 
 def main():
-    for slug, title, lic, lic_url, author, alt in PHOTOS:
-        im = crop_to(fetch(thumb_url(title)), CROP, BIAS)
+    # --only slug,slug fetches just those, so adding one photo does not re-pull
+    # every file (same flag the state fetcher grew on 2026-10-11).
+    only = None
+    if "--only" in sys.argv:
+        only = {s.strip() for s in sys.argv[sys.argv.index("--only") + 1].split(",") if s.strip()}
+    for row in PHOTOS:
+        slug, title, lic, lic_url, author, alt = row[:6]
+        size = row[6] if len(row) > 6 else SIZE
+        if only and slug not in only:
+            continue
+        im = crop_to(fetch(thumb_url(title)), size[0] / size[1], BIAS)
         out = OUT / ("%s.jpg" % slug)
-        im.resize(SIZE, Image.LANCZOS).save(out, "JPEG", quality=QUALITY,
+        im.resize(size, Image.LANCZOS).save(out, "JPEG", quality=QUALITY,
                                             optimize=True, progressive=True)
         print("  wrote  assets/img/%s (%dx%d, %.0f KB)"
-              % (out.name, SIZE[0], SIZE[1], out.stat().st_size / 1024))
+              % (out.name, size[0], size[1], out.stat().st_size / 1024))
         print("         %s | %s | %s" % (title, lic, author))
         time.sleep(9)
 

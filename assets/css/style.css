@@ -2285,6 +2285,9 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .prose figure svg[role="img"]{max-width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
 .prose figure img{width:100%;max-width:480px;border-radius:var(--radius);border:1px solid var(--border)}
 .prose figure img.wide{max-width:520px}
+/* A portrait photograph. The GFCI shot (2026-10-21) is 600x900, and the 480 cap
+   would render it as a 480x720 column of a picture; this keeps it inline. */
+.prose figure img.tall{max-width:340px}
 /* The About page photograph is the site owner's own trailer, not licensed stock,
    so it carries no credit line and is the page's single image. It fills the
    column instead of sitting at the 480px cap the guide photographs use, and takes
