@@ -584,10 +584,10 @@
     "sources": []
   },
   "guides/rv-fridge-leveling.html": {
-    "hash": "baaa56d571624a92",
+    "hash": "f2425c5cbc0abed9",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "leveling tolerance diagram added (two directions, 6 and 3 degrees, Dometic note); fresh-context review, all three findings applied (visible text keeps 'consumer manuals', the drawn tilts now hold the true 2:1 ratio at 10 and 5 degrees, and the caption drops an unsourced 'check first' clause)",
+    "verified_at": "2026-10-21",
     "sources": [],
     "spec": null,
     "spec_waived": true,
