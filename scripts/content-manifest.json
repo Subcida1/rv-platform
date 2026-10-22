@@ -594,10 +594,10 @@
     "claims": []
   },
   "guides/rv-furnace-carbon-monoxide.html": {
-    "hash": "9f0c2afea355560c",
+    "hash": "c77572f663b05747",
     "status": "verified",
-    "verified_by": "three FAQ blocks added, each grounded in the page's own sections and sources (audit quick win #4)",
-    "verified_at": "2026-10-16",
+    "verified_by": "CO alarm service-life diagram added to the alarm section (three stages, the silent end-of-life in red); fresh-context review, both findings applied (the CDC line keeps its 'maker's instructions' qualifier, and the 7-to-10 recommendation is attributed to Kidde with the NFPA rather than to the NFPA)",
+    "verified_at": "2026-10-21",
     "sources": [],
     "spec": null,
     "spec_waived": true,
