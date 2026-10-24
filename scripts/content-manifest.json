@@ -476,7 +476,7 @@
     "claims": "f2c9a068f6c16e27"
   },
   "guides/rv-black-tank-clogged.html": {
-    "hash": "4d629df3b0d87e9b",
+    "hash": "0c36d670c9068046",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -503,7 +503,7 @@
     "claims": []
   },
   "guides/rv-chassis-battery-and-charging.html": {
-    "hash": "ca9848d6f43dc338",
+    "hash": "6dd6de0eb7db3fda",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -911,7 +911,7 @@
     "claims": "18cbb61bba603005"
   },
   "guides/rv-water-pressure.html": {
-    "hash": "3a3b0160b3cbed46",
+    "hash": "3d71c53864641b19",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -982,21 +982,21 @@
     "sources": []
   },
   "manuals/chassis-and-drivetrain.html": {
-    "hash": "a8fd8ef8fe6f61a1",
+    "hash": "a2f1c9da50a72180",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/exterior-and-body.html": {
-    "hash": "e75e73a35f740cc4",
+    "hash": "e5499ce17adc1276",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/heating-and-cooling.html": {
-    "hash": "7d2e6b7f79ee9bec",
+    "hash": "c5ba9a9256c357b8",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1017,7 +1017,7 @@
     "sources": []
   },
   "manuals/power-and-electrical.html": {
-    "hash": "ff766b2123e301e5",
+    "hash": "e05bad7b842d4413",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1031,7 +1031,7 @@
     "sources": []
   },
   "manuals/sanitation-and-tanks.html": {
-    "hash": "b1fab55e46bde49c",
+    "hash": "978c28605eba086e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -1050,14 +1050,14 @@
     "invalidated_at": "2026-09-26"
   },
   "manuals/towing-and-running-gear.html": {
-    "hash": "03bb9e5a87055695",
+    "hash": "8f6ab6f5038d9ecb",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
     "sources": []
   },
   "manuals/water-and-plumbing.html": {
-    "hash": "d2e181acd4b29c7c",
+    "hash": "886141a6f6cbf9b9",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
