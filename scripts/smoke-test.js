@@ -441,6 +441,29 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
     if (every) console.log('  ok   every index entry points at a real page');
     else { console.log('  FAIL an index entry points at a missing page'); failed++; }
   }
+
+  /* THE REAL PAGES, NOT JUST THE HARNESS, MUST LOAD THE MATCHER FIRST.
+     The block above runs search-match.js itself before search.js, so it stayed green
+     through a production outage: on 2026-10-23 originrv.com answered "Nothing matches"
+     for every query because no real page ever loaded search-match.js. index.html carried
+     a static search.js tag with no matcher ahead of it, so search.js captured
+     window.RVSearchMatch as undefined and every score came back 0. This check reads the
+     shipped HTML and asserts the order a browser will actually execute. */
+  {
+    const html = fs.readdirSync(ROOT).filter(f => f.endsWith('.html'));
+    let bad = 0;
+    for (const f of html) {
+      const text = fs.readFileSync(path.join(ROOT, f), 'utf8');
+      const mPos = text.search(/src="assets\/js\/search-match\.js/);
+      const sPos = text.search(/src="assets\/js\/search\.js/);
+      if (sPos >= 0 && (mPos < 0 || mPos > sPos)) {
+        console.log('  FAIL ' + f + ' loads search.js without search-match.js ahead of it');
+        bad++;
+      }
+    }
+    if (!bad) console.log('  ok   every page that tags search.js loads the matcher first');
+    else failed += bad;
+  }
 }
 
 // 4. each page's own inline script must execute too

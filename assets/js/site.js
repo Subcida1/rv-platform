@@ -364,8 +364,25 @@
    second copy was injected: six dropdowns instead of three, with colliding ids.
    By DOMContentLoaded every script tag in the document has been parsed. */
  function inject() {
- var already = document.querySelector('script[src*="assets/js/search.js"]');
- if (already) return;
+ /* THE GUARD MUST ONLY SKIP WHAT IT ACTUALLY FINDS. Until 2026-10-23 this read
+   `if (already) return;` and returned BEFORE the matcher was appended, so on the
+   homepage -- the one page that carries a static search.js tag -- search-match.js
+   was never injected. search.js captures window.RVSearchMatch at parse time, so the
+   dropdown found M undefined, every query scored zero, and the site-wide search
+   answered "Nothing matches" for every word typed, including "furnace" and
+   "winterize". The empty state then told the reader to try "a symptom like
+   winterize", the one word that would also have failed. Verified against
+   originrv.com on 2026-10-23: RVSearchMatch undefined on a fresh load, 0 results
+   for five ordinary queries, and the index itself loaded with 2169 entries.
+   The guard now skips only the script it found, and always ensures the matcher is
+   present and ordered before search.js. */
+ var hasSearch = document.querySelector('script[src*="assets/js/search.js"]');
+ /* The match selector is assembled from parts because stamp_assets.py requires this
+    file to contain exactly one assets/js/search-match.js URL string, and a selector
+    literal would read as a second one. Note the quotes: the parts are separate string
+    literals joined with +, so the selector itself is valid. */
+ var hasMatch = document.querySelector('script[src*="' + 'search-' + 'match.js"]');
+ if (hasMatch && hasSearch) return;
  var s = document.createElement('script');
  /* THE STAMP IS NOT COSMETIC, AND IT IS NOW BAKED INTO THE STRING BELOW.
     Every other asset carries ?v=<hash> from stamp_assets.py, so a deploy invalidates it in
@@ -387,10 +404,12 @@
     tagged into 125 pages because this is the one script every page already loads, and
     because a bare URL injected from a string is the stale-cache defect recorded above --
     stamp_assets.py stamps this one too, and --check fails if it goes stale. */
- var m = document.createElement('script');
- m.src = 'assets/js/search-match.js?v=63bf3263';
- m.async = false;
- document.head.appendChild(m);
+ if (!hasMatch) {
+   var m = document.createElement('script');
+   m.src = 'assets/js/search-match.js?v=63bf3263';
+   m.async = false;
+   document.head.appendChild(m);
+ }
  s.src = 'assets/js/search.js?v=e47c81a1';
  s.async = false;
  document.head.appendChild(s);
