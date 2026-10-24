@@ -187,6 +187,19 @@ step "prose that argues with the reader"        python3 scripts/check-prose.py
 # still reported rather than failed, because deciding a query is a decision, not a fix.
 step "pages cover the query they target"    python3 scripts/check-keywords.py --strict
 step "smoke test"                              node scripts/smoke-test.js
+# EVERY PAGE'S SCRIPTS, IN THE ORDER THE BROWSER RUNS THEM (2026-10-23). Site search answered
+# "Nothing matches" to every query in production while this suite was green, because
+# smoke-test.js above runs each page's scripts from a HAND-KEPT list (PAGES) and the
+# homepage's own <script src="assets/js/search.js"> tag was not on it. search.js captures
+# window.RVSearchMatch at parse time and no real page loaded search-match.js before it, so
+# it captured undefined and every score came back 0. A list of what to run cannot catch a
+# bug caused by what the HTML actually asks for, so this derives the script order from each
+# page and asserts: every src exists, every script executes, and every cross-script contract
+# holds. Contracts are declared as data in the script. Negative-tested by deleting the
+# matcher tag from the real index.html and watching it name the page and the fix.
+step "page scripts still find a missing dependency" node scripts/check-page-scripts.js --self-test
+step "every page: scripts exist, execute, and find their dependencies" \
+                                               node scripts/check-page-scripts.js
 
 # ---------------------------------------------------------------- 3. structure
 # The W3C checker is the authority on whether the markup is valid, and the one that found
