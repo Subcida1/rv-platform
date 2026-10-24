@@ -446,9 +446,9 @@
     "claims": "e65464526c5af869"
   },
   "guides/rv-awning-not-working.html": {
-    "hash": "ecb172640a79820e",
+    "hash": "42ce868416b933f8",
     "status": "verified",
-    "verified_by": "the lede said the page was the first of two fault classes while the page covers both; it now says so (guides deep-dive 2026-10-23, finding 2)",
+    "verified_by": "title shortened to 'RV Awning Not Working: Won't Retract or Close by Hand'; the close-by-hand hook is retained and backed by the H2 on getting it closed; H1 and body untouched. Independent review 2026-10-23: PASS",
     "verified_at": "2026-10-23",
     "sources": [],
     "spec": "_specs/rv-awning-not-working.md",
@@ -483,10 +483,10 @@
     "sources": []
   },
   "guides/rv-black-tank-routine.html": {
-    "hash": "544eaa2f74bf6e13",
+    "hash": "395f9edc0f281645",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
-    "verified_at": "2026-10-16",
+    "verified_by": "title shortened to 'RV Black Tank Routine: Dump, Treat, Store and Diagnose'; maps 1:1 to four H2s; H1 and body untouched; independent review 2026-10-23 PASS",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -530,10 +530,10 @@
     "claims": "9e753c5476a782bd"
   },
   "guides/rv-delamination.html": {
-    "hash": "245b5a7c9a708934",
+    "hash": "ef0bf0f33f109448",
     "status": "verified",
-    "verified_by": "the callout now carries the source's hedge: 'largely the bond that decides' rather than 'the single bond that decides', matching the Azdel wording (guides 16th rotation, Neo finding 2)",
-    "verified_at": "2026-10-16",
+    "verified_by": "title shortened to 'RV Delamination: Causes and What Makers Document'; source hedge preserved; H1 and body untouched; independent review 2026-10-23 PASS",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -634,10 +634,10 @@
     "claims": "ef934e187c559e6f"
   },
   "guides/rv-generator-sizing.html": {
-    "hash": "12f34b8d80057903",
+    "hash": "3dfb26c11913cc89",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
-    "verified_at": "2026-10-16",
+    "verified_by": "title recut to 'What Size Generator for an RV: Loads, Derates, No Formula', restoring the differentiator the first cut lost; each term maps to an H2; H1 and body untouched. Second independent review 2026-10-23: PASS. Article headline synced",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": "_specs/rv-generator-sizing.md",
     "spec_waived": false,
@@ -731,20 +731,20 @@
     "claims": []
   },
   "guides/rv-propane-furnace-wont-light.html": {
-    "hash": "7ee24c1a793c95e1",
+    "hash": "aac8ca4ae9bc1322",
     "status": "verified",
-    "verified_by": "changeover regulator photograph added in the gas-path section (Kolforn, CC BY-SA 4.0, credit in the caption); the caption names the device and says the installation shown is fixed, not an RV",
-    "verified_at": "2026-10-21",
+    "verified_by": "title shortened to 'RV Furnace Won't Light: Propane Pressure and the Sequence'; H1 and body untouched; independent review 2026-10-23 PASS; targets.json declaration flagged separately",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": null,
     "spec_waived": true,
     "claims": "7633b08b24580839"
   },
   "guides/rv-propane-tank-wont-fill.html": {
-    "hash": "af8eb9ba00341755",
+    "hash": "068773b8282ee065",
     "status": "verified",
-    "verified_by": "four-causes diagram added and the ordering sentence corrected to match the cards (three valve jobs, one tank); fresh-context subagent review of both, findings applied: the written-notice payoff line removed from the diagram (it is a seal-case requirement, not general), the date line aligned to the page's own wording, and the screen-reader description aligned to the visible text",
-    "verified_at": "2026-10-21",
+    "verified_by": "title shortened to 'RV Propane Tank Won't Fill: The Four Causes'; the four cause cards stay the page's spine; H1 and body untouched. Independent review 2026-10-23: PASS",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": "_specs/rv-propane-tank-wont-fill.md",
     "spec_waived": false,
@@ -811,10 +811,10 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "38b2e3e33f18d4e9",
+    "hash": "61a979cd1ce9b3c2",
     "status": "verified",
-    "verified_by": "Ty's photograph of a gray tank's level sensors added at 'What the wiring looks like'; caption spelling corrected to the site's American style (gray)",
-    "verified_at": "2026-10-22",
+    "verified_by": "title recut to 'RV Tank Sensors Reading Wrong: Tests and Fixes' after review rejected the filler 'The Fix Guide'; both tests are named procedures on the page; H1 and body untouched. Second independent review 2026-10-23: PASS. Article headline in JSON-LD synced",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
@@ -851,10 +851,10 @@
     "claims": "40a93ee5e783a93f"
   },
   "guides/rv-towing-trailer.html": {
-    "hash": "e42888173980caff",
+    "hash": "01eea7c88cbd0e2d",
     "status": "verified",
-    "verified_by": "queued Neo guides-12th silo finding applied 2026-10-15: these eighteen guides linked nothing outside /guides/ -- no tool, no part, no manual, no directory. Each now names one topic-matched target in its Related guides block (a tool where the guide is about arithmetic, the parts page where it is about a part, the maker's manual section where it is about documents). No fact changed; no existing link removed.",
-    "verified_at": "2026-10-14",
+    "verified_by": "title shortened to 'How to Tow a Travel Trailer: Hitching, Sway and Reversing'; H1 and body untouched; independent review 2026-10-23 PASS",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -871,10 +871,10 @@
     "claims": "c0dc7a196a84dde6"
   },
   "guides/rv-trip-planner.html": {
-    "hash": "5144a00bfc63a83c",
+    "hash": "153c927f5e4f714c",
     "status": "verified",
-    "verified_by": "queued conductor batch A applied 2026-10-15: added the topic-matched tool links the silo findings named -- maintenance-schedule gains the water filter and anode rod finders (the two intervals that replace a part), trip-planner gains the fuel cost calculator, weight-calculator's next block gains the towing capacity guide, battery-runtime's block gains the battery not charging guide, and trailer-brakes scope-labels its threshold table as three worked states rather than a full fifty. No fact changed; no existing link removed.",
-    "verified_at": "2026-10-15",
+    "verified_by": "title shortened to 'RV Trip Planner: Routing, Campsites and Overnight Stops'; all four subjects covered; H1 and body untouched; independent review 2026-10-23 PASS",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1125,10 +1125,10 @@
     "claims": []
   },
   "tools/rv-appliance-board-finder.html": {
-    "hash": "be3ed9c26c30aa58",
+    "hash": "309774ed359854a0",
     "status": "verified",
-    "verified_by": "repetitive-saying sweep (Ty): the X's-own-Y-says-it-plainly family is out site-wide (own dropped, plainly/bluntly flourishes cut, in-their-own-words removed, and the X-which-makes-the-Y appositives restructured).",
-    "verified_at": "2026-10-16",
+    "verified_by": "title recut to 'RV Appliance Board Finder: Fridge, Generator, Ignitor' to name the Onan generator charts the first cut dropped; body untouched; second independent review 2026-10-23 PASS",
+    "verified_at": "2026-10-23",
     "sources": [],
     "spec": null,
     "spec_waived": true,
