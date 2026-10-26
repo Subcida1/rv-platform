@@ -551,6 +551,29 @@ def hub(rows, oem_count, model_count=0):
       <div id="man-status" class="man-status">%d documents and libraries across %d equipment makers,
         and %d model lines. Start typing, or open a system below.</div>
       <ul id="man-results" class="man-list" hidden></ul>
+      <!-- NO-JS FALLBACK. The live finder above builds its rows on the first keystroke from
+           assets/js/manuals/all.js (211KB) rather than shipping all 815 rows with the page,
+           which is deliberate: a reader who only wants the tiles pays nothing for the corpus.
+           The cost is that the box is inert without JavaScript, and an inert search box that
+           says "Start typing" is a dead end. This block is the honest alternative: the same
+           content, reached by browsing, and it names the box as needing JavaScript rather than
+           pretending otherwise. The system pages it links to server-render every row, so they
+           read fine with scripting off (see build_system_page). -->
+      <noscript>
+        <p class="man-status">Searching needs JavaScript. Without it, browse instead: every
+        document is listed by system below, and the brand index lists all 44 makers.</p>
+        <p class="man-status">Start with <a class="link" href="manuals/brands.html">RV manuals by
+        brand</a>, or open a system: <a class="link" href="manuals/power-and-electrical.html">Power
+        and electrical</a>, <a class="link" href="manuals/water-and-plumbing.html">Water and
+        plumbing</a>, <a class="link" href="manuals/heating-and-cooling.html">Heating and
+        cooling</a>, <a class="link" href="manuals/kitchen-and-appliances.html">Kitchen and
+        appliances</a>, <a class="link" href="manuals/exterior-and-body.html">Exterior and
+        body</a>, <a class="link" href="manuals/towing-and-running-gear.html">Towing and running
+        gear</a>, <a class="link" href="manuals/sanitation-and-tanks.html">Sanitation and
+        tanks</a>, <a class="link" href="manuals/chassis-and-drivetrain.html">Chassis and
+        drivetrain</a>, and <a class="link" href="manuals/recalls.html">Recalls and
+        bulletins</a>.</p>
+      </noscript>
     </div>
   </div>
 

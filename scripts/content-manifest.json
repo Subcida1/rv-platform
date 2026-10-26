@@ -406,10 +406,10 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "c8792e4874de6de2",
+    "hash": "1425d5f8cac294bf",
     "status": "verified",
-    "verified_by": "The Grid",
-    "verified_at": "2026-10-19",
+    "verified_by": "hermes 2026-10-26: IA fix - Start-here card copy only. Button label now names the destination (Open the new-owner walkthrough) and the body states the walkthrough lives in the manuals section, so label and destination agree. No links, counts, headings or structure changed; the other diff line is a generated asset hash.",
+    "verified_at": "2026-10-26",
     "sources": [],
     "spec": null,
     "spec_waived": true,

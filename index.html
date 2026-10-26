@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/">
  <title>RV Tools &amp; RV Repair Directory | OriginRV</title>
  <meta name="description" content="Free RV tools for owners and full timers: a towing and weight calculator, plain-English winter and troubleshooting guides, and an RV repair directory.">
- <link rel="stylesheet" href="assets/css/style.css?v=856b5d1e">
+ <link rel="stylesheet" href="assets/css/style.css?v=2c3bd8ba">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -99,18 +99,21 @@
       anchor, and nesting one would make the two click targets fight. The form's action is
       /directory/, so with JavaScript off it still lands somewhere useful rather than
       doing nothing. -->
- <div class="hstat">
+ <div class="hstat hstat-linkwrap">
  <div class="num" data-count="2026">2026</div><div class="lbl">RV repair businesses listed</div>
  <div class="hstat-p">Mobile techs and repair shops across fifty states. Put in a ZIP or a town and go straight to the ones near you.</div>
  <form class="hstat-form" action="directory/" method="get" onsubmit="return RV.findService(this)">
  <input type="text" name="loc" aria-label="ZIP or town" placeholder="ZIP or town" autocomplete="postal-code" inputmode="text">
  <button class="btn btn-primary btn-sm" type="submit">Find RV service</button>
  </form>
-        <!-- THE SAME TEXT LINK AS ITS TWO NEIGHBOURS, FOR DESKTOP. Ty, 2026-10-06: "on desktop i
-             dont want the rv repair buissness listed one on the right side to have a input box,
-             however it makes sense / looks good on mobile. On Desktop / PC it sohuld just be a
-             text link like the rv guides and rv tools elements." The field and the link trade
-             places at 720px, which is where the three tiles stack. -->
+        <!-- THE SAME TEXT LINK AS ITS TWO NEIGHBOURS, FOR DESKTOP, and now the tile's whole
+             target rather than a small line at the bottom of it: .hstat-linkwrap stretches
+             this anchor over the tile so a click anywhere in it follows, matching the tools
+             and guides tiles. Ty, 2026-10-06: "on desktop i dont want the rv repair buissness
+             listed one on the right side to have a input box, however it makes sense / looks
+             good on mobile. On Desktop / PC it sohuld just be a text link like the rv guides
+             and rv tools elements." The field and the link trade places at 720px, which is
+             where the three tiles stack. -->
         <a class="hstat-go" href="directory/">Browse the directory &#8594;</a>
  </div>
  </div>

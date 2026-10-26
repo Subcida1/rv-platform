@@ -60,6 +60,10 @@ CENTER_OK = {
     # heading because a centred heading over a left-aligned line of its own label is the
     # ragged look the change was meant to fix.
     '.guide-group', '.guide-group-note', '.parts-sys-count',
+    # ADDED 2026-10-26: .az-h, the "All fifty states, A to Z" heading over the new flat list
+    # on the directory hub. Centred for the reason above -- it is the same class of heading as
+    # .hub-page h2.region-h, which sits a few hundred lines below it on the same page.
+    '.az-h',
     '.big-card', '.btn', '.btn-gb', '.center', '.chips-tools .chip,.tool-strip .chip',
     '.deck-sim-note', '.dog-inner', '.empty', '.empty-state', '.hero-inner', '.hstat',
     '.hub-page h2.region-h', '.part', '.qty .n', '.sec-head', '.sec-head.center',
@@ -96,7 +100,7 @@ GRADIENT_OK = {
 }
 
 # Ratchets - the count today, from `--discover`. Lower them by hand as the collapse lands.
-SIZE_CEILING = 56
+SIZE_CEILING = 30
 # RAISED 54 -> 55 ON 2026-10-09, deliberately. The guides index and the parts hub gained a
 # sticky jump bar, and an in-page anchor has to clear BOTH the sticky header (86px) and the
 # bar itself. 88px and 90px were the only nearby values already in the scale and neither
