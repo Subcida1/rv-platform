@@ -1,0 +1,24 @@
+{
+  "_why": "merge-candidates.py will not invent a region for a base it does not know. These three bases are new to _data/listings/iowa.json and each needs one entry added to the file's region_of object before the merge will append the record. Without it the merge reports 'no region for its base' and skips the record rather than filing it somewhere plausible.",
+  "_apply": "Add each base to region_of in _data/listings/iowa.json, keeping the existing key names (north-ia, west-ia). Then: python3 scripts/merge-candidates.py _todo/LETTA-DEPTH-20261025/iowa-verified.json --state iowa",
+  "region_of_additions": {
+    "Westside": "west-ia",
+    "Mallard": "north-ia",
+    "Nora Springs": "north-ia"
+  },
+  "_region_labels_for_context": {
+    "west-ia": "Council Bluffs, Sioux City and the west",
+    "north-ia": "Okoboji and the north"
+  },
+  "_note_on_labels": "Westside is Crawford County, in the west-central cluster the coverage instrument names as Iowa's largest hole, so west-ia is right rather than a new region. Mallard (Palo Alto County) and Nora Springs (Floyd County) are both north Iowa; if the reviewer judges Floyd County closer to the Cedar Rapids east region, that is an editorial call and the label is the only thing that changes.",
+  "_then": [
+    "python3 scripts/build-coords.py --check",
+    "python3 scripts/build-listings.py",
+    "python3 scripts/build-search-index.py",
+    "node scripts/build-shell.mjs",
+    "python3 scripts/stamp_assets.py",
+    "python3 scripts/build-sitemap.py --write",
+    "bash scripts/ci.sh"
+  ],
+  "_do_not_run_in_this_checkout": "The chain above rewrites the homepage count and other generated pages, including files another live session has uncommitted work in. It was deliberately not run from the research session."
+}

@@ -1773,11 +1773,11 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
 .tool-viz .viz-stage{transition:opacity .5s cubic-bezier(.4,0,.2,1)}
 .tool-viz .viz-stage.is-fading{opacity:0}
 .tool-viz .viz-bar{display:flex;align-items:center;gap:2px;margin-top:6px}
-.tool-viz .viz-dot{width:32px;height:32px;padding:0;border:0;background:transparent;cursor:pointer;position:relative}
+.tool-viz .viz-dot{width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;position:relative}
 .tool-viz .viz-dot::after{content:"";position:absolute;inset:11px;border-radius:50%;background:var(--border-2);transition:background .18s,transform .18s}
 .tool-viz .viz-dot:hover::after{background:var(--text-3)}
 .tool-viz .viz-dot.is-on::after{background:var(--brand);transform:scale(1.4)}
-.tool-viz .viz-pause{margin-left:auto;border:0;background:transparent;color:var(--text-3);font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:8px 6px;border-radius:8px;min-height:32px}
+.tool-viz .viz-pause{margin-left:auto;border:0;background:transparent;color:var(--text-3);font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:8px 6px;border-radius:8px;min-height:44px}
 .tool-viz .viz-pause:hover{color:var(--text);background:var(--bg-2)}
 .tool-viz .viz-dot:focus-visible,.tool-viz .viz-pause:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){.tool-viz .viz-stage{transition:none}}
@@ -2099,6 +2099,7 @@ details.faq p{color:var(--text-2);font-size:16px;line-height:1.7;padding-bottom:
    so the AA floor holds everywhere; the 44px is touch-only, keyed on hover capability rather
    than a width breakpoint, which is the convention this stylesheet already uses. */
 @media (hover:none){.waste-grid select{min-height:44px}}
+@media(max-width:720px){.waste-grid{grid-template-columns:1fr}}
 
 /* ============================================================
    Content lists (added for the battery guide polish pass)
@@ -3617,7 +3618,7 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    are 11.5px, so it fails AA; white on --tint-ink #2a6aad measures 5.58:1. The brand blue
    is for large type and gradients, where the rule has room for it. */
 .part-types .chip{font-family:inherit;font-size:10.5px;font-weight:800;letter-spacing:.085em;
-  text-transform:uppercase;line-height:1;padding:0 10px;min-height:25px;
+  text-transform:uppercase;line-height:1;padding:0 10px;min-height:44px;
   display:inline-flex;align-items:center;cursor:pointer;
   background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
 /* THE FILL THAT WAS THE HOVER IS THE DEFAULT NOW, AND HOVER GOES THE OTHER WAY.
