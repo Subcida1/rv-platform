@@ -651,7 +651,7 @@ def build(kind):
                                   text, count=1)
                 assert n == 1, "%s: no card heading for the topic sentence" % slug
             else:
-                card = ('\n  <div class="sec pb-60">\n    <div class="wrap">\n      <div class="card">\n'
+                card = ('\n  <div class="sec pb-60">\n    <div class="wrap">\n      <div class="page-foot">\n'
                         '        <h2 class="sm">Where to go next</h2>\n'
                         '        <p class="sm">' + topic + '</p>\n'
                         '        <p class="sm">The <a href="/guides/">guides</a> work through common '

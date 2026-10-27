@@ -642,7 +642,7 @@ def hub(rows, oem_count, model_count=0):
 
   <div class="sec pb-60">
     <div class="wrap">
-      <div class="card">
+      <div class="page-foot">
         <h2 class="sm">Where to go next</h2>
         <p class="sm">The <a href="/guides/">guides</a> work through the faults these documents
         describe, citing the same pages. The <a href="/tools/">tools</a> do the arithmetic the
@@ -908,14 +908,13 @@ def start_here_page():
 
   <div class="sec pb-60">
     <div class="wrap">
-      <div class="card">
+      <div class="page-foot">
         <h2 class="sm">Where to go next</h2>
         <p class="sm">The <a href="/parts/">parts</a> page names every component an RV is made of,
         by system, with what each one does. The <a href="/directory/">directory</a> finds a mobile
         technician or a shop by state when a job is past what you want to tackle yourself. The
         <a href="/tools/">tools</a> do the arithmetic: weight, load, tire age, battery runtime.
-        And <a href="/contact">the contact page</a> is where a correction or a missing topic
-        goes.</p>
+        And <a href="/contact">the contact page</a> is where a correction or a missing topic.</p>
       </div>
     </div>
   </div>

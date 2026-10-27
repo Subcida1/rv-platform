@@ -444,7 +444,7 @@ def build():
     # has always wrapped its copy; this one and the two hand-written hubs had not.
     out.append('  <div class="sec pb-60">\n'
                '    <div class="wrap">\n'
-               '      <div class="card">\n'
+               '      <div class="page-foot">\n'
                '        <h2 class="sm">Where to go next</h2>\n'
                ' <p class="sm">The <a href="/guides/">guides</a> work through the faults that lead to '
                'a part being replaced, in order from the symptom. The <a href="/manuals/">manuals</a> '

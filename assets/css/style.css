@@ -912,6 +912,12 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 /* ================= CARDS ================= */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:.18s}
 .card:hover{transform:translateY(-4px);border-color:var(--border-2);box-shadow:var(--shadow)}
+
+/* Bottom page footers: a labelled content block, not a clickable card. The
+   lift and hover state read as a link, and zero padding leaves the text flush
+   on the border. Padding + no hover keeps the same grid rhythm without the
+   misclick. */
+div.page-foot{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;overflow:hidden}
 .card-media{position:relative;display:grid;place-items:center;overflow:hidden}
 .card-media svg{position:relative;z-index:1}
 .card-tag{position:absolute;top:12px;left:12px;z-index:2;font-size: var(--fs-xs);font-weight:700;letter-spacing:.03em;background:rgba(255,255,255,.9);border:1px solid var(--border);color:var(--text-2);padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px)}
