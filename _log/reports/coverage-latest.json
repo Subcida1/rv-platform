@@ -1,6 +1,6 @@
 {
   "site": "sc-domain:originrv.com",
-  "generated": "2026-10-23T21:13:28",
+  "generated": "2026-10-27T13:48:43",
   "urls": [
     {
       "url": "https://originrv.com/",
@@ -94,7 +94,7 @@
     },
     {
       "url": "https://originrv.com/directory/connecticut",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -121,7 +121,7 @@
     },
     {
       "url": "https://originrv.com/directory/georgia",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -139,7 +139,7 @@
     },
     {
       "url": "https://originrv.com/directory/idaho",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -148,7 +148,7 @@
     },
     {
       "url": "https://originrv.com/directory/illinois",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -175,15 +175,6 @@
     },
     {
       "url": "https://originrv.com/directory/kansas",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
-    },
-    {
-      "url": "https://originrv.com/directory/kentucky",
       "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
@@ -192,8 +183,17 @@
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
     },
     {
-      "url": "https://originrv.com/directory/louisiana",
+      "url": "https://originrv.com/directory/kentucky",
       "coverageState": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawlTime": "",
+      "googleCanonical": "",
+      "userCanonical": "",
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://originrv.com/directory/louisiana",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -220,7 +220,7 @@
     },
     {
       "url": "https://originrv.com/directory/massachusetts",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -283,7 +283,7 @@
     },
     {
       "url": "https://originrv.com/directory/nevada",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -292,7 +292,7 @@
     },
     {
       "url": "https://originrv.com/directory/newhampshire",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -301,7 +301,7 @@
     },
     {
       "url": "https://originrv.com/directory/newjersey",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -310,7 +310,7 @@
     },
     {
       "url": "https://originrv.com/directory/newmexico",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -346,7 +346,7 @@
     },
     {
       "url": "https://originrv.com/directory/ohio",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -364,7 +364,7 @@
     },
     {
       "url": "https://originrv.com/directory/oregon",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -400,7 +400,7 @@
     },
     {
       "url": "https://originrv.com/directory/southdakota",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -499,7 +499,7 @@
     },
     {
       "url": "https://originrv.com/guides/battery-winter-storage",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -526,7 +526,7 @@
     },
     {
       "url": "https://originrv.com/guides/rv-12-volt-problems",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -589,7 +589,7 @@
     },
     {
       "url": "https://originrv.com/guides/rv-black-tank-routine",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -652,12 +652,12 @@
     },
     {
       "url": "https://originrv.com/guides/rv-entry-door-wont-latch",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-25T12:38:25Z",
+      "googleCanonical": "https://originrv.com/guides/rv-entry-door-wont-latch",
+      "userCanonical": "https://originrv.com/guides/rv-entry-door-wont-latch",
+      "robotsTxtState": "ALLOWED"
     },
     {
       "url": "https://originrv.com/guides/rv-entry-steps-not-working",
@@ -769,12 +769,12 @@
     },
     {
       "url": "https://originrv.com/guides/rv-maintenance-schedule",
-      "coverageState": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-27T01:33:17Z",
+      "googleCanonical": "https://originrv.com/guides/rv-maintenance-schedule",
+      "userCanonical": "https://originrv.com/guides/rv-maintenance-schedule",
+      "robotsTxtState": "ALLOWED"
     },
     {
       "url": "https://originrv.com/guides/rv-outlets-not-working",
@@ -850,7 +850,7 @@
     },
     {
       "url": "https://originrv.com/guides/rv-sewer-smell",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -877,7 +877,7 @@
     },
     {
       "url": "https://originrv.com/guides/rv-solar-not-charging",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -1165,21 +1165,21 @@
     },
     {
       "url": "https://originrv.com/tools/battery-runtime",
-      "coverageState": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-24T07:08:09Z",
+      "googleCanonical": "https://originrv.com/tools/battery-runtime",
+      "userCanonical": "https://originrv.com/tools/battery-runtime",
+      "robotsTxtState": "ALLOWED"
     },
     {
       "url": "https://originrv.com/tools/fuel-cost",
-      "coverageState": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawlTime": "",
-      "googleCanonical": "",
-      "userCanonical": "",
-      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED"
+      "coverageState": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawlTime": "2026-10-27T02:30:08Z",
+      "googleCanonical": "https://originrv.com/tools/fuel-cost",
+      "userCanonical": "https://originrv.com/tools/fuel-cost",
+      "robotsTxtState": "ALLOWED"
     },
     {
       "url": "https://originrv.com/tools/rv-anode-rod",
@@ -1201,7 +1201,7 @@
     },
     {
       "url": "https://originrv.com/tools/rv-converter-finder",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -1210,7 +1210,7 @@
     },
     {
       "url": "https://originrv.com/tools/rv-loan",
-      "coverageState": "Discovered - currently not indexed",
+      "coverageState": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
@@ -1246,7 +1246,7 @@
     },
     {
       "url": "https://originrv.com/tools/snow-load",
-      "coverageState": "URL is unknown to Google",
+      "coverageState": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawlTime": "",
       "googleCanonical": "",
