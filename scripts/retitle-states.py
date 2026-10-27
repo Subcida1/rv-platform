@@ -1,20 +1,28 @@
-"""Rewrite each state directory page title to carry its real listing count.
+"""Rewrite each state directory page title to carry its real provider counts.
 
-The count already exists on every page as <b id="stat-total">N</b> listings, and the
-page it names is the page it is on, so the title states a fact a reader can verify by
-loading it. Nothing else about the page moves: the H1, the description and the og/twitter
-titles are separate strings and a title-only pass would leave them stale, so they are
-updated here together.
+The count already exists on every page as <b id="stat-total">N</b> listings and
+<b id="stat-mobile">M</b>, and the page it names is the page it is on, so the title
+states a fact a reader can verify by loading it.
 
 Title patterns, chosen by length so the result never truncates in a SERP (>60 chars):
 
-  A  RV Repair in {State}: {n} Verified Shops            (fits all states)
-  B  RV Repair in {State}: {n} Shops, {m} Mobile Techs   (only when <=60 chars)
+  B  RV Repair in {State}: {n} Providers ({m} Mobile)   preferred, fits every state today
+  A  RV Repair in {State}: {n} Providers                when a state has zero mobile providers
+  C  RV Repair in {State}: {n} Listings                 unreachable today, kept for parity
 
-B is the better title, so it is preferred where it fits. Every state gets its real numbers.
+Three strings move together on every page: <title>, og:title and twitter:title. The page
+<title> carries &amp; for an ampersand and the meta tags carry a raw &, so the two are
+built separately and never compared to each other.
+
+WHY THIS IS TWO PASSES. An earlier version edited each page as it read it and used an
+exact-string replacement for the meta tags. When that string did not match, it changed the
+<title>, silently left both social titles stale, and wrote the page anyway. The version
+after it still skipped any page whose <title> was already correct, so a stale social title
+on such a page could never be repaired. Now every page is computed first, every problem is
+collected, and --write refuses to touch a single file if any page has a problem. A partial
+write is worse than no write, because the three strings then disagree and nothing notices.
 """
 import re
-import subprocess
 import sys
 
 DRY = '--write' not in sys.argv
@@ -41,12 +49,15 @@ LIMIT = 60
 
 
 def counts(html):
-    """The page's own numbers.
+    """The page's own rendered numbers, not a recount of the listing JSON.
 
-    stat-mobile is NOT "listings whose t is mobile": a record with t == "both" comes to you
-    AND takes drop-offs, so the repo counts it in each (scripts/build-listings.py counts()).
-    Reading the rendered <b> values keeps this script on that same definition instead of
-    re-deriving it and quietly disagreeing with the page.
+    stat-mobile is NOT "records whose t is mobile": a record with t == "both" comes to you
+    AND takes drop-offs, so counts() in build-listings.py counts it in each bucket. Reading
+    the rendered <b> values keeps this script on that same definition; re-deriving it from
+    the JSON disagreed with the page on 47 of 50 states.
+
+    A missing tag returns None, which is distinct from a rendered 0. The two are treated
+    differently below, because a 0 is a fact and a missing tag is a broken page.
     """
     def one(ident):
         m = re.search(r'<b id="%s">(\d+)</b>' % ident, html)
@@ -55,78 +66,114 @@ def counts(html):
 
 
 def build_title(state, total, mobile):
+    """"Providers", not "Shops", and parentheses, not a comma.
+
+    Iowa's 32 records are 16 service centres, 13 mobile-only and 3 that are both, so
+    calling all 32 shops overstates the shops by half. And "32 Shops, 16 Mobile Techs"
+    reads as 48 providers when the 16 mobile ones are inside the 32; the parentheses say
+    subset. A state with zero mobile providers drops the parenthetical rather than spending
+    title characters saying "(0 Mobile)".
+    """
     if total is None:
-        return None, 'A-missing'
-    b = 'RV Repair in %s: %d Shops, %d Mobile Techs' % (state, total, mobile) if mobile else None
+        return None, 'NO TOTAL COUNT'
+    if total == 0:
+        return None, 'ZERO TOTAL'
+    if mobile is None:
+        return None, 'NO MOBILE COUNT'
+    b = 'RV Repair in %s: %d Providers (%d Mobile)' % (state, total, mobile) if mobile else None
     if b and len(b) <= LIMIT:
         return b, 'B'
-    a = 'RV Repair in %s: %d Verified Shops' % (state, total)
+    a = 'RV Repair in %s: %d Providers' % (state, total)
     if len(a) <= LIMIT:
         return a, 'A'
-    return 'RV Repair in %s: %d Shops' % (state, total), 'C'
+    return 'RV Repair in %s: %d Listings' % (state, total), 'C'
 
 
-def amp(s):
-    """Titles in the HTML carry &amp; for the ampersand; ours may not have one."""
+def set_meta(doc, attr, value):
+    """Set one meta tag's content, tolerating attribute order and whitespace.
+
+    Returns (doc, status). The first version matched one exact spelling,
+    '<meta property="og:title" content="...">', so a tag split across lines, with two
+    spaces, with content before the property, or single-quoted matched nothing, was left
+    stale, and the page was written anyway. Parsing the whole tag first removes that class
+    of miss, and the status makes a miss visible instead of silent.
+    """
+    tag = re.search(r'<meta\b[^>]*?\s%s[^>]*>' % re.escape(attr), doc)
+    if not tag:
+        return doc, 'missing'
+    cur = re.search(r'\bcontent="([^"]*)"', tag.group(0))
+    if not cur:
+        return doc, 'missing'
+    if cur.group(1) == value:
+        return doc, 'same'
+    t = tag.group(0)
+    t = t[:cur.start(1)] + value + t[cur.end(1):]
+    return doc[:tag.start()] + t + doc[tag.end():], 'ok'
+
+
+def encode_title(s):
+    """<title> is entity-encoded; the meta tags take the raw string."""
     return s.replace('&', '&amp;')
 
 
-changed = []
-rows = []
-stale = []
+plans = []
+problems = []
 for slug, state in sorted(STATE_NAMES.items()):
     path = 'directory/%s.html' % slug
     try:
-        html = open(path, encoding='utf-8').read()
+        html = open(path, encoding='utf-8', newline='').read()
     except FileNotFoundError:
-        rows.append((slug, 'MISSING FILE', '', ''))
+        problems.append('%s: file is missing' % path)
         continue
+
     total, mobile = counts(html)
     new, pattern = build_title(state, total, mobile)
     if not new:
-        rows.append((slug, 'NO COUNT', '', ''))
+        problems.append('%s: %s (total=%r mobile=%r)' % (path, pattern, total, mobile))
         continue
-    new_amp = amp(new)
-    old_m = re.search(r'<title>(.*?)</title>', html, re.S)
-    old = old_m.group(1) if old_m else ''
-    rows.append((slug, pattern, old, new))
-
-    if old == new_amp:
+    if len(new) > LIMIT:
+        problems.append('%s: title is %d chars, over %d' % (path, len(new), LIMIT))
         continue
 
-    out = html
-    out = re.sub(r'<title>.*?</title>', '<title>%s</title>' % new_amp, out, count=1, flags=re.S)
-    # og:title and twitter:title carry a RAW ampersand, the <title> carries &amp;. Match on
-    # the current value rather than assuming which escaping each one uses: the first pass
-    # assumed &amp; and silently left both behind, shipping a stale social title.
+    out = re.sub(r'<title>.*?</title>', lambda _: '<title>%s</title>' % encode_title(new),
+                 html, count=1, flags=re.S)
+    if '<title>%s</title>' % encode_title(new) not in out:
+        problems.append('%s: no <title> tag was replaced' % path)
+        continue
+
     for attr in ('property="og:title"', 'name="twitter:title"'):
-        pat = re.compile(r'(<meta %s content=")([^"]*)(")' % re.escape(attr))
-        m = pat.search(out)
-        if m and m.group(2) != old:
-            # the tag currently does not carry the old title at all: report it, do not guess
-            stale.append((path, attr, m.group(2)))
-        out = pat.sub(lambda mm: mm.group(1) + new + mm.group(3), out, count=1)
-    if out != html:
-        changed.append(path)
-        if not DRY:
-            open(path, 'w', encoding='utf-8').write(out)
+        out, status = set_meta(out, attr, new)
+        if status == 'missing':
+            problems.append('%s: %s tag missing or unparseable' % (path, attr))
 
-print('%-16s %-4s %-3s %s' % ('state', 'pat', 'len', 'new title'))
-over = []
-for slug, pat, old, new in rows:
-    if not new:
-        print('%-16s %-11s %s' % (slug, pat, old))
-        continue
-    flag = '  <<OVER 60' if len(new) > LIMIT else ''
-    if flag:
-        over.append((slug, len(new), new))
-    print('%-16s %-4s %-3d %s%s' % (slug, pat, len(new), new, flag))
+    plans.append((path, pattern, new, html, out))
 
+print('%-4s %-3s %s' % ('pat', 'len', 'new title'))
+for path, pattern, new, _old, _new in plans:
+    print('%-4s %-3d %s' % (pattern, len(new), new))
+
+changing = sum(1 for p in plans if p[3] != p[4])
 print()
-print('pages to change: %d' % len(changed))
-print('titles over %d chars: %d' % (LIMIT, len(over)))
-for s, n, t in over:
-    print('  %s %d %s' % (s, n, t))
+print('pages computed   : %d' % len(plans))
+print('pages that change: %d' % changing)
+print('titles over %d   : %d' % (LIMIT, sum(1 for p in plans if len(p[2]) > LIMIT)))
+print('problems         : %d' % len(problems))
+for prob in problems:
+    print('  PROBLEM %s' % prob)
+
+if problems:
+    print()
+    print('REFUSING TO WRITE: %d page(s) have a problem. Fix them first, because a partial' % len(problems))
+    print('write leaves the three title strings disagreeing and nothing notices.')
+    sys.exit(1)
+
 if DRY:
     print()
     print('DRY RUN. Re-run with --write to apply.')
+    sys.exit(0)
+
+for path, _pattern, _new, old, out in plans:
+    if out != old:
+        open(path, 'w', encoding='utf-8', newline='').write(out)
+print()
+print('written: %d page(s)' % changing)

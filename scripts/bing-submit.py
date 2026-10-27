@@ -68,10 +68,29 @@ def load_state():
 
 
 def save_state(s):
-    json.dump(s, open(STATE, 'w'), indent=1)
+    """Write the state file atomically.
+
+    A plain open(...,'w') leaves a truncated file if the process dies mid-write, which
+    loses the whole submission history and makes the next run resubmit everything,
+    spending quota twice. os.replace is atomic on the same filesystem.
+    """
+    tmp = STATE + '.tmp'
+    with open(tmp, 'w') as fh:
+        json.dump(s, fh, indent=1)
+    os.replace(tmp, STATE)
 
 
 def ordered(urls, done):
+    """URLs in family priority order, each appearing at most once.
+
+    Family membership uses a BOUNDARY-SAFE prefix test. A bare startswith('/tools')
+    also matches '/tools-faq', and startswith('/parts') matches '/parts-finder', so a
+    future page could be filed under the wrong family. The output is de-duplicated
+    through an explicit seen set rather than trusting the caller or the sitemap.
+    """
+    def in_family(path, prefix):
+        return path == '/' + prefix or path.startswith('/' + prefix + '/')
+
     out = []
     seen = set()
     for prefix, _why in FAMILIES:
@@ -79,9 +98,11 @@ def ordered(urls, done):
             if u in seen or u in done:
                 continue
             path = u.replace('https://originrv.com', '')
-            is_family = path.startswith('/' + prefix) if prefix else not any(
-                path.startswith('/' + p) for p, _ in FAMILIES if p)
-            if is_family:
+            if prefix:
+                match = in_family(path, prefix)
+            else:
+                match = not any(in_family(path, p) for p, _ in FAMILIES if p)
+            if match:
                 out.append(u)
                 seen.add(u)
     return out
@@ -135,18 +156,32 @@ def cmd_submit(limit):
     print('submitting %d url(s) (daily quota %d, monthly %s)'
           % (len(todo), daily, (d or {}).get('MonthlyQuota')))
     ok = fail = 0
+    done_now = set(s['submitted'])
     for i, u in enumerate(todo, 1):
         # SubmitUrl is POST-only with a JSON body. Sending siteUrl/url as query params
         # returns 400 {"ErrorCode":2,"Message":"ERROR!!! UnknownError"} for every url,
         # which reads like a site rejection and is actually a malformed request.
-        r = requests.post(BASE + 'SubmitUrl',
-                          params={'apikey': key()},
-                          json={'siteUrl': SITE, 'url': u},
-                          timeout=(8, 30))
-        if r.status_code == 200:
+        try:
+            r = requests.post(BASE + 'SubmitUrl',
+                              params={'apikey': key()},
+                              json={'siteUrl': SITE, 'url': u},
+                              timeout=(8, 30))
+        except requests.RequestException as exc:
+            # A network error must not abort the run, or the urls already accepted are
+            # left unrecorded and get submitted again tomorrow against a 100/day cap.
+            fail += 1
+            print('  FAIL network %s %s' % (u, exc))
+            continue
+        if r.status_code == 200 and 'ErrorCode' not in r.text:
             ok += 1
-            s['submitted'].append(u)
+            done_now.add(u)
+            s['submitted'] = sorted(done_now)
             s['log'].append({'url': u, 'status': 200})
+            # Saved AFTER EVERY SUCCESS, not once at the end. Interrupt at request 60 of
+            # 90 and the earlier 59 are still recorded; the old code saved once after the
+            # loop, so a Ctrl-C or an exception threw away every success and the next run
+            # spent the quota again on urls Bing had already accepted.
+            save_state(s)
         else:
             fail += 1
             s['log'].append({'url': u, 'status': r.status_code, 'body': r.text[:200]})
