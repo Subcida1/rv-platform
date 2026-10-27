@@ -1740,16 +1740,16 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .tool-card + .tool-card{margin-top:18px}
 .tool-head{padding:22px 26px 0}
 .tool-head .flex{justify-content:space-between;flex-wrap:wrap;gap:12px}
-.tool-body{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;padding:10px 26px 26px}
+.tool-body{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;padding:10px 26px 26px;min-width:0}
 @media(max-width:1024px){.tool-body{grid-template-columns:minmax(0,1fr)}}
 .tool-copy{display:flex;flex-direction:column;gap:16px}
 .tool-btns{display:flex;flex-wrap:wrap;gap:11px}
-.tool-viz{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:22px}
+.tool-viz{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:22px;min-width:0}
 .tool-viz .viz-total{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:14px}
 .tool-viz .viz-total small{font-size: var(--fs-xs);color:var(--text-3);font-weight:500}
 .tool-viz .viz-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 16px;border-radius:11px;font-size: var(--fs-lg);margin-bottom:10px}
 .tool-viz .viz-row span{color:var(--text-2);font-weight:600}
-.tool-viz .viz-row b{font-weight:800;text-align:right;white-space:nowrap}
+.tool-viz .viz-row b{font-weight:800;text-align:right;overflow-wrap:anywhere;min-width:0}
 .tool-viz .viz-row.ok{background:var(--surface);border:1px solid var(--border)}
 .tool-viz .viz-row.ok b{color:var(--text)}
 .tool-viz .viz-row.warn{background:var(--warn-bg);border:1px solid var(--warn-edge)}
