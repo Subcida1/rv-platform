@@ -105,7 +105,18 @@
         }).catch(function () { /* a count is not worth an error in the reader's face */ });
       } catch (e) { /* never break the click */ }
     }
-    document.addEventListener('click', counted, true);
+    /* Registered defensively, because this file runs under a minimal DOM stub in
+       scripts/test-directory.js whose `document` has getElementById,
+       querySelectorAll, createElement, body and head but NO addEventListener. An
+       unguarded call at parse time threw "document.addEventListener is not a
+       function" and failed the directory-rendering gate on all 50 state pages,
+       which is the harness doing its job: it ran the file and the file broke.
+       The guard is not for the harness, it is for the real world too -- a
+       document without this method means nothing is clickable anyway, so there
+       is nothing to count. */
+    if (document && typeof document.addEventListener === 'function') {
+      document.addEventListener('click', counted, true);
+    }
     function title(s) {
       return String(s).replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
     }
