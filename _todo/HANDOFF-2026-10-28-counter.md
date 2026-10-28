@@ -29,7 +29,6 @@ deploy before the Worker exists cannot send clicks into nothing.
 - **The runbook** for the deploy T has to do.
 
 ## Two real defects found, both worth carrying forward
-
 **1. The counter key was self-consistent and wrong, and its own proof could not see it.**
 `counter_proof.py` keyed the state half off the JSON *file name* (`georgia`, `northcarolina`) while every
 page and every click carries the JSON's own `state` field (`GA`, `NC`). Both spellings produce 2,026
@@ -49,7 +48,35 @@ the crash is `ConnectionResetError` in the harness's own 50-thread burst, not in
 land when it survives). Separately, its `get()` takes no month, so its "expected 65 ... October not
 reset" line proves only that October's row survived, not that months are separate. **Still unfixed.** The
 real endpoint's `readCounts` is month-scoped, so the product is right, but the proof should not be
-described as proving either thing until it is repaired.
+described as proving either thing until it is repaired. A peer session wrote
+`outbox/BRIEF-counter-merge-corrected-20261028.md` scoping exactly this repair, and independently
+confirmed the Worker's read path is month-scoped and correct.
+
+## Four more defects, found by adversarial review and fixed (commit `9ec1d97e`)
+
+An offload round returned these. All four were reproduced against the real exported code before being
+fixed, and each now has a proof case that fails against the old code.
+
+1. **The read routes were wide open.** `GET /count` and `GET /series` took `key` straight from the query
+   string with no `Authorization` check anywhere, while the design says counts live in D1 "and nowhere
+   else". Fixed with a bearer token, failing closed. The more important half was that the reader TRUSTED
+   a client-supplied key while the writer rebuilt one: any disagreement between the two derivations
+   would have read as a silent zero rather than an error. Both routes now rebuild from `st`+`n`.
+2. **The empty-slug guard did not hold.** `key.replace(/:/g,'').length < 2` measures the remainder after
+   stripping the colon, so `st:"CA", n:"!!!"` gave `ca:` and passed, as did `st:"", n:"Joes"`. Rows
+   landed under keys no read would ask for. `listingKey()` now measures the halves and returns null.
+3. **The series read limited rows, not months.** `LIMIT months * KINDS.length` counts rows, but a month
+   can contribute two, so a tel-only listing returned up to twice the months asked for. Replaced with a
+   calendar cutoff.
+4. **The keyspace was unbounded.** No state or name was checked against reality, so any caller could mint
+   unlimited keys. A 51-code allowlist is in; the name allowlist was **considered and rejected** as
+   over-engineering.
+
+**The one thing NOT fixed, and it must not be papered over: the WRITE is unauthenticated.** Anyone with
+a script can inflate any listing's count, and no free fix closes it. That is the real evidence-integrity
+gap. **So the owner pitch must say "click-throughs recorded from the directory", never "verified
+customers" or "we sent you N customers".** Getting this language wrong is the one way this feature can
+embarrass the project.
 
 ## The verification design changed since the last handoff
 

@@ -60,6 +60,21 @@ a routing address. `contact@originrv.com` will NOT work here and fails with
 `E_RECIPIENT_NOT_ALLOWED` (tested 2026-09-21, not assumed). If the claim form is already live and
 working, this secret already exists and this step is a no-op.
 
+**4b. Set the COUNTER's read token. (T picks the value, types it himself.)**
+```
+npx wrangler secret put READ_TOKEN
+```
+**This step is new and the feature does not read at all without it.** `/count` and `/series` are
+token-gated and **fail closed**: with no `READ_TOKEN` configured, every read returns 401 rather than
+falling open. That is deliberate, but it means a deploy that skips this step looks like a broken
+endpoint rather than an unconfigured one.
+
+Pick any long random string. Only T ever types it, and it goes only into (a) this secret and (b) the
+`Authorization: Bearer <value>` header on the owner's own read calls. It must NEVER appear in any page's
+JavaScript, because everything under `assets/` is public. Says plainly what the token does and does
+not buy: it stops the store being a public read API. It does **not** make the counts trustworthy, since
+the write is unauthenticated by design. See the handoff for the language to use with an owner.
+
 **5. Deploy. (Me.)**
 ```
 npx wrangler deploy
@@ -79,14 +94,20 @@ curl -s -X POST "<worker-url>/c" -H 'Content-Type: application/json' \
   -d '{"st":"ca","n":"David'"'"'s Mobile RV Service","k":"tel"}' -o /dev/null -w '%{http_code}\n'
 # expect 204
 
-# read it back for this month
-curl -s "<worker-url>/count?key=ca:davids-mobile-rv-service"
+# read it back for this month, WITH the token
+curl -s -H "Authorization: Bearer $READ_TOKEN" \
+  "<worker-url>/count?st=ca&n=David's%20Mobile%20RV%20Service"
 # expect {"listing_key":"ca:davids-mobile-rv-service","month":"2026-10","tel":1,"site":0}
 ```
-The name in the POST is sent with an apostrophe and the read uses `davids-...` with none. That is not a
-typo: it is the slug rule doing its job, and this pair of calls is the check that the page and the
-Worker agree on the key. If the read comes back `tel: 0`, the slug rules have diverged and the
-deployment has to stop there.
+Three things this one pair of calls proves, and none of them is the deploy message:
+
+1. The POST is sent with an apostrophe in the name and the key comes back `davids-...` with none. That
+   is the slug rule working, and it is the check that the page and the Worker agree on the key. If the
+   read comes back `tel: 0`, the two derivations have diverged and the deployment stops there.
+2. Both halves of the read are exercised: `st` and `n` go in, the key is rebuilt server-side, and the
+   numbers come out. A `401` here means `READ_TOKEN` was not set (step 4b).
+3. The click counted exactly once. Run the POST twice and this should read `tel: 2`, because the SQL
+   increments rather than replacing.
 
 **8. Then, and only then, commit and push the site change. (Me.)**
 
@@ -96,6 +117,11 @@ deployment has to stop there.
   endpoint returns 204 with no body, so the counts cannot be scraped per listing from outside.
 - It does not track who clicked. There is no IP, no user agent, no session id stored. The schema has no
   column for it.
+- **It does not make the count trustworthy, and no free change would.** The WRITE is unauthenticated:
+  anyone with a script can inflate any listing's number. So the number means "this many clicks were
+  recorded", never "this many customers were sent". Any pitch to a business must use the first phrasing.
+  This is the single place this feature can embarrass the project, and it is a language problem, not a
+  code problem. See `_todo/HANDOFF-2026-10-28-counter.md`.
 - It does not report anything to a business. The owner's page is a later step (build order item 3), and
   the activity email is last (item 5), because it needs something real to be about.
 
