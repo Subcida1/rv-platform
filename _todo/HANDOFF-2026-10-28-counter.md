@@ -43,14 +43,14 @@ that a page and a server both apply needs a check that compares the two, not one
 `scripts/test-directory.js`'s minimal DOM stub, failing two `ci.sh` steps across all 50 state pages. The
 stub is deliberately minimal and the file was wrong, not the harness. Fixed and verified.
 
-**3. `live_proof.py` is FLAKY and its November assertion is unsound.** Five runs gave PASS, crash, PASS:
-the crash is `ConnectionResetError` in the harness's own 50-thread burst, not in the counting (64 writes
-land when it survives). Separately, its `get()` takes no month, so its "expected 65 ... October not
-reset" line proves only that October's row survived, not that months are separate. **Still unfixed.** The
-real endpoint's `readCounts` is month-scoped, so the product is right, but the proof should not be
-described as proving either thing until it is repaired. A peer session wrote
-`outbox/BRIEF-counter-merge-corrected-20261028.md` scoping exactly this repair, and independently
-confirmed the Worker's read path is month-scoped and correct.
+**3. `live_proof.py` was flaky AND its verdict was not real. NOW FIXED (commit `73ae7781`).** It read
+counts with no month filter, so it summed across months and could report a number the product would never
+return; its November check was a `print` with the wrong expectation and was not in the verdict at all; and
+it printed PASS/FAIL while exiting 0 either way. All three are fixed, the burst retries a dropped
+connection (the crash was the harness's own client under 50 threads, not a lost write), and it now passes
+five consecutive runs, with two negative controls confirming it fails when the increment or the month
+scoping is broken. **Lesson worth keeping: a proof that prints a verdict but does not exit on it is not
+evidence, and neither is one whose read is looser than the product's.**
 
 ## Four more defects, found by adversarial review and fixed (commit `9ec1d97e`)
 
@@ -77,6 +77,14 @@ a script can inflate any listing's count, and no free fix closes it. That is the
 gap. **So the owner pitch must say "click-throughs recorded from the directory", never "verified
 customers" or "we sent you N customers".** Getting this language wrong is the one way this feature can
 embarrass the project.
+
+**4. The gate has one flaky step: `row alignment`.** `scripts/check-alignment.mjs` launches flatpak
+Chrome and waits up to 30 seconds (60 × 500ms) for its CDP endpoint. With other Chrome instances already
+running (the box had 56 Chrome-related processes, one alive nearly 3 days), the launch can exceed that
+window and the step exits 2, which fails the whole gate. Measured: `CI_EXIT=1` with `row alignment` the
+only failure, then `CI_EXIT=0` on a re-run, and the same script passes standalone every time. **So a red
+gate is worth reading before it is believed, and this step in particular should be re-run alone
+(`node scripts/check-alignment.mjs`) before treating its failure as a defect in the site.**
 
 ## The verification design changed since the last handoff
 
