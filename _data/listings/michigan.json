@@ -1935,6 +1935,45 @@
           "Need reliable repairs for your travel trailer, fifth wheel, or toy hauler?"
         ]
       }
+    },
+    {
+      "n": "Gilley Mobile RV Service LLC",
+      "c": "Sault Ste. Marie, MI",
+      "p": "512-574-1901",
+      "u": "https://gilleymobilervservice.com/michigan",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Gilley Mobile RV Service LLC runs a mobile RV repair service in the eastern Upper Peninsula of Michigan, coming to the customer and working weekends. Its service area covers Sault Ste. Marie, St. Ignace, Mackinaw City, Newberry, Barbeau, Brimley, Carp Lake, Cedarville, Dafter, Hessel, Kinross, Neebish Island, Pickford, Rudyard and Sugar Island. It repairs Class A, Class B and Class C motorhomes (the RV portion) and towables including fifth wheels and travel trailers. The business is in the area May through October annually, and its site states it is not taking appointments while the owner seeks medical treatment, so call before planning a job around it.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Sault Ste. Marie",
+      "areas": [
+        "Sault Ste. Marie",
+        "St. Ignace",
+        "Mackinaw City",
+        "Newberry",
+        "Brimley",
+        "Carp Lake",
+        "Cedarville"
+      ],
+      "region": "eastern Upper Peninsula",
+      "spec": "Located in the eastern Upper Peninsula May through October annually; site states it will not service the eastern Upper Peninsula of Michigan for the 2026 season. Does not service solar systems, brakes on motorized equipment, transmissions, engines, tires, generators, or major body repairs.",
+      "evidence": {
+        "checked": "https://gilleymobilervservice.com/michigan",
+        "phone_quote": "CALL TODAY FOR YOUR APPOINTMENT: 512-574-1901",
+        "coverage_quotes": [
+          "We are located in the eastern part of the Upper Peninsula of Michigan from",
+          "May through October (annually). Our mobile RV service area includes:",
+          "Serving Sault Ste. Marie, St. Ignace, Mackinaw City, Newberry, & Surrounding Areas:"
+        ],
+        "type_quote": "As mobile RV technicians, we do mobile RV repair on Class A, Class B, and Class C motorhomes (RV portion only) and towables including fifth wheels and travel trailers.",
+        "emergency_quote": "Michigan After Hours Labor Rate:",
+        "roadside_quote": null,
+        "licence": null
+      },
+      "reg": "up-mi"
     }
   ]
 }

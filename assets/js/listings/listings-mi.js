@@ -445,5 +445,17 @@ window.RV_LISTINGS_MI = [
    "saint clair",
    "port huron"
   ],  "region": "St. Clair County",  "spec": "Mobile RV repair for towables",  "reg": "thumb-mi"
+ },
+ {  "n": "Gilley Mobile RV Service LLC",  "c": "Sault Ste. Marie, MI",  "p": "512-574-1901",  "u": "https://gilleymobilervservice.com/michigan",  "t": "mobile",  "e": true,  "r": false,  "d": "Gilley Mobile RV Service LLC runs a mobile RV repair service in the eastern Upper Peninsula of Michigan, coming to the customer and working weekends. Its service area covers Sault Ste. Marie, St. Ignace, Mackinaw City, Newberry, Barbeau, Brimley, Carp Lake, Cedarville, Dafter, Hessel, Kinross, Neebish Island, Pickford, Rudyard and Sugar Island. It repairs Class A, Class B and Class C motorhomes (the RV portion) and towables including fifth wheels and travel trailers. The business is in the area May through October annually, and its site states it is not taking appointments while the owner seeks medical treatment, so call before planning a job around it.",  "g": [
+   "mobile tech"
+  ],  "base": "sault ste marie",  "areas": [
+   "sault ste marie",
+   "saint ignace",
+   "mackinaw city",
+   "newberry",
+   "brimley",
+   "carp lake",
+   "cedarville"
+  ],  "region": "eastern Upper Peninsula",  "spec": "Located in the eastern Upper Peninsula May through October annually; site states it will not service the eastern Upper Peninsula of Michigan for the 2026 season. Does not service solar systems, brakes on motorized equipment, transmissions, engines, tires, generators, or major body repairs.",  "reg": "up-mi"
  }
 ];
