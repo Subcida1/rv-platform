@@ -342,7 +342,8 @@
   "guides/rv-propane-tank-wont-fill.html": "rv propane tank wont fill",
   "guides/rv-water-pressure.html": "rv water pressure",
   "guides/rv-window-leaking.html": "rv window leaking",
-  "guides/rv-black-tank-clogged.html": "rv black tank clogged"
+  "guides/rv-black-tank-clogged.html": "rv black tank clogged",
+  "guides/rv-level-towing-setup.html": "how to level an rv when towing"
  },
  "accepted": {
   "guides/rv-refrigerator-not-cooling.html": "The title says 'fridge' and the h1 says 'refrigerator'. Both are the page's subject and both are words a reader would type; the divergence is emphasis, not a mistake. Accepted 2026-10-06.",

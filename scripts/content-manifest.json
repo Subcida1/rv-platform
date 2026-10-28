@@ -406,10 +406,10 @@
     "claims": "ca780a6dbc99c4d8"
   },
   "guides/index.html": {
-    "hash": "1425d5f8cac294bf",
+    "hash": "5cd362479a9e2296",
     "status": "verified",
-    "verified_by": "hermes 2026-10-26: IA fix - Start-here card copy only. Button label now names the destination (Open the new-owner walkthrough) and the body states the walkthrough lives in the manuals section, so label and destination agree. No links, counts, headings or structure changed; the other diff line is a generated asset hash.",
-    "verified_at": "2026-10-26",
+    "verified_by": "New guide tile only: added the Level Towing Setup card (towing-and-running-weight section) linking to guides/rv-level-towing-setup. No other links, headings, counts or structure changed; the diff against HEAD is the three tile lines.",
+    "verified_at": "2026-10-28",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -645,6 +645,13 @@
   },
   "guides/rv-heating-off-grid.html": {
     "hash": "68a90fe5ae06021e",
+    "status": "unverified",
+    "verified_by": null,
+    "verified_at": null,
+    "sources": []
+  },
+  "guides/rv-level-towing-setup.html": {
+    "hash": "e572b0110d5fc8e4",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -968,7 +975,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "5479730a5a542f53",
+    "hash": "1538a1ae126668be",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,
@@ -1050,7 +1057,7 @@
     "invalidated_at": "2026-09-26"
   },
   "manuals/towing-and-running-gear.html": {
-    "hash": "8f6ab6f5038d9ecb",
+    "hash": "22e082b23af36254",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,

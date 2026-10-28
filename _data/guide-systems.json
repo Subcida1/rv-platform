@@ -69,6 +69,7 @@
     "rv-engine-overheating": "chassis-and-drivetrain",
     "rv-propane-tank-wont-fill": "heating-and-cooling",
     "rv-chassis-battery-and-charging": "chassis-and-drivetrain",
-    "rv-black-tank-clogged": "sanitation-and-tanks"
+    "rv-black-tank-clogged": "sanitation-and-tanks",
+    "rv-level-towing-setup": "towing-and-running-gear"
   }
 }
