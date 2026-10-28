@@ -64,7 +64,13 @@ const KINDS = ['tel', 'site'];
 // A cap on a runaway read, not a retention promise. 14 months covers "this
 // month" and "last year" for an owner looking at their own numbers.
 const MAX_MONTHS = 14;
-const MONTH_RE = /^\d{4}-\d{2}$/;
+// Months are real months only: 2026-13 passed the looser /^\d{4}-\d{2}$/ and then
+// read as a quiet month (valid query, no matching rows, {tel:0,site:0}, 200),
+// which is indistinguishable from a month with no clicks.
+const MONTH_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
+// A click body is {"k":"tel","st":"CA","n":"Some Shop"}. Anything over this is
+// not a real reader, and refusing on Content-Length avoids parsing it first.
+const MAX_BODY = 2048;
 
 function corsHeaders(origin) {
   // The union of what both jobs need: the counter reads with GET, the form only
@@ -72,7 +78,7 @@ function corsHeaders(origin) {
   return {
     'Access-Control-Allow-Origin': origin,
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     Vary: 'Origin',
   };
 }
@@ -103,8 +109,8 @@ export const SQL = {
   SELECT_MONTH:
     'SELECT kind, n FROM clicks WHERE listing_key = ? AND month = ?',
   SELECT_SERIES:
-    'SELECT month, kind, n FROM clicks WHERE listing_key = ? ' +
-    'ORDER BY month DESC LIMIT ?',
+    'SELECT month, kind, n FROM clicks WHERE listing_key = ? AND month >= ? ' +
+    'ORDER BY month DESC',
 };
 
 /* The slug rule, exported at the bottom of this section for the same reason:
@@ -137,11 +143,38 @@ function slug(s) {
   return out.replace(/^-+|-+$/g, '');
 }
 
+/* The 50 states plus DC. A key whose state half is not one of these is refused
+   rather than stored: without this, any caller could mint unlimited distinct
+   keys that no read would ever look for, and the table is an append-only free
+   tier. This is hygiene, not a growth bound -- 51 states times unlimited names
+   is still unbounded -- but it removes the cheapest junk and it means a key
+   that exists is a key a real state could have produced. */
+const STATES = new Set(
+  ('AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT ' +
+   'NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY').split(' ')
+);
+
+/* Returns the key, or NULL when the inputs cannot describe a real listing.
+   Callers must treat null as a refusal, never as a key.
+
+   The state half is checked against STATES and the name half must slug to at
+   least two characters. Both are measured on the HALVES, which is the whole
+   point: an earlier version measured the joined key with the colon stripped, so
+   `CA` + `!!!` produced `ca:`, which stripped to `ca` and passed -- a row under a
+   key no listing owns, from input the check was written to reject.
+
+   Returning null rather than a key is also what stops the writer and the reader
+   disagreeing silently. The reader rebuilds the key through this same function,
+   so a key that cannot be built is a 400 the caller can see, not a count that
+   reads zero forever. */
 function listingKey(state, name) {
-  return slug(state) + ':' + slug(name);
+  const st = String(state == null ? '' : state).trim().toUpperCase();
+  const nm = slug(String(name == null ? '' : name).slice(0, COUNT_MAX_NAME));
+  if (!STATES.has(st) || nm.length < 2) return null;
+  return st.toLowerCase() + ':' + nm;
 }
 
-export { slug, listingKey };
+export { slug, listingKey, STATES };
 
 /* The current month as YYYY-MM in UTC. UTC so a click on the last evening of a
    month does not land in a different month depending on the visitor's timezone. */
@@ -179,10 +212,23 @@ async function readCounts(env, key, month) {
 }
 
 /* The owner's monthly series, oldest first. Date order is the honest default;
-   a dashboard that wants newest-on-top can reverse it. */
+   a dashboard that wants newest-on-top can reverse it.
+
+   The bound is a calendar CUTOFF, not a row LIMIT. An earlier version bound
+   `months * KINDS.length` rows, which is not the same thing: a month contributes
+   up to two rows (tel, site), so a listing with only tel clicks returned up to
+   twice the months asked for and MAX_MONTHS did not actually cap what came back.
+   A cutoff on the month string cannot drift that way, because it is expressed in
+   the unit the caller asked about. `month` is stored as 'YYYY-MM', so the string
+   comparison is the date comparison. */
 async function readSeries(env, key, months) {
+  const back = Math.max(1, Math.min(months, MAX_MONTHS)) - 1;
+  const d = new Date();
+  d.setUTCDate(1);
+  d.setUTCMonth(d.getUTCMonth() - back);
+  const cutoff = d.toISOString().slice(0, 7);
   const { results } = await env.DB.prepare(SQL.SELECT_SERIES)
-    .bind(key, months * KINDS.length)
+    .bind(key, cutoff)
     .all();
   const byMonth = new Map();
   for (const row of results || []) {
@@ -194,6 +240,15 @@ async function readSeries(env, key, months) {
 
 /* ---------- POST /c : record one click ---------- */
 async function handleClick(request, env, allowed) {
+  // Refuse an oversized body BEFORE parsing it. COUNT_MAX_NAME bounds the stored
+  // field, not the request: without this, a multi-megabyte body is buffered and
+  // parsed first and the failure surfaces as a 500 from inside the runtime
+  // rather than a clean 413. Every legitimate body here is under 250 bytes.
+  const declared = parseInt(request.headers.get('Content-Length') || '0', 10);
+  if (Number.isFinite(declared) && declared > MAX_BODY) {
+    return json({ error: 'body too large' }, 413, allowed);
+  }
+
   let data;
   try {
     data = await request.json();
@@ -208,11 +263,12 @@ async function handleClick(request, env, allowed) {
     return json({ error: 'kind must be tel or site' }, 400, allowed);
   }
 
-  const state = String(data.st == null ? '' : data.st).slice(0, 8);
-  const name = String(data.n == null ? '' : data.n).slice(0, COUNT_MAX_NAME);
-  const key = listingKey(state, name);
-  // A key of just ":" means both halves were empty. Nothing to count.
-  if (key.replace(/:/g, '').length < 2) {
+  // The key is built HERE from the raw name and state, never accepted from the
+  // client. listingKey returns null when the pair cannot describe a real
+  // listing, and null is a refusal: storing it would write a row under a key no
+  // read will ever ask for.
+  const key = listingKey(data.st, data.n);
+  if (key === null) {
     return json({ error: 'missing listing' }, 400, allowed);
   }
 
@@ -234,6 +290,11 @@ async function handleClick(request, env, allowed) {
   try {
     await recordClick(env, key, kind, month);
   } catch (err) {
+    // Logged, not just returned. The 500 is correct for the reader (their click
+    // is not blocked by our store), but a silent catch makes lost counts
+    // invisible: without this line there is no way for the owner to learn that a
+    // fraction of the evidence was never recorded.
+    console.error('click write failed', { key: key, month: month, err: String(err) });
     return json({ error: 'write failed' }, 500, allowed);
   }
   // 204: the page does not need a body, and returning the new count would put a
@@ -241,10 +302,53 @@ async function handleClick(request, env, allowed) {
   return new Response(null, { status: 204, headers: corsHeaders(allowed) });
 }
 
-/* ---------- GET /count and GET /series : read counts back ---------- */
-async function handleCount(url, env, allowed) {
-  const key = url.searchParams.get('key') || '';
-  if (key.replace(/:/g, '').length < 2) {
+/* ---------- GET /count and GET /series : read counts back ----------
+
+   Both routes are TOKEN-GATED and both rebuild the key from raw parts.
+
+   Two separate reasons, and the key rebuild is the one that matters most:
+
+   1. The token. Counts exist to be shown to one owner, and the design says they
+      live in D1 "and nowhere else". Without this, the key format is derivable
+      from the public page and anyone could read any listing's numbers. Honest
+      framing: this is not secrecy about sensitive data (a click count on a public
+      directory is not a secret), it is that the store should not be a public
+      read API. Compared by hashing both sides first, which makes the compare
+      constant-time AND gives equal lengths, so the comparison itself leaks no
+      length information.
+
+   2. The key rebuild. The write path derives the key with listingKey(); if the
+      read path instead accepted a caller-supplied string, then any disagreement
+      between the two derivations (entity form, casing, a stray character) would
+      read as a silent ZERO rather than an error. Same function both ways, and a
+      key that cannot be built is a 400 the caller sees. */
+async function readAllowed(request, env) {
+  if (!env.READ_TOKEN) return false; // fail closed: no token configured, no read
+  const header = request.headers.get('Authorization') || '';
+  if (!header.startsWith('Bearer ')) return false;
+  const enc = new TextEncoder();
+  const [a, b] = await Promise.all(
+    [header.slice(7), env.READ_TOKEN].map((s) => crypto.subtle.digest('SHA-256', enc.encode(s)))
+  );
+  const av = new Uint8Array(a);
+  const bv = new Uint8Array(b);
+  let diff = 0;
+  for (let i = 0; i < av.length; i++) diff |= av[i] ^ bv[i];
+  return diff === 0;
+}
+
+/* Rebuild the key from st + n, the same way the writer does. Returns null when
+   the pair cannot describe a real listing. */
+function keyFromParams(url) {
+  return listingKey(url.searchParams.get('st'), url.searchParams.get('n'));
+}
+
+async function handleCount(request, url, env, allowed) {
+  if (!(await readAllowed(request, env))) {
+    return json({ error: 'unauthorized' }, 401, allowed);
+  }
+  const key = keyFromParams(url);
+  if (key === null) {
     return json({ error: 'missing listing' }, 400, allowed);
   }
   const month = url.searchParams.get('month') || currentMonth();
@@ -255,9 +359,12 @@ async function handleCount(url, env, allowed) {
   return json(Object.assign({ listing_key: key, month: month }, counts), 200, allowed);
 }
 
-async function handleSeries(url, env, allowed) {
-  const key = url.searchParams.get('key') || '';
-  if (key.replace(/:/g, '').length < 2) {
+async function handleSeries(request, url, env, allowed) {
+  if (!(await readAllowed(request, env))) {
+    return json({ error: 'unauthorized' }, 401, allowed);
+  }
+  const key = keyFromParams(url);
+  if (key === null) {
     return json({ error: 'missing listing' }, 400, allowed);
   }
   let months = parseInt(url.searchParams.get('months') || '6', 10);
@@ -367,8 +474,8 @@ export default {
         return json({ error: 'method not allowed' }, 405, allowed);
       }
       return url.pathname === '/count'
-        ? handleCount(url, env, allowed)
-        : handleSeries(url, env, allowed);
+        ? handleCount(request, url, env, allowed)
+        : handleSeries(request, url, env, allowed);
     }
 
     // ---- everything else POST is the claim form ----

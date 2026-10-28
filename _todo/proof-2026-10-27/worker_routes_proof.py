@@ -58,6 +58,7 @@ const env = {
   CLAIM_GLOBAL: { limit: async () => ({ success: true }) },
   EMAIL: { send: async () => ({ messageId: 'stub' }) },
   DESTINATION: 'someone@example.com',
+  READ_TOKEN: 'test-token-value',
 };
 
 async function hit(path, method, body, headers) {
@@ -75,16 +76,33 @@ async function hit(path, method, body, headers) {
 }
 
 const out = [];
+const AUTH = { Authorization: 'Bearer test-token-value' };
 const cases = [
-  // [label, path, method, body, expect_status]
+  // [label, path, method, body, expect_status, headers]
   ['click tel accepted            ', '/c', 'POST', { st: 'CA', n: "David's Mobile RV Service", k: 'tel' }, 204],
   ['click site accepted           ', '/c', 'POST', { st: 'OR', n: 'Boondock RV', k: 'site' }, 204],
   ['bad kind refused              ', '/c', 'POST', { st: 'CA', n: 'X RV', k: 'phone' }, 400],
   ['empty listing refused         ', '/c', 'POST', { st: '', n: '', k: 'tel' }, 400],
   ['GET on /c is 405              ', '/c', 'GET', undefined, 405],
-  ['count reads one month         ', '/count?key=ca:boondock-rv&month=2026-10', 'GET', undefined, 200],
-  ['count with bad month refused  ', '/count?key=ca:boondock-rv&month=nope', 'GET', undefined, 400],
-  ['series defaults to 6 months   ', '/series?key=ca:boondock-rv', 'GET', undefined, 200],
+
+  // The read routes are token-gated. Without the token, no read.
+  ['count without token is 401    ', '/count?st=CA&n=Boondock+RV&month=2026-10', 'GET', undefined, 401],
+  ['series without token is 401   ', '/series?st=CA&n=Boondock+RV', 'GET', undefined, 401],
+  ['count with wrong token is 401 ', '/count?st=CA&n=Boondock+RV', 'GET', undefined, 401, { Authorization: 'Bearer nope' }],
+  ['count with token reads        ', '/count?st=CA&n=Boondock+RV&month=2026-10', 'GET', undefined, 200, AUTH],
+  ['series with token reads       ', '/series?st=CA&n=Boondock+RV', 'GET', undefined, 200, AUTH],
+
+  // The reader rebuilds the key from st+n, so a state that is not a real one is
+  // refused rather than producing a key nothing will ever read.
+  ['count rejects a fake state    ', '/count?st=ZZ&n=Boondock+RV', 'GET', undefined, 400, AUTH],
+  ['count with bad month refused  ', '/count?st=CA&n=Boondock+RV&month=nope', 'GET', undefined, 400, AUTH],
+  // 2026-13 used to pass the looser regex and read as a quiet month.
+  ['count rejects month 13        ', '/count?st=CA&n=Boondock+RV&month=2026-13', 'GET', undefined, 400, AUTH],
+
+  // The half-empty input that the old joined-string guard let through.
+  ['rejects name that slugs empty ', '/c', 'POST', { st: 'CA', n: '!!!', k: 'tel' }, 400],
+  ['rejects empty state with name ', '/c', 'POST', { st: '', n: 'Joes RV', k: 'tel' }, 400],
+
   ['claim form still works        ', '/', 'POST', { Business: 'Acme RV', City: 'Eureka' }, 200],
   ['claim form honeypot silent    ', '/', 'POST', { botcheck: 'x' }, 200],
   ['claim form missing fields     ', '/', 'POST', { Business: '', City: '' }, 400],
@@ -92,8 +110,8 @@ const cases = [
   ['unknown GET is 404            ', '/nope', 'GET', undefined, 404],
 ];
 
-for (const [label, path, method, body, want] of cases) {
-  const r = await hit(path, method, body);
+for (const [label, path, method, body, want, headers] of cases) {
+  const r = await hit(path, method, body, headers);
   const ok = r.status === want;
   out.push({ label: label.trim(), path, method, want, got: r.status, ok, calls: r.calls });
 }
@@ -102,9 +120,19 @@ for (const [label, path, method, body, want] of cases) {
 const good = await hit('/c', 'POST', { st: 'CA', n: 'X RV', k: 'tel' });
 const badKind = await hit('/c', 'POST', { st: 'CA', n: 'X RV', k: 'phone' });
 const badEmpty = await hit('/c', 'POST', { st: '', n: '', k: 'tel' });
+// The half-empty cases the old joined-string guard let through. Each must be
+// refused AND must write nothing: a row under `ca:` is a key no read asks for.
+const badName = await hit('/c', 'POST', { st: 'CA', n: '!!!', k: 'tel' });
+const badState = await hit('/c', 'POST', { st: 'ZZ', n: 'X RV', k: 'tel' });
+const noTokenRead = await hit('/count?st=CA&n=X+RV', 'GET');
+const tokenRead = await hit('/count?st=CA&n=X+RV', 'GET', undefined, AUTH);
 out.push({ label: 'accepted click writes to DB', ok: good.calls.some(c => c.startsWith('run ')), calls: good.calls });
 out.push({ label: 'refused kind writes nothing', ok: !badKind.calls.some(c => c.startsWith('run ')), calls: badKind.calls });
 out.push({ label: 'refused empty writes nothing', ok: !badEmpty.calls.some(c => c.startsWith('run ')), calls: badEmpty.calls });
+out.push({ label: 'name slugging empty writes nothing', ok: !badName.calls.some(c => c.startsWith('run ')), calls: badName.calls });
+out.push({ label: 'fake state writes nothing', ok: !badState.calls.some(c => c.startsWith('run ') && c.indexOf('select') < 0), calls: badState.calls });
+out.push({ label: 'unauthorized read touches no DB', ok: !noTokenRead.calls.some(c => c.startsWith('all ')), calls: noTokenRead.calls });
+out.push({ label: 'authorized read queries the DB', ok: tokenRead.calls.some(c => c.startsWith('all ')), calls: tokenRead.calls });
 
 console.log(JSON.stringify(out, null, 1));
 """
