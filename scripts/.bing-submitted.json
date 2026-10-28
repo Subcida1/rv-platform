@@ -1,0 +1,501 @@
+{
+ "submitted": [
+  "https://originrv.com/",
+  "https://originrv.com/directory/",
+  "https://originrv.com/directory/colorado",
+  "https://originrv.com/directory/idaho",
+  "https://originrv.com/directory/montana",
+  "https://originrv.com/directory/newmexico",
+  "https://originrv.com/directory/oregon",
+  "https://originrv.com/directory/texas",
+  "https://originrv.com/directory/washington",
+  "https://originrv.com/directory/wyoming",
+  "https://originrv.com/guides/",
+  "https://originrv.com/guides/battery-winter-storage",
+  "https://originrv.com/guides/freeze-damage-triage",
+  "https://originrv.com/guides/roof-snow-load",
+  "https://originrv.com/guides/rv-12-volt-problems",
+  "https://originrv.com/guides/rv-air-conditioner-not-cooling",
+  "https://originrv.com/guides/rv-awning-not-working",
+  "https://originrv.com/guides/rv-battery-disconnect",
+  "https://originrv.com/guides/rv-battery-not-charging",
+  "https://originrv.com/guides/rv-black-tank",
+  "https://originrv.com/guides/rv-black-tank-clogged",
+  "https://originrv.com/guides/rv-black-tank-routine",
+  "https://originrv.com/guides/rv-chassis-battery-and-charging",
+  "https://originrv.com/guides/rv-condensation-inside",
+  "https://originrv.com/guides/rv-converter-not-charging",
+  "https://originrv.com/guides/rv-delamination",
+  "https://originrv.com/guides/rv-driving-motorhome",
+  "https://originrv.com/guides/rv-engine-overheating",
+  "https://originrv.com/guides/rv-entry-door-wont-latch",
+  "https://originrv.com/guides/rv-entry-steps-not-working",
+  "https://originrv.com/guides/rv-frame-cracks",
+  "https://originrv.com/guides/rv-fridge-leveling",
+  "https://originrv.com/guides/rv-furnace-carbon-monoxide",
+  "https://originrv.com/guides/rv-furnace-not-working",
+  "https://originrv.com/guides/rv-fuse-keeps-blowing",
+  "https://originrv.com/guides/rv-generator-not-charging",
+  "https://originrv.com/guides/rv-generator-sizing",
+  "https://originrv.com/guides/rv-heating-off-grid",
+  "https://originrv.com/guides/rv-leveling-jacks-not-working",
+  "https://originrv.com/guides/rv-lights-not-working",
+  "https://originrv.com/guides/rv-macerator-toilet",
+  "https://originrv.com/guides/rv-maintenance-schedule",
+  "https://originrv.com/guides/rv-outlets-not-working",
+  "https://originrv.com/guides/rv-pin-weight-and-payload",
+  "https://originrv.com/guides/rv-pre-trip-walkaround",
+  "https://originrv.com/guides/rv-propane-detector-beeping",
+  "https://originrv.com/guides/rv-propane-furnace-wont-light",
+  "https://originrv.com/guides/rv-propane-tank-wont-fill",
+  "https://originrv.com/guides/rv-refrigerator-not-cooling",
+  "https://originrv.com/guides/rv-roof-leak-repair",
+  "https://originrv.com/guides/rv-sewer-smell",
+  "https://originrv.com/guides/rv-slide-out-leaking",
+  "https://originrv.com/guides/rv-slide-out-not-working",
+  "https://originrv.com/guides/rv-solar-not-charging",
+  "https://originrv.com/guides/rv-tank-sensors-reading-wrong",
+  "https://originrv.com/guides/rv-tire-replacement",
+  "https://originrv.com/guides/rv-toilet-not-flushing",
+  "https://originrv.com/guides/rv-towing-capacity",
+  "https://originrv.com/guides/rv-towing-trailer",
+  "https://originrv.com/guides/rv-trailer-wheel-bearings",
+  "https://originrv.com/guides/rv-trip-planner",
+  "https://originrv.com/guides/rv-two-appliances-stopped",
+  "https://originrv.com/guides/rv-water-heater-anode-rod",
+  "https://originrv.com/guides/rv-water-heater-not-heating",
+  "https://originrv.com/guides/rv-water-pressure",
+  "https://originrv.com/guides/rv-water-pump-wont-prime",
+  "https://originrv.com/guides/rv-window-leaking",
+  "https://originrv.com/guides/tires-winter",
+  "https://originrv.com/guides/trailer-brakes-required",
+  "https://originrv.com/guides/winterize-plumbing",
+  "https://originrv.com/manuals/",
+  "https://originrv.com/manuals/brands",
+  "https://originrv.com/manuals/chassis-and-drivetrain",
+  "https://originrv.com/manuals/exterior-and-body",
+  "https://originrv.com/manuals/heating-and-cooling",
+  "https://originrv.com/manuals/kitchen-and-appliances",
+  "https://originrv.com/manuals/power-and-electrical",
+  "https://originrv.com/manuals/recalls",
+  "https://originrv.com/manuals/sanitation-and-tanks",
+  "https://originrv.com/manuals/start-here",
+  "https://originrv.com/manuals/towing-and-running-gear",
+  "https://originrv.com/manuals/water-and-plumbing",
+  "https://originrv.com/parts/",
+  "https://originrv.com/tools/",
+  "https://originrv.com/tools/battery-runtime",
+  "https://originrv.com/tools/fuel-cost",
+  "https://originrv.com/tools/rv-anode-rod",
+  "https://originrv.com/tools/rv-appliance-board-finder",
+  "https://originrv.com/tools/rv-converter-finder",
+  "https://originrv.com/tools/rv-loan",
+  "https://originrv.com/tools/rv-recall-lookup",
+  "https://originrv.com/tools/rv-toilet-valve",
+  "https://originrv.com/tools/rv-water-filter",
+  "https://originrv.com/tools/snow-load",
+  "https://originrv.com/tools/solar-sizing",
+  "https://originrv.com/tools/state-trailer-brake-laws",
+  "https://originrv.com/tools/tire-date-code",
+  "https://originrv.com/tools/watts-to-amps",
+  "https://originrv.com/tools/weight-calculator"
+ ],
+ "log": [
+  {
+   "url": "https://originrv.com/manuals/",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/brands",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/start-here",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/recalls",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/power-and-electrical",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/water-and-plumbing",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/heating-and-cooling",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/kitchen-and-appliances",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/exterior-and-body",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/towing-and-running-gear",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/sanitation-and-tanks",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/manuals/chassis-and-drivetrain",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-trip-planner",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-black-tank-clogged",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-chassis-battery-and-charging",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-heating-off-grid",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-propane-detector-beeping",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-propane-tank-wont-fill",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-entry-door-wont-latch",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-window-leaking",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-entry-steps-not-working",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-engine-overheating",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-frame-cracks",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-awning-not-working",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-black-tank-routine",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-water-heater-anode-rod",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-maintenance-schedule",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-black-tank",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-towing-trailer",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-driving-motorhome",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-fridge-leveling",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-pre-trip-walkaround",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-generator-sizing",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-trailer-wheel-bearings",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-macerator-toilet",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-battery-disconnect",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-furnace-carbon-monoxide",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-pin-weight-and-payload",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-two-appliances-stopped",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-slide-out-leaking",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-delamination",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-condensation-inside",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-water-pump-wont-prime",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-water-pressure",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-propane-furnace-wont-light",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-12-volt-problems",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-fuse-keeps-blowing",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-converter-not-charging",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-generator-not-charging",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-lights-not-working",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-outlets-not-working",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-solar-not-charging",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-toilet-not-flushing",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-battery-not-charging",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-leveling-jacks-not-working",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-roof-leak-repair",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/trailer-brakes-required",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-slide-out-not-working",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-furnace-not-working",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-air-conditioner-not-cooling",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-sewer-smell",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-tank-sensors-reading-wrong",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-towing-capacity",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-tire-replacement",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-water-heater-not-heating",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-refrigerator-not-cooling",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/winterize-plumbing",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/battery-winter-storage",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/tires-winter",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/freeze-damage-triage",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/roof-snow-load",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/weight-calculator",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/snow-load",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/fuel-cost",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/watts-to-amps",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/battery-runtime",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/solar-sizing",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/rv-loan",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/tire-date-code",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/state-trailer-brake-laws",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/rv-toilet-valve",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/rv-recall-lookup",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/rv-converter-finder",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/rv-appliance-board-finder",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/rv-anode-rod",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/tools/rv-water-filter",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/parts/",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/oregon",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/washington",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/newmexico",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/texas",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/idaho",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/montana",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/colorado",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/wyoming",
+   "status": 200
+  }
+ ]
+}
