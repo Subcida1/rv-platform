@@ -139,11 +139,25 @@ def self_test():
     return 0
 
 
-def build_keys(repo):
+def build_keys(repo, pages=None):
     """Derive every listing key from the real repo data, and assert uniqueness.
 
     A collision means two businesses share one counter. That is the failure this
     asserts against, at build time, so it can never ship silently.
+
+    THE STATE HALF IS THE USPS CODE, NOT THE FILE NAME. This function used to key
+    off `os.path.basename(f)`, which gives 'georgia' and 'northcarolina', while
+    every rendered page and every click carries the JSON's own `state` field,
+    which is 'GA' and 'NC'. Both spellings produce the same COUNT of distinct
+    keys, so the uniqueness assertion below passed either way and proved nothing
+    about the key the site actually uses. Measured 2026-10-28: the old rule made
+    2,026 keys that had ZERO overlap with the 2,026 keys on the shipped pages.
+    A counter keyed one way and read the other way reads zero forever, and looks
+    healthy the whole time.
+
+    So the pass below asserts TWO things: keys are unique, AND the keys the JSON
+    produces are the same set the generated pages carry. The second check is what
+    catches a rule that is self-consistent and wrong.
     """
     conn = sqlite3.connect(":memory:")
     conn.executescript(SCHEMA)
@@ -151,8 +165,11 @@ def build_keys(repo):
     seen = {}
     collisions = []
     for f in sorted(glob.glob(os.path.join(repo, "_data/listings/*.json"))):
-        state = os.path.basename(f).replace(".json", "")
         d = json.load(open(f))
+        # The state code as the DATA spells it. Never the file name: they differ
+        # for every state whose slug is not its USPS code (georgia/GA,
+        # northcarolina/NC, and 48 others in the same class).
+        state = d["state"]
         for r in d.get("listings", []):
             key = listing_key(state, r["n"])
             total += 1
@@ -168,10 +185,58 @@ def build_keys(repo):
     print("duplicate keys (same key, different name): %d" % len(collisions))
     for c in collisions[:15]:
         print("   COLLISION %s | %s | %s" % c)
+
+    rc = 1 if collisions else 0
+
+    if pages:
+        page_keys = page_keys_from_html(pages)
+        print("keys read off the pages:  %d" % len(page_keys))
+        only_page = sorted(set(page_keys) - set(seen))
+        only_json = sorted(set(seen) - set(page_keys))
+        print("on a page, not in the JSON: %d" % len(only_page))
+        for k in only_page[:5]:
+            print("   PAGE-ONLY  %s" % k)
+        print("in the JSON, not on a page: %d" % len(only_json))
+        for k in only_json[:5]:
+            print("   JSON-ONLY  %s" % k)
+        if only_page or only_json:
+            print("THE PAGE AND THE COUNTER DISAGREE ON THE KEY. Every count would read zero.")
+            rc = 1
+        else:
+            print("page and counter agree on every key")
+
     # duplicates within one state that are genuinely the same business name are
     # fine and expected (the data model allows it); the dangerous case is a
     # collision across states, which the key prevents by construction.
-    return 0 if not collisions else 1
+    return rc
+
+
+def page_keys_from_html(pages):
+    """Read the click-counter key off the SHIPPED pages, independently.
+
+    This is the half that makes the check above meaningful. It does not import
+    the generator or reuse its slug function: it reads the rendered HTML and
+    rebuilds the key with this file's own rule. Two independent derivations
+    agreeing is the only version of this check worth running.
+
+    It reads the raw name and state off `data-lk` / `data-lk-st` (which is what a
+    click actually sends) and slugs them, because the page deliberately does NOT
+    ship a pre-built key: the Worker builds it, so the client cannot name a row
+    that is not the one clicked.
+    """
+    out = set()
+    for path in sorted(glob.glob(os.path.join(pages, "directory", "*.html"))):
+        if path.endswith("index.html"):
+            continue
+        h = open(path, encoding="utf-8").read()
+        for m in re.finditer(
+            r'<a[^>]*data-lk="([^"]*)"[^>]*data-lk-st="([^"]*)"[^>]*data-lk-kind="(?:tel|site)"',
+            h,
+        ):
+            name, state = m.groups()
+            out.add(listing_key(html.unescape(state), html.unescape(name)))
+    return out
+
 
 
 if __name__ == "__main__":
@@ -179,9 +244,12 @@ if __name__ == "__main__":
     ap.add_argument("--self-test", action="store_true")
     ap.add_argument("--keys", action="store_true")
     ap.add_argument("--repo", default="/home/user/Documents/rv-platform")
+    ap.add_argument("--pages", action="store_true",
+                    help="also read the built pages and require the two agree on every key")
     a = ap.parse_args()
     if a.self_test:
         sys.exit(self_test())
     if a.keys:
-        sys.exit(build_keys(a.repo))
+        sys.exit(build_keys(a.repo, pages=a.repo if a.pages else None))
     ap.print_help()
+
