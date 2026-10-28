@@ -1,7 +1,17 @@
 {
-  // OriginRV claim form endpoint. Deploy from this directory:
-  //   npx wrangler login     (one time, opens a browser)
+  // OriginRV Worker. Two jobs in one service, deliberately: the claim form and
+  // the listing click counter. "One service" is the rule that stops this machine
+  // growing four of everything, and both jobs share the same rate-limit pattern.
+  //
+  // Deploy from this directory:
+  //   npx wrangler login     (one time, opens a browser only T can clear)
   //   npx wrangler deploy
+  //
+  // claim-form.js exports one fetch handler that dispatches by path:
+  //   POST /        -> claim form (emails the inbox in the DESTINATION secret)
+  //   POST /c       -> record one click on a listing
+  //   GET  /count   -> one listing's counts for one month
+  //   GET  /series  -> one listing's counts across months
   //
   // The send_email binding is what gives the Worker permission to send. With no
   // destination_address restriction it may send only to VERIFIED destination
@@ -21,12 +31,30 @@
   "send_email": [
     { "name": "EMAIL" }
   ],
-  // Two limits, both needed. The per-IP one is the real cap on abuse; the
-  // "global" one (a constant key) is a safety net that caps total volume per
-  // Cloudflare location, so a distributed script cannot flood the inbox even
-  // though it can dodge a per-IP counter. Counters are per-location and
-  // eventually consistent, which is fine here: this is a spam brake, not
-  // accounting. A real visitor submits once.
+  // The click counter's storage. One table (clicks) keyed by
+  // (listing_key, month, kind), so "this listing this month" is one row and the
+  // owner's page is one GROUP BY. Free tier is 5M rows read/day, 100k
+  // written/day and 5 GB, so the realistic cost is $0 and 100k clicks a day is
+  // the ceiling.
+  //
+  // The id is a PLACEHOLDER on purpose. Create it once with
+  //   npx wrangler d1 create originrv-count
+  // and paste the printed database_id here. A deploy fails loudly until then,
+  // which is the behaviour we want: an empty id would deploy a counter that
+  // silently cannot write.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "originrv-count",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ],
+  // Limits, in two sets. The per-IP one is the real cap on abuse; the "global"
+  // one (a constant key) is a safety net that caps total volume per Cloudflare
+  // location, so a distributed script cannot flood even though it can dodge a
+  // per-IP counter. Counters are per-location and eventually consistent, which
+  // is fine here: these are spam brakes, not accounting. A real visitor submits
+  // once.
   "ratelimits": [
     {
       "name": "CLAIM_PER_IP",
@@ -37,6 +65,16 @@
       "name": "CLAIM_GLOBAL",
       "namespace_id": "1002",
       "simple": { "limit": 30, "period": 60 }
+    },
+    // The counter's limit is much looser than the form's, on purpose: one reader
+    // may legitimately call a shop and open three others' sites in a minute, and
+    // a dropped count is a lost sale for the business. 60/minute per IP is far
+    // above human browsing and far below a flood.
+    {
+      "name": "COUNT_PER_IP",
+      "namespace_id": "1003",
+      "simple": { "limit": 60, "period": 60 }
     }
   ]
 }
+

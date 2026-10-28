@@ -18,6 +18,13 @@ window.RV_CONFIG = {
  formKey: '', // only for providers that require an access key; the Worker does not
  routesTo: 'contact' // where the navbar "Contact" link goes
  },
+ /* The click counter endpoint (workers/counter.js, the same Worker as the claim
+   form). A `tel:` tap or an outbound website click on a listing POSTs one
+   record here, and the owner's own page reads the totals back. Leave this EMPTY
+   and nothing is counted: finder.js checks it before it sends anything, so
+   shipping with it blank is inert rather than broken. Fill it in the same day
+   the counter Worker is deployed, not before. */
+ countEndpoint: '',
  domain: {
  canonical: 'https://originrv.com', // live domain (also in sitemap.xml, robots.txt, and per-page canonicals)
  live: 'https://originrv.com' // github.io redirects here now that the CNAME is set

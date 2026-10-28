@@ -494,7 +494,28 @@ def regions_text(data, slug):
             # allowed to shrink to nothing, and the name overflowed on top of the type column.
             # It gets its own element and its own full-width line (grid-column:1/-1).
             spec = ('<span class="finder-region-spec">%s</span>' % esc(r["spec"])) if r.get("spec") else ""
-            name = ('<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(r["u"]), esc(r["n"]))
+            # THE CLICK COUNTER'S HOOK IS ON THE TWO LINKS THAT LEAVE THE PAGE, and it
+            # carries the listing's NAME and its STATE, never a pre-built key. The
+            # Worker slugs both and builds `<state>:<slugged name>` itself, so the
+            # client cannot name a row that is not the one clicked, and a visitor who
+            # edits the attribute in devtools changes nothing but their own request.
+            # `data-lk-kind` says which of the two counters to bump; the Worker refuses
+            # any other kind rather than storing it.
+            #
+            # The slug rule lives in two places (slug() in workers/counter.js and
+            # counter_proof.py) because Python and JavaScript cannot share one
+            # function. It is pinned from the outside instead: counter_proof.py
+            # asserts the rule over all 2,026 real listings and requires 2,026
+            # distinct keys with 0 collisions, so a divergence is a failed check
+            # rather than two businesses quietly sharing a counter.
+            #
+            # NO NUMBER IS RENDERED HERE. The page carries the hook; the count lives in
+            # D1 and is read on the owner's own page. Printing a figure in public HTML
+            # would be a claim about a business that anyone could scrape, which is the
+            # shape of evidence-production the revenue doctrine rules out.
+            attrs = 'data-lk="%s" data-lk-st="%s"' % (esc(r["n"]), esc(data["state"]))
+            name = ('<a href="%s" target="_blank" rel="noopener" %s data-lk-kind="site">%s</a>'
+                    % (esc(r["u"]), attrs, esc(r["n"]))
                     if r.get("u") else esc(r["n"]))
             tel = re.sub(r"[^0-9+]", "", r["p"])
             out.append(
@@ -503,10 +524,10 @@ def regions_text(data, slug):
                 '<span class="finder-region-town">%s</span>'
                 '<span class="finder-region-type">%s</span>'
                 '%s'
-                '<a class="finder-region-call" href="tel:%s">%s</a>'
+                '<a class="finder-region-call" href="tel:%s" %s data-lk-kind="tel">%s</a>'
                 '%s'
                 '</li>' % (name, esc(r["c"]), TYPE_LABEL[r["t"]], flags, esc(tel),
-                           tel_text(r["p"]), spec))
+                           attrs, tel_text(r["p"]), spec))
         out.append("</ul>")
     out.append("</div>")
     return "\n".join(out)
