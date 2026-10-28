@@ -62,6 +62,61 @@
     function esc(s) {
       return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
+    /* ---------- click counting ----------
+       One delegated listener on the document, registered once. The browse rows
+       are static HTML and the finder cards are built later, so delegation is the
+       only shape that covers both without a listener per card (there can be
+       hundreds after "show more").
+
+       Counting must never cost the reader the click. The navigation is NOT
+       prevented and the request is fired in the background with keepalive, so a
+       tel: handoff or a new tab is never delayed or blocked by this. If the
+       request fails, nothing is shown and nothing is retried: a lost count is a
+       lost count, and a spinner over a phone call would be worse than a missing
+       number.
+
+       `data-lk-kind` is what makes this work without guessing from the href.
+       Only tel and site are counted; anything else is ignored here AND refused
+       by the Worker. */
+    function counted(ev) {
+      var el = ev.target;
+      while (el && el !== document.body && !(el.getAttribute && el.getAttribute('data-lk'))) {
+        el = el.parentNode;
+      }
+      if (!el || el === document.body || !el.getAttribute) return;
+      var kind = el.getAttribute('data-lk-kind');
+      if (kind !== 'tel' && kind !== 'site') return;
+      // data-lk is the business NAME (not the key) and data-lk-st is the state
+      // code. The Worker slugs both and builds the key itself, so the client
+      // never supplies a key and a forged attribute cannot write a count onto a
+      // listing that is not the one clicked.
+      var name = el.getAttribute('data-lk');
+      var st = el.getAttribute('data-lk-st');
+      if (!name || !st) return;
+      var url = (window.RV_CONFIG && window.RV_CONFIG.countEndpoint) || '';
+      if (!url) return;
+      try {
+        fetch(url, {
+          method: 'POST',
+          mode: 'cors',
+          keepalive: true,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ st: st, n: name, k: kind }),
+        }).catch(function () { /* a count is not worth an error in the reader's face */ });
+      } catch (e) { /* never break the click */ }
+    }
+    /* Registered defensively, because this file runs under a minimal DOM stub in
+       scripts/test-directory.js whose `document` has getElementById,
+       querySelectorAll, createElement, body and head but NO addEventListener. An
+       unguarded call at parse time threw "document.addEventListener is not a
+       function" and failed the directory-rendering gate on all 50 state pages,
+       which is the harness doing its job: it ran the file and the file broke.
+       The guard is not for the harness, it is for the real world too -- a
+       document without this method means nothing is clickable anyway, so there
+       is nothing to count. */
+    if (document && typeof document.addEventListener === 'function') {
+      document.addEventListener('click', counted, true);
+    }
     function title(s) {
       return String(s).replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
     }
@@ -206,17 +261,27 @@
       var spec = x.spec ? '<span class="listing-spec">' + esc(x.spec) + '</span>' : '';
       var flags = (emerg || spec) ? '<div class="listing-flags">' + emerg + spec + '</div>' : '';
       // Someone broken down wants to call, so the phone leads and the site follows.
+      // Both carry data-lk, the listing's identity for the click counter: the same
+      // `<state>:<slug>` string the browse rows carry and the Worker rebuilds server
+      // side. The slug rule lives in one place per language and is pinned by
+      // _todo/proof-2026-10-27/counter_proof.py. Sending the identity and letting the
+      // Worker re-derive it means a forged data-lk cannot write a click to a listing
+      // that does not exist.
+      // The RAW name rides alongside the key, because the Worker rebuilds the key
+      // from state + name rather than trusting the client's key. Sending the key
+      // itself would let anyone POST a key for a business that is not theirs.
+      var lkn = esc(x.n);
       var call = x.p
-        ? '<a class="btn btn-gb btn-sm listing-call" href="tel:' + esc(telHref(x.p)) + '">' + PHONE_ICON + esc(x.p).replace(/-/g, '&#8209;').replace(/ /g, '&nbsp;') + '</a>'
+        ? '<a class="btn btn-gb btn-sm listing-call" href="tel:' + esc(telHref(x.p)) + '" data-lk="' + lkn + '" data-lk-st="' + esc(ST) + '" data-lk-kind="tel">' + PHONE_ICON + esc(x.p).replace(/-/g, '&#8209;').replace(/ /g, '&nbsp;') + '</a>'
         : '<span class="listing-call none">Phone on their site</span>';
       // A couple of these businesses have lost their website (one domain is
       // parked, one was replaced by an unrelated template). Render the name as
       // plain text and drop the link rather than send someone to dead air.
       var name = x.u
-        ? '<a href="' + esc(x.u) + '" target="_blank" rel="noopener">' + esc(x.n) + '</a>'
+        ? '<a href="' + esc(x.u) + '" target="_blank" rel="noopener" data-lk="' + lkn + '" data-lk-st="' + esc(ST) + '" data-lk-kind="site">' + esc(x.n) + '</a>'
         : esc(x.n);
       var site = x.u
-        ? '<a class="listing-go" href="' + esc(x.u) + '" target="_blank" rel="noopener">Visit site &rarr;</a>'
+        ? '<a class="listing-go" href="' + esc(x.u) + '" target="_blank" rel="noopener" data-lk="' + lkn + '" data-lk-st="' + esc(ST) + '" data-lk-kind="site">Visit site &rarr;</a>'
         : '';
       return '<div class="card listing-card">' +
         '<div class="listing-top"><div class="listing-ic">' + (x.t === 'center' ? '&#127970;' : '&#128295;') + '</div>' +
