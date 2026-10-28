@@ -8,6 +8,7 @@ it goes near Cloudflare. The Worker keeps the same SQL.
 import json
 import re
 import sqlite3
+import sys
 import threading
 import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -40,14 +41,32 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path.startswith("/count/"):
             key = self.path.split("/count/", 1)[1]
+            # The month is part of the read, exactly as the real endpoint does it
+            # (`WHERE listing_key = ? AND month = ?`). An earlier version of this
+            # harness pooled every month into one number, so it could report a
+            # count the product would never return, and the "per month" claim it
+            # printed was not about the query it ran.
+            month = None
+            if "?" in key:
+                key, _, qs = key.partition("?")
+                for part in qs.split("&"):
+                    if part.startswith("month="):
+                        month = part.split("=", 1)[1]
             c = conn()
-            rows = c.execute(
-                "SELECT kind, n FROM clicks WHERE listing_key=?", (key,)).fetchall()
+            if month:
+                rows = c.execute(
+                    "SELECT kind, n FROM clicks WHERE listing_key=? AND month=?",
+                    (key, month)).fetchall()
+            else:
+                rows = c.execute(
+                    "SELECT kind, n FROM clicks WHERE listing_key=?", (key,)).fetchall()
             c.close()
             out = {"tel": 0, "site": 0}
             for k, n in rows:
                 out[k] = n
             out["listing_key"] = key
+            if month:
+                out["month"] = month
             body = json.dumps(out).encode()
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
@@ -104,8 +123,11 @@ if __name__ == "__main__":
             headers={"Content-Type": "application/json"})
         return urllib.request.urlopen(req).status
 
-    def get(key):
-        with urllib.request.urlopen("http://127.0.0.1:8791/count/" + key) as r:
+    def get(key, month=None):
+        url = "http://127.0.0.1:8791/count/" + key
+        if month:
+            url += "?month=" + month
+        with urllib.request.urlopen(url) as r:
             return json.load(r)
 
     biz = {"st": "ca", "n": "Boondock RV"}
@@ -116,18 +138,32 @@ if __name__ == "__main__":
     for _ in range(9):
         post(dict(biz, k="site"))
 
-    # concurrent burst: 50 simultaneous call clicks must not lose writes
+    # concurrent burst: 50 simultaneous call clicks must not lose writes.
+    # The burst is retried on a dropped connection. The crash this harness used
+    # to show (ConnectionResetError) was the client side dropping the connection
+    # under the burst, not a lost write, so a retry is the honest fix: it proves
+    # the writer is fine without pretending the transport never fails.
     import concurrent.futures
-    with concurrent.futures.ThreadPoolExecutor(max_workers=25) as ex:
-        list(ex.map(lambda _: post(dict(biz, k="tel")), range(50)))
 
-    r = get("ca:boondock-rv")
+    def post_retry(payload, tries=3):
+        last = None
+        for _ in range(tries):
+            try:
+                return post(payload)
+            except Exception as e:      # noqa: BLE001 - retried, then re-raised
+                last = e
+        raise last if last is not None else RuntimeError("post failed")
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=25) as ex:
+        list(ex.map(lambda _: post_retry(dict(biz, k="tel")), range(50)))
+
+    r = get("ca:boondock-rv", "2026-10")
     print("tel  =", r["tel"], "(expected 64: 14 + 50 concurrent)")
     print("site =", r["site"], "(expected 9)")
     ok1 = r["tel"] == 64 and r["site"] == 9
 
     # a different business is untouched
-    other = get("ca:davids-mobile-rv-service")
+    other = get("ca:davids-mobile-rv-service", "2026-10")
     print("other listing tel =", other["tel"], "(expected 0)", "site =", other["site"])
     ok2 = other["tel"] == 0 and other["site"] == 0
 
@@ -141,11 +177,29 @@ if __name__ == "__main__":
     print("bad kind:", bad)
     ok3 = bad == "refused 400"
 
-    # the counts are per-month, so next month starts at zero
+    # The counts are per month: a November click is its OWN row and does not
+    # touch October. Two assertions, because the interesting failure is not
+    # "November shows 1", it is "October moved".
+    #
+    # The previous version printed an expectation of 65 against a read that
+    # pooled every month, and its result was not part of the verdict at all, so
+    # it could be wrong and the harness still exited 0.
     post(dict(biz, k="tel", m="2026-11"))
-    nov = get("ca:boondock-rv")
-    print("after one November click, tel =", nov["tel"], "(expected 65, October not reset)")
+    nov = get("ca:boondock-rv", "2026-11")
+    oct_after = get("ca:boondock-rv", "2026-10")
+    print("November tel =", nov["tel"], "(expected 1: one November click)")
+    print("October  tel =", oct_after["tel"], "(expected 64: unchanged by November)")
+    ok4 = nov["tel"] == 1
+    ok5 = oct_after["tel"] == 64
+    if not ok4:
+        print("  FAIL: a November click landed in the wrong month")
+    if not ok5:
+        print("  FAIL: a November click disturbed October's row")
 
     print()
-    print("VERDICT:", "PASS" if (ok1 and ok2 and ok3) else "FAIL")
+    passed = all([ok1, ok2, ok3, ok4, ok5])
+    print("VERDICT:", "PASS" if passed else "FAIL")
     srv.shutdown()
+    # The exit code IS the verdict. Printing PASS/FAIL and exiting 0 either way
+    # is how a harness gets quoted as evidence while failing.
+    sys.exit(0 if passed else 1)
