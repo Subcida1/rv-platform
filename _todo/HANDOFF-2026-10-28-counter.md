@@ -23,8 +23,13 @@ and counting is **on**.
   wrangler's own create output suggests `originrv_count`, and taking that suggestion would leave `env.DB`
   undefined so every click would fail while the deploy still looked clean.
 - Secrets: `DESTINATION` (pre-existing) and `READ_TOKEN` (new). `/count` and `/series` fail closed at 401
-  without the token. **The `READ_TOKEN` value lives only in Cloudflare and in T's keeping; it is not in
-  this repo and must never be.** Regenerate with `npx wrangler secret put READ_TOKEN` if lost.
+  without the token. **The `READ_TOKEN` value is unrecoverable by design: it exists only as an encrypted
+  blob in Cloudflare, was never written to disk anywhere, and no human can read it back, not even in the
+  dashboard.** The working copy was deleted after the deploy proof. Nothing needs it today because no
+  reader exists yet, which is exactly why it was not stored. **When the owner page is built, set a fresh
+  token** (`npx wrangler secret put READ_TOKEN`) and use that one in the reader. Do not go looking for the
+  original; there is nothing to find. This is a recoverable secret -- losing it costs one command and no
+  data.
 - Table `clicks` applied remotely (`num_tables: 1`). Columns are `listing_key, month, kind, n` — the count
   column is **`n`**, not `count`. Reading it as `count` is a SQLITE_ERROR.
 
