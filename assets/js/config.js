@@ -24,7 +24,7 @@ window.RV_CONFIG = {
    Leave this EMPTY and nothing is counted: finder.js checks it before it sends
    anything, so shipping with it blank is inert rather than broken. Fill it in
    the same day the Worker is deployed, not before. */
- countEndpoint: '',
+ countEndpoint: 'https://originrv-claim.ty-g-brandes.workers.dev/c',
  domain: {
  canonical: 'https://originrv.com', // live domain (also in sitemap.xml, robots.txt, and per-page canonicals)
  live: 'https://originrv.com' // github.io redirects here now that the CNAME is set

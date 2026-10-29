@@ -46,7 +46,7 @@
     {
       "binding": "DB",
       "database_name": "originrv-count",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+      "database_id": "b508cb87-0589-4e8d-94b8-d19ac38132ce"
     }
   ],
   // Limits, in two sets. The per-IP one is the real cap on abuse; the "global"
