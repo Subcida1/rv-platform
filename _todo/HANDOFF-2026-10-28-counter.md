@@ -1,23 +1,58 @@
-# HANDOFF: OriginRV revenue build (2026-10-28, counter built)
+# HANDOFF: OriginRV revenue build (2026-10-28, counter DEPLOYED and counting)
 
 Supersedes the "next steps" section of `HANDOFF-2026-10-27-revenue-build.md`. **Re-check live state before
 acting on anything here** (`git fetch && git status`, `git log --oneline -5`): this tree is shared and a
 snapshot is stale by default.
 
-## Where this session left it
+## 2026-10-28 evening: the counter is LIVE
 
-Step 1 of the previous handoff is **done**, and step 2 is **built and gated but not merged to main**.
+T did the `wrangler login` and approved the merge. Steps 2 and 3 of the previous handoff are now **done**,
+and counting is **on**.
 
 | step | state |
 |---|---|
-| 1. Commit the decision docs | **DONE.** `e9c24a7d` on `main`, six files, docs only. NOT pushed. |
-| 2. Build the click counter | **BUILT on branch `counter-build`**, six commits, in a worktree at `/home/user/.hermes/cache/scratch/rv-counter`. Not merged, not pushed. |
-| 3. Deploy the endpoint | **BLOCKED on T.** `npx wrangler login` needs him at the keyboard. Runbook: `_todo/DEPLOY-COUNTER-2026-10-28.md`. |
-| 4. The claim flow | Not started, and the design changed. See below. |
+| 1. Commit the decision docs | **DONE.** `e9c24a7d`, pushed. |
+| 2. Build the click counter | **DONE and MERGED.** `a838fc07` on `main`. |
+| 3. Deploy the endpoint | **DONE.** `6bb27197`. Worker live, D1 created, `countEndpoint` set, pushed. |
+| 4. The claim flow | Not started. Design changes still apply (see below). |
 
-**Nothing counts yet.** The counter is inert by construction: `assets/js/config.js` has
-`countEndpoint: ''`, and `finder.js` returns early when that is empty. That is deliberate, so a static
-deploy before the Worker exists cannot send clicks into nothing.
+**Environment, so a later session does not have to rediscover it:**
+
+- Worker: `https://originrv-claim.ty-g-brandes.workers.dev` (the existing claim-form Worker, now two jobs).
+- D1: `originrv-count`, id `b508cb87-0589-4e8d-94b8-d19ac38132ce`, region WNAM. Binding name is `DB` —
+  wrangler's own create output suggests `originrv_count`, and taking that suggestion would leave `env.DB`
+  undefined so every click would fail while the deploy still looked clean.
+- Secrets: `DESTINATION` (pre-existing) and `READ_TOKEN` (new). `/count` and `/series` fail closed at 401
+  without the token. **The `READ_TOKEN` value lives only in Cloudflare and in T's keeping; it is not in
+  this repo and must never be.** Regenerate with `npx wrangler secret put READ_TOKEN` if lost.
+- Table `clicks` applied remotely (`num_tables: 1`). Columns are `listing_key, month, kind, n` — the count
+  column is **`n`**, not `count`. Reading it as `count` is a SQLITE_ERROR.
+
+**Proof it counts, run end to end and not taken from a deploy message:**
+
+- `POST /c` with an apostrophe in the name returned 204; `GET /count` returned
+  `{"listing_key":"ca:davids-mobile-rv-service","month":"2026-10","tel":1,"site":0}`, so the page's key
+  rule and the Worker's agree; without the token the same read returned 401; a second POST read back
+  `tel:2`, proving increment not replace.
+- Then a **real click on the live page in a real browser**: instrumenting `window.fetch` on
+  `originrv.com/directory/california.html` captured exactly one
+  `POST https://originrv-claim.ty-g-brandes.workers.dev/c` with body
+  `{"st":"CA","n":"David's Mobile RV Service","k":"tel"}`, and D1 then held
+  `ca:davids-mobile-rv-service / 2026-10 / tel / n=3`.
+- **The test rows were deleted afterwards**, so the table starts honest. Verified `COUNT(*) = 0`.
+- Note GitHub Pages lag: the live `config.js` still served the empty endpoint for ~40s after the push.
+  Do not read a just-pushed config as live; poll it.
+
+**Still true and still binding: the WRITE is unauthenticated.** Anyone with a script can inflate any
+count. Pitch language stays "click-throughs recorded from the directory", never "customers we sent you".
+
+**Next step is now the claim flow** (step 4), with the three design changes below folded in. The
+highest-value remaining work, because the counter produces evidence nobody can be shown until an owner
+page exists to show it on.
+
+## The earlier build, for the record
+
+Steps 1 and 2 as they stood before the deploy.
 
 ## What was actually built
 

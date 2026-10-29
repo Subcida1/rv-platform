@@ -1,5 +1,14 @@
 # The click counter: what it is, and the day it goes live
 
+> **DONE 2026-10-28 evening.** This runbook has been executed. The counter is live and counting, Worker
+> `https://originrv-claim.ty-g-brandes.workers.dev`, D1 `originrv-count`. Keep this file as the record of
+> how it was deployed and what went wrong; for current state read `HANDOFF-2026-10-28-counter.md`.
+>
+> What differed from the plan below: the D1 id was created and pasted (binding kept as `DB`, not
+> wrangler's suggested `originrv_count`), `READ_TOKEN` was set, and the end-to-end proof was run twice --
+> once by curl and once by a real click on the live page in a real browser -- then the test rows were
+> deleted. `wrangler d1 create` returned region WNAM.
+
 **Written 2026-10-28.** This is the runbook for the one part of the revenue build that cannot be
 finished without T at the keyboard. Everything else is a commit or a script.
 
