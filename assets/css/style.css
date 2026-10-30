@@ -3982,9 +3982,21 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    from the cards below and a third copy of the same navigation is what made the old
    fold read as a wall of buttons. Slimmer padding keeps the strip inside the fold at
    1440x900 and still fits 390px. */
-.hero-stats-slim{margin-top:var(--space-6)}
-.hero-stats-slim .hstat{padding:var(--space-4)}
-.hero-stats-slim .hstat:hover{transform:none;border-color:var(--border);box-shadow:var(--shadow-sm)}
+/* The three figures as one horizontal strip, so they sit INSIDE the fold. As three
+   vertical tiles they measured 946px against an 813px viewport: the proof of how much
+   is here was below the fold, which is the one thing this rewrite must not do. Each
+   figure keeps its count-up and its .lbl; only the direction changed, because the
+   markup is targeted by verify.py, sync-counts.py and build-listings.py. */
+.hero-stats-slim{margin-top:var(--space-6);display:flex;justify-content:center;gap:var(--space-6);flex-wrap:wrap}
+.hero-stats-slim .hstat{flex-direction:row;align-items:baseline;gap:var(--space-2);padding:0;background:none;border:0;box-shadow:none}
+.hero-stats-slim .hstat .num{font-size:var(--fs-xl)}
+.hero-stats-slim .hstat .lbl{margin-top:0;font-weight:600;color:var(--text-2);font-size:var(--fs-md)}
+.hero-stats-slim .hstat:hover{transform:none;border-color:transparent;box-shadow:none}
+@media(max-width:720px){
+  .hero-stats-slim{gap:var(--space-2) var(--space-5)}
+  .hero-stats-slim .hstat .num{font-size:var(--fs-lg)}
+  .hero-stats-slim .hstat .lbl{font-size:var(--fs-sm)}
+}
 
 /* The directory door carries the ZIP field rather than a link, so it is a container
    and not an <a>. It keeps the card look of its neighbour so the pair still reads as

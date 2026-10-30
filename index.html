@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/">
  <title>RV Tools &amp; RV Repair Directory | OriginRV</title>
  <meta name="description" content="Free RV tools for owners and full timers: a towing and weight calculator, plain-English winter and troubleshooting guides, and an RV repair directory.">
- <link rel="stylesheet" href="assets/css/style.css?v=a7f83d02">
+ <link rel="stylesheet" href="assets/css/style.css?v=5f15efc7">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -60,8 +60,8 @@
       "pick the symptom that matches what your RV is doing"). The h1 restates the
       query, the two doors name what is behind them, and the guide list IS the
       content rather than a description of the content. -->
- <h1>RV repair help and <span class="grad">free RV tools</span> that start with what is broken</h1>
- <p class="sub">Find your symptom, get the checks in the order a technician uses them. Free RV tools for towing weight, batteries, solar and tire age, and a directory of mobile RV techs across fifty states. Free, no account.</p>
+ <h1>Fix it with <span class="grad">free RV tools</span> and plain-English guides</h1>
+ <p class="sub">Start with the symptom: 60 checklists that say what to test, in what order, plus free tools and a repair directory.</p>
  <form class="search js-search-form" role="search">
  <div class="search-bar">
  <input type="text" placeholder="Describe what your RV is doing, or search a part" aria-label="Search OriginRV" name="q">
@@ -78,7 +78,7 @@
  <a class="door" href="guides/#electrical-and-charging">
  <span class="door-ic" aria-hidden="true">🔧</span>
  <span class="door-t">Something is broken</span>
- <span class="door-p">Pick the symptom. Furnace, fridge, water heater, AC, 12 volt, slides and leaks.</span>
+ <span class="door-p">Furnace, fridge, water heater, AC, 12 volt, slides and leaks.</span>
  <span class="door-go">Troubleshoot it &#8594;</span>
  </a>
  <!-- THE DIRECTORY DOOR IS THE FIELD ITSELF. A door card beside a ZIP form would be
@@ -91,7 +91,7 @@
  <div class="door door-form">
  <span class="door-ic" aria-hidden="true">📍</span>
  <span class="door-t">I need a tech</span>
- <span class="door-p">Mobile RV repair and service centers across all <span data-claim="states-total-word-lc">fifty</span> states. Put in a ZIP or a town and go straight to the ones near you.</span>
+ <span class="door-p">Mobile techs and service centers across all <span data-claim="states-total-word-lc">fifty</span> states.</span>
  <form class="door-loc" action="directory/" method="get" onsubmit="return RV.findService(this)">
  <input type="text" name="loc" aria-label="ZIP or town for RV repair near you" placeholder="ZIP or town" autocomplete="postal-code" inputmode="text">
  <button class="btn btn-primary btn-sm" type="submit">Find RV service</button>
@@ -105,6 +105,13 @@
       source, so they stay; the doorway under each one is gone and the section behind
       it is reachable from the cards below. scripts/verify.py checks all three against
       reality (guides on disk, listing shards, tool pages), so a tile that drifts fails. -->
+ <!-- THE THREE NUMBERS, laid out as a horizontal strip that fits inside the fold. As
+      three stacked tiles they sat at y=946 against an 813px viewport, so the figures
+      that prove how much is here were below the fold: the strip cost a screenful and
+      showed none of it. The markup shape is deliberately unchanged (data-count plus a
+      .lbl div) because three owners target it: verify.py checks each figure against
+      reality, sync-counts.py rewrites the counters, and build-listings.py rewrites the
+      business count. Only the layout direction changed. -->
  <div class="hero-stats hero-stats-slim">
  <div class="hstat">
  <div class="num" data-count="15">15</div><div class="lbl">RV tools, all free</div>
