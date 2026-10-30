@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # The 45 emoji actually in use, mapped to sprite ids by meaning.
 EMOJI_MAP = {
-    "🔧": "wrench", "🔥": "fire", "🔋": "battery", "🛞": "tire", "🚰": "faucet",
+    "🔧": "wrench", "🔥": "fire", "🔋": "battery", "🛞": "tire", "🚰": "droplet",
     "🧊": "ice", "🚽": "toilet", "💧": "droplet", "🔌": "plug", "🔩": "bolt-screw",
     "🏠": "rv-side", "⚡": "battery-charge", "🚿": "shower", "🚛": "truck",
     "⚖️": "scale-weight", "⛽": "fuel", "☀️": "sun", "📋": "checklist",
@@ -35,7 +35,7 @@ ICON_CLASSES = ("guide-ic", "cat-ic", "sys-ic", "hub-ic", "listing-ic", "finder-
 def sprite_use(name: str) -> str:
     return (
         f'<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" '
-        f'focusable="false"><use href="assets/img/icons/sprite.svg#ic-{name}"/></svg>'
+        f'focusable="false"><use href="/assets/img/icons/sprite.svg#ic-{name}"/></svg>'
     )
 
 

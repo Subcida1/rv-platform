@@ -900,7 +900,10 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    of any length are measurably harder to read, and that is not a style preference. */
 .sec-head{max-width:720px;margin-left:auto;margin-right:auto;margin-bottom:44px;text-align:center}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.sec-eyebrow{font-size: var(--fs-xs);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2)}
+/* The section kicker is retired (T, 2026-10-29: the small uppercase label above
+   every heading). It restated the heading below it on every page it appeared on,
+   and the heading carries its own weight. .sec-eyebrow.mile below is a DIFFERENT
+   component -- a mile-marker chip with an MP badge -- and is left untouched. */
 .sec-head h2{margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.08}
 .sec-head p{margin-top:12px;color:var(--text-2);font-size: var(--fs-lg)}
 .sec-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:40px}
@@ -1312,7 +1315,8 @@ footer a:hover{color:var(--text-inv)}
 
 /* ---------- typography & motion ---------- */
 .grad-text{background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow{font-size: var(--fs-xs);font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* .eyebrow was the same kicker with gradient text on top. Dead on the site, and
+   both halves of it are refused, so it is retired rather than left as a trap. */
 .h2{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
 .h3{font-size:clamp(19px,2.4vw,24px);font-weight:800;letter-spacing:-.02em}
 .lead{font-size: var(--fs-xl);color:var(--text-2);line-height:1.65}
@@ -2215,9 +2219,9 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 /* :not(.dir-title) because .dir-title IS this site's page-title treatment (48px,
    uppercase, used on every directory and manuals page) and a type selector would
    outrank it. Anything else inside a page header gets the standard h1. */
-.page-intro h1:not(.dir-title){font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px}
-.page-intro h1.lg{font-size:clamp(30px,4.4vw,48px);line-height:1.08;margin-top:12px}
-.lede{color:var(--text-2);font-size: var(--fs-lg);margin-top:12px}
+.page-intro h1:not(.dir-title){font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:24px}
+.page-intro h1.lg{font-size:clamp(30px,4.4vw,48px);line-height:1.08;margin-top:24px}
+.lede{color:var(--text-2);font-size: var(--fs-lg);margin-top:16px}
 .lede.wide{font-size: var(--fs-lg);max-width:680px}
 .page-intro .back{font-size: var(--fs-sm)}
 /* THE STATE PAGE'S PHOTOGRAPH. Ty, 2026-10-21: "i feel like the website is very text
@@ -2572,7 +2576,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    Directory: all-caps page title + state tiles (photo header,
    counts, CTA). Added 2026-09-21 with the state photography.
    ============================================================ */
-.dir-title{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:.005em;line-height:1.06;text-transform:uppercase;margin-top:12px}
+.dir-title{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:.005em;line-height:1.06;text-transform:uppercase;margin-top:24px}
 .dir-title-sub{display:block;font-size:.44em;font-weight:700;letter-spacing:-.012em;line-height:1.35;text-transform:none;color:var(--text-2);margin-top:12px}
 /* CENTRED FLEX, NOT A GRID, for the same reason the guides grid is: a partial row has to sit in
    the middle. Alaska and Hawaii are two cards in a three-column grid, so as a grid they packed
@@ -4077,29 +4081,19 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
    that leads somewhere or carries identity, and this is neither. Weight and the
    brand colour already do the work, and the checker enforces the rule. */
 
-/* --- THE ONE AUTHORED MOMENT -------------------------------------------
-   A page of identical entrances reads as a template. This is the single
-   deliberate reveal: the six system cards arrive as the visitor reaches
-   them, so the symptom wall reads as one considered object rather than six
-   list items that happened to load.
+/* --- NO SCROLL REVEAL ON THE SYSTEM CARDS ------------------------------
+   There was a scroll-driven entrance here: each card faded up as it entered
+   the viewport. It is gone on request (T, 2026-10-29). Two reasons it was
+   wrong for this page rather than merely unwanted:
 
-   The rule the standard sets: animate FROM an already-visible default. The
-   markup is unconditionally visible; the animation only starts when the
-   browser supports it AND motion is welcome. No JS gate, so the content is
-   never hidden by a script that failed to run. */
-@media (prefers-reduced-motion:no-preference){
-  @supports (animation-timeline:view()){
-    .sys-grid > .sys-card{
-      animation:sys-rise linear both;
-      animation-timeline:view();
-      animation-range:entry 2% cover 26%;
-    }
-  }
-}
-@keyframes sys-rise{
-  from{opacity:.001;transform:translateY(14px) scale(.985)}
-  to{opacity:1;transform:none}
-}
+     1. It made six cards that are meant to read as one index arrive at six
+        different moments, so the grid looked half-loaded as you scrolled it.
+     2. Only the cards below the fold animate at all, so the visible fade
+        pattern was inconsistent by construction -- the first cards sat still
+        while a later one was caught mid-fade.
+
+   The content is unconditionally visible and stays that way. Hover feedback
+   below is the only motion the cards carry.
 
 /* Cards keep a real hover state: elevation over a heavier border, which is
    the Material cue, not a colour swap. */
@@ -4109,3 +4103,36 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
 
 /* Buttons get the same curve so the whole page decelerates as one object. */
 .btn,.nav-link,.door,.hub-card{transition-timing-function:var(--ease-out)}
+
+/* --- PARTS AND DIRECTORY BAND ------------------------------------------
+   The band that makes parts and the directory peers of the guides. Nine
+   cards rather than six, so the grid breaks 3-up on desktop and the counts
+   stay readable; the directory sits on its own surface underneath because it
+   is a different job (find a person, not a part) with its own action. */
+.parts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.parts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.parts-grid{grid-template-columns:minmax(0,1fr)}}
+
+.band-cta{display:flex;align-items:center;justify-content:space-between;gap:var(--space-5);
+  flex-wrap:wrap;margin-top:var(--space-6);padding:var(--space-5) var(--space-6);
+  background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius);
+  box-shadow:var(--shadow)}
+.band-cta-body{flex:1;min-width:260px}
+.band-cta-t{font-size:var(--fs-xl);font-weight:800;color:var(--ink);line-height:1.25}
+.band-cta-p{margin-top:6px;color:var(--text-2);max-width:60ch}
+.band-cta-acts{display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap}
+@media (max-width:560px){
+  .band-cta{padding:var(--space-4) var(--space-4)}
+  .band-cta-acts{width:100%}
+  .band-cta-acts .btn{width:100%;justify-content:center}
+}
+
+/* --- THE STATE PAGE BREADCRUMB -----------------------------------------
+   "Directory . Texas" above a state page's title. This is navigation, not a
+   kicker: it says where you are and links back up one level, which a label
+   restating its own heading never did. It used to borrow .sec-eyebrow, which
+   is retired; it has its own name now so the two cannot be confused again. */
+.crumb-line{font-size: var(--fs-xs);font-weight:800;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-2)}
+.crumb-line a{color:var(--link-strong);text-underline-offset:3px}
+.crumb-line a:hover{color:var(--brand-deep)}

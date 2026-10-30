@@ -110,6 +110,7 @@ const DECLARED = [
   // counts, all short and fully rounded, so the discovery pass now finds it as a pill row.
   { selector: 'div.hero-stats.hero-stats-slim',    align: 'center', why: 'homepage proof strip: three counts centred under the fold (added 2026-10-29)' },
   { selector: 'form.door-loc',                     align: 'left',   why: 'the ZIP field inside the homepage directory door; left is correct inside a card' },
+  { selector: 'div.band-cta-acts',                 align: 'left',   why: 'the two actions in the homepage parts/directory band; left is correct inside a card-like band (added 2026-10-29)' },
   { selector: 'div.tool-btns',                     align: 'left',   why: 'the button under a tool card; left is correct inside a card' },
   { selector: 'div.guide-stats',                   align: 'left',   why: 'the finder stat row on a state page' },
   { selector: 'div.loc-row',                       align: 'any',    why: 'listing rows vary with content length' },
