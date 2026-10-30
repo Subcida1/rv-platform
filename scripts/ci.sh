@@ -219,12 +219,20 @@ step "html-validate (offline, adds the WCAG-technical rules)" \
 #   * `@property` -- registered custom properties. We use one deliberately: a rotating gradient
 #     angle needs it or the animation cannot interpolate.
 #   * `var()` inside a `conic-gradient(from ...)` angle -- vnu cannot resolve the variable.
+#   * `animation-timeline` / `animation-range` -- scroll-driven animation, shipped in Chrome and
+#     Safari, still only a draft at the time vnu's CSS mode was written. The homepage's one
+#     authored reveal is built on it, guarded by @supports so an older engine simply sees the
+#     content already visible.
 # Anything else in the output still fails the step, so a genuine syntax error cannot hide here.
 csscheck() {
   local out
   out=$(npx --yes vnu-jar --css assets/css/style.css 2>&1 \
         | grep -v 'Unrecognized at-rule “@property”' \
-        | grep -v 'is not a “conic-gradient” value')
+        | grep -v 'is not a “conic-gradient” value' \
+        | grep -v 'Property “animation-timeline” doesn' \
+        | grep -v 'Property “animation-range” doesn' \
+        | grep -v 'Property “animation-range-start” doesn' \
+        | grep -v 'Property “animation-range-end” doesn')
   [ -z "$out" ] && return 0
   printf '%s\n' "$out"
   return 1

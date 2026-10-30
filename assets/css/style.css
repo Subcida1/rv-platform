@@ -104,6 +104,11 @@
   --shadow-lg:0 10px 24px -10px rgba(16,24,40,.16),0 28px 70px -28px rgba(16,24,40,.26);
 
   /* ---- MOTION ---- */
+  /* One authored easing curve for the whole site. Bare `ease` is symmetric
+     slow-in-slow-out, which reads as sluggish on a short move; this is the
+     exponential ease-out the interface standard asks for. */
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-out-soft:cubic-bezier(.33,1,.68,1);
   --t-fast:.15s;
   --t-base:.18s;
 
@@ -1317,7 +1322,7 @@ footer a:hover{color:var(--text-inv)}
 .sec{position:relative}
 .band-tint{background:linear-gradient(180deg,var(--surface),var(--bg-2))}
 .band-tint-2{background:linear-gradient(180deg,var(--bg-2),var(--surface))}
-.sec-head{max-width:760px;margin-bottom:46px}
+.sec-head{max-width:68ch;margin-bottom:46px}
 .sec-head.center{margin:0 auto 46px;text-align:center}
 
 /* ---------- decorative hero blobs ---------- */
@@ -4015,3 +4020,92 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 /* .hub-jump-inline is no longer used on the homepage (the pills duplicated the six
    cards beneath them); the class is kept for the guides and parts hubs, which have
    long grids where a jump strip earns its place. */
+
+/* ==========================================================================
+   ICON SYSTEM + CRAFT PASS  (2026-10-29)
+   Authored SVG icons replace emoji. One world: 24x24 grid, 1.75 stroke,
+   round caps, currentColor so each container's existing colour still rules.
+   ========================================================================== */
+
+/* --- the icon itself -------------------------------------------------- */
+.ic{width:1.35em;height:1.35em;display:block;flex-shrink:0;
+    fill:none;stroke:currentColor;stroke-width:1.75;
+    stroke-linecap:round;stroke-linejoin:round;
+    overflow:visible} /* overflow:visible so no glyph is clipped at the box edge */
+.icon-sprite-source{position:absolute;width:0;height:0;overflow:hidden}
+
+/* The containers were sized for emoji, which sit on the text baseline; an SVG
+   block child sits flush, so nudge the whole glyph up to sit optically centred. */
+.guide-ic .ic,.cat-ic .ic,.hub-ic .ic,.listing-ic .ic,.finder-ic .ic{margin-top:-1px}
+
+/* System cards carried the largest emoji; the drawn icon reads better a touch
+   lighter than the emoji did, in the brand blue rather than flat ink. */
+.sys-ic{color:var(--b1)}
+.sys-ic .ic{width:1.5em;height:1.5em}
+
+/* Icon keeps its colour when its card is reached, without a second asset. */
+.card:hover .ic,.guide-card:hover .ic{stroke-width:1.9}
+
+/* Reduced motion: the width change above is a stroking cue, not movement, but
+   honour the preference for the transitions elsewhere on this block. */
+@media (prefers-reduced-motion:reduce){
+  .ic{transition:none}
+}
+
+/* --- browser surfaces -------------------------------------------------
+   The parts we did not draw still carry the design. Cheapest signal that a
+   page was built rather than assembled. */
+::selection{background:var(--tint-blue-soft);color:var(--ink-black)}
+html{scrollbar-color:var(--border-hover) var(--bg-2);scrollbar-width:thin}
+::placeholder{color:var(--text-3);opacity:1}
+:where(input,textarea,select){caret-color:var(--b1)}
+a{text-underline-offset:2.5px;text-decoration-thickness:1px}
+:focus-visible{outline:2.5px solid var(--b1);outline-offset:2px;border-radius:4px}
+
+/* Numerals in the figures and any tabular data line up column to column. */
+.hero-stats,.hstat-form,.lbl{font-variant-numeric:tabular-nums}
+
+/* --- hero emphasis without gradient text -------------------------------
+   Gradient text means the word disappears if the background fails to paint,
+   and it reads as finish rather than as meaning. Emphasis comes from weight
+   and colour instead. */
+.hero h1 .hl{font-style:normal;font-weight:900;color:var(--brand-deep);
+  background:none;-webkit-background-clip:initial;background-clip:initial}
+html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
+
+/* No gradient under the word: the house rule is that a gradient marks something
+   that leads somewhere or carries identity, and this is neither. Weight and the
+   brand colour already do the work, and the checker enforces the rule. */
+
+/* --- THE ONE AUTHORED MOMENT -------------------------------------------
+   A page of identical entrances reads as a template. This is the single
+   deliberate reveal: the six system cards arrive as the visitor reaches
+   them, so the symptom wall reads as one considered object rather than six
+   list items that happened to load.
+
+   The rule the standard sets: animate FROM an already-visible default. The
+   markup is unconditionally visible; the animation only starts when the
+   browser supports it AND motion is welcome. No JS gate, so the content is
+   never hidden by a script that failed to run. */
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .sys-grid > .sys-card{
+      animation:sys-rise linear both;
+      animation-timeline:view();
+      animation-range:entry 2% cover 26%;
+    }
+  }
+}
+@keyframes sys-rise{
+  from{opacity:.001;transform:translateY(14px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+
+/* Cards keep a real hover state: elevation over a heavier border, which is
+   the Material cue, not a colour swap. */
+.sys-card,.guide-card,.card{transition:box-shadow .22s var(--ease-out),
+  transform .22s var(--ease-out),border-color .22s var(--ease-out)}
+.sys-card:hover,.guide-card:hover{transform:translateY(-2px)}
+
+/* Buttons get the same curve so the whole page decelerates as one object. */
+.btn,.nav-link,.door,.hub-card{transition-timing-function:var(--ease-out)}
