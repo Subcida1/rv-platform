@@ -187,10 +187,27 @@ function breadcrumbFor(rel, html) {
   }
 
   const head = headingOf(html);
-  // guides/ BELONGS IN THIS LIST. It was missing, so the guides hub -- which is not a guide page
-  // (isGuide excludes guides/index.html) -- got only [Home], tripped the `crumbs.length < 2` guard
-  // below, and shipped with NO breadcrumb at all. It was the only one of the five hubs without one.
-  if (head && (isGuide || rel.startsWith('guides/') || rel.startsWith('manuals/') ||
+  // A STATE PAGE'S CRUMB IS ITS STATE, NOT ITS TITLE (2026-10-29). The condition below
+  // listed directory/index.html but not directory/<state>, so a state page got
+  // [Home, Directory] and stopped -- Texas appeared nowhere in the trail, and the
+  // BreadcrumbList JSON-LD described all fifty state pages as the directory index. The
+  // H1 is "RV REPAIR DIRECTORY" on every one of them, so it is both too long for a crumb
+  // and identical across the set. The state name is the crumb that distinguishes them,
+  // derived from the filename, which is where the state already lives.
+  const isStatePage = rel.startsWith('directory/') && rel !== 'directory/index.html';
+  if (isStatePage) {
+    const stateFile = rel.replace(/^directory\//, '').replace(/\.html$/, '');
+    // The filename cannot be title-cased into a state name -- newyork.html would read
+    // "Newyork" and westvirginia.html "Westvirginia". The listing data already holds the
+    // authoritative spelling, the same one the page title and its regions use.
+    let stateName = null;
+    try {
+      const lj = JSON.parse(fs.readFileSync(path.join(ROOT, '_data', 'listings', stateFile + '.json'), 'utf8'));
+      if (lj && typeof lj.name === 'string') stateName = lj.name;
+    } catch (e) { stateName = null; }
+    if (!stateName) stateName = stateFile.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+    crumbs.push({ name: stateName, href: null });
+  } else if (head && (isGuide || rel.startsWith('guides/') || rel.startsWith('manuals/') ||
                rel.startsWith('tools/') || rel.startsWith('parts/') || rel === 'directory/index.html')) {
     crumbs.push({ name: head, href: null });
   }
