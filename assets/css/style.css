@@ -3387,8 +3387,9 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
      text and a clipped background prints as blank space. Nothing in this file sets
      background-clip:text any more: the rules that did are solid ink now, so they print
      as themselves and need no rescue. What is left here is the handful that still carry
-     a real background, kept by name in case one comes back. Verified 2026-10-29:
-     grep -c background-clip:text assets/css/style.css returns 0. */
+     a real background, kept by name in case one comes back. Verified 2026-10-29: no rule
+     in this file sets that property any more (grep for 'background-clip:text' and both
+     hits are comments, including this one). */
   .cta,.hero h1 .grad,.card-h,.card-h-sm{
     background:none !important;
     -webkit-background-clip:border-box !important;background-clip:border-box !important;
