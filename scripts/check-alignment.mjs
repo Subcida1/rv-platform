@@ -105,6 +105,10 @@ const DECLARED = [
   // forever and stops meaning anything.
   { selector: 'div.tool-strip',                    align: 'center', why: 'tools hub picker and the weight calculator badges (Ty centred these 2026-10-14)' },
   { selector: 'p.chips.part-types',                align: 'center', why: 'parts card type filter' },
+  // Declared 2026-10-29, when the homepage proof strip went from three stacked tiles to
+  // one horizontal row so the figures would fit inside the fold. Children are the three
+  // counts, all short and fully rounded, so the discovery pass now finds it as a pill row.
+  { selector: 'div.hero-stats.hero-stats-slim',    align: 'center', why: 'homepage proof strip: three counts centred under the fold (added 2026-10-29)' },
   { selector: 'form.door-loc',                     align: 'left',   why: 'the ZIP field inside the homepage directory door; left is correct inside a card' },
   { selector: 'div.tool-btns',                     align: 'left',   why: 'the button under a tool card; left is correct inside a card' },
   { selector: 'div.guide-stats',                   align: 'left',   why: 'the finder stat row on a state page' },
