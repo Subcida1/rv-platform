@@ -25,16 +25,17 @@ EMOJI_MAP = {
     "🪠": "plunger", "🗒️": "notebook", "🪜": "ladder", "🚪": "door",
     "🌡️": "thermometer", "⛱️": "umbrella", "↔️": "arrows-h", "⬆️": "arrow-up",
     "🧱": "brick", "🛑": "stop", "🗺️": "map", "📐": "ruler-square", "⚙️": "gears",
+    "📍": "pin-location",
 }
 
 # Classes that hold a single decorative glyph.
-ICON_CLASSES = ("guide-ic", "cat-ic", "sys-ic", "hub-ic", "listing-ic", "finder-ic")
+ICON_CLASSES = ("guide-ic", "cat-ic", "sys-ic", "hub-ic", "listing-ic", "finder-ic", "door-ic")
 
 
 def sprite_use(name: str) -> str:
     return (
         f'<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" '
-        f'focusable="false"><use href="#ic-{name}"/></svg>'
+        f'focusable="false"><use href="assets/img/icons/sprite.svg#ic-{name}"/></svg>'
     )
 
 
