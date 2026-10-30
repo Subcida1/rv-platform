@@ -96,12 +96,16 @@ const PAGES = [
 //   - .loc-row and .listing-tags vary with the length of their content, which is
 //     why they are declared 'any' rather than asserted.
 const DECLARED = [
-  { selector: 'div.chips.chips-tools',             align: 'center', why: 'homepage tool pills' },
-  { selector: 'div.chips',                         align: 'center', why: 'homepage manuals pills (added 2026-10-15); .chips carries justify-content:center, and this is the only bare .chips row on the site' },
+  // The homepage's four old rows (chips-tools, bare .chips, guide-grid-compact and the
+  // closing cta-row) went with the 2026-10-29 restructure: 25 tool and manuals chips and
+  // 60 compact cards were replaced by six system cards, a collapsed guide index and a
+  // reformatted stats strip. The replacements are card grids, not pill rows, so they are
+  // correctly NOT declared here: a pill is <=64px and fully rounded, and a card is
+  // neither. A row that no longer exists must leave this list, or the check reports STALE
+  // forever and stops meaning anything.
   { selector: 'div.tool-strip',                    align: 'center', why: 'tools hub picker and the weight calculator badges (Ty centred these 2026-10-14)' },
   { selector: 'p.chips.part-types',                align: 'center', why: 'parts card type filter' },
-  { selector: 'div.guide-grid.guide-grid-compact', align: 'center', why: 'compact guide cards, 999px-rounded at 48px tall' },
-  { selector: 'div.center.sp-14.cta-row',          align: 'center', why: 'homepage closing CTA row' },
+  { selector: 'form.door-loc',                     align: 'left',   why: 'the ZIP field inside the homepage directory door; left is correct inside a card' },
   { selector: 'div.tool-btns',                     align: 'left',   why: 'the button under a tool card; left is correct inside a card' },
   { selector: 'div.guide-stats',                   align: 'left',   why: 'the finder stat row on a state page' },
   { selector: 'div.loc-row',                       align: 'any',    why: 'listing rows vary with content length' },

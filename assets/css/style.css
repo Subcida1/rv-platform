@@ -3893,3 +3893,113 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 @media(max-width:640px){
   .guide-grid-compact>.guide-card{min-height:44px;padding:10px 14px}
 }
+
+/* ============================ homepage restructure (2026-10-29) ============================
+   The page opened with a wall of buttons. Measured before the change: 20 clickable
+   things visible in the first screen (15 of them tool chips), 110 in main, and the
+   first real guide title did not appear until screen 3.2. Every competitor at our
+   scale leads with a real title and a real answer in the visitor's own words.
+   These blocks give the fold one question and two doors, and give the visitor the
+   guide content as content rather than as a description of content.
+
+   All values come from the token block: --fs-*, --space-*, --radius*, --tint-*, and
+   the brand ramp. No new colours, no literal sizes. */
+
+/* ---- the two doors. Replaces .chips-tools in the hero. ---- */
+.hero-doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-6);max-width:820px;margin-left:auto;margin-right:auto}
+.door{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-1);background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius-lg);padding:var(--space-5);text-align:left;box-shadow:var(--shadow-sm);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.door:hover{transform:translateY(-3px);border-color:var(--b2);box-shadow:var(--shadow)}
+.door:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.door-ic{font-size:var(--fs-2xl);line-height:1}
+.door-t{margin-top:var(--space-2);font-size:var(--fs-xl);font-weight:800;color:var(--text);letter-spacing:-.01em}
+.door-p{margin-top:var(--space-1);font-size:var(--fs-md);color:var(--text-2);line-height:var(--lh-body)}
+.door-go{margin-top:var(--space-3);font-size:var(--fs-sm);font-weight:800;color:var(--b1)}
+
+/* ---- the six systems, mirroring the guides hub exactly. ---- */
+.sys-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4)}
+.sys-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.sys-card:hover{transform:translateY(-3px);border-color:var(--b2);box-shadow:var(--shadow)}
+.sys-card:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.sys-head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2)}
+.sys-ic{font-size:var(--fs-2xl);line-height:1}
+/* The count is the evidence of how much is behind the click, so it is stated
+   before the click rather than discovered after it. */
+.sys-n{font-size:var(--fs-xs);font-weight:800;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:3px 10px}
+.sys-t{margin-top:var(--space-3);font-size:var(--fs-lg);font-weight:800;color:var(--text);letter-spacing:-.01em}
+.sys-p{margin-top:var(--space-1);font-size:var(--fs-md);color:var(--text-2);line-height:var(--lh-body);flex:1}
+/* The symptom line is the search string a visitor would type, in their words. */
+.sys-sym{margin-top:var(--space-3);padding-top:var(--space-3);border-top:1px solid var(--border);font-size:var(--fs-xs);color:var(--text-3);line-height:var(--lh-body)}
+
+/* ---- the libraries row, four across. ---- */
+.lib-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4)}
+
+/* The jump strip on the homepage is a filter for the section below it, not a
+   sticky bar: the page already has a sticky nav and two stickies fight. */
+.hub-jump-inline{position:static;margin-top:0;margin-bottom:var(--space-6);background:transparent;border-bottom:0;backdrop-filter:none;-webkit-backdrop-filter:none}
+
+@media(max-width:1024px){
+  .sys-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lib-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+  /* One door per row on a phone: two side by side would put the second one's
+     label off the visible width and defeat the point of naming the job. */
+  .hero-doors{grid-template-columns:minmax(0,1fr);gap:var(--space-3)}
+  .sys-grid{grid-template-columns:minmax(0,1fr)}
+  .lib-grid{grid-template-columns:minmax(0,1fr)}
+  .door{padding:var(--space-4)}
+  /* Tap targets stay at or above 44px. */
+  .door-go{margin-top:var(--space-2)}
+}
+
+/* ---- the full guide index: six collapsed groups, 60 links in the HTML ----
+   A <details> keeps the hrefs crawlable while showing the visitor six lines, so the
+   page satisfies scripts/verify.py's "every guide reachable from the homepage" rule
+   without reprinting the 60-card wall this rewrite removed. Pattern (a +/minus row
+   that fills its width, a real summary element, no JS) follows an established Material
+   disclosure list; the target height follows Apple's 44pt floor. */
+.gi{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:var(--space-2)}
+.gi-group{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden}
+.gi-sum{display:flex;align-items:center;gap:var(--space-3);cursor:pointer;list-style:none;padding:var(--space-4)}
+.gi-sum{min-height:56px;font-size:var(--fs-lg);font-weight:700;color:var(--text);transition:color .16s ease,background .16s ease}
+.gi-sum::-webkit-details-marker{display:none}
+.gi-sum:hover{color:var(--b1);background:var(--surface-2)}
+.gi-sum:focus-visible{outline:2px solid var(--brand);outline-offset:-2px}
+.gi-sum::before{content:"+";flex:0 0 auto;width:var(--space-4);font-weight:800;color:var(--text-3)}
+.gi-group[open]>.gi-sum::before{content:"\2212"}
+.gi-n{flex:0 0 auto;font-size:var(--fs-xs);font-weight:800;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:3px 10px}
+.gi-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-1) var(--space-5);padding:var(--space-5)}
+.gi-list a{display:block;padding:var(--space-2);min-height:44px;font-size:var(--fs-md);color:var(--text-2);line-height:var(--lh-body);border-bottom:1px solid var(--border)}
+.gi-list a:hover{color:var(--b1)}
+.gi-list a:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:var(--radius-sm)}
+@media(max-width:720px){
+  .gi-list{grid-template-columns:minmax(0,1fr)}
+  .gi-sum{padding:var(--space-4);min-height:56px}
+}
+
+/* The homepage proof strip: three figures, no doorway under them. The tiles carry no
+   link and no "Browse the X ->" line, because the sections they count are reachable
+   from the cards below and a third copy of the same navigation is what made the old
+   fold read as a wall of buttons. Slimmer padding keeps the strip inside the fold at
+   1440x900 and still fits 390px. */
+.hero-stats-slim{margin-top:var(--space-6)}
+.hero-stats-slim .hstat{padding:var(--space-4)}
+.hero-stats-slim .hstat:hover{transform:none;border-color:var(--border);box-shadow:var(--shadow-sm)}
+
+/* The directory door carries the ZIP field rather than a link, so it is a container
+   and not an <a>. It keeps the card look of its neighbour so the pair still reads as
+   two doors, and it does not lift on hover because there is nothing to click through. */
+.door-form{cursor:default}
+.door-form:hover{transform:none;border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.door-loc{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-4);width:100%}
+.door-loc input{flex:1 1 130px;min-width:0;font:inherit;font-size:var(--fs-md);padding:var(--space-3);border:1px solid var(--border-2);border-radius:999px;background:var(--surface);color:var(--text)}
+.door-loc input::placeholder{color:var(--text-3)}
+.door-loc input:focus{outline:none;border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
+.door-loc .btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:720px){
+  .door-loc input{flex:1 1 100%}
+  .door-loc .btn{width:100%}
+}
+/* .hub-jump-inline is no longer used on the homepage (the pills duplicated the six
+   cards beneath them); the class is kept for the guides and parts hubs, which have
+   long grids where a jump strip earns its place. */
