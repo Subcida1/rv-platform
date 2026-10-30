@@ -146,12 +146,11 @@ def main():
     # reader, for a search engine and for a screen reader, so its absence is not cosmetic.
     intro = ('\n<div class="wrap page-intro w-820">\n'
              '<a href="/" class="btn btn-ghost back">&#8592; All guides</a>\n'
-             '<div class="sec-eyebrow">%s</div>\n'
              '<h1>%s</h1>\n'
              '<p class="lede">%s</p>\n'
              '<p class="reviewed">By <a class="link" href="/about">OriginRV</a>. '
              'Last reviewed on %s.</p>\n'
-             '</div>\n' % (html.escape(a.eyebrow), html.escape(a.title),
+             '</div>\n' % (html.escape(a.title),
                             html.escape(a.lede), _today_human))
 
     # THE BODY NEEDS ITS WRAPPER OR IT RUNS EDGE TO EDGE ON A PHONE. Found 2026-10-09, by Ty

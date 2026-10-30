@@ -51,16 +51,24 @@ ACRONYMS = {"RV", "RVS", "AC", "DC", "GFCI", "NHTSA", "SAE", "DOT", "PDF"}
 # same system is recognised by the same mark wherever it appears. Ty, 2026-10-06: "manuals we
 # should display what each system has a bit better visually represented." The tile carried a
 # name, a blurb and a count; a reader scanning eight of them had nothing to aim at but text.
+# The system -> sprite symbol map. These were emoji; they are the authored set now,
+# chosen so the art says the system: a battery for power, a fridge for the kitchen
+# group, an awning for the exterior. One family, one stroke weight, currentColor.
 SYSTEM_ICON = {
-    "power-and-electrical": "\u26a1",
-    "water-and-plumbing": "\U0001f6b0",
-    "heating-and-cooling": "\U0001f525",
-    "kitchen-and-appliances": "\U0001f9ca",
-    "exterior-and-body": "\U0001f3e0",
-    "towing-and-running-gear": "\U0001f6de",
-    "sanitation-and-tanks": "\U0001f6bd",
-    "chassis-and-drivetrain": "\u2699\ufe0f",
+    "power-and-electrical": "battery",
+    "water-and-plumbing": "droplet",
+    "heating-and-cooling": "fan",
+    "kitchen-and-appliances": "fridge",
+    "exterior-and-body": "awning",
+    "towing-and-running-gear": "scale-weight",
+    "sanitation-and-tanks": "toilet",
+    "chassis-and-drivetrain": "gears",
 }
+SPRITE = "assets/img/icons/sprite.svg"
+
+
+def icon(name, cls="ic"):
+    return '<svg class="%s" aria-hidden="true"><use href="%s#ic-%s"/></svg>' % (cls, SPRITE, name)
 # How many maker names a tile shows before it says "and N more". Three fits two lines at this
 # width and is enough to answer "does this system have the thing in my coach".
 MAKERS_SHOWN = 3
@@ -502,7 +510,7 @@ def hub(rows, oem_count, model_count=0):
             <div class="man-tile-makers">%s</div>
             <div class="guide-go">Open &#8594;</div>
           </div>
-        </a>""" % (slug, SYSTEM_ICON.get(slug, ""), esc(title), esc(BLURB[slug]), n, b,
+        </a>""" % (slug, icon(SYSTEM_ICON.get(slug, "wrench")), esc(title), esc(BLURB[slug]), n, b,
                     esc(shown)))
 
     collection = {
@@ -524,7 +532,6 @@ def hub(rows, oem_count, model_count=0):
 
     body = """
   <div class="wrap page-intro">
-    <div class="sec-eyebrow">Manuals</div>
     <h1 class="dir-title man-title">RV manuals</h1>
     <p class="man-lede">Owner's manuals, service manuals, parts lists and wiring diagrams
     for the systems and accessories in your RV. Every row links the maker's page or

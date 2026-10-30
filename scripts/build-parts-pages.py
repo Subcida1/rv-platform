@@ -350,7 +350,6 @@ def build():
 
     out = [head(title, desc, SITE + "/parts/index.html", schemas)]
     out.append('''<div class="wrap page-intro w-820">
-<div class="sec-eyebrow">Reference</div>
 <h1>Every part of an RV</h1>
 <p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems. Each part: what it does, the names people use for it, which RVs have one, and where to go next. <span data-claim="parts-linked">%d</span> of them link to a repair guide, a tool, or the maker's documentation, <span data-claim="parts-covered">%d</span> of those to a guide on this site, and the remaining <span data-claim="parts-unlinked">%d</span> are here so you can put a name to the thing that broke.</p>
 </div>

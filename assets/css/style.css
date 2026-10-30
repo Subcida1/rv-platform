@@ -104,6 +104,11 @@
   --shadow-lg:0 10px 24px -10px rgba(16,24,40,.16),0 28px 70px -28px rgba(16,24,40,.26);
 
   /* ---- MOTION ---- */
+  /* One authored easing curve for the whole site. Bare `ease` is symmetric
+     slow-in-slow-out, which reads as sluggish on a short move; this is the
+     exponential ease-out the interface standard asks for. */
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-out-soft:cubic-bezier(.33,1,.68,1);
   --t-fast:.15s;
   --t-base:.18s;
 
@@ -622,7 +627,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    RV, matching the "RV tools" gradient in the hero heading. "Origin" deliberately
    has no span, so it inherits the colour around it -- ink in the nav, white in the
    footer -- rather than a hard-coded black that would vanish on the dark footer. */
-.logo-name .rv{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
+.logo-name .rv{color:var(--brand-deep);padding:0 1px}
 .nav-links{display:flex;gap:4px;align-items:center}
 .nav-link{padding:10px 13px;font-size: var(--fs-md);font-weight:500;color:var(--text-2);border-radius:10px;transition:.16s}
 /* No pill behind a nav item. Ty, 2026-09-22: the highlight around the dropdowns
@@ -743,7 +748,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    padding-top came down from 92px to 44px. Measured before: 154px of dead space
    between the bottom of the nav and the top of the heading. After: 44px. */
 .hero h1{margin:0 auto;max-width:880px;font-size:clamp(40px,6.4vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1.04}
-.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
+.hero h1 .grad{color:var(--brand-deep);padding:0 1px}
 .hero .sub{margin:22px auto 0;max-width:640px;font-size:clamp(16px,2vw,19px);color:var(--text-2)}
 .search{max-width:720px;margin:36px auto 0;position:relative}
 .search-bar{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border-2);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:var(--shadow);transition:.18s}
@@ -895,7 +900,10 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    of any length are measurably harder to read, and that is not a style preference. */
 .sec-head{max-width:720px;margin-left:auto;margin-right:auto;margin-bottom:44px;text-align:center}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.sec-eyebrow{font-size: var(--fs-xs);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2)}
+/* The section kicker is retired (T, 2026-10-29: the small uppercase label above
+   every heading). It restated the heading below it on every page it appeared on,
+   and the heading carries its own weight. .sec-eyebrow.mile below is a DIFFERENT
+   component -- a mile-marker chip with an MP badge -- and is left untouched. */
 .sec-head h2{margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.08}
 .sec-head p{margin-top:12px;color:var(--text-2);font-size: var(--fs-lg)}
 .sec-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:40px}
@@ -907,7 +915,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .cat-ic{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;margin-bottom:18px;font-size: var(--fs-2xl);background:var(--surface)}
 .cat-card h3{font-size: var(--fs-xl);font-weight:700;letter-spacing:-.01em}
 .cat-card p{margin-top:6px;font-size: var(--fs-md);color:var(--text-2)}
-.cat-card .meta{margin-top:15px;font-size: var(--fs-sm);font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cat-card .meta{margin-top:15px;font-size: var(--fs-sm);font-weight:700;color:var(--brand-deep)}
 
 /* ================= CARDS ================= */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:.18s}
@@ -931,7 +939,7 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
 .card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:15px}
 .price{font-size: var(--fs-xl);font-weight:800;letter-spacing:-.01em}
 .price small{font-size: var(--fs-xs);color:var(--text-3);font-weight:500}
-.cta{font-size: var(--fs-sm);font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-flex;align-items:center;gap:5px}
+.cta{font-size: var(--fs-sm);font-weight:700;color:var(--link-strong);display:inline-flex;align-items:center;gap:5px}
 
 /* camp grids */
 .camp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -1107,7 +1115,7 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
 /* ================= COMMUNITY ================= */
 .com-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .quote{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.3}
-.quote .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.quote .grad{color:var(--brand-deep)}
 .quote-by{margin-top:18px;display:flex;align-items:center;gap:13px}
 .quote-by .avatar{width:46px;height:46px;border-radius:50%;background:var(--grad);color:var(--text-inv);display:grid;place-items:center;font-weight:800}
 .quote-by .who{font-size: var(--fs-md);font-weight:700}
@@ -1117,7 +1125,7 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
 .com-card .ic{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;font-size: var(--fs-2xl);background:var(--grad-soft)}
 .com-card .t{font-size: var(--fs-lg);font-weight:700}
 .com-card .s{font-size: var(--fs-sm);color:var(--text-2)}
-.com-card .stat{margin-left:auto;font-size: var(--fs-sm);font-weight:800;white-space:nowrap;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.com-card .stat{margin-left:auto;font-size: var(--fs-sm);font-weight:800;white-space:nowrap;color:var(--brand-deep)}
 
 /* ================= PAGE HEADER ================= */
 .page-head{padding:56px 0 34px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--paper-warm),var(--bg))}
@@ -1186,7 +1194,7 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
 
 /* payment calc */
 .calc{background:var(--surface);border-radius:var(--radius-sm);padding:16px}
-.calc .out{font-size: var(--fs-2xl);font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.calc .out{font-size: var(--fs-2xl);font-weight:800;color:var(--brand-deep)}
 
 /* ================= CART ================= */
 .cart-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;padding:40px 0 80px;align-items:start}
@@ -1200,7 +1208,7 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
 .cart-total{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px}
 .sum-row{display:flex;justify-content:space-between;padding:8px 0;font-size: var(--fs-md);color:var(--text-2)}
 .sum-row.big{font-size: var(--fs-xl);font-weight:800;color:var(--text);border-top:1px solid var(--border);margin-top:8px;padding-top:16px}
-.grand{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grand{color:var(--brand-deep)}
 
 /* ================= MODALS & TOASTS ================= */
 .modal{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,23,42,.5);backdrop-filter:blur(3px)}
@@ -1246,10 +1254,16 @@ footer a:hover{color:var(--text-inv)}
    markup is <div id="site-footer">, so the `footer{background:var(--bg-dark)}`
    rule at the top of this file matches nothing and the strip is light. Putting
    "Origin" outside the gradient span therefore rendered it white on white, which
-   is invisible. Ink is the correct colour here. Found 2026-10-05 by screenshot,
-   not by any gate -- every automated check passed with the word absent. */
+   is invisible. Found 2026-10-05 by screenshot, not by any gate -- every
+   automated check passed with the word absent.
+   THAT RULE IS STILL A TRAP (2026-10-29). The .rv span is no longer a gradient --
+   it is solid var(--brand-deep) -- and while converting it I read the dead
+   `footer{background:var(--bg-dark)}` rule, concluded the strip was dark, and set
+   the colour to a near-white. axe failed the run: #e7ecf3 on #ffffff, ratio 1.18.
+   Read the RENDER, not the rule: the strip is light and --brand-deep (5.09:1) is
+   the colour. Every gate that failed, failed loudly, which is the point. */
 .foot-brand .logo-name{color:var(--text)}
-.foot-brand .logo-name .rv{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
+.foot-brand .logo-name .rv{color:var(--brand-deep);padding:0 1px}
 .newsletter{margin-top:22px;display:flex;gap:8px;max-width:360px}
 .newsletter input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:11px 16px;color:var(--text-inv);font-size: var(--fs-md);outline:none}
 .newsletter input::placeholder{color:var(--text-on-dark-2)}
@@ -1306,8 +1320,9 @@ footer a:hover{color:var(--text-inv)}
    ============================================================ */
 
 /* ---------- typography & motion ---------- */
-.grad-text{background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow{font-size: var(--fs-xs);font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-text{color:var(--brand-deep)}
+/* .eyebrow was the same kicker with gradient text on top. Dead on the site, and
+   both halves of it are refused, so it is retired rather than left as a trap. */
 .h2{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
 .h3{font-size:clamp(19px,2.4vw,24px);font-weight:800;letter-spacing:-.02em}
 .lead{font-size: var(--fs-xl);color:var(--text-2);line-height:1.65}
@@ -1317,7 +1332,7 @@ footer a:hover{color:var(--text-inv)}
 .sec{position:relative}
 .band-tint{background:linear-gradient(180deg,var(--surface),var(--bg-2))}
 .band-tint-2{background:linear-gradient(180deg,var(--bg-2),var(--surface))}
-.sec-head{max-width:760px;margin-bottom:46px}
+.sec-head{max-width:68ch;margin-bottom:46px}
 .sec-head.center{margin:0 auto 46px;text-align:center}
 
 /* ---------- decorative hero blobs ---------- */
@@ -1331,7 +1346,7 @@ footer a:hover{color:var(--text-inv)}
 .authority .big-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .big-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 22px;text-align:center;transition:.2s;position:relative;overflow:hidden}
 .big-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--border-2)}
-.big-card .num{font-size:clamp(34px,4.4vw,54px);font-weight:800;letter-spacing:-.03em;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.big-card .num{font-size:clamp(34px,4.4vw,54px);font-weight:800;letter-spacing:-.03em;color:var(--brand-deep);line-height:1}
 .big-card .lbl{margin-top:8px;font-size: var(--fs-md);color:var(--text-2)}
 .big-card .ic{width:44px;height:44px;margin:0 auto 14px;border-radius:12px;background:var(--grad-soft-2);display:grid;place-items:center;font-size: var(--fs-2xl)}
 
@@ -1344,7 +1359,7 @@ footer a:hover{color:var(--text-inv)}
 .cat-ic{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size: var(--fs-2xl);background:var(--grad-soft-2);margin-bottom:18px;position:relative;z-index:1}
 .cat-card h3{font-size: var(--fs-xl);font-weight:800;letter-spacing:-.01em;position:relative;z-index:1}
 .cat-card p{margin-top:6px;font-size: var(--fs-md);color:var(--text-2);line-height:1.5;position:relative;z-index:1}
-.cat-card .meta{margin-top:15px;font-size: var(--fs-sm);font-weight:800;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;z-index:1}
+.cat-card .meta{margin-top:15px;font-size: var(--fs-sm);font-weight:800;color:var(--brand-deep);position:relative;z-index:1}
 
 /* ---------- rich product/listing cards ---------- */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s}
@@ -1358,7 +1373,7 @@ footer a:hover{color:var(--text-inv)}
 .card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
 .price{font-size: var(--fs-xl);font-weight:800;letter-spacing:-.01em}
 .price small{font-size: var(--fs-xs);color:var(--text-3);font-weight:500}
-.cta{font-size: var(--fs-sm);font-weight:800;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-flex;align-items:center;gap:5px}
+.cta{font-size: var(--fs-sm);font-weight:800;color:var(--link-strong);display:inline-flex;align-items:center;gap:5px}
 .rating{display:flex;align-items:center;gap:6px;margin-top:9px;font-size: var(--fs-sm);color:var(--text-2)}
 .rating .stars{color:var(--c-amber);letter-spacing:.6px}
 .rating .val{font-weight:800;color:var(--text)}
@@ -1418,7 +1433,7 @@ footer a:hover{color:var(--text-inv)}
 
 /* payment calc */
 .calc{background:var(--surface);border-radius:var(--radius-sm);padding:18px}
-.calc .out{font-size: var(--fs-3xl);font-weight:800;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.calc .out{font-size: var(--fs-3xl);font-weight:800;color:var(--brand-deep)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}
 .field label{font-size: var(--fs-sm);font-weight:700;color:var(--text-2)}
@@ -1443,7 +1458,7 @@ footer a:hover{color:var(--text-inv)}
 .spec-chip{font-size: var(--fs-xs);font-weight:600;color:var(--text-2);background:var(--surface);border:1px solid var(--border);padding:5px 11px;border-radius:999px}
 .rate-line{display:flex;justify-content:space-between;font-size: var(--fs-md);color:var(--text-2);padding:9px 0}
 .rate-total{border-top:1px solid var(--border);margin-top:6px;padding-top:14px;display:flex;justify-content:space-between;align-items:center}
-.rate-total .n{font-size: var(--fs-2xl);font-weight:800;background:var(--grad-2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rate-total .n{font-size: var(--fs-2xl);font-weight:800;color:var(--brand-deep)}
 .fit-ok{display:flex;align-items:center;gap:8px;font-size: var(--fs-sm);color:var(--b1);font-weight:700}
 
 /* ---------- trip tools ---------- */
@@ -1532,7 +1547,7 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .wc-out .w-idle span{color:var(--text-3);font-size: var(--fs-md);margin-top:10px}
 .w-total{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px 20px;margin-bottom:18px}
 .w-total span{font-size: var(--fs-xs);font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);display:block}
-.w-total b{font-size: var(--fs-3xl);font-weight:800;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.w-total b{font-size: var(--fs-3xl);font-weight:800;letter-spacing:-.02em;color:var(--brand-deep)}
 .w-total small{display:block;color:var(--text-3);font-size: var(--fs-xs);margin-top:4px}
 .v-row{display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:var(--radius-sm);padding:13px 14px;margin-bottom:9px;background:var(--surface)}
 .v-row .v-dot{width:10px;height:10px;border-radius:50%;flex:none}
@@ -1594,7 +1609,7 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .deck-body{flex:1;display:flex;flex-direction:column}
 .deck-body b{font-size: var(--fs-md);font-weight:800}
 .deck-body span{font-size: var(--fs-xs);color:var(--text-3);margin-top:2px}
-.deck-go{font-size: var(--fs-xs);font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.deck-go{font-size: var(--fs-xs);font-weight:800;color:var(--brand-deep)}
 .deck-card .badge{font-size: var(--fs-xs);font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .deck-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
 .deck-panel-head{display:flex;align-items:center;gap:8px;font-size: var(--fs-xs);font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--text-2)}
@@ -1751,7 +1766,7 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .tool-copy{display:flex;flex-direction:column;gap:16px}
 .tool-btns{display:flex;flex-wrap:wrap;gap:11px}
 .tool-viz{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:22px;min-width:0}
-.tool-viz .viz-total{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:14px}
+.tool-viz .viz-total{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.02em;color:var(--brand-deep);display:block;margin-bottom:14px}
 .tool-viz .viz-total small{font-size: var(--fs-xs);color:var(--text-3);font-weight:500}
 .tool-viz .viz-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 16px;border-radius:11px;font-size: var(--fs-lg);margin-bottom:10px}
 .tool-viz .viz-row span{color:var(--text-2);font-weight:600}
@@ -1803,7 +1818,7 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
    that had no rule. */
 .tool-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:16px}
 .tool-strip .tchip{font-size: var(--fs-sm);font-weight:700;color:var(--text-2);background:var(--surface);border:1px solid var(--border);padding:0 14px;min-height:44px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
-.tool-strip .tchip b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tool-strip .tchip b{color:var(--brand-deep)}
 /* pipeline cards: 4-col when wide */
 .tool-pipe{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1024px){.tool-pipe{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -1907,8 +1922,8 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .big-card .num{color:var(--text)}
 .grad-text,.eyebrow{color:var(--text-2)}
 
-.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
-.logo-name .rv{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 1px}
+.hero h1 .grad{color:var(--brand-deep);padding:0 1px}
+.logo-name .rv{color:var(--brand-deep);padding:0 1px}
 .deck-panel-head .dot{background:var(--brand);box-shadow:0 0 0 4px var(--glow)}
 
 
@@ -2210,9 +2225,9 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 /* :not(.dir-title) because .dir-title IS this site's page-title treatment (48px,
    uppercase, used on every directory and manuals page) and a type selector would
    outrank it. Anything else inside a page header gets the standard h1. */
-.page-intro h1:not(.dir-title){font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:20px}
-.page-intro h1.lg{font-size:clamp(30px,4.4vw,48px);line-height:1.08;margin-top:12px}
-.lede{color:var(--text-2);font-size: var(--fs-lg);margin-top:12px}
+.page-intro h1:not(.dir-title){font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-top:24px}
+.page-intro h1.lg{font-size:clamp(30px,4.4vw,48px);line-height:1.08;margin-top:24px}
+.lede{color:var(--text-2);font-size: var(--fs-lg);margin-top:16px}
 .lede.wide{font-size: var(--fs-lg);max-width:680px}
 .page-intro .back{font-size: var(--fs-sm)}
 /* THE STATE PAGE'S PHOTOGRAPH. Ty, 2026-10-21: "i feel like the website is very text
@@ -2567,7 +2582,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
    Directory: all-caps page title + state tiles (photo header,
    counts, CTA). Added 2026-09-21 with the state photography.
    ============================================================ */
-.dir-title{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:.005em;line-height:1.06;text-transform:uppercase;margin-top:12px}
+.dir-title{font-size:clamp(30px,4.4vw,48px);font-weight:800;letter-spacing:.005em;line-height:1.06;text-transform:uppercase;margin-top:24px}
 .dir-title-sub{display:block;font-size:.44em;font-weight:700;letter-spacing:-.012em;line-height:1.35;text-transform:none;color:var(--text-2);margin-top:12px}
 /* CENTRED FLEX, NOT A GRID, for the same reason the guides grid is: a partial row has to sit in
    the middle. Alaska and Hawaii are two cards in a three-column grid, so as a grid they packed
@@ -3279,11 +3294,14 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
    1. CHROME OFF. The nav, the footer, the search, the buttons and the mobile menu are
       navigation, and a printed page cannot be navigated.
 
-   2. GRADIENT TEXT. Twenty-two rules in this file set `color:transparent` over a
+   2. GRADIENT TEXT. This was twenty-two rules that set `color:transparent` over a
       clipped background. Browsers strip backgrounds when printing, so every one of
-      them would print as blank space: headings, the big numbers, the CTA labels.
-      They are turned back into solid ink here, by name, because there is no selector
-      for "element whose colour is transparent".
+      them printed as blank space: headings, the big numbers, the CTA labels. The
+      gradient was also a flat under-contrast blue -- its stops spanned 2.4 degrees of
+      hue and measured 3.18 to 4.19 against white, under the 4.5:1 AA floor -- so the
+      rules were retired rather than rescued: they name var(--brand-deep), solid ink,
+      5.09:1, which prints as itself. The list below is kept, small, for anything that
+      still carries a background.
 
    3. THE SOURCES PRINT, WITH THEIR URLS. They are the reason a guide is worth
       anything, and a printed page that names a document without saying where it is
@@ -3363,11 +3381,15 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
     background:var(--surface) !important;border-color:var(--grey-mid) !important;box-shadow:none !important}
   .card,.callout,details.faq{padding:9pt 11pt}
 
-  /* ---- 3. gradient text back to solid ink (see note 2 above) ---- */
-  .grad-text,.eyebrow,.cta,.grand,.calc .out,.deck-go,
-  .hero h1 .grad,.quote .grad,.cat-card .meta,.com-card .stat,
-  .big-card .num,.rate-total .n,.w-total b,.tool-viz .viz-total,
-  .tool-strip .tchip b,.sec-eyebrow,.card-h,.card-h-sm{
+  /* ---- 3. gradient text back to solid ink (see note 2 above) ----
+     This list is a fraction of its former self, and that is the point. It used to name
+     twenty-two selectors by hand, because each one clipped the brand gradient to its
+     text and a clipped background prints as blank space. Nothing in this file sets
+     background-clip:text any more: the rules that did are solid ink now, so they print
+     as themselves and need no rescue. What is left here is the handful that still carry
+     a real background, kept by name in case one comes back. Verified 2026-10-29:
+     grep -c background-clip:text assets/css/style.css returns 0. */
+  .cta,.hero h1 .grad,.card-h,.card-h-sm{
     background:none !important;
     -webkit-background-clip:border-box !important;background-clip:border-box !important;
     color:var(--ink-black) !important}
@@ -3892,4 +3914,228 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .guide-grid-compact>.guide-card:hover{transform:none;border-color:var(--b1);box-shadow:var(--shadow-sm)}
 @media(max-width:640px){
   .guide-grid-compact>.guide-card{min-height:44px;padding:10px 14px}
+}
+
+/* ============================ homepage restructure (2026-10-29) ============================
+   The page opened with a wall of buttons. Measured before the change: 20 clickable
+   things visible in the first screen (15 of them tool chips), 110 in main, and the
+   first real guide title did not appear until screen 3.2. Every competitor at our
+   scale leads with a real title and a real answer in the visitor's own words.
+   These blocks give the fold one question and two doors, and give the visitor the
+   guide content as content rather than as a description of content.
+
+   All values come from the token block: --fs-*, --space-*, --radius*, --tint-*, and
+   the brand ramp. No new colours, no literal sizes. */
+
+/* ---- the two doors. Replaces .chips-tools in the hero. ---- */
+.hero-doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-6);max-width:820px;margin-left:auto;margin-right:auto}
+.door{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-1);background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius-lg);padding:var(--space-5);text-align:left;box-shadow:var(--shadow-sm);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.door:hover{transform:translateY(-3px);border-color:var(--b2);box-shadow:var(--shadow)}
+.door:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.door-ic{font-size:var(--fs-2xl);line-height:1}
+.door-t{margin-top:var(--space-2);font-size:var(--fs-xl);font-weight:800;color:var(--text);letter-spacing:-.01em}
+.door-p{margin-top:var(--space-1);font-size:var(--fs-md);color:var(--text-2);line-height:var(--lh-body)}
+.door-go{margin-top:var(--space-3);font-size:var(--fs-sm);font-weight:800;color:var(--b1)}
+
+/* ---- the six systems, mirroring the guides hub exactly. ---- */
+.sys-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4)}
+.sys-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.sys-card:hover{transform:translateY(-3px);border-color:var(--b2);box-shadow:var(--shadow)}
+.sys-card:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.sys-head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2)}
+.sys-ic{font-size:var(--fs-2xl);line-height:1}
+/* The count is the evidence of how much is behind the click, so it is stated
+   before the click rather than discovered after it. */
+.sys-n{font-size:var(--fs-xs);font-weight:800;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:3px 10px}
+.sys-t{margin-top:var(--space-3);font-size:var(--fs-lg);font-weight:800;color:var(--text);letter-spacing:-.01em}
+.sys-p{margin-top:var(--space-1);font-size:var(--fs-md);color:var(--text-2);line-height:var(--lh-body);flex:1}
+/* The symptom line is the search string a visitor would type, in their words. */
+.sys-sym{margin-top:var(--space-3);padding-top:var(--space-3);border-top:1px solid var(--border);font-size:var(--fs-xs);color:var(--text-3);line-height:var(--lh-body)}
+
+/* ---- the libraries row, four across. ---- */
+.lib-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4)}
+
+/* The jump strip on the homepage is a filter for the section below it, not a
+   sticky bar: the page already has a sticky nav and two stickies fight. */
+.hub-jump-inline{position:static;margin-top:0;margin-bottom:var(--space-6);background:transparent;border-bottom:0;backdrop-filter:none;-webkit-backdrop-filter:none}
+
+@media(max-width:1024px){
+  .sys-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lib-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+  /* One door per row on a phone: two side by side would put the second one's
+     label off the visible width and defeat the point of naming the job. */
+  .hero-doors{grid-template-columns:minmax(0,1fr);gap:var(--space-3)}
+  .sys-grid{grid-template-columns:minmax(0,1fr)}
+  .lib-grid{grid-template-columns:minmax(0,1fr)}
+  .door{padding:var(--space-4)}
+  /* Tap targets stay at or above 44px. */
+  .door-go{margin-top:var(--space-2)}
+}
+
+/* ---- the full guide index: six collapsed groups, 60 links in the HTML ----
+   A <details> keeps the hrefs crawlable while showing the visitor six lines, so the
+   page satisfies scripts/verify.py's "every guide reachable from the homepage" rule
+   without reprinting the 60-card wall this rewrite removed. Pattern (a +/minus row
+   that fills its width, a real summary element, no JS) follows an established Material
+   disclosure list; the target height follows Apple's 44pt floor. */
+.gi{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:var(--space-2)}
+.gi-group{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden}
+.gi-sum{display:flex;align-items:center;gap:var(--space-3);cursor:pointer;list-style:none;padding:var(--space-4)}
+.gi-sum{min-height:56px;font-size:var(--fs-lg);font-weight:700;color:var(--text);transition:color .16s ease,background .16s ease}
+.gi-sum::-webkit-details-marker{display:none}
+.gi-sum:hover{color:var(--b1);background:var(--surface-2)}
+.gi-sum:focus-visible{outline:2px solid var(--brand);outline-offset:-2px}
+.gi-sum::before{content:"+";flex:0 0 auto;width:var(--space-4);font-weight:800;color:var(--text-3)}
+.gi-group[open]>.gi-sum::before{content:"\2212"}
+.gi-n{flex:0 0 auto;font-size:var(--fs-xs);font-weight:800;color:var(--tint-ink);background:var(--tint-bg);border:1px solid var(--tint-edge);border-radius:999px;padding:3px 10px}
+.gi-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-1) var(--space-5);padding:var(--space-5)}
+.gi-list a{display:block;padding:var(--space-2);min-height:44px;font-size:var(--fs-md);color:var(--text-2);line-height:var(--lh-body);border-bottom:1px solid var(--border)}
+.gi-list a:hover{color:var(--b1)}
+.gi-list a:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:var(--radius-sm)}
+@media(max-width:720px){
+  .gi-list{grid-template-columns:minmax(0,1fr)}
+  .gi-sum{padding:var(--space-4);min-height:56px}
+}
+
+/* The homepage proof strip: three figures, no doorway under them. The tiles carry no
+   link and no "Browse the X ->" line, because the sections they count are reachable
+   from the cards below and a third copy of the same navigation is what made the old
+   fold read as a wall of buttons. Slimmer padding keeps the strip inside the fold at
+   1440x900 and still fits 390px. */
+/* The three figures as one horizontal strip, so they sit INSIDE the fold. As three
+   vertical tiles they measured 946px against an 813px viewport: the proof of how much
+   is here was below the fold, which is the one thing this rewrite must not do. Each
+   figure keeps its count-up and its .lbl; only the direction changed, because the
+   markup is targeted by verify.py, sync-counts.py and build-listings.py. */
+.hero-stats-slim{margin-top:var(--space-6);display:flex;justify-content:center;gap:var(--space-6);flex-wrap:wrap}
+.hero-stats-slim .hstat{flex-direction:row;align-items:baseline;gap:var(--space-2);padding:0;background:none;border:0;box-shadow:none}
+.hero-stats-slim .hstat .num{font-size:var(--fs-xl)}
+.hero-stats-slim .hstat .lbl{margin-top:0;font-weight:600;color:var(--text-2);font-size:var(--fs-md)}
+.hero-stats-slim .hstat:hover{transform:none;border-color:transparent;box-shadow:none}
+@media(max-width:720px){
+  .hero-stats-slim{gap:var(--space-2) var(--space-5)}
+  .hero-stats-slim .hstat .num{font-size:var(--fs-lg)}
+  .hero-stats-slim .hstat .lbl{font-size:var(--fs-sm)}
+}
+
+/* The directory door carries the ZIP field rather than a link, so it is a container
+   and not an <a>. It keeps the card look of its neighbour so the pair still reads as
+   two doors, and it does not lift on hover because there is nothing to click through. */
+.door-form{cursor:default}
+.door-form:hover{transform:none;border-color:var(--border-2);box-shadow:var(--shadow-sm)}
+.door-loc{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-4);width:100%}
+.door-loc input{flex:1 1 130px;min-width:0;font:inherit;font-size:var(--fs-md);padding:var(--space-3);border:1px solid var(--border-2);border-radius:999px;background:var(--surface);color:var(--text)}
+.door-loc input::placeholder{color:var(--text-3)}
+.door-loc input:focus{outline:none;border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
+.door-loc .btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:720px){
+  .door-loc input{flex:1 1 100%}
+  .door-loc .btn{width:100%}
+}
+/* .hub-jump-inline is no longer used on the homepage (the pills duplicated the six
+   cards beneath them); the class is kept for the guides and parts hubs, which have
+   long grids where a jump strip earns its place. */
+
+/* ==========================================================================
+   ICON SYSTEM + CRAFT PASS  (2026-10-29)
+   Authored SVG icons replace emoji. One world: 24x24 grid, 1.75 stroke,
+   round caps, currentColor so each container's existing colour still rules.
+   ========================================================================== */
+
+/* --- the icon itself -------------------------------------------------- */
+.ic{width:1.35em;height:1.35em;display:block;flex-shrink:0;
+    fill:none;stroke:currentColor;stroke-width:1.75;
+    stroke-linecap:round;stroke-linejoin:round;
+    overflow:visible} /* overflow:visible so no glyph is clipped at the box edge */
+.icon-sprite-source{position:absolute;width:0;height:0;overflow:hidden}
+
+/* The containers were sized for emoji, which sit on the text baseline; an SVG
+   block child sits flush, so nudge the whole glyph up to sit optically centred. */
+.guide-ic .ic,.cat-ic .ic,.hub-ic .ic,.listing-ic .ic,.finder-ic .ic{margin-top:-1px}
+
+/* System cards carried the largest emoji; the drawn icon reads better a touch
+   lighter than the emoji did, in the brand blue rather than flat ink. */
+.sys-ic{color:var(--b1)}
+.sys-ic .ic{width:1.5em;height:1.5em}
+
+/* Icon keeps its colour when its card is reached, without a second asset. */
+.card:hover .ic,.guide-card:hover .ic{stroke-width:1.9}
+
+/* Reduced motion: the width change above is a stroking cue, not movement, but
+   honour the preference for the transitions elsewhere on this block. */
+@media (prefers-reduced-motion:reduce){
+  .ic{transition:none}
+}
+
+/* --- browser surfaces -------------------------------------------------
+   The parts we did not draw still carry the design. Cheapest signal that a
+   page was built rather than assembled. */
+::selection{background:var(--tint-blue-soft);color:var(--ink-black)}
+html{scrollbar-color:var(--border-hover) var(--bg-2);scrollbar-width:thin}
+::placeholder{color:var(--text-3);opacity:1}
+:where(input,textarea,select){caret-color:var(--b1)}
+a{text-underline-offset:2.5px;text-decoration-thickness:1px}
+:focus-visible{outline:2.5px solid var(--b1);outline-offset:2px;border-radius:4px}
+
+/* Numerals in the figures and any tabular data line up column to column. */
+.hero-stats,.hstat-form,.lbl{font-variant-numeric:tabular-nums}
+
+/* --- hero emphasis without gradient text -------------------------------
+   Gradient text means the word disappears if the background fails to paint,
+   and it reads as finish rather than as meaning. Emphasis comes from weight
+   and colour instead. */
+.hero h1 .hl{font-style:normal;font-weight:900;color:var(--brand-deep);
+  background:none;-webkit-background-clip:initial;background-clip:initial}
+html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
+
+/* No gradient under the word: the house rule is that a gradient marks something
+   that leads somewhere or carries identity, and this is neither. Weight and the
+   brand colour already do the work, and the checker enforces the rule. */
+
+/* --- NO SCROLL REVEAL ON THE SYSTEM CARDS ------------------------------
+   There was a scroll-driven entrance here: each card faded up as it entered
+   the viewport. It is gone on request (T, 2026-10-29). Two reasons it was
+   wrong for this page rather than merely unwanted:
+
+     1. It made six cards that are meant to read as one index arrive at six
+        different moments, so the grid looked half-loaded as you scrolled it.
+     2. Only the cards below the fold animate at all, so the visible fade
+        pattern was inconsistent by construction -- the first cards sat still
+        while a later one was caught mid-fade.
+
+   The content is unconditionally visible and stays that way. Hover feedback
+   below is the only motion the cards carry.
+
+/* Cards keep a real hover state: elevation over a heavier border, which is
+   the Material cue, not a colour swap. */
+.sys-card,.guide-card,.card{transition:box-shadow .22s var(--ease-out),
+  transform .22s var(--ease-out),border-color .22s var(--ease-out)}
+.sys-card:hover,.guide-card:hover{transform:translateY(-2px)}
+
+/* Buttons get the same curve so the whole page decelerates as one object. */
+.btn,.nav-link,.door,.hub-card{transition-timing-function:var(--ease-out)}
+
+/* --- PARTS AND DIRECTORY BAND ------------------------------------------
+   The band that makes parts and the directory peers of the guides. Nine
+   cards rather than six, so the grid breaks 3-up on desktop and the counts
+   stay readable; the directory sits on its own surface underneath because it
+   is a different job (find a person, not a part) with its own action. */
+.parts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.parts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.parts-grid{grid-template-columns:minmax(0,1fr)}}
+
+.band-cta{display:flex;align-items:center;justify-content:space-between;gap:var(--space-5);
+  flex-wrap:wrap;margin-top:var(--space-6);padding:var(--space-5) var(--space-6);
+  background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius);
+  box-shadow:var(--shadow)}
+.band-cta-body{flex:1;min-width:260px}
+.band-cta-t{font-size:var(--fs-xl);font-weight:800;color:var(--ink);line-height:1.25}
+.band-cta-p{margin-top:6px;color:var(--text-2);max-width:60ch}
+.band-cta-acts{display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap}
+@media (max-width:560px){
+  .band-cta{padding:var(--space-4) var(--space-4)}
+  .band-cta-acts{width:100%}
+  .band-cta-acts .btn{width:100%;justify-content:center}
 }

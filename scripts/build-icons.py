@@ -1,0 +1,124 @@
+"""Generate the OriginRV authored icon set.
+
+One visual world: 24x24 grid, 1.75 stroke, round caps/joins, currentColor so the
+existing CSS keeps control of colour. Output is a <symbol> sprite that pages
+<use> by id, plus a name->id map so the emoji replacement is mechanical.
+
+Why a sprite rather than inline SVG everywhere: 96 uses across 4 pages would add
+~200KB of duplicated markup. A sprite is fetched once and cached, and the CSS
+that already sizes .guide-ic/.sys-ic keeps working untouched.
+"""
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT_DIR = ROOT / "assets" / "img" / "icons"
+
+# Each entry is the inner geometry of a 24x24 viewBox. Drawn, not traced.
+ICONS = {
+    # --- tools & fault ---
+    "wrench": '<path d="M15.5 3.5a5.5 5.5 0 0 0-6.9 6.9L3 16v5h4.5l5.6-5.6a5.5 5.5 0 0 0 6.9-6.9l-3.2 3.2-3.3-.8-.8-3.3z"/>',
+    "hammer": '<path d="M14 3.5 20.5 10l-2.2 2.2-2-2-1.6 1.6 3.1 3.1-2.3 2.3-3.1-3.1L4 21.5 2.5 20l8.4-9.4-3.1-3.1L10.1 5.2 13.2 8.3l1.6-1.6-2-2z"/>',
+    "bolt-screw": '<path d="M12 2.5v19"/><path d="M12 5.5h3.2M12 9h3.2M12 12.5h3.2M12 16h3.2M12 19.5h3.2"/><path d="M12 2.5 9.6 5.5h4.8z"/>',
+    "screwdriver": '<path d="M17 2.5 21.5 7l-2 2-1.6-1.6-9 9L6 19.5 4.5 18l2.9-2.9 9-9L14.8 4.5z"/><path d="M4.5 18 2.5 20a1.1 1.1 0 0 0 1.6 1.6L6 19.5z"/>',
+    "gauge": '<circle cx="12" cy="13" r="8"/><path d="M12 13l3.6-3.6"/><path d="M12 5v1.6M20 13h-1.6M5.6 13H4M6.9 7.9 7.9 9M17.1 7.9 16.1 9"/>',
+    "gears": '<circle cx="9" cy="9" r="2.6"/><path d="M9 3.2v1.7M9 13.1v1.7M3.2 9h1.7M13.1 9h1.7M4.9 4.9l1.2 1.2M11.9 11.9l1.2 1.2M13.1 4.9l-1.2 1.2M6.1 11.9l-1.2 1.2"/><circle cx="17" cy="17" r="2.2"/><path d="M17 12.6v1.4M17 20v1.4M12.6 17H14M20 17h1.4M13.9 13.9l1 1M19.1 19.1l1 1M20.1 13.9l-1 1M15 19.1l-1 1"/>',
+    "ladder": '<path d="M7 2.5v19M17 2.5v19"/><path d="M7 7h10M7 12h10M7 17h10"/>',
+    "plunger": '<path d="M12 2.5v6"/><path d="M5.5 12.5a6.5 3.6 0 0 0 13 0v-1.3h-13z"/><path d="M12 15.6v5.9"/>',
+    "fire": '<path d="M12 21.5c3.6 0 6.2-2.5 6.2-5.9 0-4.3-4.3-5.6-3.5-9.6-3.1.9-5.4 3.6-5.4 6.4 0 1.1.4 1.9.4 1.9-1.2-.3-2.1-1.5-2.1-1.5-.5 1-.8 2-.8 3 0 3.3 2.6 5.7 5.2 5.7z"/>',
+    "flame-off": '<path d="M12 21.5c3.6 0 6.2-2.5 6.2-5.9 0-4.3-4.3-5.6-3.5-9.6-3.1.9-5.4 3.6-5.4 6.4 0 1.1.4 1.9.4 1.9-1.2-.3-2.1-1.5-2.1-1.5-.5 1-.8 2-.8 3 0 3.3 2.6 5.7 5.2 5.7z"/><path d="M3 3l18 18"/>',
+    "warning": '<path d="M12 3.2 21.5 20h-19z"/><path d="M12 9.5v4.6"/><path d="M12 17h.01"/>',
+    "siren": '<path d="M6.5 20.5v-2.2a5.5 5.5 0 0 1 11 0v2.2z"/><path d="M10 12.8V8.5a2 2 0 0 1 4 0v4.3"/><path d="M3.5 20.5h17"/><path d="M4 6.5 6 8.5M20 6.5 18 8.5M12 2.5v2.6"/>',
+    "stop": '<circle cx="12" cy="12" r="9"/><path d="M8 8h8v8H8z"/>',
+    "brick": '<path d="M2.5 6.5h19v3.4h-19zM2.5 14.1h19v3.4h-19z"/><path d="M7.5 6.5v3.4M15 6.5v3.4M4.5 14.1v3.4M12 14.1v3.4M19.5 14.1v3.4"/>',
+
+    # --- electrical & charging ---
+    "battery": '<path d="M2.5 7.5h15v9h-15z"/><path d="M17.5 10.5h2.2a1.6 1.6 0 0 1 0 3.4h-2.2"/><path d="M5.5 10.5v3M8.5 10.5v3M11.5 10.5v3"/>',
+    "battery-charge": '<path d="M2.5 7.5h13v9h-13z"/><path d="M15.5 10.5h2.2a1.6 1.6 0 0 1 0 3.4h-2.2"/><path d="M9.5 9 7 12.6h3.2L8.6 16"/>',
+    "plug": '<path d="M9 2.5v5M15 2.5v5"/><path d="M5.5 7.5h13v3.2a6.5 6.5 0 0 1-6.5 6.5 6.5 6.5 0 0 1-6.5-6.5z"/><path d="M12 17.2v4.3"/>',
+    "power-cord": '<path d="M4 4.5 9 9.5"/><path d="M3 8.5 7.5 4"/><path d="M9.5 10 19 19.5"/><path d="M17 21.5 21.5 17"/><path d="M6.8 12.8 12.8 6.8"/>',
+    "sun": '<circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.8M12 18.7v2.8M2.5 12h2.8M18.7 12h2.8M5.3 5.3l2 2M16.7 16.7l2 2M18.7 5.3l-2 2M7.3 16.7l-2 2"/>',
+    "panel-solar": '<path d="M3.5 15.5 6.5 5.5h11l3 10z"/><path d="M5 10.5h14M9 5.5 7.8 15.5M15 5.5l1.2 10"/><path d="M12 15.5v4M9 21.5h6"/>',
+    "lightbulb": '<path d="M9.2 17.5a5.8 5.8 0 1 1 5.6 0v1.4a1.6 1.6 0 0 1-1.6 1.6h-2.4a1.6 1.6 0 0 1-1.6-1.6z"/><path d="M9.6 20.5h4.8"/><path d="M10.5 13.5 12 10.5l1.5 3"/>',
+    "generator": '<path d="M2.5 8.5h19v9h-19z"/><path d="M6.5 8.5v-3h11v3"/><path d="M7 12.5h4M7 14.7h4"/><circle cx="17" cy="13.6" r="2.1"/>',
+
+    # --- heat, cool & appliances ---
+    "thermometer": '<path d="M14.5 13.9V5.2a2.5 2.5 0 0 0-5 0v8.7a4.2 4.2 0 1 0 5 0z"/><path d="M12 9v6.2"/>',
+    "snowflake": '<path d="M12 2.5v19M4 7.2l16 9.6M20 7.2 4 16.8"/><path d="M9.4 3.6 12 6.2l2.6-2.6M9.4 20.4 12 17.8l2.6 2.6"/>',
+    "ac": '<path d="M3.5 4.5h17v8h-17z"/><path d="M6.5 8.5h11"/><path d="M7 16.5c1.6 1.4 2 3.2 1 5M12 16.5c1.6 1.4 2 3.2 1 5M17 16.5c1.6 1.4 2 3.2 1 5"/>',
+    "fridge": '<path d="M6 2.5h12v19H6z"/><path d="M6 10h12"/><path d="M8.5 5.5v2M8.5 13v2.5"/>',
+    "fan": '<circle cx="12" cy="12" r="2.2"/><path d="M12 9.8c0-3.2-.9-4.8.6-5.6 1.7-.9 3.4.7 3.4 3 0 2.1-1.7 2.6-4 2.6"/><path d="M14.2 12c3.2 0 4.8-.9 5.6.6.9 1.7-.7 3.4-3 3.4-2.1 0-2.6-1.7-2.6-4"/><path d="M9.8 12c-3.2 0-4.8.9-5.6-.6-.9-1.7.7-3.4 3-3.4 2.1 0 2.6 1.7 2.6 4"/><path d="M12 14.2c0 3.2.9 4.8-.6 5.6-1.7.9-3.4-.7-3.4-3 0-2.1 1.7-2.6 4-2.6"/>',
+    "stove": '<path d="M3.5 9.5h17v11h-17z"/><path d="M3.5 9.5V6a1.5 1.5 0 0 1 1.5-1.5h14A1.5 1.5 0 0 1 20.5 6v3.5"/><circle cx="7.5" cy="13.8" r="1.7"/><circle cx="16.5" cy="13.8" r="1.7"/><path d="M9.2 18h5.6"/>',
+    "microwave": '<path d="M2.5 6.5h19v11h-19z"/><path d="M15.5 6.5v11"/><path d="M5.5 11h6.5v4h-6.5z"/><path d="M18 10h.01M18 13.5h.01"/>',
+    "washer": '<path d="M4.5 2.5h15v19h-15z"/><path d="M4.5 8h15"/><circle cx="12" cy="14.6" r="3.6"/><path d="M8.6 12.6c1.4 1 2 2.6 1.6 4.4"/><path d="M7 5h1.5M11 5h1.5"/>',
+    "water-heater": '<path d="M5.5 8.5a6.5 6.5 0 0 1 13 0v9a3 3 0 0 1-3 3h-7a3 3 0 0 1-3-3z"/><path d="M12 2v2.2"/><path d="M9 7.5h6"/><path d="M9 11.5h6M9 15h4"/>',
+
+    # --- water & plumbing ---
+    "droplet": '<path d="M12 2.8c3.2 3.6 5.8 6.7 5.8 10.1a5.8 5.8 0 1 1-11.6 0c0-3.4 2.6-6.5 5.8-10.1z"/>',
+    "faucet": '<path d="M3.5 8.5h8a3 3 0 0 1 3 3v1.5"/><path d="M3.5 6.2h1.8v4.6H3.5z"/><path d="M14.5 13h3.2"/><path d="M11.2 5.5V3.8a1.3 1.3 0 0 1 1.3-1.3h4.2a1.3 1.3 0 0 1 1.3 1.3v1.7"/><path d="M9.5 18c1.5 1.2 1.9 2.6 1.2 4M13.5 18c1.5 1.2 1.9 2.6 1.2 4"/>',
+    "pipe": '<path d="M3.5 6.5h5v11h-5z"/><path d="M8.5 9.5h7v5h-7z"/><path d="M15.5 6.5h5v11h-5z"/><path d="M3.5 6.5v11M20.5 6.5v11"/>',
+    "toilet": '<path d="M4.5 6.5h11v4.2a5.5 5.5 0 0 1-5.5 5.5 5.5 5.5 0 0 1-5.5-5.5z"/><path d="M15.5 8h2.6a1.4 1.4 0 0 1 1.4 1.4v3.2"/><path d="M7 16.2v4.3h6v-4.3"/><path d="M8 4h5"/>',
+    "shower": '<path d="M6.5 8.5a3.5 3.5 0 0 1 7-1.5"/><path d="M4.5 10.5h13"/><path d="M8 13.5v.01M11 13.5v.01M14 13.5v.01M9.5 17v.01M12.5 17v.01M11 20.5v.01"/><path d="M13.5 9V6.5h3"/>',
+    "water-tank": '<path d="M5 8.5h14v10a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M5 13h14"/><path d="M9 8.5V6a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2.5"/>',
+    "sewer-hose": '<path d="M3.5 4.5h3v3h3v3h3v3h3v3h3v3"/><path d="M18.5 16.5h3v3h-3z"/><path d="M3.5 3h3v3h-3z"/>',
+
+    # --- body, slides & jacks ---
+    "rv-side": '<path d="M2.5 15.5V9a1.5 1.5 0 0 1 1.5-1.5h9.5v8"/><path d="M13.5 7.5h4.2l3.3 4v4h-7.5"/><path d="M2.5 15.5h19"/><circle cx="7" cy="18" r="2.2"/><circle cx="16.5" cy="18" r="2.2"/><path d="M5.5 10.5h4v3h-4z"/>',
+    "slide-out": '<path d="M3.5 6.5h11v11h-11z"/><path d="M14.5 9.5h6v5h-6z"/><path d="M17.5 6.5v-3M20.5 9.5l2-2"/><path d="M11 12h3.5"/>',
+    "awning": '<path d="M2.5 9.5 12 5l9.5 4.5v1.5h-19z"/><path d="M12 11v6"/><path d="M2.5 14.5c1.6 0 1.6 1.6 3.2 1.6s1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6 1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6"/><path d="M7 17.5v3.5M17 17.5v3.5"/>',
+    "jack": '<path d="M4.5 20.5h15"/><path d="M12 20.5V9.5"/><path d="M9 9.5h6"/><path d="M10.5 6.5 12 3.5l1.5 3"/><path d="M9.5 13.5h5M9.5 17h5"/>',
+    "window": '<path d="M3.5 3.5h17v17h-17z"/><path d="M12 3.5v17M3.5 12h17"/><path d="M5.5 14h4v4h-4z"/>',
+    "door": '<path d="M5 20.5V4.5A1 1 0 0 1 6 3.5h12a1 1 0 0 1 1 1v16"/><path d="M3.5 20.5h17"/><path d="M15 12h.01"/>',
+    "roof": '<path d="M2.5 11.5 12 4l9.5 7.5"/><path d="M5 11.5v9h14v-9"/><path d="M10 20.5v-5h4v5"/>',
+    "tire": '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v5.6M12 15.4V21M3 12h5.6M15.4 12H21"/><path d="M5.6 5.6l3.9 3.9M14.5 14.5l3.9 3.9M18.4 5.6l-3.9 3.9M9.5 14.5l-3.9 3.9"/>',
+    "hitch": '<path d="M3.5 8.5h7a4 4 0 0 1 4 4v3"/><path d="M14.5 17.5a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0z"/><path d="M3.5 6.5v4"/><path d="M8 20.5h4"/>',
+    "scale-weight": '<path d="M12 3.5v2.2"/><path d="M5.5 20.5 3 11h18l-2.5 9.5z"/><path d="M6.5 20.5h11"/><path d="M12 5.7 8.5 14M12 5.7 15.5 14"/><circle cx="12" cy="3.5" r="1.4"/>',
+    "truck": '<path d="M2.5 16.5V7a1 1 0 0 1 1-1h10v10.5"/><path d="M13.5 9h3.8l4.2 4.5v3h-8"/><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="18" r="2.2"/><path d="M9.2 18h5.6"/>',
+    "fuel": '<path d="M4.5 20.5V5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v15.5"/><path d="M3 20.5h12"/><path d="M5.5 8.5h7"/><path d="M13.5 8h2.8a1.7 1.7 0 0 1 1.7 1.7v6.6a1.4 1.4 0 0 0 1.4 1.4 1.4 1.4 0 0 0 1.4-1.4V9.6l-2-2"/>',
+    "propane": '<path d="M6.5 9.5a5.5 5.5 0 0 1 11 0v8a3 3 0 0 1-3 3h-5a3 3 0 0 1-3-3z"/><path d="M9 4.5V2.8h6v1.7"/><path d="M12 4.5v5"/><path d="M9.5 13h5"/>',
+
+    # --- winter & storage ---
+    "ice": '<path d="M4 6.5h16v11H4z"/><path d="M7 6.5v11M17 6.5v11M4 12h16"/><path d="M10.5 9.5 13 11l-2.5 1.5z"/>',
+    "snow-shovel": '<path d="M12 21.5V9"/><path d="M8.5 3.5h7l-1.4 5.5h-4.2z"/><path d="M9.5 21.5h5"/><path d="M14 4.5 17.5 2"/>',
+    "calendar": '<path d="M3.5 5.5h17v15h-17z"/><path d="M3.5 10.5h17"/><path d="M8 3.5v4M16 3.5v4"/><path d="M7 14h2.5M14.5 14H17M7 17.2h2.5M14.5 17.2H17"/>',
+    "checklist": '<path d="M4 6.5h16v14H4z"/><path d="M7.5 3.5v4M16.5 3.5v4"/><path d="M7.5 11.5 9 13l2.5-2.5"/><path d="M13 12h5"/><path d="M7.5 16.5 9 18l2.5-2.5M13 17h5"/>',
+    "notebook": '<path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 3.5v17"/><path d="M11.5 8h4.5M11.5 12h4.5M11.5 16h3"/>',
+    "book": '<path d="M4 4.5h6a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M20 4.5h-6a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5H20z"/>',
+    "tag": '<path d="M11.6 2.5H21.5V12l-9.4 9.4a1.4 1.4 0 0 1-2 0l-7.5-7.5a1.4 1.4 0 0 1 0-2z"/><circle cx="17.4" cy="6.6" r="1.5"/>',
+    "search": '<circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.2 15.2 21 21"/>',
+    "map": '<path d="M2.5 6 9 3.5v14L2.5 20z"/><path d="M9 3.5l6 2.5v14l-6-2.5z"/><path d="M15 6l6.5-2.5v14L15 20z"/><path d="M6 9.5c1 .8 1.3 1.8.8 2.8"/>',
+    "compass": '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 5-5 2.2 2.2-5z"/>',
+    "mountain": '<path d="M2.5 19.5 9.5 7l4 7 2.5-4 5.5 9.5z"/><path d="M8 9.5h3"/>',
+    "measure": '<path d="M3 15.5 15.5 3 21 8.5 8.5 21z"/><path d="M6.5 12l2 2M9.5 9l2 2M12.5 6l2 2"/>',
+    "ruler-square": '<path d="M4 4h16v4H8v12H4z"/><path d="M11 8v3M14 8v4.5M17 8v3"/>',
+    "chart": '<path d="M3.5 3.5v17h17"/><path d="M7 17v-5M11 17V8M15 17v-7M19 17v-3"/>',
+    "arrows-h": '<path d="M3.5 12h17"/><path d="M7 8.5 3.5 12 7 15.5"/><path d="M17 8.5 20.5 12 17 15.5"/>',
+    "arrow-up": '<path d="M12 20.5V3.5"/><path d="M6.5 9 12 3.5 17.5 9"/>',
+    "beam": '<path d="M2.5 16.5h5l4-11h6"/><path d="M2.5 20.5h19"/><path d="M17.5 3v5.5M14.8 5.8h5.4"/>',
+    "pin-location": '<path d="M12 2.6c-3.6 0-6.5 2.9-6.5 6.5 0 4.6 6.5 12.3 6.5 12.3s6.5-7.7 6.5-12.3c0-3.6-2.9-6.5-6.5-6.5z"/><circle cx="12" cy="9.1" r="2.4"/>',
+    "umbrella": '<path d="M12 3.5a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9z"/><path d="M12 12.5v6a2.5 2.5 0 0 1-5 0"/>',
+}
+
+
+def build():
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    syms = []
+    for name, body in ICONS.items():
+        syms.append(
+            f'<symbol id="ic-{name}" viewBox="0 0 24 24" fill="none" '
+            f'stroke="currentColor" stroke-width="1.75" '
+            f'stroke-linecap="round" stroke-linejoin="round">{body}</symbol>'
+        )
+    sprite = (
+        '<svg xmlns="http://www.w3.org/2000/svg" style="display:none" '
+        'aria-hidden="true" focusable="false">\n'
+        '<defs>\n' + "\n".join(syms) + "\n</defs>\n</svg>\n"
+    )
+    (OUT_DIR / "sprite.svg").write_text(sprite, encoding="utf-8")
+    print(f"wrote {len(ICONS)} symbols -> assets/img/icons/sprite.svg "
+          f"({len(sprite):,} bytes)")
+
+
+if __name__ == "__main__":
+    build()

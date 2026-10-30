@@ -134,16 +134,30 @@ def literal_sizes():
 
 
 def literal_spaces():
+    """Distinct LITERAL spacing values below the token block.
+
+    A value built from the token scale is not a literal, and counting it as one is
+    what made this ratchet fire on a change that moved TOWARD the scale. Measured
+    2026-10-29: a homepage rewrite using only var(--space-N) added eleven "literals"
+    to this count (var(--space-1) through var(--space-6) and four shorthand
+    combinations), which is the opposite of the drift the ceiling exists to catch.
+    literal_sizes() already skips anything starting with var( for exactly this
+    reason; this now does the same, and the two ratchets finally agree on what a
+    literal is.
+
+    A value that merely CONTAINS a var() is still inspected for its literal parts,
+    so `padding:0 var(--space-5)` contributes the var (skipped) and nothing else,
+    and a hardcoded `13px 18px` is still counted in full.
+    """
     out = set()
     for m in re.finditer(r"(?:padding|margin)(?:-(?:top|right|bottom|left))?:\s*([^;}]+)", below):
         v = m.group(1).strip()
-        if v.startswith("var(") or "(" in v:
-            if v:
-                out.add(v)
-            continue
         for part in v.split():
-            if part not in ("0", "auto"):
-                out.add(part)
+            if part in ("0", "auto"):
+                continue
+            if part.startswith("var("):
+                continue
+            out.add(part)
     return out
 
 

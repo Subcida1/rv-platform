@@ -959,10 +959,17 @@ def anchor_key(dest):
 
 
 anchor_link = re.compile(r'href="([^"#]*)#([^"]+)"')
+# An SVG sprite is not a page: `<use href="sprite.svg#ic-fire">` points a fragment at a
+# non-HTML document, which is how an icon system is meant to be referenced. Reported as
+# "no such page" the moment the sprite landed (2026-10-29), the same way extensionless
+# URLs were before. Only page-shaped targets belong in this check.
+NON_PAGE_FRAGMENT_TARGETS = (".svg", ".xml", ".json", ".txt", ".pdf")
 bad = []
 for rel in anchors:
     for target, frag in anchor_link.findall((ROOT / rel).read_text(encoding="utf-8")):
         if target.startswith(("http", "//", "mailto:")):
+            continue
+        if target.lower().endswith(NON_PAGE_FRAGMENT_TARGETS):
             continue
         dest = rel if target == "" else target.lstrip("/")
         key = anchor_key(dest)
