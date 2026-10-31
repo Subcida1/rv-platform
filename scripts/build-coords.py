@@ -412,9 +412,15 @@ def build(places, zips, write=True):
         gap = largest_gap(list(own_zip.values()) + list(own_city.values()))
         belt = float(int((READER_MARGIN + gap) // 5 + 1) * 5)
 
+        # NEIGHBOURS ARE COUNTED SEPARATELY FROM ZIPS. This used to be one counter for both,
+        # so the header's "N neighbouring place(s)" was really places plus ZIP areas, and it
+        # moved whenever the NAMES a state resolves changed for any reason (2026-10-30: a
+        # naming fix in place_names.py shifted this count by 1 to 23 across five states while
+        # the coordinate tables themselves did not change by a single key). A figure in a
+        # header should measure the thing it names.
         near = grid(list(own_city.values()) + list(own_zip.values()))
         city, zipm = dict(own_city), dict(own_zip)
-        added = 0
+        added, added_zip = 0, 0
         for other, table in places.items():
             if other == st:
                 continue
@@ -428,7 +434,7 @@ def build(places, zips, write=True):
             for code, ll in table.items():
                 if code not in zipm and within(near, ll, belt):
                     zipm[code] = ll
-                    added += 1
+                    added_zip += 1
 
         # Every name the listings use, by name, whatever the belt did. This is the
         # guarantee: the belt answers readers, and this answers the listings.
@@ -484,10 +490,11 @@ def build(places, zips, write=True):
             "   The coordinate table for the %s directory page only.\n"
             "   belt %.0f mi = %.0f (reader margin) + %.1f (this state's largest gap between\n"
             "   neighbouring ZIP-area centroids), so a reader within %.0f miles of the state\n"
-            "   line still resolves. %d neighbouring place(s) came in under it. */\n"
+            "   line still resolves. %d neighbouring place(s) and %d ZIP area(s) came in "
+            "under it. */\n"
             "window.RV_COORDS_%s = ")
         text = (header % (SOURCE_NOTE, slug.replace("-", " ").title(), belt, READER_MARGIN, gap,
-                          READER_MARGIN, added, st)
+                          READER_MARGIN, added, added_zip, st)
                 + json.dumps({"state": st, "src": SOURCE_NOTE, "belt": belt,
                               "city": dict(sorted(city.items())),
                               "zip": dict(sorted(zipm.items()))}, separators=(",", ":")) + ";\n")

@@ -45,6 +45,15 @@ step "build-coords.py --check: every listing name resolves in its own state" \
                                                python3 scripts/build-coords.py --check
 step "build-search-index.py --check: the site search index is current" \
                                                python3 scripts/build-search-index.py --check
+# The place table, built from the same Census files the coordinate tables come from. Its own
+# --self-test pins the cases that were silently missing (Indianapolis is a consolidated city,
+# Baton Rouge a city-county, all of Hawaii is CDPs, "Boise" is filed as "Boise City"), and the
+# builder refuses to write a file that has grown past its gzip budget without that being a
+# decision somebody made on purpose.
+step "build-places.py --selftest: the place table still carries every case it was built for" \
+                                               python3 scripts/build-places.py --selftest
+step "build-places.py --check: the place table is current and within budget" \
+                                               python3 scripts/build-places.py --check
 # Every URL we publish is extensionless (2026-10-04). GitHub Pages serves /directory/montana
 # from montana.html, so the .html form was never required and naming it published the uglier
 # address as canonical. The sweep rewrote 7,877 of them; this step is what stops them coming
@@ -200,6 +209,19 @@ step "smoke test"                              node scripts/smoke-test.js
 step "page scripts still find a missing dependency" node scripts/check-page-scripts.js --self-test
 step "every page: scripts exist, execute, and find their dependencies" \
                                                node scripts/check-page-scripts.js
+
+# THE SEARCH QA RUN (2026-10-30). T typed "los angeles" into the homepage location field and the
+# site answered nothing, because places were resolved from business records instead of from a
+# table of places. The fix is assets/js/places.js and a rewritten assets/js/locate.js; this is
+# the proof, and the gate that stops the class coming back. 110 real queries in seven groups
+# (symptoms, makers, places, thin places, misspellings, addresses, nasties) plus every listing's
+# base town, run against the SHIPPED files in a second.
+# --self-test FIRST, and it rebuilds the defect as data: it empties the place table and requires
+# the run to FAIL and to name Los Angeles. A gate that cannot fail is not a gate.
+step "search: the gate can still catch the Los Angeles defect" \
+                                               node scripts/check-search.js --selftest
+step "search: 110 real queries and every listing town resolve" \
+                                               node scripts/check-search.js
 
 # ---------------------------------------------------------------- 3. structure
 # The W3C checker is the authority on whether the markup is valid, and the one that found

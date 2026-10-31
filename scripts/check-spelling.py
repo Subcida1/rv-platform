@@ -56,7 +56,16 @@ SKIP_PARTS = {".git", ".letta", ".canary.lock", "node_modules", "_log", "_data"}
 # that renders chrome and tool copy.
 IN_SCOPE = ("*.html",)
 JS_SCOPE = "assets/js/*.js"
-JS_EXCLUDE = ("assets/js/coords-", "assets/js/listings/", "assets/js/manuals/")
+# GENERATED FILES ARE OUT OF SCOPE, and places.js joins the list for a reason worth stating.
+# The others (coords-*, listings/, manuals/) are excluded because their text is DATA: a
+# coordinate table has no prose, and a listing carries a business's own words. places.js is the
+# strongest case of the same thing: its keys are the US Census Bureau's place names, and
+# American towns are called Grey Eagle, Sauk Centre, Rockville Centre, Tyre and Centre County.
+# "Correcting" them to Gray and Center would break the search for those towns, and the
+# alternative -- an allowlist of a few hundred proper nouns -- is work that only ever grows.
+# The check exists to catch OUR prose drifting British, and there is no prose in a place table.
+JS_EXCLUDE = ("assets/js/coords-", "assets/js/listings/", "assets/js/manuals/",
+              "assets/js/places.js")
 
 # British spelling -> American. Matched on whole words, case-insensitively.
 SPELLINGS = {

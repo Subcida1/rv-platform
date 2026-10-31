@@ -63,33 +63,59 @@
   }
 
   /* THE LOCATION TABLE ARRIVES THE SAME WAY, FOR THE SAME REASON. Mapping a ZIP to its
-     state is 17 KB and only a reader who types a location needs it, so it loads on the
+     state is 3 KB and only a reader who types a location needs it, so it loads on the
      first focus alongside the index rather than on every page view. locate.js holds the
      single implementation of "where should this location go"; nothing here re-decides it.
      Ty, 2026-10-05: "i envision you being able to put your zip or location into the search
-     bar and it brings up service centers near you." */
+     bar and it brings up service centers near you."
+
+     THE PLACE TABLE IS THE THIRD PIECE AND THE BIGGEST (155 KB gzipped, 2026-10-30). It
+     carries every Census place name in the country, which is what makes "los angeles" or
+     "chicago" or "bozeman" resolve at all -- before this, a town was findable only if some
+     listed business happened to name it, and Chicago matched zero records. It loads on
+     first focus with the other two and never on page view, so a reader who never touches a
+     search box never pays for it. Order still matters: places.js, then location-data.js,
+     then locate.js, because the resolver reads both tables at CALL time. */
   var LOC = false, locWaiting = [];
   function loadLocate(then) {
-    if (window.RV_DIRECTORY_URL) { if (then) then(); return; }
+    /* THE GUARD MUST NOT BE "IS THE RESOLVER THERE". On the homepage, location-data.js and
+       locate.js are static tags, so RV_LOCATE exists before this runs and the first version
+       returned immediately, never fetching the place table. Every keystroke then resolved
+       places against RV_PLACES === undefined, which is exactly the "los angeles answers
+       nothing" bug this work exists to fix, re-created by the loader. Caught by driving the
+       real page in a browser, not by the offline harness.
+       The guard now tests the thing the resolver actually needs: the place table. */
+    if (window.RV_LOCATE && window.RV_PLACES) { if (then) then(); return; }
     if (then) locWaiting.push(then);
     if (LOC) return;
     LOC = true;
-    var data = document.createElement('script');
-    /* Relative on purpose, the same as the index above: <base href="/"> makes this
-       resolve from any depth. */
-    data.src = 'assets/js/location-data.js';
-    var impl = document.createElement('script');
-    impl.src = 'assets/js/locate.js';
     var give = function () {
       LOC = false;
       var w = locWaiting; locWaiting = [];
       for (var i = 0; i < w.length; i++) w[i]();
     };
-    impl.onload = give;
-    impl.onerror = give;
-    data.onload = function () { document.head.appendChild(impl); };
-    data.onerror = give;
-    document.head.appendChild(data);
+    /* IN SEQUENCE, NOT IN PARALLEL. Every one of these is appended with async = false from
+       the onload of the previous, so they execute in the order they are written. The
+       resolver is last and needs RV_PLACES and RV_ZIP_TO_STATE already defined. */
+    /* ONLY WHAT IS MISSING, IN ORDER. The homepage tags location-data.js and locate.js
+       statically, so appending them again would run them twice; a page that has neither gets
+       all three. Each entry says how to tell whether it is already present. */
+    var chain = [
+      ['assets/js/places.js?v=794b2a03', function () { return !!window.RV_PLACES; }],
+      ['assets/js/location-data.js?v=395afcf3', function () { return !!window.RV_ZIP_TO_STATE; }],
+      ['assets/js/locate.js?v=4d87e853', function () { return !!window.RV_LOCATE; }]
+    ].filter(function (c) { return !c[1](); }).map(function (c) { return c[0]; });
+    var i = 0;
+    var next = function () {
+      if (i >= chain.length) { give(); return; }
+      var el = document.createElement('script');
+      el.src = chain[i++];
+      el.async = false;
+      el.onload = next;
+      el.onerror = give;      // a missing piece degrades to content-only search
+      document.head.appendChild(el);
+    };
+    next();
   }
 
   function esc(s) {
@@ -161,32 +187,130 @@
     return s;
   }
 
+  /* DOES AT LEAST ONE WORD PAIR UP, when the exact-phrase rule finds nothing.
+
+     THE EVERY-WORD-AND-NOTHING-BUT RULE WAS TOO STRICT. It was written so that half a phrase
+     is not "a short phrase, it is a different question" -- reasonable for
+     "winterize my rv", which is one idea in four words. It is wrong for a reader describing a
+     SYMPTOM, which is what this site is for: "cracked frame" is the guide "RV frame cracks",
+     "smoke detector" is the propane detector page, "weight distribution" is the towing
+     calculator. Every one of those returned NOTHING, because the guide says "cracks" and not
+     "cracked", and the rule demanded the exact word.
+
+     SO: a multi-word query that matches nothing exactly may fall back to a PARTIAL match,
+     with a much lower score and a rule of its own -- at least ONE word must match, and the
+     result is only accepted when a word matched a TITLE or KEY (not the description, which
+     carries phone numbers and business blurbs and would match almost anything).
+
+     THE RELAXATION IS ONLY REACHED WHEN EXACT MATCHING FAILED. Ranking still puts every
+     exact hit above every partial one, so this can add results to a query that had none and
+     can never reorder one that had some. */
+  function relax(item, prep) {
+    if (!prep || prep.words.length < 2) return 0;
+    var t = norm(item.t), k = norm(item.k);
+    var hits = 0, firstInTitle = false;
+    for (var i = 0; i < prep.words.length; i++) {
+      var w = prep.words[i];
+      if (w.length < 3) continue;              // "up", "in", "a" carry no meaning here
+      if (t.indexOf(w) >= 0) { hits++; if (i === 0) firstInTitle = true; }
+      else if (k.indexOf(w) >= 0) hits++;
+    }
+    if (!hits) return 0;
+    // A THIRD OF THE WORDS, at least, and never one word out of five: below that the query
+    // and the page share a coincidence, not a subject.
+    if (hits * 3 < prep.words.length && hits < 2) return 0;
+    return 18 + hits * 6 + (firstInTitle ? 8 : 0);
+  }
+
   /* A LOCATION IS NOT A WORD IN THE INDEX, so typing a ZIP used to find nothing at all --
      the same silent dead end the zero-result line was written for. When what was typed
      really is a place, the directory result goes FIRST, because a reader who typed a place
      wants the places near it, not a page about it.
-     This asks locate.js rather than deciding again here, so there is one answer to "where
-     does this location go". The hub fallback is deliberately NOT offered: "RV service near
-     somewhere we could not place" would be a promise the next page cannot keep. */
+
+     THIS ASKS RV_LOCATE, and it says three things the old version could not:
+       - a CORRECTION, when the input was a misspelling or an abbreviation, so
+         "los angelas" answers "Showing results for Los Angeles" instead of silently
+         redirecting the reader;
+       - a PLACE WITH NO LISTINGS, in words, so a thin town gets the state page and the
+         truth rather than a bounce to the hub with no explanation;
+       - an ADDRESS, named, so the reader knows which town was used.
+     The hub fallback is deliberately NOT offered: "RV service near somewhere we could not
+     place" would be a promise the next page cannot keep. */
   function locateItems(q) {
-    if (!window.RV_DIRECTORY_MATCHES) return [];
-    var zip = /^\d{5}$/.test(q);
-    return window.RV_DIRECTORY_MATCHES(q).map(function (m) {
-      var where = m.label || (zip ? q
-        : q.replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); }));
-      return { t: 'RV service near ' + where, u: m.url, c: 'Directory',
-               d: zip ? 'Mobile techs and repair shops, nearest first'
-                      : 'Shops and mobile techs in this town' };
-    });
+    if (!window.RV_LOCATE) return [];
+    var r = window.RV_LOCATE(q);
+    if (!r || !r.matches.length) return [];
+    var out = [];
+    var label = r.name || q;
+    var corrected = r.corrected && r.said && r.said.toLowerCase() !== String(label).toLowerCase();
+    for (var i = 0; i < r.matches.length; i++) {
+      var m = r.matches[i];
+      var where = m.name + ', ' + m.code;
+      var d = r.kind === 'zip'
+        ? 'Mobile techs and repair shops, nearest first'
+        : (m.has === false
+            ? 'No shop listed in ' + m.name + ' yet; see everything in ' + m.code
+            : 'Shops and mobile techs in ' + m.name);
+      if (corrected && i === 0) d = 'Showing results for ' + where + '. ' + d;
+      if (r.kind === 'address' && r.from && i === 0) d = 'Using ' + r.from + '. ' + d;
+      out.push({ t: 'RV service near ' + where, u: window.RV_LOCATE_URL(m, r.zip),
+                 c: 'Directory', d: d });
+    }
+    return out;
+  }
+
+  /* ENGLISH WORDS THAT ARE ONE EDIT FROM A REAL PLACE NAME, and are queries this site answers
+     far better with content. Held here, explicitly, because every general rule tried against
+     them was wrong twice: a length test let "furnace" through at seven letters and blocked
+     "seatle" at six, and a "did content answer" test let a business called "Airstream Los
+     Angeles" suppress the correction for "los angelas".
+     A LIST IS THE HONEST SHAPE FOR THIS. It is short, it is checkable by reading it, and adding
+     a word is a one-line decision somebody can see. It is NOT a blocklist for places: nothing
+     here stops a reader reaching Furnace Creek, it only decides which answer comes first. */
+  var WORDY = { furnace: 1, tank: 1, frame: 1, awning: 1, tire: 1, brake: 1, roof: 1,
+                leak: 1, drain: 1, valve: 1, slide: 1, jack: 1, hose: 1, pump: 1, vent: 1,
+                level: 1, power: 1, solar: 1, shore: 1, black: 1, gray: 1,
+                freshwater: 1, holding: 1, sensor: 1, window: 1, door: 1, step: 1, latch: 1 };
+
+  /* IS THIS QUERY ASKING FOR A PLACE, OR FOR A PAGE? */
+  function locationShaped(raw) {
+    var s = String(raw == null ? '' : raw).trim();
+    if (!s) return false;
+    if (/^\d{5}$/.test(s)) return true;                 // a bare ZIP
+    if (/^\s*\d{1,6}\s+\S/.test(s)) return true;        // a street address
+    var words = s.toLowerCase().split(/\s+/);
+    // A query made ONLY of words this site answers with content is a content query. That is
+    // "furnace", "black tank", "holding tank sensor" -- symptom vocabulary, everywhere on this
+    // site, and one edit from a place name often enough to matter.
+    var allWordy = words.every(function (w) { return WORDY[w] || w.length < 3; });
+    if (allWordy && words.length <= 3) return false;
+    if (!window.RV_LOCATE) return false;
+    var r = window.RV_LOCATE(s);
+    if (!r || !r.matches.length) return false;
+    if (r.kind === 'zip' || r.kind === 'address') return true;
+    // A correction IS a mistyped place, so it comes first: "los angelas", "seatle", "phoenixx".
+    if (r.corrected) return true;
+    // An exact name in several states is genuinely ambiguous and needs the chooser.
+    return r.matches.length > 1 && s.length >= 4;
   }
 
   function search(q, limit) {
     var prep = M && M.prepare(q);
     if (!prep || !INDEX) return [];
+    var rawQuery = q;
     var hits = [];
     for (var i = 0; i < INDEX.length; i++) {
       var s = score(INDEX[i], prep);
       if (s > 0) hits.push({ s: s, item: INDEX[i] });
+    }
+    /* THE PARTIAL PASS RUNS ONLY WHEN THE EXACT PASS FOUND NOTHING. That ordering is what
+       makes the relaxation safe: a query that already had answers cannot be reordered or
+       padded by it, and a query that had none gets the closest pages instead of a dead end. */
+    if (!hits.length) {
+      for (var j = 0; j < INDEX.length; j++) {
+        var r = relax(INDEX[j], prep);
+        if (r > 0) hits.push({ s: r, item: INDEX[j] });
+      }
     }
     hits.sort(function (a, b) { return b.s - a.s || a.item.t.length - b.item.t.length; });
     // A cap per directory-ish category, so neither a business nor a manual ever
@@ -194,7 +318,25 @@
     // number should reach the manual.
     var CAPS = { Business: 2, Manual: 2 }, used = {};
     var out = [];
-    locateItems(prep.text).forEach(function (it) { out.push(it); });
+    /* THE PLACE ANSWER GOES FIRST ONLY WHEN THE QUERY IS A PLACE, and the test for that now
+       includes whether the reader actually gets content. Typing "furnace" used to answer
+       "RV service near Furnace Creek, CA" and put it ABOVE the furnace troubleshooting guide
+       the reader wanted: Furnace Creek is a real CDP, so exact-first said "place". A symptom
+       word that happens to be a place name is a symptom first on this site.
+       The rule: a place answer is offered only when the exact pass found NOTHING, or when the
+       reader typed something location-shaped (a ZIP, or a name the table carries with more
+       than one state, or a correction). One result either way, so the panel is not padded. */
+    var placeAnswer = locationShaped(rawQuery) || !hits.length;
+    // THE RAW QUERY, NOT THE PREPARED ONE. prep.text has had filler words stripped and the
+    // commas removed, which destroys both an address ("1234 Main St, Boise ID 83702" loses the
+    // comma that marks where the street ends) and the resolver is the piece that knows how to
+    // read one. The matcher prepares; the resolver needs what the reader actually typed.
+    //
+    // PLACES COME FIRST ONLY WHEN THE SITE HAD NOTHING TO SAY, or when the query is
+    // location-shaped by construction (a ZIP, an address, a name with several states). When
+    // content DID answer, the reader's symptom outranks a town that happens to share a letter.
+    var placesFirst = !hits.length || locationShaped(rawQuery);
+    if (placesFirst && placeAnswer) locateItems(rawQuery).forEach(function (it) { out.push(it); });
     for (var j = 0; j < hits.length && out.length < (limit || MAX); j++) {
       var cat = hits[j].item.c;
       if (CAPS[cat]) {
@@ -306,9 +448,14 @@
          is noise rather than information. */
       if (!list.length) {
         if (q && q.length >= 2) {
+          /* NO DEAD ENDS. T, 2026-10-30: "if legit nothing matches, we should redirect to a
+             DIY fix maybe ... no dead ends." So the empty state carries two REAL next clicks,
+             guides first because a reader who typed a symptom usually wants a fix. Both are
+             links to pages that exist, not suggestions dressed as actions. */
           box.innerHTML = '<div class="srch-none">Nothing matches <b>' + esc(q) + '</b>.' +
-            '<span>Try fewer words, or a maker, a model line, or a symptom like ' +
-            'winterize or tongue weight.</span></div>';
+            '<span>Search the 60 RV troubleshooting guides, or the repair directory.</span>' +
+            '<a class="srch-more" href="guides/">Browse the RV guides</a>' +
+            '<a class="srch-more" href="directory/">Find a repair shop or mobile tech</a></div>';
           box.hidden = false;
           input.setAttribute('aria-expanded', 'true');
         } else {

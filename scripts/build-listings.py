@@ -546,6 +546,23 @@ def fix_script_tags(block, st, slug):
         sys.exit("FAIL  %s: the script block no longer loads the shared finder" % slug)
     if "assets/js/config.js" not in block or "assets/js/site.js" not in block:
         sys.exit("FAIL  %s: the script block is missing config.js or site.js" % slug)
+    # THE FINDER NEEDS THE SAME RESOLVER THE SEARCH BOX USES (2026-10-30). Until this, the
+    # state page matched a typed town against its OWN coordinate table, so it could only
+    # answer towns this one state already knew, and it disagreed with the search box on the
+    # same words. The three tags go before finder.js, because finder calls RV_LOCATE while it
+    # initialises: places.js holds the name table, location-data.js the ZIP-to-state map, and
+    # locate.js the resolver that reads both.
+    if "assets/js/locate.js" not in block:
+        lines = block.split("\n")
+        at = next((i for i, ln in enumerate(lines) if "assets/js/finder.js" in ln),
+                  len(lines))
+        add = ['  <script src="assets/js/places.js"></script>',
+               '  <script src="assets/js/location-data.js"></script>',
+               '  <script src="assets/js/locate.js"></script>']
+        block = "\n".join(lines[:at] + add + lines[at:])
+    for need in ("assets/js/places.js", "assets/js/location-data.js", "assets/js/locate.js"):
+        if need not in block:
+            sys.exit("FAIL  %s: the script block does not load %s" % (slug, need))
     return block.strip("\n")
 
 

@@ -45,7 +45,21 @@ DESIGNATIONS = ("city and borough", "city-county", "unified government",
 # hand-kept list of Census designations, and a state using one it does not hold produces a
 # name that silently cannot be placed.** Add the word here when the coordinate check reports
 # a name that IS a place but does not resolve.
-LSAD_WORDS = {"city", "town", "village", "borough", "cdp", "corporation"}
+LSAD_WORDS = {"city", "town", "village", "borough", "cdp", "corporation",
+              # A TWO-WORD UNIT. Michigan files townships as "Waterford charter township",
+              # and LSAD '44' maps to the single word "township", so stripping that leaves
+              # "waterford charter", a key nobody types. This entry is LONGER than the word
+              # it contains, so it wins: the loop below takes the first match, and the
+              # longer form is tried wherever the set happens to land. Found 2026-10-30 when
+              # every Waterford in the search table resolved to Maine.
+              "charter township"}
+
+# QUALIFIERS THAT SIT IN FRONT OF THE UNIT WORD, and are not part of the name. Michigan
+# files townships as "Waterford charter township". LSAD '44' maps to the single word
+# "township", so the strip below leaves "waterford charter", which nobody types. Writing the
+# qualifier as "charter township" in LSAD_WORDS lets the SAME loop remove both words at once,
+# which is why this is an extra entry there rather than a second pass here.
+CHARTER = ("charter",)
 
 
 def census_keys(name, lsad=None):
@@ -96,6 +110,16 @@ def canonical(name, census_name=False, lsad=None):
     """The key a place is stored under, and the key a reader's input is looked up by."""
     n = str(name or "").strip().lower()
     if census_name:
+        # A QUALIFIER CAN SIT IN FRONT OF THE DESIGNATION, and it is checked FIRST. Michigan
+        # files townships as "Waterford charter township"; the designation pass below strips
+        # "township" and leaves "waterford charter", which no reader types. Doing the
+        # qualifier before the designation pass is what makes the result "waterford", and
+        # putting "charter township" in LSAD_WORDS could not work because this pass runs
+        # first and never consults that set. Found 2026-10-30.
+        for pre in CHARTER:
+            if n.endswith(" " + pre + " " + "township"):
+                n = n[: -len(pre) - len("township") - 2]
+                break
         for des in DESIGNATIONS:
             if n.endswith(" " + des):
                 n = n[: -len(des) - 1]
@@ -105,10 +129,18 @@ def canonical(name, census_name=False, lsad=None):
             # "village", "borough" -- and never consulted LSAD_WORDS above, so adding a word
             # there did nothing at all. Found 2026-10-04 when West Virginia's "Ranson
             # corporation" still would not resolve after LSAD_WORDS was extended.
-            for des in LSAD_WORDS | {LSAD.get(lsad or "", "")}:
+            # LONGEST FIRST, IN AN ORDERED LIST. This loop used to iterate a set, so which
+            # unit word won was up to the hash order: "charter township" was tried after
+            # "town" and Michigan's townships keyed as "waterford charter". Sorting by
+            # length means the most specific designation always wins.
+            for des in sorted(LSAD_WORDS | {LSAD.get(lsad or "", "")},
+                              key=lambda d: (-len(d), d)):
                 if des and n.endswith(" " + des):
                     n = n[: -len(des) - 1]
                     break
+            # A QUALIFIER CAN SIT IN FRONT OF THE UNIT WORD. Handled at the top of this
+            # function, before the designation pass, because "township" is a DESIGNATION and
+            # that pass runs first.
     n = unicodedata.normalize("NFKD", n)
     n = "".join(c for c in n if not unicodedata.combining(c))
     n = n.replace(".", "").replace("'", "")

@@ -57,66 +57,69 @@ def stamp_html(html, stats=None):
 
 
 SITE_JS = ROOT / 'assets' / 'js' / 'site.js'
-# Matches the JS STRINGS site.js builds its injected URLs from. Deliberately anchored on the
-# leading quote, so the two querySelector('script[src*="assets/js/search.js..."]') probes in
-# the same file (which use a double quote) are not touched. TWO files are injected now -- the
-# shared search matcher and search.js itself -- so the pattern names both and the digest is
-# chosen per match rather than being fixed to one file.
-SITE_REF = re.compile(r"('assets/js/(search-match|search)\.js)(?:\?v=[0-9a-f]+)?'")
+# Every asset URL that a SCRIPT builds from a string, and the file that holds it. REF only
+# looks at href= and src= in HTML, so a URL built in code was never stamped and those pages
+# fetched a BARE url: a returning visitor could run a stale copy for as long as the CDN cache
+# lasted. That defect is recorded in site.js from 2026-09-27 and it struck again on
+# 2026-10-05, when a stale copy made a working location lookup look broken.
+#
+# search.js joined this table on 2026-10-30, when it began loading the place table itself.
+# Before that it appended location-data.js and locate.js with bare URLs, which had the same
+# latent staleness. Each entry is (file that builds the URL, the asset it builds).
+BUILT_URLS = {
+    'assets/js/site.js': ('search-match', 'search'),
+    'assets/js/search.js': ('places', 'location-data', 'locate'),
+}
+# The pattern that finds one of those strings, anchored on the leading quote so a
+# querySelector('script[src*="assets/js/search.js"]') probe (double quote) is not touched.
+BUILT_REF = re.compile(r"('assets/js/(%s)\.js)(?:\?v=[0-9a-f]+)?'".replace(
+    '%s', '|'.join(re.escape(n) for names in BUILT_URLS.values() for n in names)))
 
 
-def stamp_site_js(stats):
-    """Put the current hash into every asset URL site.js builds in code.
+def stamp_built_urls(stats):
+    """Put the current hash into every asset URL a script builds as a string.
 
-    ONLY THE FILES THAT BUILD AN ASSET URL IN CODE ARE STAMPED HERE. site.js injects
-    search.js on the 117 pages that carry no static tag for it, and it builds that URL from
-    a string. REF above only looks at href=" and src=" in HTML, so the string was never
-    stamped and those pages fetched a BARE url: a returning visitor could run a stale
-    search.js for as long as the CDN cache lasted. The loader's own comment records this
-    defect from 2026-09-27 and says the version is "read from the homepage's static tag" --
-    which is true only ON the homepage, where the tag exists. Found 2026-10-05, when a stale
-    copy made a working location lookup look broken and three probe runs reported a feature
-    that was fine.
+    ONE IMPLEMENTATION FOR EVERY FILE THAT DOES THIS. site.js injects search-match.js and
+    search.js; search.js injects places.js, location-data.js and locate.js. All five are
+    built in code, so REF (which scans href= and src= in HTML) cannot see any of them.
 
-    assets/js/search-match.js joined it on 2026-10-10, injected immediately before search.js
-    so the two searches on this site share one matching rule. It is stamped the same way and
-    for the same reason: an injected URL built from a string is invisible to REF.
-
-    Fails loudly if any expected string is missing or appears more than once, because a
-    silent no-op here is indistinguishable from a stamp that worked.
+    Fails loudly if an expected string is missing or appears more than once, because a
+    silent no-op here is indistinguishable from a stamp that worked. A missing file fails
+    the build rather than shipping a URL that 404s.
     """
-    if not SITE_JS.is_file():
-        return False
-    text = SITE_JS.read_text(encoding='utf-8')
-    hits = {}
+    total = 0
+    for rel_file, assets in sorted(BUILT_URLS.items()):
+        path = ROOT / rel_file
+        if not path.is_file():
+            raise SystemExit("FAIL  %s does not exist" % rel_file)
+        text = path.read_text(encoding='utf-8')
+        hits = {}
 
-    def repl(m):
-        # group(1) carries the leading quote, because the pattern is anchored on it so the
-        # script[src*=...] probes are not touched; group(2) is the bare path for the digest.
-        quoted = m.group(1)
-        rel = quoted[1:]          # drop the leading quote the pattern is anchored on
-        hits[rel] = hits.get(rel, 0) + 1
-        h = digest(rel)
-        if not h:
-            raise SystemExit("FAIL  site.js injects %s, which does not exist" % rel)
-        return quoted + '?v=' + h + "'"
+        def repl(m):
+            quoted = m.group(1)
+            rel = quoted[1:]          # drop the leading quote the pattern is anchored on
+            hits[rel] = hits.get(rel, 0) + 1
+            h = digest(rel)
+            if not h:
+                raise SystemExit("FAIL  %s injects %s, which does not exist"
+                                 % (rel_file, rel))
+            return quoted + '?v=' + h + "'"
 
-    new = SITE_REF.sub(repl, text)
-    if not hits:
-        raise SystemExit("FAIL  site.js: no injected asset URL string found at all")
-    for rel, n in sorted(hits.items()):
-        if n != 1:
-            raise SystemExit("FAIL  site.js: expected exactly one %s URL string, found %d"
-                             % (rel, n))
-    if stats is not None:
-        stats['refs'] += len(hits)
-    if new == text:
-        return False
-    if stats is not None:
-        stats['stale'] += 1
-    if not CHECK:
-        SITE_JS.write_text(new, encoding='utf-8')
-    return True
+        new = BUILT_REF.sub(repl, text)
+        for name in assets:
+            rel = 'assets/js/%s.js' % name
+            if hits.get(rel, 0) != 1:
+                raise SystemExit("FAIL  %s: expected exactly one %s URL string, found %d"
+                                 % (rel_file, rel, hits.get(rel, 0)))
+        if stats is not None:
+            stats['refs'] += sum(hits.values())
+        if new != text:
+            if stats is not None:
+                stats['stale'] += 1
+            total += 1
+            if not CHECK:
+                path.write_text(new, encoding='utf-8')
+    return total
 
 
 def main():
@@ -136,8 +139,7 @@ def main():
     # the pages reference site.js, so stamping it afterwards would leave every page's
     # site.js?v= one build behind.
     js_stats = {'refs': 0, 'stale': 0}
-    if stamp_site_js(js_stats):
-        changed += 1
+    changed += stamp_built_urls(js_stats)
     stamped += js_stats['refs']
     stale += js_stats['stale']
     # THE CHECKOUT BOUNDARY. Letta keeps agent worktrees under .letta/worktrees/, each a full copy

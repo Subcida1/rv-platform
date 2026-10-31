@@ -366,16 +366,57 @@
       state.step = 0;
       render(true);
     }
+    /* WHAT A TYPED LOCATION MEANS IS DECIDED IN ONE PLACE: assets/js/locate.js. This page
+       used to carry its own copy of that rule -- strip a state suffix, look the name up in
+       this state's own coordinate table, fall back to a substring scan. That copy could only
+       ever resolve towns this one state already knew, so a reader who typed their town on
+       the California page and got nothing had no way to know the site had never heard of it.
+       It also disagreed with the search box, which resolved the same words differently.
+
+       THE RESOLVER ANSWERS WITH PLACES, so this page keeps the job it is good at: turning a
+       town into a point and sorting by distance. `prefer` is this page's own state, because
+       a reader on the California page typing "Klamath" almost never means Oregon. */
     function fromInput() {
       var raw = $('loc').value;
       if (!raw.trim()) { applyUser(null); note('A city or ZIP is enough. We use it to sort by how close they are, nothing else.'); return; }
-      var u = locate(raw);
+      /* TWO RESOLVERS, ONE ANSWER, because the place table is not always there. On a state page
+         it is loaded (build-listings.py adds the tag), and RV_LOCATE knows every town in the
+         country, so a reader who types a town in ANOTHER state gets sent to the page that can
+         help. In a harness, and on any page where the table failed to load, RV_LOCATE reports
+         nothing and this falls back to `locate()`, which searches THIS state's coordinate
+         table: the behavior before 2026-10-30, kept as the floor rather than the ceiling.
+         Falling back is not a compromise: the coordinate table is exact for every town in the
+         state, and it is the only source that always exists on the page that needs it. */
+      var r = window.RV_LOCATE ? window.RV_LOCATE(raw, { prefer: ST }) : null;
+      var own = r ? r.matches.filter(function (m) { return m.code === ST; })[0] : null;
+      var u = null;
+      if (own) {
+        var town = String(own.name || '').toLowerCase();
+        var ll = CO.city[canon(town)] || (r.zip ? CO.zip[r.zip] : null);
+        if (!ll) {
+          var near = Object.keys(CO.city).filter(function (k) { return k.indexOf(canon(town)) === 0; });
+          if (near.length) ll = CO.city[near.sort()[0]];
+        }
+        if (ll) u = { ll: ll, label: own.name + ', ' + ST, town: canon(town), near: '' };
+      }
+      if (!u) u = locate(raw);        // this state's own table, or null
       if (!u) {
-        note('We could not place "' + raw.trim() + '". Try a town name, a 5-digit ZIP, or the button to use your location.', true);
+        var typed = (r && r.name) || raw.trim();
+        // A place in ANOTHER state, or one this page's table cannot place. Sending the
+        // reader to the page that CAN answer beats telling them this page has nothing.
+        var other = r && r.matches.filter(function (m) { return m.code !== ST; })[0];
+        if (other) {
+          note('"' + typed + '" is in ' + other.code + '. Opening the ' + other.code +
+               ' directory, which has the shops near it.', true);
+          window.location.href = window.RV_LOCATE_URL(other, r.zip);
+          return;
+        }
+        note('We could not place "' + typed + '". Try a town name, a 5-digit ZIP, or the button to use your location.', true);
         return;
       }
       applyUser(u);
-      note('Sorted for ' + u.label + (u.near ? ' (near ' + u.near + ')' : '') + '. Change the town or ZIP any time.');
+      var said = r && r.corrected ? ' (you typed "' + r.said + '")' : '';
+      note('Sorted for ' + u.label + (u.near ? ' (near ' + u.near + ')' : '') + said + '. Change the town or ZIP any time.');
     }
     $('loc-go').addEventListener('click', fromInput);
     $('loc').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); fromInput(); } });

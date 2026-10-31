@@ -273,5 +273,49 @@
   "Monroe Township": {
     "to_zip": "08831",
     "why": "Monroe Township in Middlesex County, New Jersey, is a township rather than a census designated place, so the only coordinate any source carries is the ZIP area that serves it, 08831, which is the business's own ZIP. That ZCTA centroid is the Census's own."
+  },
+  "Irvington": {
+    "to_zip": "36544",
+    "why": "Irvington, Alabama is an unincorporated community in Mobile County with no Census place of its own, so a listing based there had no coordinate. 36544 is the ZIP area that serves it."
+  },
+  "Stateline": {
+    "to_zip": "89449",
+    "why": "Stateline, Nevada sits on the California line at South Lake Tahoe and the Census place file does not carry it. 89449 is the ZIP area that serves it. This entry is WHY a listing based at Stateline resolves to Nevada and not to the California page."
+  },
+  "Saint Georges": {
+    "to_zip": "19733",
+    "why": "Saint Georges, Delaware is an unincorporated community in New Castle County with no Census place. 19733 is the ZIP area that serves it."
+  },
+  "Winston": {
+    "to_zip": "30187",
+    "why": "Winston, Georgia is an unincorporated community in Douglas County. The Census carries only a Winston CCD, which is counting geography and is not indexed as a place. 30187 is the ZIP area that serves it."
+  },
+  "Atwood": {
+    "to_zip": "46502",
+    "why": "Atwood, Indiana is an unincorporated community in Kosciusko County with no Census place. 46502 is the ZIP area that serves it."
+  },
+  "Linwood": {
+    "to_zip": "48634",
+    "why": "Linwood, Michigan is an unincorporated community in Bay County with no Census place, so a listing based there resolved to a Linwood in another state. 48634 is the ZIP area that serves it."
+  },
+  "Candler": {
+    "to_zip": "28715",
+    "why": "Candler, North Carolina is an unincorporated community in Buncombe County with no Census place. 28715 is the ZIP area that serves it."
+  },
+  "Black Hawk": {
+    "to_zip": "57718",
+    "why": "Black Hawk, South Dakota is a small community in Meade County that the place file does not carry; without this a listing based there resolved to Black Hawk, Colorado. 57718 is the ZIP area that serves it, as the listing's own record states."
+  },
+  "Stafford": {
+    "to_zip": "22554",
+    "why": "Stafford, Virginia is an unincorporated community in Stafford County. The Census carries only Stafford Courthouse CDP, which is the county seat a few miles away and not the name a reader types. 22554 is the ZIP area that serves it."
+  },
+  "Ringgold": {
+    "to_zip": "24586",
+    "why": "Ringgold, Virginia is an unincorporated community in Pittsylvania County with no Census place, so a listing based there resolved to a Ringgold in another state. 24586 is the ZIP area that serves it."
+  },
+  "Boutte": {
+    "to_zip": "70039",
+    "why": "Boutte, Louisiana IS a Census CDP, but the one-edit correction to Butte, Montana beat it because the CDP carries no city marker. The ZIP alias makes the exact name win. 70039 is the ZIP area that serves it, as the listing's own record states."
   }
 }

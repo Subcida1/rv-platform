@@ -828,6 +828,14 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .srch-none{padding:14px;font-size: var(--fs-md);color:var(--text-2)}
 .srch-none b{color:var(--text)}
 .srch-none span{display:block;margin-top:6px;font-size: var(--fs-sm);color:var(--text-3)}
+/* THE TWO REAL NEXT CLICKS under a zero-result line (2026-10-30). A reader who typed
+   something we cannot answer gets guides and the directory, not a sentence telling them to
+   type differently. Each is a 44px tap target, because a dead end that is also hard to hit
+   is two failures on one screen. */
+.srch-more{display:block;margin-top:10px;padding:12px 14px;border:1px solid var(--border-2);
+  border-radius:12px;font-weight:600;color:var(--b1);text-decoration:none;transition:.16s}
+.srch-more:hover,.srch-more:focus-visible{border-color:var(--b2);background:var(--surface-2);
+  color:var(--text)}
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
 .chip{font-size: var(--fs-sm);font-weight:500;color:var(--text-2);border:1px solid var(--border-2);border-radius:999px;padding:7px 15px;background:var(--surface);transition:.16s;cursor:pointer}
 .chip:hover{color:var(--b1);border-color:var(--b2)}
