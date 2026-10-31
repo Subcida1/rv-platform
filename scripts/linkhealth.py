@@ -343,6 +343,17 @@ def classify(url: str, first_fail_seen: dict | None = None, last_ok: str = "") -
         if "timed out" in r.error.lower() or "timeout" in r.error.lower():
             out.update(verdict="SUSPECT", note=f"timeout, retried once: {r.error}")
             return out
+        if "name resolution" in r.error.lower() or "name or service not known" in r.error.lower() \
+                or "temporary failure" in r.error.lower() or "nodename nor servname" in r.error.lower():
+            # A DNS problem is about the BOX as much as the host. `Temporary failure in name resolution`
+            # is Python's wording for a resolver that could not answer, and it is the same string for a
+            # domain that has genuinely gone and for a resolver hiccup -- measured on this box, a real
+            # dead domain and a transient blip produce identical text. A transient fault must never be a
+            # removal, so this is SUSPECT: it confirms only on a second failure in a later run, and by
+            # then a genuinely dead domain fails again while a blip does not.
+            out.update(verdict="SUSPECT", note=f"DNS did not answer, which may be this box's resolver "
+                                               f"rather than the host: {r.error[:90]}")
+            return out
         out.update(verdict="SUSPECT", note=f"connection fault: {r.error}")
     else:
         out["verdict"] = "SUSPECT"
@@ -369,6 +380,16 @@ def classify(url: str, first_fail_seen: dict | None = None, last_ok: str = "") -
         return out
 
     if root_dead:
+        # A root that failed because the resolver could not answer is not evidence of a dead host: the
+        # same wording covers a domain that is gone and a resolver hiccup on this box. Say SUSPECT so it
+        # is rechecked, rather than removing anything on one bad lookup.
+        if root.error and ("name resolution" in root.error.lower()
+                           or "name or service not known" in root.error.lower()
+                           or "temporary failure" in root.error.lower()):
+            out.update(verdict="SUSPECT",
+                       note=f"DNS did not answer at the root either, which may be this box's resolver "
+                            f"rather than the host: {root.error[:90]}")
+            return out
         out.update(verdict="DEAD-HOST", note=f"host root does not serve a page ({root.status or root.error})")
         return out
     if root_is_canary:
@@ -778,6 +799,15 @@ def selftest() -> int:
           "CERTIFICATE" in tls_err.upper() or "SSL" in tls_err.upper(), True)
     check("a plain connection failure is not mistaken for a cert problem",
           "CERTIFICATE" in "URLError: [Errno -2] Name or service not known".upper(), False)
+
+    # A DNS failure is not a dead host. Measured: 'Temporary failure in name resolution' is the same
+    # string for a domain that is gone and for a resolver hiccup on this box, and a blip must never be
+    # a removal.
+    dns_err = "URLError: [Errno -3] Temporary failure in name resolution"
+    check("a DNS fault is recognised as a resolver problem",
+          any(k in dns_err.lower() for k in ("name resolution", "temporary failure")), True)
+    check("an HTTP 404 is NOT treated as a DNS problem",
+          any(k in "404 not found".lower() for k in ("name resolution", "temporary failure")), False)
 
     print(f"\nselftest: {len(fails)} failure(s)")
     return 1 if fails else 0
