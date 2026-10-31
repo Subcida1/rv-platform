@@ -111,22 +111,25 @@ ICONS = {
     "tire": '<circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="12" r="6.1"/><circle cx="12" cy="12" r="2.3"/>'
             '<path d="M12 2.8v3.3M12 17.9v3.3M2.8 12h3.3M17.9 12h3.3"/>'
             '<path d="M5.5 5.5l2.3 2.3M16.2 16.2l2.3 2.3M18.5 5.5l-2.3 2.3M7.8 16.2l-2.3 2.3"/>',
-    # A TOW HITCH, drawn from the product photo T pointed at (2026-10-31).
-    # The earlier attempts failed for reasons a comparison against the photo made
-    # plain, so this one is traced off it instead of invented: ONE connected
-    # piece of metal, not stacked blocks. A long shank with a pin hole punched
-    # through it, an angled drop (not a 90 degree corner), and a solid ball
-    # sitting directly on the platform the drop ends in. Nothing floats and
-    # nothing is drawn as a ring.
-    "hitch": '<path d="M2.2 6.4h10.4a1.6 1.6 0 0 1 1.4.8l2.6 4.6h4.6a2.6 2.6 0 0 1 2.6 2.6v1.4H9.4L2.2 15.8z"/>'
-             '<circle cx="6.2" cy="11.1" r="1.35"/>'
-             '<circle cx="17.3" cy="7.1" r="2.7"/>'
-             '<path d="M2.2 6.4v9.4"/>',
+    # A TOW HITCH, fifth version. Four earlier attempts were built around a
+    # shank-plus-drop-and-ball silhouette traced off a product photo, and every
+    # one of them failed the same way: at the size it ships, the shank and the
+    # bracket average into an abstract mechanical lump. The reviewer's verdict on
+    # version four was exactly that, so this drops everything except the two
+    # shapes that cannot be misread: the BALL on top and the COUPLER opening
+    # under it, with one short arm going left to a mounting plate. Fewer parts,
+    # bigger gaps, no bracket geometry to muddy the read.
+    "hitch": '<circle cx="13.4" cy="7.4" r="3.9"/>'
+             '<path d="M10.2 10.6h6.4v5.1h-6.4z"/>'
+             '<path d="M10.2 13.15h6.4"/>'
+             '<path d="M10.2 11.6H4.6v4.6h5.6"/>'
+             '<path d="M4.6 9.9v8.1"/><path d="M2.6 9.9h4"/>'
+             '<path d="M9 18.6h9.6"/><path d="M13.4 17.9v1.4"/>',
     # Balance scale: the emblem for weight and towing. Centre post, a crossbeam
     # with a pointer, and one pan hanging from each end. Drawn after the old
     # scale-weight glyph read as a birthday cake (T, 2026-10-31): three tiers
     # and a candle is a cake, so the beam and pans have to be unmistakable.
-    "scale-balance": '<path d="M12 3.5v3.2"/><path d="M4.5 6.7h15"/><path d="M12 6.7v13.8"/><path d="M8 20.5h8"/><path d="M12 3.5a1.2 1.2 0 1 1 0-.01"/>'
+    "scale-balance": '<path d="M12 3.5v3.2"/><path d="M4.5 6.7h15"/><path d="M12 6.7v13.8"/><path d="M8 20.5h8"/><circle cx="12" cy="2.6" r="1.1"/>'
                       '<path d="M4.5 6.7 1.8 13.6M4.5 6.7l2.7 6.9"/>'
                       '<path d="M1.8 13.6a2.7 2.7 0 0 0 5.4 0z"/>'
                       '<path d="M19.5 6.7l-2.7 6.9M19.5 6.7l2.7 6.9"/>'
