@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/">
  <title>RV Tools &amp; RV Repair Directory | OriginRV</title>
  <meta name="description" content="Free RV tools for owners and full timers: a towing and weight calculator, plain-English winter and troubleshooting guides, and an RV repair directory.">
- <link rel="stylesheet" href="assets/css/style.css?v=78336d3d">
+ <link rel="stylesheet" href="assets/css/style.css?v=1fe4f9fc">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -63,44 +63,43 @@
       query, the two doors name what is behind them, and the guide list IS the
       content rather than a description of the content. -->
  <h1>Fix it with <em class="hl">free RV tools</em> and plain-English guides</h1>
- <p class="sub">Start with the symptom: 60 checklists that say what to test, in what order, plus free tools and a repair directory.</p>
- <form class="search js-search-form" role="search">
+ <p class="sub">60 checklists that say what to test, in what order. Free tools, and a repair directory covering all fifty states.</p>
+ <!-- THE FIELD IS FIRST. T, 2026-10-30: "I think we should remove the nested 'find a tech'
+      search box and make that element an entirely new CTA for the directory page." The field
+      that used to sit inside the right-hand door only ever answered "which state page do I send
+      you to", and it answered that from business records rather than from a table of places, so
+      a reader who typed Los Angeles got nothing. There is now ONE search box on this page and it
+      understands both: a symptom reaches a guide, a town or ZIP reaches the directory. Sites
+      search (assets/js/search.js) decides which from what was typed. -->
+ <form class="search js-search-form" role="search" aria-label="Search OriginRV">
  <div class="search-bar">
- <input type="text" placeholder="Describe what your RV is doing, or search a part" aria-label="Search OriginRV" name="q">
+ <input type="text" placeholder="Describe the problem, or a town or ZIP" aria-label="Search OriginRV" name="q">
  <button class="btn btn-gb" type="submit"><span class="srch-ring" aria-hidden="true"></span><span class="btn-lbl">Search</span></button>
  </div>
  </form>
 
- <!-- TWO DOORS, NOT TWENTY. The old hero carried fifteen tool chips in one wrapped
-      block, which spent the first screenful on a button wall and left the single
-      most common job (something is broken, help me) with no entry point. Each door
-      now names the job and what is behind it, so the visitor knows where it goes
-      before clicking it. -->
- <div class="hero-doors">
- <a class="door" href="guides/#electrical-and-charging">
- <span class="door-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-wrench"/></svg></span>
- <span class="door-t">Something is broken</span>
- <span class="door-p">Furnace, fridge, water heater, AC, 12 volt, slides and leaks.</span>
- <span class="door-go">Troubleshoot it &#8594;</span>
+ <!-- ONE DOOR, NOT TWO. Two equal-weight cards is the pattern the design doctrine rejects: it
+      makes the reader choose before they know anything, and it gives the same visual weight to
+      the main job and the fallback. The main job is "something is broken, help me fix it",
+      because that is what the site's strongest content serves. So the primary door is full
+      width, names what is behind it, and carries the count. The directory is a strip below it:
+      present, clearly second, and one click. -->
+ <a class="hero-door" href="guides/">
+ <span class="hd-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-wrench"/></svg></span>
+ <span class="hd-body">
+ <span class="hd-t">Something is broken</span>
+ <span class="hd-p">Furnace, fridge, water heater, AC, 12 volt, slides, leaks and 54 more. Each one says what to test first, in what order.</span>
+ </span>
+ <span class="hd-go">Troubleshoot it</span>
  </a>
- <!-- THE DIRECTORY DOOR IS THE FIELD ITSELF. A door card beside a ZIP form would be
-      the same job twice in one screen: the card links to /directory/ and the form
-      submits to /directory/. Material's own rule is one primary action per surface, so
-      the right-hand door carries the input instead of a link, and the visitor supplies
-      something and gets a local answer back. A <form> cannot live inside an <a>, which
-      is why this door is a plain container rather than a link card; the action is
-      /directory/ so it still lands somewhere useful with JavaScript off. -->
- <div class="door door-form">
- <span class="door-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-pin-location"/></svg></span>
- <span class="door-t">I need a tech</span>
- <span class="door-p">Mobile techs and service centers across all <span data-claim="states-total-word-lc">fifty</span> states.</span>
- <form class="door-loc" action="directory/" method="get" onsubmit="return RV.findService(this)">
- <input type="text" name="loc" aria-label="ZIP or town for RV repair near you" placeholder="ZIP or town" autocomplete="postal-code" inputmode="text">
- <button class="btn btn-primary btn-sm" type="submit">Find RV service</button>
- </form>
- </div>
- </div>
 
+ <a class="hero-strip" href="directory/">
+ <span class="hs-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-pin-location"/></svg></span>
+ <span class="hs-t">Need a tech instead?</span>
+ <span class="hs-p">Mobile techs and shops in all <span data-claim="states-total-word-lc">fifty</span> states</span>
+ <span class="hs-go">Find RV service</span>
+ </a>
+ 
  <!-- THE THREE NUMBERS, as evidence rather than as buttons. The old hero spent its
       three tiles on "Browse the tools ->" style doorways, which is the third copy of
       the same navigation. The figures are the proof that this site is the established

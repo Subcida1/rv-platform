@@ -96,6 +96,15 @@ def check():
     checked = 0
     for p in pages():
         text = p.read_text(encoding="utf-8", errors="replace")
+        # STRIP COMMENTS BEFORE TOKENISING. Written 2026-10-30 after the homepage hero was
+        # rebuilt and this check reported `<details class="">` outside the content column on
+        # index.html. The page had no such element: the words "<details>" appear inside two
+        # explanatory comments above the guide index, and this tokenizer, which counts every
+        # non-void tag toward depth, read them as real elements. The drift only surfaced when
+        # that rebuild changed the closing divs above them, so a correct page started failing
+        # on prose. A checker that flags prose is worse than none, so comments are removed
+        # first; what remains is the markup a browser actually builds.
+        text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
         m = re.search(r"<main\b[^>]*>(.*?)</main>", text, re.S)
         if not m:
             continue

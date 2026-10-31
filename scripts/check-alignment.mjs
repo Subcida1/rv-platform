@@ -109,7 +109,10 @@ const DECLARED = [
   // one horizontal row so the figures would fit inside the fold. Children are the three
   // counts, all short and fully rounded, so the discovery pass now finds it as a pill row.
   { selector: 'div.hero-stats.hero-stats-slim',    align: 'center', why: 'homepage proof strip: three counts centred under the fold (added 2026-10-29)' },
-  { selector: 'form.door-loc',                     align: 'left',   why: 'the ZIP field inside the homepage directory door; left is correct inside a card' },
+  // RETIRED 2026-10-30 with form.door-loc: the homepage directory door no longer holds a
+  // field. It is a link row now (.hero-strip), whose parts sit on one baseline and are not
+  // pills, so it should not be declared here at all — a declaration would assert an alignment
+  // for something the discovery pass does not treat as a row.
   { selector: 'div.band-cta-acts',                 align: 'left',   why: 'the two actions in the homepage parts/directory band; left is correct inside a card-like band (added 2026-10-29)' },
   { selector: 'div.tool-btns',                     align: 'left',   why: 'the button under a tool card; left is correct inside a card' },
   { selector: 'div.guide-stats',                   align: 'left',   why: 'the finder stat row on a state page' },
