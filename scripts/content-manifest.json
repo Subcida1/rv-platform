@@ -85,7 +85,7 @@
     "sources": []
   },
   "directory/florida.html": {
-    "hash": "3bfa50bd1424f962",
+    "hash": "2d659623cd7e4b7e",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -120,7 +120,7 @@
     "sources": []
   },
   "directory/index.html": {
-    "hash": "a6e8d25ea0acfd9e",
+    "hash": "5025851007a49108",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -211,7 +211,7 @@
     "sources": []
   },
   "directory/montana.html": {
-    "hash": "a45e27731abb839d",
+    "hash": "98ebac2c643a510a",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -253,7 +253,7 @@
     "sources": []
   },
   "directory/newyork.html": {
-    "hash": "fa358d9d0e112e43",
+    "hash": "a6d4ad41c5cb9935",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -330,7 +330,7 @@
     "sources": []
   },
   "directory/texas.html": {
-    "hash": "36f19fb1ae7ce2f2",
+    "hash": "40d651a74b524c6b",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -358,7 +358,7 @@
     "sources": []
   },
   "directory/washington.html": {
-    "hash": "311683abfe91fb63",
+    "hash": "b318431ac0bee631",
     "status": "unverified",
     "verified_by": null,
     "verified_at": null,
@@ -818,10 +818,10 @@
     "claims": "8bcd90bd498e17c5"
   },
   "guides/rv-tank-sensors-reading-wrong.html": {
-    "hash": "d7bbb5ffe697103e",
+    "hash": "927b8f0701178b1d",
     "status": "verified",
-    "verified_by": "eyebrow/kicker removal, site-wide craft pass 2026-10-29: the small uppercase label above each heading was deleted. Proved text-identical by re-parsing both revisions with tags stripped and the eyebrow element removed from the old copy; links, headings and copy unchanged.",
-    "verified_at": "2026-10-29",
+    "verified_by": "link-rot repair, 2026-10-30: the Thetford dump-valve citation was restored at its working URL (the old slug spelled hookups without the hyphen and 404s; the page itself is live) and the source's cleaning caveat for the gray valve was added back. Independently re-reviewed after the change: verdict PASS, quote verbatim accurate, no loss of meaning. Two 404 URLs on the same page were repointed to live equivalents (tankedge products.html to the site root). Text changed on the prevention paragraph and one Sources entry only.",
+    "verified_at": "2026-10-30",
     "sources": [],
     "spec": "_specs/rv-tank-sensors-reading-wrong.md",
     "spec_waived": false,
@@ -975,7 +975,7 @@
     "claims": "2c668bd9cf981fe7"
   },
   "index.html": {
-    "hash": "53cb6bd72ddaad76",
+    "hash": "ccdafce72acadb6b",
     "status": "unverified",
     "verified_by": "2026-10-13 independent fresh-context review (subagent, separate context; same model as the drafter, recorded for the findings rather than as a strength claim, so the status stays unverified). Four findings. APPLIED: (1) the winter section said 'Five guides, one checklist each: plumbing, batteries, tires, roof and furnace' while the five cards under it are Winterize Your Plumbing, Battery Care in Cold, Tires Through Winter, Roof Under Snow Load and RV Froze -- there is no furnace guide in the winter set, so the sentence contradicted the grid on the same screen; it now ends 'roof and a frozen coach'; (2) 'The window seal and the bottom trim, per the makers' handed the guide's basis to an unnamed party, the class the site cuts -- the clause is dropped. REFUTED: 'The maker documents behind every part, linked at the source' is already recorded in _todo/W19-CALIBRATION-SET.md as one of five trust-claim sentences awaiting Ty's ruling, so it is not a session's call; and 'what the manuals say' describes the guide's coverage rather than attributing a fact, and was flagged UNSURE by the reviewer itself. Rule 1, 2, 3 and 5 came back clean, and the page's counts (14 tools, 47 guides, 1,942 businesses, 50 states) all reconcile against the data.",
     "verified_at": null,

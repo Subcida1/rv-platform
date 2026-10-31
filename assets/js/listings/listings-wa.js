@@ -226,15 +226,6 @@ window.RV_LISTINGS_WA = [
    "seatac"
   ],  "region": "Puget Sound region",  "reg": "puget-sound"
  },
- {  "n": "Elite RV",  "c": "Spokane, WA",  "p": "509-437-8015",  "u": "https://www.elitervwa.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Elite RV is a mobile RV repair, maintenance and restoration business serving Spokane and the Inland Northwest. Certified technicians diagnose and repair electrical faults and appliance breakdowns on site and also do preventive maintenance such as roof sealing and system checks. Restoration work covers storm damage, water leaks and aging interiors.",  "g": [
-   "mobile",
-   "rv repair",
-   "maintenance",
-   "restoration"
-  ],  "base": "spokane",  "areas": [
-   "spokane"
-  ],  "region": "Inland Northwest",  "reg": "eastern-wa"
- },
  {  "n": "Truline RV",  "c": "Spokane Valley, WA",  "p": "509-892-7333",  "u": "https://trulinecustomrv.com/",  "t": "center",  "e": false,  "r": false,  "d": "Truline RV is a family-owned RV repair and customization shop at 4510 North Barker in Spokane Valley, Washington. It does RV repair, body repair, interior remodeling, flooring, roofing and accessory installation for RV owners. The business has been in operation more than 20 years and serves Spokane, Spokane Valley, Airway Heights and the greater Pacific Northwest.",  "g": [
    "rv repair shop",
    "rv body repair",

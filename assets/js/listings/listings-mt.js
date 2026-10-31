@@ -132,7 +132,7 @@ window.RV_LISTINGS_MT = [
    "butte"
   ],  "reg": "north-central-mt"
  },
- {  "n": "Hamilton RV Center",  "c": "Hamilton, MT",  "p": "406.802.7055",  "u": "https://www.hamiltonrvsales.com/service",  "t": "center",  "e": false,  "r": false,  "d": "Hamilton RV Center runs an RV service department at 2000 N. 1st St in Hamilton. Its technicians work on travel trailers, fifth wheels, tent trailers and toy haulers with diagnostic and maintenance equipment and genuine parts. The service department serves Hamilton and its neighbors including Stevensville, Philipsburg, Missoula, Leesburg, Carmen and Cobalt.",  "g": [
+ {  "n": "Hamilton RV Center",  "c": "Hamilton, MT",  "p": "406.802.7055",  "u": "https://www.hamiltonrvsales.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Hamilton RV Center runs an RV service department at 2000 N. 1st St in Hamilton. Its technicians work on travel trailers, fifth wheels, tent trailers and toy haulers with diagnostic and maintenance equipment and genuine parts. The service department serves Hamilton and its neighbors including Stevensville, Philipsburg, Missoula, Leesburg, Carmen and Cobalt.",  "g": [
    "RV service",
    "travel trailer repair",
    "fifth wheel repair"
@@ -151,14 +151,5 @@ window.RV_LISTINGS_MT = [
    "florence",
    "darby"
   ],  "region": "Bitterroot Valley",  "spec": "Primarily a parts and do it yourself help center; in-shop repair is limited to electrical systems in most RVs.",  "reg": "northwest-mt"
- },
- {  "n": "Western Trailer & Marine",  "c": "Havre, MT",  "p": "(406) 265-4572",  "u": "https://www.westerntrailersales.com/rv-service",  "t": "center",  "e": false,  "r": false,  "d": "Western Trailer and Marine is a family owned RV dealership in Havre with its own service department, and it has been in the same business for over sixty years. Its service page says the department is staffed with highly trained technicians and that it has the equipment and experience to keep a motorhome or trailer in working order, alongside a parts department that takes requests.",  "g": [
-   "Shop",
-   "Dealer service department",
-   "Parts department",
-   "Hi-Line"
-  ],  "base": "havre",  "areas": [
-   "havre"
-  ],  "region": "Great Falls and the Hi-Line",  "reg": "north-central-mt"
  }
 ];

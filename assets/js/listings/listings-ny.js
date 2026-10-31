@@ -215,11 +215,6 @@ window.RV_LISTINGS_NY = [
    "syracuse"
   ],  "region": "Norwich and the Syracuse area",  "spec": null,  "reg": "southern-tier-ny"
  },
- {  "n": "King of Spades Mobile RV Repair",  "c": "Windsor, NY",  "p": "(607) 201-2110",  "u": "https://www.kingofspadesmobilervrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "King of Spades Mobile RV Repair is based in Windsor, New York and offers year-round mobile RV and trailer system repair. The owner is an NRVTA-certified RV technician, and services include diagnostics and repairs, winterization and de-winterization, roof inspection and sealing, water heater upgrades and AC coil cleaning.",  "g": [
-   "mobile tech",
-   "rv repair"
-  ],  "base": "windsor",  "areas": [],  "region": "Broome County and the Southern Tier",  "spec": null,  "reg": "southern-tier-ny"
- },
  {  "n": "Hartleys Auto & RV Center",  "c": "Munsons Corners, NY",  "p": "(607) 756-5302",  "u": "https://www.cortlandrv.com/rv-dealer/service",  "t": "center",  "e": false,  "r": false,  "d": "Hartleys Auto & RV Center (Cortland RV) operates an RV service department at 882 NY-13 in Munsons Corners, New York, servicing all makes and models of RVs. It handles RV roofs, appliances, slide-outs and awnings plus manufacturer recalls and warranty work, along with suspension, wheel bearing, axle and brake service.",  "g": [
    "dealer service dept",
    "rv service center",

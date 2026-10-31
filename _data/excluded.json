@@ -172,6 +172,31 @@
         "n": "BAM Mobile RV Service and Repair",
         "u": "https://bammobilerv.com/",
         "why": "Site returned 404 on both the root and www when checked 2026-10-05. Phone was 971-701-5971, base Salem, Oregon."
+      },
+      {
+        "n": "Elite RV",
+        "u": "https://www.elitervwa.com/",
+        "why": "Site returned 404 on the root and every path tried when checked 2026-10-30; the domain resolves but serves Wix's ConnectYourDomain error, so the site was never reconnected. Phone was 509-437-8015, base Spokane, Washington."
+      },
+      {
+        "n": "Gulf to Bay RV Repair",
+        "u": "https://www.gulftobayrv.com/",
+        "why": "Site returned 404 on the root and every path tried when checked 2026-10-30; the domain serves Wix's ConnectYourDomain error. Phone was 727-218-9534, base Palm Harbor, Florida."
+      },
+      {
+        "n": "King of Spades Mobile RV Repair",
+        "u": "https://www.kingofspadesmobilervrepair.com/",
+        "why": "Site returned 404 on the root and every path tried when checked 2026-10-30; Squarespace reports the account expired. Phone was (607) 201-2110, base Windsor, New York."
+      },
+      {
+        "n": "Western Trailer & Marine",
+        "u": "https://www.westerntrailersales.com/rv-service",
+        "why": "Site returned 404 on the root and every path tried when checked 2026-10-30, serving a generic page error. Phone was (406) 265-4572, base Havre, Montana."
+      },
+      {
+        "n": "Grace & Gears Automotive",
+        "u": "https://www.graceandgearsautomotive.com/medium-heavy-duty-service/rv-repair",
+        "why": "Site returned 404 on the root and every path tried when checked 2026-10-30, with no content served. Phone was 346-302-3684, base Alvin, Texas."
       }
     ]
   },

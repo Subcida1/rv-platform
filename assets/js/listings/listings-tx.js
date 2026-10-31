@@ -1108,11 +1108,6 @@ window.RV_LISTINGS_TX = [
    "roof"
   ],  "base": "houston",  "areas": [],  "region": "Houston, TX",  "spec": "RV repair and roof and water damage restoration",  "reg": "gulf-coast"
  },
- {  "n": "Grace & Gears Automotive",  "c": "Alvin, TX",  "p": "346-302-3684",  "u": "https://www.graceandgearsautomotive.com/medium-heavy-duty-service/rv-repair",  "t": "center",  "e": false,  "r": false,  "d": "Veteran-owned, family-operated repair shop at 310 County Rd 296A in Alvin that services RVs within a 50-mile radius. It performs drivetrain repairs, slideout installation and repair, AC unit installation and repair, water heater replacement and general mechanical repairs, with ASE-certified technicians who have more than 25 years of diesel and automotive experience. It serves Houston, Pearland, League City, Pasadena, Sugar Land, Galveston, Missouri City, Friendswood, Texas City, Baytown, Deer Park, Lake Jackson, Angleton, Dickinson, La Porte, Rosenberg, Richmond, Santa Fe and Clute.",  "g": [
-   "rv service center",
-   "chassis"
-  ],  "base": "alvin",  "areas": [],  "region": "Houston, TX",  "spec": "RV mechanical repair",  "reg": "gulf-coast"
- },
  {  "n": "Top Choice RV Service & Maintenance",  "c": "Spring, TX",  "p": "832-492-1075",  "u": "https://www.houstonrvservice.com/",  "t": "center",  "e": false,  "r": false,  "d": "RV dealership founded in 2009 at 4611 Spring Cypress Rd in Spring that operates a service department and a body shop department. It has worked in the RV industry for over a decade on motorhomes, travel trailers and fifth wheels, and its site lists a single service and parts phone number. It also runs a paint and body operation under the Top Choice RV Paint & Body name at the same address.",  "g": [
    "rv service center",
    "bodywork"

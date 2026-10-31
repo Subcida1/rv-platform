@@ -153,7 +153,7 @@ window.RV_LISTINGS_MN = [
    "ramsey"
   ],  "region": null,  "spec": null,  "reg": "north-mn"
  },
- {  "n": "Kunes RV Mobile Service",  "c": "La Crescent, MN",  "p": "507-209-2810",  "u": "https://kunesrv.com/kunes-rv-mobile-service-in-the-mississippi-river-valley-area",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV service serving La Crescent and the Mississippi River Valley area. Handles awning and slide topper repairs, slide-out maintenance, roof and exterior repairs, plumbing, electrical systems and appliance repairs. Technicians come to the customer's campsite, residence or roadside.",  "g": [
+ {  "n": "Kunes RV Mobile Service",  "c": "La Crescent, MN",  "p": "507-209-2810",  "u": "https://kunesrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Mobile RV service serving La Crescent and the Mississippi River Valley area. Handles awning and slide topper repairs, slide-out maintenance, roof and exterior repairs, plumbing, electrical systems and appliance repairs. Technicians come to the customer's campsite, residence or roadside.",  "g": [
    "mobile",
    "awning",
    "slide out",
@@ -307,7 +307,7 @@ window.RV_LISTINGS_MN = [
    "winterization"
   ],  "base": "rochester",  "areas": [],  "region": null,  "spec": null,  "reg": "southeast-mn"
  },
- {  "n": "Southside Tire & Auto, LLC",  "c": "Grand Rapids, MN",  "p": "218-326-0363",  "u": "https://www.southsidetireandauto.com/rv-repair-and-service/",  "t": "center",  "e": false,  "r": true,  "d": "Auto and tire service business in Grand Rapids whose RV service department specializes in chassis work for motorhomes and fifth wheels. Offers drivetrain, engine and transmission diagnosis and repair, brakes, suspension, exhaust and electrical work, plus complete interior and exterior RV repair. The facility can accommodate large motor homes and fifth wheels.",  "g": [
+ {  "n": "Southside Tire & Auto, LLC",  "c": "Grand Rapids, MN",  "p": "218-326-0363",  "u": "https://www.southsidetireandauto.com/",  "t": "center",  "e": false,  "r": true,  "d": "Auto and tire service business in Grand Rapids whose RV service department specializes in chassis work for motorhomes and fifth wheels. Offers drivetrain, engine and transmission diagnosis and repair, brakes, suspension, exhaust and electrical work, plus complete interior and exterior RV repair. The facility can accommodate large motor homes and fifth wheels.",  "g": [
    "center",
    "chassis",
    "engine",

@@ -797,39 +797,6 @@
       }
     },
     {
-      "n": "Elite RV",
-      "c": "Spokane, WA",
-      "p": "509-437-8015",
-      "u": "https://www.elitervwa.com/",
-      "t": "mobile",
-      "e": false,
-      "r": false,
-      "d": "Elite RV is a mobile RV repair, maintenance and restoration business serving Spokane and the Inland Northwest. Certified technicians diagnose and repair electrical faults and appliance breakdowns on site and also do preventive maintenance such as roof sealing and system checks. Restoration work covers storm damage, water leaks and aging interiors.",
-      "g": [
-        "mobile",
-        "rv repair",
-        "maintenance",
-        "restoration"
-      ],
-      "base": "Spokane",
-      "areas": [
-        "Spokane"
-      ],
-      "region": "Inland Northwest",
-      "evidence": {
-        "checked": "https://www.elitervwa.com/",
-        "phone_quote": "509-437-8015 service@elitervwa.com",
-        "coverage_quotes": [
-          "we specialize in on-site RV repair and maintenance across Spokane and the Inland Northwest."
-        ],
-        "type_quote": "our certified techs bring fast, reliable RV repair straight to you. We diagnose and fix issues on-site",
-        "emergency_quote": null,
-        "roadside_quote": null,
-        "audited": "2026-09-28 by scripts/audit-tags.py, reading the business's own site",
-        "mobile_quote": "We diagnose and fix issues on-site so you can get back to the road with confidence."
-      }
-    },
-    {
       "n": "Truline RV",
       "c": "Spokane Valley, WA",
       "p": "509-892-7333",

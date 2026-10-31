@@ -406,10 +406,6 @@ window.RV_LISTINGS_FL = [
    "mobile tech"
   ],  "base": "clearwater",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
  },
- {  "n": "Gulf to Bay RV Repair",  "c": "Palm Harbor, FL",  "p": "727-218-9534",  "u": "https://www.gulftobayrv.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Gulf to Bay RV Repair is a locally owned mobile RV repair service run by Dennis Dunne, an RVIAA Certified RV Technician and 2022 National RV Training Academy graduate. The business services Pinellas, Pasco, and Hillsborough counties and handles plumbing and electrical systems, coach batteries, inverters, converters, solar, air conditioners, water heaters, refrigerators, furnaces, water pumps, toilets, leaks, awnings, slide toppers, and steps.",  "g": [
-   "mobile tech"
-  ],  "base": "palm harbor",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
- },
  {  "n": "Same Day RV Repair",  "c": "Clearwater, FL",  "p": "(727) 248-0207",  "u": "https://sameday-rvrepair.com/",  "t": "mobile",  "e": false,  "r": false,  "d": "Same Day RV Repair is a family-owned and operated mobile RV repair company based in Clearwater offering same-day service throughout Tampa Bay. It focuses on major RV appliances including RV air conditioner, refrigerator, water heater, furnace, electrical, and leak repairs with over 10 years of professional repair experience.",  "g": [
    "mobile tech"
   ],  "base": "clearwater",  "areas": [],  "region": "Tampa Bay",  "spec": null,  "reg": "tampa-fl"
