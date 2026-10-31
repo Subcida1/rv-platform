@@ -49,38 +49,33 @@ for _ in $(seq 1 20); do
   sleep 0.5
 done
 
-# linkinator crawls the served site: internal links resolve, and every outbound link is fetched.
+# linkinator crawls the served site, for INTERNAL links only. Every internal href must resolve.
 #
-# WHAT ITS OUTPUT MEANS, and it needs reading rather than trusting. Measured 2026-09-26 on 521
-# links: 15 "broken", of which the large majority were 403, 423 and 429 -- bot protection and
-# rate limiting, not dead pages. A manufacturer's Cloudflare will refuse a script and serve a real
-# person fine. One URL, a Tekonsha PDF, returned NOTHING to three separate tools including a
-# browser user-agent, which is the shape of a genuinely unreachable file.
+# EXTERNAL LINKS MOVED OUT OF HERE 2026-10-30, deliberately. This step used to fetch every outbound link
+# too, and it could not tell a dead site from a moved page: it reported a status code and left the reading
+# to whoever looked. That is the shape of judgement that deleted a live Thetford citation (its slug had
+# gained a hyphen; the page was fine) and came within a step of removing five live businesses whose URLs
+# had merely moved. `scripts/linkhealth.py` now owns external links, on a nightly timer rather than in a
+# gate, and it separates DEAD-HOST from MOVED from UNVERIFIED. Two checkers with different verdicts for
+# one link is how you get an argument, so this one no longer looks outward.
 #
-# So this step REPORTS rather than fails. A gate that fails on other people's bot protection
-# would be red most weeks, and the two real findings would be lost in the noise.
-# TUNED ON MEASUREMENT, and the root cause of the noise was one default: linkinator ships with a
-# 2019-era Chrome 79 user agent, which a lot of hosts treat as a scraper. First run on 2026-09-27:
-# 521 links, 15 "failures", and of those THREE were real. Proved by fetching the same URLs
-# ourselves: wfcotech.com/support/faq/ answers 403 to the crawler and 200 with 101 KB to a current
-# browser UA. The rest were 403/423/429 bot protection and rate limiting, one of them us being
-# rate-limited mid-crawl.
-#
-# So: a current user agent, a timeout (the default is NO TIMEOUT, which is why three links hung
-# forever and came back as status 0), and bot-block codes demoted to warnings. A genuine 403 still
-# surfaces as a warning rather than vanishing, and 404 stays a failure -- which is how the Magnum
-# documentation path was caught.
+# What the old step measured, kept because it is why external checking does not belong in a gate:
+# 2026-09-26, 521 links, 15 "broken" -- mostly 403/423/429 bot protection and rate limiting, not dead
+# pages. 2026-09-27, 521 links, 15 "failures", of which THREE were real; wfcotech.com/support/faq/
+# answers 403 to a crawler and 200 with 101 KB to a current browser UA. A gate that fails on other
+# people's bot protection is red most weeks and the real findings are lost in the noise.
 linkreport() {
+  # --skip with the site's own host excludes every outbound link while still following every internal one.
   timeout 900 npx --yes linkinator "http://127.0.0.1:$PORT/" --recurse \
+    --skip "^(?!http://127\.0\.0\.1:$PORT/).*$" \
     --user-agent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36" \
     --timeout 20000 \
     --retry \
-    --status-code "403:warn" --status-code "423:warn" --status-code "429:warn" \
     2>&1 | grep -E '^\s*\[|ERROR|OK|Scanned' | sed 's/^/    /'
-  printf '    ([0] = no response at all, which is a real failure; 403/423/429 are bot protection)\n'
+  printf '    (internal only; external links are checked nightly by scripts/linkhealth.py)\n'
   return 0
 }
-step "linkinator: every link on the served site" linkreport
+step "linkinator: every internal link on the served site" linkreport
 
 # ---------------------------------------------------------------- Core Web Vitals
 # Lighthouse wants a Chrome BINARY it can exec, and locally ours is a flatpak with no path a

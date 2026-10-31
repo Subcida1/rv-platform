@@ -23,3 +23,8 @@ _data/source/
 
 # generated: scan state and reports, not source
 _log/
+
+# Link-health REPORT is generated output, rewritten by the nightly timer. The store that holds the
+# verdicts lives outside the repo (~/.local/state/linkhealth/), so the repo carries neither. Keeping
+# the report out avoids a dirty tree every morning. The design note under _todo/ is tracked.
+_reports/

@@ -256,6 +256,22 @@ else
   fail=1
 fi
 
+printf '\n=== linkhealth.py: a 404 is a moved page, not a dead source ===\n'
+# OFFLINE, DELIBERATELY. The classifier itself makes network calls, but nothing network-related belongs
+# in the fast gate: a flaky host would fail the build for reasons unrelated to the change. What runs here
+# is the fixture set, which pins the verdicts that cost real damage when they are wrong -- the moved
+# Thetford page that was mistaken for a dead one, the dead hosts that really are dead, the 403 challenge
+# that must never read as a pass, and the 200 catch-all that is a live site rather than a dead one.
+# Milliseconds, deterministic, and it keeps the checker from regressing. Real checking is on a timer.
+if python3 scripts/linkhealth.py --selftest > /tmp/lh-ci.txt 2>&1; then
+  tail -2 /tmp/lh-ci.txt
+  printf '    ok\n'
+else
+  cat /tmp/lh-ci.txt
+  printf '    FAILED: linkhealth.py: the link classifier no longer separates dead hosts from moved pages\n'
+  fail=1
+fi
+
 printf '\n================================================================\n'
 if [ "$fail" -eq 0 ]; then
   printf 'every check passed\n'
