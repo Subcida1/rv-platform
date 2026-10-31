@@ -42,5 +42,15 @@ jobs:
           distribution: temurin
           java-version: '21'
 
+      # THE CENSUS SOURCES ARE GITIGNORED, SO THE RUNNER NEVER HAS THEM. _data/source/ is
+      # in .gitignore, which is right: five files and ~27MB of Census gazetteer that
+      # nobody should version. But build-places.py --selftest and --check both call load(),
+      # and load() exits when the files are absent, so both steps failed in CI on every
+      # push while passing on any machine that had run --fetch once. Green locally, red on
+      # GitHub, for six days. The fetch is idempotent and skips files already on disk, so
+      # this costs one download on the runner and nothing on a warm checkout.
+      - name: Census sources the gitignored gates read
+        run: python3 scripts/build-coords.py --fetch
+
       - name: the site's own gates
         run: bash scripts/ci.sh
