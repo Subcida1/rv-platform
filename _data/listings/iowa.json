@@ -43,6 +43,7 @@
     "Sioux City": "west-ia",
     "Glenwood": "west-ia",
     "Sibley": "west-ia",
+    "Westside": "west-ia",
     "Okoboji": "north-ia",
     "Forest City": "north-ia",
     "Hazleton": "north-ia",
@@ -63,7 +64,9 @@
     "Pocahontas": "north-ia",
     "Storm Lake": "north-ia",
     "Sioux Center": "north-ia",
-    "Orange City": "north-ia"
+    "Orange City": "north-ia",
+    "Mallard": "north-ia",
+    "Nora Springs": "north-ia"
   },
   "listings": [
     {
@@ -1081,6 +1084,101 @@
         "coverage_quotes": [
           "At Tri State Mobile RV Repair, our vision is to become the top choice for mobile RV repair services and mobile RV inspections in the Sioux Falls area."
         ]
+      }
+    },
+    {
+      "n": "Walker Trailer Sales Inc",
+      "c": "Nora Springs, IA",
+      "p": "641-749-2321",
+      "u": "https://www.walkertrailersales.com/rv-service-department",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Walker Trailer Sales is an RV dealership in Nora Springs with its own service department, and it takes in work on motorhomes and trailers whether or not the unit was bought there. The shop covers the fresh water system, awning repair, tow bars and lighting, general roof repair, LP systems, electrical systems, leveling systems and winterizing, and it performs warranty and extended warranty repair. Its service page states plainly that the department is staffed with trained technicians and that the goal is to get a unit in and out of the shop efficiently. Hours are Monday to Friday 8am to 5pm and Saturday 8am to noon, year round.",
+      "g": [
+        "service center",
+        "rv dealer",
+        "warranty work",
+        "appliances",
+        "electrical"
+      ],
+      "base": "Nora Springs",
+      "areas": [],
+      "region": "north-ia",
+      "spec": "Warranty and extended warranty repair handled in house. Services motorhomes and trailers bought elsewhere.",
+      "evidence": {
+        "checked": "https://www.walkertrailersales.com/rv-service-department",
+        "phone_quote": "641-749-2321",
+        "type_quote": "Our service department is staffed with highly trained technicians dedicated to making sure your RV stays in great working order for years to come.",
+        "coverage_quotes": [
+          "We are proud to provide quality service in the Nora Springs area."
+        ],
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Small Town RV",
+      "c": "Mallard, IA",
+      "p": "712-425-3230",
+      "u": "https://www.smalltownrv.com/",
+      "t": "both",
+      "e": false,
+      "r": false,
+      "d": "Small Town RV is an RV dealership and repair shop on 112 Miller Street in Mallard, and it runs a mobile service that travels to the customer as well as an in-shop service department. The shop's listed work includes inspections, axle inspection, winterizing and general repair, and it stocks a parts counter carrying electrical components, plumbing supplies, roof vents, tow hitches, brake controllers and lighting for travel trailers and fifth wheels. It sells Coachmen Chaparral, Coachmen Northern Spirit and Forest River Wildwood Heritage Glen units and keeps a parts request form for parts it does not have on the shelf. Hours are Monday to Friday 8am to 5pm and Saturday 8am to noon, and it is open over the noon hour.",
+      "g": [
+        "rv dealer",
+        "service center",
+        "mobile RV service",
+        "parts",
+        "appliances",
+        "maintenance"
+      ],
+      "base": "Mallard",
+      "areas": [],
+      "region": "north-ia",
+      "spec": "Runs a mobile service that comes to the customer, alongside the shop in Mallard. Owns the Small Town Campground next door, which is not part of the repair business.",
+      "evidence": {
+        "checked": "https://www.smalltownrv.com/",
+        "phone_quote": "Call 712-425-3230",
+        "type_quote": "Small Town RV | New & Used RV's & Expert Repair",
+        "coverage_quotes": [
+          "112 Miller Street Mallard, IA 50562"
+        ],
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
+      }
+    },
+    {
+      "n": "Reis Trailer",
+      "c": "Westside, IA",
+      "p": "712-673-4488",
+      "u": "https://www.reistrailer.com/",
+      "t": "center",
+      "e": false,
+      "r": false,
+      "d": "Reis Trailer is a family-owned trailer dealership and service shop on the west side of Crawford County, and its service department takes in campers and toyhaulers alongside horse, livestock, flat bed, boat, cargo and utility trailers. Repair and maintenance work is offered on all makes and models within that range, and the shop also carries a parts counter. It is the closest service counter to Denison and the surrounding Crawford County towns, an area with no other RV repair shop. Hours are Monday to Friday 9am to 6pm, with Saturday by appointment.",
+      "g": [
+        "trailer service",
+        "service center",
+        "parts"
+      ],
+      "base": "Westside",
+      "areas": [],
+      "region": "west-ia",
+      "spec": "Trailer dealership whose service department covers campers and toyhaulers as well as horse, livestock, flat bed, boat, cargo and utility trailers. Serves west central Iowa.",
+      "evidence": {
+        "checked": "https://www.reistrailer.com/",
+        "phone_quote": "712-673-4488",
+        "type_quote": "We are a full service trailer dealership in west central Iowa.",
+        "coverage_quotes": [
+          "Our service department offers repair and maintenance on all makes and models of horse, livestock, campers, flat bed, boat, cargo, utility, and toyhauler trailers."
+        ],
+        "emergency_quote": null,
+        "roadside_quote": null,
+        "licence": null
       }
     }
   ]
