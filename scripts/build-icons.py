@@ -59,14 +59,16 @@ ICONS = {
     "stove": '<path d="M3.5 9.5h17v11h-17z"/><path d="M3.5 9.5V6a1.5 1.5 0 0 1 1.5-1.5h14A1.5 1.5 0 0 1 20.5 6v3.5"/><circle cx="7.5" cy="13.8" r="1.7"/><circle cx="16.5" cy="13.8" r="1.7"/><path d="M9.2 18h5.6"/>',
     "microwave": '<path d="M2.5 6.5h19v11h-19z"/><path d="M15.5 6.5v11"/><path d="M5.5 11h6.5v4h-6.5z"/><path d="M18 10h.01M18 13.5h.01"/>',
     "washer": '<path d="M4.5 2.5h15v19h-15z"/><path d="M4.5 8h15"/><circle cx="12" cy="14.6" r="3.6"/><path d="M8.6 12.6c1.4 1 2 2.6 1.6 4.4"/><path d="M7 5h1.5M11 5h1.5"/>',
-    # WATER HEATER: the tank with a burner under it and a flue on top. T read the
-    # shower glyph used on this card as a rain cloud (2026-10-31), and nothing
-    # else on the site used this symbol, so it is the obvious replacement.
-    "water-heater": '<path d="M12 2.5v2.4"/><path d="M8.5 2.5h7"/>'
-                    '<path d="M5.5 8.7a6.5 6.5 0 0 1 13 0v8.6a3 3 0 0 1-3 3h-7a3 3 0 0 1-3-3z"/>'
-                    '<path d="M8.5 6.8h7"/>'
-                    '<path d="M9.5 12.4h5"/><path d="M9.5 15.4h5"/>'
-                    '<path d="M2.8 20.5h18.4"/><path d="M6 18.3h12"/>',
+    # WATER HEATER: tank silhouette with a flame at the base. Three door and
+    # panel versions all failed the same way, and the 22px render showed why:
+    # interior detail inside a box averages into a grey blob once the icon is
+    # scaled down to the size it actually ships at. An outline survives scaling,
+    # so this is a silhouette: a domed tank, a flue, and a flame under it.
+    "water-heater": '<path d="M6 9.2a6 6 0 0 1 12 0v8.3H6z"/>'
+                    '<path d="M9.7 2.6h4.6v3.2H9.7z"/>'
+                    '<path d="M12 2.6V0.6"/>'
+                    '<path d="M12 20.9c-1.6 0-2.9-1.2-2.9-2.7 0-1.6 1.7-2.2 1.7-3.9 1.7.6 4.1 1.4 4.1 4 0 1.5-1.3 2.6-2.9 2.6z"/>'
+                    '<path d="M8.6 21.4h6.8"/>',
 
     # --- water & plumbing ---
     "droplet": '<path d="M12 2.8c3.2 3.6 5.8 6.7 5.8 10.1a5.8 5.8 0 1 1-11.6 0c0-3.4 2.6-6.5 5.8-10.1z"/>',
@@ -109,14 +111,17 @@ ICONS = {
     "tire": '<circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="12" r="6.1"/><circle cx="12" cy="12" r="2.3"/>'
             '<path d="M12 2.8v3.3M12 17.9v3.3M2.8 12h3.3M17.9 12h3.3"/>'
             '<path d="M5.5 5.5l2.3 2.3M16.2 16.2l2.3 2.3M18.5 5.5l-2.3 2.3M7.8 16.2l-2.3 2.3"/>',
-    # A TOW HITCH that reads as one (T, 2026-10-31: "completely garbled"). The
-    # receiver tube at the left, the ball mount rising to a ball at the right,
-    # and the safety-chain eye below it. Drawn as a side elevation, which is the
-    # angle anyone actually recognises a hitch from.
-    "hitch": '<path d="M2.5 9.5h7.5a3 3 0 0 1 3 3v2.5"/><path d="M2.5 7.5v8"/><path d="M2.5 11.5h7.5"/>'
-             '<circle cx="13" cy="18" r="2.6"/><path d="M10.8 19.5h4.4"/>'
-             '<path d="M13 15.4v-1.2"/><path d="M15.6 18h3.9"/>'
-             '<circle cx="7.2" cy="16.8" r="1.5"/>',
+    # A TOW HITCH, drawn from the product photo T pointed at (2026-10-31).
+    # The earlier attempts failed for reasons a comparison against the photo made
+    # plain, so this one is traced off it instead of invented: ONE connected
+    # piece of metal, not stacked blocks. A long shank with a pin hole punched
+    # through it, an angled drop (not a 90 degree corner), and a solid ball
+    # sitting directly on the platform the drop ends in. Nothing floats and
+    # nothing is drawn as a ring.
+    "hitch": '<path d="M2.2 6.4h10.4a1.6 1.6 0 0 1 1.4.8l2.6 4.6h4.6a2.6 2.6 0 0 1 2.6 2.6v1.4H9.4L2.2 15.8z"/>'
+             '<circle cx="6.2" cy="11.1" r="1.35"/>'
+             '<circle cx="17.3" cy="7.1" r="2.7"/>'
+             '<path d="M2.2 6.4v9.4"/>',
     # Balance scale: the emblem for weight and towing. Centre post, a crossbeam
     # with a pointer, and one pan hanging from each end. Drawn after the old
     # scale-weight glyph read as a birthday cake (T, 2026-10-31): three tiers
@@ -146,7 +151,15 @@ ICONS = {
     "calendar": '<path d="M3.5 5.5h17v15h-17z"/><path d="M3.5 10.5h17"/><path d="M8 3.5v4M16 3.5v4"/><path d="M7 14h2.5M14.5 14H17M7 17.2h2.5M14.5 17.2H17"/>',
     "checklist": '<path d="M4 6.5h16v14H4z"/><path d="M7.5 3.5v4M16.5 3.5v4"/><path d="M7.5 11.5 9 13l2.5-2.5"/><path d="M13 12h5"/><path d="M7.5 16.5 9 18l2.5-2.5M13 17h5"/>',
     "notebook": '<path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 3.5v17"/><path d="M11.5 8h4.5M11.5 12h4.5M11.5 16h3"/>',
-    "book": '<path d="M4 4.5h6a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M20 4.5h-6a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5H20z"/>',
+    # A CLOSED BOOK (T, 2026-10-31: "the spine is not aligned and it just kind of
+    # looks like it is poking out of the bottom"). The old glyph was two open
+    # cover strokes that both ran to the bottom edge, so the spine crossed the
+    # base. Redrawn as one closed outline: a rectangle with a rounded spine on
+    # the left and two page lines. Every line here ends at y=19 or above, so
+    # nothing can protrude below the book.
+    "book": '<path d="M5 3.5h13.5v17H5z"/>'
+            '<path d="M8.2 3.5v17"/>'
+            '<path d="M11 8h4.8M11 11.5h4.8"/>',
     "tag": '<path d="M11.6 2.5H21.5V12l-9.4 9.4a1.4 1.4 0 0 1-2 0l-7.5-7.5a1.4 1.4 0 0 1 0-2z"/><circle cx="17.4" cy="6.6" r="1.5"/>',
     "search": '<circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.2 15.2 21 21"/>',
     "map": '<path d="M2.5 6 9 3.5v14L2.5 20z"/><path d="M9 3.5l6 2.5v14l-6-2.5z"/><path d="M15 6l6.5-2.5v14L15 20z"/><path d="M6 9.5c1 .8 1.3 1.8.8 2.8"/>',
