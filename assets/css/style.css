@@ -70,6 +70,13 @@
   --danger-edge:#f2b8be;
   --danger-soft:#f43f5e;   /* the rose still used for error borders and dots */
 
+  /* ---- THE MAP MARKER RED. One use on the site: the filled location pin on
+     the homepage's directory row (T, 2026-10-31: "use the same red as maps",
+     meaning the Google Maps pin). It lives outside the status family on
+     purpose, because it does not mean failure; it means "a place on a map",
+     which is why it is the marker red and not --danger. ---- */
+  --maps-red:#ea4335;
+
   /* ---- CAUTION: the amber between "fine" and "failed". Added 2026-09-22.
      There was no amber token, so every warn state was painted with the BLUE tint
      family, which meant a reading at the edge of a limit looked the same as an
@@ -3967,6 +3974,16 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .hero-strip:hover{border-color:var(--b2);background:var(--surface)}
 .hero-strip:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 .hs-ic{flex:none;display:flex;align-items:center;color:var(--text-3)}
+/* THE DIRECTORY PIN IS FILLED RED, keeping its outline (T, 2026-10-31). This is
+   the one red on the front page that is not an error, so it is a deliberate
+   exception to the "red means a real failure and nothing else" rule the token
+   block states, which is why the colour is named here rather than added as a
+   new semantic token. --maps-red is the Google Maps marker red; the icons are
+   drawn with fill:none/stroke:currentColor, so the fill is set on the use and
+   the stroke stays inherited, which is exactly the "filled but still outlined"
+   look asked for. */
+.hs-ic-red{color:var(--maps-red)}
+.hs-ic-red .ic{fill:var(--maps-red)}
 .hs-t{font-size:var(--fs-md);font-weight:800;color:var(--text)}
 .hs-p{flex:1;min-width:0;font-size:var(--fs-sm);color:var(--text-3)}
 .hs-go{flex:none;font-size:var(--fs-sm);font-weight:800;color:var(--b1);white-space:nowrap}

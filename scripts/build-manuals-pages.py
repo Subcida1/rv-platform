@@ -60,7 +60,9 @@ SYSTEM_ICON = {
     "heating-and-cooling": "fan",
     "kitchen-and-appliances": "fridge",
     "exterior-and-body": "awning",
-    "towing-and-running-gear": "scale-weight",
+    # A balance scale rather than the old scale-weight glyph, which read as a
+    # birthday cake (T, 2026-10-31). Same swap as the homepage's weight cards.
+    "towing-and-running-gear": "scale-balance",
     "sanitation-and-tanks": "toilet",
     "chassis-and-drivetrain": "gears",
 }

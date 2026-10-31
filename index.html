@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/">
  <title>RV Tools &amp; RV Repair Directory | OriginRV</title>
  <meta name="description" content="Free RV tools for owners and full timers: a towing and weight calculator, plain-English winter and troubleshooting guides, and an RV repair directory.">
- <link rel="stylesheet" href="assets/css/style.css?v=1fe4f9fc">
+ <link rel="stylesheet" href="assets/css/style.css?v=e5aa4a38">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -94,10 +94,31 @@
  </a>
 
  <a class="hero-strip" href="directory/">
- <span class="hs-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-pin-location"/></svg></span>
+ <span class="hs-ic hs-ic-red" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-pin-location"/></svg></span>
  <span class="hs-t">Need a tech instead?</span>
  <span class="hs-p">Mobile techs and shops in all <span data-claim="states-total-word-lc">fifty</span> states</span>
  <span class="hs-go">Find RV service</span>
+ </a>
+
+ <!-- TWO MORE STRIPS, same shape as the directory row (T, 2026-10-31). The
+      hierarchy above is deliberate and is not changed by these: "Something is
+      broken" stays the one full-weight door because that is what the site's
+      strongest content serves, and everything below it is a row of the same
+      weight, so the reader still gets one obvious first click and then a short
+      list of the other ways in. Each strip names what is behind it, the way the
+      two above do, rather than saying "Click here". -->
+ <a class="hero-strip" href="tools/">
+ <span class="hs-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-calculator"/></svg></span>
+ <span class="hs-t">Web tools</span>
+ <span class="hs-p"><span data-claim="tools-live">15</span> free calculators. No account, no sign-up</span>
+ <span class="hs-go">Work out the numbers</span>
+ </a>
+
+ <a class="hero-strip" href="manuals/">
+ <span class="hs-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-book"/></svg></span>
+ <span class="hs-t">Manuals</span>
+ <span class="hs-p">Owner manuals by system and by brand, plus the federal recall file</span>
+ <span class="hs-go">Open the manuals</span>
  </a>
  
  <!-- THE THREE NUMBERS, as evidence rather than as buttons. The old hero spent its
@@ -152,17 +173,17 @@
       searcher would type, taken from each group's highest-demand guides, and the
       count tells the visitor how much is behind the click before they make it. -->
  <div class="sys-grid">
- <a class="sys-card" href="guides/#electrical-and-charging">
- <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-battery"/></svg></span><span class="sys-n">10</span></div>
- <div class="sys-t">Electrical and charging</div>
- <div class="sys-p">Battery not charging, converter, solar, generator, fuses, outlets and lights.</div>
- <div class="sys-sym">No 12 volt power &#183; battery drains &#183; outlets dead &#183; fuse blows</div>
- </a>
  <a class="sys-card" href="guides/#heat-cool-and-appliances">
  <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-fire"/></svg></span><span class="sys-n">13</span></div>
  <div class="sys-t">Heating, cooling, and appliances</div>
  <div class="sys-p">Furnace will not light, fridge not cooling, water heater, air conditioner, tank sensors.</div>
  <div class="sys-sym">Furnace dead &#183; fridge warm &#183; no hot water &#183; AC not cooling</div>
+ </a>
+ <a class="sys-card" href="guides/#electrical-and-charging">
+ <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-battery"/></svg></span><span class="sys-n">10</span></div>
+ <div class="sys-t">Electrical and charging</div>
+ <div class="sys-p">Battery not charging, converter, solar, generator, fuses, outlets and lights.</div>
+ <div class="sys-sym">No 12 volt power &#183; battery drains &#183; outlets dead &#183; fuse blows</div>
  </a>
  <a class="sys-card" href="guides/#water-and-plumbing">
  <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-droplet"/></svg></span><span class="sys-n">9</span></div>
@@ -171,7 +192,7 @@
  <div class="sys-sym">No water &#183; weak pressure &#183; toilet stuck &#183; sewer smell inside</div>
  </a>
  <a class="sys-card" href="guides/#body-slides-and-jacks">
- <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-rv-side"/></svg></span><span class="sys-n">14</span></div>
+ <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-truck"/></svg></span><span class="sys-n">14</span></div>
  <div class="sys-t">Body, slides and jacks</div>
  <div class="sys-p">Leaks, delamination, frame cracks, slide out stuck, awning, steps, jack faults.</div>
  <div class="sys-sym">Roof leak &#183; slide will not move &#183; awning stuck &#183; steps dead</div>
@@ -211,7 +232,7 @@
  <div class="guide-body"><div class="guide-title">RV Furnace Not Working</div><div class="guide-meta">Sail switch, airflow, flame sense, in the order to test them.</div></div>
  </a>
  <a class="card guide-card" href="guides/rv-water-heater-not-heating">
- <div class="guide-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-shower"/></svg></div>
+ <div class="guide-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-water-heater"/></svg></div>
  <div class="guide-body"><div class="guide-title">Water Heater Not Heating</div><div class="guide-meta">ECO reset, and whether you are on gas or electric.</div></div>
  </a>
  <a class="card guide-card" href="guides/rv-water-pressure">
@@ -219,7 +240,7 @@
  <div class="guide-body"><div class="guide-title">RV Water Pressure</div><div class="guide-meta">Regulator, inlet, park supply. Why the shower is weak.</div></div>
  </a>
  <a class="card guide-card" href="guides/rv-refrigerator-not-cooling">
- <div class="guide-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-ice"/></svg></div>
+ <div class="guide-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-fridge"/></svg></div>
  <div class="guide-body"><div class="guide-title">Fridge Not Cooling</div><div class="guide-meta">Leveling, thermistor, cooling unit.</div></div>
  </a>
  <a class="card guide-card" href="guides/rv-towing-capacity">
@@ -381,7 +402,7 @@
  </div>
  <div class="guide-grid">
  <a class="card guide-card" href="tools/weight-calculator">
- <div class="guide-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-scale-weight"/></svg></div>
+ <div class="guide-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-scale-balance"/></svg></div>
  <div class="guide-body"><div class="guide-title">RV Weight &amp; Towing Calculator</div><div class="guide-meta">Can your truck tow it? Payload, GCWR, and the 80% rule.</div></div>
  </a>
  <a class="card guide-card" href="tools/fuel-cost">
@@ -443,7 +464,7 @@
 
    <div class="sys-grid parts-grid">
     <a class="sys-card" href="parts/#towing-and-running-gear">
-     <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-hitch"/></svg></span><span class="sys-n">32</span></div>
+     <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-chassis"/></svg></span><span class="sys-n">32</span></div>
      <div class="sys-t">Towing and running gear</div>
      <div class="sys-p">Hitches, axles, brakes, bearings, tires. The gear that strands you.</div>
     </a>
@@ -458,7 +479,7 @@
      <div class="sys-p">Pumps, filters, regulators, water heaters, the fresh side of the coach.</div>
     </a>
     <a class="sys-card" href="parts/#exterior-and-body">
-     <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-roof"/></svg></span><span class="sys-n">40</span></div>
+     <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-shell-body"/></svg></span><span class="sys-n">40</span></div>
      <div class="sys-t">Exterior and body</div>
      <div class="sys-p">Roof, sealant, windows, doors, awnings, slides. The shell.</div>
     </a>
@@ -473,7 +494,7 @@
      <div class="sys-p">Furnaces, air conditioners, heat pumps, and the ducts between them.</div>
     </a>
     <a class="sys-card" href="parts/#sanitation-and-tanks">
-     <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-water-tank"/></svg></span><span class="sys-n">19</span></div>
+     <div class="sys-head"><span class="sys-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-toilet"/></svg></span><span class="sys-n">19</span></div>
      <div class="sys-t">Sanitation and tanks</div>
      <div class="sys-p">Toilets, holding tanks, valves, sensors, the sewer connection.</div>
     </a>
