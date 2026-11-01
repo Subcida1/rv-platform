@@ -195,7 +195,26 @@ function breadcrumbFor(rel, html) {
   // and identical across the set. The state name is the crumb that distinguishes them,
   // derived from the filename, which is where the state already lives.
   const isStatePage = rel.startsWith('directory/') && rel !== 'directory/index.html';
-  if (isStatePage) {
+  // A TOWN PAGE IS ONE LEVEL DEEPER: directory/<state>/<town>.html. Its trail is
+  // Home / Directory / <State> / <Town>, and the state crumb LINKS to the state page, because
+  // that is the page a reader who landed on a small town actually wants next (2026-10-31).
+  // Without this branch a town page got the STATE page's trail back, which is what made the
+  // town builder and this file undo each other on every run.
+  const townMatch = rel.match(/^directory\/([^/]+)\/([^/]+)\.html$/);
+  const townName = townMatch
+    ? (headingOf(fs.readFileSync(path.join(ROOT, rel), 'utf8')) || '').replace(/^RV repair in /, '')
+    : null;
+  if (townMatch) {
+    const stateFile = townMatch[1];
+    let stateName = null;
+    try {
+      const lj = JSON.parse(fs.readFileSync(path.join(ROOT, '_data', 'listings', stateFile + '.json'), 'utf8'));
+      if (lj && typeof lj.name === 'string') stateName = lj.name;
+    } catch (e) { stateName = null; }
+    if (!stateName) stateName = stateFile.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+    crumbs.push({ name: stateName, href: '/directory/' + stateFile });
+    if (townName) crumbs.push({ name: townName, href: null });
+  } else if (isStatePage) {
     const stateFile = rel.replace(/^directory\//, '').replace(/\.html$/, '');
     // The filename cannot be title-cased into a state name -- newyork.html would read
     // "Newyork" and westvirginia.html "Westvirginia". The listing data already holds the

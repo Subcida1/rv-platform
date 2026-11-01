@@ -558,11 +558,25 @@ def fix_script_tags(block, st, slug):
                   len(lines))
         add = ['  <script src="assets/js/places.js"></script>',
                '  <script src="assets/js/location-data.js"></script>',
+               '  <script src="assets/js/towns.js"></script>',
                '  <script src="assets/js/locate.js"></script>']
         block = "\n".join(lines[:at] + add + lines[at:])
     for need in ("assets/js/places.js", "assets/js/location-data.js", "assets/js/locate.js"):
         if need not in block:
             sys.exit("FAIL  %s: the script block does not load %s" % (slug, need))
+    # THE TOWNS MANIFEST GOES BEFORE THE RESOLVER, for the same reason the place table does.
+    # locate.js reads window.RV_TOWNS when it builds a town's page URL; loaded after it, the
+    # first query of a session silently resolves to the state page instead (found by
+    # check-page-scripts.js on every state page, 2026-10-31).
+    # Matched loosely on the src because the tag carries a ?v= stamp that stamp_assets.py owns,
+    # and an exact-string replace missed every stamped page.
+    if "assets/js/towns.js" not in block:
+        block, n = re.subn(r'([ \t]*)<script src="assets/js/locate\.js[^"]*"></script>',
+                           r'\g<1><script src="assets/js/towns.js"></script>\n'
+                           r'\g<1><script src="assets/js/locate.js"></script>',
+                           block, count=1)
+        if n != 1:
+            sys.exit("FAIL  %s: could not place towns.js before locate.js" % slug)
     return block.strip("\n")
 
 

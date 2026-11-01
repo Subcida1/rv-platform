@@ -16,6 +16,7 @@ Two gotchas this encodes, both learned the hard way:
     subpages rendered unstyled. The tag is static now and base.js is deleted.
     Do not move it below anything that carries a URL.
 """
+import html
 import json
 import re
 import subprocess
@@ -152,6 +153,27 @@ def without_provenance(p, txt):
         for nm in set(names):
             if nm:
                 out = out.replace(nm, "(business name)")
+        return out
+    # THE TOWN PAGES, one level deeper (2026-10-31). A business name on
+    # directory/florida/apopka.html is the same somebody-else's-copy case as on the state page,
+    # and the rule above only matched a page whose PARENT is directory/. Town pages carry the
+    # name in the row, in the click-counter hooks and in CollectionPage JSON-LD, so the
+    # exemptions follow the same shape: drop the LocalBusiness names, then strip whatever the
+    # generic sweep still finds. Without this "Rig Rite RV" tripped the banned-word rule on
+    # every town page that lists it, which is our checker reading somebody else's words as ours.
+    if p.parent.parent.name == "directory" and p.suffix == ".html":
+        # COLLECT FROM EVERY PLACE THE NAME APPEARS, then strip it everywhere. The first
+        # attempt stopped after the JSON-LD names and the data-lk hook, and the visible
+        # anchor text ("Rig Rite RV</a>") still tripped the rule, because a town page renders
+        # the name three times and only two of those matched a pattern.
+        names = set(re.findall(r'"@type": "LocalBusiness", "name": "([^"]*)"', txt))
+        names |= set(re.findall(r'data-lk="([^"]*)"', txt))
+        out = re.sub(r'("@type": "LocalBusiness", "name": ")(?:[^"\\]|\\.)*(")',
+                     r'\1(business name)\2', txt)
+        for nm in sorted((n for n in names if n), key=len, reverse=True):
+            # the escaped form too: the anchor text ships HTML-escaped
+            out = out.replace(html.escape(nm, quote=True), "(business name)")
+            out = out.replace(nm, "(business name)")
         return out
     return txt
 

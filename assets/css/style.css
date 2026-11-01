@@ -1153,7 +1153,13 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
 /* The links need a finger-sized target. At 13px text they were 18px tall, which the mobile audit
    flagged 396 times across the three widths. Padding on the LINKS, not the row, so the band does
    not grow taller than it needs to. */
-.crumbs a{padding:13px 6px;display:inline-block}
+/* THE BREADCRUMB LINKS LOOK LIKE LINKS (2026-10-31). The site's reset turns every anchor
+   plain, and the underline rule that puts the treatment back is scoped to .prose, .card and
+   its siblings -- none of which a breadcrumb sits inside. So "Home" and the state crumb
+   rendered as plain grey words, and check-link-visibility.mjs caught it the moment 2,813
+   town pages added three breadcrumbs each. The state pages had shipped the same flat crumb
+   since the trail was built; it simply was not loud enough to fail a gate until now. */
+.crumbs a{padding:13px 6px;display:inline-block;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 .crumbs span{color:var(--text-2)}
 .crumbs a:hover{color:var(--b1)}
 .crumbs .sep{color:var(--text-2)}

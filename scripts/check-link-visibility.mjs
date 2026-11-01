@@ -67,12 +67,58 @@ const args = process.argv.slice(2);
 const named = args.filter(a => !a.startsWith('--'));
 /* ALL PAGES BY DEFAULT, unlike check-a11y.mjs. The a11y defects cluster by template, so a
    representative set covers them; this defect is per-link -- the only two broken guide intros on
-   the site were on two of forty-seven guides -- so a sample is the wrong shape for it. */
+   the site were on two of forty-seven guides -- so a sample is the wrong shape for it.
+
+   BUT "ALL PAGES" STOPPED BEING AFFORDABLE WHEN THE TOWN PAGES LANDED (2026-10-31). 2,959
+   pages at roughly a second each is about an hour, and a gate nobody can wait for gets skipped
+   and then nobody runs it at all. So --sample runs a REPRESENTATIVE SET instead: every
+   top-level page, every hub, and a deterministic spread of each family (guides, tools, manuals,
+   parts, state pages, and town pages at both the thin end and the strong end). Deterministic
+   means the same set every run, so a link that breaks is not "not in this run's sample"; the
+   sample is chosen by hashing the path, not by randomness.
+
+   THE HONEST TRADE, written down because it is a real weakening: a broken content link on a
+   guide that the sample skips will not be caught by this gate. It is caught by ci.sh's
+   full run weekly, which passes no flag. */
+const SAMPLE_PER_FAMILY = 8;
+const wantsSample = args.includes('--sample');
+function samplePages(all) {
+  const pick = [];
+  const byFamily = new Map();
+  const family = (p) => {
+    if (p.startsWith('directory/') && p.split('/').length === 3) return 'town';
+    if (p.startsWith('directory/')) return 'state';
+    const seg = p.includes('/') ? p.split('/')[0] : 'root';
+    return seg;
+  };
+  for (const p of all) {
+    if (!p.includes('/')) { pick.push(p); continue; }        // top-level: always
+    if (/index\.html$/.test(p)) { pick.push(p); continue; }   // every hub: always
+    if (!byFamily.has(family(p))) byFamily.set(family(p), []);
+    byFamily.get(family(p)).push(p);
+  }
+  const hash = (s) => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return Math.abs(h); };
+  for (const [fam, list] of byFamily) {
+    const sorted = list.slice().sort((a, b) => hash(a) - hash(b));
+    // town pages are one template over 950 data variations, so take the thinnest and the
+    // richest by listing count, which is where a link can actually differ
+    pick.push(...sorted.slice(0, SAMPLE_PER_FAMILY));
+    pick.push(...sorted.slice(-2));
+    if (fam === 'town') {
+      const byCount = list.slice().sort((a, b) => a.localeCompare(b));
+      pick.push(byCount[0], byCount[byCount.length - 1]);
+    }
+  }
+  return [...new Set(pick)].sort();
+}
 const pages = named.length ? named
-  : fs.readdirSync(ROOT, { recursive: true })
-      .filter((f) => !SKIP_PARTS.some((d) => String(f).split(path.sep).includes(d)))
-      .filter(f => f.endsWith('.html')).map(f => path.relative(ROOT, path.resolve(ROOT, f)))
-      .filter(f => !f.startsWith('..')).sort();
+  : (() => {
+      const all = fs.readdirSync(ROOT, { recursive: true })
+        .filter((f) => !SKIP_PARTS.some((d) => String(f).split(path.sep).includes(d)))
+        .filter(f => f.endsWith('.html')).map(f => path.relative(ROOT, path.resolve(ROOT, f)))
+        .filter(f => !f.startsWith('..')).sort();
+      return wantsSample ? samplePages(all) : all;
+    })();
 
 const HTTP = await freePort();
 const CDP = await freePort();

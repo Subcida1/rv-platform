@@ -410,7 +410,7 @@
    m.async = false;
    document.head.appendChild(m);
  }
- s.src = 'assets/js/search.js?v=a7bc3b28';
+ s.src = 'assets/js/search.js?v=b25e35b7';
  s.async = false;
  document.head.appendChild(s);
  }

@@ -157,7 +157,25 @@ step "accessibility (axe)"                    node scripts/check-a11y.mjs
 # link with no difference in colour, underline, weight, background, border or shadow is invisible
 # to the reader. It found 46 on 10 pages when it was written. Negative-tested by reverting the css
 # rule and watching it name the 36 card links, then restoring.
-step "link visibility"                        node scripts/check-link-visibility.mjs
+# --sample SINCE 2026-10-31. The town pages took the site from 137 pages to 1,097, and this step
+# renders each page in a browser at about a second each: unsampled it is 18 minutes on its own and
+# the whole gate crosses an hour. The sample is deterministic (top-level pages, every hub, and a
+# hashed spread of each family including the thinnest and richest town pages), so a broken link is
+# not "not in this run's sample". THE FULL SWEEP IS STILL A REAL GATE and must be run before a
+# release or when CSS touching link styling changes:
+#     node scripts/check-link-visibility.mjs        # every page, no flag
+step "link visibility"                        node scripts/check-link-visibility.mjs --sample
+# DOES EVERY PAGE NAME ITSELF AS THE ONE TO INDEX? (added 2026-11-01)
+# On 2026-11-01 all 950 generated town pages were found carrying the STATE page's canonical, so
+# every one was telling Google it was a duplicate of its state page and must not be indexed. The
+# site was 950 pages poorer and every step in this gate was green, because the one instrument that
+# checks canonicals (check-indexability.py) needs the network and had been kept out of the fast
+# gate for that reason. This is the offline half of it: no network, reads the built files, builds
+# the URL each path publishes and requires the canonical to be that URL. Negative-tested the same
+# day by pointing one town page's canonical back at its state (FAILED, named the page) and by
+# adding a stray noindex (FAILED), then restoring (clean again over 1,095 pages).
+step "indexability: every page names itself as canonical" \
+                                              python3 scripts/check-indexability.py --local
 # THE COMPONENT-CONSISTENCY RULE, and it is the gap the 2026-10-14 tools-hub bug fell through.
 # check-style.py's centring rule runs ONE WAY: it catches centring nobody approved, and can never
 # see centring that was approved in CENTER_OK and never written. Ty found the result himself --
@@ -293,6 +311,13 @@ else
   printf '    FAILED: linkhealth.py: the link classifier no longer separates dead hosts from moved pages\n'
   fail=1
 fi
+
+# A SITEMAP THAT SUBMITS A 404 IS WORSE THAN NO SITEMAP (2026-10-31). build-sitemap.py --check
+# has always detected an entry whose page is gone, and ci.sh never ran it, so nothing noticed when
+# dropping 1,863 town pages left every one of them still listed for Google. build-all.sh runs
+# --write, which now prunes; this step is what makes the drift fail a gate instead of shipping.
+step "build-sitemap.py --check: every published page listed, nothing listed that is gone" \
+     python3 scripts/build-sitemap.py --check
 
 printf '\n================================================================\n'
 if [ "$fail" -eq 0 ]; then

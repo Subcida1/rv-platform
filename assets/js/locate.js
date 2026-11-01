@@ -458,8 +458,29 @@
     return '/directory/' + m.slug + (loc ? '?loc=' + encodeURIComponent(loc) : '');
   }
 
+  /* THE TOWN'S OWN PAGE, when one exists.
+     A reader who typed a town is asking about that town, and since 2026-10-31 that town may
+     have a page of its own listing the businesses that name it. The state page is still the
+     fallback: `served()` answers "is anything listed here at all", this answers "is there a
+     page for exactly here", and they are different questions with different right answers.
+     Looked up in the manifest build-town-pages.py writes, loaded by the same page that loads
+     this file. Absent manifest means no town pages, and the state page is still correct. */
+  function townUrl(m) {
+    if (!m || !m.slug || !m.name) return null;
+    var towns = window.RV_TOWNS;
+    if (!towns || !towns.length) return null;
+    var needle = fold(m.name);
+    for (var i = 0; i < towns.length; i++) {
+      var t = towns[i];
+      if (t.s !== m.code) continue;
+      if (fold(t.n) === needle) return '/directory/' + m.slug + '/' + t.k;
+    }
+    return null;
+  }
+
   window.RV_LOCATE = resolve;
   window.RV_LOCATE_URL = url;
+  window.RV_LOCATE_TOWN = townUrl;
   window.RV_LOCATE_KEYS = function () { return keys() || []; };
 
   /* ---------- the old surface, kept working ----------

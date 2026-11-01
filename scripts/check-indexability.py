@@ -23,6 +23,23 @@ Run: python3 scripts/check-indexability.py                     every URL in the 
      python3 scripts/check-indexability.py --base URL          a different origin
      python3 scripts/check-indexability.py --strict            exit 1 on any failure
      python3 scripts/check-indexability.py --url <page.html>   one page, for a spot check
+     python3 scripts/check-indexability.py --local             OFFLINE: the built files on disk
+
+WHY --local EXISTS, AND THE DEFECT IT WAS ADDED FOR. The paragraph above says this check needs the
+network, so it cannot run on every push. That was true and it was also the hole. On 2026-11-01 all
+950 generated town pages (directory/<state>/<town>.html) were found carrying the STATE page's title,
+og:url and canonical, because the town builder only stamped a page's identity when the file did not
+already exist. A canonical pointing at the state page tells a search engine the town page is a
+duplicate and must not be indexed, so the entire family was invisible and every gate step stayed
+green. The one instrument that checks exactly this was the one not in the gate.
+
+So the network check now has an offline twin that runs the same assertions against the files the
+build just wrote. It reads each page's own path, builds the URL that path publishes (extensionless,
+via the same rule clean-urls.py enforces) and requires the canonical to be that URL. --local takes
+no network, so ci.sh runs it on every push.
+
+It is offline, so it can prove the page points at itself; it cannot prove the server answers 200.
+That is still the network run's job, after a deploy.
 """
 import os
 import re
@@ -115,10 +132,95 @@ def check(url, base):
     return problems
 
 
+def published_url(rel, base):
+    """The URL a built file publishes. Extensionless, per clean-urls.py: montana.html is
+    /directory/montana, index.html at any depth is its directory."""
+    u = "/" + str(rel).replace(os.sep, "/")
+    u = re.sub(r"/index\.html$", "/", u)
+    u = re.sub(r"\.html$", "", u)
+    return base + u
+
+
+def check_local(rel, base):
+    """The offline assertions: same questions as check(), asked of the file on disk.
+
+    The one that matters and that nothing in the gate asked before 2026-11-01 is the canonical.
+    A page whose canonical names a different page is telling the indexer not to index it, and on
+    disk that looks exactly like a healthy page.
+    """
+    path = ROOT / rel
+    try:
+        page = path.read_text(encoding="utf-8", errors="replace")
+    except OSError as e:
+        return ["unreadable: %s" % e]
+
+    problems = []
+    robots = re.search(r'<meta[^>]+name=["\']robots["\'][^>]*content=["\']([^"\']*)["\']', page, re.I)
+    if robots and "noindex" in robots.group(1).lower():
+        problems.append("meta robots says noindex (%r)" % robots.group(1))
+
+    canonical = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]*href=["\']([^"\']+)["\']', page, re.I)
+    want = published_url(rel, base)
+    if not canonical:
+        problems.append("no canonical link")
+    else:
+        got = canonical.group(1).strip()
+        if got.rstrip("/") != want.rstrip("/"):
+            problems.append("canonical points elsewhere: %s (this page is %s)" % (got, want))
+
+    title = re.search(r"<title[^>]*>(.*?)</title>", page, re.I | re.S)
+    if not title or not title.group(1).strip():
+        problems.append("no non-empty title")
+
+    return problems
+
+
 def main():
     argv = sys.argv[1:]
     base = argv[argv.index("--base") + 1] if "--base" in argv else DEFAULT_BASE
     strict = "--strict" in argv
+    local = "--local" in argv
+
+    if local:
+        # Every built page, minus the same trees the rest of the gate walks past. A nested agent
+        # worktree under .letta/ is a FULL COPY of this repo, so sweeping it would check every
+        # page twice and report the copies.
+        SKIP = {".letta", "_data", "_todo", "_reports", "_log", ".git", "node_modules",
+                "dist", "_specs", "_review", "_source"}
+        # 404.html is exempt BY DESIGN, not by oversight. It is served for every missing URL, so
+        # it must carry noindex (it does) and its own address is not a published URL anyone should
+        # index or link as canonical. Flagging it would be an instrument reporting correct
+        # behaviour as a failure, which teaches the reader to skim the output.
+        EXEMPT = {"404.html"}
+        rels = []
+        for p in sorted(ROOT.rglob("*.html")):
+            rel = p.relative_to(ROOT)
+            if rel.parts and rel.parts[0] in SKIP:
+                continue
+            if str(rel) in EXEMPT:
+                continue
+            rels.append(rel)
+        if not rels:
+            print("no built pages found under %s -- refusing to report success on an empty list" % ROOT)
+            return 1
+        print("checking %d built page(s) offline against %s\n" % (len(rels), base))
+        failed = 0
+        for rel in rels:
+            problems = check_local(rel, base)
+            if problems:
+                failed += 1
+                print("  FAIL  %s" % rel)
+                for pr in problems:
+                    print("          %s" % pr)
+        print()
+        if failed:
+            print("%d of %d page(s) name a different page as canonical, or are not indexable."
+                  % (failed, len(rels)))
+            print("A canonical that points away is a page asking not to be indexed, and on disk")
+            print("it looks exactly like a healthy one. This is the check the town pages needed.")
+            return 1
+        print("all %d built page(s) point at themselves and carry a title" % len(rels))
+        return 0
 
     if "--url" in argv:
         one = argv[argv.index("--url") + 1]

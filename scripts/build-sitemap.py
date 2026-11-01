@@ -199,6 +199,29 @@ def inject(text):
     return text, added, refreshed
 
 
+def prune_stale(text, pages):
+    """Remove an entry whose page is no longer on disk.
+
+    THE GAP THIS CLOSES (2026-10-31). --write added missing entries and refreshed lastmod but
+    never removed anything, and check() was not wired into ci.sh, so nothing caught it. Dropping
+    1,863 town pages from the build left every one of them in the sitemap: 1,863 URLs submitted
+    to Google that answer 404, which is worse than not submitting them at all. --write now
+    prunes, and ci.sh runs --check so the same class cannot come back unnoticed.
+    """
+    gone = []
+    for m in list(re.finditer(r"[ \t]*<url>.*?</url>\n", text, re.S)):
+        found = re.search(r"<loc>([^<]+)</loc>", m.group(0))
+        if not found:
+            continue
+        page = page_for_loc(found.group(1))
+        if page not in pages:
+            gone.append(found.group(1))
+    for loc in gone:
+        text = re.sub(r"[ \t]*<url>(?:(?!</url>).)*?<loc>" + re.escape(loc) + r"</loc>.*?</url>\n",
+                      "", text, count=1, flags=re.S)
+    return text, gone
+
+
 def check(text):
     problems = []
     pages = set(published_pages())
@@ -269,9 +292,16 @@ def main():
     listed = {page_for_loc(loc) for loc, _ in entries(new_text)}
     missing = sorted(set(published_pages()) - listed - {None})
     new_text, inserted = add_missing(new_text, missing)
+    new_text, pruned = prune_stale(new_text, set(published_pages()))
     with open(SITEMAP, "w") as fh:
         fh.write(new_text)
     print("lastmod added: %d, refreshed: %d" % (added, refreshed))
+    if pruned:
+        print("entries pruned for %d page(s) no longer on disk" % len(pruned))
+        for loc in pruned[:10]:
+            print("  - %s" % loc)
+        if len(pruned) > 10:
+            print("  ... and %d more" % (len(pruned) - 10))
     if inserted:
         print("entries added for %d published page(s):" % len(inserted))
         for loc in inserted:

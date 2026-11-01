@@ -48,6 +48,12 @@ const CONTRACTS = [
   { script: 'assets/js/search.js', needs: ['RVSearchMatch'], provides: ['RVSearch'], why:
     'search.js captures window.RVSearchMatch at parse time (line 115). Without the matcher ' +
     'its scores are all 0 and the dropdown says "Nothing matches" for every query.' },
+  { script: 'assets/js/locate.js', needs: ['RV_TOWNS'], provides: ['RV_LOCATE_TOWN'], why:
+    'locate.js reads window.RV_TOWNS inside townUrl(), called from RV_LOCATE_TOWN, which ' +
+    'search.js calls while building an answer. Absent, it returns null and the state page ' +
+    'is used, which is correct: the whole point is that a town page is an upgrade, never a ' +
+    'requirement. Listed because the loader in search.js must fetch towns.js BEFORE ' +
+    'locate.js or the first query of a session silently resolves to the state page.' },
   /* hub.js was checked and deliberately NOT listed. It reads window.RVSearchMatch inside
    * render(), not at parse time, and degrades when it is absent (`M ? M.prepare(...) : null`).
    * A parse-time requirement here would be a false gate: it would fail a page that behaves

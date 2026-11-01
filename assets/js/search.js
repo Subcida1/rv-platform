@@ -103,7 +103,8 @@
     var chain = [
       ['assets/js/places.js?v=794b2a03', function () { return !!window.RV_PLACES; }],
       ['assets/js/location-data.js?v=395afcf3', function () { return !!window.RV_ZIP_TO_STATE; }],
-      ['assets/js/locate.js?v=4d87e853', function () { return !!window.RV_LOCATE; }]
+      ['assets/js/towns.js', function () { return !!window.RV_TOWNS; }],
+      ['assets/js/locate.js?v=c543c24e', function () { return !!window.RV_LOCATE; }]
     ].filter(function (c) { return !c[1](); }).map(function (c) { return c[0]; });
     var i = 0;
     var next = function () {
@@ -253,8 +254,16 @@
             : 'Shops and mobile techs in ' + m.name);
       if (corrected && i === 0) d = 'Showing results for ' + where + '. ' + d;
       if (r.kind === 'address' && r.from && i === 0) d = 'Using ' + r.from + '. ' + d;
-      out.push({ t: 'RV service near ' + where, u: window.RV_LOCATE_URL(m, r.zip),
-                 c: 'Directory', d: d });
+      /* THE TOWN PAGE WINS when the reader typed a town and we publish that exact town, because
+         the state page answers a wider question than the one asked. A ZIP keeps the state page,
+         because a ZIP is not a town and the directory page is what sorts by distance. Falls back
+         to the state page when there is no town page, which is every town with no listing. */
+      var u = window.RV_LOCATE_URL(m, r.zip);
+      if (r.kind === 'place' && window.RV_LOCATE_TOWN) {
+        var t = window.RV_LOCATE_TOWN(m);
+        if (t) { u = t; d = 'Every business that lists ' + m.name + ' as covered'; }
+      }
+      out.push({ t: 'RV service near ' + where, u: u, c: 'Directory', d: d });
     }
     return out;
   }
@@ -291,7 +300,20 @@
     // A correction IS a mistyped place, so it comes first: "los angelas", "seatle", "phoenixx".
     if (r.corrected) return true;
     // An exact name in several states is genuinely ambiguous and needs the chooser.
-    return r.matches.length > 1 && s.length >= 4;
+    if (r.matches.length > 1 && s.length >= 4) return true;
+    /* AN EXACT TOWN WITH A PAGE OF ITS OWN IS A PLACE QUERY EVEN WHEN IT RESOLVES TO ONE
+       STATE, because the page the reader wants is now that town's page rather than the state
+       page. Without this, "Daphne" returned a single business row for a tech based in Mobile,
+       which is not what was asked and buried the page built to answer it (2026-10-31).
+       Deliberately NOT extended to a town with no page: there the state page IS the answer,
+       and making a one-state name location-shaped would put "RV service near <town>" above
+       the guides for any name that happens to match one. */
+    if (r.kind === 'place' && window.RV_LOCATE_TOWN) {
+      for (var k = 0; k < r.matches.length; k++) {
+        if (window.RV_LOCATE_TOWN(r.matches[k])) return true;
+      }
+    }
+    return false;
   }
 
   function search(q, limit) {
