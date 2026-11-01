@@ -242,3 +242,90 @@ honest version and are already indexed).
 Watch list, with a trigger: SMART-RV's "Find a Tech" and "Pricing" currently both 404, its blog is four
 posts, and its claimed database is a form that generates a protocol. If those pages go live and the
 directory has real profiles, the positioning is being executed and section 5 becomes urgent.
+
+## 8. The rate slice, run 2026-10-31: what the data actually looks like
+
+T asked for a small slice before committing to the schema, on the grounds that the information might not
+be findable. It was the right call. 45 listings were read, each on the business's own site: 25 California,
+12 New Mexico, 8 Vermont, with mobile and shop-only mixed in proportion (mobile 60%, shop 40%).
+
+### The result
+
+| What was found | Count | Share |
+|---|---|---|
+| Any dollar figure anywhere on the page | 9 | 20% |
+| That figure is a labour rate or hourly language | 2 | 4% |
+| A single flat service or package price (no hourly rate) | 2 | 4% |
+| Dollar figures present but only for parts, units or discounts | 5 | 11% |
+| Nothing usable, page reads fine | 33 | 73% |
+| Page did not render (parked, JS-only, empty shell) | 3 | 7% |
+
+So the honest number is not "674 of 6,051 publish a rate". On our own sample the rate card worth printing
+is **2 of 45**, about 4%, and the other 2 flat-price sites are useful but answer a different question
+already answered by the guide. RV Service List's 11% figure is probably counting what our 20% bucket
+counts: any dollar sign on the page, including a tyre price.
+
+### What the one good page looks like
+
+Rich's RV Care and Inspection publishes a 2026 price list with eight distinct shapes on one page:
+
+- Labour as a minimum: "Minimum one-hour fee, evaluation and diagnostic, $150.00", then "labor billed at
+  $75.00 per half hour after the first hour". Note the unit is HALF hour, not hour.
+- Mileage as a formula: "$50 for the first 17 miles, then $3 per additional mile", charged one way.
+- A separate estimate fee, "credited back if services are performed".
+- Flat prices per job: water heater clean $150, roof inspection $75, generator tune-up $300.
+- A price PLUS a consumable: "roof re-caulking $150/hr + $15/tube".
+- A price with a condition attached: the generator tune-up covers "running and not surging".
+- A surcharge for a variant: furnace clean $225 exterior removal against $375 interior removal.
+- An honest scope limit: "an estimate is provided for any work not covered by a flat rate".
+
+### What that changes in the schema
+
+Collection, not just the number. These are the fields the evidence supports, and any field with no
+example is dropped:
+
+1. `labor_rate` plus `labor_unit` (hour, half hour, quarter hour). Unit is a required field because
+   half-hour billing is exactly how a reader gets a number twice the size they expected.
+2. `labor_minimum` (the one-hour minimum is the common shape, not the hourly rate).
+3. `trip_fee`, split into `trip_flat` and `mileage` because they are different charges and a reader can
+   be surprised by both. Mileage needs its own shape: included radius, then per-mile rate, and the
+   direction (one way here, which doubles it for the reader who assumes round trip).
+4. `estimate_fee`, including whether it is credited back. This is a real charge and it was invisible
+   before this run.
+5. `flat_jobs` as a small list of job plus price, because a flat rate (roof inspection $75) is more
+   useful to a reader than any hourly number, and it arrives already costed.
+6. `conditions` as free text, one line, quoted: minimums, "not surging only", surcharges for hard
+   access. This is where the tech's own caveat lives, and dropping it would publish the number without
+   the string attached.
+7. `scope_note`, quoted when present: the "estimate for anything not on this list" sentence, which is
+   the tech telling the reader that the price list is partial.
+
+All seven are quoted from the business's page with the URL and date, in its own words, never parsed into
+a number we then recompute.
+
+### What this means for the build
+
+1. **Do not lead with rates.** At 4% coverage a rate field on every listing is three-quarters "nothing
+   published", and a page of empty rate cells is worse than no rate section. Lead with the town pages
+   (Build 3) and the credential field (Build 2), which the slice showed are collectable at a much higher
+   rate.
+2. **Ship the rate block where it exists, and only there.** A listing with a real published schedule gets
+   the full block (the eight fields above). A listing with nothing published gets the one honest sentence
+   and no field chrome. No column of blanks.
+3. **The nationwide cost guide is the right home for the aggregate.** One guide page, written from the
+   techs who do publish plus the general shape of a mobile bill (minimum, trip, mileage, estimate fee),
+   can answer "what will this cost" for every reader in the 96%, and it does not pretend to be local
+   data. That is more useful than a sparse state page.
+4. **Keep the field in the data model from the start** so the 4% can be backfilled as the directory
+   grows, and so a shop that does publish a schedule can be shown to advantage. No public surface fills
+   with blanks while that happens.
+5. **Re-run the slice wider before designing the town pages.** 45 sites is enough to kill the assumption
+   that rates are common; it is not enough to know how many towns have exactly one tech, which is what
+   decides whether a town page has anything to show.
+
+### Sample limits, stated plainly
+
+Three states, 45 records, all read from the business's own homepage or services page. A rate published
+only on a Facebook page or a Google listing was not seen, so 4% is a floor, not a ceiling. Shop-only
+dealers dominated the dollar-sign count with unit prices, which is why the "any $" bucket overstates.
+The next slice should add Facebook and Google listing checks on the same 45 before the floor is trusted.
