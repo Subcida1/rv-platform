@@ -195,7 +195,7 @@ def rep(row, st):
             '<a class="finder-region-call" href="tel:%s" %s data-lk-kind="tel">%s</a>'
             '%s'
             '</li>' % (name, esc(row["c"]), TYPE_LABEL[row["t"]], flags, esc(tel),
-                       attrs, esc(row["p"]), spec))
+                       attrs, esc(row["p"]).replace("-", "&#8209;").replace(" ", "&nbsp;"), spec))
 
 
 def lede(rows, town, state_name):
