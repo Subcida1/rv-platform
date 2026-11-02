@@ -70,6 +70,7 @@
     "rv-propane-tank-wont-fill": "heating-and-cooling",
     "rv-chassis-battery-and-charging": "chassis-and-drivetrain",
     "rv-black-tank-clogged": "sanitation-and-tanks",
-    "rv-level-towing-setup": "towing-and-running-gear"
+    "rv-level-towing-setup": "towing-and-running-gear",
+    "rv-lithium-battery-not-charging": "power-and-electrical"
   }
 }
