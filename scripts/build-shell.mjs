@@ -173,11 +173,23 @@ function breadcrumbFor(rel, html) {
   const slug = rel.replace(/^guides\//, '').replace(/\.html$/, '');
   const isGuide = rel.startsWith('guides/') && rel !== 'guides/index.html';
 
+  /* A SECTION INDEX NAMES ITS OWN SECTION, NOT ITS H1 (2026-11-02). /tools/ was
+     "Home / Free RV tools" and /directory/ was "Home / RV Repair Directory", while
+     every page under them said "Tools" and "Directory" -- so the same section had two
+     names in the trail, and the name on the hub was a marketing line the child pages
+     never use. The H1 is written for a reader who has already arrived; the crumb is a
+     map label, and the map has one name per section. */
+  const SECTION_INDEX = {
+    'guides/index.html': 'Guides', 'tools/index.html': 'Tools', 'parts/index.html': 'Parts',
+    'manuals/index.html': 'Manuals', 'directory/index.html': 'Directory'
+  };
+
   if (isGuide) crumbs.push({ name: 'Guides', href: '/guides/' });
   else if (rel.startsWith('manuals/') && rel !== 'manuals/index.html') crumbs.push({ name: 'Manuals', href: '/manuals/' });
   else if (rel.startsWith('directory/') && rel !== 'directory/index.html') crumbs.push({ name: 'Directory', href: '/directory/' });
   else if (rel.startsWith('tools/') && rel !== 'tools/index.html') crumbs.push({ name: 'Tools', href: '/tools/' });
   else if (rel.startsWith('parts/') && rel !== 'parts/index.html') crumbs.push({ name: 'Parts', href: '/parts/' });
+  else if (SECTION_INDEX[rel]) crumbs.push({ name: SECTION_INDEX[rel], href: null });
 
   const sys = systems && isGuide ? systems.guides[slug] : null;
   if (sys && systems.systems[sys]) {

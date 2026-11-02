@@ -61,6 +61,18 @@ window.RV_CONFIG = {
  toolLoan: 'tools/rv-loan',
  toolBattery: 'tools/battery-runtime',
  toolBrakeLaws: 'tools/state-trailer-brake-laws',
+ /* THE REST OF THE HUB, NAMED (2026-11-02). The menu carried seven of the fifteen live
+    tools, so eight -- every finder, plus snow load and the tire date decoder -- were
+    reachable only through the hub card or a search box that has to already know the
+    name. A reader cannot look for a water filter finder they do not know exists. Each
+    of these is the address the hub card already links, so the two cannot drift. */
+ toolSnow: 'tools/snow-load',
+ toolToilet: 'tools/rv-toilet-valve',
+ toolRecall: 'tools/rv-recall-lookup',
+ toolAnode: 'tools/rv-anode-rod',
+ toolConverter: 'tools/rv-converter-finder',
+ toolBoard: 'tools/rv-appliance-board-finder',
+ toolFilter: 'tools/rv-water-filter',
  guides: 'guides/',
  guideWinterize: 'guides/winterize-plumbing',
  guideBattery: 'guides/battery-winter-storage',
@@ -89,6 +101,7 @@ window.RV_CONFIG = {
  manualsChassis: 'manuals/chassis-and-drivetrain',
  about: 'about',
  contact: 'contact',
+ privacy: 'privacy',
  signin: 'signin.html'
  }
 };

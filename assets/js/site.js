@@ -178,6 +178,18 @@
     pages paired together on the right.
     The "Find a tech" label became "Find RV service", which is the same phrase the
     homepage CTA already uses, so the directory is named one way everywhere. */
+ /* ONE MENU, EVERY THING (2026-11-02). The five dropdowns named a fraction of what the site
+    carries: 7 of 15 tools, 4 of 60 guides, 7 of 9 parts systems. Nothing was broken; the rest
+    simply could not be discovered from the header, which is the one place a reader looks. Worse,
+    the missing tool set was exactly the finders -- the pages written for "which valve do I buy".
+    These helpers keep every entry one shape: a label, and a line saying what is behind it, so a
+    grouped panel stays readable at a glance instead of becoming a flat list of nouns. */
+ function dropLink(href, label, sub) {
+ return '<a href="' + R(href) + '">' + esc(label) +
+   (sub ? '<span class="sm">' + esc(sub) + '</span>' : '') + '</a>';
+ }
+ function dropHead(text) { return '<p class="drop-h">' + esc(text) + '</p>'; }
+
  function navHTML() {
  var rt = CFG.routes;
  // THE TOP ANCHOR LIVES HERE, ONCE, FOR EVERY PAGE. Every page carries <base href="/">, so a
@@ -196,41 +208,80 @@
  '<div class="nav-links">' +
  '<a class="nav-link" href="' + R(rt.home) + '">Home</a>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.tools) + '">Tools</a>' +
- /* THE TOOLS MENU CARRIES THE TOOLS. Ty, 2026-10-14: the Tools dropdown listed 2
-    entries on a site with 14 tools, so twelve of them -- every finder among them --
-    could only be reached through the /tools/ hub. It now lists the six the demand
-    measurement puts first, in that order, which is the same order the hub and the
-    homepage pills use (scripts/keyword-demand.py). The last entry names the
-    finders by what they find, so they are discoverable without six more rows. */
- '<div class="drop"><a href="' + R(rt.toolFuel) + '">Fuel Cost Calculator<span class="sm">What a trip burns</span></a>' +
- '<a href="' + R(rt.toolWatts) + '">Watts to Amps<span class="sm">Any appliance label</span></a>' +
- '<a href="' + R(rt.toolSolar) + '">Solar Sizing<span class="sm">Panels and battery bank</span></a>' +
- '<a href="' + R(rt.toolLoan) + '">RV Loan<span class="sm">Payments and APR</span></a>' +
- '<a href="' + R(rt.calculator) + '">Weight &amp; Towing<span class="sm">Live, free</span></a>' +
- '<a href="' + R(rt.toolBattery) + '">Battery Runtime<span class="sm">How long the bank lasts</span></a>' +
- '<a href="' + R(rt.toolBrakeLaws) + '">State Brake Laws<span class="sm">Where trailer brakes are required</span></a>' +
- '<a href="' + R(rt.tools) + '">All 15 tools<span class="sm">Finders for valves, converters, recalls</span></a></div></div>' +
+ /* THE TOOLS MENU CARRIES ALL FIFTEEN (2026-11-02). On 2026-10-14 this menu listed 2 of 14
+    tools and was widened to the six the demand measurement put first, with the finders named
+    as a group behind "All 15 tools". That was better, and it still left eight tools with no
+    route from the header: a reader who does not already know a water filter finder exists
+    cannot look for one. Every tool now gets a row, split by the question it answers -- a
+    number, or a part -- because fifteen undifferentiated rows is a list, and two short lists
+    labeled by job is a menu. The demand order is kept inside Calculators. */
+ '<div class="drop drop-wide">' +
+ '<div class="drop-col">' + dropHead('Calculators') +
+ dropLink(rt.toolFuel, 'Fuel Cost', 'What a trip burns') +
+ dropLink(rt.toolWatts, 'Watts to Amps', 'Any appliance label') +
+ dropLink(rt.toolSolar, 'Solar Sizing', 'Panels and battery bank') +
+ dropLink(rt.toolLoan, 'RV Loan', 'Payments and APR') +
+ dropLink(rt.calculator, 'Weight & Towing', 'Capacity against the 80% rule') +
+ dropLink(rt.toolBattery, 'Battery Runtime', 'How long the bank lasts') +
+ dropLink(rt.toolSnow, 'Roof Snow Load', "Snow's weight on the roof") +
+ dropLink(rt.toolTireAge, 'Tire Date Code', 'The week a tire was made') +
+ '</div>' +
+ '<div class="drop-col">' + dropHead('Finders') +
+ dropLink(rt.toolToilet, 'Toilet Water Valve', 'The valve a freeze breaks') +
+ dropLink(rt.toolRecall, 'Recall Lookup', 'A recall by VIN range') +
+ dropLink(rt.toolAnode, 'Anode Rod', 'Which heaters take one') +
+ dropLink(rt.toolConverter, 'Converter and Power Center', 'Cross-reference an old model') +
+ dropLink(rt.toolBoard, 'Appliance Control Board', 'Fridge, generator, ignitor') +
+ dropLink(rt.toolFilter, 'Water Filter', 'Cartridge by thread and housing') +
+ dropLink(rt.toolBrakeLaws, 'State Brake Laws', 'Where trailer brakes are required') +
+ '</div>' +
+ '<a class="drop-all" href="' + R(rt.tools) + '">All 15 tools<span class="sm">Every calculator and finder, with what each one answers</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.guides) + '">Guides</a>' +
- '<div class="drop"><a href="' + R(rt.guideWinterize) + '">Winterize Your Plumbing<span class="sm">Tanks, lines, antifreeze, bypass</span></a>' +
- '<a href="' + R(rt.guideBattery) + '">Battery Care in Cold<span class="sm">Lead-acid compared to lithium rules</span></a>' +
- '<a href="' + R(rt.guideTires) + '">Tires Through Winter<span class="sm">Pressure, flat spots, covers</span></a>' +
- '<a href="' + R(rt.guideRoof) + '">Roof Under Snow Load<span class="sm">Seals, ice, weight</span></a></div></div>' +
+ /* THE GUIDES MENU IS THE TOPICAL MAP, NOT THE SEASON (2026-11-02). It carried the four
+    winter guides and nothing else, so 56 guides had no route from the header and the menu
+    told visitors and crawlers alike that this is a winter site. The six groups are the
+    guide hub's own <h2> sections, so every link lands on the list it names rather than on a
+    page the reader then has to scan. No counts in the labels: a number typed into the nav
+    is a number that goes stale the day a guide is added. */
+ '<div class="drop drop-wide">' +
+ '<a class="drop-span" href="' + R(rt.guides) + '">All guides<span class="sm">Every system, written from the symptom</span></a>' +
+ '<div class="drop-col">' +
+ dropLink(rt.guides + '#electrical-and-charging', 'Electrical and charging', '') +
+ dropLink(rt.guides + '#heat-cool-and-appliances', 'Heating, cooling and appliances', '') +
+ dropLink(rt.guides + '#water-and-plumbing', 'Water and plumbing', '') +
+ '</div>' +
+ '<div class="drop-col">' +
+ dropLink(rt.guides + '#body-slides-and-jacks', 'Body, slides and jacks', '') +
+ dropLink(rt.guides + '#tires-towing-and-weight', 'Tires, towing and weight', '') +
+ dropLink(rt.guides + '#winter-storage', 'Winter storage', '') +
+ '</div></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.parts) + '">Parts</a>' +
  /* THE PARTS MENU CARRIES PARTS. It used to list "Guides" and "Manuals", which both
     have their own top-level menus two items to the right, so the menu spent its
-    space repeating the nav beside it. Ty, 2026-10-14: "also tidy them up per your
+    space repeating the nav beside it. T, 2026-10-14: "also tidy them up per your
     recommendation." It now names the systems a reader actually arrives looking for,
-    each linking the section on the hub. The mobile menu carried one of the two
-    duplicates and now matches this list. */
- '<div class="drop"><a href="' + R(rt.parts) + '">Every RV part<span class="sm">All 210, by system, with what each one does</span></a>' +
- '<a href="' + R(rt.parts) + '#power-and-electrical">Power and electrical<span class="sm">Shore power, batteries, solar, converters</span></a>' +
- '<a href="' + R(rt.parts) + '#water-and-plumbing">Water and plumbing<span class="sm">Tanks, pumps, filters, heaters</span></a>' +
- '<a href="' + R(rt.parts) + '#sanitation-and-tanks">Sanitation and tanks<span class="sm">Toilets, valves, tanks, sensors</span></a>' +
- '<a href="' + R(rt.parts) + '#heating-and-cooling">Heating and cooling<span class="sm">Furnaces, air conditioners, fridges</span></a>' +
- '<a href="' + R(rt.parts) + '#exterior-and-body">Exterior and body<span class="sm">Roof, sealant, slides, windows</span></a>' +
- '<a href="' + R(rt.parts) + '#towing-and-running-gear">Towing and running gear<span class="sm">Hitches, jacks, axles, brakes</span></a></div></div>' +
+    each linking the section on the hub. NO COUNT IN THE LABEL and no invented page:
+    the sections are anchors on one page, so the header says "sections" and the panel
+    names the nine the hub actually has. Three were missing until 2026-11-02 --
+    kitchen, chassis and propane -- so a reader with a dead furnace control board or a
+    propane leak had no header route to the parts for either. */
+ '<div class="drop drop-wide">' +
+ '<a class="drop-span" href="' + R(rt.parts) + '">Every RV part<span class="sm">By system, with what each one does</span></a>' +
+ '<div class="drop-col">' +
+ dropLink(rt.parts + '#towing-and-running-gear', 'Towing and running gear', 'Hitches, jacks, axles, brakes') +
+ dropLink(rt.parts + '#power-and-electrical', 'Power and electrical', 'Shore power, batteries, solar, converters') +
+ dropLink(rt.parts + '#water-and-plumbing', 'Water and plumbing', 'Tanks, pumps, filters, heaters') +
+ dropLink(rt.parts + '#sanitation-and-tanks', 'Sanitation and tanks', 'Toilets, valves, tanks, sensors') +
+ dropLink(rt.parts + '#heating-and-cooling', 'Heating and cooling', 'Furnaces, air conditioners, water heaters') +
+ '</div>' +
+ '<div class="drop-col">' +
+ dropLink(rt.parts + '#exterior-and-body', 'Exterior and body', 'Roof, sealant, slides, windows') +
+ dropLink(rt.parts + '#kitchen-and-appliances', 'Kitchen and appliances', 'Fridges, ranges, cooktops') +
+ dropLink(rt.parts + '#chassis-and-drivetrain', 'Chassis and drivetrain', 'Motorhome engine, suspension, steering') +
+ dropLink(rt.parts + '#propane', 'Propane system', 'Tanks, regulators, lines, detectors') +
+ '</div></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.directory) + '">Directory</a>' +
- '<div class="drop"><a href="' + R(rt.directory) + '">Find RV service<span class="sm">Mobile techs and repair centers by state</span></a>' +
+ '<div class="drop"><a href="' + R(rt.directory) + '">Find RV service<span class="sm">Mobile techs and repair centers, all 50 states</span></a>' +
  '<a href="' + R(rt.directory) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.manuals) + '">Manuals</a>' +
  '<div class="drop"><a href="' + R(rt.manualsPower) + '">Electrical<span class="sm">Converters, inverters, solar, generators</span></a>' +
@@ -249,24 +300,41 @@
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search guides, tools, parts, or a ZIP', 'Site search, mobile menu') +
  '<a class="mm-top" href="' + R(rt.home) + '">Home</a>' +
- mmGroup('Tools', rt.tools, [['Fuel cost', rt.toolFuel], ['Watts to amps', rt.toolWatts],
+ /* THE PHONE MENU CARRIES THE SAME LISTS AS THE DESKTOP ONE (2026-11-02). It is the only
+    navigation below 900px, so a menu that names 7 of 15 tools costs a phone reader eight
+    pages they cannot reach at all. Fifteen rows under one heading is the thing to avoid,
+    so the tools split the way the desktop panel splits them: two headings, each still
+    linking the hub. */
+ mmGroup('Calculators', rt.tools, [['Fuel cost', rt.toolFuel], ['Watts to amps', rt.toolWatts],
    ['Solar sizing', rt.toolSolar], ['RV loan', rt.toolLoan],
    ['Weight & towing', rt.calculator], ['Battery runtime', rt.toolBattery],
+   ['Roof snow load', rt.toolSnow], ['Tire date code', rt.toolTireAge]]) +
+ mmGroup('Finders', rt.tools, [['Toilet water valve', rt.toolToilet], ['Recall lookup', rt.toolRecall],
+   ['Anode rod', rt.toolAnode], ['Converter and power center', rt.toolConverter],
+   ['Appliance control board', rt.toolBoard], ['Water filter', rt.toolFilter],
    ['State brake laws', rt.toolBrakeLaws]]) +
- mmGroup('Guides', rt.guides, [['Winterize plumbing', rt.guideWinterize],
-   ['Battery cold storage', rt.guideBattery], ['Tires through winter', rt.guideTires],
-   ['Roof snow load', rt.guideRoof]]) +
+ mmGroup('Guides', rt.guides, [['All guides', rt.guides],
+   ['Electrical and charging', rt.guides + '#electrical-and-charging'],
+   ['Heating, cooling and appliances', rt.guides + '#heat-cool-and-appliances'],
+   ['Water and plumbing', rt.guides + '#water-and-plumbing'],
+   ['Body, slides and jacks', rt.guides + '#body-slides-and-jacks'],
+   ['Tires, towing and weight', rt.guides + '#tires-towing-and-weight'],
+   ['Winter storage', rt.guides + '#winter-storage']]) +
  mmGroup('Parts', rt.parts, [['Every RV part', rt.parts],
+   ['Towing and running gear', rt.parts + '#towing-and-running-gear'],
    ['Power and electrical', rt.parts + '#power-and-electrical'],
    ['Water and plumbing', rt.parts + '#water-and-plumbing'],
    ['Sanitation and tanks', rt.parts + '#sanitation-and-tanks'],
    ['Heating and cooling', rt.parts + '#heating-and-cooling'],
    ['Exterior and body', rt.parts + '#exterior-and-body'],
-   ['Towing and running gear', rt.parts + '#towing-and-running-gear']]) +
+   ['Kitchen and appliances', rt.parts + '#kitchen-and-appliances'],
+   ['Chassis and drivetrain', rt.parts + '#chassis-and-drivetrain'],
+   ['Propane system', rt.parts + '#propane']]) +
  mmGroup('Directory', rt.directory, [['Find RV service', rt.directory],
    ['Claim your business', rt.directory + '#claim']]) +
  mmGroup('Manuals', rt.manuals, [['Electrical', rt.manualsPower],
-   ['Towing and running gear', rt.manualsTowing], ['Owner manuals by brand', rt.manualsBrands],
+   ['Towing and running gear', rt.manualsTowing], ['Kitchen and appliances', rt.manualsKitchen],
+   ['Owner manuals by brand', rt.manualsBrands],
    ['Recalls and bulletins', rt.manualsRecalls]]) +
  '<a class="mm-top" href="' + R(rt.about) + '">About</a>' +
       signinLink('mm-top') +
@@ -303,16 +371,29 @@
 
  function footerHTML() {
  var rt = CFG.routes;
+ /* THE FOOTER MIRRORS THE HEADER (2026-11-02). A column headed "Tools" held three links to
+    one tool's page anchors, so the footer's tool list was the weight calculator and nothing
+    else; "All tools" sat under Company, which is not where a reader looks for tools; the
+    Guides column was the same four winter pages the header used to carry; and Privacy lived
+    only in the bottom bar. One rule now: every column carries its own section's real pages,
+    in the header's order, and Company carries the company pages. The embed link stays,
+    because it is the one thing on this site a shop can take away with them. */
  return '<a class="to-top" href="#top" onclick="return RV.toTop()">Back to top</a>' +
  '<div class="foot-top"><div class="wrap"><div class="foot-grid">' +
  '<div class="foot-brand">' + logoHTML() +
  '<p>' + esc(CFG.brand.tag) + '</p>' +
  '</div>' +
- '<div class="foot-col"><p class="foot-h">Tools</p><a href="' + R(rt.calculator) + '">Weight calculator</a><a href="' + R(rt.calculator) + '#why">Why it matters</a><a href="' + R(rt.calculator) + '#embed">Embed on your site</a></div>' +
- '<div class="foot-col"><p class="foot-h">Guides</p><a href="' + R(rt.guideWinterize) + '">Winterize plumbing</a><a href="' + R(rt.guideBattery) + '">Battery cold storage</a><a href="' + R(rt.guideTires) + '">Tires through winter</a><a href="' + R(rt.guideRoof) + '">Roof snow load</a></div>' +
+ '<div class="foot-col"><p class="foot-h">Tools</p>' +
+ '<a href="' + R(rt.toolFuel) + '">Fuel cost calculator</a><a href="' + R(rt.toolSolar) + '">Solar sizing</a>' +
+ '<a href="' + R(rt.toolBattery) + '">Battery runtime</a><a href="' + R(rt.calculator) + '">Weight &amp; towing</a>' +
+ '<a href="' + R(rt.calculator) + '#embed">Embed a calculator on your site</a><a href="' + R(rt.tools) + '">All 15 tools</a></div>' +
+ '<div class="foot-col"><p class="foot-h">Guides</p>' +
+ '<a href="' + R(rt.guides) + '">All guides</a><a href="' + R(rt.guides) + '#electrical-and-charging">Electrical and charging</a>' +
+ '<a href="' + R(rt.guides) + '#water-and-plumbing">Water and plumbing</a><a href="' + R(rt.guides) + '#tires-towing-and-weight">Tires, towing and weight</a>' +
+ '<a href="' + R(rt.guides) + '#winter-storage">Winter storage</a><a href="' + R(rt.guideWinterize) + '">Winterize plumbing</a></div>' +
  '<div class="foot-col"><p class="foot-h">Directory</p><a href="' + R(rt.directory) + '">Find RV service</a><a href="' + R(rt.directory) + '#claim">Claim your business</a><a href="' + R(rt.directory) + '#seed">What a listing carries</a></div>' +
- '<div class="foot-col"><p class="foot-h">Manuals</p><a href="' + R(rt.manuals) + '">All RV manuals</a><a href="' + R(rt.manualsBrands) + '">Owner manuals by brand</a><a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins</a><a href="' + R(rt.manualsPower) + '">Electrical manuals</a><a href="' + R(rt.manualsTowing) + '">Towing manuals</a></div>' +
- '<div class="foot-col"><p class="foot-h">Company</p><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.tools) + '">All tools</a></div>' +
+ '<div class="foot-col"><p class="foot-h">Manuals</p><a href="' + R(rt.manuals) + '">All RV manuals</a><a href="' + R(rt.manualsBrands) + '">Owner manuals by brand</a><a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins</a><a href="' + R(rt.manualsPower) + '">Electrical manuals</a><a href="' + R(rt.manualsTowing) + '">Towing manuals</a><a href="' + R(rt.manualsKitchen) + '">Kitchen manuals</a></div>' +
+ '<div class="foot-col"><p class="foot-h">Company</p><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.privacy) + '">Privacy</a></div>' +
  '</div></div>' +
  '<div class="wrap foot-bottom"><span>© 2026 ' + esc(CFG.brand.legal) + '. All rights reserved.</span>' +
  '<span class="foot-credit">Third-party photographs appear under the licenses credited beside each one, resized for display.</span>' +
@@ -410,7 +491,7 @@
    m.async = false;
    document.head.appendChild(m);
  }
- s.src = 'assets/js/search.js?v=b25e35b7';
+ s.src = 'assets/js/search.js?v=31463bd7';
  s.async = false;
  document.head.appendChild(s);
  }

@@ -279,7 +279,21 @@
   var WORDY = { furnace: 1, tank: 1, frame: 1, awning: 1, tire: 1, brake: 1, roof: 1,
                 leak: 1, drain: 1, valve: 1, slide: 1, jack: 1, hose: 1, pump: 1, vent: 1,
                 level: 1, power: 1, solar: 1, shore: 1, black: 1, gray: 1,
-                freshwater: 1, holding: 1, sensor: 1, window: 1, door: 1, step: 1, latch: 1 };
+                freshwater: 1, holding: 1, sensor: 1, window: 1, door: 1, step: 1, latch: 1,
+                /* THE REST OF THE SITE'S OWN NOUNS (2026-11-02). The table decides whether a
+                   query is answered by a page or by a place, and it stopped at the plumbing
+                   words, so "battery" -- a word with 60 guides behind it -- was read as a
+                   mistyped town, corrected to Bantry, ND, and answered with "RV service near
+                   Bantry" FIRST. Every word below names a system this site covers, so the
+                   content answer is what the reader came for. Deliberately absent: any word
+                   that is also a town's name in this table's world (winter, summer, mobile,
+                   reed) -- there the ambiguity is real and the resolver should keep it. */
+                battery: 1, batteries: 1, water: 1, heater: 1, fridge: 1, refrigerator: 1,
+                propane: 1, converter: 1, inverter: 1, generator: 1, toilet: 1, plumbing: 1,
+                thermostat: 1, conditioner: 1, charge: 1, charging: 1, monitor: 1, panel: 1,
+                lights: 1, fuse: 1, breaker: 1, wiring: 1, hitch: 1, towing: 1, weight: 1,
+                filter: 1, anode: 1, recall: 1, snow: 1, freeze: 1, antifreeze: 1,
+                slideout: 1, leveler: 1, levelers: 1, septic: 1, sewage: 1, gauge: 1 };
 
   /* IS THIS QUERY ASKING FOR A PLACE, OR FOR A PAGE? */
   function locationShaped(raw) {
@@ -335,6 +349,30 @@
       }
     }
     hits.sort(function (a, b) { return b.s - a.s || a.item.t.length - b.item.t.length; });
+    /* A CONTENT QUERY IS NOT ANSWERED BY A BUSINESS FIRST (2026-11-02). "solar" put
+       "Solar Van Man" -- a business whose name is two words -- above the Solar Sizing
+       calculator, because equal scores are broken by the shorter title, and a business
+       name is the shortest title there is. Pressing Enter then took a reader who wanted
+       a calculator to /directory/illinois, a state page with no query in it, which reads
+       as a broken search rather than as a ranked one. So: when every word the reader
+       typed is vocabulary this site answers with content, content leads and businesses
+       follow. A query that names a business ("camping world") is untouched, because its
+       words are not all content vocabulary. This is the same rule the place answer
+       already follows -- the reader's symptom outranks a name that happens to match. */
+    function allContentWords(raw) {
+      var s = String(raw == null ? '' : raw).trim().toLowerCase();
+      if (!s) return false;
+      var words = s.split(/[^a-z0-9]+/).filter(function (w) { return w.length; });
+      if (!words.length || words.length > 3) return false;
+      return words.every(function (w) { return !!WORDY[w]; });
+    }
+    if (allContentWords(rawQuery)) {
+      var content = [], biz = [];
+      for (var h = 0; h < hits.length; h++) {
+        (hits[h].item.c === 'Business' ? biz : content).push(hits[h]);
+      }
+      hits = content.concat(biz);
+    }
     // A cap per directory-ish category, so neither a business nor a manual ever
     // floods the editorial results. A symptom query should reach a guide; a model
     // number should reach the manual.

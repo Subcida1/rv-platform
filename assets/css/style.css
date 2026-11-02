@@ -669,6 +669,26 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .drop a{display:block;padding:10px 14px;border-radius:9px;font-size: var(--fs-md);color:var(--text-2);font-weight:500}
 .drop a:hover{background:var(--grad-soft);color:var(--text)}
 .drop a .sm{display:block;font-size: var(--fs-xs);color:var(--text-3);font-weight:400}
+/* A TWO-COLUMN DROPDOWN, FOR THE MENUS THAT LIST EVERYTHING (2026-11-02). Fifteen tools in
+   one column is a 700px tall panel that runs off a laptop screen; split by job it is two
+   eight-row lists and fits without scrolling. The heading is a label, not a link: the
+   entries under it are the links, and a heading that also navigated would make "Calculators"
+   look like a page.
+   MEASURED, NOT ASSUMED. Read at 1440x900, 1280x800, 1100x760 and 1025x700 with the panel
+   open: a single-column Parts panel is 771px tall against a 717px gap under the nav at
+   1440x900, so it ran off the bottom of every laptop tested. Hence the max-height on the
+   panel itself, which is the same rule the mobile menu carries -- a long list scrolls inside
+   itself and can never pin below the fold. */
+.drop{max-height:calc(100vh - 130px);overflow-y:auto;overscroll-behavior:contain}
+.drop-wide{min-width:540px;display:grid;grid-template-columns:1fr 1fr;gap:0 10px;padding:10px}
+.drop-wide a{padding:7px 14px}
+.drop-wide a .sm{line-height:1.25}
+.drop-col{display:block}
+.drop-span{grid-column:1 / -1}
+.drop-h{margin:4px 0 2px;padding:4px 14px;font-size: var(--fs-xs);font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3)}
+.drop-wide .drop-h:first-child{margin-top:0}
+.drop-all{grid-column:1 / -1;margin-top:6px;border-top:1px solid var(--border);padding-top:8px}
+.drop-all .sm{display:block;font-size: var(--fs-xs);color:var(--text-3);font-weight:400}
 .nav-actions{display:flex;align-items:center;gap:8px}
 /* A small centred caption rides above the Tools button. Ty, 2026-10-05: the strip
    said "Free tools, No paywall, Built for RVers" off to one side and he wanted the

@@ -408,10 +408,18 @@ if (sb.window.RV && typeof sb.window.RV.searchRoute === 'function') {
       ['how old are my tires', 'Tool'], ['battery not charging', 'Guide'],
       ['converter', 'Manual'], ['furnace not working', 'Guide'], ['propane', 'Guide'],
       ['water heater', 'Manual'], ['slide out leaking', 'Guide'],
-      ['roof leak', 'Business'],            // KNOWN GAP: should be Guide
+      /* TWO EXPECTATIONS CORRECTED 2026-11-02, AND THEY WERE THE GAP ITSELF. Both read
+         "Business" with a KNOWN GAP note, because a business whose name happens to carry one
+         query word outranked the guide written for the query. Ranking now puts content above
+         businesses when every word typed is vocabulary this site answers with content, so a
+         symptom query reaches a symptom page and neither of these needs a caveat any more.
+         The entries stay in the set: that IS the regression test for the demotion. The
+         separate, older score() gap in the comment above (an exact title phrase losing to two
+         scattered words, both of them content) is still open and is not what changed here. */
+      ['roof leak', 'Guide'],
       ['leveling jacks', 'Guide'], ['rv repair oregon', 'Business'],
       ['find a tech', 'Directory'], ['solar panel', 'Guide'],
-      ['generator', 'Business'],            // KNOWN GAP: should be Guide or Manual
+      ['generator', 'Guide'],
       ['sewer smell', 'Guide'], ['tank sensors', 'Guide'],
       ['weight calculator', 'Tool'], ['snow load', 'Guide'], ['rv loan', 'Tool'],
       ['fuel cost', 'Tool'], ['rv manuals', 'Manual']
