@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/solar-sizing">
   <title>RV Solar Panel Calculator: How Many Watts You Need</title>
   <meta name="description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied, the maker margin, and the battery bank the day takes.">
-  <link rel="stylesheet" href="assets/css/style.css?v=9d60f2c1">
+  <link rel="stylesheet" href="assets/css/style.css?v=8eb96d27">
 <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg?v=dd9ff106">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=d9338088">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=f67f4631">
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RV Solar Panel Calculator: How Many Watts You Need">
 <meta name="twitter:description" content="Daily watt-hours and peak sun hours give the solar panel watts you need, with the NREL derate applied, the maker margin, and the battery bank the day takes.">
-<script type="application/ld+json">{"dateModified":"2026-11-01","@context": "https://schema.org", "@type": "WebApplication", "name": "RV Solar Sizing Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://originrv.com/tools/solar-sizing", "description": "Size RV solar from your daily watt-hours and your location's peak sun hours.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "OriginRV", "url": "https://originrv.com/"}}</script>
+<script type="application/ld+json">{"dateModified":"2026-11-02","@context": "https://schema.org", "@type": "WebApplication", "name": "RV Solar Sizing Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "url": "https://originrv.com/tools/solar-sizing", "description": "Size RV solar from your daily watt-hours and your location's peak sun hours.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "OriginRV", "url": "https://originrv.com/"}}</script>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8X4MQ0P3X"></script>
   <script>
@@ -80,6 +80,11 @@
        </select>
        <span class="hint">Peak sun hours are not hours of sunshine: they are the equivalent hours per day at full panel output, and the whole country runs from about 3 to 6.5 of them. The US average is about 5. If you want your exact location, NREL's PVWatts calculator gives it free.</span>
       </div>
+      <div class="field">
+       <label for="s-psh">Peak sun hours, if you have a better figure</label>
+       <input id="s-psh" type="text" inputmode="decimal" placeholder="3.5">
+       <span class="hint">Overrides the region when you fill it. The sun is lower in winter, so a winter trip needs the peak sun hours for the months you camp rather than the region's one figure; a solar map for your location and months gives it. Filling in 3 or less also warns you that the array comes out larger than the preset suggests.</span>
+      </div>
      </div>
 
      <div class="panel panel-24">
@@ -91,6 +96,15 @@
         <option value="lead">Lead-acid (flooded or AGM)</option>
        </select>
        <span class="hint">Lithium is 80% usable; lead-acid is 50%, the recharge point the makers recommend for decent cycle life. The bank figure below uses whichever you pick.</span>
+      </div>
+      <div class="field">
+       <label for="s-days">Days without sun to plan for</label>
+       <select id="s-days">
+        <option value="1">One day, for a sunny summer trip</option>
+        <option value="2" selected>Two days</option>
+        <option value="3">Three days, the top of Renogy's range</option>
+       </select>
+       <span class="hint">Renogy suggests sizing for 2 to 3 days of autonomy in sunny areas. This sets how big the bank below has to be; it does not change the panel watts, which depend on the day you use, not on the days you store.</span>
       </div>
      </div>
     </div>
@@ -106,12 +120,13 @@
  <div class="prose">
   <h2>Where the formula comes from</h2>
   <p>The sizing method is the one the panel and battery makers publish: daily watt-hours divided by peak sun hours gives the panel watts. Renogy states it as total solar wattage needed equals daily watt-hours divided by peak sun hours, and Battle Born states the same formula with a 2,400 watt-hour example that yields 600 watts at 4 peak sun hours. The derate factor, the share of nameplate power that actually reaches the batteries, comes from NREL: the PVWatts method defaults to 0.77, and this tool applies it.</p>
-  <p>On top of the derate, the makers recommend margin for imperfect days. Battle Born recommends adding 20 to 30 percent solar capacity when space allows, and Renogy rounds its worked example up from 200 to 250 or 300 watts. The tool shows the raw answer and the margined one.</p>
+  <p>On top of the derate, the makers recommend margin for imperfect days. Battle Born recommends adding 20 to 30 percent solar capacity when space allows, and Renogy rounds its worked example up from 200 to 250 or 300 watts. The tool shows the raw answer and the margined one, then turns the margined figure into whole panels at 200 and 100 watts and into the amps a charge controller has to pass at the bank's voltage.</p>
+  <p>Peak sun hours are the number that decides the answer, and the sun is lower in winter, so the same daily use needs a larger array in December than in July. The tool takes your own peak sun figure when you have one from a solar map for the months you camp, and warns below 3 that the array comes out larger than the region preset suggested.</p>
 
   <h2>What the answer means</h2>
   <p>The result is a starting point for shopping, not a guarantee. Panels flat on an RV roof face the sky rather than the sun, so winter and northern latitudes cut output below the rated hours. Shade, dirt on the panels, and a partially drained battery all cut it further. If the answer says 400 watts, buying 400 watts of panel and expecting a full recharge every day in Oregon in December will disappoint you; the same array in Arizona mostly won't.</p>
-  <p>The bank figure is the other half of the same day. Renogy's sizing method is the one the tool follows: daily watt-hours become amp-hours at the bank's voltage, and the bank is then sized so that the day's use is only part of what it holds, because a battery discharged to empty every night does not last. The tool shows the one-day bank at the chemistry's usable share; Renogy suggests sizing for 2 to 3 days of autonomy in sunny areas if you want to ride out a cloudy stretch.</p>
-  <p>Battle Born's rule of thumb: about 200 watts of solar per 100 amp-hours of lithium battery capacity, which is a sanity check on the sizing answer rather than a substitute for it.</p>
+  <p>The bank figure is the other half of the same day. Renogy's sizing method is the one the tool follows: daily watt-hours become amp-hours at the bank's voltage, and the bank is then sized so that the day's use is only part of what it holds, because a battery discharged to empty every night does not last. The tool shows the one-day bank at the chemistry's usable share, then multiplies it by the days of autonomy you choose, which is the 2 to 3 days Renogy suggests for riding out a cloudy stretch in sunny areas.</p>
+  <p>Battle Born's rule of thumb: about 200 watts of solar per 100 amp-hours of lithium battery capacity, which is a sanity check on the sizing answer rather than a substitute for it. The tool applies it to the bank your own inputs produce and shows the watts per 100 amp-hours, so a figure far from 200 points at one of the inputs rather than at the formula. That guideline is a lithium figure; a lead-acid bank needs more amp-hours for the same usable energy, so the ratio sits lower and the tool says so instead of calling it a fault.</p>
 
   <h2>Where to go next</h2>
   <p><a href="/tools/battery-runtime">The battery runtime calculator</a> answers the other half: how long the bank carries you between charges. <a href="/tools/watts-to-amps">The watts to amps calculator</a> converts any appliance label into the draw it becomes on the battery. And when the array stops charging the bank, the <a href="/guides/rv-solar-not-charging">RV solar not charging guide</a> walks the panel, the controller and the battery in order. The parts page lists <a href="/parts/#part-solar-panels">the panels</a>, <a href="/parts/#part-solar-charge-controller">the controller</a> and <a href="/parts/#part-house-battery">the bank</a> as separate parts.</p>
@@ -128,7 +143,7 @@
    </ul>
   </div>
 
-  <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Nov 1, 2026.</p>
+  <p class="reviewed">By <a class="link" href="/about">OriginRV</a>. Last reviewed on Nov 2, 2026.</p>
 
  </div>
 </div>
@@ -140,6 +155,6 @@
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 <script src="assets/js/config.js?v=97955231"></script>
 <script src="assets/js/site.js?v=551787e0"></script>
-<script src="assets/js/solarsizing.js?v=b008bc81"></script>
+<script src="assets/js/solarsizing.js?v=3a181435"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@ function makeEl(id) {
     fire(ev) { (listeners[ev] || []).forEach(fn => fn()); },
   };
 }
-['s-wh', 's-region', 's-result', 's-chem', 's-builder'].forEach(id => { elements[id] = makeEl(id); });
+['s-wh', 's-region', 's-result', 's-chem', 's-builder', 's-days', 's-psh'].forEach(id => { elements[id] = makeEl(id); });
 elements['s-region'].value = '5.5';
 elements['s-chem'].value = 'lifepo4';
 
@@ -59,6 +59,8 @@ check('renders disclaimer', html.indexOf('w-disclaimer') !== -1);
 elements['s-region'].value = '4.0';
 elements['s-region'].fire('change');
 check('region change recomputes', elements['s-result'].innerHTML.indexOf('4.0') !== -1);
+elements['s-region'].value = '5.5';
+elements['s-region'].fire('change');
 
 // THE BATTERY BANK (quick wins #14, 2026-10-16). Renogy's method: Wh / volts = daily Ah,
 // then / usable share. 2400 Wh at 12.8 V is 187.5 Ah a day; at 80% usable that is 234 Ah.
@@ -67,7 +69,36 @@ elements['s-wh'].fire('input');
 let bankHtml = elements['s-result'].innerHTML;
 check('renders the battery bank row', bankHtml.indexOf('Battery bank to carry this day') !== -1);
 check('lithium bank: 2400 Wh -> 234 Ah at 12.8 V / 80%', bankHtml.indexOf('234 Ah') !== -1);
-check('renders the cloudy-stretch row', bankHtml.indexOf('For a cloudy stretch') !== -1);
+/* THE AUTONOMY CONTROL, 2026-11-02. The row used to be hard-coded at two days while its own
+   sentence quoted Renogy's 2-to-3 range. It now reads the control, and one day has to read as
+   "1 day" and not "1 days". */
+check('renders the autonomy row', bankHtml.indexOf('of autonomy') !== -1);
+const b2 = RV.compute(2400, 5.5, 2);
+check('autonomy defaults to two days', bankHtml.indexOf(String(Math.round(234.375 * 2)) + ' Ah') !== -1);
+
+/* THE SHOPPING ROWS derive from the same figures, so assert the arithmetic rather than a
+   snapshot: whole panels up at 200 W, and the controller sized to the margined array. */
+const panels200 = Math.ceil(b2.margined / 200);
+// The controller is sized on the array AS BOUGHT (whole panels), not on the margined wattage:
+// an independent review caught the two rows disagreeing, 800 W bought against 708 W margined.
+const ampsBought = Math.ceil((panels200 * 200) / 12.8);
+check('renders the panel count', bankHtml.indexOf('Panels to buy') !== -1);
+check('panel count rounds up to whole panels', bankHtml.indexOf(panels200 + ' x 200 W') !== -1);
+check('renders the controller amps', bankHtml.indexOf('Charge controller') !== -1);
+check('controller sizes to the array as bought', bankHtml.indexOf(ampsBought + ' A') !== -1);
+
+// The sanity row is computed against the reader's own bank, not a 100 Ah worked example.
+check('sanity row carries the reader\'s ratio', bankHtml.indexOf('W per 100 Ah') !== -1);
+
+/* ONE DAY HAS TO READ AS "1 DAY". The autonomy row interpolates a count into a sentence, which
+   is the exact place a two-number sentence ships "1 days". */
+elements['s-days'].value = '1';
+elements['s-days'].fire('change');
+const oneDay = elements['s-result'].innerHTML;
+check('one day reads singular', oneDay.indexOf('For 1 day of autonomy') !== -1 && oneDay.indexOf('1 days') === -1);
+elements['s-days'].value = '3';
+elements['s-days'].fire('change');
+check('three days multiplies the bank', elements['s-result'].innerHTML.indexOf(String(Math.round(234.375 * 3)) + ' Ah') !== -1);
 
 // Lead-acid is 50% usable at 12.0 V: 2400 / 12 / 0.5 = 400 Ah.
 elements['s-chem'].value = 'lead';

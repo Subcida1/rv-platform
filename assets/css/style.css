@@ -2150,6 +2150,15 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .waste-box{display:flex;align-items:center;gap:8px;font-size: var(--fs-sm);color:var(--text);font-weight:700;cursor:pointer;padding:8px 12px;min-height:44px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
 .waste-box:hover{border-color:var(--border-2)}
 .waste-box input{width:17px;height:17px;accent-color:var(--c-sky);cursor:pointer}
+/* A CHECKBOX THAT ASKS A YES/NO QUESTION INSIDE A TOOL FIELD, 2026-11-02. Its own class and not
+   .waste-box: that one belongs to the towing calculator's waste-water list, and a rule named after
+   one page's subject borrowed by another page is how a retired class goes on being load-bearing. */
+.check-field{display:flex;align-items:center;gap:10px;font-weight:700;font-size: var(--fs-sm);color:var(--text);cursor:pointer;min-height:44px}
+/* .field input gives every input width:100%, a 50px min-height and 12px padding, which turns a
+   checkbox into a stretched box beside its own label. Measured on the first render: the input
+   filled the whole row. Reset those four here, or the control reads as a text field. */
+.check-field input{width:18px;height:18px;min-height:0;margin:0;padding:0;border:0;background:none;box-shadow:none;flex:none;accent-color:var(--c-sky);cursor:pointer}
+.check-field input:focus{box-shadow:0 0 0 3px var(--glow)}
 .waste-grid select{border:1px solid var(--border-2);border-radius:8px;padding:6px 8px;min-height:24px;font-size: var(--fs-xs);background:var(--surface);color:var(--text);cursor:pointer}
 /* THE SELECTOR IS .waste-grid AND NOT .waste-box, and that is a repair. On 2026-09-26 the <select>
    was moved OUT of the <label> to fix a label wrapping two controls, which left this rule matching

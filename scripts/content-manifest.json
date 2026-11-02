@@ -1085,10 +1085,10 @@
     "sources": []
   },
   "tools/battery-runtime.html": {
-    "hash": "a65095fe96b0aae9",
+    "hash": "cceb69124d5ec702",
     "status": "verified",
-    "verified_by": "eyebrow/kicker removal, site-wide craft pass 2026-10-29: the small uppercase label above each heading was deleted. Proved text-identical by re-parsing both revisions with tags stripped and the eyebrow element removed from the old copy; links, headings and copy unchanged.",
-    "verified_at": "2026-10-29",
+    "verified_by": "Tool controls added 2026-11-02: a bank-wiring select (series keeps amp-hours, so a 225 Ah 6 V pair is 225 Ah at 12 V), a bank-voltage box for 24/48 V, an inverter checkbox applying 88 percent, and a fast-drain warning on lead-acid above a 10-hour rate. Copy rewritten in three places: the amp-hours hint, one new paragraph under Why chemistry decides, and one sentence under What the answer means. Unchanged: H1, headings, links, Sources block, the 50/80 percent fractions and the 12.8/12.0 volt convention. Independent review (Cloud lane, 2026-11-02): clean on the series paragraph, the inverter hint and the 88 percent sentence; one fault, the fast-drain warning appealed to an unnamed maker's table, rewritten to name the ten-hour rating and the reader's own spec sheet, then re-confirmed sound.",
+    "verified_at": "2026-11-02",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1195,11 +1195,14 @@
     "claims": []
   },
   "tools/solar-sizing.html": {
-    "hash": "d2108b72a1c80096",
-    "status": "unverified",
-    "verified_by": null,
-    "verified_at": null,
-    "sources": []
+    "hash": "a78131c76bae3d20",
+    "status": "verified",
+    "verified_by": "Sizing outputs added 2026-11-02: a 1/2/3 day autonomy control replacing the hard-coded 2 days, whole-panel counts at 200 and 100 W, charge-controller amps at the bank voltage, a peak-sun-hours override, and a 12 V compressor fridge row in the appliance builder. Copy rewritten in three places: the region hint, one new paragraph in Where the formula comes from, and the bank and sanity paragraphs. Unchanged: H1, headings, links, Sources block, the formula, the 0.77 derate and the 25 percent margin. Independent review (Cloud lane, 2026-11-02): clean on the autonomy control and the panel count; three faults, the controller row undercut the 800 W array the panel row tells the reader to buy, 242 W per 100 Ah was called in the neighborhood of a 200 W guideline, and the presets were characterised as summer-weighted with no source. All three rewritten and re-confirmed, including removing the last summer attribution from the warning row.",
+    "verified_at": "2026-11-02",
+    "sources": [],
+    "spec": null,
+    "spec_waived": true,
+    "claims": []
   },
   "tools/state-trailer-brake-laws.html": {
     "hash": "3fddf42fc31325fb",
