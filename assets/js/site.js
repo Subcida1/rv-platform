@@ -118,7 +118,9 @@
  function $$(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
- function logoHTML() {
+ function logoHTML(h) {
+ h = h || 72;
+ var w = Math.round(h * 240 / 308);
  /* THE LOCKUP IS THE SUPPLIED ARTWORK NOW (T, 2026-11-02). The typed name and the
     blue tile it sat on are gone: the wordmark inside the chevron carries the name,
     and T asked for that at the left of the navbar. The alt text is the accessible
@@ -126,10 +128,12 @@
     width/height are the file's own 240x308 aspect at 72px tall, so the box is
     reserved before the image decodes and a slow connection does not shift the nav.
     72 is not a taste call: at 60px and below the name inside the chevron stops
-    being readable, measured at 1x on white. The bar grew from 66 to 84 to hold it. */
+    being readable, measured at 1x on white. The bar grew from 66 to 84 to hold it.
+    The footer asks for its own height, so the size is an argument. The width still
+    comes from the file's own 240x308 aspect so the box is reserved before decode. */
  return '<a class="logo" href="' + R(CFG.routes.home) + '">' +
   '<img class="logo-lockup" src="' + R('assets/img/brand/logo-lockup.png') + '"' +
-  ' alt="OriginRV" width="56" height="72">' +
+  ' alt="OriginRV" width="' + w + '" height="' + h + '">' +
   '</a>';
  }
 
@@ -374,6 +378,26 @@
  return false;
  }
 
+/* THE FOOTER USES THE 960 CUTOUT, AT THE COLUMN'S OWN WIDTH (T, 2026-11-02). "Use the 480 or
+   960 cutout variant for the bottom left logo on my website footer, the column should be filled
+   with my icon." So the footer is no longer a smaller copy of the navbar lockup: it is the word
+   cutout sized by its WIDTH, because this artwork is portrait and a height of 120 left 147px of
+   a 282px column empty.
+   ONE COLUMN WIDTH, measured at 1280 and rendered, not estimated. 1.25x the column was tried and
+   rejected on the screenshot: it pushed the mark past the column gutter into the TOOLS heading
+   and read as bursting out of its box. At 100% the arms end inside the column, the name sets at
+   about 15px against the 14.5px links and the tagline, and the mark fills the column's height.
+   The navbar keeps logo-lockup.png at 72: at 60px and below the name inside it stops reading. */
+function footLogoHTML() {
+ /* width/height are the file's own 960x1231 aspect, so the box is reserved before it decodes.
+    The width itself is .foot-brand's --foot-logo-w in the stylesheet, so the phone breakpoint
+    can change it without a second number here. */
+ return '<a class="logo foot-logo" href="' + R(CFG.routes.home) + '">' +
+  '<img class="logo-word" src="' + R('assets/img/brand/word-cutout-960.png') + '"' +
+  ' alt="OriginRV" width="960" height="1231">' +
+  '</a>';
+}
+
  function footerHTML() {
  var rt = CFG.routes;
  /* THE FOOTER MIRRORS THE HEADER (2026-11-02). A column headed "Tools" held three links to
@@ -385,7 +409,7 @@
     because it is the one thing on this site a shop can take away with them. */
  return '<a class="to-top" href="#top" onclick="return RV.toTop()">Back to top</a>' +
  '<div class="foot-top"><div class="wrap"><div class="foot-grid">' +
- '<div class="foot-brand">' + logoHTML() +
+ '<div class="foot-brand">' + footLogoHTML() +
  '<p>' + esc(CFG.brand.tag) + '</p>' +
  '</div>' +
  '<div class="foot-col"><p class="foot-h">Tools</p>' +

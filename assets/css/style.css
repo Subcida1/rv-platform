@@ -631,6 +631,21 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    84px navbar can give it with air above and below; the width follows the file's
    own 240x308 aspect. */
 .logo-lockup{height:72px;width:auto;display:block}
+/* THE FOOTER MARK IS THE SAME ARTWORK, DRAWN LARGER (T, 2026-11-02). The footer's brand
+   column is 301px tall and a 72px mark plus its tagline left 206px of it empty, so the
+   footer's copy of the lockup is 120px - the size that fills it without reading as bigger
+   than the column headings beside it (140 and 168 were both rendered and rejected).
+   Set on .foot-brand only: the navbar keeps 72, the smallest size the name inside the
+   chevron stays legible at. */
+/* THE FOOTER MARK IS THE WORD CUTOUT AT THE COLUMN'S WIDTH (T, 2026-11-02). The navbar's lockup
+   is height-driven because it sits in an 84px bar; the footer's is width-driven because the foot
+   brand column is portrait and T's ask was that the icon fill it. 100% is the measured column, so
+   the arms end inside the column rather than in the gutters beside it. --foot-logo-w exists so the
+   phone breakpoint, where the brand block is full width, can cap it without a second number in
+   the markup. */
+.foot-brand{--foot-logo-w:100%}
+.foot-brand .foot-logo{width:var(--foot-logo-w)}
+.foot-brand .logo-word{width:100%;height:auto;display:block}
 .logo-mark{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;box-shadow:0 8px 20px -8px rgba(244,63,94,.6)}
 .logo-mark svg{width:22px;height:22px}
 .logo-name{font-size: var(--fs-2xl);font-weight:800;letter-spacing:-.02em}
@@ -3087,7 +3102,7 @@ figure:has(svg[role="img"]){overflow-x:auto;overflow-y:hidden}
   /* ---- footer: the brand block gets its own row instead of sharing a column
      with a link list, then the five lists pair up underneath it. ---- */
   .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px 20px}
-  .foot-brand{grid-column:1/-1}
+  .foot-brand{grid-column:1/-1;--foot-logo-w:240px}
   .foot-brand p{max-width:none}
   .foot-col .foot-h{margin-bottom:8px}
 
