@@ -17,6 +17,14 @@ Outputs:
   assets/img/brand/og-default.png         1200x630 social card
   site.webmanifest
 
+TWO MARKS LIVE HERE, AND THEY ARE DELIBERATELY DIFFERENT (2026-11-02). The tab,
+app and social family carries the rainbow chevron artwork T supplied in
+~/Pictures/RVIcon (the cut-out, wordless export); see CHEV below. The nav and
+footer lockup still paints TREE+RV in white on the blue tile, because his new
+wordmark exports are cropped through the lettering and the header lockup is a
+documented deliberate decision in style.css ("the one vivid moment"). Do not
+collapse them into one geometry until the full, uncropped logo master exists.
+
 Run: python3 scripts/build-brand-assets.py
 """
 from pathlib import Path
@@ -76,28 +84,99 @@ RV = [(8.2, 16.0),    # front bumper, lower front corner
 RV_WINDOWS = [(13.2, 10.0, 16.8, 12.6, 0.4),   # side window
               (18.0, 10.0, 21.2, 12.6, 0.4)]   # rear side window
 RV_WHEELS = [(11.6, 18.0, 1.4), (20.4, 18.0, 1.4)]
-# Glyph bounding box in 24-unit space
-GB = (min([p[0] for p in TREE] + [p[0] for p in RV] + [w[0] - w[2] for w in RV_WHEELS]),
-      min([p[1] for p in TREE] + [p[1] for p in RV] + [w[1] - w[2] for w in RV_WHEELS]),
-      max([p[0] for p in RV] + [w[0] + w[2] for w in RV_WHEELS]),
-      max([p[1] for p in TREE] + [w[1] + w[2] for w in RV_WHEELS]))
 
 SS = 4  # supersample factor for every raster we draw
 FONT_BLACK = "/usr/share/fonts/truetype/lato/Lato-Black.ttf"
 FONT_REGULAR = "/usr/share/fonts/truetype/lato/Lato-Regular.ttf"
 
+# ---- THE NEW MARK: five nested chevrons, from T's 2026-11-02 handoff ---------
+#
+# Sampled off RVICON (4).png, the cut-out export with no lettering: five bands
+# that share edges with no gaps, apex up, arms at 45 degrees, Purple outermost to
+# Orange innermost. The supplied file is a ZOOM (the arms run off all four edges
+# and the apex of the outermost band is cropped), so it cannot be downscaled into
+# a tab icon: at 16px a 2:1 crop of band ends is a smear, not an arrow. The mark
+# is therefore recomposed here from its own geometry, inside a safe area.
+#
+# The one deliberate departure is the arm angle: 60 degrees from horizontal
+# rather than the artwork's 45. At 45 the completed chevron is exactly twice as
+# wide as it is tall, which leaves a 16px tab icon 14x7 pixels for five bands,
+# under 1.5px each. At 60 the same five bands land on 2.5px each and every colour
+# survives the size. Revert `slope` to 1.0 if T wants the 45-degree apex back.
+CHEV_COLOURS = [(164, 85, 245),    # purple   #a455f5
+                (1, 163, 255),     # blue     #01a3ff
+                (3, 226, 90),      # green    #03e25a
+                (252, 219, 86),    # yellow   #fcdb56
+                (241, 142, 10)]    # orange   #f18e0a
+CHEV_SLOPE = 0.5                   # dx per dy: arms at 63 degrees from horizontal
+CHEV_NOTCH = 0.22                  # share of the mark's depth left open below the innermost apex
+CHEV_BOX = 32                      # the mark's own unit space, square
+# An opaque plate for the home-screen and PWA icons: the yellow band measures
+# 1.35:1 against white, so on a white plate it reads as a gap between the green
+# and the orange. The dark plate is the supplied black-background variant.
+CHEV_PLATE = (18, 19, 22)
 
-def svg_gradient_stops():
-    """The tile gradient as SVG <stop> lines, generated from STOPS.
 
-    Hand-written hex here is how the SVG favicon drifted from the rasters in the
-    first place: STOPS was changed and the three literal stop colors were not.
-    Generating them means the vector and the PNGs cannot be given different
-    colours by hand.
+def chev_polys(box=CHEV_BOX, width_frac=0.875, slope=CHEV_SLOPE, notch_frac=CHEV_NOTCH,
+               colours=None):
+    """The five bands as (colour, points) in `box` units, centred, apex up, arms cut flat.
+
+    Every band's arms run to the same bottom line, so the arm length is the whole
+    mark's depth (D) and the innermost band keeps real length instead of tapering
+    to a point: the open notch below its apex is `notch_frac` of D. Band thickness
+    is therefore D*(1-notch_frac)/n, which at 16px lands on roughly 2.2px per
+    colour: thin enough for five bands to fit, thick enough to survive the size.
     """
-    return "".join(
-        '      <stop offset="%g" stop-color="#%02x%02x%02x"/>\n' % (off, r, g, b)
-        for off, (r, g, b) in STOPS)
+    cols = colours if colours is not None else CHEV_COLOURS
+    n = len(cols)
+    w = box * width_frac
+    depth = w / (2 * slope)
+    if depth > box * 0.94:            # never let the mark run into the edge
+        depth = box * 0.94
+        w = 2 * slope * depth
+    t = depth * (1 - notch_frac) / n
+    cx = box / 2
+    top = (box - depth) / 2
+    bot = top + depth
+    out = []
+    for i, c in enumerate(cols):
+        ya, yb = top + i * t, top + (i + 1) * t
+        out.append((c, [
+            (cx, ya),                        # apex, outer edge
+            (cx + (bot - ya) * slope, bot),  # outer edge, right arm, cut flat
+            (cx + (bot - yb) * slope, bot),  # inner edge, right arm
+            (cx, yb),                        # apex, inner edge
+            (cx - (bot - yb) * slope, bot),  # inner edge, left arm
+            (cx - (bot - ya) * slope, bot),  # outer edge, left arm
+        ]))
+    return out
+
+
+def chev_img(size, plate=None, radius_ratio=0.0, width_frac=0.875, ss=SS):
+    """The mark as a raster: transparent by default, on a rounded `plate` when given."""
+    S = int(round(size * ss))
+    img = Image.new("RGBA", (S, S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    if plate:
+        d.rounded_rectangle((0, 0, S - 1, S - 1), radius=int(S * radius_ratio), fill=plate)
+    k = S / float(CHEV_BOX)
+    for c, pts in chev_polys(width_frac=width_frac):
+        d.polygon([(x * k, y * k) for x, y in pts], fill=c)
+    return img.resize((int(size), int(size)), Image.LANCZOS)
+
+
+def chev_svg(tile=CHEV_BOX, width_frac=0.875):
+    """The mark as vector, same geometry as the rasters. No plate: a tab icon is cut out."""
+    body = "".join(
+        '    <polygon points="%s" fill="#%02x%02x%02x"/>\n'
+        % (" ".join("%.2f,%.2f" % p for p in pts), c[0], c[1], c[2])
+        for c, pts in chev_polys(box=tile, width_frac=width_frac))
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" role="img" '
+            'aria-label="OriginRV">\n'
+            '  <g>\n'
+            '%s'
+            '  </g>\n'
+            '</svg>\n' % (tile, tile, body))
 
 
 def ramp(stops, n):
@@ -120,91 +199,6 @@ def diagonal_gradient(w, h, stops):
     return Image.fromarray(flat[idx].astype("uint8"), "RGB")
 
 
-def glyph_scale(size, fill=0.62):
-    """Scale factor that makes the glyph occupy `fill` of the tile width."""
-    return (size * fill) / (GB[2] - GB[0])
-
-
-def draw_glyph(mask, size, fill=0.62, detail=True):
-    """Draw the mark into an L-mode mask: 255 where the ink goes, 0 where it is cut out.
-
-    Everything is a filled silhouette rather than a stroke, which is what keeps
-    this readable at 16px: the previous stroked trailer collapsed into a grey
-    smudge at tab size. The window is a genuine cutout, so the brand gradient
-    shows through it exactly as the SVG does.
-    """
-    draw = ImageDraw.Draw(mask)
-    s = glyph_scale(size, fill)
-    gw, gh = (GB[2] - GB[0]) * s, (GB[3] - GB[1]) * s
-    ox, oy = (size - gw) / 2 - GB[0] * s, (size - gh) / 2 - GB[1] * s
-
-    def P(x, y):
-        return (ox + x * s, oy + y * s)
-
-    draw.polygon([P(x, y) for x, y in TREE], fill=255)
-    draw.polygon([P(x, y) for x, y in RV], fill=255)
-    if detail:
-        for wx0, wy0, wx1, wy1, wr in RV_WINDOWS:
-            draw.rounded_rectangle((P(wx0, wy0)[0], P(wx0, wy0)[1], P(wx1, wy1)[0], P(wx1, wy1)[1]),
-                                   radius=wr * s, fill=0)
-    for cx, cy, r in RV_WHEELS:
-        px, py = P(cx, cy)
-        rr = r * s
-        draw.ellipse((px - rr, py - rr, px + rr, py + rr), fill=255)
-    return mask
-
-
-def mark(size, radius_ratio=0.23, fill=0.62, detail=True):
-    """The brand tile: gradient rounded square with the white mark punched over it."""
-    big = size * SS
-    img = diagonal_gradient(big, big, STOPS).convert("RGBA")
-    img.paste((255, 255, 255), mask=draw_glyph(Image.new("L", (big, big), 0), big,
-                                               fill if detail else 0.74, detail))
-    mask = Image.new("L", (size, size), 0)
-    ImageDraw.Draw(mask).rounded_rectangle((0, 0, size - 1, size - 1),
-                                           radius=int(size * radius_ratio), fill=255)
-    img.putalpha(mask.resize((big, big), Image.LANCZOS))
-    return img.resize((size, size), Image.LANCZOS)
-
-
-def favicon_svg(tile=64, radius_ratio=0.23, fill=0.7):
-    """The same tile as hand-written SVG, geometry derived from the constants above."""
-    s = (tile * fill) / (GB[2] - GB[0])
-    gw, gh = (GB[2] - GB[0]) * s, (GB[3] - GB[1]) * s
-    ox, oy = (tile - gw) / 2 - GB[0] * s, (tile - gh) / 2 - GB[1] * s
-
-    def pts(poly):
-        return " ".join("%.2f,%.2f" % (ox + x * s, oy + y * s) for x, y in poly)
-
-    windows = "".join(
-        '<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" rx="%.2f" fill="url(#orv)"/>'
-        % (ox + x0 * s, oy + y0 * s, (x1 - x0) * s, (y1 - y0) * s, wr * s)
-        for x0, y0, x1, y1, wr in RV_WINDOWS)
-    wheels = "".join('<circle cx="%.2f" cy="%.2f" r="%.2f"/>' % (ox + cx * s, oy + cy * s, r * s)
-                     for cx, cy, r in RV_WHEELS)
-    return (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %(t)d %(t)d" role="img" '
-        'aria-label="OriginRV">\n'
-        '  <defs>\n'
-        '    <linearGradient id="orv" gradientUnits="userSpaceOnUse" x1="0" y1="0" '
-        'x2="%(t)d" y2="%(t)d">\n'
-        '%(stops)s'
-        '    </linearGradient>\n'
-        '  </defs>\n'
-        '  <rect width="%(t)d" height="%(t)d" rx="%(r)d" fill="url(#orv)"/>\n'
-        '  <g fill="#fff">\n'
-        '    <polygon points="%(tree)s"/>\n'
-        '    <polygon points="%(rv)s"/>\n'
-        # windows are filled with the tile gradient, which is what a knockout
-        # into the gradient looks like, keeping the PNGs and the SVG identical
-        '    %(windows)s\n'
-        '    %(wheels)s\n'
-        '  </g>\n'
-        '</svg>\n'
-    ) % dict(t=tile, r=round(tile * radius_ratio), tree=pts(TREE), rv=pts(RV),
-             windows=windows, wheels=wheels, stops=svg_gradient_stops())
-
-
 def og_card(path, w=1200, h=630):
     """White card, soft brand wash, tile + wordmark + tagline + domain."""
     card = Image.new("RGB", (w, h), WHITE)
@@ -222,7 +216,8 @@ def og_card(path, w=1200, h=630):
                                  fill=STOPS[1][1] + (22,))
     card = Image.alpha_composite(card, blob.filter(ImageFilter.GaussianBlur(70)))
 
-    tile = mark(int(104 * SS), fill=0.60).resize((104, 104), Image.LANCZOS)
+    tile = chev_img(int(104 * SS), plate=CHEV_PLATE,
+                    width_frac=0.72).resize((104, 104), Image.LANCZOS)
     card.alpha_composite(tile, (88, 92))
 
     draw = ImageDraw.Draw(card)
@@ -265,12 +260,16 @@ def ico_bytes(frames):
 
 
 def inline_mark():
-    """The nav/footer mark as inline SVG, same geometry as the icons.
+    """The nav/footer mark as inline SVG: the OUTGOING blue-tile glyph, not the new chevron.
 
     config.js holds this so the shell can drop it into every page. It is generated
     here rather than hand-written, because a hand-kept copy is exactly how the
     icon and the logo drift apart. The windows are cut out of the same path with
     fill-rule evenodd, which lets the CSS gradient behind the mark show through.
+
+    Kept on the old mark on purpose (see the module docstring): the header lockup
+    is a documented decision in style.css and T's new wordmark exports are cropped,
+    so the lockup moves only once the full logo master arrives.
     """
     def rr(box):
         x0, y0, x1, y1, radius = box
@@ -309,29 +308,38 @@ def write_inline_mark(path):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
 
-    (OUT / "favicon.svg").write_text(favicon_svg(), encoding="utf-8")
+    (OUT / "favicon.svg").write_text(chev_svg(), encoding="utf-8")
     print("  wrote  assets/img/brand/favicon.svg")
 
     write_inline_mark(ROOT / "assets" / "js" / "config.js")
-    print("  synced the inline mark into assets/js/config.js")
+    print("  synced the nav/footer mark into assets/js/config.js")
 
-    for size, name in ((16, "favicon-16.png"), (32, "favicon-32.png"),
-                       (180, "apple-touch-icon.png"), (192, "icon-192.png"),
+    # The tab sizes are CUT OUT, exactly as the supplied artwork is: a tab bar can
+    # be light or dark and a plate would fight one of them.
+    for size, name in ((16, "favicon-16.png"), (32, "favicon-32.png")):
+        chev_img(size).save(OUT / name, "PNG", optimize=True)
+        print("  wrote  assets/img/brand/%s (%dx%d, cut out)" % (name, size, size))
+
+    # The home-screen and PWA sizes are OPAQUE: iOS and Android compose their own
+    # mask, and the yellow band is 1.35:1 against white on its own.
+    for size, name in ((180, "apple-touch-icon.png"), (192, "icon-192.png"),
                        (512, "icon-512.png")):
-        mark(size, detail=size >= 32).save(OUT / name, "PNG", optimize=True)
-        print("  wrote  assets/img/brand/%s (%dx%d)" % (name, size, size))
+        chev_img(size, plate=CHEV_PLATE,
+                 width_frac=0.72).save(OUT / name, "PNG", optimize=True)
+        print("  wrote  assets/img/brand/%s (%dx%d, plated)" % (name, size, size))
 
-    # full bleed square for Android adaptive icons, glyph inside the safe zone
-    big = 512 * SS
-    maskable = diagonal_gradient(big, big, STOPS).convert("RGBA")
-    maskable.paste((255, 255, 255),
-                   mask=draw_glyph(Image.new("L", (big, big), 0), big, fill=0.5))
-    maskable.resize((512, 512), Image.LANCZOS).save(OUT / "icon-maskable-512.png", "PNG", optimize=True)
+    # full bleed square for Android adaptive icons. The maskable safe zone is a
+    # circle of 80% of the canvas, and the mark's extreme points are the two arm
+    # tips at the bottom corners, whose distance from centre is width*0.707. At
+    # 0.58 that is 210px on a 512 canvas against a 205px radius, so the tips were
+    # clipped by the mask; 0.54 puts them at 195px, inside it.
+    chev_img(512, plate=CHEV_PLATE, width_frac=0.54).save(
+        OUT / "icon-maskable-512.png", "PNG", optimize=True)
     print("  wrote  assets/img/brand/icon-maskable-512.png")
 
     # legacy default lookup is /favicon.ico, so it lives at the site root
     (ROOT / "favicon.ico").write_bytes(
-        ico_bytes([mark(16, detail=False), mark(32), mark(48)]))
+        ico_bytes([chev_img(16), chev_img(32), chev_img(48)]))
     with Image.open(ROOT / "favicon.ico") as check:
         sizes = sorted(check.ico.sizes())
     assert sizes == [(16, 16), (32, 32), (48, 48)], "favicon.ico frames: %s" % sizes
