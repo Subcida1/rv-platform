@@ -299,6 +299,14 @@ const pages = fs.readdirSync(ROOT, { recursive: true })
   .sort();
 
 let written = 0, already = 0;
+/* ASSET STAMPS ARE NOT DRIFT (2026-11-02). stamp_assets.py appends ?v=<hash> to
+   every asset reference in a page, and the shell now carries one (the logo image),
+   so the page text and the freshly rendered shell differ by eleven characters on
+   every page. Without this the check would demand a rebuild after every stamp, or
+   a stamp after every build, forever. The comparison drops the hash from both
+   sides: the structure is what this check exists for, and the hash belongs to the
+   other script. */
+const unstamp = (s) => s.replace(/\?v=[0-9a-f]{6,}/g, '');
 const problems = [];
 for (const rel of pages) {
   const file = path.join(ROOT, rel);
@@ -307,7 +315,7 @@ for (const rel of pages) {
   if (after === null) { problems.push(rel + ': no nav:start/nav:end markers'); continue; }
   after = fill(after, '<!-- footer:start -->', '<!-- footer:end -->', footerFor(rel));
   if (after === null) { problems.push(rel + ': no footer:start/footer:end markers'); continue; }
-  if (after === before) { already++; continue; }
+  if (unstamp(after) === unstamp(before)) { already++; continue; }
   if (!CHECK) fs.writeFileSync(file, after, 'utf8');
   written++;
 }

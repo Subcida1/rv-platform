@@ -616,16 +616,21 @@ input,select,textarea{font-family:inherit}
    could not see the thing they had asked for.
 
    THE FIX IS scroll-margin-top ON ANYTHING WITH AN ID, because anything with an id can be an
-   anchor target and there is no list of them to keep in step. The nav is 67px at desktop width;
-   90 leaves the heading clear of it with a little air below, which is the difference between
+   anchor target and there is no list of them to keep in step. The nav is 85px at desktop width;
+   108 leaves the heading clear of it with a little air below, which is the difference between
    landing on a section and landing under its title.
 
    Found while planning the jump-nav for the new-owner guide, where the same bug would have made
    the navigation worse than nothing. */
-[id]{scroll-margin-top:90px}
+[id]{scroll-margin-top:108px}
 nav.main{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
+nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px}
 .logo{display:flex;align-items:center;gap:11px}
+/* The lockup is T's supplied wordmark (2026-11-02): the chevron with the name set
+   inside it, so there is no tile and no typed name beside it. Height is what the
+   84px navbar can give it with air above and below; the width follows the file's
+   own 240x308 aspect. */
+.logo-lockup{height:72px;width:auto;display:block}
 .logo-mark{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;box-shadow:0 8px 20px -8px rgba(244,63,94,.6)}
 .logo-mark svg{width:22px;height:22px}
 .logo-name{font-size: var(--fs-2xl);font-weight:800;letter-spacing:-.02em}
@@ -706,7 +711,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    the rest of the page lines up on. Every row is at least 44px tall (14px above
    and below a 16px line), which is the Apple target size and what the footer
    could not offer while its links were 32px. */
-.mobile-menu{display:none;flex-direction:column;padding:6px 24px 20px;border-top:1px solid var(--border);background:var(--surface);max-height:calc(100dvh - 66px);overflow-y:auto;overscroll-behavior:contain}
+.mobile-menu{display:none;flex-direction:column;padding:6px 24px 20px;border-top:1px solid var(--border);background:var(--surface);max-height:calc(100dvh - 84px);overflow-y:auto;overscroll-behavior:contain}
 /* The max-height above is not decoration: now that `nav.main` actually sticks,
    a menu taller than the viewport would pin with its bottom below the fold and
    the last items could not be scrolled to. The menu scrolls itself instead.
@@ -1038,16 +1043,17 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
    nav bar and remove the gap between the two so that they're just perfectly aligned ... right now
    it just stands out, it looks out of place."
 
-   MEASURED, because the gap was the whole complaint: nav.main is 67px tall (66px of .wrap plus its
+   MEASURED, because the gap was the whole complaint: nav.main is 85px tall (84px of .wrap plus its
    1px border) and the bar was sticking at top:86px, so 19px of page content showed through between
-   them. It sits at 67px now, flush.
+   them. It sits at 85px now, flush, and moved with the bar on 2026-11-02 when the supplied logo
+   needed a taller one.
 
    AND IT WEARS THE HEADER'S OWN MATERIAL: the same rgba(255,255,255,.86) face and 14px backdrop
    blur nav.main uses, with the border on the bottom only, because nav.main already draws the line
    above it and two rules one pixel apart read as a seam. The chips change with it -- a white chip
    on a white bar is not a chip -- so they take the tint family's face and edge, which is the same
    pill language the fits tags and the type pills use. Hover still goes solid --tint-ink. */
-.hub-jump{position:sticky;top:67px;z-index:120;margin-top:26px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.hub-jump{position:sticky;top:85px;z-index:120;margin-top:26px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 /* A ROW THAT DOES NOT FILL IS CENTRED. Ty, 2026-10-10: "can we center the buttons that don't run a
    full row?" Nine systems on the parts hub wrap to eight and one, and the one sat hard against the
    left edge; the guides hub does the same with six. justify-content:center is the same answer the
@@ -1089,13 +1095,13 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
    the generators (scripts/build-parts-pages.py and directory/index.html) rather than hidden here,
    and the rule that styled them is deleted rather than left as dead weight. The tint contrast
    note that lived here is in git history if a count ever comes back. */
-.guide-group{scroll-margin-top:150px}
+.guide-group{scroll-margin-top:168px}
 /* The parts hub's bar carries nine systems, so it wraps to two rows (126px) where the
    guides bar's six fit on one (81px). Measured in the browser: with a 150px offset the
-   propane heading landed 43px UNDERNEATH the bar. 210 clears 67px of header plus 126px
+   propane heading landed 43px UNDERNEATH the bar. 228 clears 85px of header plus 126px
    of bar plus 17px of air. The bar is static below 900px, and at every width where it
    sticks it is two rows, so one fixed value is correct throughout. */
-.parts-sys{scroll-margin-top:210px}
+.parts-sys{scroll-margin-top:228px}
 @media(max-width:900px){
   /* A sticky bar on a phone eats a third of the screen, and its chips would have to
      scroll sideways, which is the pattern Ty rejected for the tool chips. So on a
@@ -3210,6 +3216,7 @@ body.is-embed .embed-credit{display:flex;position:fixed;left:0;right:0;bottom:0;
   font-size: var(--fs-sm);color:var(--text-2);text-align:center}
 body.is-embed .embed-credit .logo-mark{width:26px;height:26px;border-radius:8px;box-shadow:none;flex:none}
 body.is-embed .embed-credit .logo-mark svg{width:15px;height:15px}
+body.is-embed .embed-credit .embed-mark{width:26px;height:26px;border-radius:8px;flex:none}
 body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
 
 /* ===========================================================================
@@ -3819,7 +3826,7 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    there. The nav is 86px and .hub-jump adds about 58px more, so 150px is the same
    offset .guide-group already uses on the guides and parts hubs. Without it the jump
    lands with the heading hidden behind the bar that sent you. */
-.hub-page h2.region-h{scroll-margin-top:150px}
+.hub-page h2.region-h{scroll-margin-top:168px}
 
 
 /* ============================================================

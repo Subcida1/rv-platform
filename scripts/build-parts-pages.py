@@ -133,7 +133,6 @@ def head(title, desc, canonical, schemas):
   <title>{title} | OriginRV</title>
   <meta name="description" content="{desc}">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">

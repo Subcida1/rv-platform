@@ -46,12 +46,17 @@ THEME_META_RE = re.compile(r'<meta name="theme-color" content="[^"]*">')
 BEACON = C.BEACON
 
 ICON_ANCHOR = '<link rel="stylesheet" href="assets/css/style.css">'
-ICON_BLOCK = """<link rel="icon" type="image/svg+xml" href="assets/img/brand/favicon.svg">
-{ind}<link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+# NO SVG FAVICON (2026-11-02). The old icon was a vector the build could draw; the
+# supplied mark is a raster set at fixed sizes, and a vector would have to be
+# redrawn by hand, which is exactly what T rejected. A browser given an SVG link
+# prefers it over these PNGs, so the line has to be gone from every page, not just
+# absent from new ones. The strip below runs on every page every time.
+ICON_BLOCK = """{ind}<link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
 {ind}<link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
 {ind}<link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">
 {ind}<link rel="manifest" href="site.webmanifest">
 {ind}<meta name="theme-color" content="{theme}">"""
+SVG_ICON_RE = re.compile(r'\n?[ \t]*<link rel="icon" type="image/svg\+xml"[^>]*>')
 
 OG_ANCHOR = '<meta property="og:site_name" content="OriginRV">'
 OG_BLOCK = """<meta property="og:image" content="{c}/assets/img/brand/og-default.png">
@@ -89,7 +94,12 @@ for page in pages:
     html = page.read_text(encoding="utf-8")
     before = html
 
-    if "brand/favicon.svg" not in html:
+    # The supplied icon set is raster, so the SVG link is retired: a browser that
+    # still sees it prefers the SVG over these PNGs. Strip it wherever it survives,
+    # every run, whether or not the page is otherwise branded.
+    html = SVG_ICON_RE.sub("", html)
+
+    if "brand/favicon-32.png" not in html:
         if ICON_ANCHOR not in html:
             raise SystemExit("no stylesheet anchor in %s" % rel)
         idx = html.index(ICON_ANCHOR)

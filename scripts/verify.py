@@ -1173,13 +1173,10 @@ manifest = json.loads((ROOT / "site.webmanifest").read_text(encoding="utf-8"))
 if manifest.get("theme_color") != C.THEME_COLOR:
     bad_theme.append("site.webmanifest: %s" % manifest.get("theme_color"))
 
-# The generated brand assets must not carry the retired sunset gradient. It
-# still lives in style.css :root because other rules reference those variables,
-# but an icon or a social card painted with it is the old brand.
-tile = (ROOT / "assets/img/brand/favicon.svg").read_text(encoding="utf-8")
-stale = [h for h in C.SUNSET if h in tile]
-if stale:
-    bad_theme.append("favicon.svg still carries %s" % ", ".join("#" + h for h in stale))
+# The generated brand assets are no longer generated: they are T's supplied exports,
+# copied into place by build-brand-assets.py (2026-11-02). The old check read
+# favicon.svg for the retired sunset hex, and there is no SVG favicon any more, so
+# the thing to assert is the manifest and the page tags below, not a file we draw.
 
 # The retired sunset palette is allowed in exactly one place: the :root block at
 # the top of style.css, where it is a set of dead defaults that every page
@@ -1213,7 +1210,7 @@ if bad_theme:
     print("  %d problem(s) found" % len(bad_theme))
     fails.append("brand theme-color")
 else:
-    print("  all %d pages, site.webmanifest and favicon.svg carry %s" % (len(pages), C.THEME_COLOR))
+    print("  all %d pages and site.webmanifest carry %s" % (len(pages), C.THEME_COLOR))
 
 if bad_beacon:
     for b in bad_beacon[:12]:

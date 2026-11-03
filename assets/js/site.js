@@ -119,13 +119,18 @@
  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
  function logoHTML() {
- /* "Origin" solid, "RV" in the brand gradient (Ty, 2026-10-05). The trailing RV
-    is split off the configured name so the brand string stays the single source
-    of truth rather than being re-typed here; if the name ever stops ending in RV
-    the whole thing simply inherits the surrounding color. */
- var name = esc(CFG.brand.name).replace(/RV$/, '<span class="rv">RV</span>');
- return '<a class="logo" href="' + R(CFG.routes.home) + '"><span class="logo-mark">' + CFG.brand.mark + '</span>' +
- '<span class="logo-name">' + name + '</span></a>';
+ /* THE LOCKUP IS THE SUPPLIED ARTWORK NOW (T, 2026-11-02). The typed name and the
+    blue tile it sat on are gone: the wordmark inside the chevron carries the name,
+    and T asked for that at the left of the navbar. The alt text is the accessible
+    name for the link, since there is no text left in it.
+    width/height are the file's own 240x308 aspect at 72px tall, so the box is
+    reserved before the image decodes and a slow connection does not shift the nav.
+    72 is not a taste call: at 60px and below the name inside the chevron stops
+    being readable, measured at 1x on white. The bar grew from 66 to 84 to hold it. */
+ return '<a class="logo" href="' + R(CFG.routes.home) + '">' +
+  '<img class="logo-lockup" src="' + R('assets/img/brand/logo-lockup.png') + '"' +
+  ' alt="OriginRV" width="56" height="72">' +
+  '</a>';
  }
 
  function signinLink(cls) {
@@ -521,7 +526,8 @@
  document.body.classList.add('is-embed');
  var bar = document.createElement('div');
  bar.className = 'embed-credit';
- bar.innerHTML = '<span class="logo-mark">' + CFG.brand.mark + '</span>' +
+ bar.innerHTML = '<img class="embed-mark" src="' + R('assets/img/brand/favicon-32.png') + '"' +
+ ' alt="" width="26" height="26">' +
  '<span>Free RV weight calculator by</span>' +
  '<a href="' + R('') + '" target="_blank" rel="noopener">' + esc(CFG.brand.name) + '</a>';
  document.body.appendChild(bar);

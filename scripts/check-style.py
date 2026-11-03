@@ -109,7 +109,14 @@ SIZE_CEILING = 30
 # to two rows (126px) where the guides bar's six fit on one (81px), so .parts-sys needs
 # 210px against .guide-group's 150px. Measured, not guessed: at 150px the parts heading
 # landed 43px under the bar. Both values are named here rather than hidden.
-SPACE_CEILING = 56
+# RAISED 56 -> 57 ON 2026-11-02, same third-value-in-a-series reason. The navbar went
+# 66px -> 84px because T's supplied lockup is 240x308 and the wordmark inside the chevron
+# stops being legible below 72px (measured on white at 1x, 48/60/72/84/96). Every anchor
+# offset that clears the bar moved with it: 150 -> 168 for .guide-group, 210 -> 228 for
+# .parts-sys, and 90 -> 108 for the generic [id] target (90 is still used elsewhere, so
+# it stays in the count). That is 150 and 210 out, 108, 168 and 228 in, so the
+# set is one larger. The values are measured against the new bar, not chosen from a menu.
+SPACE_CEILING = 57
 
 
 def collect_centers():
