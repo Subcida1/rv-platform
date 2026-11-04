@@ -111,20 +111,22 @@ ICONS = {
     "tire": '<circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="12" r="6.1"/><circle cx="12" cy="12" r="2.3"/>'
             '<path d="M12 2.8v3.3M12 17.9v3.3M2.8 12h3.3M17.9 12h3.3"/>'
             '<path d="M5.5 5.5l2.3 2.3M16.2 16.2l2.3 2.3M18.5 5.5l-2.3 2.3M7.8 16.2l-2.3 2.3"/>',
-    # A TOW HITCH, fifth version. Four earlier attempts were built around a
-    # shank-plus-drop-and-ball silhouette traced off a product photo, and every
-    # one of them failed the same way: at the size it ships, the shank and the
-    # bracket average into an abstract mechanical lump. The reviewer's verdict on
-    # version four was exactly that, so this drops everything except the two
-    # shapes that cannot be misread: the BALL on top and the COUPLER opening
-    # under it, with one short arm going left to a mounting plate. Fewer parts,
-    # bigger gaps, no bracket geometry to muddy the read.
-    "hitch": '<circle cx="13.4" cy="7.4" r="3.9"/>'
-             '<path d="M10.2 10.6h6.4v5.1h-6.4z"/>'
-             '<path d="M10.2 13.15h6.4"/>'
-             '<path d="M10.2 11.6H4.6v4.6h5.6"/>'
-             '<path d="M4.6 9.9v8.1"/><path d="M2.6 9.9h4"/>'
-             '<path d="M9 18.6h9.6"/><path d="M13.4 17.9v1.4"/>',
+    # A TOW HITCH, sixth version, and the first drawn WIDE rather than tall.
+    # Version five stacked the ball on top of the coupler body on top of a base
+    # bar. At the 30px it actually ships at, that stack reads as a post on a
+    # stand, and its head sat off centre over a body that reached further left,
+    # so it looked unfinished even large (T, 2026-11-04: improve it). The object
+    # is wider than it is tall, so this drawing is: a drawbar in from the left,
+    # a coupler body, the BALL seated inside its throat rather than floating
+    # above it, the latch hook closing over the ball, and a drop to the mount.
+    # Everything sits on one horizontal axis, which is the only way the parts
+    # stay distinct once the whole thing is 30 pixels.
+    "hitch": '<path d="M2.4 10.2h6.6"/>'
+             '<path d="M9 7.2h7.2a1.6 1.6 0 0 1 1.6 1.6v6.4a1.6 1.6 0 0 1-1.6 1.6H9z"/>'
+             '<circle cx="13.2" cy="9.4" r="2.6"/>'
+             '<path d="M18.2 9.2a2.9 2.9 0 0 1 0 4.8"/>'
+             '<path d="M9 13.4H4.8v3.6"/>'
+             '<path d="M2.8 15h2"/>',
     # Balance scale: the emblem for weight and towing. Centre post, a crossbeam
     # with a pointer, and one pan hanging from each end. Drawn after the old
     # scale-weight glyph read as a birthday cake (T, 2026-10-31): three tiers
@@ -140,11 +142,19 @@ ICONS = {
     # The truck glyph above is a complete vehicle and reads as "driving"; this
     # is the ladder frame, an axle, a wheel each side and the driveshaft, which
     # is what the card actually lists (T, 2026-10-31 asked for a chassis).
-    "chassis": '<path d="M1.8 10.5h20.4"/><path d="M1.8 14.2h20.4"/>'
-               '<path d="M4.5 10.5v3.7M19.5 10.5v3.7"/>'
-               '<path d="M5.5 16.8h13"/><path d="M8.5 16.8v-2.6M15.5 16.8v-2.6"/>'
-               '<circle cx="6" cy="18.6" r="1.9"/><circle cx="18" cy="18.6" r="1.9"/>'
-               '<path d="M12 10.5V7.4l2.6-1.5"/>',
+    # Seventh pass (T, 2026-11-04): the first version hung the wheels BELOW a
+    # bead-chained rail with a second rail under it, so at 30px it read as a
+    # flatbed trolley. The frame is now one solid rail with the axles tucked
+    # under it, the wheels overlap the rail so the three parts lock together
+    # instead of stacking, and the driveline ends in a pointing chevron, which
+    # is the drive direction rather than a stray stick.
+    "chassis": '<path d="M2.4 9.2h19.2v3.6H2.4z"/>'
+               '<path d="M4.6 12.8v2.6M19.4 12.8v2.6"/>'
+               '<path d="M5.6 15.4h12.8"/>'
+               '<circle cx="6.6" cy="17.4" r="3.1"/>'
+               '<circle cx="17.4" cy="17.4" r="3.1"/>'
+               '<path d="M12 9.2V6.6"/>'
+               '<path d="M9.8 4.4l2.2 2.2 2.2-2.2"/>',
     "fuel": '<path d="M4.5 20.5V5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v15.5"/><path d="M3 20.5h12"/><path d="M5.5 8.5h7"/><path d="M13.5 8h2.8a1.7 1.7 0 0 1 1.7 1.7v6.6a1.4 1.4 0 0 0 1.4 1.4 1.4 1.4 0 0 0 1.4-1.4V9.6l-2-2"/>',
     "propane": '<path d="M6.5 9.5a5.5 5.5 0 0 1 11 0v8a3 3 0 0 1-3 3h-5a3 3 0 0 1-3-3z"/><path d="M9 4.5V2.8h6v1.7"/><path d="M12 4.5v5"/><path d="M9.5 13h5"/>',
 

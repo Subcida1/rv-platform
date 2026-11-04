@@ -59,13 +59,20 @@ SYSTEM_ICON = {
     "water-and-plumbing": "droplet",
     "heating-and-cooling": "fan",
     "kitchen-and-appliances": "fridge",
-    "exterior-and-body": "awning",
+    # Exterior and body is the RV seen from the side (shell-body), not an awning
+    # (T, 2026-11-04: the awning glyph on this card and the body glyph on the
+    # front page were two different icons for one system). One system, one
+    # silhouette, and it is the one already on the homepage.
+    "exterior-and-body": "shell-body",
+    # Towing and running gear is the HITCH, the same glyph the homepage's weight
+    # calculator carries (T, 2026-11-04). It was chassis here, chosen in
+    # 2026-10-31 on the reasoning that running gear is the axle and drivetrain,
+    # which left two cards in one grid drawing a frame. Chassis keeps its own
+    # glyph for the chassis-and-drivetrain system below.
+    "towing-and-running-gear": "hitch",
     # A balance scale rather than the old scale-weight glyph, which read as a
-    # birthday cake (T, 2026-10-31). The towing-and-running-gear manuals page
-    # uses chassis instead: "running gear" is the axle and drivetrain, and a
-    # second scale would just repeat the weight card. The dead arc that used to
-    # sit in scale-balance (a zero-length path that drew nothing) is gone.
-    "towing-and-running-gear": "chassis",
+    # birthday cake (T, 2026-10-31). The dead arc that used to sit in
+    # scale-balance (a zero-length path that drew nothing) is gone.
     "sanitation-and-tanks": "toilet",
     "chassis-and-drivetrain": "gears",
 }
