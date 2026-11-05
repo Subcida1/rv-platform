@@ -119,18 +119,18 @@
  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
  function logoHTML(h) {
- h = h || 72;
- var w = Math.round(h * 240 / 308);
- /* THE LOCKUP IS THE SUPPLIED ARTWORK NOW (T, 2026-11-02). The typed name and the
-    blue tile it sat on are gone: the wordmark inside the chevron carries the name,
-    and T asked for that at the left of the navbar. The alt text is the accessible
-    name for the link, since there is no text left in it.
-    width/height are the file's own 240x308 aspect at 72px tall, so the box is
-    reserved before the image decodes and a slow connection does not shift the nav.
-    72 is not a taste call: at 60px and below the name inside the chevron stops
-    being readable, measured at 1x on white. The bar grew from 66 to 84 to hold it.
-    The footer asks for its own height, so the size is an argument. The width still
-    comes from the file's own 240x308 aspect so the box is reserved before decode. */
+ h = h || 56;
+ var w = Math.round(h * 2018 / 568);
+ /* THE LOCKUP IS THE PIN AS THE O (T, 2026-11-04). The chevron is gone from the
+    chrome: the wordmark is now the map pin standing in for the O of OriginRV, with
+    the RV cut by the mark's own diagonal. Composed by scripts/build-brand-lockup.py.
+    The alt text is the accessible name for the link, since there is no text in it.
+    width/height are the composed file's own 2018x568 aspect at 56px tall, so the box
+    is reserved before the image decodes and a slow connection does not shift the nav.
+    56 is a size, not a rule: the old chevron lockup was portrait and filled the bar at
+    72, this one is 3.55:1 landscape, so the same 72 would have been 256px wide. 56
+    gives the same optical weight at 199px. The footer asks for its own height, so the
+    size is still an argument. The width still comes from the file's own aspect. */
  return '<a class="logo" href="' + R(CFG.routes.home) + '">' +
   '<img class="logo-lockup" src="' + R('assets/img/brand/logo-lockup.png') + '"' +
   ' alt="OriginRV" width="' + w + '" height="' + h + '">' +
@@ -378,23 +378,27 @@
  return false;
  }
 
-/* THE FOOTER USES THE 960 CUTOUT, AT THE COLUMN'S OWN WIDTH (T, 2026-11-02). "Use the 480 or
-   960 cutout variant for the bottom left logo on my website footer, the column should be filled
-   with my icon." So the footer is no longer a smaller copy of the navbar lockup: it is the word
-   cutout sized by its WIDTH, because this artwork is portrait and a height of 120 left 147px of
-   a 282px column empty.
-   ONE COLUMN WIDTH, measured at 1280 and rendered, not estimated. 1.25x the column was tried and
-   rejected on the screenshot: it pushed the mark past the column gutter into the TOOLS heading
-   and read as bursting out of its box. At 100% the arms end inside the column, the name sets at
-   about 15px against the 14.5px links and the tagline, and the mark fills the column's height.
-   The navbar keeps logo-lockup.png at 72: at 60px and below the name inside it stops reading. */
+/* THE FOOTER MARK IS THE LOCKUP, AT THE COLUMN'S OWN WIDTH (T, 2026-11-04; Cloud chose the
+   asset). T left this call open. The pin alone in a column whose next element is the tagline
+   reads as an orphaned icon; the lockup is a word-logo spot, the same as the nav, so it takes
+   the same asset at the same proportions.
+   ONE COLUMN WIDTH, measured at 1280 and rendered, not estimated. 1.25x the column was tried on
+   the old portrait art and rejected on the screenshot: it pushed the mark past the column gutter
+   into the TOOLS heading. 100% keeps it inside the column.
+   The asset is landscape now (3.55:1) where the chevron was portrait, so the same column width
+   yields a wide short mark rather than a tall block; the column's height is carried by the
+   tagline under it. The navbar keeps its lockup at 56, not 72, for the same reason. */
 function footLogoHTML() {
- /* width/height are the file's own 960x1231 aspect, so the box is reserved before it decodes.
-    The width itself is .foot-brand's --foot-logo-w in the stylesheet, so the phone breakpoint
-    can change it without a second number here. */
+ /* width/height are the file's own 960x270 aspect, so the box is reserved before it
+    decodes. The width itself is .foot-brand's --foot-logo-w in the stylesheet, so the
+    phone breakpoint can change it without a second number here.
+    THE FOOTER USES THE LOCKUP, NOT THE PIN ALONE (Cloud, 2026-11-04). T left this call
+    open. The pin alone in a column whose next element is the tagline reads as an
+    orphaned icon; the lockup is a word logo spot, the same as the nav, so it takes the
+    same asset at the same proportions. */
  return '<a class="logo foot-logo" href="' + R(CFG.routes.home) + '">' +
-  '<img class="logo-word" src="' + R('assets/img/brand/word-cutout-960.png') + '"' +
-  ' alt="OriginRV" width="960" height="1231">' +
+  '<img class="logo-word" src="' + R('assets/img/brand/lockup-960.png') + '"' +
+  ' alt="OriginRV" width="960" height="270">' +
   '</a>';
 }
 

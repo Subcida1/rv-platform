@@ -626,23 +626,29 @@ input,select,textarea{font-family:inherit}
 nav.main{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px}
 .logo{display:flex;align-items:center;gap:11px}
-/* The lockup is T's supplied wordmark (2026-11-02): the chevron with the name set
-   inside it, so there is no tile and no typed name beside it. Height is what the
-   84px navbar can give it with air above and below; the width follows the file's
-   own 240x308 aspect. */
-.logo-lockup{height:72px;width:auto;display:block}
+/* The lockup is the PIN AS THE O (T, 2026-11-04), composed by
+   scripts/build-brand-lockup.py: the map pin standing in for the O of OriginRV,
+   with the RV cut by the mark's own diagonal. The chevron and its tile are gone.
+   Height-driven in an 84px bar. 56 replaced 72 because the artwork changed shape:
+   the chevron lockup was portrait (240x308) and filled the bar at 72, this one is
+   3.55:1 landscape, where 72 would have been 256px wide and crowded the links.
+   At 56 the wordmark is 199px and carries the same optical weight. */
+.logo-lockup{height:56px;width:auto;display:block}
 /* THE FOOTER MARK IS THE SAME ARTWORK, DRAWN LARGER (T, 2026-11-02). The footer's brand
    column is 301px tall and a 72px mark plus its tagline left 206px of it empty, so the
    footer's copy of the lockup is 120px - the size that fills it without reading as bigger
    than the column headings beside it (140 and 168 were both rendered and rejected).
    Set on .foot-brand only: the navbar keeps 72, the smallest size the name inside the
    chevron stays legible at. */
-/* THE FOOTER MARK IS THE WORD CUTOUT AT THE COLUMN'S WIDTH (T, 2026-11-02). The navbar's lockup
-   is height-driven because it sits in an 84px bar; the footer's is width-driven because the foot
-   brand column is portrait and T's ask was that the icon fill it. 100% is the measured column, so
-   the arms end inside the column rather than in the gutters beside it. --foot-logo-w exists so the
-   phone breakpoint, where the brand block is full width, can cap it without a second number in
-   the markup. */
+/* THE FOOTER MARK IS THE LOCKUP AT THE COLUMN'S WIDTH (T, 2026-11-04, Cloud chose the asset).
+   The navbar's lockup is height-driven because it sits in an 84px bar; the footer's is
+   width-driven because the foot brand column is portrait and the ask was that the mark fill it.
+   100% is the measured column, so it ends inside the column rather than in the gutters.
+   The asset is now landscape (3.55:1) rather than the old portrait chevron, so the same 100%
+   column yields a 301x85 wordmark instead of a tall block -- the column's height is carried by
+   the tagline under it, which is what changes when this number moves. --foot-logo-w exists so
+   the phone breakpoint, where the brand block is full width, can cap it without a second number
+   in the markup. */
 .foot-brand{--foot-logo-w:100%}
 .foot-brand .foot-logo{width:var(--foot-logo-w)}
 .foot-brand .logo-word{width:100%;height:auto;display:block}
