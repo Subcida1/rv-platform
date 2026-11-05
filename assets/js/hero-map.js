@@ -843,8 +843,18 @@ const ROUTE_BUCKETS = 10;
    The casing's own job was to separate a teal route from the map's teal roads, and
    that job is not real here: the roads are hairlines at roughly a sixth of their
    ink under the map's fade, against a 6px saturated ribbon. Dropping it leaves one
-   stroke, so this number is now the alpha you actually see. */
-const ROUTE_PEAK = 0.7;
+   stroke, so this number is now the alpha you actually see.
+
+   AND THEN T SET THE NUMBER BY EYE, WHICH IS THE ONE THAT COUNTS. At 0.7 he came
+   back: "its not faded when the inital 'path' is laid down it should be see through
+   the entire time. fading from like 35% to 0 instead of 100 to 0." He is right, and
+   the reason is worth keeping: a 6px band drawn at 0.7 over a pale map still reads
+   as a line drawn ON the page rather than a track laid OVER it, because nothing
+   about it is see-through, and at that width the head reads as solid however the
+   ramp is shaped further back. See-through is not a property of the tail. 0.35 is
+   his figure; the ramp below is still linear to zero, so the whole trail now runs
+   from 35 percent to nothing instead of holding a visible head. */
+const ROUTE_PEAK = 0.35;
 
 function strokeRoute(pts, now, trailMs){
   const n = pts.length;
