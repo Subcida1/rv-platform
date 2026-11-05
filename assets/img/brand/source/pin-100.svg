@@ -1,0 +1,19 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="pinClipTrans">
+            <path d="M 50 90 C 50 90 80 55 80 35 A 30 30 0 1 0 20 35 C 20 55 50 90 50 90 Z"/>
+        </clipPath>
+        <mask id="holeMask">
+            <rect width="100" height="100" fill="white" />
+            <circle cx="50" cy="35" r="10" fill="black" />
+        </mask>
+    </defs>
+    <g mask="url(#holeMask)">
+        <g clip-path="url(#pinClipTrans)">
+            <!-- Gold Half -->
+            <polygon points="-100,-100 100,-100 100,82 -100,-18" fill="#EFBB29"/>
+            <!-- Blue Half -->
+            <polygon points="-100,-12 100,88 100,200 -100,200" fill="#2968EF"/>
+        </g>
+    </g>
+</svg>
