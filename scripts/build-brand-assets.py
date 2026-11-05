@@ -63,7 +63,14 @@ SRC = OUT / "source"
 STOPS = [(0.0, (0, 89, 93)), (0.5, (0, 100, 104)), (1.0, (0, 111, 115))]
 # Address-bar tint for mobile browsers and the installed-PWA theme colour: --brand
 # of the teal palette (scripts/brand-tokens.json).
-THEME_COLOR = "#0d7377"
+# Read from the palette rather than restated: see the note in site_constants.py.
+def _theme_color():
+    import json
+    src = Path(__file__).resolve().parent / "brand-tokens.json"
+    return json.loads(src.read_text(encoding="utf-8"))["brand"]["--brand"]["hex"]
+
+
+THEME_COLOR = _theme_color()
 INK = (15, 23, 42)          # --text
 INK_2 = (85, 98, 122)       # --text-2
 INK_3 = (103, 116, 142)     # --text-3

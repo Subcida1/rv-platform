@@ -25,12 +25,12 @@
 /* --- GENERATED BRAND TOKENS: edit scripts/brand-tokens.json, then run
   /* ---- BRAND: teal, four weights. White labels sit on these, so every one of
      them clears 4.5:1 against #ffffff; the figure is beside each value. ---- */
-  --brand:#0d7377;  /* 5.62:1 vs white */
-  --brand-2:#107d81;  /* 4.92:1 vs white */
-  --brand-3:#0f7b7f;  /* 5.05:1 vs white */
-  --brand-deep:#00595d;  /* 8.12:1 vs white */
-  --brand-deep-2:#006468;  /* 6.95:1 vs white */
-  --brand-deep-3:#006f73;  /* 5.96:1 vs white */
+  --brand:#008080;  /* 4.77:1 vs white */
+  --brand-2:#007a7a;  /* 5.17:1 vs white */
+  --brand-3:#007474;  /* 5.60:1 vs white */
+  --brand-deep:#006b6b;  /* 6.33:1 vs white */
+  --brand-deep-2:#005f5f;  /* 7.49:1 vs white */
+  --brand-deep-3:#005656;  /* 8.52:1 vs white */
 
   /* brand gradients, built from the ladder above so a rebrand moves them too */
   --brand-grad:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 50%,var(--brand-3) 100%);
@@ -47,20 +47,20 @@
   --grad-soft-2:linear-gradient(135deg,color-mix(in srgb,var(--brand) 10%,transparent),color-mix(in srgb,var(--brand-2) 10%,transparent) 50%,color-mix(in srgb,var(--brand-3) 10%,transparent));
 
   /* ---- TINT: every informational chip, badge, banner and quiet panel. ---- */
-  --tint-bg:#e8f5f4;
-  --tint-edge:#cbe7e5;
-  --tint-ink:#00595d;  /* 8.12:1 vs white */
+  --tint-bg:#e6f4f4;
+  --tint-edge:#c9e4e4;
+  --tint-ink:#006b6b;  /* 6.33:1 vs white */
 
   /* ---- SURFACES: white, and cool-tinted when something needs to sit apart.
      The tint has to be measurable or it reads as cream against a white card,
      so verify.py requires each to be at least ten points cooler than red. ---- */
   --bg:#ffffff;
-  --bg-2:#ecf6f7;  /* 11 cooler than red */
-  --bg-3:#e7f3f3;  /* 12 cooler than red */
-  --surface-2:#eff9fa;  /* 11 cooler than red */
-  --border:#d5e8e8;  /* 19 cooler than red */
-  --border-2:#c2dbdb;  /* 25 cooler than red */
-  --line:#d5e8e8;  /* 19 cooler than red */
+  --bg-2:#ebf6f6;  /* 11 cooler than red */
+  --bg-3:#e5f2f2;  /* 13 cooler than red */
+  --surface-2:#eef8f8;  /* 10 cooler than red */
+  --border:#d3e7e7;  /* 20 cooler than red */
+  --border-2:#c0dada;  /* 26 cooler than red */
+  --line:#d3e7e7;  /* 20 cooler than red */
   --surface:#ffffff;
 
   /* ---- TEXT: the ink ramp. Fixed across a rebrand, but it lives here so the
@@ -76,10 +76,10 @@
   --asphalt:#1e293b;  /* the highway layer's road surface */
   --sign:#0f172a;  /* road signage */
   --sign-text:#ffffff;  /* sign labelling */
-  --mark:#0d7377;  /* mile markers, centreline and signage: brand ink on the hero map */
+  --mark:#008080;  /* mile markers, centreline and signage: brand ink on the hero map */
   --dash:#d0d5dd;  /* dashed lane markings */
-  --ink:#00595d;  /* the hero map's deep brand ink */
-  --ocean:#0f7b7f;  /* the hero map's mid brand wash */
+  --ink:#006b6b;  /* the hero map's deep brand ink */
+  --ocean:#007474;  /* the hero map's mid brand wash */
   --map-fade:100%;  /* map fade fraction */
   --route-fade:100%;  /* route fade fraction */
 
@@ -87,6 +87,7 @@
   --gold:#d4af37;  /* 2.10:1 vs white - the mark's gold. DECORATION ONLY: never a label, never behind white text */
   --gold-deep:#8a6d1f;  /* 4.90:1 vs white - gold that has to carry text */
   --gold-edge:#d4af37;  /* 2.10:1 vs white - the primary button's edge */
+  --route-casing:#5c4813;  /* 6.60:1 vs white - the dark casing under the animated route */
 /* --- END GENERATED BRAND TOKENS --- */
 /* ---- STATUS: red means a real failure and nothing else. ---- */
   --danger:#b42338;        /* the ink and edge of a failed verdict */

@@ -1286,10 +1286,25 @@ slice_line_offset = css_src[:token_end].count("\n")
 # plain Python string is #fff followed by a backspace character, so that entry never matched
 # anything and the check silently had one fewer value than it looked like it had. Found 2026-10-03
 # by the widened check reporting a #fff the old list was supposed to cover.
-PALETTE = ["#0d7377", "#107d81", "#0f7b7f", "#00595d", "#006468", "#006f73",
-           "#d4af37", "#8a6d1f",
-           "#ecf6f7", "#e7f3f3", "#eff9fa", "#d5e8e8", "#c2dbdb",
-           "#e8f5f4", "#cbe7e5", "#0f172a", "#55627a", "#67748e",
+# READ FROM scripts/brand-tokens.json, never restated. These were literals, so the list
+# still held the previous palette after a rebrand and guarded colours the site no longer
+# used while letting the current ones through. A list of values that must not appear is
+# exactly the kind that goes stale silently.
+def _palette_values():
+    import json
+    from pathlib import Path
+    src = Path(__file__).resolve().parent / "brand-tokens.json"
+    t = json.loads(src.read_text(encoding="utf-8"))
+    vals = []
+    for group in ("brand", "accent", "tint", "surface"):
+        for d in t.get(group, {}).values():
+            if d.get("hex"):
+                vals.append(d["hex"].lower())
+    return vals
+
+
+PALETTE = _palette_values() + [
+           "#0f172a", "#55627a", "#67748e",
            "#f43f5e", "#b42338", "#fdeeee", "#f2b8be", "#0ea5e9", "#6366f1",
            "#1e293b", "#d0d5dd", "#ffffff", "#fff"]
 leaked = []

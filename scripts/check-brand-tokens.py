@@ -190,6 +190,35 @@ def check_no_superseded_values(t):
     return bad
 
 
+
+# JAVASCRIPT HOLDS COLOUR TOO, AND THAT IS HOW THE ROUTE STAYED BLUE. The route's
+# casing, body and tip were three RGB literals in hero-map.js; they passed every
+# colour check in this file because none of them looked at a .js file, and the
+# animated route stayed a pure blue on a teal site through a whole rebrand. So the
+# superseded values are refused in the shipped scripts as well, and a canvas colour
+# is required to come from a token.
+def check_scripts_have_no_stale_colour(t):
+    superseded = [h.lstrip("#").lower() for h in t.get("superseded", [])]
+    if not superseded:
+        return []
+    bad = []
+    for js in sorted((ROOT / "assets" / "js").glob("*.js")):
+        if js.name in ("search-index.js", "places.js") or js.name.startswith("coords-"):
+            continue  # generated data, not styling
+        text = js.read_text(encoding="utf-8", errors="replace")
+        text_nc = re.sub(r"/\*.*?\*/", " ", text, flags=re.S)
+        text_nc = re.sub(r"(?m)^\s*//.*$", " ", text_nc)
+        for h in superseded:
+            if "#" + h in text_nc.lower():
+                bad.append("assets/js/%s: superseded #%s still in a script" % (js.name, h))
+            r, g, b = (int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
+            lit = r"\b%d\s*,\s*%d\s*,\s*%d\b" % (r, g, b)
+            if re.search(lit, text_nc):
+                bad.append("assets/js/%s: superseded rgb(%d,%d,%d) still in a script"
+                           % (js.name, r, g, b))
+    return bad
+
+
 def self_test():
     """Prove each check can FAIL, by planting the defect it exists to catch."""
     t = load_tokens()
@@ -249,6 +278,7 @@ def main():
     problems += check_every_used_token_is_defined()
     problems += check_token_layer_size()
     problems += check_no_superseded_values(t)
+    problems += check_scripts_have_no_stale_colour(t)
     problems += check_no_brand_literals_outside_layer(t)
     problems += check_theme_color(t)
 

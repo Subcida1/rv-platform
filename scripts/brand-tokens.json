@@ -13,33 +13,33 @@
   ],
   "brand": {
     "--brand": {
-      "hex": "#0d7377",
-      "ratio_white": 5.62,
-      "role": "brand fill; white labels sit on this"
+      "hex": "#008080",
+      "ratio_white": 4.77,
+      "role": "THE MARK'S OWN TEAL, unchanged from pin-100.svg"
     },
     "--brand-2": {
-      "hex": "#107d81",
-      "ratio_white": 4.92,
+      "hex": "#007a7a",
+      "ratio_white": 5.17,
       "role": "brand gradient stop 2"
     },
     "--brand-3": {
-      "hex": "#0f7b7f",
-      "ratio_white": 5.05,
+      "hex": "#007474",
+      "ratio_white": 5.6,
       "role": "brand gradient stop 3"
     },
     "--brand-deep": {
-      "hex": "#00595d",
-      "ratio_white": 8.12,
+      "hex": "#006b6b",
+      "ratio_white": 6.33,
       "role": "link ink and CTA gradient start"
     },
     "--brand-deep-2": {
-      "hex": "#006468",
-      "ratio_white": 6.95,
+      "hex": "#005f5f",
+      "ratio_white": 7.49,
       "role": "CTA gradient stop 2"
     },
     "--brand-deep-3": {
-      "hex": "#006f73",
-      "ratio_white": 5.96,
+      "hex": "#005656",
+      "ratio_white": 8.52,
       "role": "CTA gradient stop 3"
     }
   },
@@ -58,48 +58,53 @@
       "hex": "#d4af37",
       "ratio_white": 2.1,
       "role": "the primary button's edge"
+    },
+    "--route-casing": {
+      "hex": "#5c4813",
+      "ratio_white": 6.6,
+      "role": "the dark casing under the animated route"
     }
   },
   "tint": {
     "--tint-bg": {
-      "hex": "#e8f5f4",
+      "hex": "#e6f4f4",
       "role": "every informational chip, badge and quiet panel"
     },
     "--tint-edge": {
-      "hex": "#cbe7e5",
+      "hex": "#c9e4e4",
       "role": "that panel's edge"
     },
     "--tint-ink": {
-      "hex": "#00595d",
-      "ratio_white": 8.12,
+      "hex": "#006b6b",
+      "ratio_white": 6.33,
       "role": "text on the tint"
     }
   },
   "surface": {
     "--bg-2": {
-      "hex": "#ecf6f7",
+      "hex": "#ebf6f6",
       "cooler_than_red": 11
     },
     "--bg-3": {
-      "hex": "#e7f3f3",
-      "cooler_than_red": 12
+      "hex": "#e5f2f2",
+      "cooler_than_red": 13
     },
     "--surface-2": {
-      "hex": "#eff9fa",
-      "cooler_than_red": 11
+      "hex": "#eef8f8",
+      "cooler_than_red": 10
     },
     "--border": {
-      "hex": "#d5e8e8",
-      "cooler_than_red": 19
+      "hex": "#d3e7e7",
+      "cooler_than_red": 20
     },
     "--border-2": {
-      "hex": "#c2dbdb",
-      "cooler_than_red": 25
+      "hex": "#c0dada",
+      "cooler_than_red": 26
     },
     "--line": {
-      "hex": "#d5e8e8",
-      "cooler_than_red": 19,
-      "role": "the rule above a page's byline and footer note; was never defined, so .page-foot drew its border-top in currentColor"
+      "hex": "#d3e7e7",
+      "cooler_than_red": 20,
+      "role": "the rule above a page's byline"
     }
   },
   "unchanged": [
@@ -139,7 +144,7 @@
       "role": "sign labelling"
     },
     "--mark": {
-      "hex": "#0d7377",
+      "hex": "#008080",
       "role": "mile markers, centreline and signage: brand ink on the hero map"
     },
     "--dash": {
@@ -147,11 +152,11 @@
       "role": "dashed lane markings"
     },
     "--ink": {
-      "hex": "#00595d",
+      "hex": "#006b6b",
       "role": "the hero map's deep brand ink"
     },
     "--ocean": {
-      "hex": "#0f7b7f",
+      "hex": "#007474",
       "role": "the hero map's mid brand wash"
     },
     "--map-fade": {
@@ -179,7 +184,13 @@
     "#c9dcee",
     "#eaf1fa",
     "#cfe0f2",
-    "#2a6aad"
+    "#2a6aad",
+    "#0d7377",
+    "#107d81",
+    "#0f7b7f",
+    "#00595d",
+    "#006468",
+    "#006f73"
   ],
   "_superseded_note": "The blue ladder and its tint family, retired 2026-11-05. Listed so the checker can refuse them if a rebrand forgets a token; a stale value in the layer is exactly how #mark stayed blue."
 }

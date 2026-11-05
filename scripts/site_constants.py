@@ -150,7 +150,18 @@ CLAIM_RE = re.compile(r'<(\w+)([^>]*\sdata-claim="([a-z0-9-]+)"[^>]*)>([^<]*)</\
 # Reads --brand from the teal palette (scripts/brand-tokens.json). It is the BRAND,
 # not --b1: --b1 is a text alias that resolves to --tint-ink, which is a deep teal
 # meant for small type and reads almost black in a mobile address bar.
-THEME_COLOR = "#0d7377"
+# READ FROM THE PALETTE, never restated. This was a literal, so a rebrand had to
+# remember three separate files (this one, build-brand-assets.py and the manifest)
+# and on 2026-11-05 the site shipped teal pages with a stale address-bar tint because
+# two of the three were missed.
+def _brand():
+    import json
+    from pathlib import Path
+    src = Path(__file__).resolve().parent / "brand-tokens.json"
+    return json.loads(src.read_text(encoding="utf-8"))["brand"]["--brand"]["hex"]
+
+
+THEME_COLOR = _brand()
 
 # The three stops of the retired sunset gradient, banned from the generated
 # brand assets. They now live only in style.css :root and in the red-as-meaning

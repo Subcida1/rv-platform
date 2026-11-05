@@ -143,7 +143,14 @@ function fadePx(varName){
 // Measured hero layout: kicker 13%, h1 22%, sub 34%, search 47%, CTA button
 // 70-79%, stats 84%. The ramp completes at ~78% -- level with the CTA button.
 const MAP_ERASE   = [[0,.80],[.30,.83],[.55,.87],[.72,.92],[.88,.97],[1,1]];
-const ROUTE_ERASE = MAP_ERASE;
+/* THE ROUTE CANNOT SHARE THE MAP'S RAMP. MAP_ERASE erases 80% at the top, which is
+   right for a background wash and wrong for the one moving thing on the screen: the
+   route inherited it, so every point was multiplied by that 20% ceiling and the trail
+   drew at about 19% opacity, a pale beige smear. Measured on the trace canvas across
+   six frames: max alpha never passed 48/255. Gold showed it worse than the old blue,
+   because a desaturated gold reads as beige while a washed blue still reads as blue.
+   The route keeps a gentle fade at the very bottom only, where the hero image ends. */
+const ROUTE_ERASE = [[0,0],[.80,0],[.92,.35],[1,1]];
 
 function applyFade(ctx, endPx, stops){
   if(endPx <= 0) return;
@@ -182,7 +189,7 @@ function drawMap(){
   mapCtx.translate(fit.ox, fit.oy);
   mapCtx.scale(fit.s, fit.s);
   const c = ink();
-  const sea = getComputedStyle(root).getPropertyValue('--ocean').trim() || '#5b96d8';
+  const sea = getComputedStyle(root).getPropertyValue('--ocean').trim() || '#007474';
 
   const addRings = (rings) => {
     for(const ring of rings){
@@ -788,11 +795,33 @@ function pruneTime(now){
   }
 }
 
-/* ---- draw: a GPS route. Dark casing under a bright blue body, with the
-   tail fading out so the line reads as one continuous ribbon. ---- */
-const ROUTE_CASING = '26,95,168';
-const ROUTE_BODY   = '47,127,214';
-const ROUTE_TIP    = '63,143,232';
+/* ---- draw: a GPS route, in the brand's gold. Dark casing under the body, with
+   the tail fading out so the line reads as one continuous ribbon.
+
+   THE ROUTE IS GOLD, NOT TEAL, AND THAT IS A MEASUREMENT (T asked for teal or
+   gold, whichever looks better). Teal is impossible here: the map's own highway
+   ink is the brand teal, so a teal route would be drawn on teal roads and vanish.
+   Plain --gold #d4af37 is too faint over the map's pale wash, at 1.94:1, and its
+   white puck core would measure 2.10:1. --gold-deep clears 4.51:1 on that paper
+   and separates from the teal roads, so the accent stays legible without
+   competing with the brand.
+
+   READ FROM THE PALETTE, NOT HARDCODED. These were three blue RGB literals, which
+   is why the route stayed blue through a whole rebrand: it was the one color on
+   the site that lived in JavaScript instead of a token. chip()
+   reads a CSS custom property once at init, so scripts/brand-tokens.json still
+   moves this line with everything else. */
+function chip(name, fallback){
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return v || fallback;
+}
+const toRGB = hex => {
+  const h = hex.replace('#','');
+  return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)].join(',');
+};
+const ROUTE_BODY   = toRGB(chip('--gold-deep', '#8a6d1f'));
+const ROUTE_TIP    = toRGB(chip('--gold-deep', '#8a6d1f'));
+const ROUTE_CASING = toRGB(chip('--route-casing', '#5c4813'));
 
 /* Draw a stroke fading by AGE, not by position along it: a stretch driven
    over 15 seconds ago is nearly gone, the head is solid, and it reaches
