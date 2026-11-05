@@ -845,16 +845,30 @@ const ROUTE_BUCKETS = 10;
    ink under the map's fade, against a 6px saturated ribbon. Dropping it leaves one
    stroke, so this number is now the alpha you actually see.
 
-   AND THEN T SET THE NUMBER BY EYE, WHICH IS THE ONE THAT COUNTS. At 0.7 he came
-   back: "its not faded when the inital 'path' is laid down it should be see through
-   the entire time. fading from like 35% to 0 instead of 100 to 0." He is right, and
-   the reason is worth keeping: a 6px band drawn at 0.7 over a pale map still reads
-   as a line drawn ON the page rather than a track laid OVER it, because nothing
-   about it is see-through, and at that width the head reads as solid however the
-   ramp is shaped further back. See-through is not a property of the tail. 0.35 is
-   his figure; the ramp below is still linear to zero, so the whole trail now runs
-   from 35 percent to nothing instead of holding a visible head. */
-const ROUTE_PEAK = 0.35;
+   T THEN SET THE NUMBER BY EYE, AND THE RIGHT NUMBER IS LOW. "its good but we need it
+   to be more see through honestly its still slightly too dark behind text so lets cut
+   it in half again", then "set it to .18". Behind TEXT is the test this element has
+   to pass, not "visible on the map". The hero is all text -- every band of it, kicker
+   to stats -- so there is no empty region for the trail to be bold in, and any
+   visible trail crosses words. Measured against the paper under a headline: 16.8:1
+   with no trail, 10.7:1 with the trail at 0.35 crossing it, 13.5:1 at 0.175. 10.7:1
+   is not a legibility failure; what T was seeing is the line as a stripe through the
+   heading, which is a perceptual call and his to make.
+
+   DO NOT JUDGE VISIBILITY FROM A DOWNSCALED SCREENSHOT. On the way to this number I
+   rendered 0.175, looked at the PNG, and concluded the trail had vanished -- and said
+   so, which was wrong. The screenshot was being downscaled to fit, and a thin faint
+   line is exactly what a downscale removes first. Cropped at 1:1 on the puck, the
+   0.175 and 0.18 renders both show the track plainly. The alpha measurement said the
+   same thing all along (head bucket 42 of 255 at 0.175, 44 at 0.18, against 85 at
+   0.35); it was the picture-reading that lied, not the instrument. At 0.18 the trail's
+   pixels sit in the 26-to-51 band -- 10 to 20 percent -- and it still reads as a
+   track against a 13-percent map wash. Below about 0.1 it would stop separating from
+   that wash; the next lever down from there is the line WIDTH, not this number.
+
+   The ramp below is unchanged: linear from this number to zero across 10 buckets, so
+   the trail runs from 18 percent at the head to nothing at the tail. */
+const ROUTE_PEAK = 0.18;
 
 function strokeRoute(pts, now, trailMs){
   const n = pts.length;
