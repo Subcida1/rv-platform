@@ -83,11 +83,11 @@ COPIES = [
     ("icon-plate-180.png", "apple-touch-icon.png"),
     ("icon-plate-192.png", "icon-192.png"),
     ("icon-plate-512.png", "icon-512.png"),
-    ("word-cutout-240.png", "logo-lockup.png"),
-    # The footer uses the 960 cutout at column width (T, 2026-11-02), not the 240 lockup.
-    # It is a byte copy too, listed here so a fresh checkout and this script agree about
-    # every file the site references.
-    ("word-cutout-960.png", "word-cutout-960.png"),
+    # The nav and footer wordmarks are now the LOCKUP -- the pin standing in for the O
+    # (T, 2026-11-04), composed by build-brand-lockup.py. The chevron lockup it replaced
+    # is what the word-cutout files above held.
+    ("lockup-480.png", "logo-lockup.png"),
+    ("lockup-960.png", "lockup-960.png"),
 ]
 
 # Retired by this handover: the SVG favicon was a rebuild of the geometry, and

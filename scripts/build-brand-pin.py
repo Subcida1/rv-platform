@@ -33,10 +33,14 @@ Run: python3 scripts/build-brand-pin.py
 """
 import shutil
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
 from PIL import Image
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from brand_palette import GOLD, TEAL, recolour   # noqa: E402  (path set above)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "assets" / "img" / "brand" / "source"
@@ -78,7 +82,7 @@ SIZES = (16, 32, 48, 180, 512)
 FILL = 0.92
 
 
-def render_master(tmp: Path) -> Image.Image:
+def render_master(tmp: Path, svg: str) -> Image.Image:
     """Chrome renders the vector once, transparent, at RENDER_PX."""
     page = tmp / "render.html"
     shot = tmp / "pin-master.png"
@@ -86,7 +90,7 @@ def render_master(tmp: Path) -> Image.Image:
         '<!doctype html><meta charset="utf-8">'
         '<style>html,body{margin:0;padding:0;background:transparent}'
         'svg{display:block;width:%dpx;height:%dpx}</style>' % (RENDER_PX, RENDER_PX)
-        + PIN_SVG, encoding="utf-8")
+        + svg, encoding="utf-8")
     cmd = ["flatpak", "run", "com.google.Chrome", "--headless=new", "--disable-gpu",
            "--hide-scrollbars", "--force-device-scale-factor=1",
            "--default-background-color=00000000",
@@ -118,12 +122,16 @@ def square_to_fill(img: Image.Image, fill: float = FILL) -> Image.Image:
 
 def main():
     SRC.mkdir(parents=True, exist_ok=True)
-    SVG_MASTER.write_text(PIN_SVG, encoding="utf-8")
-    print("  wrote  assets/img/brand/source/pin-100.svg")
+    # The palette is authoritative, not the SVG: the master still holds the gold
+    # and blue it was drawn with, and rendering it raw is what left a blue pin in
+    # the favicons beside a teal pin in the wordmark (T caught it, 2026-11-04).
+    svg = recolour(PIN_SVG)
+    SVG_MASTER.write_text(svg, encoding="utf-8")
+    print("  wrote  assets/img/brand/source/pin-100.svg  (%s / %s)" % (GOLD, TEAL))
 
     with tempfile.TemporaryDirectory(dir=Path.home() / ".hermes" / "cache" / "scratch") as td:
         tmp = Path(td)
-        master = square_to_fill(render_master(tmp))
+        master = square_to_fill(render_master(tmp, svg))
         master.resize((512, 512), Image.LANCZOS).save(SRC / "pin-master-512.png", "PNG", optimize=True)
 
     with Image.open(SRC / "pin-master-512.png") as m:

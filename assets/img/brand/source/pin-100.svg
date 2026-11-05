@@ -11,9 +11,9 @@
     <g mask="url(#holeMask)">
         <g clip-path="url(#pinClipTrans)">
             <!-- Gold Half -->
-            <polygon points="-100,-100 100,-100 100,82 -100,-18" fill="#EFBB29"/>
+            <polygon points="-100,-100 100,-100 100,82 -100,-18" fill="#D4AF37"/>
             <!-- Blue Half -->
-            <polygon points="-100,-12 100,88 100,200 -100,200" fill="#2968EF"/>
+            <polygon points="-100,-12 100,88 100,200 -100,200" fill="#008080"/>
         </g>
     </g>
 </svg>

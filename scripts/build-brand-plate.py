@@ -12,13 +12,15 @@ Plate colour is sampled from the previous export set's own plate, not chosen:
 Run after build-brand-pin.py:
   python3 scripts/build-brand-pin.py && python3 scripts/build-brand-plate.py
 """
+import sys
 from pathlib import Path
 
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "assets" / "img" / "brand" / "source"
-PLATE = (18, 19, 22)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from brand_palette import PLATE   # noqa: E402  (path set above)
 
 # Same fill the cutouts use, so the plated tile and the tab icon agree.
 FILL = 0.78
