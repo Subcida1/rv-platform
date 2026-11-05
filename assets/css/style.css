@@ -71,6 +71,18 @@
   --text-3:#67748e;  /* tertiary ink and captions */
   --text-inv:#ffffff;  /* ink that sits ON the brand; the button label */
 
+  /* ---- THE HERO MAP's highway layer. --mark reads from the brand, so it
+     moved with the rebrand; it was the last blue left in the token block. ---- */
+  --asphalt:#1e293b;  /* the highway layer's road surface */
+  --sign:#0f172a;  /* road signage */
+  --sign-text:#ffffff;  /* sign labelling */
+  --mark:#0d7377;  /* mile markers, centreline and signage: brand ink on the hero map */
+  --dash:#d0d5dd;  /* dashed lane markings */
+  --ink:#00595d;  /* the hero map's deep brand ink */
+  --ocean:#0f7b7f;  /* the hero map's mid brand wash */
+  --map-fade:100%;  /* map fade fraction */
+  --route-fade:100%;  /* route fade fraction */
+
   /* ---- ACCENT: the mark's own gold. ---- */
   --gold:#d4af37;  /* 2.10:1 vs white - the mark's gold. DECORATION ONLY: never a label, never behind white text */
   --gold-deep:#8a6d1f;  /* 4.90:1 vs white - gold that has to carry text */
@@ -163,21 +175,6 @@
   --space-6:32px;
   --space-7:48px;
   --space-8:64px;
-
-  /* ---- identity of the highway layer (mile markers, centreline, signage) ---- */
-  --asphalt:#1e293b;
-  --sign:#0f172a;
-  --sign-text:#ffffff;
-  --mark:#3d7fc2;
-  --dash:#d0d5dd;
-
-  /* ---- the hero map paints in the deep end of the brand blue; a mid blue reads
-     far fainter on white than the near-black it replaced. The fades are baked into
-     the canvas, see the hero map block below. ---- */
-  --ink:#1e6fc4;
-  --ocean:#5b96d8;
-  --map-fade:100%;
-  --route-fade:100%;
 
   /* ---- LEGACY ALIASES. Prefer the canonical names above in anything new. ---- */
   /* --b1 is a TEXT alias. It pointed at --brand, which measures 4.18:1 on white and
@@ -3751,9 +3748,9 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    asked on 2026-10-06 that a selected pill hold its hover state -- so both go to the filled
    tag rather than inventing a second selected look.
 
-   --tint-ink FILL, NOT --brand. White on --brand #3d7fc2 measures 4.19:1 and these labels
-   are 11.5px, so it fails AA; white on --tint-ink #2a6aad measures 5.58:1. The brand blue
-   is for large type and gradients, where the rule has room for it. */
+   --tint-ink FILL, NOT --brand. These labels are 11.5px, so they need the higher ratio;
+   white on --tint-ink measures 7.27:1 against the teal palette. The rule holds whatever
+   the brand becomes, because --tint-ink is the deep end of it. */
 .part-types .chip{font-family:inherit;font-size: var(--fs-xs);font-weight:800;letter-spacing:.085em;
   text-transform:uppercase;line-height:1;padding:0 10px;min-height:44px;
   display:inline-flex;align-items:center;cursor:pointer;

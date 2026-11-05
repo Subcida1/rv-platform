@@ -168,6 +168,28 @@ def check_token_layer_size():
     return []
 
 
+
+# A STALE BRAND VALUE INSIDE THE TOKEN BLOCK. The literal check only looks below the
+# layer, so a token still holding the previous brand slipped through and shipped: --mark
+# was #3d7fc2 (the old blue) through a full teal rebrand, and the hero map's mile markers
+# stayed blue on a teal site. This reads the SUPERSEDED values from the source file and
+# refuses them anywhere in the token layer, so a rebrand that forgets one is a failure
+# rather than a colour nobody looks at for a week.
+def check_no_superseded_values(t):
+    superseded = [h.lower() for h in t.get("superseded", [])]
+    if not superseded:
+        return []
+    css = CSS.read_text(encoding="utf-8")
+    layer_end = css.index("\n}\n", css.index(END))
+    layer = re.sub(r"/\*.*?\*/", " ", css[:layer_end], flags=re.S)
+    bad = []
+    for h in superseded:
+        if h in layer:
+            bad.append("style.css: %s is a superseded brand value still live in the token layer"
+                       % h)
+    return bad
+
+
 def self_test():
     """Prove each check can FAIL, by planting the defect it exists to catch."""
     t = load_tokens()
@@ -226,6 +248,7 @@ def main():
     problems += check_css_matches_source(t)
     problems += check_every_used_token_is_defined()
     problems += check_token_layer_size()
+    problems += check_no_superseded_values(t)
     problems += check_no_brand_literals_outside_layer(t)
     problems += check_theme_color(t)
 

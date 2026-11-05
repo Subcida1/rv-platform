@@ -97,6 +97,12 @@ def generated_block(t):
     for name, d in t["text"].items():
         out.append("  %s:%s;  /* %s */" % (name, d["hex"], d["role"]))
     out.append("")
+    out.append("  /* ---- THE HERO MAP's highway layer. --mark reads from the brand, so it")
+    out.append("     moved with the rebrand; it was the last blue left in the token block. ---- */")
+    for name, d in t.get("map", {}).items():
+        val = d["hex"] if d.get("hex") else d["value"]
+        out.append("  %s:%s;  /* %s */" % (name, val, d["role"]))
+    out.append("")
     out.append("  /* ---- ACCENT: the mark's own gold. ---- */")
     for name, d in t["accent"].items():
         out.append("  %s:%s;  /* %.2f:1 vs white - %s */" % (name, d["hex"], d["ratio_white"], d["role"]))

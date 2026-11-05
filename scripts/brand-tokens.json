@@ -124,5 +124,62 @@
       "hex": "#ffffff",
       "role": "ink that sits ON the brand; the button label"
     }
-  }
+  },
+  "map": {
+    "--asphalt": {
+      "hex": "#1e293b",
+      "role": "the highway layer's road surface"
+    },
+    "--sign": {
+      "hex": "#0f172a",
+      "role": "road signage"
+    },
+    "--sign-text": {
+      "hex": "#ffffff",
+      "role": "sign labelling"
+    },
+    "--mark": {
+      "hex": "#0d7377",
+      "role": "mile markers, centreline and signage: brand ink on the hero map"
+    },
+    "--dash": {
+      "hex": "#d0d5dd",
+      "role": "dashed lane markings"
+    },
+    "--ink": {
+      "hex": "#00595d",
+      "role": "the hero map's deep brand ink"
+    },
+    "--ocean": {
+      "hex": "#0f7b7f",
+      "role": "the hero map's mid brand wash"
+    },
+    "--map-fade": {
+      "hex": null,
+      "value": "100%",
+      "role": "map fade fraction"
+    },
+    "--route-fade": {
+      "hex": null,
+      "value": "100%",
+      "role": "route fade fraction"
+    }
+  },
+  "superseded": [
+    "#3d7fc2",
+    "#568fd3",
+    "#5b96d8",
+    "#1e6fc4",
+    "#2f7fd6",
+    "#3f8fe8",
+    "#eef5fc",
+    "#e9f1fa",
+    "#f3f9ff",
+    "#dce8f4",
+    "#c9dcee",
+    "#eaf1fa",
+    "#cfe0f2",
+    "#2a6aad"
+  ],
+  "_superseded_note": "The blue ladder and its tint family, retired 2026-11-05. Listed so the checker can refuse them if a rebrand forgets a token; a stale value in the layer is exactly how #mark stayed blue."
 }
