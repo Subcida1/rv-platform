@@ -80,6 +80,7 @@
   --dash:#d0d5dd;  /* dashed lane markings */
   --ink:#006b6b;  /* the hero map's deep brand ink */
   --ocean:#007474;  /* the hero map's mid brand wash */
+  --route-body:#008080;  /* the driving route's ribbon: the signature teal, and the one colour on the map that moves */
   --map-fade:100%;  /* map fade fraction */
   --route-fade:100%;  /* route fade fraction */
 
@@ -87,7 +88,6 @@
   --gold:#d4af37;  /* 2.10:1 vs white - the mark's gold. DECORATION ONLY: never a label, never behind white text */
   --gold-deep:#8a6d1f;  /* 4.90:1 vs white - gold that has to carry text */
   --gold-edge:#d4af37;  /* 2.10:1 vs white - the primary button's edge */
-  --route-casing:#5c4813;  /* 6.60:1 vs white - the dark casing under the animated route */
 /* --- END GENERATED BRAND TOKENS --- */
 /* ---- STATUS: red means a real failure and nothing else. ---- */
   --danger:#b42338;        /* the ink and edge of a failed verdict */

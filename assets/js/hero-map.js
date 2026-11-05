@@ -146,10 +146,10 @@ const MAP_ERASE   = [[0,.80],[.30,.83],[.55,.87],[.72,.92],[.88,.97],[1,1]];
 /* THE ROUTE CANNOT SHARE THE MAP'S RAMP. MAP_ERASE erases 80% at the top, which is
    right for a background wash and wrong for the one moving thing on the screen: the
    route inherited it, so every point was multiplied by that 20% ceiling and the trail
-   drew at about 19% opacity, a pale beige smear. Measured on the trace canvas across
-   six frames: max alpha never passed 48/255. Gold showed it worse than the old blue,
-   because a desaturated gold reads as beige while a washed blue still reads as blue.
-   The route keeps a gentle fade at the very bottom only, where the hero image ends. */
+   drew at about 19% opacity -- a smear nobody could see. Measured on the trace canvas
+   across six frames: max alpha never passed 48/255. The route keeps a gentle fade at
+   the very bottom only, where the hero image ends. ROUTE_PEAK, not this ramp, is what
+   keeps the head off full opacity. */
 const ROUTE_ERASE = [[0,0],[.80,0],[.92,.35],[1,1]];
 
 function applyFade(ctx, endPx, stops){
@@ -795,16 +795,15 @@ function pruneTime(now){
   }
 }
 
-/* ---- draw: a GPS route, in the brand's gold. Dark casing under the body, with
-   the tail fading out so the line reads as one continuous ribbon.
+/* ---- draw: a GPS route, in the signature teal, one stroke, fading out along
+   its own length so it reads as a track rather than as a drawn line.
 
-   THE ROUTE IS GOLD, NOT TEAL, AND THAT IS A MEASUREMENT (T asked for teal or
-   gold, whichever looks better). Teal is impossible here: the map's own highway
-   ink is the brand teal, so a teal route would be drawn on teal roads and vanish.
-   Plain --gold #d4af37 is too faint over the map's pale wash, at 1.94:1, and its
-   white puck core would measure 2.10:1. --gold-deep clears 4.51:1 on that paper
-   and separates from the teal roads, so the accent stays legible without
-   competing with the brand.
+   THE ROUTE IS TEAL, AND THE TEAL-ON-TEAL WORRY WAS WRONG (T, 2026-11-05: "change
+   it to our new signature teal"). The map's road hairlines ARE teal, so the
+   objection was real on paper and false on screen: the map is erased 80 to 87
+   percent across the band the route drives on, which leaves the roads at about a
+   sixth of their ink, while the route is a 6px ribbon against 1.35px roads. They
+   never meet.
 
    READ FROM THE PALETTE, NOT HARDCODED. These were three blue RGB literals, which
    is why the route stayed blue through a whole rebrand: it was the one color on
@@ -819,15 +818,33 @@ const toRGB = hex => {
   const h = hex.replace('#','');
   return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)].join(',');
 };
-const ROUTE_BODY   = toRGB(chip('--gold-deep', '#8a6d1f'));
-const ROUTE_TIP    = toRGB(chip('--gold-deep', '#8a6d1f'));
-const ROUTE_CASING = toRGB(chip('--route-casing', '#5c4813'));
+const ROUTE_BODY   = toRGB(chip('--route-body', '#008080'));
+const ROUTE_TIP    = toRGB(chip('--route-body', '#008080'));
 
 /* Draw a stroke fading by AGE, not by position along it: a stretch driven
-   over 15 seconds ago is nearly gone, the head is solid, and it reaches
-   zero exactly as the point is dropped. Bucketed so it stays a handful of
-   strokes per frame rather than one per point. */
+   over 15 seconds ago is nearly gone, the head is the strongest point on it,
+   and it reaches zero exactly as the point is dropped. Bucketed so it stays a
+   handful of strokes per frame rather than one per point. */
 const ROUTE_BUCKETS = 10;
+
+/* WHERE THE RIBBON PEAKS. T, 2026-11-05: "the change seemed to have removed the
+   opacity and now its solid at first and way too dark." He was describing a real
+   measurement, and the number was not the one on the tin.
+
+   ONE STROKE, NOT TWO, AND THAT IS THE ACTUAL FIX. The route used to be drawn
+   twice: a 9.5px casing under a 6px body. Two passes at the same place do not add
+   their alphas, they COMPOSITE: a body at 0.665 over a casing at 0.831 leaves the
+   ribbon at 0.943 -- 241 of 255 -- however modest either number looks in the
+   source. Measured on the trace canvas before this change: the painted pixels sat
+   at p50 148, p75 199, p90 229. So the trail was 90 percent solid at the head
+   while the line that produced it said 0.7. There is no alpha you can write in a
+   two-pass stroke that means "about two thirds visible".
+
+   The casing's own job was to separate a teal route from the map's teal roads, and
+   that job is not real here: the roads are hairlines at roughly a sixth of their
+   ink under the map's fade, against a 6px saturated ribbon. Dropping it leaves one
+   stroke, so this number is now the alpha you actually see. */
+const ROUTE_PEAK = 0.7;
 
 function strokeRoute(pts, now, trailMs){
   const n = pts.length;
@@ -845,16 +862,11 @@ function strokeRoute(pts, now, trailMs){
     let j = i + 1;
     while(j < n && bucketOf(pts[j]) === b) j++;
     const end = Math.min(n - 1, j);          // overlap one point into the next bucket
-    const a = 1 - (b + 0.5) / ROUTE_BUCKETS; // newest bucket ~1, oldest ~0
+    const a = ROUTE_PEAK * (1 - (b + 0.5) / ROUTE_BUCKETS); // newest bucket ~peak, oldest ~0
 
     const path = new Path2D();
     path.moveTo(pts[i][0], pts[i][1]);
     for(let k = i + 1; k <= end; k++) path.lineTo(pts[k][0], pts[k][1]);
-
-    trCtx.globalAlpha = a * 0.55;
-    trCtx.lineWidth = 9.5 / fit.s;
-    trCtx.strokeStyle = 'rgba(' + ROUTE_CASING + ',1)';
-    trCtx.stroke(path);
 
     trCtx.globalAlpha = a;
     trCtx.lineWidth = 6 / fit.s;

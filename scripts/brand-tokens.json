@@ -58,11 +58,6 @@
       "hex": "#d4af37",
       "ratio_white": 2.1,
       "role": "the primary button's edge"
-    },
-    "--route-casing": {
-      "hex": "#5c4813",
-      "ratio_white": 6.6,
-      "role": "the dark casing under the animated route"
     }
   },
   "tint": {
@@ -158,6 +153,10 @@
     "--ocean": {
       "hex": "#007474",
       "role": "the hero map's mid brand wash"
+    },
+    "--route-body": {
+      "hex": "#008080",
+      "role": "the driving route's ribbon: the signature teal, and the one colour on the map that moves"
     },
     "--map-fade": {
       "hex": null,
