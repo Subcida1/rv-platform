@@ -1,0 +1,128 @@
+{
+  "_doc": [
+    "The brand palette, in one place. Everything else reads this file.",
+    "",
+    "scripts/apply-brand-tokens.py rewrites the :root block in assets/css/style.css from",
+    "here, so a future rebrand is an edit to this file and one run, not a hunt through",
+    "2,500 CSS lines, 13 guide diagrams and three head-tag generators.",
+    "",
+    "Every value below was measured, not chosen by eye. 'ratio_white' is the contrast",
+    "against #ffffff; anything a label sits on or is painted in must reach 4.5,",
+    "verify.py re-checks these, so a careless edit here fails the gate rather than",
+    "shipping a button nobody can read."
+  ],
+  "brand": {
+    "--brand": {
+      "hex": "#0d7377",
+      "ratio_white": 5.62,
+      "role": "brand fill; white labels sit on this"
+    },
+    "--brand-2": {
+      "hex": "#107d81",
+      "ratio_white": 4.92,
+      "role": "brand gradient stop 2"
+    },
+    "--brand-3": {
+      "hex": "#0f7b7f",
+      "ratio_white": 5.05,
+      "role": "brand gradient stop 3"
+    },
+    "--brand-deep": {
+      "hex": "#00595d",
+      "ratio_white": 8.12,
+      "role": "link ink and CTA gradient start"
+    },
+    "--brand-deep-2": {
+      "hex": "#006468",
+      "ratio_white": 6.95,
+      "role": "CTA gradient stop 2"
+    },
+    "--brand-deep-3": {
+      "hex": "#006f73",
+      "ratio_white": 5.96,
+      "role": "CTA gradient stop 3"
+    }
+  },
+  "accent": {
+    "--gold": {
+      "hex": "#d4af37",
+      "ratio_white": 2.1,
+      "role": "the mark's gold. DECORATION ONLY: never a label, never behind white text"
+    },
+    "--gold-deep": {
+      "hex": "#8a6d1f",
+      "ratio_white": 4.9,
+      "role": "gold that has to carry text"
+    },
+    "--gold-edge": {
+      "hex": "#d4af37",
+      "ratio_white": 2.1,
+      "role": "the primary button's edge"
+    }
+  },
+  "tint": {
+    "--tint-bg": {
+      "hex": "#e8f5f4",
+      "role": "every informational chip, badge and quiet panel"
+    },
+    "--tint-edge": {
+      "hex": "#cbe7e5",
+      "role": "that panel's edge"
+    },
+    "--tint-ink": {
+      "hex": "#00595d",
+      "ratio_white": 8.12,
+      "role": "text on the tint"
+    }
+  },
+  "surface": {
+    "--bg-2": {
+      "hex": "#ecf6f7",
+      "cooler_than_red": 11
+    },
+    "--bg-3": {
+      "hex": "#e7f3f3",
+      "cooler_than_red": 12
+    },
+    "--surface-2": {
+      "hex": "#eff9fa",
+      "cooler_than_red": 11
+    },
+    "--border": {
+      "hex": "#d5e8e8",
+      "cooler_than_red": 19
+    },
+    "--border-2": {
+      "hex": "#c2dbdb",
+      "cooler_than_red": 25
+    },
+    "--line": {
+      "hex": "#d5e8e8",
+      "cooler_than_red": 19,
+      "role": "the rule above a page's byline and footer note; was never defined, so .page-foot drew its border-top in currentColor"
+    }
+  },
+  "unchanged": [
+    "the text ramp (--text, --text-2, --text-3, --text-inv)",
+    "the status family (--danger, --warn) - teal is 128 points off red, so a failure still cannot be mistaken for brand",
+    "--maps-red, the Google Maps pin used once on the directory row"
+  ],
+  "text": {
+    "--text": {
+      "hex": "#0f172a",
+      "role": "body ink"
+    },
+    "--text-2": {
+      "hex": "#55627a",
+      "role": "secondary ink"
+    },
+    "--text-3": {
+      "hex": "#67748e",
+      "role": "tertiary ink and captions"
+    },
+    "--text-inv": {
+      "hex": "#ffffff",
+      "role": "ink that sits ON the brand; the button label"
+    }
+  }
+}

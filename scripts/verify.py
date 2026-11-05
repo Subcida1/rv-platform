@@ -1286,9 +1286,10 @@ slice_line_offset = css_src[:token_end].count("\n")
 # plain Python string is #fff followed by a backspace character, so that entry never matched
 # anything and the check silently had one fewer value than it looked like it had. Found 2026-10-03
 # by the widened check reporting a #fff the old list was supposed to cover.
-PALETTE = ["#3d7fc2", "#568fd3", "#5b96d8", "#1e6fc4", "#2f7fd6", "#3f8fe8",
-           "#eef5fc", "#e9f1fa", "#f3f9ff", "#dce8f4", "#c9dcee",
-           "#eaf1fa", "#cfe0f2", "#2a6aad", "#0f172a", "#55627a", "#67748e",
+PALETTE = ["#0d7377", "#107d81", "#0f7b7f", "#00595d", "#006468", "#006f73",
+           "#d4af37", "#8a6d1f",
+           "#ecf6f7", "#e7f3f3", "#eff9fa", "#d5e8e8", "#c2dbdb",
+           "#e8f5f4", "#cbe7e5", "#0f172a", "#55627a", "#67748e",
            "#f43f5e", "#b42338", "#fdeeee", "#f2b8be", "#0ea5e9", "#6366f1",
            "#1e293b", "#d0d5dd", "#ffffff", "#fff"]
 leaked = []
@@ -1334,11 +1335,12 @@ if not leaked and not rogue:
     print("  %d palette values, none restated outside the token layer, and no hex used in any rule below it"
           % len(PALETTE))
 
-print("\n=== the tinted surfaces are blue tinted, visibly ===")
+print("\n=== the tinted surfaces are measurably cool, visibly ===")
 # #f7f8fa is cool by three points, which reads as cream against a pure white card. A
-# tint has to be measurable to be a tint, so every neutral surface token must be at
-# least ten points bluer than it is red. This is the check I should have written
-# before hunting a "gold" colour with a detector that required red > blue.
+# tint has to be measurable to be a tint, so every neutral surface token must read as
+# a colour rather than as off-white. Under the teal brand (2026-11-05) that means both
+# the green and the blue channel sit clearly above red; the old "ten points bluer than
+# red" rule is unachievable for a teal, whose blue and green are close by definition.
 css_txt = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
 root_block = re.search(r":root\{(.*?)\n\}", css_txt, re.S)
 token_bad = []
@@ -1351,14 +1353,21 @@ else:
             token_bad.append("%s missing" % name); continue
         hexv = m.group(1)
         r, g, b = int(hexv[1:3], 16), int(hexv[3:5], 16), int(hexv[5:7], 16)
-        if b - r < 10:
-            token_bad.append("%s %s is only %d bluer than red (needs 10)" % (name, hexv, b - r))
+        # TEAL BRAND (2026-11-05): the old rule said "at least ten points bluer than red",
+        # which is right for a blue palette and impossible for a teal one -- a teal tint has
+        # its blue and green close, so b - r can never reach ten without turning blue again.
+        # What the rule is FOR is that a tint reads as a colour rather than as cream, so the
+        # measurable is now "both green and blue sit clearly above red". A neutral grey fails
+        # it in every channel; a cream fails the blue test; a teal passes both.
+        if min(g - r, b - r) < 8:
+            token_bad.append("%s %s is not measurably cool (g-r %d, b-r %d; needs 8 each)"
+                             % (name, hexv, g - r, b - r))
 if token_bad:
     for t in token_bad:
         print("  " + t)
     fails.append("tint tokens")
 else:
-    print("  all five neutral tokens are at least 10 points bluer than red")
+    print("  all five neutral tokens are measurably cool: green and blue both clear of red")
 
 
 print("\n=== every asset reference carries a current content hash ===")

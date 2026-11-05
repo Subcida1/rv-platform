@@ -29,6 +29,18 @@ step "build-shell.mjs --check: nav and footer are in the HTML" \
                                                node scripts/build-shell.mjs --check
 step "stamp_assets.py --check: every asset hash is current" \
                                                python3 scripts/stamp_assets.py --check
+# THE COLOUR IS ATTACHED TO CODE, OR IT IS NOT. verify.py already forbids a palette
+# value appearing as a literal below the token layer, but on 2026-11-05 eighteen
+# brand-tinted rgba() values, three theme-color generators and verify.py's own
+# PALETTE list were all still carrying the old blue, so "the only place the look is
+# defined" was false. This asserts the property T actually asked for: change
+# scripts/brand-tokens.json, regenerate, and every one of these moves. Its self-test
+# plants a restated hex, a hand-edited block and a stale theme-color and requires all
+# three to be caught.
+step "check-brand-tokens.py --self-test: the colour gate can still catch a leak" \
+                                               python3 scripts/check-brand-tokens.py --self-test
+step "check-brand-tokens.py: every colour is attached to a token" \
+                                               python3 scripts/check-brand-tokens.py
 # The two derivations that keep the directory honest, and the reason they are separate
 # steps rather than one: --check on the listings builder proves every listing-derived
 # block matches the JSON, and --check on the coordinate builder proves every name a

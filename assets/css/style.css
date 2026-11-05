@@ -22,49 +22,61 @@
    names in anything new, and retire an alias when nothing uses it.
    ============================================================================ */
 :root{
-  /* ---- BRAND: one blue, in three weights plus a deeper gradient for CTAs ---- */
-  --brand:#3d7fc2;
-  /* LINK INK, and it is not --brand on purpose. --brand is 4.18:1 on white, below the 4.5:1 AA
-     threshold for body text; axe failed the build on three pages when .page-foot used it.
-     This is the CTA gradient's start colour and measures 5.09:1. */
-  --link-strong:#1e6fc4;
-  --brand-2:#568fd3;
-  --brand-3:#5b96d8;
-  --brand-deep:#1e6fc4;
-  --brand-deep-2:#2f7fd6;
-  --brand-deep-3:#3f8fe8;
-  --brand-grad:linear-gradient(135deg,#3d7fc2 0%,#568fd3 50%,#5b96d8 100%);
-  --brand-grad-2:linear-gradient(120deg,#3d7fc2 0%,#568fd3 45%,#5b96d8 100%);
-  --cta-grad:linear-gradient(135deg,#1e6fc4 0%,#2f7fd6 50%,#3f8fe8 100%);
-  --glow:rgba(61,127,194,.32);
+/* --- GENERATED BRAND TOKENS: edit scripts/brand-tokens.json, then run
+  /* ---- BRAND: teal, four weights. White labels sit on these, so every one of
+     them clears 4.5:1 against #ffffff; the figure is beside each value. ---- */
+  --brand:#0d7377;  /* 5.62:1 vs white */
+  --brand-2:#107d81;  /* 4.92:1 vs white */
+  --brand-3:#0f7b7f;  /* 5.05:1 vs white */
+  --brand-deep:#00595d;  /* 8.12:1 vs white */
+  --brand-deep-2:#006468;  /* 6.95:1 vs white */
+  --brand-deep-3:#006f73;  /* 5.96:1 vs white */
 
-  /* soft brand surfaces: tinted cards, icon buttons, hover washes */
-  --grad-soft:linear-gradient(135deg,rgba(61,127,194,.12),rgba(86,143,211,.12) 50%,rgba(91,150,216,.12));
-  --grad-soft-2:linear-gradient(135deg,rgba(61,127,194,.10),rgba(86,143,211,.10) 50%,rgba(91,150,216,.10));
+  /* brand gradients, built from the ladder above so a rebrand moves them too */
+  --brand-grad:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 50%,var(--brand-3) 100%);
+  --brand-grad-2:linear-gradient(120deg,var(--brand) 0%,var(--brand-2) 45%,var(--brand-3) 100%);
+  --cta-grad:linear-gradient(135deg,var(--brand-deep) 0%,var(--brand-deep-2) 50%,var(--brand-deep-3) 100%);
+  --glow:color-mix(in srgb,var(--brand) 32%,transparent);
 
-  /* the tint family: every informational chip, badge, banner and quiet panel.
-     At least ten points bluer than red, or it reads as cream next to a white
-     card. verify.py checks that. */
-  --tint-bg:#eaf1fa;
-  --tint-edge:#cfe0f2;
-  --tint-ink:#2a6aad;
+  /* ---- LINK INK. Not --brand: --brand is a FILL and the site's own rule is that
+     text needs 4.5:1. --brand-deep measures the higher figure, so links use it. ---- */
+  --link-strong:var(--brand-deep);
 
-  /* ---- SURFACES: white, and blue-tinted when something needs to sit apart ---- */
+  /* soft brand surfaces, derived so they follow the brand automatically */
+  --grad-soft:linear-gradient(135deg,color-mix(in srgb,var(--brand) 12%,transparent),color-mix(in srgb,var(--brand-2) 12%,transparent) 50%,color-mix(in srgb,var(--brand-3) 12%,transparent));
+  --grad-soft-2:linear-gradient(135deg,color-mix(in srgb,var(--brand) 10%,transparent),color-mix(in srgb,var(--brand-2) 10%,transparent) 50%,color-mix(in srgb,var(--brand-3) 10%,transparent));
+
+  /* ---- TINT: every informational chip, badge, banner and quiet panel. ---- */
+  --tint-bg:#e8f5f4;
+  --tint-edge:#cbe7e5;
+  --tint-ink:#00595d;  /* 8.12:1 vs white */
+
+  /* ---- SURFACES: white, and cool-tinted when something needs to sit apart.
+     The tint has to be measurable or it reads as cream against a white card,
+     so verify.py requires each to be at least ten points cooler than red. ---- */
   --bg:#ffffff;
-  --bg-2:#eef5fc;
-  --bg-3:#e9f1fa;
+  --bg-2:#ecf6f7;  /* 11 cooler than red */
+  --bg-3:#e7f3f3;  /* 12 cooler than red */
+  --surface-2:#eff9fa;  /* 11 cooler than red */
+  --border:#d5e8e8;  /* 19 cooler than red */
+  --border-2:#c2dbdb;  /* 25 cooler than red */
+  --line:#d5e8e8;  /* 19 cooler than red */
   --surface:#ffffff;
-  --surface-2:#f3f9ff;
-  --border:#dce8f4;
-  --border-2:#c9dcee;
 
-  /* ---- TEXT: a three-step ink ramp, plus white for use on the brand ---- */
-  --text:#0f172a;
-  --text-2:#55627a;
-  --text-3:#67748e;
-  --text-inv:#ffffff;
+  /* ---- TEXT: the ink ramp. Fixed across a rebrand, but it lives here so the
+     generated block declares EVERY token the site uses. It did not, once: --text-inv
+     went undeclared and every button label on the site fell back to black on teal. ---- */
+  --text:#0f172a;  /* body ink */
+  --text-2:#55627a;  /* secondary ink */
+  --text-3:#67748e;  /* tertiary ink and captions */
+  --text-inv:#ffffff;  /* ink that sits ON the brand; the button label */
 
-  /* ---- STATUS: red means a real failure and nothing else. ---- */
+  /* ---- ACCENT: the mark's own gold. ---- */
+  --gold:#d4af37;  /* 2.10:1 vs white - the mark's gold. DECORATION ONLY: never a label, never behind white text */
+  --gold-deep:#8a6d1f;  /* 4.90:1 vs white - gold that has to carry text */
+  --gold-edge:#d4af37;  /* 2.10:1 vs white - the primary button's edge */
+/* --- END GENERATED BRAND TOKENS --- */
+/* ---- STATUS: red means a real failure and nothing else. ---- */
   --danger:#b42338;        /* the ink and edge of a failed verdict */
   --danger-bg:#fdeeee;
   --danger-edge:#f2b8be;
@@ -222,6 +234,7 @@
   --tint-blue-faint:#eff6ff;
   --border-soft:#e2e8f0;
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
 /* SMOOTH SCROLLING IS OPT-OUT FOR ANYONE WHO ASKED FOR LESS MOTION. It was unconditional, so
    the browser animated every fragment jump -- including the footer's back-to-top -- for people

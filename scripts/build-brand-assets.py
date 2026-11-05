@@ -60,10 +60,10 @@ SRC = OUT / "source"
 # class="g-theme-mist" on <body>, and that theme's --btn-grad is the blue family
 # the share card's wash is built from. Read the body class, not the top of the
 # stylesheet.
-STOPS = [(0.0, (30, 111, 196)), (0.5, (47, 127, 214)), (1.0, (63, 143, 232))]
-# Address-bar tint for mobile browsers and the installed-PWA theme colour: --b1
-# of that same mist theme, the blue the rest of the page is built from.
-THEME_COLOR = "#3d7fc2"
+STOPS = [(0.0, (0, 89, 93)), (0.5, (0, 100, 104)), (1.0, (0, 111, 115))]
+# Address-bar tint for mobile browsers and the installed-PWA theme colour: --brand
+# of the teal palette (scripts/brand-tokens.json).
+THEME_COLOR = "#0d7377"
 INK = (15, 23, 42)          # --text
 INK_2 = (85, 98, 122)       # --text-2
 INK_3 = (103, 116, 142)     # --text-3

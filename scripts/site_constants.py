@@ -147,10 +147,10 @@ def claim_values():
 # than silently rewrite half a sentence.
 CLAIM_RE = re.compile(r'<(\w+)([^>]*\sdata-claim="([a-z0-9-]+)"[^>]*)>([^<]*)</\1>')
 # Address-bar tint for mobile browsers, and the installed-PWA theme colour.
-# This is --b1 of the mist theme that every page sets on <body>
-# (assets/css/style.css .g-theme-mist). Never the sunset :root values: that
-# palette is retired, and :root is overridden on every page anyway.
-THEME_COLOR = "#3d7fc2"
+# Reads --brand from the teal palette (scripts/brand-tokens.json). It is the BRAND,
+# not --b1: --b1 is a text alias that resolves to --tint-ink, which is a deep teal
+# meant for small type and reads almost black in a mobile address bar.
+THEME_COLOR = "#0d7377"
 
 # The three stops of the retired sunset gradient, banned from the generated
 # brand assets. They now live only in style.css :root and in the red-as-meaning
