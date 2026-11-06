@@ -24,6 +24,11 @@ impressions climb, the gap between impressions and clicks widens, not narrows.
 
 87 percent of all impressions in the last 90 days arrived in the last 28 of them.
 
+**And the site's newest 87 percent of pages are not in Google at all.** The 950 town pages added on
+2026-11-01 are zero for zero indexed, out of 789 that Google has inspected. Google found them in the
+sitemap and declined every one. Everything else on the site indexes at 44 percent or better once the
+town pages are excluded.
+
 ## 2. The dashboard
 
 | metric | value | source |
@@ -44,6 +49,8 @@ impressions climb, the gap between impressions and clicks widens, not narrows.
 | Cloudflare human page loads, 28 days | 520 | CF RUM |
 | Cloudflare bot page loads, 28 days | 800 | CF RUM |
 | LCP / CLS / INP / TTFB (p75) | 441 ms / 0 / 128 ms / 168 ms | CF RUM |
+| Google URLs indexed | 57 of 919 inspected (6%) | URL Inspection |
+| Google URLs indexed, excluding town pages | 57 of 130 (44%) | URL Inspection |
 | HTML pages published | 1,098 (1,096 in the sitemap) | repo census |
 | Guide pages | 62 | repo census |
 | Tool pages | 15 | repo census |
@@ -113,13 +120,33 @@ either proxying the domain through Cloudflare (all nine DNS records are DNS-only
 Cloudflare never sees the request) or restructuring 1,098 pages into directories. Both change the
 hosting setup or the whole build. Recorded as a known host limitation, not as work.
 
-**950 new town pages have produced nothing yet, and they are not linked from anywhere that matters.**
-They were committed on 2026-11-01, so the zero is expected rather than alarming, but two facts need
-recording. First, no town page has a single impression in 90 days of Search Console data, and a spot
-check on `/directory/california/anaheim` returns "Discovered, currently not indexed". Second, the
-state pages do not link to them: `directory/california.html` contains no link to any of its 109 town
-pages. They are reachable only from the sitemap and from each other's "nearby towns" blocks, so
-nothing flows down from the state pages, which are the strongest pages in the directory.
+**Google has found the 950 town pages and is refusing to index a single one.** This is the biggest
+finding in the report and it is measured, not inferred. Every sitemap URL was inspected through the
+URL Inspection API on 2026-11-05:
+
+| section | URLs | indexed | discovered, not indexed | unknown to Google | not inspected |
+|---|---|---|---|---|---|
+| town pages | 950 | **0** | 595 | 194 | 161 |
+| guides | 62 | 39 | 18 | 5 | 0 |
+| directory state pages | 51 | 7 | 33 | 11 | 0 |
+| tools | 16 | 10 | 5 | 1 | 0 |
+| manuals | 12 | not inspected | | | 12 |
+| parts and root | 5 | 1 | 0 | 0 | 4 |
+
+The town pages are all in the sitemap (950 of its 1,088 URLs), and Google downloaded that sitemap on
+2026-11-03. It found them. Of the 789 it inspected, **zero are indexed**, 595 are classified
+"Discovered, currently not indexed" and 194 are not known to Google at all. That classification is
+Google's way of saying it knows the URL exists and is choosing not to index it, which is the standard
+response to 950 near-identical pages with a median of 64 words of unique body content.
+
+Set beside the rest of the site, the contrast is the point. Guides index at 68 percent (39 of 57),
+tools at 63 percent (10 of 16), directory state pages at 14 percent (7 of 51). The town pages are a
+crawl the site paid for and Google declined.
+
+The state pages also do not link to the town pages: `directory/california.html` contains no link to
+any of its 109 town pages. They are reachable only from the sitemap and from each other's "nearby
+towns" blocks, so nothing flows down from the state pages, which are the strongest pages in the
+directory.
 
 **The town pages are thin at the scale they were built.** Stripping the navigation, the median town
 page carries about 64 words of unique body content, and 566 of the 950 list only two businesses. The
@@ -173,9 +200,11 @@ volume.
 2. **Invest in manuals, not more troubleshooting guides.** Manuals hold 47 percent of clicks from 13
    URLs; the guides hold 52 percent from 52. The manuals cluster is where the site already wins on
    Bing and where the AI citations most likely come from.
-3. **Decide about the town pages before building more.** 950 pages with 64 words of unique body and
-   no inbound internal links is a doorway-page shape. Either give them real content and links, or
-   stop expanding the pattern into the remaining states. Do not do both halves at once.
+3. **Decide about the town pages before building more, and treat this as the urgent one.** Google has
+   indexed zero of 789 and does not know 194 of them at all. Either give them real content and real
+   internal links, or stop expanding the pattern into the remaining states. The evidence says the
+   current shape does not index, so building 500 more of them produces 500 more pages of the same
+   nothing. This is the one item on the list where continuing as-is has a cost.
 4. **Keep submitting to Bing and leave the rest alone for 30 days.** Bing went from 3 to 37 indexed
    pages without intervention. The lever is submission plus time, and the measurement is 14 days out.
 5. **Do not touch the head terms, and do not sweep the headings.** Positions 51 to 100 on "rv roof
@@ -185,10 +214,15 @@ volume.
 
 ## 7. What I could not measure
 
-- **Google's indexation depth is an open number.** A full URL-level sweep of all 1,096 sitemap URLs
-  is running as this report is written. The last complete sweep (2026-10-27, on the then 144-page
-  site) found 67 of 144 indexed, 47 percent. The sitemap shows 1,096 URLs discovered and downloaded
-  by Google on 2026-11-03. Bing has 37 of them in its index.
+- **177 URLs could not be inspected** (HTTP 429, rate limited by the URL Inspection API). They are
+  concentrated in the manuals section (all 12) and the tail of the town pages (161). The town-page
+  finding does not depend on them: 789 of 950 were inspected and none is indexed. The manuals section
+  is the one gap, and it matters because manuals pages do rank, so the true indexed total is higher
+  than the 57 this sweep counted.
+- **Indexation declined in absolute terms and I cannot fully explain it.** The sweep on 2026-10-27
+  found 67 indexed pages on a 144-page site. This one finds 57 indexed, plus manuals uninspected, on
+  a 1,096-page site. Some of the difference is the 177 rate-limited URLs. Whether Google has actually
+  dropped pages, or whether the two sweeps classify differently, needs a clean re-run to settle.
 - **AI Overview and AI Mode impressions are not in the API.** They are interface-only. This is the
   one number that would settle section 5.
 - **Search Console withholds low-volume queries**, which is why the query table holds a third of the
