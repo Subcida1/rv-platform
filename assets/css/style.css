@@ -4041,11 +4041,23 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 /* A chevron drawn with the same ink as the label, so the row reads as one click. */
 .hd-go::after{content:" \2192"}
 
-/* The directory: clearly second. A row, not a card, and not the same weight. */
+/* The directory: clearly second. Still a row rather than a card, and the weight
+   difference is carried by its type and padding, NOT by being see-through.
+
+   THE TRANSPARENT BACKGROUND WAS A REAL DEFECT, NOT A STYLE (T, 2026-11-05: "make
+   them not transparent like the something is broken button, the buttons themselves
+   shouldnt have opacity"). These three rows sit on the hero map canvas, so
+   background:transparent did not mean "quiet" -- it meant the map's roads and the
+   driving route's puck were DRAWN INSIDE THE ROW, visible through it, under the
+   label and the action. Seen at 1:1 the puck sat right in the middle of "Need a
+   tech instead?". Whatever the row is called, its contents have to be read against
+   a surface the page controls, so this is --surface, the same opaque white the
+   .hero-door above it uses. The hover rule no longer restates the background for
+   the obvious reason: it is the resting state now. */
 .hero-strip{display:flex;align-items:center;gap:var(--space-3);max-width:760px;margin:var(--space-3) auto 0;
-  background:transparent;border:1px solid var(--border);border-radius:var(--radius-lg);
-  padding:var(--space-3) var(--space-5);text-align:left;transition:border-color .16s,background .16s}
-.hero-strip:hover{border-color:var(--b2);background:var(--surface)}
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:var(--space-3) var(--space-5);text-align:left;transition:border-color .16s}
+.hero-strip:hover{border-color:var(--b2)}
 .hero-strip:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 .hs-ic{flex:none;display:flex;align-items:center;color:var(--text-3)}
 /* THE DIRECTORY PIN IS FILLED RED, keeping its outline (T, 2026-10-31). This is
