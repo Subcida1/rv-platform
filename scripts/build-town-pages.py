@@ -561,6 +561,46 @@ def main():
         templates[slug] = tpl
         return tpl
 
+    def strip_state_intro(page):
+        """Remove the STATE page's own H1, on EVERY page, new or existing.
+
+        A town page is cut from the state page and only this file's markers are rewritten, so
+        anything of the state's that sits OUTSIDE the markers survives into all 950 children.
+        The state page's `dir-title` H1 is one of those, and the town's own <h1> is written
+        inside the marked body. Measured 2026-11-07: all 950 town pages shipped two H1s, and the
+        second deduplicated to exactly 46 strings, one per state ("x109 RV REPAIR DIRECTORY
+        Mobile technicians and service centers in California"). The first thing a crawler read
+        about Daphne's page was Alabama's headline.
+
+        ONLY THE H1 COMES OUT, and that is narrower than the first version of this, which tried
+        to remove the whole `.page-intro` block. Measured on the real pages: the block is NOT
+        self-contained -- it opens with a wrapper, leads with this H1, and then holds the state's
+        LEDE, a `.guide-stats` div of listing-count buttons, the finder controls and MORE, so a
+        non-greedy `.*?` to the first `</div>` consumed the H1 plus a wrapper and left an
+        unmatched `</div>` behind. verify.py caught it as `</div> with stack
+        ['html','body','main']` on every page. An unbalanced splice is the exact failure this
+        repo's own doctrine warns about for block edits, so the fix is to remove the ONE element
+        that is the defect rather than guess at a block boundary.
+
+        The state's lede and counts are left where they are: they are the state page's content
+        and the town's own lede and counts follow inside the marked body. Removing the H1 alone
+        is enough to leave the town page with exactly one H1, which is the property being fixed.
+
+        WRITTEN AS AN IDEMPOTENT SUBSTITUTION PRESSED ON EVERY PAGE, not as part of the new-page
+        template: a page that does not exist yet is cut from base_page(), but an existing page is
+        its own template and never passes through there, so a strip placed there changed nothing
+        on the 950 files already on disk. Same trap as stamp_identity()'s `if not old:` guard.
+        A page already correct comes back byte-identical, so the second build reports changed: 0.
+
+        n == 0 is the settled state for a page already stripped, so only n > 1 is an error.
+        """
+        out, n = re.subn(r'\n[ \t]*<h1 class="dir-title">.*?</h1>\n',
+                         "\n", page, count=1, flags=re.S)
+        if n > 1:
+            sys.exit("FAIL  more than one dir-title H1 on a town page; the template shape "
+                     "changed and the strip is no longer unambiguous")
+        return out
+
     for j in jobs:
         slug, st = j["state_slug"], j["state"]
         tslug = slug_of(j["town"])
@@ -583,6 +623,9 @@ def main():
             # and keeps one writer per region.
             page = render(slug, st, j["town_key"], j["town"], j["rows"], j["state_name"],
                           j["neigh"], j["coords"], old, len(j["rows"]))
+        # The state's page-intro comes off EVERY page, new or existing, before the identity is
+        # stamped. Idempotent, so a rebuild of an already-correct page is a no-op.
+        page = strip_state_intro(page)
         # Identity is stamped on EVERY page, new or existing, because it is the builder's to
         # own and because a page can be on disk with the wrong one (see stamp_identity). It is
         # idempotent, so on a page that is already correct this changes nothing and the build
