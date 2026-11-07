@@ -1,0 +1,78 @@
+name: Deploy to Pages
+
+# Replaces GitHub's legacy Pages pipeline, which stalled on this repo: every deploy hung in
+# syncing_files and died at the 10m cap with "Timeout reached, aborting!", and a clean
+# POST /pages/builds errored too. The site is prebuilt static HTML committed to the repo, so
+# there is nothing to compile here - this just publishes the tree.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; queue a newer one rather than cancelling a running deploy, so a push
+# mid-deploy still lands.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # The published site is the repo root, minus the source and bookkeeping dirs that are not
+      # meant to be fetched by anyone. CNAME, 404.html, robots.txt and sitemap.xml all live at the
+      # root and MUST stay, so this excludes specific dirs rather than picking an allowlist.
+      - name: Stage the site
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          rsync -a --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.letta' \
+            --exclude '.wrangler' \
+            --exclude '.vale' \
+            --exclude '_data' \
+            --exclude '_log' \
+            --exclude '_reports' \
+            --exclude '_review' \
+            --exclude '_specs' \
+            --exclude '_todo' \
+            --exclude 'data' \
+            --exclude 'scripts' \
+            --exclude 'workers' \
+            --exclude '*.py' \
+            --exclude '__pycache__' \
+            ./ _site/
+          # Jekyll must not reprocess the tree: the HTML is already built and _-prefixed paths
+          # would otherwise be discarded silently.
+          touch _site/.nojekyll
+          echo "staged files: $(find _site -type f | wc -l)"
+          echo "CNAME: $(cat _site/CNAME)"
+          test -f _site/404.html
+          test -f _site/CNAME
+          test -f _site/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
