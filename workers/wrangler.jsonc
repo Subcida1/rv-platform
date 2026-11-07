@@ -12,6 +12,8 @@
   //   POST /c       -> record one click on a listing
   //   GET  /count   -> one listing's counts for one month
   //   GET  /series  -> one listing's counts across months
+  //   GET  /where   -> the requesting state, from the IP Cloudflare already saw,
+  //                    so the directory offers a reader their own Crescent City
   //
   // The send_email binding is what gives the Worker permission to send. With no
   // destination_address restriction it may send only to VERIFIED destination

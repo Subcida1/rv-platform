@@ -417,13 +417,20 @@ function footLogoHTML() {
  '<p>' + esc(CFG.brand.tag) + '</p>' +
  '</div>' +
  '<div class="foot-col"><p class="foot-h">Tools</p>' +
- '<a href="' + R(rt.toolFuel) + '">Fuel cost calculator</a><a href="' + R(rt.toolSolar) + '">Solar sizing</a>' +
- '<a href="' + R(rt.toolBattery) + '">Battery runtime</a><a href="' + R(rt.calculator) + '">Weight &amp; towing</a>' +
- '<a href="' + R(rt.calculator) + '#embed">Embed a calculator on your site</a><a href="' + R(rt.tools) + '">All 15 tools</a></div>' +
+ '<a href="' + R(rt.toolFuel) + '">Fuel cost calculator</a><a href="' + R(rt.toolWatts) + '">Watts to amps</a>' +
+ '<a href="' + R(rt.toolSolar) + '">Solar sizing</a><a href="' + R(rt.toolLoan) + '">RV loan</a>' +
+ '<a href="' + R(rt.calculator) + '">Weight &amp; towing</a><a href="' + R(rt.toolBattery) + '">Battery runtime</a>' +
+ '<a href="' + R(rt.toolSnow) + '">Roof snow load</a><a href="' + R(rt.toolTireAge) + '">Tire date code</a>' +
+ '<a href="' + R(rt.toolToilet) + '">Toilet water valve</a><a href="' + R(rt.toolRecall) + '">Recall lookup</a>' +
+ '<a href="' + R(rt.toolAnode) + '">Anode rod</a><a href="' + R(rt.toolConverter) + '">Converter finder</a>' +
+ '<a href="' + R(rt.toolBoard) + '">Appliance board finder</a><a href="' + R(rt.toolFilter) + '">Water filter</a>' +
+ '<a href="' + R(rt.toolBrakeLaws) + '">State brake laws</a><a href="' + R(rt.calculator) + '#embed">Embed a calculator</a>' +
+ '<a href="' + R(rt.tools) + '">All 15 tools</a></div>' +
  '<div class="foot-col"><p class="foot-h">Guides</p>' +
  '<a href="' + R(rt.guides) + '">All guides</a><a href="' + R(rt.guides) + '#electrical-and-charging">Electrical and charging</a>' +
- '<a href="' + R(rt.guides) + '#water-and-plumbing">Water and plumbing</a><a href="' + R(rt.guides) + '#tires-towing-and-weight">Tires, towing and weight</a>' +
- '<a href="' + R(rt.guides) + '#winter-storage">Winter storage</a><a href="' + R(rt.guideWinterize) + '">Winterize plumbing</a></div>' +
+ '<a href="' + R(rt.guides) + '#heat-cool-and-appliances">Heating, cooling and appliances</a><a href="' + R(rt.guides) + '#water-and-plumbing">Water and plumbing</a>' +
+ '<a href="' + R(rt.guides) + '#body-slides-and-jacks">Body, slides and jacks</a><a href="' + R(rt.guides) + '#tires-towing-and-weight">Tires, towing and weight</a>' +
+ '<a href="' + R(rt.guides) + '#winter-storage">Winter storage</a></div>' +
  '<div class="foot-col"><p class="foot-h">Directory</p><a href="' + R(rt.directory) + '">Find RV service</a><a href="' + R(rt.directory) + '#claim">Claim your business</a><a href="' + R(rt.directory) + '#seed">What a listing carries</a></div>' +
  '<div class="foot-col"><p class="foot-h">Manuals</p><a href="' + R(rt.manuals) + '">All RV manuals</a><a href="' + R(rt.manualsBrands) + '">Owner manuals by brand</a><a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins</a><a href="' + R(rt.manualsPower) + '">Electrical manuals</a><a href="' + R(rt.manualsTowing) + '">Towing manuals</a><a href="' + R(rt.manualsKitchen) + '">Kitchen manuals</a></div>' +
  '<div class="foot-col"><p class="foot-h">Company</p><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a><a href="' + R(rt.privacy) + '">Privacy</a></div>' +
@@ -524,7 +531,7 @@ function footLogoHTML() {
    m.async = false;
    document.head.appendChild(m);
  }
- s.src = 'assets/js/search.js?v=31463bd7';
+ s.src = 'assets/js/search.js?v=a4f97929';
  s.async = false;
  document.head.appendChild(s);
  }

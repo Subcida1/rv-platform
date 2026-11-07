@@ -478,6 +478,41 @@ export default {
         : handleSeries(request, url, env, allowed);
     }
 
+    // ---- where the visitor is, from the IP Cloudflare already saw ----
+    //
+    // The directory resolves an ambiguous town name ("Crescent City" is FL, CA and IL)
+    // and with nothing else to go on it offers them in table order, which is not the
+    // same as the reader's order. This answers the one question that fixes it: which
+    // state is this request coming from. `cf.regionCode` is the state code for US
+    // requests (CA, FL, IL), so no lookup table is needed for the common case.
+    //
+    // NO IP IS RETURNED, LOGGED OR STORED. The response carries a state code and
+    // nothing else, which is what keeps this a lookup rather than tracking. Values
+    // are read from Cloudflare's own geo headers, which exist only when the request
+    // arrives through Cloudflare, so a direct hit to the workers.dev host answers
+    // `region: null` rather than guessing.
+    if (url.pathname === '/where') {
+      if (request.method !== 'GET') {
+        return json({ error: 'method not allowed' }, 405, allowed);
+      }
+      const cf = request.cf || {};
+      const country = String(cf.country || '').toUpperCase();
+      // State-shaped only for the US. Anywhere else the state is meaningless, and a
+      // Canadian province or a German Land in that field would be read as a US state
+      // code by the caller, so it is reported as null unless the country is US.
+      const region = country === 'US' ? String(cf.regionCode || '').toUpperCase() : '';
+      return new Response(JSON.stringify({ country: country || null, region: region || null }), {
+        status: 200,
+        headers: Object.assign({
+          'Content-Type': 'application/json',
+          // A reader's location does not change while they browse, and this answer is
+          // the same for every request from one place, so letting Cloudflare hold it
+          // for five minutes keeps the search path free of a round trip.
+          'Cache-Control': 'private, max-age=300',
+        }, corsHeaders(allowed)),
+      });
+    }
+
     // ---- everything else POST is the claim form ----
     if (request.method === 'POST') {
       return handleClaim(request, env, allowed);

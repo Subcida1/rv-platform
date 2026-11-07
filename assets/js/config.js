@@ -24,6 +24,13 @@ window.RV_CONFIG = {
    anything, so shipping with it blank is inert rather than broken. Fill it in
    the same day the Worker is deployed, not before. */
  countEndpoint: 'https://originrv-claim.ty-g-brandes.workers.dev/c',
+ /* Where the visitor is, by state, from the IP Cloudflare already saw. Used ONLY to
+    break a tie when a town name exists in several states ("Crescent City" is FL, CA
+    and IL): the resolver offers the reader's own state first instead of whichever
+    state the place table happens to list first. It returns a state code and no IP,
+    and a blank value here simply means the reader gets the unambiguous answer and
+    can use "Use my location" for a precise one. */
+ whereEndpoint: 'https://originrv-claim.ty-g-brandes.workers.dev/where',
  domain: {
  canonical: 'https://originrv.com', // live domain (also in sitemap.xml, robots.txt, and per-page canonicals)
  live: 'https://originrv.com' // github.io redirects here now that the CNAME is set

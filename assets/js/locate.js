@@ -483,6 +483,74 @@
   window.RV_LOCATE_TOWN = townUrl;
   window.RV_LOCATE_KEYS = function () { return keys() || []; };
 
+  /* ---------- which state is this reader in ----------
+
+     ONE JOB: break a tie. "Crescent City" is a real town in Florida, California and
+     Illinois, and the place table lists them FL, CA, IL, which is alphabetical-ish and
+     has nothing to do with the reader. T, 2026-11-06: "it just needs to account for IP
+     address at that point". So the resolver is handed the reader's own state as
+     `prefer`, and orderStates() lifts it to the front. Everything else about the answer
+     is unchanged, and the other states are still offered below it.
+
+     THIS NEVER BLOCKS AND NEVER THROWS. The answer arrives after the first paint, so a
+     reader who types before it lands gets the old behavior for that one query and the
+     next keystroke is fixed; a reader whose request fails, or who is outside the US,
+     gets no preference at all rather than a wrong one. That ordering matters: a search
+     box that waits on a network call to answer a keystroke is worse than one that
+     occasionally offers Florida first.
+
+     A CACHED VALUE IS THE WHOLE POINT. The lookup runs once per page load at most, the
+     answer is memoised for the life of the page, and the in-flight promise is reused so
+     ten keystrokes do not fire ten requests. Nothing is written to storage: a state
+     guessed from an IP has no business outliving the visit. */
+  var HOME = { state: '', asked: false, waiters: [], inflight: null };
+
+  function whereEndpoint() {
+    var cfg = window.RV_CONFIG || {};
+    var tpl = cfg.whereEndpoint || '';
+    return typeof tpl === 'string' ? tpl : '';
+  }
+
+  function settle(state) {
+    HOME.state = state || '';
+    HOME.asked = true;
+    var w = HOME.waiters; HOME.waiters = [];
+    for (var i = 0; i < w.length; i++) { try { w[i](HOME.state); } catch (e) {} }
+  }
+
+  /* ASK ONCE. Fired on the first focus of a search box, not at load, so a reader who
+     never searches never pays for it and the homepage's own paint is untouched. */
+  function askHome() {
+    if (HOME.asked || HOME.inflight) return HOME.inflight;
+    var url = whereEndpoint();
+    if (!url) { settle(''); return null; }
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 2500);
+    HOME.inflight = fetch(url, { credentials: 'omit', signal: ctl ? ctl.signal : undefined })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (j) {
+        // A two-letter US state code, uppercased, or nothing. Anything else is either
+        // not a state or not ours to trust, and an unrecognised code is dropped here
+        // rather than handed to the resolver to misread.
+        var st = j && j.region ? String(j.region).toUpperCase() : '';
+        settle(/^[A-Z]{2}$/.test(st) ? st : '');
+        return HOME.state;
+      })
+      .catch(function () { settle(''); return ''; })
+      .then(function (v) { clearTimeout(timer); HOME.inflight = null; return v; });
+    return HOME.inflight;
+  }
+
+  /* WHAT THE CALLER USES. `cb` fires immediately when the answer is already in hand, so
+     the caller can re-run the search without a repaint of its own. Nothing is returned:
+     a caller that wants to wait is a caller that can hang. */
+  window.RV_LOCATE_HOME = function (cb) {
+    if (HOME.asked) { if (cb) cb(HOME.state); return HOME.state; }
+    if (cb) HOME.waiters.push(cb);
+    askHome();
+    return '';
+  };
+
   /* ---------- the old surface, kept working ----------
      search.js and the homepage form called RV_DIRECTORY_MATCHES and RV_DIRECTORY_URL.
      They are now thin wrappers over the resolver, so there is one implementation and the

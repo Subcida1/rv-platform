@@ -104,7 +104,7 @@
       ['assets/js/places.js?v=794b2a03', function () { return !!window.RV_PLACES; }],
       ['assets/js/location-data.js?v=395afcf3', function () { return !!window.RV_ZIP_TO_STATE; }],
       ['assets/js/towns.js', function () { return !!window.RV_TOWNS; }],
-      ['assets/js/locate.js?v=c543c24e', function () { return !!window.RV_LOCATE; }]
+      ['assets/js/locate.js?v=e8bd2dd4', function () { return !!window.RV_LOCATE; }]
     ].filter(function (c) { return !c[1](); }).map(function (c) { return c[0]; });
     var i = 0;
     var next = function () {
@@ -239,7 +239,14 @@
      place" would be a promise the next page cannot keep. */
   function locateItems(q) {
     if (!window.RV_LOCATE) return [];
-    var r = window.RV_LOCATE(q);
+    /* THE READER'S OWN STATE BREAKS THE TIE. A town name in several states -- Crescent
+       City is FL, CA and IL -- used to be offered in place-table order, which sent a
+       northern California reader to Florida. RV_LOCATE_HOME answers with the state the
+       request came from, or '' when it cannot, and orderStates lifts it to the front.
+       An empty answer is not an error: the resolver then behaves exactly as it did
+       before, which is the correct fallback rather than a guess. */
+    var home = window.RV_LOCATE_HOME ? window.RV_LOCATE_HOME() : '';
+    var r = window.RV_LOCATE(q, home ? { prefer: home } : null);
     if (!r || !r.matches.length) return [];
     var out = [];
     var label = r.name || q;
@@ -581,6 +588,18 @@
         if (input.value.trim()) paint(search(input.value), input.value.trim().toLowerCase());
       });
       loadLocate();
+      /* AND ASK WHERE THE READER IS, once per page, in the background. When the answer
+         lands after the reader has already typed, the open panel is recomputed so the
+         query in the box gets the correction too rather than waiting for a new
+         keystroke. loadLocate() first: the required order is the resolver, then the
+         answer it needs. */
+      if (window.RV_LOCATE_HOME) {
+        loadLocate(function () {
+          window.RV_LOCATE_HOME(function () {
+            if (input.value.trim()) paint(search(input.value), input.value.trim().toLowerCase());
+          });
+        });
+      }
     });
     input.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowDown') { e.preventDefault(); if (box.hidden) paint(search(input.value), input.value.trim().toLowerCase()); else move(1); }
