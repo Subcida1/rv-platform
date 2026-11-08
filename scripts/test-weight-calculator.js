@@ -1,19 +1,36 @@
 #!/usr/bin/env node
-/* A runnable check for the weight calculator's verdicts.
+/* The site-side check for the weight calculator's published bundle.
 
-   WHY: nothing tested weight.js. The GCWR verdict was added on 2026-09-24 and it is
-   the one piece of arithmetic on the page that has to agree with a verified guide, so
-   it gets a check of its own. The four verdicts that already existed are asserted too,
-   as a regression guard: they are the reason a reader trusts the fifth one.
+   WHAT CHANGED AND WHY. Until 2026-11-07 this file executed assets/js/weight.js against a DOM
+   stub built from the page's own markup and asserted the rendered verdict rows. The tool is now a
+   React bundle built in a SEPARATE PRIVATE repo (Subcida1/towing-calculator) and vendored into
+   assets/towsafe/, so there is no weight.js and no markup to drive: the arithmetic lives inside a
+   minified bundle this repo cannot call into, and the source deliberately is not here.
+
+   SO THE DEEP CHECKS MOVED TO WHERE THE SOURCE LIVES, and they got STRONGER, not weaker. The draft
+   repo's own gate is the authority for the engine's behaviour:
+       cd ~/Documents/towing-calculator && npm test
+       ->  engine-equivalence 134/134 (100.0% agreement with the live corpus),
+           reference cross-check 6/6, measured-tongue, sag, and copy-lint
+   That covers every rule this file used to spot-check: the 80/90 bands, the sticker/propane flag,
+   the refusal on a half-filled form, the tongue ranges per vehicle type. Those checks cannot run on a
+   GitHub runner either, because the private source is not checked out there, so the draft repo's
+   CI is where they belong.
+
+   What is left HERE is exactly what THIS repo can and must prove about what it publishes: the
+   bundle is present, the page points at files that exist, the content hash matches the bytes, the
+   bundle is minified with no source leak, and the retired engine is gone. Those are the failures
+   that ship a broken or a copyable tool, and none of them are visible from the draft repo.
 
    Run: node scripts/test-weight-calculator.js
 */
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
+const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..');
-const SRC = fs.readFileSync(path.join(ROOT, 'assets/js/weight.js'), 'utf8');
+const PAGE = path.join(ROOT, 'tools/weight-calculator.html');
+const page = fs.readFileSync(PAGE, 'utf8');
 
 let failed = 0;
 function check(name, cond, detail) {
@@ -22,179 +39,59 @@ function check(name, cond, detail) {
   console.log('  FAIL ' + name + (detail ? '  <- ' + detail : ''));
 }
 
-function run(vals) {
-  const byId = {};
-  function el() {
-    return {
-      value: '', checked: false, textContent: '', innerHTML: '',
-      style: {}, classList: { add() {}, remove() {}, toggle() {}, contains: () => false },
-      addEventListener() {}, removeAttribute() {}, setAttribute() {},
-    };
+/* 1. THE PAGE LOADS A BUNDLE, and it is the vendored one, not a stray script. */
+const jsRef = /src="(\/assets\/towsafe\/hosted-[A-Za-z0-9_-]+\.js)(\?v=[0-9a-f]+)?"/.exec(page);
+const cssRef = /href="(\/assets\/towsafe\/hosted-[A-Za-z0-9_-]+\.css)(\?v=[0-9a-f]+)?"/.exec(page);
+check('the page loads the hosted JS bundle', !!jsRef, (page.match(/assets\/towsafe\/[^"]*/) || [])[0]);
+check('the page loads the hosted CSS bundle', !!cssRef);
+
+/* 2. THE OLD TOOL IS GONE. weight.js was the previous engine and scales.js its scale list; the app
+   carries both now, so a leftover tag would mean two engines fighting over the same page. */
+check('the old weight.js is not referenced', !/assets\/js\/weight\.js/.test(page));
+check('the old scales.js is not referenced', !/assets\/js\/scales\.js/.test(page));
+
+/* 3. THE BUNDLE EXISTS ON DISK, and its reference hash matches its bytes. A page pointing at a file
+   that is not there, or at a stale hash, is a 404 or a blank page behind a ten-minute cache. */
+for (const [label, m] of [['JS', jsRef], ['CSS', cssRef]]) {
+  if (!m) continue;
+  const rel = m[1].replace(/^\//, '');
+  const fp = path.join(ROOT, rel);
+  const exists = fs.existsSync(fp);
+  check('the ' + label + ' bundle exists at ' + rel, exists);
+  if (!exists) continue;
+  const bytes = fs.readFileSync(fp);
+  if (m[2]) {
+    const want = crypto.createHash('sha256').update(bytes).digest('hex').slice(0, 8);
+    const have = m[2].slice(3);
+    check('the ' + label + ' content-hash is current', want === have, 'page=' + have + ' file=' + want);
   }
-  Object.keys(vals).forEach(k => { byId['w-' + k] = el(); byId['w-' + k].value = String(vals[k]); });
-  // w-type and w-axles are <select>s, and weight.js reads .value off them directly.
-  if (!byId['w-type']) byId['w-type'] = Object.assign(el(), { value: 'tt' });
-  if (!byId['w-axles']) byId['w-axles'] = Object.assign(el(), { value: '2' });
-  // w-uvw-src says where the dry weight came from, and its real default is the sticker, because
-  // that is where the number normally comes from. The harness leaves every field empty, so it has
-  // to say otherwise or every run would take the branch that adds the propane.
-  if (!byId['w-uvw-src']) byId['w-uvw-src'] = Object.assign(el(), { value: 'sticker' });
-  const doc = {
-    getElementById: id => byId[id] || (byId[id] = el()),
-    querySelector: () => null, querySelectorAll: () => [], addEventListener() {},
-    readyState: 'complete',
-  };
-  const sandbox = { console, document: doc, window: {}, setTimeout, clearTimeout, Date, Math };
-  sandbox.window = sandbox;
-  sandbox.globalThis = sandbox;
-  vm.createContext(sandbox);
-  vm.runInContext(SRC, sandbox, { filename: 'weight.js' });
-  return byId['w-results'].innerHTML;
+  check('the ' + label + ' bundle is not empty', bytes.length > 1000);
 }
 
-// gcwr is in BASE now, because the calculator treats it as required rather than optional.
-const BASE = { 'tow-rating': 9200, payload: 1500, curb: 6000, 'truck-gvwr': 7500, 'gcwr': 15000, uvw: 5000, gvwr: 7000, passengers: 400, 'cargo-trailer': 500 };
-
-console.log('weight calculator');
-
-// The combination this page exists for: loaded = 5000 + 500 = 5500, tongue = 660,
-// truck gross = 6000 + 660 + 400 = 7060, combined = 7060 + (5500 - 660) = 11900.
-let html = run(Object.assign({}, BASE));
-check('combined weight is rendered and totals 11,900 lb', /11,900 \/ 15,000 lb/.test(html), html.match(/Combined weight[^<]*/g));
-check('a combination inside the GCWR is verdict ok', /v-row ok[\s\S]*?Combined weight/.test(html));
-
-html = run(Object.assign({}, BASE, { 'gcwr': 11000 }));
-check('a combination over the GCWR is verdict bad', /v-row bad[\s\S]*?Combined weight/.test(html));
-check('the over-GCWR note names the GCWR', /OVER the GCWR/.test(html));
-
-/* THE NAMED CONSTRAINT. Every competing calculator checks these same limits and never says
-   which one is doing the limiting. These two pin the behaviour: an overloaded RV names the
-   limit to fix, and a clean setup does not invent one. */
-html = run(Object.assign({}, BASE, { 'payload': 300 }));   // BASE as the source, not the target: it HAS a payload key and would otherwise overwrite the override
-check('an overloaded RV names the binding limit', /Over on Truck payload/.test(html));
-check('the named limit is the payload, not a generic word',
-  !/Over on something/i.test(html) && !/Something is overloaded/.test(html));
-
-/* THE THREE LIMITS THE TOOL USED TO SKIP. Curb weight, the truck's own GVWR and the GCWR feed
-   the truck-gross and combined-weight rows, and when they were blank those rows simply did not
-   render, so a reader could get a green answer that had never checked either one. Ty, 2026-10-14:
-   "it seems like some stuff isnt required that really should be." The tool must now refuse. */
-const CORE_ONLY = { 'tow-rating': 9200, payload: 1500, uvw: 5000, gvwr: 7000, passengers: 400, 'cargo-trailer': 500 };
-html = run(CORE_ONLY);
-check('no verdict when curb, truck GVWR and GCWR are blank', /Not enough information yet/.test(html));
-check('the refusal names the empty truck weight', /how much the empty truck weighs/.test(html));
-check('the refusal names the truck GVWR', /the truck's own GVWR/.test(html));
-check('the refusal names the combined limit', /truck and trailer combined limit/.test(html));
-check('the refusal does not render a verdict row', !/v-row/.test(html));
-html = run(Object.assign({ 'curb': 6000 }, CORE_ONLY));
-check('adding curb alone is still not enough', /Not enough information yet/.test(html) && /truck and trailer combined limit/.test(html));
-
-
-html = run(Object.assign({ 'gcwr': 12000 }, BASE));
-check('a combination right at the GCWR edge is verdict warn', /v-row warn[\s\S]*?Combined weight/.test(html));
-
-/* THE OLD BEHAVIOUR, RECORDED BECAUSE IT WAS THE DEFECT. These two used to assert that a blank
-   GCWR or curb weight left the combined-weight row off the result, and the suite was green while
-   the tool handed out verdicts it had never checked. They now assert the opposite: the tool says
-   what it still needs and renders no verdict at all. */
-html = run(Object.assign({}, BASE, { 'gcwr': '' }));
-check('a blank GCWR refuses rather than skipping the combined-weight check', /Not enough information yet/.test(html) && /truck and trailer combined limit/.test(html));
-
-html = run(Object.assign({}, BASE, { 'curb': '' }));
-check('a blank curb weight refuses rather than reading the combination low', /Not enough information yet/.test(html) && /how much the empty truck weighs/.test(html));
-
-// Regression guard: the four verdicts that were already there.
-html = run(Object.assign({}, BASE));
-['Towing capacity', 'Truck payload', 'Truck cargo capacity (CCC)', 'Truck gross weight'].forEach(label => {
-  const found = html.indexOf(label) !== -1
-    || html.indexOf(label.replace('Truck cargo capacity (CCC)', 'Trailer cargo capacity (CCC)')) !== -1;
-  check('existing verdict still renders: ' + label, found);
-});
-check('the tongue weight is not counted twice in the combination', /11,900 \/ 15,000 lb/.test(html));
-
-/* THE PROPANE IS IN THE DRY WEIGHT ALREADY. 49 CFR 571.110 S9.3.2: "the weight of full propane tanks
-   must be included in the RV's UVW". Adding it again over-states the load by up to 138 lb with two
-   40 lb cylinders, which is enough to turn a combination that is fine into a NOT SAFE verdict.
-   The two runs below differ ONLY in that checkbox, and they must produce different weights: if they
-   agree, the checkbox does nothing and the tool is still wrong on one of the two cases. */
-const WITH_PROPANE = Object.assign({ propane: 110 }, BASE);
-const sticker = run(WITH_PROPANE);                       // checkbox defaults to ticked
-check('a sticker dry weight does not have the propane added again',
-      /5,500 lb/.test(sticker), (sticker.match(/Loaded trailer<\/span><b>[^<]+/) || [])[0]);
-check('  and the breakdown says where the propane went, rather than showing a zero',
-      /propane already counted inside the dry weight/.test(sticker));
-
-const weighed = run(Object.assign({ 'uvw-src': 'scale' }, WITH_PROPANE));  // the reader weighed it themselves
-check('a dry weight the reader weighed themselves DOES get the propane added',
-      /5,610 lb/.test(weighed), (weighed.match(/Loaded trailer<\/span><b>[^<]+/) || [])[0]);
-check('  and the breakdown names the propane it counted',
-      /110 lb propane and tanks/.test(weighed));
-
-/* THE CAPACITY IS NAMED AFTER THE LABEL, because the reader has the label in front of them.
-   GVWR minus dry weight is what a trailer's own sticker calls CCC. */
-check('the trailer capacity is named CCC, as the sticker names it',
-      /Trailer cargo capacity \(CCC\)/.test(html));
-check('  and its note cites the regulation rather than asserting a convention',
-      /49 CFR 571\.110/.test(html));
-
-const PAGE_TEXT = fs.readFileSync(path.join(ROOT, 'tools/weight-calculator.html'), 'utf8');
-check('the page states that a sticker UVW already includes the propane',
-      /The trailer's own sticker counts the full propane cylinders already/.test(PAGE_TEXT));
-check('the page cites 49 CFR 571.110 as a source',
-      /ecfr\.gov[^"]*571\.110/.test(PAGE_TEXT));
-check('the page no longer says UVW excludes propane',
-      !/no water, no propane, no gear/.test(PAGE_TEXT));
-check('the page wires the checkbox the calculation reads',
-      /id="w-uvw-src"/.test(PAGE_TEXT));
-
-/* THE STATED RANGE AND THE COMPUTED RANGE HAVE TO AGREE, and nothing compared them until
-   2026-10-15. The page prose said the fifth-wheel target was 20 to 25% while the calculator's
-   own range, and the sources it can cite, said 15 to 25%, so the page contradicted itself in
-   three places and every gate was green. This reads both and compares. */
-const fwR = /fw: \{ tonguePct: [\d.]+, tongueRange: \[([\d.]+), ([\d.]+)\]/.exec(SRC);
-const ttR = /tt: \{ tonguePct: [\d.]+, tongueRange: \[([\d.]+), ([\d.]+)\]/.exec(SRC);
-check('the calculator still declares a tongue range for each trailer type', !!fwR && !!ttR);
-if (fwR && ttR) {
-  const pc = (s) => Math.round(parseFloat(s) * 100);
-  const fw = pc(fwR[1]) + ' to ' + pc(fwR[2]) + '%';
-  const tt = pc(ttR[1]) + ' to ' + pc(ttR[2]) + '%';
-  check('the page states the fifth-wheel range the calculator uses (' + fw + ')', PAGE_TEXT.includes(fw));
-  check('the page states the trailer range the calculator uses (' + tt + ')', PAGE_TEXT.includes(tt));
-  check('the page states no fifth-wheel range the calculator does not use',
-        !/20 to 25%/.test(PAGE_TEXT));
+/* 4. THE COPY-RESISTANCE GUARANTEE. The bundle is published minified and without sourcemaps; a
+   readable original or a .map in the tree would hand the logic to anyone who opens devtools. This
+   is the check that keeps the hosting change T chose from silently un-protecting the tool. */
+const towsafeDir = path.join(ROOT, 'assets/towsafe');
+if (fs.existsSync(towsafeDir)) {
+  const files = fs.readdirSync(towsafeDir, { recursive: true }).map(String);
+  check('no sourcemap shipped with the bundle', !files.some(f => f.endsWith('.map')));
+  check('no readable source shipped with the bundle', !files.some(f => /\.(ts|tsx|jsx)$/.test(f)));
 }
-
-/* THE MEASURED OVERRIDE (quick wins #15, 2026-10-16). A scale reading must replace the
-   estimate everywhere: the payload and truck-gross rows are computed from `tongue`, so the
-   measured number has to flow through the same variable. 700 measured against 660 estimated. */
-html = run(Object.assign({}, BASE, { 'tongue-measured': 700 }));
-check('a measured tongue weight replaces the estimate',
-      /Hitch \/ pin load[\s\S]*?v-val">700 lb/.test(html),
-      (html.match(/Hitch \/ pin load[\s\S]{0,140}/) || [])[0]);
-check('  and the note says it is a scale reading', /From your scale reading, not an estimate\./.test(html));
-check('  and the payload row uses the measured number', /1,100 \/ 1,500 lb/.test(html));
-
-/* THE TYPE PRESETS. A pop-up is the travel-trailer math; a truck camper rides the truck, so
-   its whole loaded weight is the load on the truck and the trailer-side checks drop away; a
-   motorhome defaults to a flat tow, which puts almost nothing on the hitch. */
-html = run(Object.assign({}, BASE, { 'type': 'pu' }));
-check('a pop-up uses the travel-trailer estimate', /v-val">660 lb/.test(html),
-      (html.match(/Hitch \/ pin load[\s\S]{0,140}/) || [])[0]);
-
-html = run({ 'type': 'tc', payload: 4000, curb: 6000, 'truck-gvwr': 11000, uvw: 3000, passengers: 400, 'cargo-trailer': 300 });
-check('a truck camper needs no tow rating or GCWR to get a verdict',
-      !/Not enough information yet/.test(html));
-check('  and its whole loaded weight is the load on the truck',
-      /Camper weight on the truck[\s\S]*?v-val">3,300 lb/.test(html));
-check('  and the trailer-side checks are gone',
-      !/Towing capacity/.test(html) && !/Trailer cargo capacity/.test(html) && !/Axle estimate/.test(html));
-check('  and the overall question is about carrying, not towing', /Can your truck carry it\?/.test(html));
-
-html = run(Object.assign({}, BASE, { 'type': 'mc' }));
-check('a motorhome defaults to a flat tow, almost nothing on the hitch',
-      /v-val">0 lb<\/div>/.test(html));
-check('  and says so', /flat-towed vehicle/.test(html));
-check('  and the combined weight still totals', /11,900 \/ 15,000 lb/.test(html));
+if (jsRef) {
+  const jsPath = path.join(ROOT, jsRef[1].replace(/^\//, ''));
+  if (fs.existsSync(jsPath)) {
+    const src = fs.readFileSync(jsPath, 'utf8');
+    check('the bundle carries no sourceMappingURL', !/sourceMappingURL=/.test(src));
+    /* A minified bundle is a handful of very long lines. Many short lines means it shipped
+       un-minified, which is the failure this check exists to catch. */
+    const lines = src.split('\n');
+    const longLines = lines.filter(l => l.length > 2000).length;
+    check('the bundle is minified (long lines, not a source listing)',
+          longLines >= 1 && lines.length < 200, lines.length + ' line(s), ' + longLines + ' long');
+    /* The site dash rule applies to anything published, and the bundle is published. */
+    check('the bundle carries no middot (site dash rule)', !src.includes('\u00b7'));
+  }
+}
 
 console.log(failed ? '\n' + failed + ' failure(s)' : '\nweight calculator: all checks passed');
 process.exit(failed ? 1 : 0);

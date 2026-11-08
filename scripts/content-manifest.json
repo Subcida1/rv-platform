@@ -1112,10 +1112,10 @@
     "claims": []
   },
   "tools/index.html": {
-    "hash": "2a62b06819e69727",
+    "hash": "49350886a47cb08d",
     "status": "verified",
-    "verified_by": "eyebrow/kicker removal, site-wide craft pass 2026-10-29: the small uppercase label above each heading was deleted. Proved text-identical by re-parsing both revisions with tags stripped and the eyebrow element removed from the old copy; links, headings and copy unchanged.",
-    "verified_at": "2026-10-29",
+    "verified_by": "removed the Embed it on your site button from the weight-calculator card (T, 2026-11-07): the calculator is now a protected minified bundle, so an embed offer worked against the hard-to-copy hosting decision; the card now matches every other tool card with a single Open button. No spec: this is an index page whose only change is one deleted button",
+    "verified_at": "2026-11-07",
     "sources": [],
     "spec": null,
     "spec_waived": true,
@@ -1239,13 +1239,86 @@
     "sources": []
   },
   "tools/weight-calculator.html": {
-    "hash": "915c009d24b0d96c",
+    "hash": "05fb93208a371599",
     "status": "verified",
-    "verified_by": "eyebrow/kicker removal, site-wide craft pass 2026-10-29: the small uppercase label above each heading was deleted. Proved text-identical by re-parsing both revisions with tags stripped and the eyebrow element removed from the old copy; links, headings and copy unchanged.",
-    "verified_at": "2026-10-29",
+    "verified_by": "replaced the hand-written tool with the OriginRV React bundle (T, 2026-11-07): built minified assets/towsafe/ bundle renders inside the site shell, FAQ + scale locator + weighing guide + sources now live inside the bundle carried once, embed feature dropped",
+    "verified_at": "2026-11-07",
     "sources": [],
-    "spec": null,
-    "spec_waived": true,
-    "claims": []
+    "spec": "_specs/weight-calculator.md",
+    "spec_waived": false,
+    "claims": [
+      {
+        "id": "C1",
+        "text": "Towing capacity and GCWR come from the tow vehicle's owner manual table for the exact cab, engine and axle",
+        "source": "the maker's towing guide; the page says so and names the manual",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C2",
+        "text": "Payload and GVWR come from the yellow and white sticker inside the driver's door jamb",
+        "source": "federal certification label requirement (49 CFR 567)",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C3",
+        "text": "Trailer dry weight and GVWR come from the trailer's own sticker, front left, or inside a cabinet",
+        "source": "the RV maker's certification label",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C4",
+        "text": "The 80% rule: keep the loaded trailer weight at or below 80% of the tow rating for stability",
+        "source": "stated as our own advice and as the industry rule of thumb, not as a regulation",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C5",
+        "text": "a certified scale is the only figure that settles a loaded weight",
+        "source": "the page links the scale locator; scales are CAT-certified or state-certified",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C6",
+        "text": "the calculator refuses a verdict until every input is present",
+        "source": "the tool's own behaviour, verifiable by using it",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C7",
+        "text": "\"Last reviewed\" provenance line",
+        "source": "per T's fine-print ruling",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C8",
+        "text": "carrying capacity falls as options and passengers are added",
+        "source": "arithmetic of GVWR minus curb weight; verifiable",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      },
+      {
+        "id": "C9",
+        "text": "the bundle is built minified with no sourcemap and the source is private",
+        "source": "the build config and the post-build guard in the private repo",
+        "state": "CONFIRMED",
+        "by": null,
+        "at": null
+      }
+    ]
   }
 }

@@ -64,13 +64,26 @@ const PROBE = `(() => {
   // labels or illustrates the heading is skipped, so the rule only applies to a heading that follows
   // real content: a paragraph, a list, a table, a card, a row.
   const ATTACHED = /(^|\s)(sec-eyebrow|man-crumb|crumb|cat-ic|guide-ic|empty-emoji|eyebrow|chip)(\s|$)/;
+  // THE VENDORED APP'S KICKERS. assets/towsafe/ (the weight calculator) renders a heading beside
+  // or under a small icon: either a flex row (icon + one short label) or the icon badge alone,
+  // both built from Tailwind utilities rather than a named class, so the pattern above cannot see
+  // them. Each LABELS the heading exactly as .sec-eyebrow does, and measuring it as "content above"
+  // reports a negative gap and a false crowding finding. Probed rather than guessed: the element
+  // must hold an <svg> and NO real content (no heading, paragraph, list, table, control or link),
+  // and be short, so a genuine content block is never skipped.
+  const isKickerRow = (el) => {
+    if (el.querySelector('h1, h2, h3, p, ul, ol, table, input, select, textarea, button, a')) return false;
+    if (!el.querySelector('svg')) return false;
+    return el.getBoundingClientRect().height <= 40;   // a label is short; a card is not
+  };
   document.querySelectorAll('h1, h2, h3').forEach((h) => {
     if (!vis(h)) return;
     if (h.closest('nav, footer, .drop, .mobile-menu')) return;      // chrome, not content
     let prev = h.previousElementSibling;
     // step back over attached labels: <div class="sec-eyebrow"> then maybe a wrapper
     let guard = 0;
-    while (prev && vis(prev) && ATTACHED.test(String(prev.className)) && guard++ < 3) prev = prev.previousElementSibling;
+    while (prev && vis(prev) && (ATTACHED.test(String(prev.className)) || isKickerRow(prev)) && guard++ < 3)
+      prev = prev.previousElementSibling;
     if (!prev || !vis(prev)) return;                                 // first child, or only labels above
     out.checked++;
     const hb = h.getBoundingClientRect(), pb = prev.getBoundingClientRect();
