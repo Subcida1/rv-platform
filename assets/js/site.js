@@ -409,8 +409,10 @@ function footLogoHTML() {
     else; "All tools" sat under Company, which is not where a reader looks for tools; the
     Guides column was the same four winter pages the header used to carry; and Privacy lived
     only in the bottom bar. One rule now: every column carries its own section's real pages,
-    in the header's order, and Company carries the company pages. The embed link stays,
-    because it is the one thing on this site a shop can take away with them. */
+    in the header's order, and Company carries the company pages.
+    The embed link is GONE (T, 2026-11-07): the calculator is now a built bundle published
+    minified on purpose, so offering an "embed this on your page" snippet worked against the
+    hard-to-copy hosting decision. */
  return '<a class="to-top" href="#top" onclick="return RV.toTop()">Back to top</a>' +
  '<div class="foot-top"><div class="wrap"><div class="foot-grid">' +
  '<div class="foot-brand">' + footLogoHTML() +
@@ -424,7 +426,7 @@ function footLogoHTML() {
  '<a href="' + R(rt.toolToilet) + '">Toilet water valve</a><a href="' + R(rt.toolRecall) + '">Recall lookup</a>' +
  '<a href="' + R(rt.toolAnode) + '">Anode rod</a><a href="' + R(rt.toolConverter) + '">Converter finder</a>' +
  '<a href="' + R(rt.toolBoard) + '">Appliance board finder</a><a href="' + R(rt.toolFilter) + '">Water filter</a>' +
- '<a href="' + R(rt.toolBrakeLaws) + '">State brake laws</a><a href="' + R(rt.calculator) + '#embed">Embed a calculator</a>' +
+ '<a href="' + R(rt.toolBrakeLaws) + '">State brake laws</a>' +
  '<a href="' + R(rt.tools) + '">All 15 tools</a></div>' +
  '<div class="foot-col"><p class="foot-h">Guides</p>' +
  '<a href="' + R(rt.guides) + '">All guides</a><a href="' + R(rt.guides) + '#electrical-and-charging">Electrical and charging</a>' +

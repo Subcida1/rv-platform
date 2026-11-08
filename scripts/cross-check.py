@@ -437,6 +437,26 @@ def direction_findings(index, min_pages, min_shared):
 
 # ---------------------------------------------------------------- report
 
+# ---------------------------------------------------------------- read pairs
+#
+# A same-fact pair that is NOT a contradiction, recorded with the reason it is not. The
+# matcher pairs two sentences about one subject and unit when they share enough content
+# words, and vocabulary alone cannot tell "the tank is 40 gallons" from "pour 5 gallons in".
+# Each entry names the subject and the two pages (sorted, as the pair is emitted) and says,
+# in one line, what the two numbers actually are. A pair listed here is still PRINTED, with a
+# note, so the record is visible; it is only spared the --strict exit.
+#
+# Key: (subject, page_a, page_b) with the pages in sorted order.
+READ_PAIRS = {
+    ("holding tank",
+     "guides/rv-black-tank.html",
+     "guides/rv-tank-sensors-reading-wrong.html"):
+        "not one fact: 40 gal is the tank SIZE the Thetford cleaner dose is written for; "
+        "5 gal is Jayco's first-fill of water into an empty tank. Different quantities, "
+        "both correct.",
+}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--strict", action="store_true",
@@ -485,6 +505,9 @@ def main():
                   % (subject, unit, r1, r2, ", ".join(shared[:6])))
             print("      %-44s %s" % (p1, s1[:150]))
             print("      %-44s %s" % (p2, s2[:150]))
+            note = READ_PAIRS.get((subject,) + tuple(sorted((p1, p2))))
+            if note:
+                print("      READ, not a contradiction: %s" % note)
 
     if not args.only or args.only == "values":
         print("\n" + "=" * 88)
@@ -538,7 +561,9 @@ def main():
     print("Everything else is assembly: the script ranks, the reader judges.")
     print("=" * 88)
 
-    if args.strict and same_fact:
+    unread = [p for p in same_fact
+              if (p[0],) + tuple(sorted((p[3], p[6]))) not in READ_PAIRS]
+    if args.strict and unread:
         return 1
     return 0
 

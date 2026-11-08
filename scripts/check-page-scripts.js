@@ -36,6 +36,19 @@ const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
 
+/* A built app bundle is NOT a site script. assets/towsafe/ holds the OriginRV weight
+ * calculator, a minified React bundle built in its own private repo and vendored here as a
+ * single artifact. The sandbox below is a stubbed DOM with no real mounting, so a React
+ * bundle runs headless there and throws (React #299: the root container it looks for is not a
+ * real element). That is the checker being the wrong shape for the artifact, not a broken
+ * page: the bundle is proved by the browser instead, in check-a11y.mjs, which renders the page
+ * in real Chrome and would catch a bundle that failed to mount. The file still has to EXIST,
+ * so a deleted or renamed bundle is still caught here. The bundle's name carries a build hash
+ * that changes on every rebuild, so the exemption is the pattern, not one filename. */
+const NOT_EXECUTED = new Set([
+  /^assets\/towsafe\/hosted-[\w-]+\.js$/,
+]);
+
 /* The globals each script captures at parse time, and what must already exist.
  * Read from the source: search.js line 115 is `var M = window.RVSearchMatch;` at the top
  * of its IIFE, which is why a later injection cannot repair it.
@@ -245,6 +258,8 @@ function checkPage(page, contractsByPath) {
         }
       }
       // 2. it must execute
+      const skip = [...NOT_EXECUTED].some((rx) => rx.test(tag.src));
+      if (skip) { loaded.add(tag.src); continue; }
       try {
         vm.runInContext(fs.readFileSync(path.join(ROOT, tag.src), 'utf8'), ctx, { filename: tag.src });
         loaded.add(tag.src);

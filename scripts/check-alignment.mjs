@@ -114,7 +114,11 @@ const DECLARED = [
   // pills, so it should not be declared here at all — a declaration would assert an alignment
   // for something the discovery pass does not treat as a row.
   { selector: 'div.band-cta-acts',                 align: 'left',   why: 'the two actions in the homepage parts/directory band; left is correct inside a card-like band (added 2026-10-29)' },
-  { selector: 'div.tool-btns',                     align: 'left',   why: 'the button under a tool card; left is correct inside a card' },
+  // RETIRED 2026-11-07 with the weight calculator's embed button. div.tool-btns was declared
+  // because that ONE card carried two buttons (Open, and "Embed it on your site") and so read
+  // as a row. Every other tool card carries a single button, and the embed offer is gone, so no
+  // div.tool-btns has two children now and the discovery pass no longer sees a row. A row that
+  // no longer exists must leave this list (the file's own rule, above).
   { selector: 'div.guide-stats',                   align: 'left',   why: 'the finder stat row on a state page' },
   { selector: 'div.loc-row',                       align: 'any',    why: 'listing rows vary with content length' },
   { selector: 'div.listing-tags',                  align: 'any',    why: 'listing tag rows vary with content length' },
