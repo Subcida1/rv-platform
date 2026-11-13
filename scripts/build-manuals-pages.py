@@ -15,6 +15,7 @@ Run: python3 scripts/build-manuals-pages.py
 """
 import json
 import re
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -1680,7 +1681,47 @@ def main():
     (js / "hub.js").write_text(HUB_JS, encoding="utf-8")
     (js / "filter.js").write_text(FILTER_JS, encoding="utf-8")
 
-    print("=" * 84)
+    # FINISH THE JOB IN THIS PROCESS. The pages just written are SKELETONS: their nav, footer and
+    # crumbs regions are empty markers waiting for build-shell.mjs, and their review dates are the
+    # seed waiting for sync-dates.py. Left there, those files are broken -- a page with no
+    # navigation at all, carrying a date ten months older than its content -- and the failure is
+    # silent, because the markers make it look structurally intact and every gate still passes
+    # (verify.py compares this script's output, and --check blanks both regions before comparing,
+    # which is exactly why a bare run is not caught).
+    #
+    # The repo already chains this way elsewhere: finish-guide.py runs clean-urls, then
+    # build-shell.mjs, then the counters and stamps, and stops on the first failure. This generator
+    # is the one that was missing it. So the same order runs here, and a non-zero exit stops the
+    # build rather than publishing a half-assembled page.
+    steps = [
+        ("shell into the pages", ["node", "scripts/build-shell.mjs"]),
+        ("asset stamps", ["python3", "scripts/stamp_assets.py"]),
+    ]
+
+    # THE DATE STEP IS CONDITIONAL, AND THAT CONDITION IS THE POINT. sync-dates.py derives each
+    # page's date from `git log -1 -- <path>`, so it needs real history; its docstring is explicit
+    # that it runs where the repository lives and not in a shallow checkout. Chaining it blindly
+    # would hand a CI checkout either a hard failure or, worse, a date invented from one commit.
+    # So it runs only when git can answer, and its absence is stated rather than passed over: a
+    # generated page still carrying the seed date is exactly the defect this is here to prevent.
+    probe = subprocess.run(["git", "log", "--oneline", "-2", "--", "manuals"],
+                           cwd=str(ROOT), capture_output=True, text=True)
+    if probe.returncode == 0 and len(probe.stdout.strip().splitlines()) >= 2:
+        steps.append(("review dates", ["python3", "scripts/sync-dates.py"]))
+    else:
+        print("\n  !!  no git history here: review dates stay at the seed (%s)."
+              % REVIEWED_SEED_ISO)
+        print("      Run this script in a full clone, then `python3 scripts/sync-dates.py`.")
+
+    for label, cmd in steps:
+        print("\n  ..  %s" % label)
+        r = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True)
+        if r.returncode != 0:
+            print("FAIL  %s" % label)
+            print((r.stdout or "") + (r.stderr or ""))
+            raise SystemExit(1)
+
+    print("\n" + "=" * 84)
     print("MANUALS PAGES")
     print("=" * 84)
     print("  %-30s %6s %9s %9s" % ("page", "rows", "KB", "desc len"))
