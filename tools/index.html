@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/">
   <title>Free RV Tools: Towing Calculator, Weight Check and More</title>
   <meta name="description" content="Fifteen free RV tools: weight and towing, solar sizing, battery runtime, fuel cost, tire age, and finders for water valves, converters, recalls and filters.">
-  <link rel="stylesheet" href="assets/css/style.css?v=2098e945">
+  <link rel="stylesheet" href="assets/css/style.css?v=693e5822">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=aad9f751">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=a8459cee">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png?v=a80bf3fd">
@@ -83,327 +83,269 @@
     </div>
   </div>
 
+ <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
+     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
+     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
+     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
+     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
+     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
+     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
+     The whole tile is the link (Google's model), and the action verb under the title is kept
+     because a scanner reads a label's first two words (_todo/UX.md). -->
+ <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
+     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
+     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
+     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
+     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
+     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
+     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
+     The whole tile is the link (Google's model), and the action verb under the title is kept
+     because a scanner reads a label's first two words (_todo/UX.md). -->
+ <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
+     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
+     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
+     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
+     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
+     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
+     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
+     The whole tile is the link (Google's model), and the action verb under the title is kept
+     because a scanner reads a label's first two words (_todo/UX.md). -->
+ <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
+     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
+     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
+     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
+     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
+     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
+     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
+     The whole tile is the link (Google's model), and the action verb under the title is kept
+     because a scanner reads a label's first two words (_todo/UX.md). -->
+ <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
+     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
+     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
+     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
+     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
+     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
+     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
+     The whole tile is the link (Google's model), and the action verb under the title is kept
+     because a scanner reads a label's first two words (_todo/UX.md). -->
  <div class="sec pad-30">
    <div class="wrap">
-      
- <div class="tool-card" id="tool-fuel-cost"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Fuel Cost Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Miles, MPG, and the price at the pump give what the trip costs, with the planning cushion already added. Any vehicle works: RV types use their real-world MPG range, and cars, SUVs, pickups and motorcycles use the Energy Department average for that kind of vehicle. Your own measured MPG wins over every preset.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/fuel-cost">Open the calculator</a> </div><p class="note-sm">An estimate for planning. The pump is the source of truth.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">$552<small>trip fuel, middle</small></div>
-                <div class="viz-row ok"><span>Best case</span><b>$477 at 11 MPG</b></div>
-                <div class="viz-row ok"><span>Worst case</span><b>$656 at 8 MPG</b></div>
-                <div class="viz-row warn"><span>Planning figure</span><b>$635 with cushion</b></div>
-                <p class="footnote sp-10">1,200 miles in a Class C at $4.37.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$120<small>trip fuel</small></div>
-                <div class="viz-row ok"><span>Your own figure</span><b>10.0 MPG</b></div>
-                <div class="viz-row ok"><span>Gallons</span><b>30 gal</b></div>
-                <div class="viz-row warn"><span>Planning figure</span><b>$138 with cushion</b></div>
-                <p class="footnote sp-10">300 miles at your own measured MPG, at $4.00.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$175<small>trip fuel</small></div>
-                <div class="viz-row ok"><span>Your own figure</span><b>40.0 MPG</b></div>
-                <div class="viz-row ok"><span>Gallons</span><b>50 gal</b></div>
-                <div class="viz-row warn"><span>Planning figure</span><b>$201 with cushion</b></div>
-                <p class="footnote sp-10">2,000 miles in a car at 40 MPG, at $3.50.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card" id="tool-watts-to-amps"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Watts to Amps &amp; Shore Power</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Convert watts and amps either way at 120, 240, or 12 volts, and check the appliances you run at the same time against what your 30-amp or 50-amp hookup actually supplies. The 50-amp cord is 12,000 watts, not 6,000, and the tool shows why.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/watts-to-amps">Open the calculator</a> </div><p class="note-sm">Typical figures from Cummins' own chart. Your appliance's label wins.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">12.5 A<small>1,500 W at 120 volts</small></div>
-                <div class="viz-row ok"><span>Volts</span><b>120 V</b></div>
-                <div class="viz-row ok"><span>Watts</span><b>1,500 W</b></div>
-                <div class="viz-row ok"><span>Amps</span><b>12.5 A</b></div>
-                <p class="footnote sp-10">Watts equals volts times amps, and the tool converts either way.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">2,750 W<small>running together</small></div>
-                <div class="viz-row ok"><span>30-amp service</span><b>3,600 W</b></div>
-                <div class="viz-row warn"><span>A/C + space heater</span><b>2,750 W, 850 W spare</b></div>
-                <div class="viz-row warn"><span>If both start at once</span><b>4,000 W</b></div>
-                <p class="footnote sp-10">They fit while running, and not while starting.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">3,950 W<small>on a 30-amp service</small></div>
-                <div class="viz-row ok"><span>30-amp service</span><b>3,600 W</b></div>
-                <div class="viz-row bad"><span>A/C + heater + microwave</span><b>3,950 W running</b></div>
-                <div class="viz-row bad"><span>Over by</span><b>350 W</b></div>
-                <p class="footnote sp-10">A/C, space heater and microwave together. The breaker trips.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">2,400 W<small>on a household outlet</small></div>
-                <div class="viz-row ok"><span>15-amp outlet</span><b>1,800 W</b></div>
-                <div class="viz-row bad"><span>Microwave + coffee maker</span><b>2,400 W running</b></div>
-                <div class="viz-row bad"><span>Over by</span><b>600 W</b></div>
-                <p class="footnote sp-10">Two ordinary kitchen appliances on one ordinary outlet.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card" id="tool-solar-sizing"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Solar Sizing Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Daily watt-hours divided by peak sun hours, with NREL's 0.77 derate applied and the maker-recommended margin shown alongside. The region presets use real peak-sun-hour figures for the country, from about 3 in the Northwest to 6.5 in the desert Southwest.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/solar-sizing">Open the calculator</a> </div><p class="note-sm">A starting point for shopping. Winter sun and shade cut output below the rated hours.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">623 W<small>panels needed</small></div>
-                <div class="viz-row ok"><span>Makers' formula</span><b>2,400 Wh / 5.0 hr = 480 W</b></div>
-                <div class="viz-row ok"><span>After the 0.77 derate</span><b>623 W nameplate</b></div>
-                <div class="viz-row warn"><span>With a 20-30% margin</span><b>779 W</b></div>
-                <p class="footnote sp-10">2,400 watt-hours a day at average US sun.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">480 W<small>panels needed</small></div>
-                <div class="viz-row ok"><span>Makers' formula</span><b>2,400 Wh / 6.5 hr = 369 W</b></div>
-                <div class="viz-row ok"><span>After the 0.77 derate</span><b>480 W nameplate</b></div>
-                <div class="viz-row warn"><span>With a 20-30% margin</span><b>599 W</b></div>
-                <p class="footnote sp-10">The same load in the desert Southwest, where the sun is stronger.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">390 W<small>panels needed</small></div>
-                <div class="viz-row ok"><span>Makers' formula</span><b>1,200 Wh / 4.0 hr = 300 W</b></div>
-                <div class="viz-row ok"><span>After the 0.77 derate</span><b>390 W nameplate</b></div>
-                <div class="viz-row warn"><span>With a 20-30% margin</span><b>487 W</b></div>
-                <p class="footnote sp-10">1,200 watt-hours a day in the Northwest, where the sun hours are lowest.</p>
-              </div>
-            </div>
-          </div> </div> </div>
-      <div class="tool-card" id="tool-rv-loan"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">RV Loan Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">The monthly payment and the total interest on an RV loan, from the price, down payment, rate, and term, by the standard amortization formula. The result shows what the loan really costs by the end, because a longer term spreads the interest out, hiding it inside a smaller payment.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-loan">Open the calculator</a> </div><p class="note-sm">Not a loan offer.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">$633.64<small>monthly payment</small></div>
-                <div class="viz-row ok"><span>Borrowed</span><b>$32,000 at 7.00%</b></div>
-                <div class="viz-row ok"><span>Total interest</span><b>$6,018 over 5 years</b></div>
-                <div class="viz-row ok"><span>Total paid</span><b>$38,018</b></div>
-                <p class="footnote sp-10">$40,000 with 20 percent down over 5 years.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$371.55<small>monthly payment</small></div>
-                <div class="viz-row ok"><span>Borrowed</span><b>$32,000 at 7.00%</b></div>
-                <div class="viz-row warn"><span>Total interest</span><b>$12,586 over 10 years</b></div>
-                <div class="viz-row warn"><span>Total paid</span><b>$44,586</b></div>
-                <p class="footnote sp-10">The same loan over 10 years. The payment falls and the interest doubles.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">$709.01<small>monthly payment</small></div>
-                <div class="viz-row ok"><span>Borrowed</span><b>$72,000 at 8.50%</b></div>
-                <div class="viz-row bad"><span>Total interest</span><b>$55,622 over 15 years</b></div>
-                <div class="viz-row bad"><span>Total paid</span><b>$127,622</b></div>
-                <p class="footnote sp-10">$80,000 with 10 percent down over 15 years.</p>
-              </div>
-            </div>
-          </div> </div> </div><div class="tool-card" id="tool-weight-calculator">
-        <div class="tool-head">
-          <div class="flex between gap">
-            <h2 class="h-sec-sm">RV Weight &amp; Towing Calculator</h2>
-            <span class="verified">Runs in your browser</span>
-          </div>
-        </div>
-        <div class="tool-body">
-          <div class="tool-copy">
-            <p class="body-15">Towing capacity vs the 80% rule, door-sticker payload, tongue or pin load, trailer GVWR, per-axle estimates. Type once, everything recomputes, the answer to "can my truck actually tow this?" in three fields.</p>
-            <div class="tool-btns">
-              <a class="btn btn-primary" href="tools/weight-calculator">Open the calculator</a>
-            </div>
-            <p class="note-sm">Estimates only. Always confirm your real load at a certified scale.</p>
-          </div>
-          <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">5,587 lb<small>loaded trailer</small></div>
-                <div class="viz-row ok"><span>Towing capacity</span><b>51% of 11,000 lb</b></div>
-                <div class="viz-row ok"><span>Truck payload</span><b>1,070 / 2,200 lb</b></div>
-                <div class="viz-row ok"><span>Hitch load (est.)</span><b>670 lb</b></div>
-                <p class="footnote sp-10">A 5,000 lb travel trailer on a 3/4-ton truck.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">6,471 lb<small>loaded trailer</small></div>
-                <div class="viz-row ok"><span>Towing capacity</span><b>70% of 9,200 lb</b></div>
-                <div class="viz-row warn"><span>Truck payload</span><b>1,376 / 1,500 lb</b></div>
-                <div class="viz-row warn"><span>Trailer payload</span><b>6,471 / 7,000 lb</b></div>
-                <p class="footnote sp-10">A half-ton truck that's within every rating, and close on two of them.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">7,854 lb<small>loaded trailer</small></div>
-                <div class="viz-row bad"><span>Towing capacity</span><b>103% of 7,600 lb</b></div>
-                <div class="viz-row bad"><span>Truck payload</span><b>1,642 / 1,450 lb</b></div>
-                <div class="viz-row warn"><span>Truck gross weight</span><b>6,942 / 7,000 lb</b></div>
-                <p class="footnote sp-10">A 6,800 lb travel trailer on a half-ton. Over on two ratings.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   <div class="tool-card" id="tool-rv-toilet-valve"> <div class="tool-head"> <div class="flex between gap"> <h2 class="h-sec-sm">RV Toilet Water Valve Finder</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"> <p class="body-15">The toilet water valve is what fails when water is left in the line over a freeze, and it is bought with no part number in hand, because the model label is usually gone. Answer what you can see about your Dometic or Thetford toilet and get the maker's number, with the document it came from.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-toilet-valve">Find my valve</a> </div> <p class="note-sm">Not for macerator or cassette toilets.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">385311641<small>water valve kit</small></div>
-                <div class="viz-row ok"><span>Flush</span><b>Foot pedal</b></div>
-                <div class="viz-row ok"><span>Maker</span><b>Dometic</b></div>
-                <div class="viz-row ok"><span>Pump</span><b>None, gravity</b></div>
-                <p class="footnote sp-10">Fits the 300, 310, 320 and 400 series.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card" id="tool-rv-recall-lookup"> <div class="tool-head"> <div class="flex between gap"> <h2 class="h-sec-sm">RV Recall Lookup</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"> <p class="body-15">A recall is filed against a range of VINs, not against a model year, and a motorhome's VIN belongs to the chassis rather than the coach. Put in a VIN and this reads the federal recall and complaint records, or search by year, make and model, and it hands you the maker's lookup where the maker runs one.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-recall-lookup">Check my unit</a> </div> <p class="note-sm">The United States is live. Canada comes from a snapshot.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">21V685000<small>recall campaign</small></div>
-                <div class="viz-row ok"><span>Make</span><b>Jayco</b></div>
-                <div class="viz-row ok"><span>Model</span><b>Jay Flight</b></div>
-                <div class="viz-row ok"><span>Model year</span><b>2022</b></div>
-                <p class="footnote sp-10">Reads the federal recall and complaint records.</p>
-              </div>
-            </div>
-          </div> </div> </div>
-   <div class="tool-card" id="tool-rv-anode-rod"> <div class="tool-head"> <div class="flex between gap"> <h2 class="h-sec-sm">RV Water Heater Anode Rod Finder</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"> <p class="body-15">Many water heaters have no anode rod, and must not be given one: a Suburban tank is porcelain-lined steel with a sacrificial rod, and an Atwood or Dometic tank is aluminum with a drain plug, which Dometic's own manual says a rod would damage. Answer what you can see and get the part number, or the answer that there is nothing to buy.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-anode-rod">Find my rod</a> </div> <p class="note-sm">Covers tank heaters, not tankless.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">233514<small>anode rod, magnesium</small></div>
-                <div class="viz-row ok"><span>Brand</span><b>Suburban</b></div>
-                <div class="viz-row ok"><span>Tank</span><b>Porcelain-lined steel</b></div>
-                <div class="viz-row ok"><span>Port</span><b>3/4 inch</b></div>
-                <p class="footnote sp-10">An Atwood or Dometic takes no rod at all.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card" id="tool-rv-converter-finder"> <div class="tool-head"> <div class="flex between gap"> <h2 class="h-sec-sm">RV Converter and Power Center Finder</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"> <p class="body-15">The converter in an older RV is usually a model nobody sells any more, and every maker's cross-reference chart is written from its own side. Type the model on the unit and this reads both parsed charts and shows what each maker publishes as the replacement, cited to the chart it came from.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-converter-finder">Find my replacement</a> </div> <p class="note-sm">WFCO's wider chart is linked rather than read.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">PD4060KV<small>replaces a Parallax 7355</small></div>
-                <div class="viz-row ok"><span>Maker</span><b>Progressive Dynamics</b></div>
-                <div class="viz-row ok"><span>Fits</span><b>30 amp wall mount</b></div>
-                <div class="viz-row ok"><span>Also</span><b>PD4655V section only</b></div>
-                <p class="footnote sp-10">From the maker's cross-reference chart.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card" id="tool-rv-appliance-board-finder"> <div class="tool-head"> <div class="flex between gap"> <h2 class="h-sec-sm">RV Appliance Control Board Finder</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"> <p class="body-15">A fridge that stops cooling, a generator that will not start, a furnace that will not light: the board is a common cause, though check the simple things first. Dinosaur Electronics publishes the only public charts pairing a maker's model or part number with the board that replaces it, across four charts. Where a model was built with more than one board, every production range is shown rather than one being picked for you.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-appliance-board-finder">Find my board</a> </div> <p class="note-sm">Fridges, generators and ignitors. All four charts read.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">Micro P-711<small>replaces a Dometic board</small></div>
-                <div class="viz-row ok"><span>Fits</span><b>RM 2652, by range</b></div>
-                <div class="viz-row ok"><span>Norcold</span><b>control + eyebrow</b></div>
-                <div class="viz-row ok"><span>Made by</span><b>Dinosaur Electronics</b></div>
-                <p class="footnote sp-10">From the maker's cross-reference chart.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card" id="tool-rv-water-filter"> <div class="tool-head"> <div class="flex between gap"> <h2 class="h-sec-sm">RV Water Filter Finder</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"> <p class="body-15">A water filter either screws onto the hose or sits in a housing, and which one you can use turns on the thread at the inlet and the size of the cartridge coming out of the housing. Answer what you can see and this lands on the maker's figures for an inline filter or a cartridge format, or says that the maker does not publish the figure you asked for.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/rv-water-filter">Find my filter</a> </div> <p class="note-sm">2.5 inch is not 4.5 inch, and 10 is not 20.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">Slim Line<small>10 inch by 2.5 inch</small></div>
-                <div class="viz-row ok"><span>End cap</span><b>Double open end</b></div>
-                <div class="viz-row warn"><span>Big Blue</span><b>4.5 inch, will not fit</b></div>
-                <p class="footnote sp-10">A 20 inch cartridge never goes in a 10 inch housing.</p>
-              </div>
-            </div>
-          </div> </div> </div>
- <div class="tool-card" id="tool-battery-runtime"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Battery Runtime Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">How long the house batteries carry your gear before they need charging. The amp-hours on the label, the chemistry, and the watts you draw: lead-acid gives half its amp-hours, lithium most of them, and the tool applies the right fraction.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/battery-runtime">Open the calculator</a> </div><p class="note-sm">Label figures and maker-published fractions. A battery monitor is the source of truth.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">17.1 hr<small>runtime estimate</small></div>
-                <div class="viz-row ok"><span>Label says</span><b>100 Ah = 1,280 Wh</b></div>
-                <div class="viz-row ok"><span>Usable at 80%</span><b>1,024 Wh</b></div>
-                <div class="viz-row warn"><span>At 60 W</span><b>about 17 hours</b></div>
-                <p class="footnote sp-10">100 Ah lithium running a normal evening load.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">10.0 hr<small>runtime estimate</small></div>
-                <div class="viz-row ok"><span>Label says</span><b>200 Ah = 2,400 Wh</b></div>
-                <div class="viz-row ok"><span>Usable at 50%</span><b>1,200 Wh</b></div>
-                <div class="viz-row warn"><span>At 120 W</span><b>about 10 hours</b></div>
-                <p class="footnote sp-10">A bigger AGM bank, which gives up half its amp-hours, under the same load.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">3.0 hr<small>runtime estimate</small></div>
-                <div class="viz-row ok"><span>Label says</span><b>100 Ah = 1,200 Wh</b></div>
-                <div class="viz-row ok"><span>Usable at 50%</span><b>600 Wh</b></div>
-                <div class="viz-row warn"><span>At 200 W</span><b>about 3 hours</b></div>
-                <p class="footnote sp-10">The same bank size, drawing more of it at once.</p>
-              </div>
-            </div>
-          </div> </div> </div>
-   <div class="tool-card" id="tool-tire-date-code"> <div class="tool-head"> <div class="flex between gap"> <h2 class="h-sec-sm">Tire Date Code Decoder</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"> <p class="body-15">A tire made since 2000 carries the week and year it was made in the last four digits of its DOT code. Type those four digits and get the date and your tire's age, with the six-to-10-year replacement window NHTSA cites.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/tire-date-code">Open the decoder</a> </div> <p class="note-sm">Reads the date only. It cannot judge whether a tire is safe.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">1024<small>date digits</small></div>
-                <div class="viz-row ok"><span>Built in the</span><b>tenth week</b></div>
-                <div class="viz-row ok"><span>Year</span><b>2024</b></div>
-                <div class="viz-row ok"><span>Age today</span><b>about 2 years</b></div>
-                <p class="footnote sp-10">Example output, your tire's four digits will give you yours.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">2321<small>date digits</small></div>
-                <div class="viz-row ok"><span>Built in the</span><b>twenty-third week</b></div>
-                <div class="viz-row ok"><span>Year</span><b>2021</b></div>
-                <div class="viz-row warn"><span>Age today</span><b>about 5 years</b></div>
-                <p class="footnote sp-10">Example output, your tire's four digits will give you yours.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">0308<small>date digits</small></div>
-                <div class="viz-row ok"><span>Built in the</span><b>third week</b></div>
-                <div class="viz-row ok"><span>Year</span><b>2008</b></div>
-                <div class="viz-row warn"><span>Age today</span><b>about 18 years</b></div>
-                <p class="footnote sp-10">Example output, your tire's four digits will give you yours.</p>
-              </div>
-            </div>
-          </div> </div> </div>
-  <div class="tool-card" id="tool-snow-load"> <div class="tool-head"> <div class="flex between gap"><h2 class="h-sec-sm">Roof Snow Load Calculator</h2> <span class="verified">Runs in your browser</span> </div> </div> <div class="tool-body"> <div class="tool-copy"><p class="body-15">Snow's weight is just the weight of the water in it. Enter how deep it is on the roof, or its water equivalent if you have one, and this gives you the load in pounds per square foot, and compares it to your roof's rating.</p> <div class="tool-btns"> <a class="btn btn-primary" href="tools/snow-load">Open the calculator</a> </div><p class="note-sm">Not a structural assessment.</p> </div> <div class="tool-viz">
-            <div class="viz-stage">
-              <div class="viz-shot is-on">
-                <div class="viz-total">7.5 lb/ft&#178;<small>load carried</small></div>
-                <div class="viz-row ok"><span>Against your rating</span><b>25% of 30 lb/ft&#178;</b></div>
-                <div class="viz-row ok"><span>Snow on the roof</span><b>6.0 inches</b></div>
-                <div class="viz-row ok"><span>Load, on the flat</span><b>7.5 lb/ft&#178;</b></div>
-                <p class="footnote sp-10">Six inches of settled snow on a roof rated 30 lb/ft&#178;.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">15.0 lb/ft&#178;<small>load carried</small></div>
-                <div class="viz-row ok"><span>Against your rating</span><b>50% of 30 lb/ft&#178;</b></div>
-                <div class="viz-row ok"><span>Snow on the roof</span><b>12.0 inches</b></div>
-                <div class="viz-row ok"><span>Load, on the flat</span><b>15.0 lb/ft&#178;</b></div>
-                <p class="footnote sp-10">A foot of snow on the same roof.</p>
-              </div>
-              <div class="viz-shot">
-                <div class="viz-total">30.0 lb/ft&#178;<small>load carried</small></div>
-                <div class="viz-row warn"><span>Against your rating</span><b>100% of 30 lb/ft&#178;</b></div>
-                <div class="viz-row ok"><span>Snow on the roof</span><b>24.0 inches</b></div>
-                <div class="viz-row warn"><span>Load, on the flat</span><b>30.0 lb/ft&#178;</b></div>
-                <p class="footnote sp-10">Two feet of snow at that density puts the same roof right at its rating.</p>
-              </div>
-            </div>
-          </div> </div> </div>
-   <div class="tool-card" id="tool-state-trailer-brake-laws">
-    <div class="tool-head">
-     <div class="flex between gap">
-      <h2 class="h-sec-sm">State Trailer Brake Laws</h2>
-      <span class="verified">Runs in your browser</span>
-     </div>
+    <h2 class="t-sec-h">All 15 tools</h2>
+    <p class="t-trust">Every tool runs in your browser. No account, no paywall, nothing to install.</p>
+    <div class="t-filters" role="group" aria-label="Filter tools by category">
+      <button type="button" class="t-filter" data-cat="towing">Towing &amp; weight</button>
+      <button type="button" class="t-filter" data-cat="tires-fuel">Tires &amp; fuel</button>
+      <button type="button" class="t-filter" data-cat="electrical">Electrical</button>
+      <button type="button" class="t-filter" data-cat="water">Water</button>
+      <button type="button" class="t-filter" data-cat="finders">Finders</button>
+      <button type="button" class="t-filter" data-cat="planning">Planning</button>
     </div>
-    <div class="tool-body">
-     <div class="tool-copy">
-      <p class="body-15">Whether a trailer has to have brakes is set by the state you tow in, not by a national rule. The 3,000 pound figure everyone repeats is a federal exception written for commercial vehicles. Pick a state and this shows the threshold its own vehicle code states, quoted, with the section named and linked to the state's site.</p>
-      <div class="tool-btns">
-       <a class="btn btn-primary" href="tools/state-trailer-brake-laws">Look up my state</a>
-      </div>
-      <p class="note-sm">Every state read so far, each from its own code.</p>
-     </div>
-     <div class="tool-viz">
-      <div class="viz-stage">
-       <div class="viz-shot is-on">
-        <div class="viz-total">3,000 lb<small>the number everyone repeats</small></div>
-        <div class="viz-row ok"><span>California</span><b>1,500 lb</b></div>
-        <div class="viz-row ok"><span>Idaho</span><b>1,500 lb unladen</b></div>
-        <div class="viz-row ok"><span>Oregon</span><b>no weight threshold</b></div>
-        <p class="footnote sp-10">Each row quoted from the state's own code.</p>
-       </div>
-      </div>
-     </div>
+    <div class="t-grid">
+      <a class="t-card" id="tool-fuel-cost" href="tools/fuel-cost" data-cat="tires-fuel">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-fuel"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">Fuel Cost Calculator</h3><span class="t-verb">Open the calculator<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">Miles, MPG, and the price at the pump give what the trip costs, with the planning cushion already added. Any vehicle works: RV types use their real-world MPG range, and cars, SUVs, pickups and motorcycles use the Energy Department average for that kind of vehicle. Your own measured MPG wins over every preset.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>$552</b> trip fuel, middle</p>
+        <p class="t-spec-l">Best case: $477 at 11 MPG &middot; Worst case: $656 at 8 MPG</p>
+        <p class="t-spec-l">Your own figure: 10.0 MPG</p>
+        </div>
+        <p class="t-note">An estimate for planning. The pump is the source of truth.</p>
+        <div class="t-go" aria-hidden="true">Tires &amp; fuel<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-watts-to-amps" href="tools/watts-to-amps" data-cat="electrical">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-plug"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">Watts to Amps &amp; Shore Power</h3><span class="t-verb">Open the calculator<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">Convert watts and amps either way at 120, 240, or 12 volts, and check the appliances you run at the same time against what your 30-amp or 50-amp hookup actually supplies. The 50-amp cord is 12,000 watts, not 6,000, and the tool shows why.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>12.5 A</b> 1,500 W at 120 volts</p>
+        <p class="t-spec-l">Volts: 120 V &middot; Watts: 1,500 W</p>
+        <p class="t-spec-l">30-amp service: 3,600 W</p>
+        </div>
+        <p class="t-note">Typical figures from Cummins' own chart. Your appliance's label wins.</p>
+        <div class="t-go" aria-hidden="true">Electrical<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-solar-sizing" href="tools/solar-sizing" data-cat="electrical">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-panel-solar"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">Solar Sizing Calculator</h3><span class="t-verb">Open the calculator<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">Daily watt-hours divided by peak sun hours, with NREL's 0.77 derate applied and the maker-recommended margin shown alongside. The region presets use real peak-sun-hour figures for the country, from about 3 in the Northwest to 6.5 in the desert Southwest.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>623 W</b> panels needed</p>
+        <p class="t-spec-l">Makers' formula: 2,400 Wh / 5.0 hr = 480 W &middot; After the 0.77 derate: 623 W nameplate</p>
+        <p class="t-spec-l"><b>480 W</b> panels needed</p>
+        </div>
+        <p class="t-note">A starting point for shopping. Winter sun and shade cut output below the rated hours.</p>
+        <div class="t-go" aria-hidden="true">Electrical<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-rv-loan" href="tools/rv-loan" data-cat="planning">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-calculator"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Loan Calculator</h3><span class="t-verb">Open the calculator<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">The monthly payment and the total interest on an RV loan, from the price, down payment, rate, and term, by the standard amortization formula. The result shows what the loan really costs by the end, because a longer term spreads the interest out, hiding it inside a smaller payment.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>$633.64</b> monthly payment</p>
+        <p class="t-spec-l">Borrowed: $32,000 at 7.00% &middot; Total interest: $6,018 over 5 years</p>
+        <p class="t-spec-l"><b>$371.55</b> monthly payment</p>
+        </div>
+        <p class="t-note">Not a loan offer.</p>
+        <div class="t-go" aria-hidden="true">Planning<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-weight-calculator" href="tools/weight-calculator" data-cat="towing">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-scale-balance"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Weight &amp; Towing Calculator</h3><span class="t-verb">Open the calculator<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">Towing capacity vs the 80% rule, door-sticker payload, tongue or pin load, trailer GVWR, per-axle estimates. Type once, everything recomputes, the answer to "can my truck actually tow this?" in three fields.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>5,587 lb</b> loaded trailer</p>
+        <p class="t-spec-l">Towing capacity: 51% of 11,000 lb &middot; Truck payload: 1,070 / 2,200 lb</p>
+        <p class="t-spec-l">Trailer payload: 6,471 / 7,000 lb</p>
+        </div>
+        <p class="t-note">Estimates only. Always confirm your real load at a certified scale.</p>
+        <div class="t-go" aria-hidden="true">Towing &amp; weight<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-rv-toilet-valve" href="tools/rv-toilet-valve" data-cat="water">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-toilet"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Toilet Water Valve Finder</h3><span class="t-verb">Find my valve<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">The toilet water valve is what fails when water is left in the line over a freeze, and it is bought with no part number in hand, because the model label is usually gone. Answer what you can see about your Dometic or Thetford toilet and get the maker's number, with the document it came from.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>385311641</b> water valve kit</p>
+        <p class="t-spec-l">Flush: Foot pedal &middot; Maker: Dometic</p>
+        </div>
+        <p class="t-note">Not for macerator or cassette toilets.</p>
+        <div class="t-go" aria-hidden="true">Water<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-rv-recall-lookup" href="tools/rv-recall-lookup" data-cat="finders">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-checklist"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Recall Lookup</h3><span class="t-verb">Check my unit<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">A recall is filed against a range of VINs, not against a model year, and a motorhome's VIN belongs to the chassis rather than the coach. Put in a VIN and this reads the federal recall and complaint records, or search by year, make and model, and it hands you the maker's lookup where the maker runs one.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>21V685000</b> recall campaign</p>
+        <p class="t-spec-l">Make: Jayco &middot; Model: Jay Flight</p>
+        </div>
+        <p class="t-note">The United States is live. Canada comes from a snapshot.</p>
+        <div class="t-go" aria-hidden="true">Finders<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-rv-anode-rod" href="tools/rv-anode-rod" data-cat="water">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-water-heater"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Water Heater Anode Rod Finder</h3><span class="t-verb">Find my rod<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">Many water heaters have no anode rod, and must not be given one: a Suburban tank is porcelain-lined steel with a sacrificial rod, and an Atwood or Dometic tank is aluminum with a drain plug, which Dometic's own manual says a rod would damage. Answer what you can see and get the part number, or the answer that there is nothing to buy.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>233514</b> anode rod, magnesium</p>
+        <p class="t-spec-l">Brand: Suburban &middot; Tank: Porcelain-lined steel</p>
+        </div>
+        <p class="t-note">Covers tank heaters, not tankless.</p>
+        <div class="t-go" aria-hidden="true">Water<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-rv-converter-finder" href="tools/rv-converter-finder" data-cat="electrical">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-power-cord"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Converter and Power Center Finder</h3><span class="t-verb">Find my replacement<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">The converter in an older RV is usually a model nobody sells any more, and every maker's cross-reference chart is written from its own side. Type the model on the unit and this reads both parsed charts and shows what each maker publishes as the replacement, cited to the chart it came from.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>PD4060KV</b> replaces a Parallax 7355</p>
+        <p class="t-spec-l">Maker: Progressive Dynamics &middot; Fits: 30 amp wall mount</p>
+        </div>
+        <p class="t-note">WFCO's wider chart is linked rather than read.</p>
+        <div class="t-go" aria-hidden="true">Electrical<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-rv-appliance-board-finder" href="tools/rv-appliance-board-finder" data-cat="electrical">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-gears"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Appliance Control Board Finder</h3><span class="t-verb">Find my board<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">A fridge that stops cooling, a generator that will not start, a furnace that will not light: the board is a common cause, though check the simple things first. Dinosaur Electronics publishes the only public charts pairing a maker's model or part number with the board that replaces it, across four charts. Where a model was built with more than one board, every production range is shown rather than one being picked for you.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>Micro P-711</b> replaces a Dometic board</p>
+        <p class="t-spec-l">Fits: RM 2652, by range &middot; Norcold: control + eyebrow</p>
+        </div>
+        <p class="t-note">Fridges, generators and ignitors. All four charts read.</p>
+        <div class="t-go" aria-hidden="true">Electrical<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-rv-water-filter" href="tools/rv-water-filter" data-cat="water">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-faucet"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">RV Water Filter Finder</h3><span class="t-verb">Find my filter<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">A water filter either screws onto the hose or sits in a housing, and which one you can use turns on the thread at the inlet and the size of the cartridge coming out of the housing. Answer what you can see and this lands on the maker's figures for an inline filter or a cartridge format, or says that the maker does not publish the figure you asked for.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>Slim Line</b> 10 inch by 2.5 inch</p>
+        <p class="t-spec-l">End cap: Double open end &middot; Big Blue: 4.5 inch, will not fit</p>
+        </div>
+        <p class="t-note">2.5 inch is not 4.5 inch, and 10 is not 20.</p>
+        <div class="t-go" aria-hidden="true">Water<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-battery-runtime" href="tools/battery-runtime" data-cat="electrical">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-battery"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">Battery Runtime Calculator</h3><span class="t-verb">Open the calculator<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">How long the house batteries carry your gear before they need charging. The amp-hours on the label, the chemistry, and the watts you draw: lead-acid gives half its amp-hours, lithium most of them, and the tool applies the right fraction.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>17.1 hr</b> runtime estimate</p>
+        <p class="t-spec-l">Label says: 100 Ah = 1,280 Wh &middot; Usable at 80%: 1,024 Wh</p>
+        <p class="t-spec-l">Usable at 50%: 1,200 Wh</p>
+        </div>
+        <p class="t-note">Label figures and maker-published fractions. A battery monitor is the source of truth.</p>
+        <div class="t-go" aria-hidden="true">Electrical<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-tire-date-code" href="tools/tire-date-code" data-cat="tires-fuel">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-tire"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">Tire Date Code Decoder</h3><span class="t-verb">Open the decoder<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">A tire made since 2000 carries the week and year it was made in the last four digits of its DOT code. Type those four digits and get the date and your tire's age, with the six-to-10-year replacement window NHTSA cites.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>1024</b> date digits</p>
+        <p class="t-spec-l">Built in the: tenth week &middot; Year: 2024</p>
+        <p class="t-spec-l"><b>2321</b> date digits</p>
+        </div>
+        <p class="t-note">Reads the date only. It cannot judge whether a tire is safe.</p>
+        <div class="t-go" aria-hidden="true">Tires &amp; fuel<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-snow-load" href="tools/snow-load" data-cat="towing">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-snow-shovel"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">Roof Snow Load Calculator</h3><span class="t-verb">Open the calculator<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">Snow's weight is just the weight of the water in it. Enter how deep it is on the roof, or its water equivalent if you have one, and this gives you the load in pounds per square foot, and compares it to your roof's rating.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>7.5 lb/ft&#178;</b> load carried</p>
+        <p class="t-spec-l">Against your rating: 25% of 30 lb/ft&#178; &middot; Snow on the roof: 6.0 inches</p>
+        <p class="t-spec-l"><b>15.0 lb/ft&#178;</b> load carried</p>
+        </div>
+        <p class="t-note">Not a structural assessment.</p>
+        <div class="t-go" aria-hidden="true">Towing &amp; weight<span class="t-chev">&rsaquo;</span></div>
+      </a>
+      <a class="t-card" id="tool-state-trailer-brake-laws" href="tools/state-trailer-brake-laws" data-cat="towing">
+        <div class="t-top">
+          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#ic-stop"/></svg></span>
+          <div class="t-hd"><h3 class="t-name">State Trailer Brake Laws</h3><span class="t-verb">Look up my state<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
+        </div>
+        <div class="t-copy">Whether a trailer has to have brakes is set by the state you tow in, not by a national rule. The 3,000 pound figure everyone repeats is a federal exception written for commercial vehicles. Pick a state and this shows the threshold its own vehicle code states, quoted, with the section named and linked to the state's site.</div>
+        <div class="t-spec">
+        <p class="t-spec-l"><b>3,000 lb</b> the number everyone repeats</p>
+        <p class="t-spec-l">California: 1,500 lb &middot; Idaho: 1,500 lb unladen</p>
+        </div>
+        <p class="t-note">Every state read so far, each from its own code.</p>
+        <div class="t-go" aria-hidden="true">Towing &amp; weight<span class="t-chev">&rsaquo;</span></div>
+      </a>
     </div>
    </div>
-
- </div>
  </div>
 
  <div class="sec sec-alt">
@@ -456,6 +398,7 @@
   <script src="assets/js/config.js?v=e01b4086"></script>
   <script src="assets/js/site.js?v=64936905"></script>
   <script src="assets/js/toolviz.js?v=0d50b964"></script>
+<script src="assets/js/toolfilter.js?v=c65112ba"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
