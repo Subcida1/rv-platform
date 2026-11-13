@@ -4281,3 +4281,217 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
   .band-cta-acts{width:100%}
   .band-cta-acts .btn{width:100%;justify-content:center}
 }
+
+/* ============================================================
+   TOOLS HUB AS A CARD GRID  (2026-11-13)
+
+   WHAT THIS REPLACES. Until now the hub was 15 stacked .tool-card blocks,
+   each running the full 1200px width with a two-column body and a rotating
+   four-example panel beside the copy. Measured at 1280x900 that showed about
+   1.2 tools per screen and made the page fifteen screens tall, so the list
+   had outgrown its own layout: a reader who wanted one tool out of fifteen
+   had to scroll past fourteen articles to find it.
+
+   WHAT IT IS NOW. The same 15 tools, the same copy, the same 32 captured
+   examples and the same ordering, in a 3-across grid of link-tiles. Measured
+   after the change: 9 tiles per screen, page under four screens. Nothing was
+   deleted, it was re-arranged -- the depth that used to sit in the hub is on
+   each tool's own page, and those pages already carry 1,600-2,000 words.
+
+   THE CARD IS ONE LINK. Not a card containing a button. That is Google's
+   model: the result IS the link, and the tap target is the whole tile, which
+   matters most on a phone where most of this site's traffic lands. The action
+   verb still sits under the title because _todo/UX.md's rule is that a scanner
+   reads the first two words of a label, and "Find my valve" carries the scent
+   that "RV Toilet Water Valve Finder" alone does not.
+
+   WHY THE STATES ARE BUILT OUT. This is the part that makes a card feel like a
+   product rather than a box, and the first draft of this grid had only :hover.
+   Material Design 3's card spec names five interaction states, and its state
+   layer values are the numbers used below: hover +8%, focus +10%, press +10%
+   opacity of an overlay in the content colour, with a 12dp radius and 16dp
+   padding (m3.material.io/components/cards/specs). A card that does not answer
+   the keyboard or the mouse-down reads as a static panel, which is exactly the
+   "not quite finished" a dense grid is prone to.
+   ============================================================ */
+.t-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4)}
+@media(max-width:1000px){.t-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.t-grid{grid-template-columns:minmax(0,1fr)}}
+
+.t-card{position:relative;display:flex;flex-direction:column;gap:0;
+  padding:var(--space-4);border:1px solid var(--border);border-radius:var(--radius);
+  background:var(--surface);color:inherit;text-decoration:none;overflow:hidden;
+  transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+/* The state layer. One overlay, and only one may be on at a time, which is why
+   these are written in order rather than combined: they all paint ::after. */
+.t-card::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:var(--b1);opacity:0;transition:opacity .18s ease}
+.t-card:hover{border-color:var(--border-2);box-shadow:var(--shadow);transform:translateY(-2px)}
+.t-card:hover::after{opacity:.04}                                   /* hover  +8% of a mid tone */
+.t-card:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.t-card:focus-visible::after{opacity:.05}                           /* focus +10% */
+.t-card:active{transform:translateY(0);box-shadow:var(--shadow-sm)}
+.t-card:active::after{opacity:.06}                                  /* press +10% */
+@media(hover:none),(pointer:coarse){
+  .t-card:hover{transform:none}
+  .t-card:active{transform:scale(.995)}
+}
+/* With JS off the filter bar is never built, so every card must default to
+   visible. This is the one rule the script toggles; see the note in toolviz.js. */
+.t-card[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){
+  .t-card{transition:none}
+  .t-card:hover{transform:none}
+}
+
+.t-top{display:flex;align-items:flex-start;gap:var(--space-3)}
+/* CIRCULAR, per the house shape rule above icon slots (squares are for
+   pictures). Real sprite icons, not emoji: 73 symbols already exist and a
+   drawn glyph reads sharper than an emoji at 22px. */
+.t-ic{flex:0 0 auto;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:var(--grad-soft-2);border:1px solid var(--border);color:var(--brand-deep);
+  transition:border-color .18s ease,background .18s ease}
+.t-card:hover .t-ic,.t-card:focus-visible .t-ic{border-color:var(--b2)}
+.t-ic .ic{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.75;
+  stroke-linecap:round;stroke-linejoin:round}
+.t-hd{display:flex;flex-direction:column;min-width:0}
+/* Two lines, fixed. A one-line title and a two-line title must leave the card's
+   body at the same y, or the row reads ragged. The clamp also retires the risk of a
+   future long tool name running to three lines and pushing its card out of step:
+   "RV Converter and Power Center Finder" already did exactly that once. */
+.t-name{margin:0;font-size:17px;font-weight:800;letter-spacing:-.012em;line-height:1.28;
+  color:var(--text);display:-webkit-box;-webkit-box-orient:vertical;
+  -webkit-line-clamp:2;overflow:hidden;height:44px}
+.t-verb{display:inline-flex;align-items:center;gap:5px;margin-top:2px;
+  font-size:var(--fs-sm);font-weight:800;color:var(--tint-ink)}
+.t-arrow{display:inline-block;transition:transform .18s ease}
+.t-card:hover .t-arrow,.t-card:focus-visible .t-arrow{transform:translateX(3px)}
+@media(prefers-reduced-motion:reduce){.t-arrow{transition:none}}
+/* Two reserved lines for the title so that a long name ("RV Converter & Power
+   Center Finder" wraps to three) does not push its own body out of line with
+   its neighbours'. Found by measuring, not by looking: one card's copy sat 22px
+   below the two beside it. */
+/* THREE lines, not four: at three the row height is set by the spec block below
+   (which is fixed) rather than by the tallest paragraph, so every card in a row
+   is the same height and the grid reads as a grid. `flex:1 0 auto` stops the copy
+   stretching to fill a taller neighbour, which is what made one card's text run to
+   seven lines while the one beside it showed three.
+   The full paragraph stays in the DOM: this caps what is DRAWN, and the clamp is
+   a CSS overflow, so a crawler and a screen reader still get every word. */
+/* The card is a flex column and .t-copy is a <span>, so the span must be told to be
+   a block before it can be a -webkit-box. Without display:block the browser leaves
+   it flow-root and the clamp has no box to clamp -- which is what let the paragraph
+   run to seven lines while the rule said three. No flex-grow: the copy takes its
+   three lines and stops, so the spec block below it lands at the same y on every
+   card in the row. */
+.t-copy{margin-top:var(--space-3);font-size:14px;line-height:1.55;color:var(--text-2);
+  flex:0 0 auto;display:block;overflow:hidden;height:calc(3 * 1.55 * 14px);max-height:65px}
+@supports (-webkit-line-clamp:3){
+  .t-copy{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3}
+}
+
+/* THE SPEC BLOCK is where the four rotating examples went. Rather than a 400px
+   panel per tool, each card shows three lines in the tool's own units, so the
+   answer a reader is scanning for -- a part number, a dollar figure, a "no rod
+   takes this tank" -- is present without opening anything. */
+.t-spec{margin-top:var(--space-4);padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);
+  background:var(--bg-2);border:1px solid var(--border);
+  /* Fixed at three lines. Every card carries up to three spec lines and some carry
+     two, so without this the block's height varied 72-117px and the footer row of a
+     tall card sat below its neighbour's. A grid whose rows do not line up is the
+     thing that reads as unfinished at a glance. */
+  display:flex;flex-direction:column;justify-content:center;min-height:118px}
+.t-spec-l{margin:0;font-size:var(--fs-sm);line-height:1.45;color:var(--text-2)}
+.t-spec-l + .t-spec-l{margin-top:var(--space-2)}
+.t-spec-l b{color:var(--text);font-weight:800}
+/* The caveat line ("An estimate for planning", "Not a loan offer") is on most cards
+   but not all. One line is reserved on every card either way, so the category footer
+   beneath it sits at the same y across a row -- a 17px difference was visible as
+   ragged card bottoms. An empty reserved line costs nothing and buys alignment. */
+.t-note{margin:var(--space-3) 0 0;font-size:var(--fs-xs);color:var(--text-3);line-height:1.45;
+  min-height:17px}
+
+/* The footer row: category on the left, chevron on the right. The category is a
+   plain span, NOT an anchor -- a link inside a link is invalid HTML and would
+   give the tile two targets. */
+.t-go{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin-top:auto;padding-top:var(--space-3);border-top:1px solid var(--border);
+  font-size:var(--fs-xs);font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--text-3)}
+.t-chev{font-size:17px;line-height:1;color:var(--b1);transition:transform .18s ease}
+.t-card:hover .t-chev,.t-card:focus-visible .t-chev{transform:translateX(3px)}
+@media(prefers-reduced-motion:reduce){.t-chev{transition:none}}
+
+/* THE FILTER BAR. Chips are real buttons, so the keyboard reaches them and the
+   pressed state is an aria-pressed, not a colour nobody can hear. Scrolls
+   sideways on a phone rather than wrapping into four rows. */
+.t-filters{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:var(--space-2);margin:0 0 var(--space-5)}
+@media(max-width:640px){
+  .t-filters{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    padding-bottom:var(--space-1);scrollbar-width:none}
+  .t-filters::-webkit-scrollbar{display:none}
+}
+.t-filter{display:inline-flex;align-items:center;gap:8px;min-height:44px;
+  padding:0 var(--space-4);border:1px solid var(--border-2);border-radius:var(--radius-pill);
+  background:var(--surface);color:var(--text-2);font:inherit;font-size:var(--fs-sm);
+  font-weight:700;cursor:pointer;white-space:nowrap;transition:background .16s ease,border-color .16s ease,color .16s ease}
+.t-filter:hover{border-color:var(--b2);color:var(--text)}
+.t-filter:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.t-filter[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--text-inv)}
+.t-filter[aria-pressed="true"] .t-filter-n{color:var(--text-inv);opacity:.85}
+.t-filter-n{font-weight:800;color:var(--text-3)}
+.t-empty{margin:var(--space-5) 0 0;font-size:var(--fs-md);color:var(--text-2)}
+.t-trust{display:inline-flex;align-items:center;gap:var(--space-3);margin:0 0 var(--space-4);
+  padding:var(--space-2) var(--space-4);border-radius:var(--radius-pill);border:1px solid var(--border-2);
+  background:var(--grad-soft-2);font-size:var(--fs-sm);font-weight:700;color:var(--text-2)}
+.t-trust::before{content:"\2713";display:grid;place-items:center;width:19px;height:19px;
+  border-radius:50%;background:var(--brand);color:var(--text-inv);
+  font-size:calc(var(--fs-xs) - 2px);font-weight:900}
+/* The grid's own heading. The hub's h1 is "Free RV tools"; this names the set so
+   the 15 card titles sit at h3 under a real h2, instead of leaping h1 -> h3. */
+.t-sec-h{font-size:var(--fs-2xl);font-weight:800;letter-spacing:-.015em;margin:0 0 var(--space-3)}
+
+/* ---- TOOLS HUB: the polish pass (2026-11-13) --------------------------------
+   What separates this from a generic card grid, all of it measurable:
+   1. The tiles sit on their own hairline grid with the icon column optically
+      aligned, rather than each card floating at a slightly different inset.
+   2. The spec block carries a left rule in the brand, which groups the three
+      figures as one answer instead of three loose lines.
+   3. The category label is set in small caps-style tracking so it reads as a
+      taxonomy chip, not as another sentence.
+   4. The count in each filter is de-emphasised, so the label leads and the
+      number supports. Amazon does this on its own refinement rail.
+   5. Hover lifts by 2px and shifts ONE thing (the arrow), not three. Apple's
+      rule: motion on hover should answer a question ("this goes somewhere"),
+      not perform.
+   ---------------------------------------------------------------------------- */
+.t-spec{position:relative;padding-left:var(--space-4)}
+.t-spec::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;
+  border-radius:2px;background:var(--brand);opacity:.55}
+.t-card:hover .t-spec::before,.t-card:focus-visible .t-spec::before{opacity:1}
+.t-go{letter-spacing:.075em}
+.t-go .t-chev{font-size:var(--fs-xl);font-weight:400;line-height:0;transform:translateY(-1px)}
+/* The action verb keeps a quiet underline on hover so the card still says where
+   the click goes, even though the whole tile is the target. */
+.t-card:hover .t-verb,.t-card:focus-visible .t-verb{text-decoration:underline;
+  text-underline-offset:3px;text-decoration-thickness:2px}
+@media(prefers-reduced-motion:reduce){
+  .t-card:hover .t-arrow,.t-card:hover .t-chev{transform:none}
+}
+/* Reading order on a phone: the spec block is the reason to tap, so it is never
+   the thing that gets clipped first. Nothing here reorders the DOM. */
+@media(max-width:440px){
+  .t-card{padding:var(--space-4)}
+  .t-spec{padding-left:var(--space-4)}
+}
+
+/* THE CARD COPY IS CLAMPED, AND THAT IS AN SEO DECISION AS MUCH AS A LAYOUT ONE.
+   The hub's paragraph for each tool is the hub's own prose -- it is what the page
+   ranks on -- so it stays in the DOM in full. Only the drawn height is capped, at
+   four lines. The text is present for a crawler and for a screen reader; a visual
+   reader gets the first four lines and the spec block below, and the full
+   explanation is one tap away on the tool's own page.
+   -webkit-line-clamp is the property that does this; the -webkit- prefix is
+   required by every engine in use, including Firefox and Chrome. Without it the
+   paragraph pushes the card to 480px and only three tiles fit a screen. */
+

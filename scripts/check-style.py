@@ -97,6 +97,11 @@ GRADIENT_OK = {
     '.rate-total .n', '.rating .pill', '.route-card', '.scale-card .rc-ic', '.seller .sav',
     '.srch-ring', '.svc li::before', '.tabs-auth button.on', '.tech-avatar', '.ticks li::before',
     '.tool-strip .tchip b', '.tool-viz .viz-total', '.w-live', '.w-total b',
+    # Tools hub grid (2026-11-13). Both paint --grad-soft-2, the same soft wash
+    # already allowlisted on .guide-ic and .cat-ic, in the same role: a quiet
+    # background that marks the icon slot and the trust line as identity, not as a
+    # call to action. The gradient is not the affordance -- the whole tile is.
+    '.t-ic', '.t-trust',
 }
 
 # Ratchets - the count today, from `--discover`. Lower them by hand as the collapse lands.

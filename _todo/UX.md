@@ -125,3 +125,48 @@ The fuller dossier and the page-by-page review playbook:
 `/home/user/Documents/research/ux-how-people-use-websites-2026-10-05.md` and
 `/home/user/Documents/research/originrv-ux-playbook-2026-10-05.md`.
 
+
+---
+
+## The tools hub: a grid of link-tiles (2026-11-13)
+
+T, 2026-11-13: *"the list has grown too long, we need to put them into smaller cards at fitting
+multiple tools onto the screen at once"*, with Google, Amazon and Apple named as the standard.
+
+**Measured before and after**, at 1280x900 against the served site:
+
+| | stacked `.tool-card` | card grid |
+|---|---|---|
+| tools per screen | 1.2 | 6 |
+| page height | ~15 screens | ~4 screens |
+| tap target | one 200px button | the whole tile |
+| headings for the 15 tools | 15 x h2 | 15 x h3 under one h2 |
+
+**The rule this settled: a hub is a picker, not an article.** The fifteen paragraphs that used to
+live on the hub are the tool pages' job, and those pages already run 1,600-2,000 words each with
+their own title, h1, h2 structure and schema. Moving the terse version to the hub and leaving the
+depth on the leaf page is the Amazon model: the grid is dense because the detail is one tap away.
+
+**The card anatomy, and why each part exists:**
+- **The whole tile is one `<a>`.** Google's model; the result IS the link. A link inside a link is
+  invalid, so the category label in the footer is a plain span.
+- **The action verb stays** ("Open the calculator", "Find my valve"). A scanner reads a label's
+  first two words, so the tile needs the verb even though the tile is clickable.
+- **A 3-line spec block replaces the rotating panel.** It carries the tool's own output, so the
+  answer a reader is scanning for (a part number, a dollar figure) is visible without opening it.
+- **The paragraph is clamped to 3 lines visually, never removed.** The full text stays in the DOM
+  for crawlers and screen readers; only the drawn height is capped. This is the one place where
+  the SEO answer and the layout answer pull against each other, and clamping is how both hold.
+
+**Interaction states are the difference between a product card and a box.** The first draft had
+only `:hover`. Material Design 3 names five states and gives the layer opacities, which are the
+values used here: hover +8%, focus +10%, press +10%, plus a `:focus-visible` ring. A card with a
+hover state and no keyboard or pressed state reads as a static panel.
+
+**Generated, not hand-written.** `scripts/build-tool-cards.py` reads
+`_data/source/tools-hub-cards.html` and emits the grid; `scripts/apply-tool-grid.py` places it.
+The 32 worked examples are moved, never retyped, because 32 hand-copied figures is how a number
+gets transposed with nothing noticing. Edit the source file, not the hub.
+
+**What did NOT change:** the 15 tools, the copy, the demand ordering from
+`scripts/keyword-demand.py`, the links and anchors, the JSON-LD, and the depth on each tool page.

@@ -33,13 +33,31 @@ START, END = "<!-- HOMESCHEMA:START -->", "<!-- HOMESCHEMA:END -->"
 
 
 def tools():
-    """(name, url) for every tool card on the hub, in the order the hub shows them."""
+    """(name, url) for every tool card on the hub, in the order the hub shows them.
+
+    Read from the card grid's own markup, NOT from the old stacked-card shape.
+    Each tile is one `<a class="t-card" ... href="tools/...">` carrying its name in
+    an `<h3 class="t-name">`. When the hub became a grid (2026-11-13) this function
+    still looked for `<h2 class="h-sec-sm">` and the assertion below fired, which is
+    what it is for: a hub that no longer matches its reader fails loudly instead of
+    silently reporting zero tools.
+    """
     h = (ROOT / "tools" / "index.html").read_text(encoding="utf-8")
     out = []
-    for name, href in re.findall(
-            r'<h2 class="h-sec-sm">([^<]+)</h2>.*?<a class="btn[^"]*" href="(tools/[a-z0-9-]+)"',
-            h, re.S):
-        out.append((name.replace("&amp;", "&").strip(), href))
+    # Matched by ATTRIBUTE, not by tag shape or attribute order. The card markup has
+    # already changed once (span containers became div, and data-cat was added), and
+    # a pattern keyed to the exact string broke the check both times. Anchor on the
+    # class and read the pieces.
+    for m in re.finditer(r'<a class="t-card"[^>]*>', h):
+        tag = m.group(0)
+        href_m = re.search(r'href="(tools/[a-z0-9-]+)"', tag)
+        if not href_m:
+            continue
+        rest = h[m.end():m.end() + 900]
+        name_m = re.search(r'<h3 class="t-name">([^<]+)</h3>', rest)
+        if not name_m:
+            continue
+        out.append((name_m.group(1).replace("&amp;", "&").strip(), href_m.group(1)))
     assert out, "no tool cards found in tools/index.html"
     return out
 

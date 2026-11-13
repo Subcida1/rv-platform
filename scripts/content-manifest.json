@@ -1112,10 +1112,10 @@
     "claims": []
   },
   "tools/index.html": {
-    "hash": "49350886a47cb08d",
+    "hash": "d2542a86d2381672",
     "status": "verified",
-    "verified_by": "removed the Embed it on your site button from the weight-calculator card (T, 2026-11-07): the calculator is now a protected minified bundle, so an embed offer worked against the hard-to-copy hosting decision; the card now matches every other tool card with a single Open button. No spec: this is an index page whose only change is one deleted button",
-    "verified_at": "2026-11-07",
+    "verified_by": "hermes: hub card grid, markup correction (T, 2026-11-13) - the grid containers were <span> holding <p> and <h3>, which the W3C Nu checker rejects; they are now <div>. Filter button labels moved into the markup so the buttons carry an accessible name with JS off. Same 15 tools, same copy, same 32 examples, same order - structure fix only, no content change",
+    "verified_at": "2026-11-12",
     "sources": [],
     "spec": null,
     "spec_waived": true,

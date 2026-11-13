@@ -122,6 +122,13 @@ const DECLARED = [
   { selector: 'div.guide-stats',                   align: 'left',   why: 'the finder stat row on a state page' },
   { selector: 'div.loc-row',                       align: 'any',    why: 'listing rows vary with content length' },
   { selector: 'div.listing-tags',                  align: 'any',    why: 'listing tag rows vary with content length' },
+  // Declared 2026-11-13 with the tools hub card grid. LEFT, not centered: this is a
+  // filter rail that a reader scans in a fixed order, not a centred picker row. It
+  // is the same shape as div.band-cta-acts above (a working row inside a page body),
+  // not the homepage's chip picker, whose centring was a deliberate choice on a
+  // different surface. The gate caught it as UNDECLARED, which is what it is for:
+  // an undeclared flex row is an alignment nobody decided.
+  { selector: 'div.t-filters',                     align: 'left',   why: 'tools hub category filter rail; left-aligned by design (added 2026-11-13)' },
 ];
 
 const HTTP = await freePort();
