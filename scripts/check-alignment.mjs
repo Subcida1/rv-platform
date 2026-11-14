@@ -111,7 +111,12 @@ const DECLARED = [
   // stopped reading as a set. Left is now what the base rule says at every width, and this gate
   // caught the mismatch when only the CSS had been changed -- which is the check doing its job: the
   // declaration is the reviewed decision, and it has to move with the design.
-  { selector: 'p.chips.part-types',                align: 'left',   why: 'parts card scope tag and fit chips, left-aligned under the name (2026-11-13)' },
+  // RETIRED 2026-11-14 with the v2 table rebuild. This declared the scope tag and fit chips that sat
+  // inside each CARD row (p.chips.part-types). Those cards are gone: /parts/ is now one table row per
+  // part, and the scope and gate notes render as prose inside td.pd, so no page emits
+  // p.chips.part-types any more and the discovery pass finds no such pill row. A row that no longer
+  // exists must leave this list (this file's own rule, above), or the check reports STALE forever and
+  // stops meaning anything -- which is exactly what it did until this line came out.
   // Declared 2026-10-29, when the homepage proof strip went from three stacked tiles to
   // one horizontal row so the figures would fit inside the fold. Children are the three
   // counts, all short and fully rounded, so the discovery pass now finds it as a pill row.

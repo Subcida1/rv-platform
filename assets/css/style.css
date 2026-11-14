@@ -1850,6 +1850,42 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
      placeholder, so the HTML emitter ships a short variant below 720px via the `data-ph-short`
      attribute and parts.js swaps it. Keeping the swap in script means a no-script phone still gets
      the full sentence, which is the better failure. */
+  /* THE FOUR-COLUMN TABLE FOLDS INTO ONE ROW OF BLOCKS ON A PHONE. The approved v2 mockup
+     (`~/.hermes/cache/scratch/parts-mockups/recommendation-v2.html`, its own @media block) collapses
+     the table this way; the port to style.css missed it, so the built page kept a four-across table
+     and, measured at a 390px viewport, `table.part-table` held a 524px minimum width -- the columns
+     cannot shrink past their content (the Guide column alone is a 90px maker link plus a 108px guide
+     link), so the document itself scrolled sideways by 158px. The page must never scroll sideways.
+
+     THE BOTTOM LINE IS TWO FULL-WIDTH LINES, NOT TWO COLUMNS, AND THAT IS A DEVIATION FROM THE MOCKUP.
+     The mockup's `grid-template-columns:1fr auto` for sys + read never carried a row with two links,
+     so it was never stress-tested: it renders one "Repair guide" link and stops. The live data puts a
+     guide link AND a maker link on 102 rows, and `1fr auto` sizes each track to that row's own
+     content, so on a two-link row the `1fr` track collapses onto `sys` and squeezes "Towing and
+     running gear" into a 79px column, wrapping it to three lines hard against the links (measured at
+     390px; the boxes keep a 10px gutter but the wrapped label reads as collided). `minmax(0,1fr) auto`
+     with `gap` was tried and still squeezes, because the read column's content is what sets the width.
+     Instead each bottom cell takes its own line: the system label first (full width, one line at
+     normal wrap), the links under it, left-aligned. No track races, so no row can squeeze another.
+
+     `thead` IS HIDDEN, not restyled: a header row is meaningless once the cells stop being a row, and
+     the mockup hides it for the same reason. Each cell keeps its own label by position -- name on the
+     top line, description across the full width, then the system, then the links.
+
+     THE ROW BECOMES A GRID, NOT A FLEX BOX, AND THAT IS DELIBERATE. A leftover selector is a live
+     selector: `.part{display:flex}` from the deleted card list still matched `tr.part` once and
+     stacked every row (418px rows, 92,839px page). `display:grid` here is scoped to `.part-table
+     tbody tr` so it out-specifies the base `.part-table tbody tr` rule ~2,000 lines below, and the
+     desktop rule stays `table-row`. Verify with `getComputedStyle(tr).display` -- `table-row` above
+     720px, `grid` below. */
+  .part-table thead{display:none}
+  .part-table tbody tr{display:grid;grid-template-columns:minmax(0,1fr);
+    gap:3px 0;padding:12px 0}
+  .part-table td{border:0;padding:0}
+  .part-table td.pn{grid-column:1}
+  .part-table td.pd{grid-column:1;max-width:none;margin-top:2px}
+  .part-table td.sys{grid-column:1;border-left:0;padding-left:0;white-space:normal;margin-top:5px}
+  .part-table td.read{grid-column:1;text-align:left;margin-top:2px}
   .cat-grid{grid-template-columns:minmax(0,1fr)}
   .deck-card{padding:14px 12px}
   .wc-out{min-height:auto}
@@ -3764,6 +3800,83 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .parts-syschips .chip.js-sys[data-system=""].on i{color:var(--text-inv)}
 .parts-syschips .chip.js-sys[data-system=""]:not(.on){background:var(--surface);color:var(--text-2)}
 .parts-count{margin-top:12px;font-size: var(--fs-sm);color:var(--text-3);text-align:center}
+
+/* THE PART TABLE (2026-11-14). Replaces a two-column list of cards.
+   Ty compared the built page against the approved v2 mockup -- a table with the headers Part /
+   What it does / System / Guide -- and said the two looked nothing alike, then chose "Rebuild it
+   as the v2 table." The card cost ~216px per part and this costs ~90px, so 210 parts go from a
+   ~26,000px page to roughly 12,000px.
+
+   A TABLE IS THE HONEST ELEMENT HERE and that is the reason to use it rather than a grid of divs:
+   every row has the same four fields in the same order, which is exactly what a table means. It
+   also gives each cell a column header, and that is load-bearing for the Guide column -- see the
+   .tlink note below.
+   `border-collapse` so the hairlines between rows do not double. */
+.part-table{width:100%;border-collapse:collapse;margin:14px 0 34px}
+/* The header is uppercase micro-caps in muted ink, the same treatment the site's other column
+   heads use. It is NOT sticky: the section heading and the system's own count sit directly above
+   it, and a header that pinned to the viewport while a reader scrolled 12,000px of table would
+   detach from the system it names. The mockup made it sticky because the mockup was one long
+   table; here it repeats per system instead, which does the same job per section. */
+.part-table thead th{text-align:left;font-size: var(--fs-xs);text-transform:uppercase;
+  letter-spacing:.085em;color:var(--text-3);font-weight:800;padding:9px 12px;
+  border-bottom:2px solid var(--border-2)}
+.part-table tbody tr{border-bottom:1px solid var(--border)}
+/* ZEBRA STRIPING, because a 12,000px table of similar rows loses the eye between rows. Kept very
+   light: the row is a reading aid, not a card, and a strong band would undo the compaction. */
+.part-table tbody tr:nth-child(even){background:var(--surface-2)}
+.part-table tbody tr:hover{background:var(--tint-bg)}
+.part-table td{padding:11px 12px;vertical-align:top}
+/* The name cell is the row's heading, so it carries the weight. The alias line under it is the
+   second thing a reader needs (see part_html): a reader who searched "ball coupler" and landed on
+   "Hitch coupler" has to see the match before they read anything else. */
+.part-table td.pn{font-weight:700;color:var(--text);letter-spacing:-.008em}
+.part-table td.pn .part-aka{display:block;font-size: var(--fs-xs);color:var(--text-2);
+  font-weight:400;letter-spacing:0;margin-top:4px;line-height:1.45}
+/* ^ --text-2, NOT --text-3, and the axe run in the gate is why (2026-11-14). The alias line is 12px
+   tertiary ink on a zebra-striped row. --text-3 (#67748e) measures 4.35:1 on the even-row stripe
+   --surface-2 (#eef8f8), under the 4.5:1 threshold, so /parts/ failed the gate with 349 serious
+   color-contrast violations the moment the rebuild put the alias on a striped table row (the old
+   card had a plain background, where the same ink cleared 4.7:1). --text-2 (#55627a) measures 5.69:1
+   on the stripe and 6.15:1 on white and 5.72:1 on the hover tint, so it holds on every row state.
+   The alias keeps its meaning and its place -- only the ink moves. */
+.part-table td.pn .part-aka-l{font-weight:700}
+/* The description column takes the slack, so it is capped at a readable measure rather than being
+   allowed to run the width of the table. */
+.part-table td.pd{color:var(--text-2);max-width:46ch}
+/* The scope note and the gate note sit UNDER the description, at the same size, because they
+   qualify it. `display:block` so they take their own lines inside the cell rather than running on
+   from the sentence. */
+.part-table td.pd .note{margin-top:5px}
+.part-table td.pd .part-req{display:block;margin-top:4px}
+/* The system cell is quiet and does not wrap, with a hairline on its left to read as a separate
+   column from the description. `white-space:nowrap` because "Heating and cooling" breaking over two
+   lines makes one row taller than its neighbours for no reason. --text-2, NOT --text-3, for the same
+   reason the alias above moved: this sits on the zebra stripe on every even row, and --text-3 is
+   4.35:1 there against the 4.5:1 floor. axe flagged it (143 violations) immediately after the alias
+   was fixed; --text-2 is 5.69:1 on the stripe. */
+.part-table td.sys{font-size: var(--fs-sm);color:var(--text-2);white-space:nowrap;
+  border-left:1px solid var(--border)}
+/* THE GUIDE LINK IS A TEXT LINK, NOT A BUTTON, AND THAT IS A REVERSAL.
+   It was a filled gradient button ("How to fix it") from Ty's 2026-10-05 request. He asked for the
+   mockup's version on 2026-11-14: "Match the mockup: a quiet 'Repair guide' text link, not a
+   button." The 2026-10-05 worry was that a bare text blank reads as prose rather than something
+   pressable, and the table answers that structurally -- the column is headed "Guide", so the reader
+   is told what the link is before reading it. Neither change works without the other: a quiet link
+   with no column header would be the "text blank" he rejected in 2026-10-05. */
+.tlink{font-size: var(--fs-sm);font-weight:700;color:var(--brand-deep);text-decoration:none}
+.tlink:hover{text-decoration:underline}
+/* A SECOND GUIDE is subordinate to the primary, so it is lighter and sits on its own line. */
+.part-table td.read .tlink-2{display:block;margin-top:5px;font-weight:600}
+/* A maker's manual leaves the site for somebody else's document, so it never takes the guide's
+   shape: .doc-link is squared, flat and smaller, with its own off-site arrow. */
+.part-table td.read .doc-link{display:block;margin-top:5px}
+.part-table td.read .none{font-size: var(--fs-sm);color:var(--text-2)}
+
+/* THE CARD LIST IS GONE FROM THIS PAGE, and these rules are kept ONLY because the mockups and the
+   archived recommendation still reference them; nothing on /parts/ emits .part-list, .part-h,
+   .part-does, .part-links or .part-none any more (the generator now emits <table class="part-table">).
+   They are marked so the next person does not spend time styling a card that no page renders. */
 /* A SCOPE TAG IS A TAG, NOT A BUTTON (redesign, 2026-11-13). "Motorhome only" and "Towable only"
    state a fact about the part, so they take the site's tag treatment -- soft tint, no border, micro
    caps -- rather than the button shape the clickable fit pills use. If they looked like the pills
@@ -3775,8 +3888,9 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
   letter-spacing:.085em;text-transform:uppercase;line-height:1}
 /* AN OPTIONAL-FEATURE GATE IS PROSE, so it is set as a quiet line of text and not as a tag at all:
    "Only if your RV has a generator" is a conditional the reader has to read and evaluate, which a
-   pill cannot carry. */
-.part-req{margin-top:6px;font-size: var(--fs-sm);color:var(--text-3)}
+   pill cannot carry. --text-2, NOT --text-3: it renders inside td.pd on the zebra stripe, where
+   --text-3 is 4.35:1 (axe flagged 10 of these last, after the alias, the system cell and .none). */
+.part-req{margin-top:6px;font-size: var(--fs-sm);color:var(--text-2)}
 .parts-sys{margin-top:46px}
 .parts-sys-count{margin-top:-12px;margin-bottom:20px;font-size: var(--fs-sm);color:var(--text-3);text-align:center}
 /* TWO COLUMNS OF COMPACT ENTRIES, NOT A GRID OF CARDS.
@@ -3788,122 +3902,19 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    in a row was as tall as the tallest one in it.
    An entry is a ROW now: no box, no shadow, a hairline between entries, and the links sit
    under their own content rather than at the foot of somebody else's. */
-.part-list{list-style:none;margin:0;padding:0;column-count:2;column-gap:34px}
-.part{padding-top:14px;padding-bottom:14px;border-top:2px solid var(--border-2);
-  display:flex;flex-direction:column;gap:3px;break-inside:avoid;
-  /* LEFT-ALIGNED, AND THE CENTRING IS GONE ON PURPOSE (redesign, 2026-11-13).
-     The card was centred at T's request on 2026-10-05 and the reasoning was sound for what the card
-     then held: four short fields, roughly equal width, so a centred stack read as a tidy block. It
-     stops working once the fields differ in length, which is most of them. An alias list ("coupler,
-     ball coupler, A-frame coupler") and a part name are different widths, so centring made every
-     card a different shape and the eye had no left edge to run down. T's 2026-11-13 read of the page
-     was "very poorly laid out", and this is the mechanical cause: 210 cards, no shared margin.
-     A reference list is scanned down a column, so the column has to exist. */
-  text-align:left;align-items:flex-start}
-@media(max-width:760px){.part-list{column-count:1}}
-.part-h{font-size: var(--fs-lg);font-weight:700;color:var(--text);letter-spacing:-.01em}
-/* THE ALIAS ROW SITS DIRECTLY UNDER THE PART NAME (redesign, 2026-11-13).
-   It was a foot-of-card block with a rule above it and a caption label, which was the right
-   treatment for the position it held. Moved to second on the card it is a sparse parenthetical
-   instead: the label goes inline, the names sit in secondary ink right beside it, and there is no
-   rule because there is nothing above it to separate from but the name, and the name does its own
-   separating. No margin-top for the same reason -- it is the second line of the heading, not a new
-   block. */
-.part-aka{margin:0;font-size: var(--fs-sm);color:var(--text-3);line-height:1.45}
-.part-aka-l{font-weight:700;color:var(--text-3)}
-.part-aka-v{color:var(--text-2)}
-.part-does{margin-top:6px;font-size: var(--fs-md);color:var(--text-2);line-height:1.55}
-/* THE OLD FOOT-OF-CARD ALIAS RULES ARE GONE (redesign, 2026-11-13). They were a labelled block with
-   a rule above it and a caption label, sized for the LAST position on the card. The alias row is now
-   the SECOND line, styled by .part-aka above. Leaving these would have put a 14px top margin on a
-   line that is now a heading sub-line and a display:block on a label that is now inline, which is
-   the "two rules for one job" failure this stylesheet already documents twice. */
+/* THE PART LIST IS A TABLE NOW (2026-11-14), so every rule that shaped the two-column CARD list is
+   gone from here: .part-list (the column-count box), .part (the card face), .part-h (the card
+   heading), .part-does, .part-links and .part-none. They are DELETED rather than left in place
+   because a dead rule is not inert on this page -- `.part{display:flex}` still matched the new
+   `tr.part` and laid every table row out as a stacked flex column, which measured as a 418px row
+   and a 92,839px page instead of ~90px and ~12,000px. A leftover selector is a live selector.
+   The styles that replaced them are in THE PART TABLE block above, next to .parts-count.
 
-/* A TYPE PILL IS A FILTER CONTROL NOW, and the two rules that made them look inert are gone.
-   They existed because these were labels on a card that went nowhere. Ty asked for the
-   opposite, 2026-10-05: "we should make those clickable filter options ... show that they're
-   enabled with a kind of like blue fill in".
-   THEY ALSO HAVE TO LOOK DIFFERENT FROM THE ACTION BUTTONS BESIDE THEM. Ty: "make the how to
-   fix it and the ... manuals buttons look a little bit different than the travel trailer ...
-   and motorhome buttons so that they're visually distinct from each other." The three things in
-   a row are now three different treatments: a type pill is a FLAT TAG (soft tint, no visible
-   border, smaller, muted text), the guide is a blue gradient STROKE (btn-gb), and a maker link
-   is a grey-bordered white button (btn-secondary). Shape alone could not separate them, because
-   every button on this site is a pill -- the difference had to be colour and weight.
-   CENTRED WITH FLEX, NOT PADDING. The old rule carried equal padding top and bottom, which
-   still leaves the label sitting on its own line-height rather than in the middle of the pill
-   -- the off-centre look Ty spotted. min-height plus align-items centres the line box, and
-   line-height:1 stops the font's leading pushing it down.
-   font-family:inherit because this is a <button> now, and a button otherwise takes the
-   browser's default control font rather than the page's. */
-.part-types{justify-content:flex-start;margin-top:8px;gap:6px}
-/* A FITS TAG IS NOT A BUTTON, THOUGH IT IS ONE.
-   Ty, 2026-10-10: "I like how the manuals buttons look very, very different and unique
-   compared to the how to fix buttons, but now the manuals buttons look pretty similar to
-   the travel trailer / fifth wheel / motorhome / camper van categorization buttons. So
-   let's... make them look more unique from all the buttons that we already have in place."
-   He is right about the cause: a small rounded chip with a border, a white face and a thin
-   edge is the same shape as a manuals button at a smaller size, and both sit on the same
-   card. The fix is to move these onto the site's OTHER language for a non-action: the tint
-   tag (the shape badges, callouts and the pinned cards already use) in MICRO CAPS, which no
-   button on this site uses. Selected and hovered share one state on purpose, because Ty
-   asked on 2026-10-06 that a selected pill hold its hover state -- so both go to the filled
-   tag rather than inventing a second selected look.
-
-   --tint-ink FILL, NOT --brand. These labels are 11.5px, so they need the higher ratio;
-   white on --tint-ink measures 7.27:1 against the teal palette. The rule holds whatever
-   the brand becomes, because --tint-ink is the deep end of it. */
-.part-types .chip{font-family:inherit;font-size: var(--fs-xs);font-weight:800;letter-spacing:.085em;
-  text-transform:uppercase;line-height:1;padding:0 10px;min-height:44px;
-  display:inline-flex;align-items:center;cursor:pointer;
-  background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
-/* THE FILL THAT WAS THE HOVER IS THE DEFAULT NOW, AND HOVER GOES THE OTHER WAY.
-   Ty, 2026-10-10: "The hover over color is what they should just always be by default. And maybe we
-   can make them turn into their current color on hover over ... Right now the colors between them
-   and the manual buttons are basically identical. So I think if we use the hover over darker blue for
-   just their generalized color that will probably separate them visually even better."
-
-   He is right about why they blurred together: a light tint pill with a thin edge is the same shape
-   AND nearly the same value as a manuals button sitting on the same card. Filled --tint-ink at rest
-   puts them a full step darker than every button on the page, and the hover releases to the light
-   tint, which reads as the pill stepping back rather than lighting up. White on --tint-ink measures
-   5.58:1, so the default state is the strong one and it still passes AA. */
-.part-types .chip:hover{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
-/* A SELECTED PILL HOLDS A STATE OF ITS OWN. It held the HOVER state until 2026-10-10, which was
-   right while the hover was the fill; when the pill's resting state became the fill and the hover
-   became the pale tint, holding a hover would have made the CHOSEN pills the solid ones and left
-   nothing to tell them from the unchosen ones beside them.
-
-   What survives from Ty, 2026-10-06 -- "i want them to basically hold their hover animation state
-   when their selected so the user can visually see that they have selected travel trailer or fifth
-   wheel" -- is the requirement rather than the mechanism: a selection must be visible AT REST, with
-   no pointer on it. The chosen pill inverts to the card's white with the ink back, which is the one
-   shade on the card that nothing else uses, so it is unmistakable next to the solid ones.
-
-   `transition:.16s` still comes from `.chip` above, so arriving at this state animates the same way
-   the hover does.
-
-   TWO THINGS ATE THE EARLIER `.chip.on`, and neither was a missing rule: `.part-types .chip` further
-   down has the same specificity and comes LATER, so it won and reset the background; and
-   `.part-types .chip:hover` reset it again on top. Both are covered here. */
-/* A SELECTED PILL INVERTS, because the fill is now the resting state and a filter needs a state
-   that cannot be confused with "not chosen". Ty asked on 2026-10-06 that a selected pill be visible
-   at rest rather than only under the pointer; the inverted chip keeps that promise by making the
-   chosen ones the pale ones, which is the one shade on the card that nothing else uses. */
-.part-types .chip.on,
-.part-types .chip.on:hover,
-.part-types .chip.on:focus-visible{background:var(--surface);border-color:var(--tint-ink);color:var(--tint-ink)}
-/* The links used to be pinned to the bottom of the card with margin-top:auto and a rule above
-   them. In a row that hugs its content there is nothing to pin them to, and the rule was
-   separating a space that no longer exists. They are buttons now, so the font-size went too. */
-.part-links{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-start}
-/* The dead-end line on the parts hub (quick wins #13): a card with no guide, tool or maker
-   document says so rather than ending silently. */
-.part-links.part-none{font-size: var(--fs-sm);color:var(--text-2)}
-.parts-top{margin-top:14px;font-size: var(--fs-sm)}
-/* The `hidden` attribute loses to any display rule, and .part is display:flex, so hiding a
-   filtered-out part needs these. Without them the filter appears to do nothing at all. */
-.part[hidden],.parts-sys[hidden],.parts-empty[hidden]{display:none}
+   WHAT IS KEPT IS THE HIDING CONTRACT, because the filter depends on it. The `hidden` attribute
+   loses to ANY display rule, and the table row now carries a display of its own, so the filter
+   needs an explicit `[hidden]` rule for each thing it hides or it would appear to do nothing.
+   `.part-aka` is kept and re-scoped inside the name cell: the alias line is still on the row. */
+.part[hidden],.parts-sys[hidden],.parts-empty[hidden],.part-table[hidden]{display:none}
 .parts-empty{margin-top:20px;font-size: var(--fs-md);color:var(--text-2)}
 
 

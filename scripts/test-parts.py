@@ -41,34 +41,39 @@ def main():
     total = len(parts)
 
     # 1. every part present, once
-    names = re.findall(r'<h3 class="part-h">(.*?)</h3>', html)
+    # THE NAME IS NOW IN A TABLE CELL (2026-11-14). It was <h3 class="part-h"> inside a card; the
+    # page is a table now, so the name is <td class="pn">. The check moved with the markup rather
+    # than being loosened -- it still demands exactly one entry per part and still names any part
+    # that is missing.
+    names = [n.strip() for n in re.findall(r'<td class="pn">(.*?)(?:<em|</td>)', html, re.S)]
     check(len(names) == total, "one entry per part (%d parts, %d entries)" % (total, len(names)))
     missing = [p["n"] for _, p in parts if p["n"] not in names]
     check(not missing, "no part missing from the page" + (": %s" % missing[:5] if missing else ""))
 
     # the section a part sits in must be the system the index puts it in
-    listed = re.findall(r'data-system="([a-z-]+)"[^>]*data-scope="[^"]*"[^>]*>\s*'
-                        r'<h3 class="part-h">(.*?)</h3>', html)
+    listed = [(k, n.strip()) for k, n in
+              re.findall(r'<tr class="part"[^>]*data-system="([a-z-]+)"[^>]*>\s*'
+                         r'<td class="pn">(.*?)(?:<em|</td>)', html, re.S)]
     by_name = {p["n"]: k for k, p in parts}
     wrong = [(n, k, by_name.get(n)) for k, n in listed if by_name.get(n) != k]
     check(not wrong, "every part carries its own system" + (": %s" % wrong[:3] if wrong else ""))
 
-    # 1b. every card carries its own anchor, and the anchors are unique. A per-part permalink
+    # 1b. every row carries its own anchor, and the anchors are unique. A per-part permalink
     # (/parts/#part-hitch-coupler) is only as good as the id it lands on: a missing id sends the
-    # reader to the top of the page, and a duplicate id sends them to the wrong card. The slug
+    # reader to the top of the page, and a duplicate id sends them to the wrong row. The slug
     # is normalised the same way the builder normalises it -- the `part-` prefix and the
     # [a-z0-9-] sweep -- because four part ids kept the commas from their names, and two begin
     # with a digit, which html-validate's valid-id rule rejects.
     def slug(pid):
         return "part-" + re.sub(r"[^a-z0-9]+", "-", str(pid).lower()).strip("-")
 
-    ids = re.findall(r'<li class="part" id="([^"]*)"', html)
+    ids = re.findall(r'<tr class="part" id="([^"]*)"', html)
     want_ids = [slug(p["id"]) for _, p in parts]
-    check(len(ids) == total, "every card carries an id (%d cards, %d ids)" % (total, len(ids)))
+    check(len(ids) == total, "every row carries an id (%d rows, %d ids)" % (total, len(ids)))
     check(sorted(ids) == sorted(want_ids),
-          "every id is the card's own anchor" +
+          "every id is the row's own anchor" +
           (": %s" % sorted(set(want_ids) - set(ids))[:3] if set(want_ids) - set(ids) else ""))
-    check(len(set(ids)) == len(ids), "no duplicate card id")
+    check(len(set(ids)) == len(ids), "no duplicate row id")
 
     # 2. links
     guide_parts = [(s["key"], p) for s in systems for p in s["parts"] if p.get("guide")]
@@ -82,13 +87,20 @@ def main():
           "every part with a guide links to it (%d parts)" % len(guide_parts)
           + (": missing %s" % missing_guide[:5] if missing_guide else ""))
 
-    # 2b. A CARD WITH NOTHING TO LINK SAYS SO (quick wins #13, 2026-10-16).
-    cards = re.findall(r'<li class="part" id="[^"]*".*?</li>', html, re.S)
-    no_links = [c for c in cards if 'class="part-links"' not in c]
-    check(all('part-none' in c for c in no_links),
-          "every card with no link says so (%d cards)" % len(no_links))
-    check(all('part-none' not in c for c in cards if 'class="part-links"' in c),
-          "no linked card carries the dead-end line")
+    # 2b. A ROW WITH NOTHING TO LINK SAYS SO (quick wins #13, 2026-10-16).
+    # THE MARKUP MOVED TO THE TABLE (2026-11-14). A row was <li class="part">...</li> carrying
+    # <p class="part-links">; it is now <tr class="part">...</tr> carrying <td class="read">. The
+    # rule is unchanged and still checked in both directions: a row with no link must say "No guide
+    # yet", and a row WITH a link must not carry the dead-end line. Both forms are accepted for the
+    # link cell so this cannot pass merely because the selector was retargeted wrongly.
+    rows = re.findall(r'<tr class="part".*?</tr>', html, re.S)
+    check(len(rows) == total, "found every row for the dead-end check (%d rows)" % len(rows))
+    has_guide_like = [r for r in rows if 'class="tlink"' in r or 'class="doc-link"' in r]
+    no_links = [r for r in rows if 'class="tlink"' not in r and 'class="doc-link"' not in r]
+    check(all('class="none"' in r for r in no_links),
+          "every row with no link says so (%d rows)" % len(no_links))
+    check(all('class="none"' not in r for r in has_guide_like),
+          "no linked row carries the dead-end line")
 
     # THE SECOND SLOT (Ty, 2026-10-15). A card can carry guide2 and guide3 as doc-links;
     # each one must actually be on the card, same rule as the primary.

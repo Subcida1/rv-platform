@@ -190,16 +190,29 @@ def foot(script):
 
 
 def part_html(p):
-    """One part. Name, the other names, what it does, which RVs have it, and what to read next.
+    """One part, as a table row. Name, what it does, the other names, which RVs have it, what to read.
 
-    THE ENTRY LEADS WITH THE NAME AND THE ALIASES (redesign, 2026-11-13). The alias line used to sit
-    at the FOOT of the card, which put the one piece of information a reader uses to check they are
-    in the right place below everything they had not asked for yet. A reader who searched "ball
-    coupler" and landed on "Hitch coupler" needs that match immediately, not after the chips, the
-    buttons and the description. Claude's design ranked it 2nd of 7 for exactly that reason, and it
-    is a pure reorder -- no data change, nothing gained or lost.
+    REBUILT AS A TABLE ROW (2026-11-14), replacing a <li class="part"> card. Ty compared the built
+    page against the approved v2 mockup and said the two looked nothing alike: the mockup is a
+    TABLE with column headers (Part / What it does / System / Guide), the live page was a stack of
+    cards. He chose "Rebuild it as the v2 table."
+
+    Why the shape matters and is not cosmetic: a card cost ~216px per part and the table costs
+    ~90px, so 210 parts go from a ~26,000px page to roughly 12,000px. It also makes the columns
+    readable as columns, which is what lets the guide link become a quiet text link: a headed
+    "Guide" column tells the reader what the link is, so the link does not have to shout to be
+    understood (see the guide-link comment below).
+
+    WHAT WAS KEPT, on Ty's instruction ("Keep them - alias line under the name, gate note under
+    the description, extra guide as a second link"): the alias line, the `requires` gate note, and
+    the second-guide link. So the row is taller than the mockup's, and that is a decision, not a
+    regression -- the mockup dropped data this page should not drop.
+
+    THE `id` STAYS ON THE ROW and stays the anchor, so in-page links to a part still work. The
+    data-* attributes stay because parts.js filters on them; they are the contract between the
+    build and the filter, and the table did not change that contract.
     """
-    out = ['      <li class="part" id="%s" data-system="%s" data-scope="%s" data-fit="%s" data-search="%s">'
+    out = ['        <tr class="part" id="%s" data-system="%s" data-scope="%s" data-fit="%s" data-search="%s">'
            % (esc(anchor(p["id"])), esc(p.get("_system", "")),
               esc(p.get("scope") or "unreviewed"), esc(" ".join(p.get("fit") or [])),
               # `does` is included because the placeholder promises "a part, or what it does".
@@ -207,119 +220,109 @@ def part_html(p):
               # nothing while the words sat on the page. Found by an independent review.
               esc(" ".join([p["n"]] + (p.get("aka") or "").split("|")
                            + [p.get("does") or ""] + (p.get("types") or [])).lower()))]
-    out.append('        <h3 class="part-h">%s</h3>' % esc(p["n"]))
 
+    # --- COLUMN 1: the name. The aliases ride directly under it, because a reader who searched
+    # "ball coupler" and landed on "Hitch coupler" needs that match immediately, not after the
+    # description. Ranked 2nd of 7 by the design review for exactly that reason.
+    out.append('          <td class="pn">%s' % esc(p["n"]))
     aka = [a.strip() for a in (p.get("aka") or "").split("|") if a.strip()]
     if aka:
-        # THE ALIASES SIT DIRECTLY UNDER THE NAME, as the second thing on the card. See the
-        # function docstring for why. The label reads "Also called" rather than "Also known as",
-        # which is what T asked for on 2026-10-10 ("I don't like the term 'also called'" was his
-        # earlier phrasing of the same complaint, and the shorter label reads as a name list rather
-        # than a sentence).
-        out.append('        <p class="part-aka"><span class="part-aka-l">Also called</span> '
-                   '<span class="part-aka-v">%s</span></p>' % esc(", ".join(aka)))
+        # "Also called" rather than "Also known as", which is what T asked for on 2026-10-10.
+        out.append('<em class="part-aka"><span class="part-aka-l">Also called</span> %s</em>'
+                   % esc(", ".join(aka)))
+    out.append('</td>')
 
+    # --- COLUMN 2: what it does, plus the two conditional notes that belong with the description.
     does = sentence(p.get("does"))
-    if does:
-        out.append('        <p class="part-does">%s</p>' % esc(does))
-
+    out.append('          <td class="pd">%s' % (esc(does) if does else ""))
     scope = p.get("scope") or "unreviewed"
     fit = p.get("fit") or []
     requires = p.get("requires") or []
-    # THE CHIPS SAY ONE THING ONLY: WHICH RV THIS FITS, AND ONLY WHEN THE ANSWER IS NARROWER THAN
-    # "EVERY RV" (redesign, 2026-11-13). The old row listed every class the part was tagged with, so
-    # 180 of 210 cards carried "Class A" and 157 carried "Travel trailer" -- a row of pills that
-    # changed nothing from card to card and read as decoration. Now:
-    #
-    #   scope=all        -> no chip. The common case (148 of 210) and the reason the page quiets down.
-    #   scope=motorhome  -> one chip, "Motorhome only".
-    #   scope=towable    -> one chip, "Towable only".
-    #   scope=specific   -> the leaf classes from fit, which is where the real distinctions live.
-    #   scope=unreviewed -> NO CHIP AND NO CLAIM. It renders nothing rather than defaulting to a
-    #                       guess, because "applies to every RV" is a claim and nobody has checked
-    #                       it. That third state is why the vocabulary has it.
-    #
-    # The chip is rendered from the same field the filter matches on, so the control and the chips
-    # cannot disagree about a part.
+    # THE SCOPE NOTE SAYS ONE THING ONLY: WHICH RV THIS FITS, AND ONLY WHEN THE ANSWER IS NARROWER
+    # THAN "EVERY RV" (redesign, 2026-11-13). scope=all renders nothing (the common case, 148 of
+    # 210); scope=unreviewed renders nothing AND claims nothing, because "applies to every RV" is a
+    # claim nobody has checked. The old row listed every class a part was tagged with, so 180 of 210
+    # rows carried "Class A" and the row changed nothing from one row to the next.
     if scope in ("motorhome", "towable"):
-        out.append('        <p class="chips part-types">'
-                   '<span class="part-scope">%s only</span></p>'
+        out.append('<span class="note">%s only</span>'
                    % ("Motorhome" if scope == "motorhome" else "Towable"))
     elif scope == "specific" and fit:
         # A NOTE, NOT A BUTTON (2026-11-14). These were <button class="chip js-part-fit"> and they
-        # filtered, so a card carried bare controls that looked like tags. Ty, 2026-11-14: "the
+        # filtered, so a row carried bare controls that looked like tags. Ty, 2026-11-14: "the
         # buttons themselves should be incorporated with the buttons along the top." The RV choice
-        # now lives in the dropdown above the list, and this states the FACT about the part, in the
-        # same visual language as the motorhome/towable notes above it. Same words, no affordance.
-        out.append('        <p class="chips part-types">%s</p>'
-                   % "".join('<span class="part-scope">%s only</span>' % esc(type_label(t))
-                             for t in fit))
-    # `requires` is an OPTIONAL-FEATURE GATE, not a class, so it is TEXT and not a pill: "Only if
-    # your RV has a generator". A pill would put it in the same visual language as the class chips
-    # and imply the two are the same kind of statement.
+        # now lives in the dropdown above the list; this states the FACT about the part. Same words,
+        # no affordance, same visual language as the motorhome/towable notes.
+        out.append('<span class="note">%s only</span>'
+                   % esc(", ".join(type_label(t) for t in fit)))
+    # `requires` is an OPTIONAL-FEATURE GATE, not a class, so it is TEXT and not a pill: a pill
+    # would put it in the same visual language as the class note and imply the two are the same
+    # kind of statement. It sits in this column because it qualifies what the part does.
     if requires:
-        out.append('        <p class="part-req">Only if your RV has %s</p>'
+        out.append('<span class="part-req">Only if your RV has %s</span>'
                    % esc(", ".join(str(REQ_LABEL.get(r, r.replace("-", " "))) for r in requires)))
+    out.append('</td>')
 
+    # --- COLUMN 3: the system this part belongs to.
+    out.append('          <td class="sys">%s</td>' % esc(p.get("_system_label", "")))
+
+    # --- COLUMN 4: what to read next.
     links = []
     if p.get("guide"):
-        # A small button, not underlined prose. Ty: "I do think that should be maybe a little
-        # button though instead of just a text blank". The maker links stay as links: they go
-        # off-site, which is a different promise from a guide on this site.
-        # btn-gb, the blue gradient stroke, so the guide reads as the primary action and is
-        # visually distinct from the grey-bordered maker buttons and the flat type pills.
-        # Ty, 2026-10-05: "make the how to fix it and the ... manuals buttons look a little bit
-        # different than the travel trailer ... and motorhome buttons so that they're visually
-        # distinct from each other."
-        links.append('<a class="btn btn-gb btn-sm" href="/guides/%s.html">'
-                     'How to fix it</a>' % esc(p["guide"]))
-    # THE SECOND GUIDE (Ty, 2026-10-15: "the card template needs to carry two"). A card whose
-    # part has more than one useful guide carries the primary as the gradient button and the
-    # rest as doc-links, labelled from each guide's own h1 so the label cannot drift from the
-    # page. Up to two extras, because the black-tank card is the one part with two distinct
-    # guides behind it (the routine and the clogged-tank rescue).
+        # A QUIET TEXT LINK, NOT A BUTTON (2026-11-14). This REVERSES Ty's 2026-10-05 request
+        # ("I do think that should be maybe a little button though instead of just a text blank"),
+        # which is why the button existed. On 2026-11-14 he compared the built page against the
+        # approved v2 mockup: the mockup renders "Repair guide" as a text link, and he asked for the
+        # mockup's version. Verbatim: "Match the mockup: a quiet 'Repair guide' text link, not a
+        # button."
+        #
+        # The 2026-10-05 worry was legibility, not emphasis -- a bare "text blank" reads as prose
+        # rather than something pressable -- and the table answers it structurally: the column is
+        # headed "Guide", so the reader is told what the link is before they read the link. That is
+        # why the header and this link changed together and neither works without the other. A
+        # filled gradient button also made 140 of 210 rows carry a competing CTA down the right
+        # edge, out-shouting the maker links it was originally meant to be distinct from.
+        #
+        # The label goes back to "Repair guide" because the destination IS a guide on this site.
+        # "How to fix it" promised a fix the pages do not always deliver -- several are
+        # identification or spec guides -- and the mockup already used the honest word.
+        links.append('<a class="tlink" href="/guides/%s.html">Repair guide</a>'
+                     % esc(p["guide"]))
+    # THE SECOND GUIDE (Ty, 2026-10-15: "the card template needs to carry two"). Up to two extras,
+    # labelled from each guide's own h1 so the label cannot drift from the page. They ride under the
+    # primary link in the same cell, because a table row has no second row to give them.
     for key, label_key in (("guide2", "guide2_label"), ("guide3", "guide3_label")):
         slug2 = p.get(key)
         if slug2:
             label2 = p.get(label_key) or guide_label(slug2)
-            links.append('<a class="doc-link" href="/guides/%s">%s</a>'
+            links.append('<a class="tlink tlink-2" href="/guides/%s">%s</a>'
                          % (esc(slug2), esc(label2)))
     if p.get("tool"):
-        # A TOOL IS NOT A GUIDE AND IS NOT A MAKER'S DOCUMENT, so it gets neither button. It is a
-        # page on THIS site that answers a question about this part, which makes it a reference like
-        # the maker links -- so it takes the same .doc-link shape, minus the off-site arrow that
-        # shape implies. W20's predecessor recorded the anode-rod card -> /tools/rv-anode-rod
-        # suggestion three times and it never landed, because the renderer had exactly two link
-        # sources (guide, makers) and no field for an internal tool link. This is that field.
+        # A TOOL IS NOT A GUIDE AND IS NOT A MAKER'S DOCUMENT. It is a page on THIS site that
+        # answers a question about this part, so it is a reference like the maker links and takes
+        # the same .tlink shape, labelled "<name> tool" so it cannot be mistaken for a guide.
         slug = p["tool"]
         label = slug.replace("rv-", "").replace("-", " ")
-        links.append('<a class="doc-link" href="/tools/%s">%s tool</a>'
+        links.append('<a class="tlink" href="/tools/%s">%s tool</a>'
                      % (esc(slug), esc(label.capitalize())))
     for m in (p.get("makers") or []):
         brand, url = m.get("brand"), m.get("url")
         if brand and url:
-            # A maker's manual is a reference, not an action: it leaves the site for
-            # somebody else's document. It was a .btn-secondary pill until 2026-10-09,
-            # which made it look like the guide button next to it. Ty: "the how to fix
-            # it buttons and the manuals buttons look too similar ... make the manuals
-            # buttons look totally different somehow." Now it is a .doc-link -- squared,
-            # flat, smaller, with an off-site arrow -- so the guide keeps the gradient
-            # edge and is the only pressable-looking thing on the row.
+            # A maker's manual is a reference, not an action: it leaves the site for somebody
+            # else's document. Kept as .doc-link -- squared, flat, smaller, with an off-site arrow
+            # -- so a manual is never mistaken for a guide on this site.
             links.append('<a class="doc-link" href="%s" target="_blank" '
                          'rel="noopener">%s manuals</a>' % (esc(url), esc(brand)))
     if links:
-        out.append('        <p class="part-links">%s</p>' % " ".join(links))
+        out.append('          <td class="read">%s</td>' % " ".join(links))
     else:
-        # A CARD WITH NOTHING TO LINK SAYS SO (quick wins #13, 2026-10-16). The dead-end cards
-        # used to end at the alias line with no sign that anything was missing, which read as a
-        # truncated card rather than an honest gap. The line is emitted from the same `links`
-        # decision the block above uses, so it appears and disappears with the links themselves
-        # and cannot go stale as guides are added.
-        out.append('        <p class="part-links part-none">No repair guide yet</p>')
+        # A ROW WITH NOTHING TO LINK SAYS SO (quick wins #13, 2026-10-16). A dead-end row used to
+        # just stop, which read as a truncated entry rather than an honest gap. Emitted from the same
+        # `links` decision the block above uses, so it appears and disappears with the links
+        # themselves and cannot go stale as guides are added.
+        out.append('          <td class="read"><span class="none">No guide yet</span></td>')
 
-    out.append("      </li>")
+    out.append('        </tr>')
     return "\n".join(out)
-
 
 def build():
     data = json.loads(PARTS.read_text(encoding="utf-8"))
@@ -495,11 +498,30 @@ def build():
             out.append('    <p class="guide-group-note">%s</p>\n' % esc(s["note"]))
         out.append('    <p class="parts-sys-count"><span data-claim="parts-%s">%d</span> parts</p>\n'
                    % (esc(s["key"]), len(s["parts"])))
-        out.append('    <ul class="part-list">\n')
+        # A TABLE PER SYSTEM, WITH ITS OWN HEADER ROW (2026-11-14). Each system is a separate table
+        # rather than one table for the whole page, because the parts are already grouped by system
+        # and grouped into sections; one table spanning nine headings would break the grouping the
+        # page is built on. The header repeats per system, which is also what makes the page usable
+        # when a reader lands deep in it, and tables are how a screen reader announces "column:
+        # Guide" per cell.
+        #
+        # The column widths mirror the approved v2 mockup: Part 22%, What it does 42%, System 14%,
+        # Guide 13%. They total 91%, not 100%, which is deliberate and was in the approved mockup --
+        # a table with fixed widths that total less than the container lets the description column
+        # take the slack instead of stretching every column proportionally.
+        out.append('    <table class="part-table">\n')
+        out.append('      <thead><tr>'
+                   '<th class="pn" scope="col" style="width:22%">Part</th>'
+                   '<th class="pd" scope="col" style="width:42%">What it does</th>'
+                   '<th class="sys" scope="col" style="width:14%">System</th>'
+                   '<th class="read" scope="col" style="width:13%">Guide</th>'
+                   '</tr></thead>\n')
+        out.append('      <tbody>\n')
         for p in s["parts"]:
-            p = dict(p, _system=s["key"])
+            p = dict(p, _system=s["key"], _system_label=s["label"])
             out.append(part_html(p) + "\n")
-        out.append('    </ul>\n')
+        out.append('      </tbody>\n')
+        out.append('    </table>\n')
         # Inside the section, not after it: parts.js hides whole sections, so a link left outside
         # stayed visible under a system the reader had filtered away. Nine of them, in fact.
         #
