@@ -246,10 +246,14 @@ def part_html(p):
                    '<span class="part-scope">%s only</span></p>'
                    % ("Motorhome" if scope == "motorhome" else "Towable"))
     elif scope == "specific" and fit:
+        # A NOTE, NOT A BUTTON (2026-11-14). These were <button class="chip js-part-fit"> and they
+        # filtered, so a card carried bare controls that looked like tags. Ty, 2026-11-14: "the
+        # buttons themselves should be incorporated with the buttons along the top." The RV choice
+        # now lives in the dropdown above the list, and this states the FACT about the part, in the
+        # same visual language as the motorhome/towable notes above it. Same words, no affordance.
         out.append('        <p class="chips part-types">%s</p>'
-                   % "".join('<button type="button" class="chip js-part-fit" data-fit="%s"'
-                             ' aria-pressed="false">%s</button>'
-                             % (esc(t), esc(type_label(t))) for t in fit))
+                   % "".join('<span class="part-scope">%s only</span>' % esc(type_label(t))
+                             for t in fit))
     # `requires` is an OPTIONAL-FEATURE GATE, not a class, so it is TEXT and not a pill: "Only if
     # your RV has a generator". A pill would put it in the same visual language as the class chips
     # and imply the two are the same kind of statement.
@@ -395,25 +399,61 @@ def build():
 ''' % (total, n_systems, linked, covered, total - linked))
 
     # The filter. Everything below is already on the page; this only narrows it.
-    out.append('''  <div class="filter-row parts-filter" role="search">
-    <div class="search-bar">
-      <input type="search" id="parts-q" autocomplete="off" aria-label="Search the parts list" placeholder="Search a part, or what it does">
+    #
+    # REBUILT 2026-11-14 to Ty's brief: "Put the search bar and the show parts for dropdown on the
+    # same area" and "center the buttons up top ... put the rest of the options on new lines,
+    # center them all." So the shape is now:
+    #
+    #   line 1   search (left) and the RV picker (right), one centred group
+    #   line 2+  system chips, centred, wrapping over as many lines as they need
+    #   then     the count, then the helper line
+    #
+    # THE RV PICKER IS A DROPDOWN, NOT CHIPS. It replaced three "My RV" buttons (Any/Motorhome/
+    # Towable) that could only ever say three things, and the real question is "which RV do I
+    # have", which has seven answers. A select holds them without spending a row of pills on it,
+    # groups them (Motorhomes / Towables / Truck campers), and is a control a reader already knows.
+    #
+    # THE SYSTEM CHIPS CARRY COUNTS, deliberately reversing the 2026-10-10 "no numbers" note that
+    # still governs the JUMP BAR below. Ty, 2026-11-14, asked directly: "a count on each filter chip
+    # is fine - it changes when I pick an RV type so it's information." That last clause is the
+    # distinction: a jump-bar count never moves, so it was decoration; these recompute against the
+    # chosen RV (parts.js refreshChipCounts) so a chip cannot advertise 210 under a filter showing
+    # 189. The jump bar keeps its no-counts rule.
+    out.append('''  <div class="parts-controls">
+    <div class="parts-top">
+      <div class="search-bar">
+        <input type="search" id="parts-q" autocomplete="off" aria-label="Search the parts list" placeholder="Search a part or a symptom" data-ph-full="Search a part or a symptom" data-ph-short="Search a part">
+      </div>
+      <label class="rvpick">
+        <span class="rvlab">Show parts for</span>
+        <select id="parts-rv" aria-label="Show parts for a type of RV">
+          <optgroup label="RVs">
+            <option value="">Any</option>
+            <option value="class-a">Class A</option>
+            <option value="class-b">Class B</option>
+            <option value="class-c">Class C</option>
+          </optgroup>
+          <optgroup label="Towables">
+            <option value="travel-trailer">Travel trailer</option>
+            <option value="fifth-wheel">Fifth wheel</option>
+            <option value="pop-up">Pop-up</option>
+          </optgroup>
+          <optgroup label="Truck campers">
+            <option value="truck-camper">Truck camper</option>
+          </optgroup>
+        </select>
+      </label>
     </div>
-    <label class="fld"><span>System</span>
-      <select id="parts-system"><option value="">All systems</option>%s</select>
-    </label>
-    <fieldset class="parts-myrv" id="parts-myrv">
-      <legend>My RV</legend>
-      <button type="button" class="chip js-myrv on" data-scope="" aria-pressed="true">Any</button>
-      <button type="button" class="chip js-myrv" data-scope="motorhome" aria-pressed="false">Motorhome</button>
-      <button type="button" class="chip js-myrv" data-scope="towable" aria-pressed="false">Towable</button>
-    </fieldset>
+    <div class="parts-syschips" id="parts-syschips" role="group" aria-label="Filter parts by system">
+      <button type="button" class="chip js-sys on" data-system="" aria-pressed="true">All <i>%d</i></button>
+%s    </div>
+    <p class="parts-count" role="status"><span id="parts-shown">%d</span> of %d shown</p>
+    <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
   </div>
-  <p class="parts-count" role="status"><span id="parts-shown">%d</span> parts shown</p>
-  <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
-''' % ("".join('<option value="%s">%s</option>' % (esc(s["key"]), esc(s["label"]))
-               for s in systems),
-       total))
+''' % (total,
+       "".join('      <button type="button" class="chip js-sys" data-system="%s" aria-pressed="false">%s <i>%d</i></button>\n'
+               % (esc(s["key"]), esc(s["label"]), len(s["parts"])) for s in systems),
+       total, total))
 
     # A JUMP BAR OVER THE NINE SYSTEMS. 210 entries in nine sections is a long page,
     # and until 2026-10-09 the only way to reach "Propane system" was to scroll past
@@ -430,14 +470,22 @@ def build():
     # stay inside the page margins. So the filter column closes here and the content
     # column reopens under it.
     out.append('</div>\n')
-    out.append('  <nav class="hub-jump" aria-label="Jump to a system">\n   <div class="wrap">\n')
-    # NO COUNTS IN THE CHIPS. Ty, 2026-10-10: "the parts also don't really need any numbers next
-    # to the different categories." Each chip used to say how many parts sat under it, which made
-    # every button carry a number the reader has to read past to get to the word. The counts above
-    # each SECTION stay where they belong, next to the thing they count.
-    out.append('    <ul>%s</ul>\n' % "".join(
-        '<li><a href="#%s">%s</a></li>' % (esc(s["key"]), esc(s["label"])) for s in systems))
-    out.append('   </div>\n  </nav>\n<div class="wrap">\n')
+    # THE JUMP BAR IS GONE (2026-11-14). It listed the same nine systems as the filter chips directly
+    # above it, and the two sat about 100px apart, which is a page that appears to offer the same
+    # control twice. A designer critique of the rebuilt page called the redundancy out by name.
+    #
+    # The chips are the stronger of the two, so they are the one that stays: same nine systems in the
+    # same order, but they narrow the 210 parts instead of scrolling past them, and each carries a
+    # live count. A jump link is what a table of contents is for, and this page now answers "show me
+    # only this system" directly, which is what a reader clicking a system name was trying to do.
+    #
+    # What is NOT lost: every section keeps its own <h2> heading and its own part count, so the list
+    # still reads and prints as a structured index with nothing hidden, and the filter does not exist
+    # on paper (the whole control block is display:none in print).
+    #
+    # The OLD BAR also carried a curated order and an anchor per section, so the section ids must stay
+    # (they are the card anchors' parents and the tests' hooks) even though nothing links to them now.
+    out.append('<div class="wrap">\n')
 
     # Everything below is real HTML, grouped by system, so it reads without script.
     for i, s in enumerate(systems):

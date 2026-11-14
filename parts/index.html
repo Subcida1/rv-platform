@@ -7,7 +7,7 @@
   <link rel="canonical" href="https://originrv.com/parts/">
   <title>RV Parts List: Every Part of an RV | OriginRV</title>
   <meta name="description" content="All 210 parts an RV is made of, across 9 systems, with what each one does, the names people use for it, and the guide that shows how to fix it.">
-  <link rel="stylesheet" href="assets/css/style.css?v=b2c9be2e">
+  <link rel="stylesheet" href="assets/css/style.css?v=56b7d3e7">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=aad9f751">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=a8459cee">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png?v=a80bf3fd">
@@ -48,28 +48,47 @@
 
 <div class="sec">
 <div class="wrap">
-  <div class="filter-row parts-filter" role="search">
-    <div class="search-bar">
-      <input type="search" id="parts-q" autocomplete="off" aria-label="Search the parts list" placeholder="Search a part, or what it does">
+  <div class="parts-controls">
+    <div class="parts-top">
+      <div class="search-bar">
+        <input type="search" id="parts-q" autocomplete="off" aria-label="Search the parts list" placeholder="Search a part or a symptom" data-ph-full="Search a part or a symptom" data-ph-short="Search a part">
+      </div>
+      <label class="rvpick">
+        <span class="rvlab">Show parts for</span>
+        <select id="parts-rv" aria-label="Show parts for a type of RV">
+          <optgroup label="RVs">
+            <option value="">Any</option>
+            <option value="class-a">Class A</option>
+            <option value="class-b">Class B</option>
+            <option value="class-c">Class C</option>
+          </optgroup>
+          <optgroup label="Towables">
+            <option value="travel-trailer">Travel trailer</option>
+            <option value="fifth-wheel">Fifth wheel</option>
+            <option value="pop-up">Pop-up</option>
+          </optgroup>
+          <optgroup label="Truck campers">
+            <option value="truck-camper">Truck camper</option>
+          </optgroup>
+        </select>
+      </label>
     </div>
-    <label class="fld"><span>System</span>
-      <select id="parts-system"><option value="">All systems</option><option value="towing-and-running-gear">Towing and running gear</option><option value="power-and-electrical">Power and electrical</option><option value="water-and-plumbing">Water and plumbing</option><option value="sanitation-and-tanks">Sanitation and tanks</option><option value="heating-and-cooling">Heating and cooling</option><option value="exterior-and-body">Exterior and body</option><option value="kitchen-and-appliances">Kitchen and appliances</option><option value="chassis-and-drivetrain">Chassis and drivetrain</option><option value="propane">Propane system</option></select>
-    </label>
-    <fieldset class="parts-myrv" id="parts-myrv">
-      <legend>My RV</legend>
-      <button type="button" class="chip js-myrv on" data-scope="" aria-pressed="true">Any</button>
-      <button type="button" class="chip js-myrv" data-scope="motorhome" aria-pressed="false">Motorhome</button>
-      <button type="button" class="chip js-myrv" data-scope="towable" aria-pressed="false">Towable</button>
-    </fieldset>
+    <div class="parts-syschips" id="parts-syschips" role="group" aria-label="Filter parts by system">
+      <button type="button" class="chip js-sys on" data-system="" aria-pressed="true">All <i>210</i></button>
+      <button type="button" class="chip js-sys" data-system="towing-and-running-gear" aria-pressed="false">Towing and running gear <i>32</i></button>
+      <button type="button" class="chip js-sys" data-system="power-and-electrical" aria-pressed="false">Power and electrical <i>24</i></button>
+      <button type="button" class="chip js-sys" data-system="water-and-plumbing" aria-pressed="false">Water and plumbing <i>24</i></button>
+      <button type="button" class="chip js-sys" data-system="sanitation-and-tanks" aria-pressed="false">Sanitation and tanks <i>19</i></button>
+      <button type="button" class="chip js-sys" data-system="heating-and-cooling" aria-pressed="false">Heating and cooling <i>21</i></button>
+      <button type="button" class="chip js-sys" data-system="exterior-and-body" aria-pressed="false">Exterior and body <i>40</i></button>
+      <button type="button" class="chip js-sys" data-system="kitchen-and-appliances" aria-pressed="false">Kitchen and appliances <i>25</i></button>
+      <button type="button" class="chip js-sys" data-system="chassis-and-drivetrain" aria-pressed="false">Chassis and drivetrain <i>15</i></button>
+      <button type="button" class="chip js-sys" data-system="propane" aria-pressed="false">Propane system <i>10</i></button>
+    </div>
+    <p class="parts-count" role="status"><span id="parts-shown">210</span> of 210 shown</p>
+    <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
   </div>
-  <p class="parts-count" role="status"><span id="parts-shown">210</span> parts shown</p>
-  <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
 </div>
-  <nav class="hub-jump" aria-label="Jump to a system">
-   <div class="wrap">
-    <ul><li><a href="parts/#towing-and-running-gear">Towing and running gear</a></li><li><a href="parts/#power-and-electrical">Power and electrical</a></li><li><a href="parts/#water-and-plumbing">Water and plumbing</a></li><li><a href="parts/#sanitation-and-tanks">Sanitation and tanks</a></li><li><a href="parts/#heating-and-cooling">Heating and cooling</a></li><li><a href="parts/#exterior-and-body">Exterior and body</a></li><li><a href="parts/#kitchen-and-appliances">Kitchen and appliances</a></li><li><a href="parts/#chassis-and-drivetrain">Chassis and drivetrain</a></li><li><a href="parts/#propane">Propane system</a></li></ul>
-   </div>
-  </nav>
 <div class="wrap">
   <section class="parts-sys" id="towing-and-running-gear">
     <h2 class="guide-group">Towing and running gear</h2>
@@ -80,35 +99,35 @@
         <h3 class="part-h">Hitch coupler</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">coupler, ball coupler, A-frame coupler</span></p>
         <p class="part-does">The latch on the trailer tongue that drops over the hitch ball and clamps it tight.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a> <a class="doc-link" href="/tools/weight-calculator">Weight calculator tool</a></p>
       </li>
       <li class="part" id="part-hitch-ball-mount-and-ball" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer pop-up" data-search="hitch ball mount and ball ball mount hitch ball draw bar drop hitch the draw bar that slides into the truck receiver, topped with the ball the coupler grabs trailer pop-up">
         <h3 class="part-h">Hitch ball mount and ball</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">ball mount, hitch ball, draw bar, drop hitch</span></p>
         <p class="part-does">The draw bar that slides into the truck receiver, topped with the ball the coupler grabs.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a></p>
       </li>
       <li class="part" id="part-tongue-jack" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer pop-up" data-search="tongue jack trailer jack a-frame jack electric tongue jack power jack raises and lowers the tongue so the trailer can be hitched and leveled trailer pop-up">
         <h3 class="part-h">Tongue jack</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">trailer jack, A-frame jack, electric tongue jack, power jack</span></p>
         <p class="part-does">Raises and lowers the tongue so the trailer can be hitched and leveled.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a> <a class="doc-link" href="https://www.barkermfg.com/owners-manuals.html" target="_blank" rel="noopener">Barker manuals</a></p>
       </li>
       <li class="part" id="part-stabilizer-jacks" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer fifth-wheel pop-up" data-search="stabilizer jacks scissor jacks stabilizers stabilizing jacks hold the trailer steady once you're parked. they don't lift it trailer fifth-wheel pop-up">
         <h3 class="part-h">Stabilizer jacks</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">scissor jacks, stabilizers, stabilizing jacks</span></p>
         <p class="part-does">Hold the trailer steady once you're parked. They don't lift it.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-leveling-jacks-not-working">How to fix it</a></p>
       </li>
       <li class="part" id="part-leveling-jacks-hydraulic" data-system="towing-and-running-gear" data-scope="specific" data-fit="class-a class-c" data-search="leveling jacks (hydraulic) hydraulic levelers hwh jacks level-up system jacks down light lift and level a motorhome on its own suspension fifth-wheel class-a class-c">
         <h3 class="part-h">Leveling jacks (hydraulic)</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">hydraulic levelers, HWH jacks, level-up system, jacks down light</span></p>
         <p class="part-does">Lift and level a motorhome on its own suspension.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span></p>
         <p class="part-req">Only if your RV has leveling jacks</p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-leveling-jacks-not-working">How to fix it</a></p>
       </li>
@@ -116,56 +135,56 @@
         <h3 class="part-h">Air leveling</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">air leveling system, HWH Active Air, Valid Air</span></p>
         <p class="part-does">Levels the coach on its own air suspension, no jacks.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-leveling-jacks-not-working">How to fix it</a> <a class="doc-link" href="https://www.hwhcorp.com/ml54800_srvc.html" target="_blank" rel="noopener">HWH manuals</a></p>
       </li>
       <li class="part" id="part-weight-distribution-hitch" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer" data-search="weight-distribution hitch wd hitch equalizer hitch load leveling hitch moves tongue weight forward onto the tow vehicle's front axle trailer">
         <h3 class="part-h">Weight-distribution hitch</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">WD hitch, equalizer hitch, load leveling hitch</span></p>
         <p class="part-does">Moves tongue weight forward onto the tow vehicle's front axle.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-capacity">How to fix it</a> <a class="doc-link" href="/tools/weight-calculator">Weight calculator tool</a></p>
       </li>
       <li class="part" id="part-sway-control" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer" data-search="sway control sway bar anti-sway friction sway control a friction bar clamped between the trailer tongue and the hitch, dragging against side to side movement trailer">
         <h3 class="part-h">Sway control</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">sway bar, anti-sway, friction sway control</span></p>
         <p class="part-does">A friction bar clamped between the trailer tongue and the hitch, dragging against side to side movement.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a> <a class="doc-link" href="https://hensleymfg.com/pages/hensley-arrow-product-manuals" target="_blank" rel="noopener">Hensley manuals</a></p>
       </li>
       <li class="part" id="part-safety-chains" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer pop-up" data-search="safety chains breakaway chains two chains from the trailer tongue crossed under the coupler and hooked to the truck, catching the tongue if it comes loose trailer pop-up">
         <h3 class="part-h">Safety chains</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">breakaway chains</span></p>
         <p class="part-does">Two chains from the trailer tongue crossed under the coupler and hooked to the truck, catching the tongue if it comes loose.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a></p>
       </li>
       <li class="part" id="part-breakaway-switch" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer fifth-wheel pop-up" data-search="breakaway switch breakaway cable breakaway kit applies the trailer brakes if it separates from the tow vehicle trailer">
         <h3 class="part-h">Breakaway switch</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">breakaway cable, breakaway kit</span></p>
         <p class="part-does">Applies the trailer brakes if it separates from the tow vehicle.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a></p>
       </li>
       <li class="part" id="part-trailer-wiring-and-connector" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer fifth-wheel pop-up" data-search="trailer wiring and connector 7 pin 7-way plug umbilical cord trailer plug carries lights, brakes and charging between the tow vehicle and the trailer trailer fifth-wheel pop-up">
         <h3 class="part-h">Trailer wiring and connector</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">7 pin, 7-way plug, umbilical cord, trailer plug</span></p>
         <p class="part-does">Carries lights, brakes and charging between the tow vehicle and the trailer.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a></p>
       </li>
       <li class="part" id="part-trailer-brakes" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer fifth-wheel pop-up" data-search="trailer brakes electric brakes surge brakes brake assembly disc brakes drums or discs at the trailer wheels that apply their own stopping force, so the trailer is not pushing the truck trailer fifth-wheel">
         <h3 class="part-h">Trailer brakes</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">electric brakes, surge brakes, brake assembly, disc brakes</span></p>
         <p class="part-does">Drums or discs at the trailer wheels that apply their own stopping force, so the trailer is not pushing the truck.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/trailer-brakes-required">How to fix it</a></p>
       </li>
       <li class="part" id="part-brake-controller" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer fifth-wheel pop-up" data-search="brake controller trailer brake controller proportional controller the box in the cab that sends current to the trailer brakes, set to match how hard you are stopping trailer fifth-wheel">
         <h3 class="part-h">Brake controller</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">trailer brake controller, proportional controller</span></p>
         <p class="part-does">The box in the cab that sends current to the trailer brakes, set to match how hard you are stopping.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/trailer-brakes-required">How to fix it</a></p>
       </li>
       <li class="part" id="part-axle" data-system="towing-and-running-gear" data-scope="all" data-fit="" data-search="axle trailer axle torsion axle spring axle drive axle tag axle front axle the beam under the frame that carries the weight and holds the hubs, wheels and brakes trailer fifth-wheel class-a class-c">
@@ -178,14 +197,14 @@
         <h3 class="part-h">Leaf springs and shackles</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">suspension, equalizer, shackle kit, wet bolt kit</span></p>
         <p class="part-does">The stacked steel leaves and the shackles that hang them, letting the trailer ride over bumps.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-frame-and-tongue" data-system="towing-and-running-gear" data-scope="specific" data-fit="travel-trailer fifth-wheel pop-up" data-search="frame and tongue trailer frame a-frame tongue i-beam frame the steel rails running the length of the trailer, with the a-frame up front that carries the coupler trailer fifth-wheel pop-up">
         <h3 class="part-h">Frame and tongue</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">trailer frame, A-frame, tongue, I-beam frame</span></p>
         <p class="part-does">The steel rails running the length of the trailer, with the A-frame up front that carries the coupler.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-frame-cracks">How to fix it</a></p>
       </li>
       <li class="part" id="part-wheel-bearings" data-system="towing-and-running-gear" data-scope="all" data-fit="" data-search="wheel bearings bearings races grease seals bearing buddy ez lube the rollers and races pressed into the hub, letting the wheel turn on the spindle without grinding trailer fifth-wheel pop-up">
@@ -222,42 +241,42 @@
         <h3 class="part-h">Fifth-wheel landing gear</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">front jacks, landing legs, electric landing gear</span></p>
         <p class="part-does">Raise and lower the front of a fifth wheel to hitch it.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-leveling-jacks-not-working">How to fix it</a></p>
       </li>
       <li class="part" id="part-kingpin-and-fifth-wheel-hitch" data-system="towing-and-running-gear" data-scope="specific" data-fit="fifth-wheel" data-search="kingpin and fifth-wheel hitch kingpin box fifth wheel hitch slider hitch the pin hanging under the fifth wheel's overhang, locked into a jaw hitch mounted in the truck bed fifth-wheel">
         <h3 class="part-h">Kingpin and fifth-wheel hitch</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">kingpin box, fifth wheel hitch, slider hitch</span></p>
         <p class="part-does">The pin hanging under the fifth wheel's overhang, locked into a jaw hitch mounted in the truck bed.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-pin-weight-and-payload">How to fix it</a> <a class="doc-link" href="/tools/weight-calculator">Weight calculator tool</a> <a class="doc-link" href="https://www.reesehitches.com/media/installation_instruction/30047.pdf" target="_blank" rel="noopener">Reese manuals</a></p>
       </li>
       <li class="part" id="part-pin-box" data-system="towing-and-running-gear" data-scope="specific" data-fit="fifth-wheel" data-search="pin box fifth wheel pin box morryde pin box rubber pin box holds the kingpin and cushions the connection to the truck fifth-wheel">
         <h3 class="part-h">Pin box</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">fifth wheel pin box, MORryde pin box, rubber pin box</span></p>
         <p class="part-does">Holds the kingpin and cushions the connection to the truck.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a> <a class="doc-link" href="https://morryde.com/operations-manual/" target="_blank" rel="noopener">MORryde manuals</a></p>
       </li>
       <li class="part" id="part-gooseneck-adapter" data-system="towing-and-running-gear" data-scope="specific" data-fit="fifth-wheel" data-search="gooseneck adapter gooseneck conversion gooseneck coupler gooseneck ball lets a fifth wheel ride on a gooseneck ball instead of a fifth-wheel hitch fifth-wheel">
         <h3 class="part-h">Gooseneck adapter</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">gooseneck conversion, gooseneck coupler, gooseneck ball</span></p>
         <p class="part-does">Lets a fifth wheel ride on a gooseneck ball instead of a fifth-wheel hitch.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a></p>
       </li>
       <li class="part" id="part-toad-setup" data-system="towing-and-running-gear" data-scope="specific" data-fit="class-a class-c" data-search="toad setup dinghy tow tow bar baseplate flat tow lets a motorhome pull a car with four wheels down class-a class-c">
         <h3 class="part-h">Toad setup</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">dinghy tow, tow bar, baseplate, flat tow</span></p>
         <p class="part-does">Lets a motorhome pull a car with four wheels down.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a> <a class="doc-link" href="https://cdn.demco-products.com/documents/TB20040.pdf" target="_blank" rel="noopener">Demco manuals</a> <a class="doc-link" href="https://www.roadmasterinc.com/support/manuals/" target="_blank" rel="noopener">Roadmaster manuals</a></p>
       </li>
       <li class="part" id="part-toad-braking-system" data-system="towing-and-running-gear" data-scope="specific" data-fit="class-a class-c" data-search="toad braking system dinghy brake supplemental brake brakebuddy air force one brakes the towed car so it does not push the motorhome class-a class-c">
         <h3 class="part-h">Toad braking system</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">dinghy brake, supplemental brake, BrakeBuddy, Air Force One</span></p>
         <p class="part-does">Brakes the towed car so it does not push the motorhome.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-towing-trailer">How to fix it</a></p>
       </li>
       <li class="part" id="part-air-suspension-and-helper-springs" data-system="towing-and-running-gear" data-scope="all" data-fit="" data-search="air suspension and helper springs air bags sumo springs helper springs air bags or added coils that sit inside or beside the existing springs, holding the load level trailer class-a class-c">
@@ -276,7 +295,7 @@
         <h3 class="part-h">Hitch lock</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">tongue lock, coupler lock, king pin lock</span></p>
         <p class="part-does">Keeps the trailer from being hooked up and towed off.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="travel-trailer" aria-pressed="false">Travel trailer</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Travel trailer only</span><span class="part-scope">Fifth wheel only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-tire-chains" data-system="towing-and-running-gear" data-scope="all" data-fit="" data-search="tire chains snow chains cable chains traction devices get you over a pass in a chain-control area trailer fifth-wheel class-a class-c">
@@ -289,7 +308,7 @@
         <h3 class="part-h">Truck camper tie-downs and jacks</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">camper tie downs, tie-down brackets, electric camper jacks, removable jacks</span></p>
         <p class="part-does">Holds the camper to the truck and lifts it on and off.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="truck-camper" aria-pressed="false">Truck camper</button></p>
+        <p class="chips part-types"><span class="part-scope">Truck camper only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
     </ul>
@@ -316,7 +335,7 @@
         <h3 class="part-h">Power cord reel</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">cord reel, electric cord reel, shore cord reel</span></p>
         <p class="part-does">Winds the shore cord in and out of a compartment.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-surge-protector-and-ems" data-system="power-and-electrical" data-scope="all" data-fit="" data-search="surge protector and ems ems surge guard electrical management voltage regulator autoformer a plug-in box at the pedestal or inlet that checks voltage and miswiring, then cuts power when it reads bad trailer fifth-wheel class-a class-c">
@@ -480,7 +499,7 @@
         <h3 class="part-h">Water hose reel</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">power hose reel, rewind hose reel, fresh water reel</span></p>
         <p class="part-does">A powered reel in a compartment that winds the fresh water hose in and out on command.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-water-pressure-regulator" data-system="water-and-plumbing" data-scope="all" data-fit="" data-search="water pressure regulator pressure regulator inline regulator a small inline valve that caps the park water pressure before it reaches the coach's plumbing trailer fifth-wheel class-a class-c">
@@ -640,14 +659,14 @@
         <h3 class="part-h">Toilet (composting)</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">composting toilet, Nature's Head, Air Head, urine diverter, composting toilet vent</span></p>
         <p class="part-does">Separates solids from liquid and composts, no black tank.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-b" aria-pressed="false">Class B</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class B only</span></p>
         <p class="part-links"><a class="doc-link" href="https://www.dometic.com/en-us/lp/documents-database" target="_blank" rel="noopener">Dometic manuals</a> <a class="doc-link" href="https://natureshead.net/installation-guide-and-manuals/" target="_blank" rel="noopener">Nature's Head manuals</a> <a class="doc-link" href="https://www.thetford.com/support/" target="_blank" rel="noopener">Thetford manuals</a></p>
       </li>
       <li class="part" id="part-cassette-toilet" data-system="sanitation-and-tanks" data-scope="specific" data-fit="class-b pop-up" data-search="cassette toilet cassette porta potti a removable tank you carry to a dump point van pop-up">
         <h3 class="part-h">Cassette toilet</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">cassette, Porta Potti</span></p>
         <p class="part-does">A removable tank you carry to a dump point.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-b" aria-pressed="false">Class B</button><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Class B only</span><span class="part-scope">Pop-up only</span></p>
         <p class="part-links"><a class="doc-link" href="https://www.thetford.com/support/" target="_blank" rel="noopener">Thetford manuals</a></p>
       </li>
       <li class="part" id="part-black-tank" data-system="sanitation-and-tanks" data-scope="all" data-fit="" data-search="black tank holding tank waste tank tank repair tank crack holds what the toilet flushes until you dump it trailer fifth-wheel class-a class-c van">
@@ -672,14 +691,14 @@
         <h3 class="part-h">Cable-operated valves</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">cable valve, remote dump valve</span></p>
         <p class="part-does">Let you work a valve from a compartment away from the tank.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-black-tank-routine">How to fix it</a></p>
       </li>
       <li class="part" id="part-electric-dump-valves" data-system="sanitation-and-tanks" data-scope="specific" data-fit="class-a class-c" data-search="electric dump valves e-valve electric valve auto dump empty the tank at the flip of a switch class-a class-c">
         <h3 class="part-h">Electric dump valves</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">E-Valve, electric valve, auto dump</span></p>
         <p class="part-does">Empty the tank at the flip of a switch.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span></p>
         <p class="part-links"><a class="doc-link" href="https://valterra.com/downloads/" target="_blank" rel="noopener">Valterra manuals</a></p>
       </li>
       <li class="part" id="part-sewer-hose-and-fittings" data-system="sanitation-and-tanks" data-scope="all" data-fit="" data-search="sewer hose and fittings stinky slinky sewer hose bayonet fitting sewer hose support sewer cap bayonet cap carries waste from the valve to the dump point trailer fifth-wheel class-a class-c van">
@@ -766,14 +785,14 @@
         <h3 class="part-h">Hydronic heating</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">Aqua-Hot, Oasis, hydronic furnace, diesel burner</span></p>
         <p class="part-does">Heats the coach and the water from one boiler.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links"><a class="doc-link" href="https://library.aquahot.com/" target="_blank" rel="noopener">Aqua-Hot manuals</a></p>
       </li>
       <li class="part" id="part-heated-floors" data-system="heating-and-cooling" data-scope="specific" data-fit="class-a" data-search="heated floors electric floor heat goldheat in-floor heat heating mats laid under the floor surface, warming the tile from below by zone class-a">
         <h3 class="part-h">Heated floors</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">electric floor heat, GoldHeat, in-floor heat</span></p>
         <p class="part-does">Heating mats laid under the floor surface, warming the tile from below by zone.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-diesel-air-heater" data-system="heating-and-cooling" data-scope="all" data-fit="" data-search="diesel air heater diesel heater espar webasto chinese diesel heater parking heater burns diesel from the fuel tank to heat the coach trailer class-a class-c van">
@@ -814,7 +833,7 @@
         <h3 class="part-h">Basement air conditioner</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">basement AC, under-floor AC, basement air</span></p>
         <p class="part-does">An air conditioner mounted in a lower compartment, cooling the coach through ducts rather than a ceiling unit.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span></p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/rv-air-conditioner-not-cooling">How to fix it</a></p>
       </li>
       <li class="part" id="part-heat-pump-and-heat-strip" data-system="heating-and-cooling" data-scope="all" data-fit="" data-search="heat pump and heat strip heat pump heat strip reverse cycle heats as well as cools, down to a cutoff each maker sets: coleman-mach shuts down near freezing, and dometic locks out at 30 f and resumes at 35 f trailer class-a class-c">
@@ -840,7 +859,7 @@
         <h3 class="part-h">Ceiling fan</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">12 volt ceiling fan, overhead fan, rv ceiling fan</span></p>
         <p class="part-does">Moves air without the noise of the air conditioner.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-ceiling-vents-and-hatch" data-system="heating-and-cooling" data-scope="all" data-fit="" data-search="ceiling vents and hatch roof vent vent lid escape hatch vent cover the lid-covered openings in the ceiling, one of them hinged as an emergency exit trailer fifth-wheel class-a class-c van">
@@ -992,7 +1011,7 @@
         <h3 class="part-h">Storage slide tray</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">cargo slide, slide-out tray, basement tray</span></p>
         <p class="part-does">Slides the whole bay out so you can reach the back.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-body-panels-and-siding" data-system="exterior-and-body" data-scope="all" data-fit="" data-search="body panels and siding filon fiberglass siding aluminum siding sidewall the outer fiberglass or aluminum skin fastened over the frame that forms the coach's walls and sheds weather trailer fifth-wheel class-a class-c">
@@ -1125,14 +1144,14 @@
         <h3 class="part-h">Pop-up lift system</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">pop up lift, winch, lift cable, roof crank</span></p>
         <p class="part-does">The cable and winch mechanism in a pop-up that cranks the roof and bed ends up for camping.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Pop-up only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-canvas-and-bunk-ends" data-system="exterior-and-body" data-scope="specific" data-fit="pop-up" data-search="canvas and bunk ends canvas bunk end vinyl tent bunk end seal the folding walls and the beds that slide out pop-up">
         <h3 class="part-h">Canvas and bunk ends</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">canvas, bunk end, vinyl tent, bunk end seal</span></p>
         <p class="part-does">The folding walls and the beds that slide out.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="pop-up" aria-pressed="false">Pop-up</button></p>
+        <p class="chips part-types"><span class="part-scope">Pop-up only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
     </ul>
@@ -1183,14 +1202,14 @@
         <h3 class="part-h">Dishwasher</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">rv dishwasher, drawer dishwasher, Fisher &amp; Paykel</span></p>
         <p class="part-does">A drawer-style dishwasher built into the galley, washing a small load and draining to the gray tank.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-washer" data-system="kitchen-and-appliances" data-scope="specific" data-fit="class-a class-c fifth-wheel" data-search="washer rv washer washer dryer combo splendide stackable washer a compact washer that runs on the coach's water and power class-a class-c fifth-wheel">
         <h3 class="part-h">Washer</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">rv washer, washer dryer combo, Splendide, stackable washer</span></p>
         <p class="part-does">A compact washer that runs on the coach's water and power.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-req">Only if your RV has a washer or dryer</p>
         <p class="part-links"><a class="doc-link" href="https://www.splendide.com/service/docs.html" target="_blank" rel="noopener">Splendide manuals</a></p>
       </li>
@@ -1198,7 +1217,7 @@
         <h3 class="part-h">Dryer</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">rv dryer, vented dryer, ventless dryer, dryer vent</span></p>
         <p class="part-does">A vented or ventless drum that tumbles the laundry dry, usually stacked with the washer in a closet.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-req">Only if your RV has a washer or dryer</p>
         <p class="part-links"><a class="doc-link" href="https://www.splendide.com/service/docs.html" target="_blank" rel="noopener">Splendide manuals</a></p>
       </li>
@@ -1206,7 +1225,7 @@
         <h3 class="part-h">Water dispenser and ice maker</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">ice maker, water dispenser, fridge water line</span></p>
         <p class="part-does">The fridge spigot and ice bin fed by a small water line run from the coach's plumbing.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-req">Only if your RV has an ice maker</p>
         <p class="part-links"><a class="btn btn-gb btn-sm" href="/guides/winterize-plumbing">How to fix it</a></p>
       </li>
@@ -1281,7 +1300,7 @@
         <h3 class="part-h">Central vacuum and cleaning</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">central vac, vacuum, Dyson, vacuum hose</span></p>
         <p class="part-does">A built-in vacuum with a hose port in the wall and a canister tucked in a compartment.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button><button type="button" class="chip js-part-fit" data-fit="class-c" aria-pressed="false">Class C</button><button type="button" class="chip js-part-fit" data-fit="fifth-wheel" aria-pressed="false">Fifth wheel</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span><span class="part-scope">Class C only</span><span class="part-scope">Fifth wheel only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-grill-and-outdoor-cooking" data-system="kitchen-and-appliances" data-scope="all" data-fit="" data-search="grill and outdoor cooking rv grill bbq camp chef weber q portable grill blackstone griddle quick connect cooks outside off the coach's propane or its own bottle trailer fifth-wheel class-a class-c van">
@@ -1356,7 +1375,7 @@
         <h3 class="part-h">Air system (compressor, dryer, governor)</h3>
         <p class="part-aka"><span class="part-aka-l">Also called</span> <span class="part-aka-v">air compressor, air dryer, governor, air tanks</span></p>
         <p class="part-does">The motorhome's onboard air plant that builds pressure for brakes and suspension and removes moisture before it reaches the tanks.</p>
-        <p class="chips part-types"><button type="button" class="chip js-part-fit" data-fit="class-a" aria-pressed="false">Class A</button></p>
+        <p class="chips part-types"><span class="part-scope">Class A only</span></p>
         <p class="part-links part-none">No repair guide yet</p>
       </li>
       <li class="part" id="part-steering-and-alignment" data-system="chassis-and-drivetrain" data-scope="motorhome" data-fit="" data-search="steering and alignment alignment kingpins tie rod steering stabilizer wander the steering box, tie rods and drag link that turn the front wheels, set so the coach tracks straight class-a class-c van">
@@ -1501,7 +1520,7 @@
  <div id="site-footer" role="contentinfo"><!-- footer:start --><a class="to-top" href="/parts/#top" onclick="return RV.toTop()">Back to top</a><div class="foot-top"><div class="wrap"><div class="foot-grid"><div class="foot-brand"><a class="logo foot-logo" href="/"><img class="logo-word" src="/assets/img/brand/lockup-960.png?v=668d5a2d" alt="OriginRV" width="960" height="270"></a><p>Every mile of the RV life, one toolkit.</p></div><div class="foot-col"><p class="foot-h">Tools</p><a href="/tools/fuel-cost">Fuel cost calculator</a><a href="/tools/watts-to-amps">Watts to amps</a><a href="/tools/solar-sizing">Solar sizing</a><a href="/tools/rv-loan">RV loan</a><a href="/tools/weight-calculator">Weight &amp; towing</a><a href="/tools/battery-runtime">Battery runtime</a><a href="/tools/snow-load">Roof snow load</a><a href="/tools/tire-date-code">Tire date code</a><a href="/tools/rv-toilet-valve">Toilet water valve</a><a href="/tools/rv-recall-lookup">Recall lookup</a><a href="/tools/rv-anode-rod">Anode rod</a><a href="/tools/rv-converter-finder">Converter finder</a><a href="/tools/rv-appliance-board-finder">Appliance board finder</a><a href="/tools/rv-water-filter">Water filter</a><a href="/tools/state-trailer-brake-laws">State brake laws</a><a href="/tools/">All 15 tools</a></div><div class="foot-col"><p class="foot-h">Guides</p><a href="/guides/">All guides</a><a href="/guides/#electrical-and-charging">Electrical and charging</a><a href="/guides/#heat-cool-and-appliances">Heating, cooling and appliances</a><a href="/guides/#water-and-plumbing">Water and plumbing</a><a href="/guides/#body-slides-and-jacks">Body, slides and jacks</a><a href="/guides/#tires-towing-and-weight">Tires, towing and weight</a><a href="/guides/#winter-storage">Winter storage</a></div><div class="foot-col"><p class="foot-h">Directory</p><a href="/directory/">Find RV service</a><a href="/directory/#claim">Claim your business</a><a href="/directory/#seed">What a listing carries</a></div><div class="foot-col"><p class="foot-h">Manuals</p><a href="/manuals/">All RV manuals</a><a href="/manuals/brands">Owner manuals by brand</a><a href="/manuals/recalls">Recalls and bulletins</a><a href="/manuals/power-and-electrical">Electrical manuals</a><a href="/manuals/towing-and-running-gear">Towing manuals</a><a href="/manuals/kitchen-and-appliances">Kitchen manuals</a></div><div class="foot-col"><p class="foot-h">Company</p><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a></div></div></div><div class="wrap foot-bottom"><span>© 2026 OriginRV. All rights reserved.</span><span class="foot-credit">Third-party photographs appear under the licenses credited beside each one, resized for display.</span><span class="legal"><a href="/">Home</a><a href="/directory/">Directory</a><a href="/guides/">Guides</a><a href="/privacy">Privacy</a></span></div></div><!-- footer:end --></div>
   <script src="assets/js/config.js?v=e01b4086"></script>
   <script src="assets/js/site.js?v=64936905"></script>
-  <script src="assets/js/parts.js?v=6c2955fb"></script>
+  <script src="assets/js/parts.js?v=ebbc5eed"></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

@@ -1819,6 +1819,37 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
      under a left-aligned name. The base rule's `flex-start` now stands at every width; only the
      wrapping behaviour is restated. */
   .part-types{overflow-x:visible;flex-wrap:wrap}
+  /* THE CONTROL LINE STACKS ON A PHONE. The search and the RV picker share one line at every wider
+     width (Ty, 2026-11-14), but at 390px the pair cannot fit without shrinking the search past
+     usefulness, so they stack and each takes the full measure. */
+  .parts-top{flex-wrap:wrap;flex-direction:column;align-items:stretch;gap:9px}
+  .parts-top .search-bar{max-width:none}
+  .rvpick{justify-content:space-between}
+  .rvpick select{max-width:none;flex:1}
+  /* THE CHIPS GO SIDEWAYS ON A PHONE, NOT ONE PER ROW. Measured at 390px: `.parts-syschips` is a
+     wrapped flex row, but each chip's label plus count ("Towing and running gear 32") is wider than
+     half the 328px content box, so they were stacking single-column and pushing nine systems down
+     the page. The block becomes a horizontal scroller at this width instead: same nine chips in one
+     band, one swipe deep. This is the one place a scroller is right and it is the reason the base
+     rule wraps -- a wrapped row of full-width chips is the "staircase" that made the section long.
+     `overflow-x:auto` on the box, not on the page, so the document itself never scrolls sideways.
+
+     `.parts-controls` IS PREFIXED IN, AND IT IS LOAD-BEARING. This block sits at line ~1830 and the
+     base `.parts-syschips` rule sits at ~3790. A media query grants no priority, so with equal
+     specificity the LATER rule wins and the base `flex-wrap:wrap` / `max-width:920px` beat these
+     declarations -- measured, not assumed: the computed style came back `wrap` while this block said
+     `nowrap`. The extra class in the selector raises it above the base rule regardless of order, so
+     these rules hold wherever either one moves to. */
+  .parts-controls .parts-syschips{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;
+    -webkit-overflow-scrolling:touch;padding-bottom:14px;max-width:none;
+    scrollbar-width:none}
+  .parts-controls .parts-syschips::-webkit-scrollbar{display:none}
+  .parts-controls .parts-syschips .chip{flex:0 0 auto}
+  /* The placeholder is cut to fit on purpose: the full sentence does not fit at 390px and a clipped
+     word ("Search a part or a sym") reads as a bug. `text-overflow` cannot help an input's
+     placeholder, so the HTML emitter ships a short variant below 720px via the `data-ph-short`
+     attribute and parts.js swaps it. Keeping the swap in script means a no-script phone still gets
+     the full sentence, which is the better failure. */
   .cat-grid{grid-template-columns:minmax(0,1fr)}
   .deck-card{padding:14px 12px}
   .wc-out{min-height:auto}
@@ -3447,7 +3478,7 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
      than to a broad selector, because the directory's finder is hidden above for a
      different reason (it shows a fraction of the state's listings until you type a
      location) and the two must not be made to depend on each other. */
-  .parts-filter{display:none !important}
+  .parts-controls{display:none !important}
 
   /* ---- 1. navigation has no meaning on paper ---- */
   #site-nav,#site-footer,.mobile-menu,.nav-search,.js-search-form,
@@ -3684,28 +3715,55 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    zero the horizontal padding and put text flush to the screen
    edge on a phone.
    ============================================================ */
-.parts-filter{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin-bottom:6px}
-.parts-filter .search-bar{flex:1 1 280px;min-width:0}
-/* THE "MY RV" CONTROL IS A SEGMENTED CHOICE, NOT A DROPDOWN (redesign, 2026-11-13).
-   It replaces an 8-option "RV type" select that returned 180 of 210 parts for Class A. Three
-   options asked as the reader's own question -- "which RV do you have" -- is a control a reader can
-   answer instantly, and it is the question the data can actually answer honestly.
-   A fieldset+legend rather than a label because these are three mutually exclusive toggles, and a
-   group is what a screen reader needs to read them as one choice. The chips reuse the site's
-   existing .chip shape so it reads as the same family as the part chips below it. */
-.parts-myrv{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end;border:0;margin:0;padding:0}
-.parts-myrv legend{font-size: var(--fs-sm);font-weight:700;color:var(--text-2);
-  text-transform:uppercase;letter-spacing:.06em;padding:0 0 6px}
-.parts-myrv .chip{font-family:inherit;font-size: var(--fs-sm);font-weight:700;line-height:1;
-  padding:0 14px;min-height:44px;display:inline-flex;align-items:center;cursor:pointer;
+.parts-controls{margin-bottom:6px}
+/* LINE 1: SEARCH LEFT, THE RV PICKER RIGHT, THE PAIR CENTRED AS ONE GROUP.
+   Ty, 2026-11-14: "Put the search bar and the show parts for dropdown on the same area" and
+   "center the buttons up top". nowrap so the two never split across lines on a desktop, and
+   max-width so the group stays a readable measure rather than stretching the full 1080px. */
+.parts-top{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:nowrap;
+  max-width:860px;margin:0 auto}
+.parts-top .search-bar{flex:1 1 auto;min-width:0;max-width:420px}
+/* THE RV PICKER IS A DROPDOWN IN THE SEARCH PILL'S FAMILY, not a bare select. It borrows the
+   .search-bar shape (pill, surface, 1px cool border) so the two controls on this line read as one
+   strip. It replaced three "My RV" toggle chips (Any/Motorhome/Towable): three buttons could only
+   ask a three-answer question, and "which RV do you have" has seven answers. */
+/* MATCHED TO THE SEARCH PILL (2026-11-14). A design critique of the rebuilt page: the search is
+   taller than this control, so the one line reads as two unrelated widgets rather than one strip.
+   The search is 44 (input min-height) + 8+8 (its padding) + 2 (its border) = 62px, so this matches
+   that rather than being nudged toward it. `box-sizing` is border-box site-wide, so 62 includes the
+   border here too. If the search's padding ever changes, this number has to move with it. */
+.rvpick{display:flex;align-items:center;gap:7px;background:var(--surface);flex:0 0 auto;
+  border:1px solid var(--border-2);border-radius:999px;padding:0 8px 0 13px;min-height:62px;
+  transition:.18s}
+.rvpick:focus-within{border-color:var(--b1);box-shadow:0 0 0 3px var(--glow)}
+.rvlab{font-size: var(--fs-xs);font-weight:700;color:var(--text-3);white-space:nowrap;
+  text-transform:uppercase;letter-spacing:.06em}
+.rvpick select{font:inherit;font-size: var(--fs-sm);font-weight:700;color:var(--b1);
+  background:transparent;border:0;padding:9px 2px;min-height:40px;cursor:pointer;max-width:132px}
+.rvpick select:focus{outline:0}
+/* LINE 2 ONWARD: THE NINE SYSTEMS AS CHIPS, CENTRED, WRAPPING OVER AS MANY LINES AS THEY NEED. */
+.parts-syschips{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;
+  margin-top:12px;padding-top:12px;border-top:1px solid var(--border);max-width:920px;
+  margin-left:auto;margin-right:auto}
+.parts-syschips .chip{font-family:inherit;font-size: var(--fs-sm);font-weight:600;line-height:1;
+  padding:0 15px;min-height:40px;display:inline-flex;align-items:center;gap:7px;cursor:pointer;
   background:var(--surface);border-color:var(--border-2);color:var(--text-2)}
-.parts-myrv .chip:hover{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
-/* The chosen one is the FILLED tag, the site's existing language for "this is selected", so it
-   matches the selected fit pills rather than inventing a second selected look. */
-.parts-myrv .chip.on,
-.parts-myrv .chip.on:hover,
-.parts-myrv .chip.on:focus-visible{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
-.parts-count{margin-top:14px;font-size: var(--fs-sm);color:var(--text-3)}
+.parts-syschips .chip:hover{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
+/* THE COUNT IS ON THE CHIP BECAUSE IT MOVES. Ty, 2026-11-14, asked directly: "a count on each
+   filter chip is fine - it changes when I pick an RV type so it's information." That clause is the
+   distinction from the JUMP BAR below, whose counts were removed on 2026-10-10 ("don't really need
+   any numbers next to the different categories") because they never varied. These recompute in
+   parts.js against the chosen RV, so a chip cannot advertise 210 over a list showing 189. */
+.parts-syschips .chip i{font-style:normal;font-weight:600;color:var(--text-3);
+  font-variant-numeric:tabular-nums}
+/* The default All chip must NOT read as an applied filter, so it stays neutral rather than taking
+   the filled treatment below. */
+.parts-syschips .chip.on,
+.parts-syschips .chip.js-sys[data-system=""].on{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
+.parts-syschips .chip.on i,
+.parts-syschips .chip.js-sys[data-system=""].on i{color:var(--text-inv)}
+.parts-syschips .chip.js-sys[data-system=""]:not(.on){background:var(--surface);color:var(--text-2)}
+.parts-count{margin-top:12px;font-size: var(--fs-sm);color:var(--text-3);text-align:center}
 /* A SCOPE TAG IS A TAG, NOT A BUTTON (redesign, 2026-11-13). "Motorhome only" and "Towable only"
    state a fact about the part, so they take the site's tag treatment -- soft tint, no border, micro
    caps -- rather than the button shape the clickable fit pills use. If they looked like the pills

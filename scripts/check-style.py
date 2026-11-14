@@ -72,6 +72,12 @@ CENTER_OK = {
     # "This at the bottom should be centered, always. every page on this one here. or every
     # instance of this 'Something wrong here, or something missing? Tell us. About OriginRV.'"
     '.page-foot',
+    # ADDED 2026-11-14: the count line under the rebuilt parts filter ("210 of 210 shown"). It is
+    # centred because the controls above it are: Ty, 2026-11-14 -- "center the buttons up top and
+    # maybe separate the searchbar and all x of 210 shown to the very top and put the rest of the
+    # options on new lines, center them all." A left-aligned count under a centred control block
+    # reintroduces the ragged edge the 2026-10-10 pass removed from this page's headings.
+    '.parts-count',
     # ADDED 2026-10-14, at Ty's request: the cross-reference note that closes a section by
     # pointing at the guide that owns the detail. Same reason as .page-foot above -- he asked
     # for it centred, and a centred line is a decision that belongs in this list.

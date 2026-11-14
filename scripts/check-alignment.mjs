@@ -136,6 +136,15 @@ const DECLARED = [
   // different surface. The gate caught it as UNDECLARED, which is what it is for:
   // an undeclared flex row is an alignment nobody decided.
   { selector: 'div.t-filters',                     align: 'left',   why: 'tools hub category filter rail; left-aligned by design (added 2026-11-13)' },
+  // Declared 2026-11-14 with the parts index control rebuild. CENTER, because Ty asked for it in
+  // those words -- "put the rest of the options on new lines, center them all" -- and because the
+  // discovery pass is right that it behaves as a centred picker row: the nine system chips are
+  // short, fully rounded, and sit under a search line that is centred to the same page axis, so a
+  // left rail here would fight the block above it. This is the opposite call from div.t-filters,
+  // and the difference is the surrounding surface, not the widget: t-filters is a rail inside a
+  // page body, this sits in a centred control block. The gate caught it as UNDECLARED, which is
+  // what it is for: an undeclared flex row is an alignment nobody decided.
+  { selector: 'div.parts-syschips',                align: 'center', why: 'parts index system filter chips, centred under the search line (added 2026-11-14)' },
 ];
 
 const HTTP = await freePort();
