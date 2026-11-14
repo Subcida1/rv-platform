@@ -368,6 +368,16 @@ input,select,textarea{font-family:inherit}
    manuals rows, so the expanded areas cannot collide. */
 .sec-eyebrow a,.listing-name a,.listing-go,.man-crumb a,.man-doc,.man-go,.scale-map-head a{position:relative}
 .sec-eyebrow a::after,.listing-name a::after,.listing-go::after,.man-crumb a::after,.man-go::after,.scale-map-head a::after{content:"";position:absolute;inset:-9px -6px}
+/* THE PARTS TABLE'S GUIDE LINKS MEET THE 24px TARGET FLOOR (2026-11-14). "Repair guide" is 20.8px
+   tall against the WCAG 2.2 target-size floor, so axe failed /parts/ with 14 serious violations the
+   moment the Guide cell became a flex column (the link went from an inline box to a block-level flex
+   item and stopped inheriting the cell's line box). A pseudo-element hit area was tried first and
+   axe still measured the element's own 20.8px box, so the box itself is grown: min-height 24px,
+   centred content, so a one-line link becomes a 24px target without the label moving. 24 is the
+   floor, not 44, because these sit in a dense table where 44px rows would undo the compaction the
+   table exists for, and the next target is a full row away so nothing can be mis-tapped. */
+.tlink{position:relative;display:inline-flex;align-items:center;min-height:24px}
+.tlink::after{content:"";position:absolute;inset:-4px -6px}
 /* .man-doc rows get a taller hit area than the rest because they are the main
    interaction on a manuals page and there is room: the next document link is
    216px away, measured, so nothing can be mis-tapped. */
@@ -3868,9 +3878,35 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .tlink:hover{text-decoration:underline}
 /* A SECOND GUIDE is subordinate to the primary, so it is lighter and sits on its own line. */
 .part-table td.read .tlink-2{display:block;margin-top:5px;font-weight:600}
+/* THE READ CELL IS A COLUMN: the guide links on their own line, then the maker group below.
+   `display:flex;flex-direction:column` so the guide and the wrapped maker group are siblings that
+   never interleave, and `align-items:flex-start` so every child hugs the left edge rather than
+   stretching to the cell width (a stretched maker group would still wrap, but the guide link would
+   stretch too and its underline would run the full column). */
+.part-table td.read{display:flex;flex-direction:column;align-items:flex-start}
 /* A maker's manual leaves the site for somebody else's document, so it never takes the guide's
-   shape: .doc-link is squared, flat and smaller, with its own off-site arrow. */
-.part-table td.read .doc-link{display:block;margin-top:5px}
+   shape: .doc-link is squared, flat and smaller, with its own off-site arrow.
+   THE GROUP WRAPS, AND THAT IS THE WHOLE POINT OF THIS CHANGE (Ty, 2026-11-14). These were
+   display:block one-per-line, so Inverter's 8 makers stacked into a 454px row beside a 52-character
+   description. As a wrapped flex row they flow like a chip group, which is how Google presents a set
+   of secondary links (Search, Workspace, Drive).
+   FIVE RULES HERE, EACH ONE MEASURED, NOT GUESSED:
+   - `flex-direction:row` is EXPLICIT. `.man-list` is an existing manuals-page <ul> with
+     `flex-direction:column`; when this group first shipped with that name the column won and the
+     wrap never fired. Renamed .maker-links AND set the direction, so neither can bite again.
+   - `width:100%` on the group: td.read is `align-items:flex-start`, which shrink-wraps children to
+     their max-content, so the group was 179px and wrapped at 179px even though the cell is 256px.
+     Measure the CONTAINER width, not just the children, when a wrap does nothing.
+   - `flex:0 0 auto;width:max-content` on each button: blockified inline-flex items otherwise all
+     report the widest sibling's width ("Renogy" laid out at 179px, the width of "Progressive
+     Dynamics"), so nothing could pair. This pins each button to its own label.
+   - `max-width:100%` so a brand longer than the column truncates instead of overflowing the cell.
+   - `gap:5px` and `min-width:0` so long labels shrink rather than forcing the row wider.
+   Result, measured at 1430px: the eight Inverter makers pair into 4 lines instead of 8. */
+.part-table td.read .maker-links{display:flex;flex-direction:row;flex-wrap:wrap;gap:5px;
+  margin-top:5px;min-width:0;width:100%;align-self:stretch}
+/* THE BUTTONS SIZE TO THEIR OWN LABEL, NOT TO THE WIDEST ONE. */
+.part-table td.read .doc-link{flex:0 0 auto;width:max-content;max-width:100%;margin-top:0}
 .part-table td.read .none{font-size: var(--fs-sm);color:var(--text-2)}
 
 /* THE CARD LIST IS GONE FROM THIS PAGE, and these rules are kept ONLY because the mockups and the

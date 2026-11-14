@@ -267,6 +267,8 @@ def part_html(p):
 
     # --- COLUMN 4: what to read next.
     links = []
+    # Maker manuals collect here first so they can be handed to their own wrapped group (see below).
+    maker_links = []
     if p.get("guide"):
         # A QUIET TEXT LINK, NOT A BUTTON (2026-11-14). This REVERSES Ty's 2026-10-05 request
         # ("I do think that should be maybe a little button though instead of just a text blank"),
@@ -310,8 +312,32 @@ def part_html(p):
             # A maker's manual is a reference, not an action: it leaves the site for somebody
             # else's document. Kept as .doc-link -- squared, flat, smaller, with an off-site arrow
             # -- so a manual is never mistaken for a guide on this site.
-            links.append('<a class="doc-link" href="%s" target="_blank" '
-                         'rel="noopener">%s manuals</a>' % (esc(url), esc(brand)))
+            #
+            # THE VISIBLE LABEL IS THE BRAND ALONE, AND THE WORD "manuals" MOVES TO aria-label
+            # (Ty, 2026-11-14). "Progressive Dynamics manuals" needs 236px; the Guide column is
+            # ~164px, so every button filled the column width and could never pair with another --
+            # wrapping was impossible while each label was wider than its own column. The brand
+            # alone fits two per line for the short names. The meaning is not lost: the column is
+            # headed "Guide", the button carries the off-site arrow, and aria-label restores the
+            # full "X manuals" for a screen reader (which never sees the arrow or the header
+            # relationship). Measured: eight Inverter makers pair into four lines instead of eight.
+            maker_links.append('<a class="doc-link" href="%s" target="_blank" '
+                               'rel="noopener" aria-label="%s manuals">%s</a>'
+                               % (esc(url), esc(brand), esc(brand)))
+    # THE MAKER LINKS ARE ONE WRAPPED GROUP, NOT A VERTICAL LADDER (Ty, 2026-11-14). They used to
+    # be emitted flat into td.read and styled display:block, so a part with many makers stacked one
+    # button per line: Inverter has 8, and that pushed its row to 454px while its own description is
+    # 52 characters -- the name, description and system cells all stretched to 454px to match, so
+    # ~400px of every one of them was empty. That is the "huge gap" he pointed at. Wrapped in a
+    # single .maker-links, the buttons flow and wrap like a chip group (the same shape Google uses
+    # for a group of secondary links in Search and Workspace), which turns 8 rows of one into 4.
+    #
+    # The class is .maker-links, NOT .man-list: .man-list is already the manuals-page <ul> and carries
+    # its own `display:flex;flex-direction:column`, which silently forced this group into one column
+    # and defeated the wrap (found by reading getComputedStyle, not the stylesheet). A new name avoids
+    # the whole class of collision.
+    if maker_links:
+        links.append('<span class="maker-links">%s</span>' % "".join(maker_links))
     if links:
         out.append('          <td class="read">%s</td>' % " ".join(links))
     else:
@@ -505,16 +531,23 @@ def build():
         # when a reader lands deep in it, and tables are how a screen reader announces "column:
         # Guide" per cell.
         #
-        # The column widths mirror the approved v2 mockup: Part 22%, What it does 42%, System 14%,
-        # Guide 13%. They total 91%, not 100%, which is deliberate and was in the approved mockup --
-        # a table with fixed widths that total less than the container lets the description column
-        # take the slack instead of stretching every column proportionally.
+        # The column widths mirror the approved v2 mockup's ratios (Part 22%, What it does 42%,
+        # System 14%, Guide 13%) with one rebalance: Guide takes 24% and the description gives up
+        # 10% (Ty, 2026-11-14, the "huge gap" fix). At 13% (~164px) every maker button was wider than
+        # its own column and stacked one per line; the wrap only pays off once the Guide column is
+        # ~24% of the table, where the eight Inverter makers pair into 4 lines instead of 8. MEASURED
+        # for the plateau: 20% -> 6 lines, 24% -> 4 lines, 26/28% -> still 4, so 24% is the point past
+        # which more width buys nothing. The description does not miss the pixels -- td.pd is capped
+        # at 46ch for readability (~369px), so at 32% it is still at its full measure.
+        # They total 90%, not 100%, which is deliberate and was in the approved mockup -- a table
+        # with fixed widths that total less than the container lets the description column take the
+        # slack instead of stretching every column proportionally.
         out.append('    <table class="part-table">\n')
         out.append('      <thead><tr>'
-                   '<th class="pn" scope="col" style="width:22%">Part</th>'
-                   '<th class="pd" scope="col" style="width:42%">What it does</th>'
+                   '<th class="pn" scope="col" style="width:20%">Part</th>'
+                   '<th class="pd" scope="col" style="width:32%">What it does</th>'
                    '<th class="sys" scope="col" style="width:14%">System</th>'
-                   '<th class="read" scope="col" style="width:13%">Guide</th>'
+                   '<th class="read" scope="col" style="width:24%">Guide</th>'
                    '</tr></thead>\n')
         out.append('      <tbody>\n')
         for p in s["parts"]:
