@@ -66,7 +66,7 @@ CENTER_OK = {
     '.az-h',
     '.big-card', '.btn', '.btn-gb', '.center', '.chips-tools .chip,.tool-strip .chip',
     '.deck-sim-note', '.dog-inner', '.empty', '.empty-state', '.hero-inner', '.hstat',
-    '.hub-page h2.region-h', '.part', '.qty .n', '.sec-head', '.sec-head.center',
+    '.hub-page h2.region-h', '.qty .n', '.sec-head', '.sec-head.center',
     '.state-body', '.to-top', '.wc-out .w-idle', 'body.is-embed .embed-credit',
     # ADDED 2026-10-13, at Ty's request: the closing line that sits under every guide and tool.
     # "This at the bottom should be centered, always. every page on this one here. or every

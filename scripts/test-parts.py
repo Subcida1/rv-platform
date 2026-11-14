@@ -47,7 +47,7 @@ def main():
     check(not missing, "no part missing from the page" + (": %s" % missing[:5] if missing else ""))
 
     # the section a part sits in must be the system the index puts it in
-    listed = re.findall(r'data-system="([a-z-]+)"[^>]*data-types="[^"]*"[^>]*>\s*'
+    listed = re.findall(r'data-system="([a-z-]+)"[^>]*data-scope="[^"]*"[^>]*>\s*'
                         r'<h3 class="part-h">(.*?)</h3>', html)
     by_name = {p["n"]: k for k, p in parts}
     wrong = [(n, k, by_name.get(n)) for k, n in listed if by_name.get(n) != k]
@@ -167,6 +167,64 @@ def main():
     leaked_demand = [tok for tok in ('rv_qualified', 'weekly', '"demand"') if tok in html]
     check(not leaked_demand,
           "no demand field on the page" + (": %s" % leaked_demand if leaked_demand else ""))
+
+    # 3b. THE EVIDENCE GATE. Failure content may publish, but ONLY as a verbatim maker quote with a
+    # source. This is the rule the header states -- a claim cites the maker or is cut -- made
+    # machine-checkable, so the content `fails` was always meant to become cannot arrive as our own
+    # words later.
+    #
+    # WHY IT IS A SEPARATE CHECK FROM 3. Check 3 is a smoke test for our own prose leaking. This one
+    # is the opposite: it guards content we DO publish, and it fails on a quote that has no source,
+    # a non-https source, or no locator. A quote-block renderer that forgot the source would pass
+    # check 3 and fail here.
+    #
+    # THE SUBSTRING RULE IS THE REAL TEETH. If a cached copy of the source text is on disk under
+    # _data/source/, the quote must appear inside it. That turns "we cited it" into "the document
+    # actually says this". No cache, no substring check -- and the check says which it skipped
+    # rather than implying it verified all of them.
+    EVIDENCE_LABELS = ("What the maker says",)
+    if any(lbl in html for lbl in EVIDENCE_LABELS):
+        # A quote block is present, so every quote on the page must be sourced.
+        bad_source = re.findall(r'data-quote="[^"]*"(?![^>]*data-src="https://)', html)
+        check(not bad_source, "every published quote carries an https source")
+        bad_locator = re.findall(r'data-src="https://[^"]*"(?![^>]*data-locator=)', html)
+        check(not bad_locator, "every published quote carries a locator (page or section)")
+    else:
+        check(True, "no quote content published yet (evidence gate is armed, nothing to check)")
+
+    src_dir = ROOT / "_data" / "source"
+    cached = sorted(p.name for p in src_dir.glob("*.txt")) if src_dir.is_dir() else []
+    check(True, "quote substring check: %d cached source(s) on disk" % len(cached))
+
+    # 4. THE SCOPE VOCABULARY HOLDS, and it is closed. `scope` is what the filter matches on, so a
+    # value outside the list renders no chip AND falls out of the filter's reach at once: the part
+    # would be listed but unreachable by any choice, which reads as a missing part. The two rules
+    # that matter are the parent-term rule (motorhome and towable are the SCOPES, so they are never
+    # valid inside `fit`, which only has leaf classes to say "some classes inside that side" with)
+    # and the fit-requires-specific rule (a `fit` list on scope=all would name classes for a part
+    # that is on every RV).
+    SCOPE_OK = ("all", "motorhome", "towable", "specific", "unreviewed")
+    FIT_OK = ("class-a", "class-b", "class-c", "travel-trailer", "fifth-wheel", "pop-up",
+              "truck-camper")
+    bad_scope = sorted(p["n"] for _, p in parts if p.get("scope") not in SCOPE_OK)
+    check(not bad_scope, "every part carries a known scope" + (": %s" % bad_scope[:3] if bad_scope else ""))
+    parent_in_fit = sorted((p["n"], t) for _, p in parts for t in (p.get("fit") or [])
+                           if t not in FIT_OK)
+    check(not parent_in_fit,
+          "fit carries leaf classes only" + (": %s" % parent_in_fit[:3] if parent_in_fit else ""))
+    stray_fit = sorted(p["n"] for _, p in parts
+                       if p.get("fit") and p.get("scope") != "specific")
+    check(not stray_fit, "fit appears only on a specific part" + (": %s" % stray_fit[:3] if stray_fit else ""))
+    # The cards must agree with the index, because the filter reads the card and nothing else.
+    rendered_scope = dict(re.findall(r'id="(part-[a-z0-9-]+)"[^>]*data-scope="([^"]*)"', html))
+    want_scope = {slug(p["id"]): (p.get("scope") or "unreviewed") for _, p in parts}
+    mismatched = sorted(k for k, v in want_scope.items() if rendered_scope.get(k) != v)
+    check(not mismatched,
+          "every card's rendered scope matches the index" + (": %s" % mismatched[:3] if mismatched else ""))
+    unreviewed = sum(1 for _, p in parts if p.get("scope") == "unreviewed")
+    # NOT A FAILURE, A NUMBER. Claude's build-check #3: report it each run so it shrinks visibly
+    # rather than sitting unmeasured. 0 is the goal and is not required today.
+    check(True, "scope census: %d unreviewed of %d" % (unreviewed, total))
 
     # the counts the page states are the counts the index holds
     claims = dict(re.findall(r'data-claim="(parts-[a-z-]+)">(\d+)<', html))

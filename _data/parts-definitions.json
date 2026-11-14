@@ -1,0 +1,386 @@
+{
+  "12-volt-outlets-and-usb": {
+    "does": "the round socket and USB ports on the wall or dash, feeding small devices from the house battery"
+  },
+  "120-volt-outlets-and-gfci": {
+    "does": "household-style receptacles, one carrying a ground fault breaker, running off shore or generator power"
+  },
+  "accumulator-tank": {
+    "does": "a small air-charged tank teed into the water line, absorbing the pump's pulses and holding pressure between cycles"
+  },
+  "air-conditioner-condensate-drain": {
+    "does": "the pan and tube under a roof air conditioner that carry condensed water away instead of letting it run down"
+  },
+  "air-conditioner-gasket-and-shroud": {
+    "does": "the foam gasket that seals the AC to the roof opening, and the cover over the unit itself"
+  },
+  "air-suspension-and-helper-springs": {
+    "does": "air bags or added coils that sit inside or beside the existing springs, holding the load level"
+  },
+  "air-system-compressor,-dryer,-governor": {
+    "does": "the motorhome's onboard air plant that builds pressure for brakes and suspension and removes moisture before it reaches the tanks"
+  },
+  "alternator-and-starter": {
+    "does": "the motorhome engine's charging generator and the motor that spins that engine to start it"
+  },
+  "awning-accessories": {
+    "does": "the add-on mat, tie down straps and shades that make the patio awning more useful"
+  },
+  "axle": {
+    "does": "the beam under the frame that carries the weight and holds the hubs, wheels and brakes"
+  },
+  "backup-and-side-cameras": {
+    "does": "small cameras at the rear and sides feeding a dash monitor so you can see what the mirrors miss"
+  },
+  "baggage-and-bay-doors": {
+    "does": "the hinged outside doors that open into the basement storage bays and latch shut for travel"
+  },
+  "basement-air-conditioner": {
+    "does": "an air conditioner mounted in a lower compartment, cooling the coach through ducts rather than a ceiling unit"
+  },
+  "battery-disconnect": {
+    "does": "the switch that cuts the house battery off from the coach's 12 volt circuits so nothing drains while parked"
+  },
+  "bed-and-mattress": {
+    "does": "the sleeping platform and the mattress on it, sometimes a bunk, a murphy bed or a tilting bed over storage"
+  },
+  "belts,-hoses-and-filters": {
+    "does": "the service parts on a motorhome engine that carry power, move fluids and clean the air and fuel"
+  },
+  "bike-and-kayak-carriers": {
+    "does": "racks that mount on a hitch, bumper or ladder and hold bikes and kayaks outside the living space"
+  },
+  "body-panels-and-siding": {
+    "does": "the outer fiberglass or aluminum skin fastened over the frame that forms the coach's walls and sheds weather"
+  },
+  "brake-controller": {
+    "does": "the box in the cab that sends current to the trailer brakes, set to match how hard you are stopping"
+  },
+  "breaker-panel-and-120v-breakers": {
+    "does": "the load center with the household breakers, splitting incoming AC power into separate circuits through the coach"
+  },
+  "bumper-and-rear-rack": {
+    "does": "the bar across the back of the RV, often hollow to hold a sewer hose, with racks bolted on"
+  },
+  "cabinets,-drawers-and-latches": {
+    "does": "the cabinet boxes, drawer slides, hinges, struts and latches that hold gear and stay shut on the road"
+  },
+  "ceiling-vents-and-hatch": {
+    "does": "the lid-covered openings in the ceiling, one of them hinged as an emergency exit"
+  },
+  "central-vacuum-and-cleaning": {
+    "does": "a built-in vacuum with a hose port in the wall and a canister tucked in a compartment"
+  },
+  "cooling-system": {
+    "does": "the radiator, water pump, thermostat and fan that carry engine heat out of the coolant and into the air"
+  },
+  "dash-air-conditioning": {
+    "does": "the compressor and evaporator built into the dash, cooling the cab air while the engine runs"
+  },
+  "decals-and-graphics": {
+    "does": "the vinyl stripes and printed patterns applied to the outside walls for color and brand identity"
+  },
+  "dehumidifier-and-ventilation": {
+    "does": "a unit or chemical absorber that pulls moisture out of the air to keep condensation and mold down"
+  },
+  "dishwasher": {
+    "does": "a drawer-style dishwasher built into the galley, washing a small load and draining to the gray tank"
+  },
+  "door-and-window-seals": {
+    "does": "the soft rubber strips around doors and windows that press shut and block rain, wind and drafts"
+  },
+  "dryer": {
+    "does": "a vented or ventless drum that tumbles the laundry dry, usually stacked with the washer in a closet"
+  },
+  "electric-fireplace": {
+    "does": "a wall or cabinet unit with a flame display and a heating element, run on shore power"
+  },
+  "emissions-and-def": {
+    "does": "the exhaust treatment gear, a particulate filter and a fluid tank that the diesel metering system doses to clean the exhaust"
+  },
+  "engine-and-drivetrain": {
+    "does": "the motorhome's power plant and the gears and shaft that send its turning force to the wheels"
+  },
+  "entry-assist-handle": {
+    "does": "a gripped bar bolted beside the door that gives your hand something to hold while stepping in"
+  },
+  "entry-steps": {
+    "does": "the folding or powered stair treads that let you climb from the ground up through the entry door"
+  },
+  "extend-a-stay-and-external-supply": {
+    "does": "a tee and hose that let you feed the coach's propane system from a portable tank or outside appliance"
+  },
+  "exterior-lighting": {
+    "does": "the porch, scare and marker lamps on the outside walls and roof that light the ground and mark the coach's edges"
+  },
+  "faucets-and-shower-mixer": {
+    "does": "the taps and the shower valve that blend hot and cold water and send it out the spout or head"
+  },
+  "fender-skirts-and-trim": {
+    "does": "the covers over the wheel openings plus the metal edge strips that finish the body seams"
+  },
+  "frame-and-tongue": {
+    "does": "the steel rails running the length of the trailer, with the A-frame up front that carries the coupler"
+  },
+  "fresh-water-hose": {
+    "does": "the white hose that runs from the park faucet to the coach's city water inlet"
+  },
+  "fresh-water-tank": {
+    "does": "the tank that holds the water you drink and wash with, filled from a hose or a gravity fill port"
+  },
+  "front-and-rear-caps": {
+    "does": "the molded fiberglass shells at the very front and back of the coach that close off the walls"
+  },
+  "fuel-system": {
+    "does": "the tank, lift pump, filters and injectors that move diesel from the tank to the cylinders"
+  },
+  "furnace": {
+    "does": "the propane burner and blower tucked behind a panel, pushing warmed air out through ducts in the floor"
+  },
+  "furnace-control-board-and-igniter": {
+    "does": "the circuit board that runs the furnace's start-up, sparking the gas and watching for flame"
+  },
+  "furniture-and-seating": {
+    "does": "the dinette, sofa, recliner and captain's chairs bolted to the floor, sized to the floor plan"
+  },
+  "fuses": {
+    "does": "small blade fuses in the panel or inline, each protecting one 12 volt circuit from too much current"
+  },
+  "gate-valves": {
+    "does": "the sliding blades you pull to open and close the tank dump outlets"
+  },
+  "gray-tank": {
+    "does": "collects wastewater from sinks, shower and galley so it can be dumped later"
+  },
+  "heated-floors": {
+    "does": "heating mats laid under the floor surface, warming the tile from below by zone"
+  },
+  "hitch-ball-mount-and-ball": {
+    "does": "the draw bar that slides into the truck receiver, topped with the ball the coupler grabs"
+  },
+  "hitch-coupler": {
+    "does": "the latch on the trailer tongue that drops over the hitch ball and clamps it tight"
+  },
+  "holding-tank-treatment": {
+    "does": "a liquid or powder you add to waste tanks to break down solids and control odor"
+  },
+  "inline-water-filter": {
+    "does": "a cartridge housing spliced into the water line that traps sediment and off-taste before the faucets"
+  },
+  "inverter-charger": {
+    "does": "changes battery power into household AC current and converts shore power back to charge the batteries"
+  },
+  "kingpin-and-fifth-wheel-hitch": {
+    "does": "the pin hanging under the fifth wheel's overhang, locked into a jaw hitch mounted in the truck bed"
+  },
+  "leaf-springs-and-shackles": {
+    "does": "the stacked steel leaves and the shackles that hang them, letting the trailer ride over bumps"
+  },
+  "light-fixtures-and-leds": {
+    "does": "the ceiling puck lights, LED strips and porch lights, switched on from wall plates around the coach"
+  },
+  "low-point-drains": {
+    "does": "valves at the lowest points of the water lines that open to dump the plumbing for winter"
+  },
+  "macerator-pump": {
+    "does": "grinds toilet waste into slurry and pushes it through a garden hose to a dump station"
+  },
+  "microwave-and-convection": {
+    "does": "a microwave that also runs a convection fan, browning and baking like an oven when set to that mode"
+  },
+  "mirrors": {
+    "does": "the large adjustable mirrors on arms at the front corners that show the sides and rear of the RV"
+  },
+  "outside-shower": {
+    "does": "a quick-connect shower head and valve mounted in a side compartment for rinsing gear and pets outside"
+  },
+  "p-traps-and-drains": {
+    "does": "curved pipes under sinks and showers that hold water to block sewer gas"
+  },
+  "pex-lines-and-fittings": {
+    "does": "the flexible plastic tubing and crimp or push fittings that carry hot and cold water through the coach"
+  },
+  "pop-up-lift-system": {
+    "does": "the cable and winch mechanism in a pop-up that cranks the roof and bed ends up for camping"
+  },
+  "portable-and-auxiliary-heat": {
+    "does": "a freestanding electric or propane heater brought in to warm a spot the furnace does not reach"
+  },
+  "propane-leak-detector": {
+    "does": "a sensor mounted low inside the coach that sounds an alarm when propane vapor builds in the air"
+  },
+  "propane-regulator": {
+    "does": "the two-stage valve that takes tank pressure down to a steady low pressure the appliances can burn"
+  },
+  "propane-shutoff-valve": {
+    "does": "the hand valve on the cylinder that opens or closes the gas supply to the whole coach"
+  },
+  "propane-supply-lines-and-fittings": {
+    "does": "the copper tubing and rubber hoses, joined with flare fittings, that run gas from the regulator to each appliance"
+  },
+  "propane-tank": {
+    "does": "the refillable steel cylinder strapped to the frame, holding liquid gas that the appliances draw off as vapor"
+  },
+  "propane-tank-cover": {
+    "does": "the plastic shell over the cylinders on the trailer tongue, hiding the valves and shedding rain off the tank tops"
+  },
+  "propane-tank-gauge-and-monitor": {
+    "does": "the float or sender on the tank, read at a panel or by phone, showing how full the cylinder is"
+  },
+  "ramp-door-and-patio": {
+    "does": "the rear wall of a toy hauler that folds down as a ramp and can become a raised deck"
+  },
+  "refrigerator-compressor-or-12v": {
+    "does": "the fridge that cools with a compressor instead of a propane flame, running off the battery bank or shore power"
+  },
+  "refrigerator-venting-and-fans": {
+    "does": "the roof vent and fans behind the fridge that carry the coil's heat up and out of the cabinet"
+  },
+  "roof-membrane": {
+    "does": "the single flexible sheet, rubber or plastic, that covers the whole RV roof and sheds water"
+  },
+  "roof-sealant-and-lap-sealant": {
+    "does": "the thick caulk smeared over roof seams, vents and edges to keep rainwater out"
+  },
+  "roof-vent-fan": {
+    "does": "a powered fan in a roof opening that pulls hot air out and draws outside air in"
+  },
+  "rooftop-air-conditioner": {
+    "does": "the roof-mounted cooling unit that drops cold air through a ceiling vent into the coach"
+  },
+  "safety-chains": {
+    "does": "two chains from the trailer tongue crossed under the coupler and hooked to the truck, catching the tongue if it comes loose"
+  },
+  "satellite-internet": {
+    "does": "a dish or flat panel on the roof pulling internet from satellites, with a router inside the coach"
+  },
+  "screen-door": {
+    "does": "a framed mesh panel hung on the entry door that lets air in and keeps bugs out"
+  },
+  "shore-power-cord": {
+    "does": "the heavy cord that runs from the coach's inlet to the campground pedestal, carrying all the AC power"
+  },
+  "shore-power-inlet": {
+    "does": "the twist lock socket on the outside wall where the shore cord connects into the coach's wiring"
+  },
+  "shower-door-and-enclosure": {
+    "does": "the door, curtain or glass surround that keeps spray inside the shower stall"
+  },
+  "shower-pan-and-drain": {
+    "does": "the floor basin of the shower and the drain fitting that carries the water to the gray tank"
+  },
+  "skylight": {
+    "does": "the clear plastic dome set into the roof that lets daylight into the shower or bath"
+  },
+  "slide-topper-awning": {
+    "does": "a small spring-loaded awning mounted above a slide-out that keeps rain and debris off its roof"
+  },
+  "smoke-and-co-detectors": {
+    "does": "the ceiling-mounted alarms that sound when smoke or carbon monoxide builds inside the coach"
+  },
+  "solar-charge-controller": {
+    "does": "the box between the panels and the battery that sets the charge rate and keeps the battery from overcharging"
+  },
+  "solar-panels": {
+    "does": "the panels on the roof or set out on the ground that turn sunlight into charging current for the batteries"
+  },
+  "spare-tire-and-carrier": {
+    "does": "a mounted spare held on a bracket or under the frame on a winch, ready for a flat"
+  },
+  "steering-and-alignment": {
+    "does": "the steering box, tie rods and drag link that turn the front wheels, set so the coach tracks straight"
+  },
+  "surge-protector-and-ems": {
+    "does": "a plug-in box at the pedestal or inlet that checks voltage and miswiring, then cuts power when it reads bad"
+  },
+  "suspension-and-shocks": {
+    "does": "the springs, air bags and shocks that carry the body's weight and soak up the road between axle and frame"
+  },
+  "sway-control": {
+    "does": "a friction bar clamped between the trailer tongue and the hitch, dragging against side to side movement"
+  },
+  "tank-and-pipe-heaters": {
+    "does": "heat pads and tape on the tanks and water lines that warm them in freezing weather"
+  },
+  "tank-flush-and-rinsing": {
+    "does": "a built-in sprayer that washes the inside of the black tank after you dump"
+  },
+  "tank-level-sensors": {
+    "does": "probes or strips inside the tanks that report how much liquid each one holds"
+  },
+  "thermostat": {
+    "does": "the wall control that reads cabin temperature and switches the furnace and air conditioner on and off"
+  },
+  "tire-pressure-monitoring": {
+    "does": "sensors on the valve stems reporting tire pressure to a display in the cab or on the dash"
+  },
+  "tires": {
+    "does": "the rubber on the wheels, built to carry the loaded weight and flex over the road"
+  },
+  "toilet-gravity": {
+    "does": "the bowl and foot pedal assembly that drops waste straight into the black tank below"
+  },
+  "toilet-seal-and-flange": {
+    "does": "the soft ring and mounting base that keep the bowl joined to the tank without leaks"
+  },
+  "trailer-brakes": {
+    "does": "drums or discs at the trailer wheels that apply their own stopping force, so the trailer is not pushing the truck"
+  },
+  "transfer-switch": {
+    "does": "the relay box that picks between shore power and the generator, routing the chosen source to the breaker panel"
+  },
+  "tv-and-entertainment": {
+    "does": "the TV, soundbar and speakers, wired to 12 volt or shore power, fed by an antenna, cable or disc player"
+  },
+  "underbelly-and-coroplast": {
+    "does": "the corrugated plastic sheet under a towable that closes off the frame and keeps road spray off the tanks"
+  },
+  "water-dispenser-and-ice-maker": {
+    "does": "the fridge spigot and ice bin fed by a small water line run from the coach's plumbing"
+  },
+  "water-heater-anode-rod": {
+    "does": "a sacrificial metal rod threaded into the tank that corrodes first, drawing the corrosion off the tank walls"
+  },
+  "water-heater-bypass": {
+    "does": "a valve setup that routes water around the heater so you can winterize without filling the tank"
+  },
+  "water-heater-tank": {
+    "does": "the heated tank that holds water for the taps and shower, fired by gas, electric or both"
+  },
+  "water-hose-reel": {
+    "does": "a powered reel in a compartment that winds the fresh water hose in and out on command"
+  },
+  "water-pressure-regulator": {
+    "does": "a small inline valve that caps the park water pressure before it reaches the coach's plumbing"
+  },
+  "water-pump": {
+    "does": "the demand pump that pulls from the fresh tank and pressurizes the lines when no hose is connected"
+  },
+  "water-softener-and-filtration": {
+    "does": "a cartridge or resin bed that pulls hardness minerals and taste out of the park water before it enters the tank"
+  },
+  "water-system-winterizing": {
+    "does": "the antifreeze fill or air blow-out that pushes water out of every line before a freeze"
+  },
+  "wheel-bearings": {
+    "does": "the rollers and races pressed into the hub, letting the wheel turn on the spindle without grinding"
+  },
+  "wheels,-tires-and-tpms": {
+    "does": "the rubber tires, metal wheels and pressure sensors that carry the RV and report each tire's air pressure"
+  },
+  "window-awnings": {
+    "does": "small fabric awnings mounted above individual windows that shade the glass and keep sun and rain off"
+  },
+  "window-shades-and-blinds": {
+    "does": "fabric or slatted coverings at the windows that block light and give privacy"
+  },
+  "windows": {
+    "does": "the framed glass panels in the walls that let in light and open for air"
+  },
+  "windshield-and-wipers": {
+    "does": "the large front glass on a motorhome and the moving blades that sweep rain off it"
+  },
+  "wiring-harness-and-connectors": {
+    "does": "the bundled wires, looms and plug connectors that run each circuit from the panel to its device"
+  }
+}

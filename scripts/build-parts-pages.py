@@ -54,6 +54,23 @@ TYPE_LABEL = {
     "skoolie": "Bus conversion",
 }
 
+# AN OPTIONAL-FEATURE GATE READS AS PROSE, so the slug needs a phrase rather than a capitalised slug.
+# "Only if your RV has power cord reel" is not English. These are gates, not classes: a part with
+# `requires: ["garage"]` is not "a garage class RV", it is a part you only have if your RV has one.
+REQ_LABEL = {
+    "slide-out": "a slide-out",
+    "generator": "a generator",
+    "leveling-jacks": "leveling jacks",
+    "roof-ac": "roof air conditioning",
+    "awning": "an awning",
+    "garage": "a rear garage or ramp",
+    "lp-system": "an LP (propane) system",
+    "solar": "solar panels",
+    "washer-dryer": "a washer or dryer",
+    "ice-maker": "an ice maker",
+    "power-cord-reel": "a power cord reel",
+}
+
 
 _GUIDE_LABELS = {}
 
@@ -173,9 +190,18 @@ def foot(script):
 
 
 def part_html(p):
-    """One part. Name, the other names, what it does, which RVs have it, and what to read next."""
-    out = ['      <li class="part" id="%s" data-system="%s" data-types="%s" data-search="%s">'
-           % (esc(anchor(p["id"])), esc(p.get("_system", "")), esc(" ".join(p.get("types") or [])),
+    """One part. Name, the other names, what it does, which RVs have it, and what to read next.
+
+    THE ENTRY LEADS WITH THE NAME AND THE ALIASES (redesign, 2026-11-13). The alias line used to sit
+    at the FOOT of the card, which put the one piece of information a reader uses to check they are
+    in the right place below everything they had not asked for yet. A reader who searched "ball
+    coupler" and landed on "Hitch coupler" needs that match immediately, not after the chips, the
+    buttons and the description. Claude's design ranked it 2nd of 7 for exactly that reason, and it
+    is a pure reorder -- no data change, nothing gained or lost.
+    """
+    out = ['      <li class="part" id="%s" data-system="%s" data-scope="%s" data-fit="%s" data-search="%s">'
+           % (esc(anchor(p["id"])), esc(p.get("_system", "")),
+              esc(p.get("scope") or "unreviewed"), esc(" ".join(p.get("fit") or [])),
               # `does` is included because the placeholder promises "a part, or what it does".
               # Without it, searching "clamps" (a word from Hitch coupler's description) returned
               # nothing while the words sat on the page. Found by an independent review.
@@ -183,21 +209,53 @@ def part_html(p):
                            + [p.get("does") or ""] + (p.get("types") or [])).lower()))]
     out.append('        <h3 class="part-h">%s</h3>' % esc(p["n"]))
 
+    aka = [a.strip() for a in (p.get("aka") or "").split("|") if a.strip()]
+    if aka:
+        # THE ALIASES SIT DIRECTLY UNDER THE NAME, as the second thing on the card. See the
+        # function docstring for why. The label reads "Also called" rather than "Also known as",
+        # which is what T asked for on 2026-10-10 ("I don't like the term 'also called'" was his
+        # earlier phrasing of the same complaint, and the shorter label reads as a name list rather
+        # than a sentence).
+        out.append('        <p class="part-aka"><span class="part-aka-l">Also called</span> '
+                   '<span class="part-aka-v">%s</span></p>' % esc(", ".join(aka)))
+
     does = sentence(p.get("does"))
     if does:
         out.append('        <p class="part-does">%s</p>' % esc(does))
 
-    types = (p.get("types") or [])
-    if types:
-        # A BUTTON, NOT A LABEL. Ty, 2026-10-05: "we should make those clickable filter options
-        # so basically if you click on travel trailer it enables only travel trailer stuff and
-        # then if you click off ... enables it". data-type carries the SLUG the dropdown already
-        # uses, so assets/js/parts.js sets the existing filter rather than a second one, and the
-        # pill and the dropdown cannot disagree.
+    scope = p.get("scope") or "unreviewed"
+    fit = p.get("fit") or []
+    requires = p.get("requires") or []
+    # THE CHIPS SAY ONE THING ONLY: WHICH RV THIS FITS, AND ONLY WHEN THE ANSWER IS NARROWER THAN
+    # "EVERY RV" (redesign, 2026-11-13). The old row listed every class the part was tagged with, so
+    # 180 of 210 cards carried "Class A" and 157 carried "Travel trailer" -- a row of pills that
+    # changed nothing from card to card and read as decoration. Now:
+    #
+    #   scope=all        -> no chip. The common case (148 of 210) and the reason the page quiets down.
+    #   scope=motorhome  -> one chip, "Motorhome only".
+    #   scope=towable    -> one chip, "Towable only".
+    #   scope=specific   -> the leaf classes from fit, which is where the real distinctions live.
+    #   scope=unreviewed -> NO CHIP AND NO CLAIM. It renders nothing rather than defaulting to a
+    #                       guess, because "applies to every RV" is a claim and nobody has checked
+    #                       it. That third state is why the vocabulary has it.
+    #
+    # The chip is rendered from the same field the filter matches on, so the control and the chips
+    # cannot disagree about a part.
+    if scope in ("motorhome", "towable"):
+        out.append('        <p class="chips part-types">'
+                   '<span class="part-scope">%s only</span></p>'
+                   % ("Motorhome" if scope == "motorhome" else "Towable"))
+    elif scope == "specific" and fit:
         out.append('        <p class="chips part-types">%s</p>'
-                   % "".join('<button type="button" class="chip js-part-type" data-type="%s"'
+                   % "".join('<button type="button" class="chip js-part-fit" data-fit="%s"'
                              ' aria-pressed="false">%s</button>'
-                             % (esc(t), esc(type_label(t))) for t in types))
+                             % (esc(t), esc(type_label(t))) for t in fit))
+    # `requires` is an OPTIONAL-FEATURE GATE, not a class, so it is TEXT and not a pill: "Only if
+    # your RV has a generator". A pill would put it in the same visual language as the class chips
+    # and imply the two are the same kind of statement.
+    if requires:
+        out.append('        <p class="part-req">Only if your RV has %s</p>'
+                   % esc(", ".join(str(REQ_LABEL.get(r, r.replace("-", " "))) for r in requires)))
 
     links = []
     if p.get("guide"):
@@ -254,27 +312,6 @@ def part_html(p):
         # decision the block above uses, so it appears and disappears with the links themselves
         # and cannot go stale as guides are added.
         out.append('        <p class="part-links part-none">No repair guide yet</p>')
-
-    aka = [a.strip() for a in (p.get("aka") or "").split("|") if a.strip()]
-    if aka:
-        # THE ALIASES GET THEIR OWN PLACE AT THE FOOT OF THE CARD.
-        #
-        # Ty, 2026-10-10: "I don't like how we're using 'also called ... also called ... I like that we
-        # have that section kind of showing what the other terms for these things are. I just don't
-        # like the term 'also called' ... give it some kind of framing of like hey these are alternate
-        # names for this. And just keep it nice and simple and clean. Instead of making it look like
-        # it's descriptive text like it is right now."
-        #
-        # He was reading the effect of this markup having NO styling at all: a bare <p class="part-aka">
-        # sat directly under the part name and directly above the description, in the same ink and the
-        # same size as both, so "also called front jacks, landing legs" read as the first half of the
-        # sentence that followed it. It is a different kind of information -- the names a reader may
-        # know the part by -- so it gets a label, a rule above it, and the foot of the card. The
-        # placement is mine to choose: the foot, because the order above it is then name, what it does,
-        # which RVs it fits, where to read next, and only then what else it is called, which is the
-        # least urgent line on the card.
-        out.append('        <div class="part-aka"><span class="part-aka-l">Also known as</span>'
-                   '<span class="part-aka-v">%s</span></div>' % esc(", ".join(aka)))
 
     out.append("      </li>")
     return "\n".join(out)
@@ -365,17 +402,17 @@ def build():
     <label class="fld"><span>System</span>
       <select id="parts-system"><option value="">All systems</option>%s</select>
     </label>
-    <label class="fld"><span>RV type</span>
-      <select id="parts-type"><option value="">Any RV</option>%s</select>
-    </label>
+    <fieldset class="parts-myrv" id="parts-myrv">
+      <legend>My RV</legend>
+      <button type="button" class="chip js-myrv on" data-scope="" aria-pressed="true">Any</button>
+      <button type="button" class="chip js-myrv" data-scope="motorhome" aria-pressed="false">Motorhome</button>
+      <button type="button" class="chip js-myrv" data-scope="towable" aria-pressed="false">Towable</button>
+    </fieldset>
   </div>
   <p class="parts-count" role="status"><span id="parts-shown">%d</span> parts shown</p>
   <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
 ''' % ("".join('<option value="%s">%s</option>' % (esc(s["key"]), esc(s["label"]))
                for s in systems),
-       "".join('<option value="%s">%s</option>' % (esc(t), esc(type_label(t))) for t in
-               sorted({t for s in systems for p in s["parts"] for t in (p.get("types") or [])},
-                      key=type_label)),
        total))
 
     # A JUMP BAR OVER THE NINE SYSTEMS. 210 entries in nine sections is a long page,

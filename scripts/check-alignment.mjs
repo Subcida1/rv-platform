@@ -104,7 +104,14 @@ const DECLARED = [
   // neither. A row that no longer exists must leave this list, or the check reports STALE
   // forever and stops meaning anything.
   { selector: 'div.tool-strip',                    align: 'center', why: 'tools hub picker and the weight calculator badges (Ty centred these 2026-10-14)' },
-  { selector: 'p.chips.part-types',                align: 'center', why: 'parts card type filter' },
+  // CHANGED center -> left, 2026-11-13, with the parts index redesign. The card chips were centred
+  // when they were four to eight type pills filling the card width. The redesign put ONE scope tag
+  // there on most cards ("Motorhome only", on 20 of 210) and left the other 190 rows with a single
+  // short chip, so centring stranded that lone chip mid-card under a left-aligned name and the row
+  // stopped reading as a set. Left is now what the base rule says at every width, and this gate
+  // caught the mismatch when only the CSS had been changed -- which is the check doing its job: the
+  // declaration is the reviewed decision, and it has to move with the design.
+  { selector: 'p.chips.part-types',                align: 'left',   why: 'parts card scope tag and fit chips, left-aligned under the name (2026-11-13)' },
   // Declared 2026-10-29, when the homepage proof strip went from three stacked tiles to
   // one horizontal row so the figures would fit inside the fold. Children are the three
   // counts, all short and fully rounded, so the discovery pass now finds it as a pill row.

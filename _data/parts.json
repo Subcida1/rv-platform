@@ -10,7 +10,7 @@
           "id": "hitch-coupler",
           "n": "Hitch coupler",
           "aka": "coupler|ball coupler|A-frame coupler",
-          "does": "clamps the trailer tongue onto the hitch ball",
+          "does": "the latch on the trailer tongue that drops over the hitch ball and clamps it tight",
           "fails": [
             "latch will not close",
             "worn ball",
@@ -34,13 +34,18 @@
             "rv_qualified": false
           },
           "makers": [],
-          "tool": "weight-calculator"
+          "tool": "weight-calculator",
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "pop-up"
+          ]
         },
         {
           "id": "hitch-ball-mount-and-ball",
           "n": "Hitch ball mount and ball",
           "aka": "ball mount|hitch ball|draw bar|drop hitch",
-          "does": "holds the ball the coupler clamps onto",
+          "does": "the draw bar that slides into the truck receiver, topped with the ball the coupler grabs",
           "fails": [
             "ball worn out of round",
             "wrong drop and the trailer rides nose up",
@@ -58,7 +63,12 @@
             "trailer hitch ball torque"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "pop-up"
+          ]
         },
         {
           "id": "tongue-jack",
@@ -93,6 +103,11 @@
               "brand": "Barker",
               "url": "https://www.barkermfg.com/owners-manuals.html"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "pop-up"
           ]
         },
         {
@@ -123,7 +138,13 @@
             "query": "rv stabilizer jacks",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "leveling-jacks-hydraulic",
@@ -154,7 +175,15 @@
             "query": "rv leveling jacks",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c"
+          ],
+          "requires": [
+            "leveling-jacks"
+          ]
         },
         {
           "id": "air-leveling",
@@ -181,6 +210,10 @@
               "brand": "HWH",
               "url": "https://www.hwhcorp.com/ml54800_srvc.html"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-a"
           ]
         },
         {
@@ -209,13 +242,17 @@
             "rv_qualified": false
           },
           "makers": [],
-          "tool": "weight-calculator"
+          "tool": "weight-calculator",
+          "scope": "specific",
+          "fit": [
+            "travel-trailer"
+          ]
         },
         {
           "id": "sway-control",
           "n": "Sway control",
           "aka": "sway bar|anti-sway|friction sway control",
-          "does": "resists trailer sway from wind and passing trucks",
+          "does": "a friction bar clamped between the trailer tongue and the hitch, dragging against side to side movement",
           "fails": [
             "friction pad worn",
             "bracket loose",
@@ -240,13 +277,17 @@
               "brand": "Hensley",
               "url": "https://hensleymfg.com/pages/hensley-arrow-product-manuals"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer"
           ]
         },
         {
           "id": "safety-chains",
           "n": "Safety chains",
           "aka": "breakaway chains",
-          "does": "catch the trailer if the coupler fails",
+          "does": "two chains from the trailer tongue crossed under the coupler and hooked to the truck, catching the tongue if it comes loose",
           "fails": [
             "wrong length",
             "too light",
@@ -267,7 +308,12 @@
             "query": "safety chains",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "pop-up"
+          ]
         },
         {
           "id": "breakaway-switch",
@@ -293,7 +339,13 @@
             "query": "breakaway switch",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "trailer-wiring-and-connector",
@@ -318,13 +370,19 @@
             "trailer lights not working plug"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "trailer-brakes",
           "n": "Trailer brakes",
           "aka": "electric brakes|surge brakes|brake assembly|disc brakes",
-          "does": "slow and stop the trailer itself",
+          "does": "drums or discs at the trailer wheels that apply their own stopping force, so the trailer is not pushing the truck",
           "fails": [
             "grabbing",
             "no braking",
@@ -348,13 +406,19 @@
             "query": "trailer brakes",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "brake-controller",
           "n": "Brake controller",
           "aka": "trailer brake controller|proportional controller",
-          "does": "tells the trailer brakes how hard to apply",
+          "does": "the box in the cab that sends current to the trailer brakes, set to match how hard you are stopping",
           "fails": [
             "wrong gain",
             "no output",
@@ -377,13 +441,19 @@
             "query": "brake controller",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "axle",
           "n": "Axle",
           "aka": "trailer axle|torsion axle|spring axle|drive axle|tag axle|front axle",
-          "does": "carries the weight and holds the wheels",
+          "does": "the beam under the frame that carries the weight and holds the hubs, wheels and brakes",
           "fails": [
             "bent spindle",
             "camber worn",
@@ -412,13 +482,15 @@
               "brand": "Dexter",
               "url": "https://www.dextergroup.com/resources/information-center/resource-manuals"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "leaf-springs-and-shackles",
           "n": "Leaf springs and shackles",
           "aka": "suspension|equalizer|shackle kit|wet bolt kit",
-          "does": "cushion the trailer over bumps",
+          "does": "the stacked steel leaves and the shackles that hang them, letting the trailer ride over bumps",
           "fails": [
             "flat springs",
             "broken leaf",
@@ -440,13 +512,19 @@
             "query": "leaf springs",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "frame-and-tongue",
           "n": "Frame and tongue",
           "aka": "trailer frame|A-frame|tongue|I-beam frame",
-          "does": "the skeleton everything else bolts to",
+          "does": "the steel rails running the length of the trailer, with the A-frame up front that carries the coupler",
           "fails": [
             "cracked weld at the tongue",
             "rust scaling",
@@ -465,13 +543,19 @@
             "rv frame rust"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "wheel-bearings",
           "n": "Wheel bearings",
           "aka": "bearings|races|grease seals|bearing buddy|EZ lube",
-          "does": "let the wheel spin freely on the spindle",
+          "does": "the rollers and races pressed into the hub, letting the wheel turn on the spindle without grinding",
           "fails": [
             "dry and scored",
             "water intrusion",
@@ -495,13 +579,15 @@
             "query": "wheel bearings",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tires",
           "n": "Tires",
           "aka": "ST tires|load range|speed rating",
-          "does": "carry the load and soak up road shock",
+          "does": "the rubber on the wheels, built to carry the loaded weight and flex over the road",
           "fails": [
             "sidewall blowout",
             "uneven wear",
@@ -534,13 +620,15 @@
               "url": "https://www.carlstar.com/our-products/product-detail/radial-trail-hd/"
             }
           ],
-          "tool": "tire-date-code"
+          "tool": "tire-date-code",
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tire-pressure-monitoring",
           "n": "Tire pressure monitoring",
           "aka": "TPMS|tire sensors|pressure monitor",
-          "does": "warns before a tire fails",
+          "does": "sensors on the valve stems reporting tire pressure to a display in the cab or on the dash",
           "fails": [
             "sensor battery dead",
             "signal loss",
@@ -573,7 +661,9 @@
               "brand": "TST Truck System Technologies",
               "url": "https://tsttruck.com/media/productsupport/tmp/documents/TST-Doc-507_Manual-_B_.pdf"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "lug-nuts-and-torque",
@@ -603,13 +693,15 @@
             "query": "lug nuts",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "spare-tire-and-carrier",
           "n": "Spare tire and carrier",
           "aka": "spare tire mount|spare carrier|underbelly spare|spare tire winch",
-          "does": "keeps a spare for the road",
+          "does": "a mounted spare held on a bracket or under the frame on a winch, ready for a flat",
           "fails": [
             "carrier rusted and seized",
             "tire dry rotted from the sun",
@@ -630,7 +722,9 @@
             "trailer spare tire mount"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "fifth-wheel-landing-gear",
@@ -653,13 +747,17 @@
             "landing gear motor replacement"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "fifth-wheel"
+          ]
         },
         {
           "id": "kingpin-and-fifth-wheel-hitch",
           "n": "Kingpin and fifth-wheel hitch",
           "aka": "kingpin box|fifth wheel hitch|slider hitch",
-          "does": "connects a fifth wheel to the truck bed",
+          "does": "the pin hanging under the fifth wheel's overhang, locked into a jaw hitch mounted in the truck bed",
           "fails": [
             "hard to latch",
             "clunking",
@@ -687,7 +785,11 @@
               "url": "https://www.reesehitches.com/media/installation_instruction/30047.pdf"
             }
           ],
-          "tool": "weight-calculator"
+          "tool": "weight-calculator",
+          "scope": "specific",
+          "fit": [
+            "fifth-wheel"
+          ]
         },
         {
           "id": "pin-box",
@@ -715,6 +817,10 @@
               "brand": "MORryde",
               "url": "https://morryde.com/operations-manual/"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "fifth-wheel"
           ]
         },
         {
@@ -737,7 +843,11 @@
             "gooseneck conversion rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "fifth-wheel"
+          ]
         },
         {
           "id": "toad-setup",
@@ -774,6 +884,11 @@
               "brand": "Roadmaster",
               "url": "https://www.roadmasterinc.com/support/manuals/"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c"
           ]
         },
         {
@@ -798,13 +913,18 @@
             "flat tow brake"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c"
+          ]
         },
         {
           "id": "air-suspension-and-helper-springs",
           "n": "Air suspension and helper springs",
           "aka": "air bags|sumo springs|helper springs",
-          "does": "carry heavy loads without squatting",
+          "does": "air bags or added coils that sit inside or beside the existing springs, holding the load level",
           "fails": [
             "air leak",
             "bag rupture",
@@ -827,7 +947,9 @@
             "query": "air suspension",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "wheel-chocks-and-jack-pads",
@@ -853,7 +975,9 @@
             "rv jack pads"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "hitch-lock",
@@ -878,7 +1002,13 @@
             "king pin lock"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "travel-trailer",
+            "fifth-wheel",
+            "pop-up"
+          ]
         },
         {
           "id": "tire-chains",
@@ -904,7 +1034,9 @@
             "snow chains trailer"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "truck-camper-tie-downs-and-jacks",
@@ -926,7 +1058,11 @@
             "camper jacks not working"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "truck-camper"
+          ]
         }
       ]
     },
@@ -939,7 +1075,7 @@
           "id": "shore-power-cord",
           "n": "Shore power cord",
           "aka": "power cord|shore cord|30 amp cord|50 amp cord|dogbone|30 to 50 adapter|detachable cord",
-          "does": "brings park power into the coach",
+          "does": "the heavy cord that runs from the coach's inlet to the campground pedestal, carrying all the AC power",
           "fails": [
             "burned plug",
             "loose twist lock",
@@ -965,13 +1101,15 @@
             "query": "power cord",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "shore-power-inlet",
           "n": "Shore power inlet",
           "aka": "power inlet|twist lock inlet|receptacle",
-          "does": "where the cord meets the coach",
+          "does": "the twist lock socket on the outside wall where the shore cord connects into the coach's wiring",
           "fails": [
             "scorched pins",
             "water intrusion",
@@ -990,7 +1128,9 @@
             "shore power inlet burned"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "power-cord-reel",
@@ -1012,13 +1152,17 @@
             "cord reel replacement"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a"
+          ]
         },
         {
           "id": "surge-protector-and-ems",
           "n": "Surge protector and EMS",
           "aka": "EMS|surge guard|electrical management|voltage regulator|autoformer",
-          "does": "shields the coach from bad park power",
+          "does": "a plug-in box at the pedestal or inlet that checks voltage and miswiring, then cuts power when it reads bad",
           "fails": [
             "nuisance shutdowns",
             "low voltage trip",
@@ -1042,13 +1186,15 @@
             "query": "rv surge protector",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "transfer-switch",
           "n": "Transfer switch",
           "aka": "ATS|automatic transfer switch",
-          "does": "chooses between shore power and generator",
+          "does": "the relay box that picks between shore power and the generator, routing the chosen source to the breaker panel",
           "fails": [
             "chattering",
             "burned contacts",
@@ -1071,13 +1217,18 @@
             "query": "transfer switch",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "generator"
+          ]
         },
         {
           "id": "breaker-panel-and-120v-breakers",
           "n": "Breaker panel and 120V breakers",
           "aka": "distribution panel|main breaker|GFCI breaker",
-          "does": "protects the circuits inside the coach",
+          "does": "the load center with the household breakers, splitting incoming AC power into separate circuits through the coach",
           "fails": [
             "tripping from actual fault",
             "weak breaker",
@@ -1103,7 +1254,9 @@
             "query": "breaker panel",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "converter-and-charger",
@@ -1148,7 +1301,9 @@
               "brand": "WFCO",
               "url": "https://www.wfcotech.com/support/product-downloads/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "inverter",
@@ -1213,13 +1368,15 @@
               "brand": "Xantrex",
               "url": "https://xantrex.com/library/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "inverter-charger",
           "n": "Inverter charger",
           "aka": "inverter/charger|Xantrex|Magnum",
-          "does": "inverter and charger in a single unit",
+          "does": "changes battery power into household AC current and converts shore power back to charge the batteries",
           "fails": [
             "fault codes",
             "will not pass through",
@@ -1250,7 +1407,9 @@
               "brand": "Xantrex",
               "url": "https://xantrex.com/library/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "house-battery",
@@ -1294,13 +1453,15 @@
               "url": "https://www.renogy.com/support/"
             }
           ],
-          "tool": "battery-runtime"
+          "tool": "battery-runtime",
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "battery-disconnect",
           "n": "Battery disconnect",
           "aka": "kill switch|battery switch|isolator switch",
-          "does": "disconnects the house battery from the coach",
+          "does": "the switch that cuts the house battery off from the coach's 12 volt circuits so nothing drains while parked",
           "fails": [
             "left on and draining",
             "corroded lugs",
@@ -1324,7 +1485,9 @@
             "query": "battery disconnect",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "battery-monitor-and-shunt",
@@ -1353,13 +1516,15 @@
             "query": "battery monitor",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "solar-panels",
           "n": "Solar panels",
           "aka": "solar|PV panels|solar prep|portable solar",
-          "does": "charge the batteries from the sun",
+          "does": "the panels on the roof or set out on the ground that turn sunlight into charging current for the batteries",
           "fails": [
             "shaded and dead",
             "delaminated",
@@ -1409,13 +1574,18 @@
               "brand": "Zamp Solar",
               "url": "https://www.zampsolar.com/pages/support"
             }
+          ],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "solar"
           ]
         },
         {
           "id": "solar-charge-controller",
           "n": "Solar charge controller",
           "aka": "MPPT|PWM controller|solar controller",
-          "does": "manages what the panels send to the batteries",
+          "does": "the box between the panels and the battery that sets the charge rate and keeps the battery from overcharging",
           "fails": [
             "wrong battery type selected",
             "no output",
@@ -1452,13 +1622,18 @@
               "brand": "Zamp Solar",
               "url": "https://www.zampsolar.com/pages/support"
             }
+          ],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "solar"
           ]
         },
         {
           "id": "fuses",
           "n": "Fuses",
           "aka": "blade fuse|ANL fuse|class T|12 volt fuse|inline fuse",
-          "does": "protect every 12 volt circuit",
+          "does": "small blade fuses in the panel or inline, each protecting one 12 volt circuit from too much current",
           "fails": [
             "blowing repeatedly from a real fault",
             "wrong rating",
@@ -1483,13 +1658,15 @@
             "query": "fuses",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "12-volt-outlets-and-usb",
           "n": "12 volt outlets and USB",
           "aka": "cigarette outlet|USB port|12v socket",
-          "does": "power small devices from the coach battery",
+          "does": "the round socket and USB ports on the wall or dash, feeding small devices from the house battery",
           "fails": [
             "dead circuit",
             "corroded socket",
@@ -1513,13 +1690,15 @@
             "query": "usb port",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "120-volt-outlets-and-gfci",
           "n": "120 volt outlets and GFCI",
           "aka": "receptacles|GFCI outlet|outlet not working",
-          "does": "run household appliances on shore or generator power",
+          "does": "household-style receptacles, one carrying a ground fault breaker, running off shore or generator power",
           "fails": [
             "downstream of a tripped GFCI",
             "loose backstab",
@@ -1544,13 +1723,15 @@
             "query": "receptacles",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "light-fixtures-and-leds",
           "n": "Light fixtures and LEDs",
           "aka": "12 volt lights|LED lights|dome lights|porch light",
-          "does": "light the inside and outside",
+          "does": "the ceiling puck lights, LED strips and porch lights, switched on from wall plates around the coach",
           "fails": [
             "flicker",
             "dim",
@@ -1576,13 +1757,15 @@
             "query": "light fixtures",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "wiring-harness-and-connectors",
           "n": "Wiring harness and connectors",
           "aka": "12 volt wiring|wire nuts|scotchloks|junction box",
-          "does": "carry power and signals through the coach",
+          "does": "the bundled wires, looms and plug connectors that run each circuit from the panel to its device",
           "fails": [
             "corrosion",
             "rodent damage",
@@ -1608,7 +1791,9 @@
             "query": "wiring harness",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "generator",
@@ -1668,6 +1853,11 @@
               "brand": "Westinghouse",
               "url": "https://westinghouse.com/pages/manuals"
             }
+          ],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "generator"
           ]
         },
         {
@@ -1700,7 +1890,9 @@
             "query": "control",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "portable-generator",
@@ -1728,7 +1920,9 @@
             "generator carburettor cleaning"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "battery-combiner-and-acr",
@@ -1751,7 +1945,9 @@
             "combiner not charging house battery"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "cell-and-wifi-booster",
@@ -1778,7 +1974,9 @@
             "weboost install rv"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         }
       ]
     },
@@ -1791,7 +1989,7 @@
           "id": "fresh-water-tank",
           "n": "Fresh water tank",
           "aka": "potable tank|holding tank fresh",
-          "does": "stores drinking and washing water on board",
+          "does": "the tank that holds the water you drink and wash with, filled from a hose or a gravity fill port",
           "fails": [
             "cracked from freezing",
             "algae and odor",
@@ -1817,7 +2015,9 @@
             "query": "rv fresh water tank",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "gravity-fill-and-city-water-inlet",
@@ -1844,13 +2044,15 @@
             "gravity fill cap"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "fresh-water-hose",
           "n": "Fresh water hose",
           "aka": "drinking water hose|potable hose|white hose|water bandit",
-          "does": "carries city water into the coach",
+          "does": "the white hose that runs from the park faucet to the coach's city water inlet",
           "fails": [
             "left under pressure and burst",
             "mildew inside",
@@ -1871,13 +2073,15 @@
             "water bandit"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-hose-reel",
           "n": "Water hose reel",
           "aka": "power hose reel|rewind hose reel|fresh water reel",
-          "does": "winds the fresh water hose into a compartment",
+          "does": "a powered reel in a compartment that winds the fresh water hose in and out on command",
           "fails": [
             "motor stalls",
             "hose kinks inside the reel",
@@ -1893,13 +2097,17 @@
             "power hose reel not working"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a"
+          ]
         },
         {
           "id": "water-pressure-regulator",
           "n": "Water pressure regulator",
           "aka": "pressure regulator|inline regulator",
-          "does": "protects the plumbing from excessive park water pressure",
+          "does": "a small inline valve that caps the park water pressure before it reaches the coach's plumbing",
           "fails": [
             "stuck open and blows a fitting",
             "stuck closed and no flow",
@@ -1922,13 +2130,15 @@
             "query": "rv water pressure regulator",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "inline-water-filter",
           "n": "Inline water filter",
           "aka": "water filter|sediment filter|carbon filter",
-          "does": "removes sediment and off-tastes from park water",
+          "does": "a cartridge housing spliced into the water line that traps sediment and off-taste before the faucets",
           "fails": [
             "clogged and drops pressure",
             "cartridge overdue",
@@ -1951,13 +2161,15 @@
             "rv_qualified": false
           },
           "makers": [],
-          "tool": "rv-water-filter"
+          "tool": "rv-water-filter",
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-pump",
           "n": "Water pump",
           "aka": "12 volt pump|demand pump|Shurflo|Remco",
-          "does": "pressurizes the system from the fresh tank",
+          "does": "the demand pump that pulls from the fresh tank and pressurizes the lines when no hose is connected",
           "fails": [
             "runs without stopping",
             "surges",
@@ -1989,7 +2201,9 @@
               "brand": "Valterra",
               "url": "https://valterra.com/downloads/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "pump-strainer-and-check-valve",
@@ -2018,13 +2232,15 @@
             "query": "pump strainer",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "accumulator-tank",
           "n": "Accumulator tank",
           "aka": "pressure tank|accumulator",
-          "does": "smooths the pump's cycling",
+          "does": "a small air-charged tank teed into the water line, absorbing the pump's pulses and holding pressure between cycles",
           "fails": [
             "waterlogged",
             "bladder burst",
@@ -2045,13 +2261,15 @@
             "query": "accumulator tank",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "pex-lines-and-fittings",
           "n": "PEX lines and fittings",
           "aka": "pex|sharkbite|crimp rings|water lines|manifold",
-          "does": "carry water through the coach",
+          "does": "the flexible plastic tubing and crimp or push fittings that carry hot and cold water through the coach",
           "fails": [
             "freeze split",
             "crimp ring failure",
@@ -2076,13 +2294,15 @@
             "query": "pex",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "low-point-drains",
           "n": "Low point drains",
           "aka": "drain valves|low point drain",
-          "does": "empty the lines for winter",
+          "does": "valves at the lowest points of the water lines that open to dump the plumbing for winter",
           "fails": [
             "left open and flooding",
             "seized",
@@ -2105,13 +2325,15 @@
             "query": "drain valves",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-heater-tank",
           "n": "Water heater (tank)",
           "aka": "Atwood|Suburban|6 gallon|10 gallon",
-          "does": "heats water for taps and shower",
+          "does": "the heated tank that holds water for the taps and shower, fired by gas, electric or both",
           "fails": [
             "no hot water",
             "pilot or igniter failure",
@@ -2154,7 +2376,9 @@
               "brand": "Truma",
               "url": "https://www.truma.com/us/service/download-center/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-heater-tankless",
@@ -2202,13 +2426,15 @@
               "brand": "Truma",
               "url": "https://www.truma.com/us/service/download-center/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-heater-anode-rod",
           "n": "Water heater anode rod",
           "aka": "anode|sacrificial anode",
-          "does": "sacrifices itself to protect the tank",
+          "does": "a sacrificial metal rod threaded into the tank that corrodes first, drawing the corrosion off the tank walls",
           "fails": [
             "consumed and the tank corrodes",
             "wrong material",
@@ -2231,7 +2457,9 @@
             "rv_qualified": false
           },
           "makers": [],
-          "tool": "rv-anode-rod"
+          "tool": "rv-anode-rod",
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-heater-element-and-thermostat",
@@ -2262,13 +2490,15 @@
               "brand": "Suburban",
               "url": "https://library.suburbanrv.com/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-heater-bypass",
           "n": "Water heater bypass",
           "aka": "bypass kit|winterizing bypass|three way valve",
-          "does": "lets you winterize without filling the heater",
+          "does": "a valve setup that routes water around the heater so you can winterize without filling the tank",
           "fails": [
             "valve left in bypass and no hot water",
             "leaking",
@@ -2290,13 +2520,15 @@
             "query": "bypass kit",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "faucets-and-shower-mixer",
           "n": "Faucets and shower mixer",
           "aka": "kitchen faucet|bath faucet|shower valve|shower head|shower hose|aerator",
-          "does": "deliver hot and cold water",
+          "does": "the taps and the shower valve that blend hot and cold water and send it out the spout or head",
           "fails": [
             "drip",
             "low flow from a clogged aerator",
@@ -2322,7 +2554,9 @@
             "query": "faucets",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "sinks",
@@ -2349,13 +2583,15 @@
             "bathroom sink rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "shower-pan-and-drain",
           "n": "Shower pan and drain",
           "aka": "shower drain|shower pan|gray tank drain|tub",
-          "does": "drains the shower to the gray tank",
+          "does": "the floor basin of the shower and the drain fitting that carries the water to the gray tank",
           "fails": [
             "clogged with hair",
             "P-trap leak",
@@ -2378,13 +2614,15 @@
             "query": "rv shower pan",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "shower-door-and-enclosure",
           "n": "Shower door and enclosure",
           "aka": "shower door|shower curtain|shower surround|glass shower",
-          "does": "keeps the water in the shower",
+          "does": "the door, curtain or glass surround that keeps spray inside the shower stall",
           "fails": [
             "track clogs and the door jumps",
             "seal mildews",
@@ -2404,13 +2642,15 @@
             "rv shower curtain"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "outside-shower",
           "n": "Outside shower",
           "aka": "exterior shower|utility shower",
-          "does": "rinse gear and pets outside",
+          "does": "a quick-connect shower head and valve mounted in a side compartment for rinsing gear and pets outside",
           "fails": [
             "leaking quick connect",
             "freeze damage",
@@ -2432,13 +2672,15 @@
             "query": "outside shower",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-system-winterizing",
           "n": "Water system winterizing",
           "aka": "antifreeze|blow out|winterize",
-          "does": "protects the plumbing from freezing",
+          "does": "the antifreeze fill or air blow-out that pushes water out of every line before a freeze",
           "fails": [
             "antifreeze left in the fresh tank",
             "air blow-out missed a line",
@@ -2463,13 +2705,15 @@
             "query": "antifreeze",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tank-and-pipe-heaters",
           "n": "Tank and pipe heaters",
           "aka": "tank heater pads|heated tanks|heat tape|holding tank heater",
-          "does": "keeps tanks and water lines from freezing",
+          "does": "heat pads and tape on the tanks and water lines that warm them in freezing weather",
           "fails": [
             "pad peeled off the tank",
             "thermostat stuck on and drains the battery",
@@ -2490,13 +2734,15 @@
             "rv heat tape"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "water-softener-and-filtration",
           "n": "Water softener and filtration",
           "aka": "water softener|onboard filter|portable softener|reverse osmosis|RO system",
-          "does": "removes hardness and off-flavors from park water",
+          "does": "a cartridge or resin bed that pulls hardness minerals and taste out of the park water before it enters the tank",
           "fails": [
             "resin exhausted",
             "not regenerated",
@@ -2516,7 +2762,9 @@
           ],
           "makers": [],
           "demand": null,
-          "tool": "rv-water-filter"
+          "tool": "rv-water-filter",
+          "scope": "all",
+          "fit": []
         }
       ]
     },
@@ -2529,7 +2777,7 @@
           "id": "toilet-gravity",
           "n": "Toilet (gravity)",
           "aka": "RV toilet|foot flush toilet|Aqua-Magic|SeaLand|porcelain toilet|toilet seat",
-          "does": "flushes into the black tank",
+          "does": "the bowl and foot pedal assembly that drops waste straight into the black tank below",
           "fails": [
             "will not hold water",
             "leaking seal",
@@ -2567,7 +2815,9 @@
               "brand": "Thetford",
               "url": "https://www.thetford.com/support/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "toilet-water-valve",
@@ -2603,13 +2853,15 @@
               "url": "https://www.dometic.com/en-us/lp/documents-database"
             }
           ],
-          "tool": "rv-toilet-valve"
+          "tool": "rv-toilet-valve",
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "toilet-seal-and-flange",
           "n": "Toilet seal and flange",
           "aka": "wax ring|toilet gasket|closet flange|floor flange",
-          "does": "seals the toilet to the tank below",
+          "does": "the soft ring and mounting base that keep the bowl joined to the tank without leaks",
           "fails": [
             "sewer smell at the base",
             "toilet rocks",
@@ -2629,7 +2881,9 @@
             "toilet flange rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "toilet-vacuum-or-macerator",
@@ -2670,7 +2924,9 @@
               "brand": "Thetford",
               "url": "https://www.thetford.com/support/"
             }
-          ]
+          ],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "toilet-composting",
@@ -2709,6 +2965,11 @@
               "brand": "Thetford",
               "url": "https://www.thetford.com/support/"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-b"
           ]
         },
         {
@@ -2740,6 +3001,11 @@
               "brand": "Thetford",
               "url": "https://www.thetford.com/support/"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-b",
+            "pop-up"
           ]
         },
         {
@@ -2779,13 +3045,15 @@
               "brand": "Dometic",
               "url": "https://www.dometic.com/en-us/lp/documents-database"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "gray-tank",
           "n": "Gray tank",
           "aka": "gray water tank|galley tank",
-          "does": "holds sink and shower water",
+          "does": "collects wastewater from sinks, shower and galley so it can be dumped later",
           "fails": [
             "odor",
             "grease build-up",
@@ -2810,13 +3078,15 @@
             "query": "gray tank",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "gate-valves",
           "n": "Gate valves",
           "aka": "dump valves|black valve|gray valve|T handle|valve handle|dump valve handle|valve extension rod",
-          "does": "empty the tanks into the sewer hose",
+          "does": "the sliding blades you pull to open and close the tank dump outlets",
           "fails": [
             "hard to pull",
             "leaking when closed",
@@ -2842,7 +3112,9 @@
             "query": "gate valves",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "cable-operated-valves",
@@ -2866,7 +3138,13 @@
             "cable valve replacement"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
+          ]
         },
         {
           "id": "electric-dump-valves",
@@ -2898,6 +3176,11 @@
               "brand": "Valterra",
               "url": "https://valterra.com/downloads/"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c"
           ]
         },
         {
@@ -2934,7 +3217,9 @@
               "brand": "Valterra",
               "url": "https://valterra.com/downloads/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "portable-sewer-tote",
@@ -2961,13 +3246,15 @@
             "portable waste tank"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "macerator-pump",
           "n": "Macerator pump",
           "aka": "macerator|sewage pump",
-          "does": "grinds and pumps waste through a small hose",
+          "does": "grinds toilet waste into slurry and pushes it through a garden hose to a dump station",
           "fails": [
             "jammed impeller",
             "worn blades",
@@ -2989,13 +3276,15 @@
             "query": "rv macerator pump",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tank-flush-and-rinsing",
           "n": "Tank flush and rinsing",
           "aka": "black tank flush|tank rinser|San-T-Flush",
-          "does": "rinses the black tank after dumping",
+          "does": "a built-in sprayer that washes the inside of the black tank after you dump",
           "fails": [
             "check valve failed and water backs into the coach",
             "sprayer clogged",
@@ -3013,13 +3302,15 @@
             "tank flush vacuum breaker"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tank-level-sensors",
           "n": "Tank level sensors",
           "aka": "tank sensors|level gauges|probes",
-          "does": "tell you how full the tanks are",
+          "does": "probes or strips inside the tanks that report how much liquid each one holds",
           "fails": [
             "coated and read 1/3 or full when empty",
             "external sensors peeling",
@@ -3043,13 +3334,15 @@
             "query": "level gauges",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "holding-tank-treatment",
           "n": "Holding tank treatment",
           "aka": "tank chemicals|digester|enzyme treatment",
-          "does": "breaks down waste and controls odor",
+          "does": "a liquid or powder you add to waste tanks to break down solids and control odor",
           "fails": [
             "over-treatment",
             "wrong product killing the good bacteria",
@@ -3073,7 +3366,9 @@
             "query": "tank chemicals",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "vent-stack-and-air-admittance-valve",
@@ -3103,13 +3398,15 @@
             "query": "vent stack",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "p-traps-and-drains",
           "n": "P-traps and drains",
           "aka": "P-trap|sink drain|shower trap",
-          "does": "keeps sewer gas out of the living space",
+          "does": "curved pipes under sinks and showers that hold water to block sewer gas",
           "fails": [
             "dried out while stored",
             "frozen and cracked",
@@ -3133,7 +3430,9 @@
             "query": "p trap",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         }
       ]
     },
@@ -3146,7 +3445,7 @@
           "id": "furnace",
           "n": "Furnace",
           "aka": "RV furnace|Suburban NT|Atwood|Hydro Flame",
-          "does": "burns propane to heat the coach through ducts",
+          "does": "the propane burner and blower tucked behind a panel, pushing warmed air out through ducts in the floor",
           "fails": [
             "will not light",
             "lights then shuts off",
@@ -3182,7 +3481,9 @@
               "brand": "Suburban",
               "url": "https://library.suburbanrv.com/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "furnace-sail-switch",
@@ -3211,13 +3512,15 @@
             "query": "sail switch",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "furnace-control-board-and-igniter",
           "n": "Furnace control board and igniter",
           "aka": "control board|Dinosaur board|igniter",
-          "does": "runs the ignition sequence and flame sensing",
+          "does": "the circuit board that runs the furnace's start-up, sparking the gas and watching for flame",
           "fails": [
             "no spark",
             "repeated lockout",
@@ -3241,7 +3544,9 @@
             "query": "furnace control board",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "furnace-ducting-and-floor-registers",
@@ -3272,7 +3577,9 @@
             "query": "floor vents",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "hydronic-heating",
@@ -3303,13 +3610,19 @@
               "brand": "Aqua-Hot",
               "url": "https://library.aquahot.com/"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
           ]
         },
         {
           "id": "heated-floors",
           "n": "Heated floors",
           "aka": "electric floor heat|GoldHeat|in-floor heat",
-          "does": "warms the floor from underneath",
+          "does": "heating mats laid under the floor surface, warming the tile from below by zone",
           "fails": [
             "zone dead",
             "thermostat failure",
@@ -3325,7 +3638,11 @@
             "heated floor not working rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a"
+          ]
         },
         {
           "id": "diesel-air-heater",
@@ -3351,13 +3668,15 @@
             "chinese diesel heater troubleshooting"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "rooftop-air-conditioner",
           "n": "Rooftop air conditioner",
           "aka": "RV AC|air conditioner|Coleman Mach|Dometic Brisk|Penguin",
-          "does": "cools the coach from the roof",
+          "does": "the roof-mounted cooling unit that drops cold air through a ceiling vent into the coach",
           "fails": [
             "freezes up",
             "runs but no cold",
@@ -3396,6 +3715,11 @@
               "brand": "Zero Breeze",
               "url": "https://www.zerobreeze.com/pages/manual-download"
             }
+          ],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "roof-ac"
           ]
         },
         {
@@ -3425,13 +3749,18 @@
             "query": "air conditioner capacitor",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "roof-ac"
+          ]
         },
         {
           "id": "air-conditioner-gasket-and-shroud",
           "n": "Air conditioner gasket and shroud",
           "aka": "ac gasket|roof gasket|ac cover|shroud",
-          "does": "seals the roof opening and protects the unit",
+          "does": "the foam gasket that seals the AC to the roof opening, and the cover over the unit itself",
           "fails": [
             "leaking into the ceiling",
             "gasket crushed",
@@ -3450,13 +3779,18 @@
             "ac shroud cracked"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "roof-ac"
+          ]
         },
         {
           "id": "air-conditioner-condensate-drain",
           "n": "Air conditioner condensate drain",
           "aka": "ac drain|condensate|drip pan",
-          "does": "carries condensation off the roof",
+          "does": "the pan and tube under a roof air conditioner that carry condensed water away instead of letting it run down",
           "fails": [
             "blocked pan",
             "overflowing into the coach",
@@ -3479,13 +3813,18 @@
             "query": "ac drain",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "roof-ac"
+          ]
         },
         {
           "id": "basement-air-conditioner",
           "n": "Basement air conditioner",
           "aka": "basement AC|under-floor AC|basement air",
-          "does": "cools from a compartment instead of the roof",
+          "does": "an air conditioner mounted in a lower compartment, cooling the coach through ducts rather than a ceiling unit",
           "fails": [
             "condensate pump fails and it floods",
             "compressor",
@@ -3501,7 +3840,11 @@
             "basement ac not cooling"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a"
+          ]
         },
         {
           "id": "heat-pump-and-heat-strip",
@@ -3563,13 +3906,18 @@
               }
             ],
             "note": "Coleman's own documents disagree: the 1976-299 manual shuts the compressor down at about 40 F, the 1976-529 manual at about freezing, and the FAQ says to heat with the furnace below 45 F. The card gives each maker's cutoff rather than one universal figure."
-          }
+          },
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "roof-ac"
+          ]
         },
         {
           "id": "thermostat",
           "n": "Thermostat",
           "aka": "rv thermostat|wall thermostat|Coleman thermostat|digital thermostat",
-          "does": "tells the furnace and AC when to run",
+          "does": "the wall control that reads cabin temperature and switches the furnace and air conditioner on and off",
           "fails": [
             "zone missing",
             "blank display",
@@ -3600,13 +3948,15 @@
               "brand": "Coleman-Mach",
               "url": "https://library.coleman-mach.com/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "roof-vent-fan",
           "n": "Roof vent fan",
           "aka": "Fantastic Fan|Maxxair|power vent|roof vent",
-          "does": "pulls hot air out of the coach",
+          "does": "a powered fan in a roof opening that pulls hot air out and draws outside air in",
           "fails": [
             "will not turn",
             "lid stuck",
@@ -3632,7 +3982,9 @@
             "query": "roof vent fan",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "ceiling-fan",
@@ -3655,13 +4007,18 @@
             "12 volt ceiling fan"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "fifth-wheel"
+          ]
         },
         {
           "id": "ceiling-vents-and-hatch",
           "n": "Ceiling vents and hatch",
           "aka": "roof vent|vent lid|escape hatch|vent cover",
-          "does": "ventilation and an emergency exit",
+          "does": "the lid-covered openings in the ceiling, one of them hinged as an emergency exit",
           "fails": [
             "lid cracked by UV",
             "hinge broken",
@@ -3686,13 +4043,15 @@
             "query": "ceiling vents",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "portable-and-auxiliary-heat",
           "n": "Portable and auxiliary heat",
           "aka": "space heater|electric heater|buddy heater|propane heater",
-          "does": "adds heat where the furnace cannot reach",
+          "does": "a freestanding electric or propane heater brought in to warm a spot the furnace does not reach",
           "fails": [
             "overloads the circuit",
             "tip-over switch",
@@ -3716,13 +4075,15 @@
             "query": "rv portable",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "electric-fireplace",
           "n": "Electric fireplace",
           "aka": "fireplace|electric fire|fireplace heater",
-          "does": "heat and atmosphere from one box",
+          "does": "a wall or cabinet unit with a flame display and a heating element, run on shore power",
           "fails": [
             "flame effect dead",
             "heater element",
@@ -3741,13 +4102,15 @@
             "rv electric fireplace"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "dehumidifier-and-ventilation",
           "n": "Dehumidifier and ventilation",
           "aka": "dehumidifier|moisture control|damp rid",
-          "does": "keeps condensation and mold down",
+          "does": "a unit or chemical absorber that pulls moisture out of the air to keep condensation and mold down",
           "fails": [
             "undersized",
             "runs off the inverter and flattens the battery",
@@ -3771,13 +4134,15 @@
             "query": "dehumidifier",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "smoke-and-co-detectors",
           "n": "Smoke and CO detectors",
           "aka": "smoke alarm|carbon monoxide detector|CO alarm",
-          "does": "warns before the air is dangerous",
+          "does": "the ceiling-mounted alarms that sound when smoke or carbon monoxide builds inside the coach",
           "fails": [
             "chirping at end of life",
             "false alarms from cooking",
@@ -3798,7 +4163,9 @@
             "co detector replacement rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         }
       ]
     },
@@ -3811,7 +4178,7 @@
           "id": "roof-membrane",
           "n": "Roof membrane",
           "aka": "EPDM|TPO|rubber roof|filon",
-          "does": "the waterproof skin over everything",
+          "does": "the single flexible sheet, rubber or plastic, that covers the whole RV roof and sheds water",
           "fails": [
             "chalking and pinholing",
             "seams lifting",
@@ -3838,13 +4205,15 @@
             "query": "rv roof membrane",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "roof-sealant-and-lap-sealant",
           "n": "Roof sealant and lap sealant",
           "aka": "Dicor|self leveling sealant|lap sealant|alpha systems",
-          "does": "seals every penetration on the roof",
+          "does": "the thick caulk smeared over roof seams, vents and edges to keep rainwater out",
           "fails": [
             "cracked by UV",
             "wrong product on the wrong membrane",
@@ -3869,7 +4238,9 @@
             "query": "rv roof sealant",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "roof-coating",
@@ -3898,13 +4269,15 @@
             "query": "rv roof coating",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "skylight",
           "n": "Skylight",
           "aka": "roof skylight|shower skylight|dome",
-          "does": "lets daylight into the shower area",
+          "does": "the clear plastic dome set into the roof that lets daylight into the shower or bath",
           "fails": [
             "cracked and leaking",
             "yellowed",
@@ -3932,7 +4305,9 @@
               "brand": "Dometic",
               "url": "https://www.dometic.com/en-us/lp/documents-database"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "slide-out-and-mechanism",
@@ -3964,7 +4339,12 @@
             "query": "slide-out",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "slide-out"
+          ]
         },
         {
           "id": "slide-seals-and-wipers",
@@ -3995,13 +4375,18 @@
             "query": "wiper seal",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "slide-out"
+          ]
         },
         {
           "id": "slide-topper-awning",
           "n": "Slide topper awning",
           "aka": "slide topper|slide awning|carefree topper",
-          "does": "keeps leaves and rain off the slide roof",
+          "does": "a small spring-loaded awning mounted above a slide-out that keeps rain and debris off its roof",
           "fails": [
             "flapping in wind",
             "spring broken",
@@ -4021,13 +4406,18 @@
             "slide topper not rolling up"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "slide-out"
+          ]
         },
         {
           "id": "windows",
           "n": "Windows",
           "aka": "framed window|frameless window|exit window|window seal|screen|egress window",
-          "does": "light, view and ventilation",
+          "does": "the framed glass panels in the walls that let in light and open for air",
           "fails": [
             "seal leaking",
             "crank operator stripped",
@@ -4053,13 +4443,15 @@
             "query": "rv windows",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "windshield-and-wipers",
           "n": "Windshield and wipers",
           "aka": "windshield|wiper blades|wiper motor|windshield chip",
-          "does": "the glass and the things that clear it",
+          "does": "the large front glass on a motorhome and the moving blades that sweep rain off it",
           "fails": [
             "chip spreads",
             "wiper motor dead",
@@ -4078,13 +4470,15 @@
             "motorhome windshield leak"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "mirrors",
           "n": "Mirrors",
           "aka": "side mirror|mirror head|mirror arm|heated mirror",
-          "does": "shows what is behind and beside a motorhome",
+          "does": "the large adjustable mirrors on arms at the front corners that show the sides and rear of the RV",
           "fails": [
             "vibration blur",
             "heater dead",
@@ -4102,13 +4496,15 @@
             "motorhome side mirror"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "window-shades-and-blinds",
           "n": "Window shades and blinds",
           "aka": "day night shades|roller shade|mini blinds|windshield shade|privacy shade|MCD shade",
-          "does": "privacy and light control",
+          "does": "fabric or slatted coverings at the windows that block light and give privacy",
           "fails": [
             "strings broken",
             "spring lost",
@@ -4133,7 +4529,9 @@
             "query": "rv window shades",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "entry-door-and-lock",
@@ -4165,13 +4563,15 @@
             "query": "entry door",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "screen-door",
           "n": "Screen door",
           "aka": "screen door|screen panel|screen door grille|screen slider",
-          "does": "lets air in without the bugs",
+          "does": "a framed mesh panel hung on the entry door that lets air in and keeps bugs out",
           "fails": [
             "bent frame from the wind",
             "torn screen",
@@ -4191,7 +4591,9 @@
             "rv screen door grille"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "keyless-entry",
@@ -4218,13 +4620,15 @@
             "rv door keypad"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "door-and-window-seals",
           "n": "Door and window seals",
           "aka": "weatherstrip|door gasket|foam seal",
-          "does": "keep water and drafts out",
+          "does": "the soft rubber strips around doors and windows that press shut and block rain, wind and drafts",
           "fails": [
             "compressed",
             "peeling",
@@ -4248,13 +4652,15 @@
             "query": "rv door",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "baggage-and-bay-doors",
           "n": "Baggage and bay doors",
           "aka": "storage door|compartment door|latch|slam latch|paddle latch|basement door",
-          "does": "access to the basement and storage",
+          "does": "the hinged outside doors that open into the basement storage bays and latch shut for travel",
           "fails": [
             "latch failure",
             "gas strut dead",
@@ -4278,7 +4684,9 @@
             "query": "rv baggage",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "compartment-locks-and-keys",
@@ -4305,7 +4713,9 @@
             "rv storage lock"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "storage-slide-tray",
@@ -4329,13 +4739,19 @@
             "basement slide out tray"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
+          ]
         },
         {
           "id": "body-panels-and-siding",
           "n": "Body panels and siding",
           "aka": "filon|fiberglass siding|aluminum siding|sidewall",
-          "does": "the outer skin, in fiberglass or aluminum",
+          "does": "the outer fiberglass or aluminum skin fastened over the frame that forms the coach's walls and sheds weather",
           "fails": [
             "delamination bubbles",
             "impact damage",
@@ -4360,13 +4776,15 @@
             "query": "body panels",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "front-and-rear-caps",
           "n": "Front and rear caps",
           "aka": "front cap|rear cap|nose cap|gelcoat cap",
-          "does": "the molded ends of the coach",
+          "does": "the molded fiberglass shells at the very front and back of the coach that close off the walls",
           "fails": [
             "gelcoat fading and chalking",
             "stress cracks",
@@ -4386,13 +4804,15 @@
             "rv cap replacement"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "decals-and-graphics",
           "n": "Decals and graphics",
           "aka": "rv decals|graphics|stripes",
-          "does": "the stripes and graphics that carry the brand",
+          "does": "the vinyl stripes and printed patterns applied to the outside walls for color and brand identity",
           "fails": [
             "cracking and fading",
             "peeling edges",
@@ -4416,13 +4836,15 @@
             "query": "rv decals",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "underbelly-and-coroplast",
           "n": "Underbelly and coroplast",
           "aka": "underbelly|coroplast|belly pan|insulation",
-          "does": "protects tanks and wiring from road debris",
+          "does": "the corrugated plastic sheet under a towable that closes off the frame and keeps road spray off the tanks",
           "fails": [
             "sagging",
             "torn by road debris",
@@ -4444,13 +4866,15 @@
             "query": "rv underbelly",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "towable",
+          "fit": []
         },
         {
           "id": "fender-skirts-and-trim",
           "n": "Fender skirts and trim",
           "aka": "fender skirt|wheel trim|molding",
-          "does": "covers the wheel openings and edges",
+          "does": "the covers over the wheel openings plus the metal edge strips that finish the body seams",
           "fails": [
             "cracked",
             "lost on the road",
@@ -4471,7 +4895,9 @@
             "query": "fender skirts",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "towable",
+          "fit": []
         },
         {
           "id": "mud-flaps-and-rock-guards",
@@ -4497,7 +4923,9 @@
             "rock guard trailer"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tire-covers-and-wheel-covers",
@@ -4524,13 +4952,15 @@
             "wheel simulators"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "bumper-and-rear-rack",
           "n": "Bumper and rear rack",
           "aka": "rear bumper|bumper hitch|bike rack",
-          "does": "the back end, and often a second hitch",
+          "does": "the bar across the back of the RV, often hollow to hold a sewer hose, with racks bolted on",
           "fails": [
             "bumper pulled from the frame by a loaded rack",
             "rust",
@@ -4559,13 +4989,15 @@
               "brand": "Hollywood Racks",
               "url": "https://hollywoodracks.com/pages/installation-instructions"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "ramp-door-and-patio",
           "n": "Ramp door and patio",
           "aka": "toy hauler ramp|rear ramp door|patio kit|garage door",
-          "does": "loads the toys and becomes a patio",
+          "does": "the rear wall of a toy hauler that folds down as a ramp and can become a raised deck",
           "fails": [
             "springs weaken and it drops",
             "cable kit snapped",
@@ -4587,6 +5019,11 @@
               "brand": "Lippert",
               "url": "https://support.lci1.com/documentation/"
             }
+          ],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "garage"
           ]
         },
         {
@@ -4610,13 +5047,18 @@
             "fuel station pump not working"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "garage"
+          ]
         },
         {
           "id": "entry-steps",
           "n": "Entry steps",
           "aka": "rv steps|folding steps|electric steps|step above|stairs|stepwell cover",
-          "does": "getting in and out safely",
+          "does": "the folding or powered stair treads that let you climb from the ground up through the entry door",
           "fails": [
             "sagging",
             "electric steps not retracting",
@@ -4642,13 +5084,15 @@
             "query": "entry steps",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "entry-assist-handle",
           "n": "Entry assist handle",
           "aka": "grab handle|Lend-a-Hand|entry handle",
-          "does": "something to hold getting in and out",
+          "does": "a gripped bar bolted beside the door that gives your hand something to hold while stepping in",
           "fails": [
             "loose at the wall",
             "cracked",
@@ -4668,7 +5112,9 @@
             "entry assist handle rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "awning",
@@ -4717,13 +5163,15 @@
               "brand": "Zip Dee",
               "url": "https://www.awningsbyzipdee.com/resources/manuals-guides/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "awning-accessories",
           "n": "Awning accessories",
           "aka": "awning shade|sun blocker|awning tie down",
-          "does": "extend the awning's usefulness",
+          "does": "the add-on mat, tie down straps and shades that make the patio awning more useful",
           "fails": [
             "shade panel flapping",
             "tie-downs pulling stakes",
@@ -4745,13 +5193,18 @@
             "query": "sun blocker",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "awning"
+          ]
         },
         {
           "id": "window-awnings",
           "n": "Window awnings",
           "aka": "window awning|side awning|window shade awning",
-          "does": "shades a window from the outside",
+          "does": "small fabric awnings mounted above individual windows that shade the glass and keep sun and rain off",
           "fails": [
             "spring broken",
             "fabric worn",
@@ -4770,7 +5223,12 @@
             "window awning replacement"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "awning"
+          ]
         },
         {
           "id": "ladder-and-roof-access",
@@ -4798,13 +5256,15 @@
             "query": "rv ladder",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "exterior-lighting",
           "n": "Exterior lighting",
           "aka": "porch light|marker lights|tail lights|brake lights|clearance lights|headlights|docking lights|scare light|security lights|awning lights",
-          "does": "exterior visibility and road-legal lighting",
+          "does": "the porch, scare and marker lamps on the outside walls and roof that light the ground and mark the coach's edges",
           "fails": [
             "corroded sockets",
             "water in the lens",
@@ -4830,13 +5290,15 @@
             "query": "exterior lighting",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "backup-and-side-cameras",
           "n": "Backup and side cameras",
           "aka": "backup camera|rear view camera|observation camera",
-          "does": "sees behind and beside a long vehicle",
+          "does": "small cameras at the rear and sides feeding a dash monitor so you can see what the mirrors miss",
           "fails": [
             "signal dropout",
             "water in the housing",
@@ -4860,13 +5322,15 @@
             "query": "rv backup",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "bike-and-kayak-carriers",
           "n": "Bike and kayak carriers",
           "aka": "bike rack|kayak rack|hitch rack|roof rack",
-          "does": "carries bikes, kayaks and gear outside",
+          "does": "racks that mount on a hitch, bumper or ladder and hold bikes and kayaks outside the living space",
           "fails": [
             "bumper-mounted rack pulling the bumper off",
             "hitch rack over the tongue weight limit",
@@ -4886,7 +5350,9 @@
             "kayak rack rv"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "roof-cargo-and-ladders",
@@ -4910,13 +5376,15 @@
             "roof cargo carrier rv"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "pop-up-lift-system",
           "n": "Pop-up lift system",
           "aka": "pop up lift|winch|lift cable|roof crank",
-          "does": "raises the roof and the beds",
+          "does": "the cable and winch mechanism in a pop-up that cranks the roof and bed ends up for camping",
           "fails": [
             "cable snapped",
             "winch ratchet slips",
@@ -4932,7 +5400,11 @@
             "pop up roof will not go up"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "pop-up"
+          ]
         },
         {
           "id": "canvas-and-bunk-ends",
@@ -4954,7 +5426,11 @@
             "bunk end leaking"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "pop-up"
+          ]
         }
       ]
     },
@@ -5004,13 +5480,15 @@
               "brand": "RecPro",
               "url": "https://recpro.com/manuals-and-instructions/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "refrigerator-compressor-or-12v",
           "n": "Refrigerator (compressor or 12V)",
           "aka": "compressor fridge|12 volt fridge|Everchill|Unique|exterior fridge|basement fridge",
-          "does": "cools with a compressor, no propane needed",
+          "does": "the fridge that cools with a compressor instead of a propane flame, running off the battery bank or shore power",
           "fails": [
             "will not start on low voltage",
             "fan noisy",
@@ -5052,13 +5530,15 @@
               "brand": "Unique",
               "url": "https://uniqueappliances.com/en-us/pages/technical-support"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "refrigerator-venting-and-fans",
           "n": "Refrigerator venting and fans",
           "aka": "fridge vent|roof vent fridge|fridge fan",
-          "does": "moves heat away from the coil",
+          "does": "the roof vent and fans behind the fridge that carry the coil's heat up and out of the cabinet",
           "fails": [
             "blocked vent",
             "failed fan",
@@ -5078,7 +5558,9 @@
             "baffle rv fridge"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "cooktop-and-oven",
@@ -5124,13 +5606,15 @@
               "brand": "Suburban",
               "url": "https://library.suburbanrv.com/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "microwave-and-convection",
           "n": "Microwave and convection",
           "aka": "rv microwave|convection microwave|Graystone microwave",
-          "does": "heats and sometimes bakes",
+          "does": "a microwave that also runs a convection fan, browning and baking like an oven when set to that mode",
           "fails": [
             "dead on inverter power",
             "door interlock",
@@ -5153,7 +5637,9 @@
             "query": "rv microwave",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "range-hood-and-vent",
@@ -5182,13 +5668,15 @@
             "query": "range hood",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "dishwasher",
           "n": "Dishwasher",
           "aka": "rv dishwasher|drawer dishwasher|Fisher & Paykel",
-          "does": "washes dishes in a drawer",
+          "does": "a drawer-style dishwasher built into the galley, washing a small load and draining to the gray tank",
           "fails": [
             "will not drain",
             "leaks at the door",
@@ -5205,7 +5693,12 @@
             "drawer dishwasher rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "fifth-wheel"
+          ]
         },
         {
           "id": "washer",
@@ -5236,13 +5729,22 @@
               "brand": "Splendide",
               "url": "https://www.splendide.com/service/docs.html"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
+          ],
+          "requires": [
+            "washer-dryer"
           ]
         },
         {
           "id": "dryer",
           "n": "Dryer",
           "aka": "rv dryer|vented dryer|ventless dryer|dryer vent",
-          "does": "dries the wash, vented or not",
+          "does": "a vented or ventless drum that tumbles the laundry dry, usually stacked with the washer in a closet",
           "fails": [
             "ventless takes forever",
             "lint clogged vent",
@@ -5266,13 +5768,22 @@
               "brand": "Splendide",
               "url": "https://www.splendide.com/service/docs.html"
             }
+          ],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
+          ],
+          "requires": [
+            "washer-dryer"
           ]
         },
         {
           "id": "water-dispenser-and-ice-maker",
           "n": "Water dispenser and ice maker",
           "aka": "ice maker|water dispenser|fridge water line",
-          "does": "cold water and ice without opening the fridge",
+          "does": "the fridge spigot and ice bin fed by a small water line run from the coach's plumbing",
           "fails": [
             "line frozen or kinked",
             "valve failed",
@@ -5294,13 +5805,22 @@
             "query": "water dispenser",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
+          ],
+          "requires": [
+            "ice-maker"
+          ]
         },
         {
           "id": "furniture-and-seating",
           "n": "Furniture and seating",
           "aka": "dinette|sofa|recliner|captain chairs|theater seating|sofa bed|dinette table|Lagun table",
-          "does": "somewhere to sit and sleep",
+          "does": "the dinette, sofa, recliner and captain's chairs bolted to the floor, sized to the floor plan",
           "fails": [
             "frame failure",
             "upholstery peeling",
@@ -5325,13 +5845,15 @@
             "query": "rv furniture",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "bed-and-mattress",
           "n": "Bed and mattress",
           "aka": "rv mattress|short queen|bunk|murphy bed|tilting bed|adjustable bed",
-          "does": "where you sleep, sized to the floor plan",
+          "does": "the sleeping platform and the mattress on it, sometimes a bunk, a murphy bed or a tilting bed over storage",
           "fails": [
             "mattress worn",
             "murphy bed mechanism",
@@ -5356,7 +5878,9 @@
             "query": "bed",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "bed-lift",
@@ -5383,13 +5907,18 @@
               "brand": "Lippert",
               "url": "https://support.lci1.com/documentation/"
             }
+          ],
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "garage"
           ]
         },
         {
           "id": "cabinets,-drawers-and-latches",
           "n": "Cabinets, drawers and latches",
           "aka": "cabinet latch|drawer slide|gas strut|closet|wardrobe|pantry|soft close",
-          "does": "storage that stays shut while driving",
+          "does": "the cabinet boxes, drawer slides, hinges, struts and latches that hold gear and stay shut on the road",
           "fails": [
             "latches pop open on the road",
             "slides break",
@@ -5414,7 +5943,9 @@
             "query": "cabinet latch",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "countertops",
@@ -5440,7 +5971,9 @@
             "rv countertop laminate"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "flooring-and-subfloor",
@@ -5471,13 +6004,15 @@
             "query": "flooring",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tv-and-entertainment",
           "n": "TV and entertainment",
           "aka": "rv tv|sound system|exterior speakers|dash radio|dvd player",
-          "does": "the screens and the speakers",
+          "does": "the TV, soundbar and speakers, wired to 12 volt or shore power, fed by an antenna, cable or disc player",
           "fails": [
             "speaker failure",
             "sound system wiring",
@@ -5502,7 +6037,9 @@
             "query": "rv tv",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tv-antenna",
@@ -5534,7 +6071,9 @@
               "brand": "Winegard",
               "url": "https://winegard.com/support/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "satellite-tv-dish",
@@ -5573,13 +6112,15 @@
               "brand": "DISH Tailgater",
               "url": "https://support.dish.com/products/dish-outdoors/tailgater"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "satellite-internet",
           "n": "Satellite internet",
           "aka": "Starlink|RV internet|satellite internet",
-          "does": "internet from orbit, wherever you park",
+          "does": "a dish or flat panel on the roof pulling internet from satellites, with a router inside the coach",
           "fails": [
             "obstructed view of the sky",
             "cable chewed",
@@ -5600,7 +6141,9 @@
             "starlink not working rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "tv-mounts-and-lifts",
@@ -5632,13 +6175,15 @@
               "brand": "Lippert",
               "url": "https://support.lci1.com/documentation/"
             }
-          ]
+          ],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "central-vacuum-and-cleaning",
           "n": "Central vacuum and cleaning",
           "aka": "central vac|vacuum|Dyson|vacuum hose",
-          "does": "cleaning without hauling a vacuum",
+          "does": "a built-in vacuum with a hose port in the wall and a canister tucked in a compartment",
           "fails": [
             "clogged hose",
             "bag full",
@@ -5659,7 +6204,13 @@
             "query": "central vacuum",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a",
+            "class-c",
+            "fifth-wheel"
+          ]
         },
         {
           "id": "grill-and-outdoor-cooking",
@@ -5686,7 +6237,9 @@
             "best rv bbq"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "exterior-kitchen",
@@ -5712,7 +6265,9 @@
             "pull out kitchen rv"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "fire-extinguisher",
@@ -5738,7 +6293,9 @@
             "fire extinguisher replacement rv"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         }
       ]
     },
@@ -5751,7 +6308,7 @@
           "id": "engine-and-drivetrain",
           "n": "Engine and drivetrain",
           "aka": "gas engine|diesel pusher|cummins|v10|transmission|driveshaft|u-joint|differential|spark plugs|glow plugs|timing belt",
-          "does": "moves the coach, from engine to wheels",
+          "does": "the motorhome's power plant and the gears and shaft that send its turning force to the wheels",
           "fails": [
             "overheating on grades",
             "derate",
@@ -5784,13 +6341,15 @@
               "brand": "Cummins",
               "url": "https://www.cummins.com/support/manuals"
             }
-          ]
+          ],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "cooling-system",
           "n": "Cooling system",
           "aka": "radiator|coolant|fan clutch|charge air cooler|thermostat|water pump|radiator hoses",
-          "does": "keeps the engine at temperature",
+          "does": "the radiator, water pump, thermostat and fan that carry engine heat out of the coolant and into the air",
           "fails": [
             "coolant loss",
             "fan clutch failure",
@@ -5814,7 +6373,9 @@
             "query": "cooling system",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "engine-block-heater",
@@ -5838,13 +6399,15 @@
             "diesel block heater not working"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "belts,-hoses-and-filters",
           "n": "Belts, hoses and filters",
           "aka": "serpentine belt|air filter|fuel filter|oil filter",
-          "does": "routine parts that stop you if neglected",
+          "does": "the service parts on a motorhome engine that carry power, move fluids and clean the air and fuel",
           "fails": [
             "belt squeal or failure",
             "hose burst",
@@ -5867,13 +6430,15 @@
             "query": "serpentine belt",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "emissions-and-def",
           "n": "Emissions and DEF",
           "aka": "DEF|DPF|regen|EGR|check engine",
-          "does": "meets emissions rules on modern diesels",
+          "does": "the exhaust treatment gear, a particulate filter and a fluid tank that the diesel metering system doses to clean the exhaust",
           "fails": [
             "derate from bad DEF",
             "DPF plugged from short trips",
@@ -5896,7 +6461,9 @@
             "query": "emissions",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "chassis-brakes",
@@ -5926,13 +6493,15 @@
             "query": "air brakes",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "air-system-compressor,-dryer,-governor",
           "n": "Air system (compressor, dryer, governor)",
           "aka": "air compressor|air dryer|governor|air tanks",
-          "does": "supplies air for brakes and suspension",
+          "does": "the motorhome's onboard air plant that builds pressure for brakes and suspension and removes moisture before it reaches the tanks",
           "fails": [
             "air dryer saturated",
             "governor failure",
@@ -5954,13 +6523,17 @@
             "query": "air system",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "specific",
+          "fit": [
+            "class-a"
+          ]
         },
         {
           "id": "steering-and-alignment",
           "n": "Steering and alignment",
           "aka": "alignment|kingpins|tie rod|steering stabilizer|wander",
-          "does": "keeps a heavy coach going straight",
+          "does": "the steering box, tie rods and drag link that turn the front wheels, set so the coach tracks straight",
           "fails": [
             "wander and push from trucks",
             "uneven tire wear",
@@ -5983,13 +6556,15 @@
             "query": "steering",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "suspension-and-shocks",
           "n": "Suspension and shocks",
           "aka": "shocks|springs|air bags|sway bar|track bar|ride height valve",
-          "does": "carries the house without bouncing",
+          "does": "the springs, air bags and shocks that carry the body's weight and soak up the road between axle and frame",
           "fails": [
             "worn shocks and porpoising",
             "sway bar bushings",
@@ -6012,13 +6587,15 @@
             "query": "rv suspension",
             "rv_qualified": true
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "alternator-and-starter",
           "n": "Alternator and starter",
           "aka": "alternator|starter|charging system",
-          "does": "starts the engine and charges the chassis battery",
+          "does": "the motorhome engine's charging generator and the motor that spins that engine to start it",
           "fails": [
             "no crank",
             "slow crank",
@@ -6042,7 +6619,9 @@
             "query": "alternator",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "chassis-battery-and-isolator",
@@ -6071,13 +6650,15 @@
             "query": "starting battery",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "dash-air-conditioning",
           "n": "Dash air conditioning",
           "aka": "dash ac|engine ac|evaporator|heater core|cabin filter|compressor",
-          "does": "cools the cab while driving",
+          "does": "the compressor and evaporator built into the dash, cooling the cab air while the engine runs",
           "fails": [
             "no cold",
             "refrigerant loss",
@@ -6100,7 +6681,9 @@
             "query": "dash ac",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "exhaust-and-turbo",
@@ -6128,13 +6711,15 @@
             "query": "exhaust",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "fuel-system",
           "n": "Fuel system",
           "aka": "fuel pump|lift pump|fuel filter|fuel gauge|fuel tank",
-          "does": "carries fuel from the tank to the engine",
+          "does": "the tank, lift pump, filters and injectors that move diesel from the tank to the cylinders",
           "fails": [
             "lift pump failure",
             "fuel filter clogged",
@@ -6157,13 +6742,15 @@
             "query": "fuel system",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "motorhome",
+          "fit": []
         },
         {
           "id": "wheels,-tires-and-tpms",
           "n": "Wheels, tires and TPMS",
           "aka": "aluminum wheels|tire pressure|load range|tpms|valve stem|wheel seal|rims",
-          "does": "carry the load at highway speed",
+          "does": "the rubber tires, metal wheels and pressure sensors that carry the RV and report each tire's air pressure",
           "fails": [
             "age cracking",
             "sidewall failure from underinflation",
@@ -6186,7 +6773,9 @@
             "query": "tire pressure",
             "rv_qualified": false
           },
-          "makers": []
+          "makers": [],
+          "scope": "all",
+          "fit": []
         }
       ]
     },
@@ -6199,7 +6788,7 @@
           "id": "propane-tank",
           "n": "Propane tank",
           "aka": "LP tank|ASME tank|DOT cylinder|20 lb tank|mounting bracket|tank strap",
-          "does": "holds the gas the appliances burn",
+          "does": "the refillable steel cylinder strapped to the frame, holding liquid gas that the appliances draw off as vapor",
           "fails": [
             "overfilled",
             "relief valve weeping",
@@ -6221,13 +6810,15 @@
             "asme vs dot tank rv"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "propane-tank-cover",
           "n": "Propane tank cover",
           "aka": "tank cover|tank boot|LP cover",
-          "does": "dresses and shields the cylinders on the tongue",
+          "does": "the plastic shell over the cylinders on the trailer tongue, hiding the valves and shedding rain off the tank tops",
           "fails": [
             "cracked by UV",
             "straps snapped",
@@ -6245,13 +6836,15 @@
             "propane tank boot"
           ],
           "demand": null,
-          "makers": []
+          "makers": [],
+          "scope": "towable",
+          "fit": []
         },
         {
           "id": "propane-regulator",
           "n": "Propane regulator",
           "aka": "two stage regulator|rv regulator|auto changeover",
-          "does": "drops tank pressure to what the appliances need",
+          "does": "the two-stage valve that takes tank pressure down to a steady low pressure the appliances can burn",
           "fails": [
             "freezes in cold",
             "diaphragm failure",
@@ -6272,7 +6865,9 @@
             "propane pressure too low"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "auto-changeover-and-pigtail-hoses",
@@ -6296,13 +6891,15 @@
             "acme nut leak"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "towable",
+          "fit": []
         },
         {
           "id": "propane-supply-lines-and-fittings",
           "n": "Propane supply lines and fittings",
           "aka": "copper line|flare fitting|gas line|rubber hose",
-          "does": "carries gas to each appliance",
+          "does": "the copper tubing and rubber hoses, joined with flare fittings, that run gas from the regulator to each appliance",
           "fails": [
             "flare leaking",
             "line chafed through a bulkhead",
@@ -6323,13 +6920,15 @@
             "propane line replacement"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "propane-shutoff-valve",
           "n": "Propane shutoff valve",
           "aka": "tank valve|service valve|manual shutoff",
-          "does": "shuts the gas off at the tank",
+          "does": "the hand valve on the cylinder that opens or closes the gas supply to the whole coach",
           "fails": [
             "stiff from age",
             "weeping at the stem",
@@ -6348,13 +6947,15 @@
             "tank valve leaking"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "propane-leak-detector",
           "n": "Propane leak detector",
           "aka": "LP detector|propane alarm|gas alarm",
-          "does": "warns of a leak inside the coach",
+          "does": "a sensor mounted low inside the coach that sounds an alarm when propane vapor builds in the air",
           "fails": [
             "beeping at the end of its life",
             "false alarms from aerosols",
@@ -6375,13 +6976,15 @@
             "detector false alarm"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "propane-tank-gauge-and-monitor",
           "n": "Propane tank gauge and monitor",
           "aka": "tank gauge|LP level|sonar gauge|Mopeka",
-          "does": "tells you how much gas is left",
+          "does": "the float or sender on the tank, read at a panel or by phone, showing how full the cylinder is",
           "fails": [
             "stuck float",
             "sender failure",
@@ -6401,7 +7004,9 @@
             "lp tank monitor"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "propane-refill-and-exchange",
@@ -6427,13 +7032,15 @@
             "how long does rv propane last"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": []
         },
         {
           "id": "extend-a-stay-and-external-supply",
           "n": "Extend-a-stay and external supply",
           "aka": "extend a stay|portable tank kit|stay longer|fire pit|BBQ hookup",
-          "does": "runs the coach from an external tank",
+          "does": "a tee and hose that let you feed the coach's propane system from a portable tank or outside appliance",
           "fails": [
             "leaking tee",
             "left connected while driving",
@@ -6449,7 +7056,12 @@
             "run rv on external propane"
           ],
           "makers": [],
-          "demand": null
+          "demand": null,
+          "scope": "all",
+          "fit": [],
+          "requires": [
+            "lp-system"
+          ]
         }
       ]
     }

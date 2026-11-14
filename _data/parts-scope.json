@@ -1,0 +1,1432 @@
+{
+ "engine-and-drivetrain": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Self-propelled chassis; towables have no engine."
+ },
+ "cooling-system": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Engine cooling only on self-propelled RVs."
+ },
+ "engine-block-heater": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Warms an onboard engine; towables lack engines."
+ },
+ "belts,-hoses-and-filters": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Engine routine parts only on motorized RVs."
+ },
+ "emissions-and-def": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Engine emissions hardware only on motorized RVs."
+ },
+ "chassis-brakes": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Stops the motorhome itself, not a towed trailer."
+ },
+ "air-system-compressor,-dryer,-governor": {
+  "scope": "specific",
+  "fit": [
+   "class-a"
+  ],
+  "requires": [],
+  "why": "Air brakes and suspension are Class A features."
+ },
+ "steering-and-alignment": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Motorized chassis steering; towables steer by hitch."
+ },
+ "suspension-and-shocks": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV needs suspension to carry its load."
+ },
+ "alternator-and-starter": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Starts and charges the engine in motorized RVs."
+ },
+ "chassis-battery-and-isolator": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Motorized chassis starting battery, isolated from house."
+ },
+ "dash-air-conditioning": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Cab cooling only exists on motorized RVs."
+ },
+ "exhaust-and-turbo": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Engine exhaust and turbo on motorized RVs."
+ },
+ "fuel-system": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Fuel delivery only on motorized RVs."
+ },
+ "wheels,-tires-and-tpms": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV needs wheels and tires to move."
+ },
+ "roof-membrane": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has a waterproof roof skin."
+ },
+ "roof-sealant-and-lap-sealant": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every roof has penetrations needing sealant."
+ },
+ "roof-coating": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Coating applies to any aging RV roof."
+ },
+ "skylight": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Roof skylights appear on motorhomes and towables."
+ },
+ "slide-out-and-mechanism": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "slide-out"
+  ],
+  "why": "Slides exist on both motorhomes and towables."
+ },
+ "slide-seals-and-wipers": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "slide-out"
+  ],
+  "why": "Seals every slide opening; slides span both types."
+ },
+ "slide-topper-awning": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "slide-out"
+  ],
+  "why": "Topper shields any slide roof, both types."
+ },
+ "windows": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has windows for light and air."
+ },
+ "windshield-and-wipers": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Only a self-propelled RV has a windshield."
+ },
+ "mirrors": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Cab mirrors belong to the motorized chassis."
+ },
+ "window-shades-and-blinds": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has windows needing privacy cover."
+ },
+ "entry-door-and-lock": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has a living entry door."
+ },
+ "screen-door": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Bugs are excluded on motorhomes and towables alike."
+ },
+ "keyless-entry": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Keyless entry is offered across all RV types."
+ },
+ "door-and-window-seals": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV opening needs water and draft sealing."
+ },
+ "baggage-and-bay-doors": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Exterior storage access exists on both types."
+ },
+ "compartment-locks-and-keys": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Any exterior compartment needs a lock."
+ },
+ "storage-slide-tray": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c",
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Needs a deep basement bay; not pop-ups or vans."
+ },
+ "body-panels-and-siding": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has an outer body skin."
+ },
+ "front-and-rear-caps": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Molded caps appear on motorhomes and trailers."
+ },
+ "decals-and-graphics": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV carries brand graphics or stripes."
+ },
+ "underbelly-and-coroplast": {
+  "scope": "towable",
+  "fit": [],
+  "requires": [],
+  "why": "Towables expose tanks beneath; motorhomes use basements."
+ },
+ "fender-skirts-and-trim": {
+  "scope": "towable",
+  "fit": [],
+  "requires": [],
+  "why": "Wheel-opening skirts are a towable body feature."
+ },
+ "mud-flaps-and-rock-guards": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Debris protection used on motorhomes and towables."
+ },
+ "tire-covers-and-wheel-covers": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Wheel dress and sun shade on any RV."
+ },
+ "bumper-and-rear-rack": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has a rear end and often a rack."
+ },
+ "ramp-door-and-patio": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "garage"
+  ],
+  "why": "Toy-hauler layouts exist as trailer or motorhome."
+ },
+ "fuel-station": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "garage"
+  ],
+  "why": "Toy refueling follows a garage layout, not a class."
+ },
+ "entry-steps": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV needs steps to enter safely."
+ },
+ "entry-assist-handle": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Grab handle used at every RV entry door."
+ },
+ "awning": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Patio awnings fit motorhomes and towables alike."
+ },
+ "awning-accessories": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "awning"
+  ],
+  "why": "Extras depend on having an awning, any type."
+ },
+ "window-awnings": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "awning"
+  ],
+  "why": "Window shade awnings cross all RV types."
+ },
+ "ladder-and-roof-access": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Roof access ladder common to motorhomes and trailers."
+ },
+ "exterior-lighting": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has road-legal and porch lighting."
+ },
+ "backup-and-side-cameras": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Cameras are offered on motorhomes and towables."
+ },
+ "bike-and-kayak-carriers": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Outside gear carriers fit any RV type."
+ },
+ "roof-cargo-and-ladders": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Roof storage available across RV types."
+ },
+ "pop-up-lift-system": {
+  "scope": "specific",
+  "fit": [
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Raises the roof only on folding tent trailers."
+ },
+ "canvas-and-bunk-ends": {
+  "scope": "specific",
+  "fit": [
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Folding canvas walls are unique to pop-ups."
+ },
+ "furnace": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every usable RV has a propane furnace."
+ },
+ "furnace-sail-switch": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every forced-air furnace needs a sail switch."
+ },
+ "furnace-control-board-and-igniter": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV furnace has a control board and igniter."
+ },
+ "furnace-ducting-and-floor-registers": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Ducts and registers deliver heat in every RV."
+ },
+ "hydronic-heating": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c",
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Combined boiler heat is a premium option, not universal."
+ },
+ "heated-floors": {
+  "scope": "specific",
+  "fit": [
+   "class-a"
+  ],
+  "requires": [],
+  "why": "Underfloor heat is a high-end Class A feature."
+ },
+ "diesel-air-heater": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Diesel heaters are fitted across motorhomes and towables."
+ },
+ "rooftop-air-conditioner": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "roof-ac"
+  ],
+  "why": "Roof AC is used on motorhomes and towables alike."
+ },
+ "air-conditioner-capacitor": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "roof-ac"
+  ],
+  "why": "Part of any rooftop AC unit, either RV type."
+ },
+ "air-conditioner-gasket-and-shroud": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "roof-ac"
+  ],
+  "why": "Seals and covers every rooftop AC opening."
+ },
+ "air-conditioner-condensate-drain": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "roof-ac"
+  ],
+  "why": "Any roof AC needs condensate drainage."
+ },
+ "basement-air-conditioner": {
+  "scope": "specific",
+  "fit": [
+   "class-a"
+  ],
+  "requires": [],
+  "why": "Basement-mounted cooling is a Class A design."
+ },
+ "heat-pump-and-heat-strip": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "roof-ac"
+  ],
+  "why": "Heat pump option rides on roof AC, any type."
+ },
+ "thermostat": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has a thermostat controlling heat and AC."
+ },
+ "roof-vent-fan": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Roof vent fans appear on all RV classes."
+ },
+ "ceiling-fan": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Ceiling fans are fitted mainly to larger RVs."
+ },
+ "ceiling-vents-and-hatch": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has roof vents and an escape hatch."
+ },
+ "portable-and-auxiliary-heat": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Supplemental heaters are used in any RV type."
+ },
+ "electric-fireplace": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Electric fireplaces are offered across RV types."
+ },
+ "dehumidifier-and-ventilation": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Moisture control applies to every RV."
+ },
+ "smoke-and-co-detectors": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Safety detectors are required in every RV."
+ },
+ "refrigerator-absorption": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Propane/120V absorption fridge on motorhomes and towables."
+ },
+ "refrigerator-compressor-or-12v": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Compressor fridge fits any RV, no propane needed."
+ },
+ "refrigerator-venting-and-fans": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Vents heat from the fridge coil on any RV."
+ },
+ "cooktop-and-oven": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Propane cooking exists in every RV galley."
+ },
+ "microwave-and-convection": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Heating appliance found on motorhomes and towables."
+ },
+ "range-hood-and-vent": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Vents cooking fumes on any RV."
+ },
+ "dishwasher": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Drawer dishwasher only in larger, upscale coaches."
+ },
+ "washer": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c",
+   "fifth-wheel"
+  ],
+  "requires": [
+   "washer-dryer"
+  ],
+  "why": "Compact washer in larger coaches with laundry."
+ },
+ "dryer": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c",
+   "fifth-wheel"
+  ],
+  "requires": [
+   "washer-dryer"
+  ],
+  "why": "Dryer paired with washer in larger coaches."
+ },
+ "water-dispenser-and-ice-maker": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c",
+   "fifth-wheel"
+  ],
+  "requires": [
+   "ice-maker"
+  ],
+  "why": "Fridge dispenser option on upscale coaches."
+ },
+ "furniture-and-seating": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV needs somewhere to sit and sleep."
+ },
+ "bed-and-mattress": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has a bed sized to its floor plan."
+ },
+ "bed-lift": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "garage"
+  ],
+  "why": "Garage bed lift on any toy hauler layout."
+ },
+ "cabinets,-drawers-and-latches": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Latched storage in every RV."
+ },
+ "countertops": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Kitchen work surface in every RV."
+ },
+ "flooring-and-subfloor": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Every RV has a floor over decking."
+ },
+ "tv-and-entertainment": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Screens and speakers on motorhomes and towables."
+ },
+ "tv-antenna": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Over-the-air antenna fits any RV."
+ },
+ "satellite-tv-dish": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Satellite dish can be added to any RV."
+ },
+ "satellite-internet": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Orbital internet usable on any RV."
+ },
+ "tv-mounts-and-lifts": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Holds and positions TVs in any RV."
+ },
+ "central-vacuum-and-cleaning": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c",
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Central vac fitted to larger coaches only."
+ },
+ "grill-and-outdoor-cooking": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Outdoor cooking works with any RV."
+ },
+ "exterior-kitchen": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Pull-out cooktop bay offered across RV types."
+ },
+ "fire-extinguisher": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Safety requirement in every RV."
+ },
+ "shore-power-cord": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Brings park power into any RV."
+ },
+ "shore-power-inlet": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Where shore cord meets any coach."
+ },
+ "power-cord-reel": {
+  "scope": "specific",
+  "fit": [
+   "class-a"
+  ],
+  "requires": [],
+  "why": "Typical convenience on high-end Class A coaches."
+ },
+ "surge-protector-and-ems": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Protects any RV from bad park power."
+ },
+ "transfer-switch": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "generator"
+  ],
+  "why": "Selects shore or generator; needs a generator."
+ },
+ "breaker-panel-and-120v-breakers": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Protects 120V circuits in every RV."
+ },
+ "converter-and-charger": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Charges house battery and makes 12V."
+ },
+ "inverter": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Optional 120V power from house batteries."
+ },
+ "inverter-charger": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Combined inverter and charger, any RV type."
+ },
+ "house-battery": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Stores power for every RV."
+ },
+ "battery-disconnect": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Cuts house battery from any coach."
+ },
+ "battery-monitor-and-shunt": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Shows battery state on any RV."
+ },
+ "solar-panels": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "solar"
+  ],
+  "why": "Optional solar charging for any RV."
+ },
+ "solar-charge-controller": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "solar"
+  ],
+  "why": "Manages solar input; requires panels."
+ },
+ "fuses": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Protect every 12V circuit."
+ },
+ "12-volt-outlets-and-usb": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Power small devices from coach battery."
+ },
+ "120-volt-outlets-and-gfci": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Run household appliances on park or generator power."
+ },
+ "light-fixtures-and-leds": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Light inside and outside any RV."
+ },
+ "wiring-harness-and-connectors": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carry power and signals through any coach."
+ },
+ "generator": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "generator"
+  ],
+  "why": "Optional built-in genset across RV classes."
+ },
+ "control-and-monitor-panel": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Shows tanks and battery on any RV."
+ },
+ "portable-generator": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Portable power usable with any RV."
+ },
+ "battery-combiner-and-acr": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Uses chassis alternator to charge both banks."
+ },
+ "cell-and-wifi-booster": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Boosts signal for any RV."
+ },
+ "propane-tank": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "ASME tank on motorhomes, cylinders on towables."
+ },
+ "propane-tank-cover": {
+  "scope": "towable",
+  "fit": [],
+  "requires": [],
+  "why": "Shields tongue-mounted cylinders; motorhome tanks differ."
+ },
+ "propane-regulator": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Drops tank pressure on motorhomes and towables."
+ },
+ "auto-changeover-and-pigtail-hoses": {
+  "scope": "towable",
+  "fit": [],
+  "requires": [],
+  "why": "Switches dual cylinders; motorhomes use one ASME tank."
+ },
+ "propane-supply-lines-and-fittings": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carries gas to appliances in every RV."
+ },
+ "propane-shutoff-valve": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Shuts gas at the tank on every RV."
+ },
+ "propane-leak-detector": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Leak warning required in every RV coach."
+ },
+ "propane-tank-gauge-and-monitor": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Shows gas level on motorhomes and towables."
+ },
+ "propane-refill-and-exchange": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Bulk fill or exchange applies to every RV."
+ },
+ "extend-a-stay-and-external-supply": {
+  "scope": "all",
+  "fit": [],
+  "requires": [
+   "lp-system"
+  ],
+  "why": "External tank hookup used on motorhomes and towables."
+ },
+ "toilet-gravity": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Standard flush toilet on motorhomes and towables."
+ },
+ "toilet-water-valve": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Lets water into the bowl on any gravity toilet."
+ },
+ "toilet-seal-and-flange": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Seals toilet to tank on motorhomes and towables."
+ },
+ "toilet-vacuum-or-macerator": {
+  "scope": "motorhome",
+  "fit": [],
+  "requires": [],
+  "why": "Remote-tank flushing used on self-propelled coaches."
+ },
+ "toilet-composting": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-b"
+  ],
+  "requires": [],
+  "why": "Composting toilet option in Class A and camper vans."
+ },
+ "cassette-toilet": {
+  "scope": "specific",
+  "fit": [
+   "class-b",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Removable cassette tank in vans and pop-ups."
+ },
+ "black-tank": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Holds toilet waste on motorhomes and towables."
+ },
+ "gray-tank": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Holds sink and shower water on any RV."
+ },
+ "gate-valves": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Dump tanks into sewer hose on any RV."
+ },
+ "cable-operated-valves": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c",
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Remote valve operation on larger coaches."
+ },
+ "electric-dump-valves": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c"
+  ],
+  "requires": [],
+  "why": "Switch-operated dump valves on upscale motorhomes."
+ },
+ "sewer-hose-and-fittings": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carries waste to dump point on any RV."
+ },
+ "portable-sewer-tote": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Portable waste hauling usable with any RV."
+ },
+ "macerator-pump": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Grinds and pumps waste; add-on for any RV."
+ },
+ "tank-flush-and-rinsing": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Rinses black tank on motorhomes and towables."
+ },
+ "tank-level-sensors": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Show tank levels on every RV."
+ },
+ "holding-tank-treatment": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Breaks down waste and controls odor in any RV."
+ },
+ "vent-stack-and-air-admittance-valve": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Vents tanks and admits air on any RV."
+ },
+ "p-traps-and-drains": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Keeps sewer gas out of any RV living space."
+ },
+ "hitch-coupler": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Ball coupler; fifth wheel uses a kingpin instead."
+ },
+ "hitch-ball-mount-and-ball": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Ball mount only for ball-coupler trailers."
+ },
+ "tongue-jack": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Lifts an A-frame tongue; fifth wheels use landing gear."
+ },
+ "stabilizer-jacks": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Steadies a parked towable; motorhomes use levelers."
+ },
+ "leveling-jacks-hydraulic": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c"
+  ],
+  "requires": [
+   "leveling-jacks"
+  ],
+  "why": "Lifts a motorhome; camper vans rarely have them."
+ },
+ "air-leveling": {
+  "scope": "specific",
+  "fit": [
+   "class-a"
+  ],
+  "requires": [],
+  "why": "Levels on air suspension; only big Class A coaches."
+ },
+ "weight-distribution-hitch": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer"
+  ],
+  "requires": [],
+  "why": "Moves tongue weight; not used on fifth wheels."
+ },
+ "sway-control": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer"
+  ],
+  "requires": [],
+  "why": "Resists sway on bumper-pull trailers."
+ },
+ "safety-chains": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Backup for a ball coupler; fifth wheels use a hitch."
+ },
+ "breakaway-switch": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Applies trailer brakes on separation from tow vehicle."
+ },
+ "trailer-wiring-and-connector": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Links tow vehicle to a towed trailer."
+ },
+ "trailer-brakes": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Stops the trailer itself; motorhome brakes its own wheels."
+ },
+ "brake-controller": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Tells towed trailer brakes how hard to apply."
+ },
+ "axle": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carries weight and holds wheels on every RV."
+ },
+ "leaf-springs-and-shackles": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Cushions a towed trailer over bumps."
+ },
+ "frame-and-tongue": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Tongue only exists on a towed trailer."
+ },
+ "wheel-bearings": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Let wheels spin on any RV."
+ },
+ "tires": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carry the load on every RV."
+ },
+ "tire-pressure-monitoring": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Warns of tire failure on any RV."
+ },
+ "lug-nuts-and-torque": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Clamp wheels to hubs on every RV."
+ },
+ "spare-tire-and-carrier": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Spare for the road on any RV."
+ },
+ "fifth-wheel-landing-gear": {
+  "scope": "specific",
+  "fit": [
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Raises the front of a fifth wheel to hitch."
+ },
+ "kingpin-and-fifth-wheel-hitch": {
+  "scope": "specific",
+  "fit": [
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Connects fifth wheel to truck bed."
+ },
+ "pin-box": {
+  "scope": "specific",
+  "fit": [
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Holds kingpin and cushions fifth-wheel connection."
+ },
+ "gooseneck-adapter": {
+  "scope": "specific",
+  "fit": [
+   "fifth-wheel"
+  ],
+  "requires": [],
+  "why": "Runs a fifth wheel on a gooseneck ball."
+ },
+ "toad-setup": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c"
+  ],
+  "requires": [],
+  "why": "Flat-tows a car behind a motorhome."
+ },
+ "toad-braking-system": {
+  "scope": "specific",
+  "fit": [
+   "class-a",
+   "class-c"
+  ],
+  "requires": [],
+  "why": "Brakes the car towed behind a motorhome."
+ },
+ "air-suspension-and-helper-springs": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carries heavy loads on motorhomes and towables."
+ },
+ "wheel-chocks-and-jack-pads": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Keep any RV from rolling on soft ground."
+ },
+ "hitch-lock": {
+  "scope": "specific",
+  "fit": [
+   "travel-trailer",
+   "fifth-wheel",
+   "pop-up"
+  ],
+  "requires": [],
+  "why": "Prevents a towable from being hooked up and taken."
+ },
+ "tire-chains": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Traction aid usable on any RV in chain areas."
+ },
+ "truck-camper-tie-downs-and-jacks": {
+  "scope": "specific",
+  "fit": [
+   "truck-camper"
+  ],
+  "requires": [],
+  "why": "Holds camper to truck and lifts it on."
+ },
+ "fresh-water-tank": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Stores onboard water on motorhomes and towables."
+ },
+ "gravity-fill-and-city-water-inlet": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Fills tank or runs on park pressure in any RV."
+ },
+ "fresh-water-hose": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carries city water into any RV."
+ },
+ "water-hose-reel": {
+  "scope": "specific",
+  "fit": [
+   "class-a"
+  ],
+  "requires": [],
+  "why": "Convenience reel typical on high-end Class A coaches."
+ },
+ "water-pressure-regulator": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Protects plumbing from park pressure on any RV."
+ },
+ "inline-water-filter": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Filters park water on motorhomes and towables."
+ },
+ "water-pump": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Pressurizes water from the fresh tank on any RV."
+ },
+ "pump-strainer-and-check-valve": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Protects pump and prevents backflow on any RV."
+ },
+ "accumulator-tank": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Smooths pump cycling on motorhomes and towables."
+ },
+ "pex-lines-and-fittings": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Carry water through every RV."
+ },
+ "low-point-drains": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Empty lines for winter on any RV."
+ },
+ "water-heater-tank": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Heats water for taps and shower on any RV."
+ },
+ "water-heater-tankless": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "On-demand water heating on motorhomes and towables."
+ },
+ "water-heater-anode-rod": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Protects tank water heaters on any RV."
+ },
+ "water-heater-element-and-thermostat": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Electric side of tank heaters on any RV."
+ },
+ "water-heater-bypass": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Lets any RV winterize without filling heater."
+ },
+ "faucets-and-shower-mixer": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Deliver hot and cold water in any RV."
+ },
+ "sinks": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Basin draining to gray tank on any RV."
+ },
+ "shower-pan-and-drain": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Drains shower to gray tank on any RV."
+ },
+ "shower-door-and-enclosure": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Keeps shower water contained on any RV."
+ },
+ "outside-shower": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Rinses gear outside on motorhomes and towables."
+ },
+ "water-system-winterizing": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Protects plumbing from freezing on any RV."
+ },
+ "tank-and-pipe-heaters": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Cold-weather option available on any RV."
+ },
+ "water-softener-and-filtration": {
+  "scope": "all",
+  "fit": [],
+  "requires": [],
+  "why": "Improves park water on motorhomes and towables."
+ }
+}

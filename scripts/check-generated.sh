@@ -50,6 +50,12 @@ run() {
 echo "generated pages vs their sources"
 run "listings pages  <- _data/listings/*.json"  "_data/listings/<state>.json"  python3 scripts/build-listings.py --check
 run "parts hub       <- _data/parts.json"       "_data/parts.json"             python3 scripts/build-parts-pages.py --check
+# THE PARTS INDEX IS DERIVED TWICE NOW (2026-11-13): _data/parts.json itself is written by the scope
+# merge, which folds the reviewed classification in. Without this line a hand-edit of a `scope` or
+# `fit` field would pass every check -- build-parts-pages.py --check only proves the PAGE matches the
+# JSON, so a wrong JSON renders a wrong page consistently and reports clean.
+run "parts scope     <- _data/parts-scope.json" "_data/parts-scope.json"       python3 scripts/merge-parts-scope.py --check
+run "part defs       <- _data/parts-definitions.json" "_data/parts-definitions.json" python3 scripts/merge-part-definitions.py --check
 run "manuals pages   <- _data/manuals.json"     "_data/manuals.json"           python3 scripts/build-manuals-pages.py --check
 run "coordinate belt <- _data/listings/*.json"  "_data/listings/<state>.json"  python3 scripts/build-coords.py --check
 run "search index    <- pages, listings, guides" "assets/js/*.js"              python3 scripts/build-search-index.py --check

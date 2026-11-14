@@ -1812,8 +1812,13 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
      Ty's own mobile rule says the opposite of a scroller: "a row of tool chips goes three across
      rather than becoming a horizontal scroller" (2026-10-08). These chips are a label set, not a
      toolbar, so they wrap. Scoped to .part-types so the homepage tool row keeps the scroller it was
-     given for the same reason. */
-  .part-types{overflow-x:visible;flex-wrap:wrap;justify-content:center}
+     given for the same reason.
+     `justify-content` IS NO LONGER RESTATED HERE (2026-11-13). This line used to add `center` on top
+     of the base rule, so below 720px the chips centred while every wider screen left-aligned them --
+     and on the redesigned cards, where a scope tag sits in that row, centring stranded it mid-card
+     under a left-aligned name. The base rule's `flex-start` now stands at every width; only the
+     wrapping behaviour is restated. */
+  .part-types{overflow-x:visible;flex-wrap:wrap}
   .cat-grid{grid-template-columns:minmax(0,1fr)}
   .deck-card{padding:14px 12px}
   .wc-out{min-height:auto}
@@ -3681,7 +3686,39 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    ============================================================ */
 .parts-filter{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin-bottom:6px}
 .parts-filter .search-bar{flex:1 1 280px;min-width:0}
+/* THE "MY RV" CONTROL IS A SEGMENTED CHOICE, NOT A DROPDOWN (redesign, 2026-11-13).
+   It replaces an 8-option "RV type" select that returned 180 of 210 parts for Class A. Three
+   options asked as the reader's own question -- "which RV do you have" -- is a control a reader can
+   answer instantly, and it is the question the data can actually answer honestly.
+   A fieldset+legend rather than a label because these are three mutually exclusive toggles, and a
+   group is what a screen reader needs to read them as one choice. The chips reuse the site's
+   existing .chip shape so it reads as the same family as the part chips below it. */
+.parts-myrv{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end;border:0;margin:0;padding:0}
+.parts-myrv legend{font-size: var(--fs-sm);font-weight:700;color:var(--text-2);
+  text-transform:uppercase;letter-spacing:.06em;padding:0 0 6px}
+.parts-myrv .chip{font-family:inherit;font-size: var(--fs-sm);font-weight:700;line-height:1;
+  padding:0 14px;min-height:44px;display:inline-flex;align-items:center;cursor:pointer;
+  background:var(--surface);border-color:var(--border-2);color:var(--text-2)}
+.parts-myrv .chip:hover{background:var(--tint-bg);border-color:var(--tint-edge);color:var(--tint-ink)}
+/* The chosen one is the FILLED tag, the site's existing language for "this is selected", so it
+   matches the selected fit pills rather than inventing a second selected look. */
+.parts-myrv .chip.on,
+.parts-myrv .chip.on:hover,
+.parts-myrv .chip.on:focus-visible{background:var(--tint-ink);border-color:var(--tint-ink);color:var(--text-inv)}
 .parts-count{margin-top:14px;font-size: var(--fs-sm);color:var(--text-3)}
+/* A SCOPE TAG IS A TAG, NOT A BUTTON (redesign, 2026-11-13). "Motorhome only" and "Towable only"
+   state a fact about the part, so they take the site's tag treatment -- soft tint, no border, micro
+   caps -- rather than the button shape the clickable fit pills use. If they looked like the pills
+   the reader would try to click them, and there is nothing for them to do: the side control above
+   already answers that question. */
+.part-scope{display:inline-flex;align-items:center;min-height:26px;padding:0 10px;
+  border-radius:999px;background:var(--tint-bg);border:1px solid var(--tint-edge);
+  color:var(--tint-ink);font-size: var(--fs-xs);font-weight:800;
+  letter-spacing:.085em;text-transform:uppercase;line-height:1}
+/* AN OPTIONAL-FEATURE GATE IS PROSE, so it is set as a quiet line of text and not as a tag at all:
+   "Only if your RV has a generator" is a conditional the reader has to read and evaluate, which a
+   pill cannot carry. */
+.part-req{margin-top:6px;font-size: var(--fs-sm);color:var(--text-3)}
 .parts-sys{margin-top:46px}
 .parts-sys-count{margin-top:-12px;margin-bottom:20px;font-size: var(--fs-sm);color:var(--text-3);text-align:center}
 /* TWO COLUMNS OF COMPACT ENTRIES, NOT A GRID OF CARDS.
@@ -3696,28 +3733,34 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .part-list{list-style:none;margin:0;padding:0;column-count:2;column-gap:34px}
 .part{padding-top:14px;padding-bottom:14px;border-top:2px solid var(--border-2);
   display:flex;flex-direction:column;gap:3px;break-inside:avoid;
-  /* CENTRED, at Ty's request: "The content within the columns all looks aligned left, lets
-     center all of the content / text". align-items does the children, text-align does the
-     wrapped lines inside them -- one without the other leaves the text ragged. */
-  text-align:center;align-items:center}
+  /* LEFT-ALIGNED, AND THE CENTRING IS GONE ON PURPOSE (redesign, 2026-11-13).
+     The card was centred at T's request on 2026-10-05 and the reasoning was sound for what the card
+     then held: four short fields, roughly equal width, so a centred stack read as a tidy block. It
+     stops working once the fields differ in length, which is most of them. An alias list ("coupler,
+     ball coupler, A-frame coupler") and a part name are different widths, so centring made every
+     card a different shape and the eye had no left edge to run down. T's 2026-11-13 read of the page
+     was "very poorly laid out", and this is the mechanical cause: 210 cards, no shared margin.
+     A reference list is scanned down a column, so the column has to exist. */
+  text-align:left;align-items:flex-start}
 @media(max-width:760px){.part-list{column-count:1}}
 .part-h{font-size: var(--fs-lg);font-weight:700;color:var(--text);letter-spacing:-.01em}
-.part-aka{font-size: var(--fs-sm);color:var(--text-3)}
-/* THE ALIASES ARE THEIR OWN LINE, AT THE FOOT OF THE CARD.
-   Ty, 2026-10-10: "Instead of making it look like it's descriptive text like it is right now ... I
-   think we should visually separate that and kind of give it its own area to live."
-   Until now this markup carried NO rule at all, so a bare <p class="part-aka"> sat in the same ink
-   and size as the part name above it and the description below it, and read as one sentence with
-   them ("also called front jacks, landing legs / Raise and lower the front of a fifth wheel").
-   It is a labelled block now: a rule above it separates it from the card's actions, the label says
-   what it is, and the names sit in the secondary ink. No text-align here on purpose -- the card
-   centres its own contents, and a second centring selector is a decision the style gate makes you
-   declare rather than assume. */
-.part-aka{margin-top:14px;padding-top:11px;border-top:1px solid var(--border-soft)}
-.part-aka-l{display:block;font-size: var(--fs-xs);font-weight:800;letter-spacing:.085em;text-transform:uppercase;
-  color:var(--text-3);margin-bottom:3px}
-.part-aka-v{font-size: var(--fs-xs);color:var(--text-2);line-height:1.5}
-.part-does{font-size: var(--fs-md);color:var(--text-2);line-height:1.55}
+/* THE ALIAS ROW SITS DIRECTLY UNDER THE PART NAME (redesign, 2026-11-13).
+   It was a foot-of-card block with a rule above it and a caption label, which was the right
+   treatment for the position it held. Moved to second on the card it is a sparse parenthetical
+   instead: the label goes inline, the names sit in secondary ink right beside it, and there is no
+   rule because there is nothing above it to separate from but the name, and the name does its own
+   separating. No margin-top for the same reason -- it is the second line of the heading, not a new
+   block. */
+.part-aka{margin:0;font-size: var(--fs-sm);color:var(--text-3);line-height:1.45}
+.part-aka-l{font-weight:700;color:var(--text-3)}
+.part-aka-v{color:var(--text-2)}
+.part-does{margin-top:6px;font-size: var(--fs-md);color:var(--text-2);line-height:1.55}
+/* THE OLD FOOT-OF-CARD ALIAS RULES ARE GONE (redesign, 2026-11-13). They were a labelled block with
+   a rule above it and a caption label, sized for the LAST position on the card. The alias row is now
+   the SECOND line, styled by .part-aka above. Leaving these would have put a 14px top margin on a
+   line that is now a heading sub-line and a display:block on a label that is now inline, which is
+   the "two rules for one job" failure this stylesheet already documents twice. */
+
 /* A TYPE PILL IS A FILTER CONTROL NOW, and the two rules that made them look inert are gone.
    They existed because these were labels on a card that went nowhere. Ty asked for the
    opposite, 2026-10-05: "we should make those clickable filter options ... show that they're
@@ -3735,7 +3778,7 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    line-height:1 stops the font's leading pushing it down.
    font-family:inherit because this is a <button> now, and a button otherwise takes the
    browser's default control font rather than the page's. */
-.part-types{justify-content:center;margin-top:2px;gap:6px}
+.part-types{justify-content:flex-start;margin-top:8px;gap:6px}
 /* A FITS TAG IS NOT A BUTTON, THOUGH IT IS ONE.
    Ty, 2026-10-10: "I like how the manuals buttons look very, very different and unique
    compared to the how to fix buttons, but now the manuals buttons look pretty similar to
@@ -3795,7 +3838,7 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 /* The links used to be pinned to the bottom of the card with margin-top:auto and a rule above
    them. In a row that hugs its content there is nothing to pin them to, and the rule was
    separating a space that no longer exists. They are buttons now, so the font-size went too. */
-.part-links{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
+.part-links{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-start}
 /* The dead-end line on the parts hub (quick wins #13): a card with no guide, tool or maker
    document says so rather than ending silently. */
 .part-links.part-none{font-size: var(--fs-sm);color:var(--text-2)}
