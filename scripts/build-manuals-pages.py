@@ -78,10 +78,35 @@ SYSTEM_ICON = {
     "chassis-and-drivetrain": "gears",
 }
 SPRITE = "assets/img/icons/sprite.svg"
+# A card's photograph, in the same 1:1 slot the icon sits in. Relative on purpose: every page
+# carries <base href="/"> and verify.py's photo-credit check only reads src="assets/img/...",
+# so an absolute /assets/... path would render identically and hide from the gate.
+SLOT_PHOTO = '<img class="slot-photo" src="%s" alt="" loading="lazy">'
 
 
 def icon(name, cls="ic"):
     return '<svg class="%s" aria-hidden="true"><use href="%s#ic-%s"/></svg>' % (cls, SPRITE, name)
+
+
+def card_photo(slug):
+    """The card photograph for a system tile, from the card imagery pass.
+
+    _data/card-images.json is the pass's single source of truth: one row per card
+    slot carrying the image, its licence and who to credit. The tile's 1:1 slot
+    already exists and the pairs, "one subject is not two pictures", so a photo is
+    an <img class="slot-photo"> in that same slot and the tile geometry does not
+    move. A system with no honest photograph keeps its icon: the chassis tile's
+    only candidate is the tire sidewall, which the tires card already uses.
+    """
+    path = ROOT / "_data" / "card-images.json"
+    if not path.exists():
+        return None
+    for row in json.loads(path.read_text(encoding="utf-8")):
+        if row.get("page") == "manuals/index.html" and row.get("href", "").endswith("/" + slug):
+            return row.get("img")
+    return None
+
+
 # How many maker names a tile shows before it says "and N more". Three fits two lines at this
 # width and is enough to answer "does this system have the thing in my coach".
 MAKERS_SHOWN = 3
@@ -522,8 +547,9 @@ def hub(rows, oem_count, model_count=0):
             <div class="man-tile-makers">%s</div>
             <div class="guide-go">Open &#8594;</div>
           </div>
-        </a>""" % (slug, icon(SYSTEM_ICON.get(slug, "wrench")), esc(title), esc(BLURB[slug]), n, b,
-                    esc(shown)))
+        </a>""" % (slug, (SLOT_PHOTO % card_photo(slug)) if card_photo(slug)
+                    else icon(SYSTEM_ICON.get(slug, "wrench")),
+                    esc(title), esc(BLURB[slug]), n, b, esc(shown)))
 
     collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",

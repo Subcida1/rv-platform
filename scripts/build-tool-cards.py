@@ -11,6 +11,7 @@ re-emits them, so the numbers are moved, never retyped.
   python3 scripts/build-tool-cards.py --check    diff against the file on disk
 """
 import html
+import json
 import pathlib
 import re
 import sys
@@ -24,6 +25,30 @@ TOOLS = ROOT / "tools" / "index.html"
 # was re-run. The card blocks and their 32 captured examples live here instead, and
 # this file is the thing to edit when a tool's copy or a worked example changes.
 SOURCE = ROOT / "_data" / "source" / "tools-hub-cards.html"
+
+# A card's photograph, in the same 44px slot the icon sits in. Relative on purpose: every page
+# carries <base href="/"> and verify.py's photo-credit check only reads src="assets/img/...",
+# so an absolute /assets/... path would render identically and hide from the gate.
+SLOT_PHOTO = '<img class="slot-photo" src="%s" alt="" loading="lazy">'
+
+
+def card_photo(slug):
+    """The tool card's photograph, from the card imagery pass.
+
+    _data/card-images.json is the pass's single source of truth: one row per card
+    slot on the four hub pages, carrying the image, its licence and who to credit.
+    A tool that names a real component or unit gets the photo it already owns; a
+    calculator, a lookup or a legal page keeps its icon, because the only honest
+    photograph of "what a trip burns" is a pump price board, which is a stand-in
+    and not the subject.
+    """
+    path = ROOT / "_data" / "card-images.json"
+    if not path.exists():
+        return None
+    for row in json.loads(path.read_text(encoding="utf-8")):
+        if row.get("page") == "tools/index.html" and row.get("href", "").endswith("/" + slug):
+            return row.get("img")
+    return None
 
 # The icon each tool carries. Chosen from assets/img/icons/sprite.svg, which is
 # the site's own set, so nothing new is drawn. Keyed by slug.
@@ -196,9 +221,17 @@ def card_html(slug, title, href, copy, note, shots, id_prefix=""):
     lines = spec_lines(shots)
     spec = "\n".join('        <p class="t-spec-l">%s</p>' % ln for ln in lines)
     note_html = ('\n        <p class="t-note">%s</p>' % note) if note else ""
+    # THE SLOT HOLDS A PHOTOGRAPH WHEN THERE IS AN HONEST ONE (2026-11-15). The tools grid stays
+    # compact -- Ty, 2026-11-13: "put them into smaller cards at fitting multiple tools onto the
+    # screen at once" -- so a 1:1 photo band like /guides/ uses would undo that ruling. The photo
+    # lands in the same 44px chip the icon sits in, square, so nothing about the grid moves.
+    photo = card_photo(slug)
+    slot = (SLOT_PHOTO % photo) if photo \
+        else ('<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+              '<use href="/assets/img/icons/sprite.svg#%s"/></svg>' % icon)
     return f"""      <a class="t-card" id="{id_prefix}tool-{slug}" href="{href}" data-cat="{cat}">
         <div class="t-top">
-          <span class="t-ic" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="/assets/img/icons/sprite.svg#{icon}"/></svg></span>
+          <span class="t-ic" aria-hidden="true">{slot}</span>
           <div class="t-hd"><h3 class="t-name">{title}</h3><span class="t-verb">{verb}<span class="t-arrow" aria-hidden="true">&rsaquo;</span></span></div>
         </div>
         <div class="t-copy">{copy}</div>

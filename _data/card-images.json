@@ -1,0 +1,994 @@
+[
+ {
+  "page": "index.html",
+  "href": "guides/rv-furnace-not-working",
+  "title": "RV Furnace Not Working",
+  "status": "ICON",
+  "seek": "no honest photograph of the subject exists yet",
+  "icon": "fire"
+ },
+ {
+  "page": "index.html",
+  "href": "guides/rv-water-heater-not-heating",
+  "title": "Water Heater Not Heating",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/rv-water-heater-truma.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "water-heater"
+ },
+ {
+  "page": "index.html",
+  "href": "guides/rv-water-pressure",
+  "title": "RV Water Pressure",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/rv-water-pressure-gauge.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "droplet"
+ },
+ {
+  "page": "index.html",
+  "href": "guides/rv-refrigerator-not-cooling",
+  "title": "Fridge Not Cooling",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/rv-fridge-frost-tile.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "fridge"
+ },
+ {
+  "page": "index.html",
+  "href": "guides/rv-towing-capacity",
+  "title": "How Much Can I Tow?",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/rv-towing-tile.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "truck"
+ },
+ {
+  "page": "index.html",
+  "href": "guides/rv-maintenance-schedule",
+  "title": "Maintenance Schedule",
+  "status": "ICON",
+  "seek": "no honest photograph of the subject exists yet",
+  "icon": "wrench"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/weight-calculator",
+  "title": "RV Weight & Towing Calculator",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/tiles/tile-weight-towing.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "hitch"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/fuel-cost",
+  "title": "Fuel Cost Calculator",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/tiles/tile-fuel-cost.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "fuel"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/solar-sizing",
+  "title": "Solar Sizing Calculator",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/tiles/tile-solar-sizing.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "sun"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/battery-runtime",
+  "title": "Battery Runtime",
+  "status": "SHIPPED",
+  "kind": "SHIPPED_HOME",
+  "img": "assets/img/tiles/tile-battery-runtime.jpg",
+  "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
+  "icon": "battery"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/watts-to-amps",
+  "title": "Watts to Amps",
+  "status": "ICON",
+  "seek": "no honest photograph of the subject exists yet",
+  "icon": "plug"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/tire-date-code",
+  "title": "Tire Date Code Decoder",
+  "status": "SHIP",
+  "img": "assets/img/dot-tire-code-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Chrismeraz",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "Wikimedia Commons, File:DOT tire code.jpg",
+  "why": "the same honest photo the tool's hub card carries, so one subject is not two pictures",
+  "icon": "tire"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/rv-recall-lookup",
+  "title": "RV Recall Lookup",
+  "status": "ICON",
+  "seek": "no honest photograph of the subject exists yet",
+  "icon": "checklist"
+ },
+ {
+  "page": "index.html",
+  "href": "tools/snow-load",
+  "title": "Roof Snow Load",
+  "status": "SHIP",
+  "img": "assets/img/snow-covered-rv-tile.jpg",
+  "kind": "PHOTO",
+  "author": "L. Cowieson",
+  "licence": "CC BY-SA 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "geograph.org.uk, File:Snow covered caravan - geograph.org.uk - 3320618.jpg",
+  "why": "the same honest photo the tool's hub card carries, so one subject is not two pictures",
+  "icon": "mountain"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-battery-not-charging",
+  "title": "Battery Not Charging",
+  "status": "ICON",
+  "why": "A fault spanning four sources; no single object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "battery"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-lithium-battery-not-charging",
+  "title": "Lithium Battery",
+  "status": "ICON",
+  "why": "A chemistry, not a photographable part.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "battery"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-battery-disconnect",
+  "title": "Battery Disconnect Switch",
+  "status": "ICON",
+  "why": "A switch; the site's photos read as a generic tangle.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "battery"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-generator-sizing",
+  "title": "Generator Sizing",
+  "status": "ICON",
+  "why": "A calculation.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "battery-charge"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-12-volt-problems",
+  "title": "RV Electrical Problems",
+  "status": "BLANK",
+  "why": "The 12V fuses the guide checks first.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "battery-charge"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-converter-not-charging",
+  "title": "Converter Not Charging",
+  "status": "TY",
+  "img": "assets/img/rv-breaker-panel.jpg",
+  "kind": "TY",
+  "author": "Ty Brandes",
+  "licence": "own photograph (no credit line)",
+  "licence_url": "",
+  "source": "Ty's own camera",
+  "why": "T shot the breaker panel; the converter sits in it.",
+  "icon": "plug"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-solar-not-charging",
+  "title": "Solar Not Charging",
+  "status": "PHOTO",
+  "img": "assets/img/rv-solar-controller-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Ranjithkumar Murugesan",
+  "licence": "CC0 1.0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "Wikimedia Commons, File:SUOER SOLAR CHARGE CONTROLLER.jpg",
+  "why": "The controller face is the part being tested.",
+  "icon": "sun"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-generator-not-charging",
+  "title": "Generator Not Charging",
+  "status": "PHOTO",
+  "img": "assets/img/rv-portable-generator-tile.jpg",
+  "kind": "PHOTO",
+  "author": "TaurusEmerald",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "Wikimedia Commons, File:Honda EU2000i Inverter Generator.jpg",
+  "why": "The generator itself.",
+  "icon": "fuel"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-fuse-keeps-blowing",
+  "title": "Fuse Keeps Blowing",
+  "status": "PHOTO",
+  "img": "assets/img/rv-blade-fuse-holder-tile.jpg",
+  "kind": "PHOTO",
+  "author": "project Kei",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "Wikimedia Commons, File:Car fuse box Layout.jpg",
+  "why": "Fuses in their holder, the part being replaced.",
+  "icon": "search"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-outlets-not-working",
+  "title": "Outlets Not Working",
+  "status": "PHOTO",
+  "img": "assets/img/rv-gfci-outlet-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Wtshymanski",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "Wikimedia Commons, File:NEMA 5-20RA GFCI Tamper Resistant Receptacle.jpg",
+  "why": "The GFCI the guide tests first, high contrast at tile size.",
+  "icon": "door"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-lights-not-working",
+  "title": "Lights Not Working",
+  "status": "TY",
+  "img": "assets/img/rv-fuse-panel.jpg",
+  "kind": "TY",
+  "author": "Ty Brandes",
+  "licence": "own photograph (no credit line)",
+  "licence_url": "",
+  "source": "Ty's own camera",
+  "why": "T shot the 12V fuse panel, the first place to look.",
+  "icon": "lightbulb"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-propane-tank-wont-fill",
+  "title": "Propane Tank Won't Fill",
+  "status": "BLANK",
+  "why": "The regulator and hoses the guide checks.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "propane"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-propane-detector-beeping",
+  "title": "Propane Detector Beeping",
+  "status": "ICON",
+  "why": "A detector; no honest photo the site owns.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "siren"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-refrigerator-not-cooling",
+  "title": "RV Refrigerator Not Cooling",
+  "status": "PHOTO",
+  "img": "assets/img/rv-fridge-frost-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Ty Brandes",
+  "licence": "own photograph (no credit line)",
+  "licence_url": "",
+  "source": "Ty's own camera, cropped square",
+  "why": "Frost on the fins is the fault the guide diagnoses.",
+  "icon": "fridge"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-water-heater-not-heating",
+  "title": "RV Water Heater Not Heating",
+  "status": "BLANK",
+  "why": "The heater unit itself, clean and isolated.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "water-heater"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-water-heater-anode-rod",
+  "title": "Anode Rod and Flush",
+  "status": "BLANK",
+  "why": "Same unit; the anode lives inside it.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "bolt-screw"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-air-conditioner-not-cooling",
+  "title": "RV Air Conditioner Not Cooling",
+  "status": "ICON",
+  "why": "No RV A/C photo exists; a domestic unit would mislead.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "fan"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-furnace-not-working",
+  "title": "RV Furnace Not Working",
+  "status": "PHOTO",
+  "img": "assets/img/rv-furnace-open-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Ty Brandes",
+  "licence": "own photograph (no credit line)",
+  "licence_url": "",
+  "source": "Ty's own camera, cropped square",
+  "why": "The furnace with its panel off, the state the guide works in.",
+  "icon": "fire"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-tank-sensors-reading-wrong",
+  "title": "RV Tank Sensors Reading Wrong",
+  "status": "SEEK",
+  "why": "Sensor probes, though the crop is MUDDY at 280px; needs a tighter crop.",
+  "seek": "the probes read as grey wiring against a blown-out background at 280px; the shot needs the tank's side wall and fittings in frame, not a metre-away crop of the wiring",
+  "icon": "chart"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-fridge-leveling",
+  "title": "Fridge Leveling",
+  "status": "BLANK",
+  "why": "T's evaporator shot, the part that needs leveling.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "wrench"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-furnace-carbon-monoxide",
+  "title": "Furnace and Carbon Monoxide",
+  "status": "ICON",
+  "why": "A safety topic; an alarm is not the subject.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "warning"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-heating-off-grid",
+  "title": "Off-Grid Heating",
+  "status": "ICON",
+  "why": "A method, not an object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "fire"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-two-appliances-stopped",
+  "title": "Two Appliances Stopped",
+  "status": "TY",
+  "img": "assets/img/rv-breaker-panel.jpg",
+  "kind": "TY",
+  "author": "Ty Brandes",
+  "licence": "own photograph (no credit line)",
+  "licence_url": "",
+  "source": "Ty's own camera",
+  "why": "T's AC panel shot; one fault, one circuit.",
+  "icon": "plug"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-propane-furnace-wont-light",
+  "title": "Propane: Furnace Won't Light",
+  "status": "PHOTO",
+  "img": "assets/img/rv-furnace-open-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Ty Brandes",
+  "licence": "own photograph (no credit line)",
+  "licence_url": "",
+  "source": "Ty's own camera, cropped square",
+  "why": "The furnace is the subject, not the fuel.",
+  "icon": "fire"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-black-tank-clogged",
+  "title": "Black Tank Clogged",
+  "status": "BLANK",
+  "why": "Same station; the guide works at it.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "plunger"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-water-pressure",
+  "title": "Water Pressure",
+  "status": "ICON",
+  "why": "A reading, not a component.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "droplet"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-macerator-toilet",
+  "title": "Macerator Toilet Won't Flush",
+  "status": "ICON",
+  "why": "No honest RV toilet photo.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "toilet"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-sewer-smell",
+  "title": "Sewer Smell Inside",
+  "status": "BLANK",
+  "why": "The sewer connection the guide traces.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "toilet"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-water-pump-wont-prime",
+  "title": "Water Pump Won't Prime",
+  "status": "ICON",
+  "why": "No honest water pump photo.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "droplet"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-black-tank",
+  "title": "Black Tank",
+  "status": "PHOTO",
+  "img": "assets/img/rv-dump-station.jpg",
+  "kind": "PHOTO",
+  "author": "photographed at Logumkloster, Denmark",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "Wikimedia Commons, File:Loegumkloster rv dump station.jpg",
+  "why": "Where the tank is emptied.",
+  "icon": "wrench"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-black-tank-routine",
+  "title": "Black Tank Routine",
+  "status": "ICON",
+  "why": "A routine, no object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "notebook"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-toilet-not-flushing",
+  "title": "Toilet Not Flushing",
+  "status": "ICON",
+  "why": "No honest RV toilet photo.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "toilet"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/winterize-plumbing",
+  "title": "Winterize Your Plumbing",
+  "status": "ICON",
+  "why": "A procedure.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "droplet"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-chassis-battery-and-charging",
+  "title": "Chassis Battery and Charging",
+  "status": "ICON",
+  "why": "A fault spanning sources.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "battery"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-entry-steps-not-working",
+  "title": "Entry Steps Not Working",
+  "status": "ICON",
+  "why": "No steps photo the site owns.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "ladder"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-entry-door-wont-latch",
+  "title": "Entry Door Won't Latch",
+  "status": "ICON",
+  "why": "No door photo the site owns.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "door"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-window-leaking",
+  "title": "Window Leaking",
+  "status": "HOLD",
+  "why": "Ty's crop for this card is a slide-out wiper seal with a failing bead of lap sealant, not a window gasket. Wrong-but-plausible is the site's worst failure, so the icon stays until a window shot exists.",
+  "icon": "window"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-engine-overheating",
+  "title": "Engine Overheating",
+  "status": "ICON",
+  "why": "A motorhome chassis engine; no honest photo.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "thermometer"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-awning-not-working",
+  "title": "Awning Not Working",
+  "status": "ICON",
+  "why": "No awning photo the site owns.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "umbrella"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-maintenance-schedule",
+  "title": "Maintenance Schedule",
+  "status": "ICON",
+  "why": "A schedule, no object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "wrench"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-roof-leak-repair",
+  "title": "Roof Leak Repair",
+  "status": "SEEK",
+  "why": "A vent and its sealant, where roof leaks start.",
+  "seek": "the black lid catches the sky and the sealant reads as a dark smear; the shot needs the vent photographed at an angle from above with the cracked sealant in daylight, or a coach roof shot that shows where water pools",
+  "icon": "shell-body"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-slide-out-not-working",
+  "title": "Slide Out Not Working",
+  "status": "BLANK",
+  "why": "T's gear mechanism shot.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "arrows-h"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-leveling-jacks-not-working",
+  "title": "Leveling Jacks Not Working",
+  "status": "BLANK",
+  "why": "A jack mechanism, the class the guide covers.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "arrow-up"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-slide-out-leaking",
+  "title": "Slide-Out Leaking",
+  "status": "SEEK",
+  "why": "T's roof/slide seal shot.",
+  "seek": "the seal fills the frame with no slide-out to sit against, so it reads as a strip of rubber; the shot needs the slide-out edge, the seal and the sidewall in one frame",
+  "icon": "window"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-delamination",
+  "title": "Sidewall Delamination",
+  "status": "SEEK",
+  "why": "T's exterior trim shot with rust and failed sealant.",
+  "seek": "the trim fills the frame and reads as a blurry metal rail; the shot needs the wall, the trim and the bulge or separation in one frame",
+  "icon": "brick"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-frame-cracks",
+  "title": "Frame Cracks and Welds",
+  "status": "ICON",
+  "why": "No frame photo; word may be unavailable.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "bolt-screw"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-condensation-inside",
+  "title": "Condensation Inside",
+  "status": "BLANK",
+  "why": "T's compartment shot; a real interior frame.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "droplet"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-level-towing-setup",
+  "title": "Level Towing Setup",
+  "status": "BLANK",
+  "why": "Same hitch; the guide sets it level.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "wrench"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-towing-capacity",
+  "title": "How Much Can I Tow?",
+  "status": "PHOTO",
+  "img": "assets/img/rv-weight-distribution-hitch-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Tony Webster",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "Wikimedia Commons, File:Fastway e2 Weight Distribution and Sway Control Trailer Tow Hitch (27189607617).jpg",
+  "why": "The hitch is the connection the guide sizes.",
+  "icon": "truck"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-trailer-wheel-bearings",
+  "title": "Trailer Wheel Bearings",
+  "status": "BLANK",
+  "why": "Front-of-trailer hardware; the closest honest frame.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "tire"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-tire-replacement",
+  "title": "When to Replace RV Tires",
+  "status": "PHOTO",
+  "img": "assets/img/dot-tire-code-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Chrismeraz",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "Wikimedia Commons, File:DOT tire code.jpg",
+  "why": "The sidewall crop carries the DOT date code the guide teaches.",
+  "icon": "tire"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-towing-trailer",
+  "title": "Towing a Trailer",
+  "status": "BLANK",
+  "why": "The hitch and bars, the gear the guide covers.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "wrench"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-driving-motorhome",
+  "title": "Driving a Motorhome",
+  "status": "ICON",
+  "why": "A driving topic, no object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "wrench"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-pre-trip-walkaround",
+  "title": "Pre-Trip Walkaround",
+  "status": "ICON",
+  "why": "A checklist, no object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "wrench"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-trip-planner",
+  "title": "RV Trip Planner",
+  "status": "ICON",
+  "why": "A planning topic, no object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "compass"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/rv-pin-weight-and-payload",
+  "title": "Pin Weight and Payload",
+  "status": "BLANK",
+  "why": "The hitch carries the pin weight.",
+  "seek": "Ty left this empty for now; a photo of the named component would fill it",
+  "icon": "scale-balance"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/trailer-brakes-required",
+  "title": "Trailer Brakes: When Required",
+  "status": "ICON",
+  "why": "A legal threshold, no object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "stop"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/battery-winter-storage",
+  "title": "Battery Care in Cold",
+  "status": "ICON",
+  "why": "A care topic.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "battery"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/tires-winter",
+  "title": "Tires Through Winter",
+  "status": "ICON",
+  "why": "A care topic; the snow photo is used elsewhere.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "snowflake"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/roof-snow-load",
+  "title": "Roof Under Snow Load",
+  "status": "PHOTO",
+  "img": "assets/img/snow-covered-rv-tile.jpg",
+  "kind": "PHOTO",
+  "author": "L. Cowieson",
+  "licence": "CC BY-SA 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "geograph.org.uk, File:Snow covered caravan - geograph.org.uk - 3320618.jpg",
+  "why": "A real trailer under a snow cap, the exact subject.",
+  "icon": "mountain"
+ },
+ {
+  "page": "guides/index.html",
+  "href": "guides/freeze-damage-triage",
+  "title": "RV Froze: What to Check",
+  "status": "ICON",
+  "why": "A procedure, no object.",
+  "seek": "keeps a designed icon: no single photographable object (a fault, a number or a procedure); the route is generated tile art, not a photograph",
+  "icon": "ice"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/power-and-electrical",
+  "title": "Power and electrical",
+  "status": "SHIP",
+  "img": "assets/img/rv-gfci-outlet-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Wtshymanski",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "Wikimedia Commons, File:NEMA 5-20RA GFCI Tamper Resistant Receptacle.jpg",
+  "why": "the system's own component, the same photo rule as the guides hub"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/water-and-plumbing",
+  "title": "Water and plumbing",
+  "status": "SHIP",
+  "img": "assets/img/rv-water-heater-truma.jpg",
+  "kind": "PHOTO",
+  "author": "Truma Geraetetechnik",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "Wikimedia Commons, File:Truma therme.jpg",
+  "why": "the system's own component, the same photo rule as the guides hub"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/heating-and-cooling",
+  "title": "Heating and cooling",
+  "status": "SHIP",
+  "img": "assets/img/rv-furnace-open-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Ty Brandes",
+  "licence": "own photograph, no credit line",
+  "licence_url": "",
+  "source": "Ty's own camera, cropped square",
+  "why": "the system's own component, the same photo rule as the guides hub"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/kitchen-and-appliances",
+  "title": "Kitchen and appliances",
+  "status": "SHIP",
+  "img": "assets/img/rv-fridge-frost-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Ty Brandes",
+  "licence": "own photograph, no credit line",
+  "licence_url": "",
+  "source": "Ty's own camera, cropped square",
+  "why": "the system's own component, the same photo rule as the guides hub"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/exterior-and-body",
+  "title": "Exterior and body",
+  "status": "SEEK",
+  "why": "the system's own component, the same photo rule as the guides hub",
+  "seek": "the black lid catches the sky and the sealant reads as a dark smear; the shot needs the vent photographed at an angle from above with the cracked sealant in daylight, or a coach roof shot that shows where water pools"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/towing-and-running-gear",
+  "title": "Towing and running gear",
+  "status": "SHIP",
+  "img": "assets/img/rv-weight-distribution-hitch-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Tony Webster",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "Wikimedia Commons, File:Fastway e2 Weight Distribution and Sway Control Trailer Tow Hitch (27189607617).jpg",
+  "why": "the system's own component, the same photo rule as the guides hub"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/sanitation-and-tanks",
+  "title": "Sanitation and tanks",
+  "status": "SHIP",
+  "img": "assets/img/rv-dump-station.jpg",
+  "kind": "PHOTO",
+  "author": "photographed at Logumkloster, Denmark",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "Wikimedia Commons, File:Loegumkloster rv dump station.jpg",
+  "why": "the system's own component, the same photo rule as the guides hub"
+ },
+ {
+  "page": "manuals/index.html",
+  "href": "manuals/chassis-and-drivetrain",
+  "title": "Chassis and drivetrain",
+  "status": "SEEK",
+  "seek": "the only honestly chassis photo the site owns is the tire sidewall, which the tires card already uses; a frame, axle or suspension shot from Ty's camera would be better than a toe-in crop of a tow hitch"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/fuel-cost",
+  "title": "Fuel Cost Calculator",
+  "status": "ICON",
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/watts-to-amps",
+  "title": "Watts to Amps & Shore Power",
+  "status": "ICON",
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/solar-sizing",
+  "title": "Solar Sizing Calculator",
+  "status": "SHIP",
+  "img": "assets/img/rv-solar-controller-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Ranjithkumar Murugesan",
+  "licence": "CC0 1.0",
+  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "Wikimedia Commons, File:SUOER SOLAR CHARGE CONTROLLER.jpg",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/rv-loan",
+  "title": "RV Loan Calculator",
+  "status": "ICON",
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/weight-calculator",
+  "title": "RV Weight & Towing Calculator",
+  "status": "SHIP",
+  "img": "assets/img/tiles/tile-weight-towing.jpg",
+  "kind": "REUSE",
+  "author": "OriginRV",
+  "licence": "site-generated art",
+  "licence_url": "",
+  "source": "made for this site",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/rv-toilet-valve",
+  "title": "RV Toilet Water Valve Finder",
+  "status": "SEEK",
+  "seek": "Commons has no licence-clean RV toilet valve; a household valve would mislead"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/rv-recall-lookup",
+  "title": "RV Recall Lookup",
+  "status": "ICON",
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/rv-anode-rod",
+  "title": "RV Water Heater Anode Rod Finder",
+  "status": "SHIP",
+  "img": "assets/img/rv-water-heater-truma.jpg",
+  "kind": "PHOTO",
+  "author": "Truma Geraetetechnik",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "Wikimedia Commons, File:Truma therme.jpg",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/rv-converter-finder",
+  "title": "RV Converter and Power Center Finder",
+  "status": "SEEK",
+  "seek": "the site's own rv-power-center.jpg reads as a wire tangle at 280px; needs a tighter crop or a clean re-shot"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/rv-appliance-board-finder",
+  "title": "RV Appliance Control Board Finder",
+  "status": "ICON",
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/rv-water-filter",
+  "title": "RV Water Filter Finder",
+  "status": "SEEK",
+  "seek": "no free inline filter cartridge photo exists; the pressure gauge shot is wrong-but-plausible"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/battery-runtime",
+  "title": "Battery Runtime Calculator",
+  "status": "SHIP",
+  "img": "assets/img/tiles/tile-battery-runtime.jpg",
+  "kind": "REUSE",
+  "author": "OriginRV",
+  "licence": "site-generated art",
+  "licence_url": "",
+  "source": "made for this site",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/tire-date-code",
+  "title": "Tire Date Code Decoder",
+  "status": "SHIP",
+  "img": "assets/img/dot-tire-code-tile.jpg",
+  "kind": "PHOTO",
+  "author": "Chrismeraz",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "Wikimedia Commons, File:DOT tire code.jpg",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/snow-load",
+  "title": "Roof Snow Load Calculator",
+  "status": "SHIP",
+  "img": "assets/img/snow-covered-rv-tile.jpg",
+  "kind": "PHOTO",
+  "author": "L. Cowieson",
+  "licence": "CC BY-SA 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "geograph.org.uk, File:Snow covered caravan - geograph.org.uk - 3320618.jpg",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+ },
+ {
+  "page": "tools/index.html",
+  "href": "tools/state-trailer-brake-laws",
+  "title": "State Trailer Brake Laws",
+  "status": "ICON",
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+ }
+]

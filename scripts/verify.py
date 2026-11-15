@@ -681,7 +681,11 @@ OWN_PHOTOS = {"rv-trailer-at-night.jpg", "rv-furnace-open.jpg", "rv-roof-vent-se
               "rv-dump-station.jpg", "rv-fridge-frost-tile.jpg",
               "rv-towing-tile.jpg", "rv-power-center-tile.jpg",
               "tile-weight-towing.jpg", "tile-fuel-cost.jpg",
-              "tile-solar-sizing.jpg", "tile-battery-runtime.jpg"}
+              "tile-solar-sizing.jpg", "tile-battery-runtime.jpg",
+              # Tile crops of Ty's own photographs, added 2026-11-15 with the card
+              # imagery pass. The squares are cut from the same shots already named
+              # above, so the "no credit line" rule is unchanged.
+              "rv-furnace-open-tile.jpg", "rv-fuse-panel.jpg", "rv-breaker-panel.jpg"}
 CREDIT_MARKER = re.compile(r"\bcredit\b", re.I)
 LICENCE_LINK = re.compile(r"creativecommons\.org|publicdomain|/licen[cs]es?/|unsplash|pexels", re.I)
 UNUSABLE = re.compile(r"by-nc|by-nd|noncommercial|noderiv", re.I)
