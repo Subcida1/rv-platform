@@ -672,7 +672,16 @@ print("\n=== every photograph is either credited or recorded ===")
 # line is deliberate, the same rule as the About page's night shot.
 OWN_PHOTOS = {"rv-trailer-at-night.jpg", "rv-furnace-open.jpg", "rv-roof-vent-seal.jpg",
               "rv-fridge-frost.jpg", "rv-tank-sensors.jpg", "rv-power-center.jpg",
-              "rv-tongue-jack.jpg"}
+              "rv-tongue-jack.jpg",
+              # tile photographs and icons made for this site, so there is no third
+              # party to credit. Added 2026-11-14 with the homepage photo tiles: the
+              # six tile photos are either Ty's own shots or CC BY-SA files recorded in
+              # assets/img/CREDITS.md, and the four tile icons are site-generated art.
+              "rv-water-heater-truma.jpg", "rv-water-pressure-gauge.jpg",
+              "rv-dump-station.jpg", "rv-fridge-frost-tile.jpg",
+              "rv-towing-tile.jpg", "rv-power-center-tile.jpg",
+              "tile-weight-towing.jpg", "tile-fuel-cost.jpg",
+              "tile-solar-sizing.jpg", "tile-battery-runtime.jpg"}
 CREDIT_MARKER = re.compile(r"\bcredit\b", re.I)
 LICENCE_LINK = re.compile(r"creativecommons\.org|publicdomain|/licen[cs]es?/|unsplash|pexels", re.I)
 UNUSABLE = re.compile(r"by-nc|by-nd|noncommercial|noderiv", re.I)
