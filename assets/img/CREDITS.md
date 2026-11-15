@@ -81,3 +81,52 @@ the Danish spelling with an o-slash and umlaut: Løgumkloster).
 Author: photographed at Løgumkloster, Denmark.
 Licence: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/
 Cropped square for the homepage tile.
+
+## rv-tire-tread-wear
+Tire tread, the surface the wear guide judges; the date stamp is visible too.
+Source: Wikimedia Commons, `Tire_tread_.jpg`.
+Author: Jbobby.
+Licence: CC BY-SA 3.0, https://creativecommons.org/licenses/by-sa/3.0
+Cropped square, so this crop carries the same licence, BY-SA 3.0.
+
+## rv-kitchen-appliance-wall
+An RV kitchen wall with its appliances, the pair the two-appliance guide tests.
+Source: Wikimedia Commons, `Jayco_slide_out_kitchen.jpg`.
+Author: Flickr:javaholics / Coffeenuts.
+Licence: CC BY 2.0, https://creativecommons.org/licenses/by/2.0
+Cropped square, so this crop carries the same licence, BY 2.0.
+
+## rv-kitchen-sink-faucet
+An RV galley sink and its faucet, the fixture the plumbing manual opens on.
+Source: Wikimedia Commons, `Jayco_interior_of_kitchen_sink.jpg`.
+Author: Flickr: iluvcocacola.
+Licence: CC BY 2.0, https://creativecommons.org/licenses/by/2.0
+Cropped square, so this crop carries the same licence, BY 2.0.
+
+## rv-deep-cycle-battery
+A deep-cycle battery, the bank the electrical manual sizes and maintains.
+Source: Wikimedia Commons, `Super_Start_Marine_RV_Deep_Cycle_Battery.jpg`.
+Author: TaurusEmerald.
+Licence: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0
+Cropped square, so this crop carries the same licence, BY-SA 4.0.
+
+## rv-propane-furnace-unit
+A propane furnace unit, the heater the heating manual services.
+Source: Wikimedia Commons, `Truma_heizung_trumatic_s_3002.jpg`.
+Author: Truma Gerätetechnik.
+Licence: CC BY-SA 3.0, https://creativecommons.org/licenses/by-sa/3.0
+Cropped square, so this crop carries the same licence, BY-SA 3.0.
+
+## rv-trailer-coupler
+A trailer coupler, the connection the running-gear manual checks.
+Source: Wikimedia Commons, `Motorcycle_trailer_coupler.jpg`.
+Author: Tarrakaner.
+Licence: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0
+Cropped square, so this crop carries the same licence, BY-SA 4.0.
+
+## rv-absorption-fridge
+An absorption refrigerator's rear cooling unit, the part the fridge guide repairs.
+Source: Wikimedia Commons, `Absorption_fridge.jpg`.
+Author: Bohus1.
+Licence: CC BY-SA 3.0, https://creativecommons.org/licenses/by-sa/3.0
+Cropped square, so this crop carries the same licence, BY-SA 3.0.

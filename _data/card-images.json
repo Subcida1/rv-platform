@@ -83,7 +83,8 @@
   "kind": "SHIPPED_HOME",
   "img": "assets/img/tiles/tile-solar-sizing.jpg",
   "why": "shipped 2026-11-14 on the homepage shelves (commit 38aa72b7)",
-  "icon": "sun"
+  "icon": "sun",
+  "seek": "sourced file was a rooftop array on a house, not an RV"
  },
  {
   "page": "index.html",
@@ -188,15 +189,10 @@
   "page": "guides/index.html",
   "href": "guides/rv-converter-not-charging",
   "title": "Converter Not Charging",
-  "status": "TY",
-  "img": "assets/img/rv-breaker-panel.jpg",
-  "kind": "TY",
-  "author": "Ty Brandes",
-  "licence": "own photograph (no credit line)",
-  "licence_url": "",
-  "source": "Ty's own camera",
+  "status": "SEEK",
   "why": "T shot the breaker panel; the converter sits in it.",
-  "icon": "plug"
+  "icon": "plug",
+  "seek": "pulled by T 2026-11-15: a photograph may not sit on two cards, and this one was on another. Replace with a shot of THIS card's subject."
  },
  {
   "page": "guides/index.html",
@@ -258,15 +254,10 @@
   "page": "guides/index.html",
   "href": "guides/rv-lights-not-working",
   "title": "Lights Not Working",
-  "status": "TY",
-  "img": "assets/img/rv-fuse-panel.jpg",
-  "kind": "TY",
-  "author": "Ty Brandes",
-  "licence": "own photograph (no credit line)",
-  "licence_url": "",
-  "source": "Ty's own camera",
+  "status": "SEEK",
   "why": "T shot the 12V fuse panel, the first place to look.",
-  "icon": "lightbulb"
+  "icon": "lightbulb",
+  "seek": "pulled by T 2026-11-15: a photograph may not sit on two cards, and this one was on another. Replace with a shot of THIS card's subject."
  },
  {
   "page": "guides/index.html",
@@ -291,13 +282,13 @@
   "href": "guides/rv-refrigerator-not-cooling",
   "title": "RV Refrigerator Not Cooling",
   "status": "PHOTO",
-  "img": "assets/img/rv-fridge-frost-tile.jpg",
+  "img": "assets/img/rv-absorption-fridge.jpg",
   "kind": "PHOTO",
-  "author": "Ty Brandes",
-  "licence": "own photograph (no credit line)",
-  "licence_url": "",
-  "source": "Ty's own camera, cropped square",
-  "why": "Frost on the fins is the fault the guide diagnoses.",
+  "author": "Bohus1",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Absorption_fridge.jpg",
+  "why": "verified against the Commons API and checked at thumbnail size 2026-11-15 (lane job 20261115-114312-b)",
   "icon": "fridge"
  },
  {
@@ -381,29 +372,23 @@
   "page": "guides/index.html",
   "href": "guides/rv-two-appliances-stopped",
   "title": "Two Appliances Stopped",
-  "status": "TY",
-  "img": "assets/img/rv-breaker-panel.jpg",
-  "kind": "TY",
-  "author": "Ty Brandes",
-  "licence": "own photograph (no credit line)",
-  "licence_url": "",
-  "source": "Ty's own camera",
-  "why": "T's AC panel shot; one fault, one circuit.",
-  "icon": "plug"
+  "status": "PHOTO",
+  "why": "verified against the Commons API and checked at thumbnail size 2026-11-15 (lane job 20261115-114312-b)",
+  "icon": "plug",
+  "img": "assets/img/rv-kitchen-appliance-wall.jpg",
+  "author": "Flickr:javaholics / Coffeenuts",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jayco_slide_out_kitchen.jpg"
  },
  {
   "page": "guides/index.html",
   "href": "guides/rv-propane-furnace-wont-light",
   "title": "Propane: Furnace Won't Light",
-  "status": "PHOTO",
-  "img": "assets/img/rv-furnace-open-tile.jpg",
-  "kind": "PHOTO",
-  "author": "Ty Brandes",
-  "licence": "own photograph (no credit line)",
-  "licence_url": "",
-  "source": "Ty's own camera, cropped square",
+  "status": "SEEK",
   "why": "The furnace is the subject, not the fuel.",
-  "icon": "fire"
+  "icon": "fire",
+  "seek": "pulled by T 2026-11-15: a photograph may not sit on two cards, and this one was on another. Replace with a shot of THIS card's subject."
  },
  {
   "page": "guides/index.html",
@@ -586,7 +571,7 @@
   "title": "Slide-Out Leaking",
   "status": "SEEK",
   "why": "T's roof/slide seal shot.",
-  "seek": "the seal fills the frame with no slide-out to sit against, so it reads as a strip of rubber; the shot needs the slide-out edge, the seal and the sidewall in one frame",
+  "seek": "sourced file was a full-body motorhome shot; the seal edge is not visible in a square crop (failed twice for this reason)",
   "icon": "window"
  },
  {
@@ -653,14 +638,13 @@
   "href": "guides/rv-tire-replacement",
   "title": "When to Replace RV Tires",
   "status": "PHOTO",
-  "img": "assets/img/dot-tire-code-tile.jpg",
-  "kind": "PHOTO",
-  "author": "Chrismeraz",
-  "licence": "CC BY-SA 4.0",
-  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "source": "Wikimedia Commons, File:DOT tire code.jpg",
-  "why": "The sidewall crop carries the DOT date code the guide teaches.",
-  "icon": "tire"
+  "why": "verified against the Commons API and checked at thumbnail size 2026-11-15 (lane job 20261115-114312-b)",
+  "icon": "tire",
+  "img": "assets/img/rv-tire-tread-wear.jpg",
+  "author": "Jbobby",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tire_tread_.jpg"
  },
  {
   "page": "guides/index.html",
@@ -738,15 +722,10 @@
   "page": "guides/index.html",
   "href": "guides/roof-snow-load",
   "title": "Roof Under Snow Load",
-  "status": "PHOTO",
-  "img": "assets/img/snow-covered-rv-tile.jpg",
-  "kind": "PHOTO",
-  "author": "L. Cowieson",
-  "licence": "CC BY-SA 2.0",
-  "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/",
-  "source": "geograph.org.uk, File:Snow covered caravan - geograph.org.uk - 3320618.jpg",
+  "status": "SEEK",
   "why": "A real trailer under a snow cap, the exact subject.",
-  "icon": "mountain"
+  "icon": "mountain",
+  "seek": "pulled by T 2026-11-15: a photograph may not sit on two cards, and this one was on another. Replace with a shot of THIS card's subject."
  },
  {
   "page": "guides/index.html",
@@ -761,53 +740,45 @@
   "page": "manuals/index.html",
   "href": "manuals/power-and-electrical",
   "title": "Power and electrical",
-  "status": "SHIP",
-  "img": "assets/img/rv-gfci-outlet-tile.jpg",
-  "kind": "PHOTO",
-  "author": "Wtshymanski",
-  "licence": "CC BY-SA 3.0",
-  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-  "source": "Wikimedia Commons, File:NEMA 5-20RA GFCI Tamper Resistant Receptacle.jpg",
-  "why": "the system's own component, the same photo rule as the guides hub"
+  "status": "PHOTO",
+  "why": "verified against the Commons API and checked at thumbnail size 2026-11-15 (lane job 20261115-114312-b)",
+  "img": "assets/img/rv-deep-cycle-battery.jpg",
+  "author": "TaurusEmerald",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Super_Start_Marine_RV_Deep_Cycle_Battery.jpg"
  },
  {
   "page": "manuals/index.html",
   "href": "manuals/water-and-plumbing",
   "title": "Water and plumbing",
-  "status": "SHIP",
-  "img": "assets/img/rv-water-heater-truma.jpg",
-  "kind": "PHOTO",
-  "author": "Truma Geraetetechnik",
-  "licence": "CC BY-SA 3.0",
-  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-  "source": "Wikimedia Commons, File:Truma therme.jpg",
-  "why": "the system's own component, the same photo rule as the guides hub"
+  "status": "PHOTO",
+  "why": "verified against the Commons API and checked at thumbnail size 2026-11-15 (lane job 20261115-114312-b)",
+  "img": "assets/img/rv-kitchen-sink-faucet.jpg",
+  "author": "Flickr: iluvcocacola",
+  "licence": "CC BY 2.0",
+  "licence_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jayco_interior_of_kitchen_sink.jpg"
  },
  {
   "page": "manuals/index.html",
   "href": "manuals/heating-and-cooling",
   "title": "Heating and cooling",
-  "status": "SHIP",
-  "img": "assets/img/rv-furnace-open-tile.jpg",
-  "kind": "PHOTO",
-  "author": "Ty Brandes",
-  "licence": "own photograph, no credit line",
-  "licence_url": "",
-  "source": "Ty's own camera, cropped square",
-  "why": "the system's own component, the same photo rule as the guides hub"
+  "status": "PHOTO",
+  "why": "verified against the Commons API and checked at thumbnail size 2026-11-15 (lane job 20261115-114312-b)",
+  "img": "assets/img/rv-propane-furnace-unit.jpg",
+  "author": "Truma Ger\u00e4tetechnik",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Truma_heizung_trumatic_s_3002.jpg"
  },
  {
   "page": "manuals/index.html",
   "href": "manuals/kitchen-and-appliances",
   "title": "Kitchen and appliances",
-  "status": "SHIP",
-  "img": "assets/img/rv-fridge-frost-tile.jpg",
-  "kind": "PHOTO",
-  "author": "Ty Brandes",
-  "licence": "own photograph, no credit line",
-  "licence_url": "",
-  "source": "Ty's own camera, cropped square",
-  "why": "the system's own component, the same photo rule as the guides hub"
+  "status": "SEEK",
+  "why": "the system's own component, the same photo rule as the guides hub",
+  "seek": "sourced file was dark and cluttered; unreadable at 44px"
  },
  {
   "page": "manuals/index.html",
@@ -815,74 +786,68 @@
   "title": "Exterior and body",
   "status": "SEEK",
   "why": "the system's own component, the same photo rule as the guides hub",
-  "seek": "the black lid catches the sky and the sealant reads as a dark smear; the shot needs the vent photographed at an angle from above with the cracked sealant in daylight, or a coach roof shot that shows where water pools"
+  "seek": "the black lid catches the sky and the sealant reads as a dark smear; the shot needs the vent photographed at an angle from above with the cracked sealant in daylight, or a coach roof shot that shows where water pools",
+  "icon": "shell-body"
  },
  {
   "page": "manuals/index.html",
   "href": "manuals/towing-and-running-gear",
   "title": "Towing and running gear",
-  "status": "SHIP",
-  "img": "assets/img/rv-weight-distribution-hitch-tile.jpg",
-  "kind": "PHOTO",
-  "author": "Tony Webster",
-  "licence": "CC BY 2.0",
-  "licence_url": "https://creativecommons.org/licenses/by/2.0/",
-  "source": "Wikimedia Commons, File:Fastway e2 Weight Distribution and Sway Control Trailer Tow Hitch (27189607617).jpg",
-  "why": "the system's own component, the same photo rule as the guides hub"
+  "status": "PHOTO",
+  "why": "verified against the Commons API and checked at thumbnail size 2026-11-15 (lane job 20261115-114312-b)",
+  "img": "assets/img/rv-trailer-coupler.jpg",
+  "author": "Tarrakaner",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Motorcycle_trailer_coupler.jpg"
  },
  {
   "page": "manuals/index.html",
   "href": "manuals/sanitation-and-tanks",
   "title": "Sanitation and tanks",
-  "status": "SHIP",
-  "img": "assets/img/rv-dump-station.jpg",
-  "kind": "PHOTO",
-  "author": "photographed at Logumkloster, Denmark",
-  "licence": "CC BY-SA 4.0",
-  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-  "source": "Wikimedia Commons, File:Loegumkloster rv dump station.jpg",
-  "why": "the system's own component, the same photo rule as the guides hub"
+  "status": "SEEK",
+  "why": "the system's own component, the same photo rule as the guides hub",
+  "seek": "sourced file had the basin tiny in frame; the square crop was a blurry concrete pad"
  },
  {
   "page": "manuals/index.html",
   "href": "manuals/chassis-and-drivetrain",
   "title": "Chassis and drivetrain",
   "status": "SEEK",
-  "seek": "the only honestly chassis photo the site owns is the tire sidewall, which the tires card already uses; a frame, axle or suspension shot from Ty's camera would be better than a toe-in crop of a tow hitch"
+  "seek": "the only honestly chassis photo the site owns is the tire sidewall, which the tires card already uses; a frame, axle or suspension shot from Ty's camera would be better than a toe-in crop of a tow hitch",
+  "icon": "gears"
  },
  {
   "page": "tools/index.html",
   "href": "tools/fuel-cost",
   "title": "Fuel Cost Calculator",
   "status": "ICON",
-  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art",
+  "icon": "fuel"
  },
  {
   "page": "tools/index.html",
   "href": "tools/watts-to-amps",
   "title": "Watts to Amps & Shore Power",
   "status": "ICON",
-  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art",
+  "icon": "plug"
  },
  {
   "page": "tools/index.html",
   "href": "tools/solar-sizing",
   "title": "Solar Sizing Calculator",
-  "status": "SHIP",
-  "img": "assets/img/rv-solar-controller-tile.jpg",
-  "kind": "PHOTO",
-  "author": "Ranjithkumar Murugesan",
-  "licence": "CC0 1.0",
-  "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "source": "Wikimedia Commons, File:SUOER SOLAR CHARGE CONTROLLER.jpg",
-  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+  "status": "SEEK",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip",
+  "seek": "pulled by T 2026-11-15: a photograph may not sit on two cards, and this one was on another. Replace with a shot of THIS card's subject."
  },
  {
   "page": "tools/index.html",
   "href": "tools/rv-loan",
   "title": "RV Loan Calculator",
   "status": "ICON",
-  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art",
+  "icon": "calculator"
  },
  {
   "page": "tools/index.html",
@@ -902,48 +867,48 @@
   "href": "tools/rv-toilet-valve",
   "title": "RV Toilet Water Valve Finder",
   "status": "SEEK",
-  "seek": "Commons has no licence-clean RV toilet valve; a household valve would mislead"
+  "seek": "Commons has no licence-clean RV toilet valve; a household valve would mislead",
+  "icon": "toilet"
  },
  {
   "page": "tools/index.html",
   "href": "tools/rv-recall-lookup",
   "title": "RV Recall Lookup",
   "status": "ICON",
-  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art",
+  "icon": "checklist"
  },
  {
   "page": "tools/index.html",
   "href": "tools/rv-anode-rod",
   "title": "RV Water Heater Anode Rod Finder",
-  "status": "SHIP",
-  "img": "assets/img/rv-water-heater-truma.jpg",
-  "kind": "PHOTO",
-  "author": "Truma Geraetetechnik",
-  "licence": "CC BY-SA 3.0",
-  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-  "source": "Wikimedia Commons, File:Truma therme.jpg",
-  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip"
+  "status": "SEEK",
+  "why": "names a real component or unit; the tools grid keeps its compact tile, so this photo lands in the 44px chip",
+  "seek": "pulled: the anode rod deserves its own photo, not the heater's"
  },
  {
   "page": "tools/index.html",
   "href": "tools/rv-converter-finder",
   "title": "RV Converter and Power Center Finder",
   "status": "SEEK",
-  "seek": "the site's own rv-power-center.jpg reads as a wire tangle at 280px; needs a tighter crop or a clean re-shot"
+  "seek": "the site's own rv-power-center.jpg reads as a wire tangle at 280px; needs a tighter crop or a clean re-shot",
+  "icon": "power-cord"
  },
  {
   "page": "tools/index.html",
   "href": "tools/rv-appliance-board-finder",
   "title": "RV Appliance Control Board Finder",
   "status": "ICON",
-  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art",
+  "icon": "gears"
  },
  {
   "page": "tools/index.html",
   "href": "tools/rv-water-filter",
   "title": "RV Water Filter Finder",
   "status": "SEEK",
-  "seek": "no free inline filter cartridge photo exists; the pressure gauge shot is wrong-but-plausible"
+  "seek": "no free inline filter cartridge photo exists; the pressure gauge shot is wrong-but-plausible",
+  "icon": "faucet"
  },
  {
   "page": "tools/index.html",
@@ -989,6 +954,7 @@
   "href": "tools/state-trailer-brake-laws",
   "title": "State Trailer Brake Laws",
   "status": "ICON",
-  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art"
+  "seek": "a calculator, a lookup or a legal page with no photographable object; the route is generated tile art",
+  "icon": "stop"
  }
 ]
