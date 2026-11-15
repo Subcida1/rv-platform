@@ -4643,3 +4643,197 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
    required by every engine in use, including Firefox and Chrome. Without it the
    paragraph pushes the card to 480px and only three tiles fit a screen. */
 
+
+
+/* ============================================================================
+   MOBILE SIDE-SCROLL SHELVES  (added 2026-11-14)
+   ----------------------------------------------------------------------------
+   MOBILE-ONLY. Everything in this block lives below the 720px line, which is the
+   stylesheet's dominant mobile breakpoint (22 uses). ABOVE 720px NOTHING here
+   applies: desktop keeps the plain .guide-grid / .sys-grid exactly as it shipped,
+   byte for byte. No desktop rule is edited, re-scoped or re-ordered by this block.
+   The two layouts are meant to be pulled into their own file later; keep this a
+   single contiguous region so that move stays a cut-and-paste.
+
+   WHAT GOES HORIZONTAL, AND WHY (the settled rule, applied element by element):
+     A container becomes a band when it holds 3-15 PEER elements of UNIFORM size
+     and the job is SCANNING or COMPARING. It stays vertical when it holds
+     sequential reading content, hierarchical navigation, or items of varying size.
+     - .guide-grid @ "problems owners hit first"  -> BAND, scan task, 6 cards
+     - .guide-grid @ "work out the numbers"       -> BAND, compare task, 8 cards
+     - .sys-grid.parts-grid @ "every part"        -> BAND, scan task, 9 cards
+     - .sys-grid @ "what is your RV doing"        -> STAYS VERTICAL: hierarchical
+       navigation into the six systems, and each card carries a symptom line, so it
+       is a "where do I start" map, not a row to scan. Unchanged on mobile too.
+     - .gi (the <details> guide index)            -> STAYS VERTICAL: sequential
+       reading, and link counts vary 4-14, so the items are not uniform.
+
+   REPORTED TRUNCATION IS FIXED BY THE TILE WIDTH, so the widths are not cosmetic:
+   at a third of a 393px screen the meta line clipped mid-phrase (5 of 23 metas at
+   393px, 7 at 360px, 8 titles at 320px). At 82% (a ~218px tile) zero metas clip at
+   393 and 360px and only 2 of 23 at 320px, so the sentence survives.
+     - guide rows (scan, one card at a time): 82%
+     - tool row (compare, next card must peek): 66%
+   ============================================================================ */
+
+/* The swipe arrows do not exist on desktop: hidden by default, shown only inside
+   the mobile block below. Without this the bare anchors render as full-width
+   inline SVGs on desktop, which is exactly the desktop change this work must not
+   make. */
+.bandnav{display:none}
+
+@media (max-width: 720px){
+
+  /* ---- the row itself ---------------------------------------------------- */
+  .guide-grid,
+  .sys-grid.parts-grid{
+    display:flex;
+    flex-wrap:nowrap;              /* never wraps: an inner row that scrolls sideways, not the page */
+    justify-content:flex-start;
+    gap:var(--space-3);
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;   /* momentum on iOS */
+    overscroll-behavior-x:contain;      /* a swipe at the end does not drag the page */
+    scroll-padding-inline:var(--space-4);
+    padding-bottom:var(--space-3);
+    scrollbar-width:thin;
+    scrollbar-color:var(--border-2) transparent;
+  }
+  /* the scroll track keeps a gap at each end instead of running into the edge */
+  .guide-grid::-webkit-scrollbar,
+  .sys-grid.parts-grid::-webkit-scrollbar{height:6px}
+  .guide-grid::-webkit-scrollbar-track,
+  .sys-grid.parts-grid::-webkit-scrollbar-track{background:transparent;margin:0 var(--space-4)}
+  .guide-grid::-webkit-scrollbar-thumb,
+  .sys-grid.parts-grid::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:var(--radius-pill)}
+  /* a trailing spacer so the LAST card keeps the same end gap when fully scrolled */
+  .guide-grid::after,
+  .sys-grid.parts-grid::after{content:"";flex:0 0 var(--space-4)}
+
+  /* ---- the tile: image on top, title under it (the Amazon shape) ----------
+     `.band` marks a container that became a shelf; `.band--scan`/`.band--compare`
+     say which width rule applies. Both classes carry a rule so a used class is
+     never a dead class (the build gate checks exactly that). */
+  .guide-grid > *,
+  .sys-grid.parts-grid > *{
+    flex:0 0 82%;                  /* default; the band--* modifier below overrides the basis */
+    scroll-snap-align:start;
+    min-width:0;
+  }
+  /* MUST come after the base flex rule: same specificity, so later wins. */
+  .band--scan > *{flex-basis:82%}   /* scan rows: one card per screen */
+  .band--compare > *{flex-basis:66%}/* compare rows: the next card peeks */
+
+  /* every tile is the same height so the row reads as a shelf, not a wave */
+  .guide-grid .guide-card,
+  .sys-grid.parts-grid .sys-card{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    gap:var(--space-3);
+    padding:0;                     /* the icon slot is the top of the tile now */
+    overflow:hidden;
+  }
+
+  /* ---- the icon sits on top, in its own image slot ----------------------
+     Icons on top until real photographs land (T, 2026-11-14). The slot is a 1:1
+     square so the tile has the shelf shape now and the photo drops straight in
+     later with no layout change. Circles are for buttons and squares for
+     pictures, so inside this slot the icon keeps its circle and the SQUARE is
+     the slot around it. */
+  .guide-grid .guide-card .guide-ic,
+  .sys-grid.parts-grid .sys-card .sys-head{
+    position:relative;
+    width:100%;height:auto;aspect-ratio:1/1;flex:0 0 auto;
+    border-radius:0;background:var(--grad-soft);border:none;
+    border-bottom:1px solid var(--border);
+    display:grid;place-items:center;
+    justify-content:center;        /* the head is a flex row by default: centre the icon */
+    gap:0;
+  }
+  .sys-grid.parts-grid .sys-card .sys-head{padding:0}
+  /* the circle the icon keeps inside the square slot */
+  .guide-grid .guide-card .guide-ic .ic,
+  .sys-grid.parts-grid .sys-card .sys-head .ic{width:44px;height:44px;
+    padding:var(--space-3);border-radius:50%;background:var(--surface);
+    border:1px solid var(--border-2);box-sizing:content-box}
+  /* the count pill is a shelf badge on the slot's corner, not a sibling of the
+     icon: left in the flex row it sat BESIDE the square and pulled the layout. */
+  .sys-grid.parts-grid .sys-card .sys-n{
+    position:absolute;top:var(--space-3);right:var(--space-3);
+    margin:0;z-index:2;
+  }
+  /* the scrim: any ink that sits ON this slot needs a controlled darkening, or a
+     bright photo hides it and a dark one does too. Drawn under the ink always. */
+  .guide-grid .guide-card .guide-ic::after,
+  .sys-grid.parts-grid .sys-card .sys-head::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(15,23,42,.06) 0%,rgba(15,23,42,0) 40%,rgba(15,23,42,0) 62%,rgba(15,23,42,.28) 100%);
+  }
+
+  /* ---- the text under the slot ------------------------------------------ */
+  .guide-grid .guide-card .guide-body,
+  .sys-grid.parts-grid .sys-card .sys-t,
+  .sys-grid.parts-grid .sys-card .sys-p{
+    padding-inline:var(--space-4);
+  }
+  .guide-grid .guide-card .guide-body{padding-bottom:var(--space-4);flex:1}
+  .guide-grid .guide-card .guide-title{font-size:var(--fs-lg)}
+  .guide-grid .guide-card .guide-meta{font-size:var(--fs-sm)}
+  .sys-grid.parts-grid .sys-card .sys-t{margin-top:var(--space-3);padding-top:0}
+  .sys-grid.parts-grid .sys-card .sys-p{padding-bottom:var(--space-5)}
+
+  /* ---- the swipe arrows -------------------------------------------------
+     44x44 (the tap floor), sitting on the ROW's edges but centred on the IMAGE
+     SQUARE, not on the whole card: on an image-on-top tile, top:50% would drop
+     the arrow into the text half. The photo is a 1:1 square whose side equals the
+     tile width, so its centre is 41% of the row width from the band top when the
+     tile is 82% (half of 82). Minus 22px for half the arrow. THE 41% AND 33% ARE
+     DERIVED: change the tile width or the 1:1 photo and they must be recomputed. */
+  /* CENTRING THE ARROW ON THE PHOTO, NOT THE CARD.
+     A `top` percentage resolves against the containing block's HEIGHT, which is not
+     what we want: the band is ~400px tall, so top:41% put the arrow near the card's
+     middle while the photo's centre sits at 41% of the ROW WIDTH. The fix is an
+     absolutely-positioned overlay box that is as tall as the photo square: the photo
+     is 1:1, so its height equals the tile width, which `aspect-ratio` gives us from
+     the width alone. The arrows are then centred inside THAT box, so they track the
+     tile width with no JS and no magic number. `.bandnavbox` is a real wrapper around
+     the two arrows in the markup, because a pseudo-element cannot hold them. */
+  .bandwrap{position:relative}
+  .bandnavbox{
+    position:absolute;left:0;top:0;
+    width:82%;                       /* one tile wide; must match .band--scan > * */
+    aspect-ratio:1/1;                /* so its height is also one photo square */
+    pointer-events:none;             /* the box itself never eats a tap; the arrows do not inherit this */
+  }
+  .band--compare + .bandnavbox{width:66%}   /* sibling, not a descendant: the box follows the grid */
+  .bandnav{
+    position:absolute;z-index:3;
+    top:50%;transform:translateY(-50%);   /* centred in the photo box, not the card */
+    pointer-events:auto;
+    width:44px;height:44px;min-width:44px;border-radius:var(--radius-pill);
+    display:grid;place-items:center;
+    border:1px solid rgba(255,255,255,.42);
+    background:rgba(15,23,42,.26);color:var(--text-inv);
+    -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+    text-decoration:none;opacity:.62;
+    box-shadow:0 2px 8px rgba(15,23,42,.18);
+    transition:opacity .16s,background .16s;
+  }
+  .bandnav svg{width:20px;height:20px}
+  .bandnav:hover{background:rgba(15,23,42,.46)}
+  .bandnav:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+  .bandnav--prev{left:var(--space-2)}
+  .bandnav--next{right:var(--space-2)}
+  /* the end you cannot pass goes GONE, not merely dimmed (T, 2026-11-14) */
+  .bandnav.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+
+  /* native swipe is preferred over buttons, so the arrows are a hint, not the
+     only way in; with scripting off they stay plain anchors to the row ends */
+  @media (prefers-reduced-motion: reduce){
+    .guide-grid,.sys-grid.parts-grid{scroll-behavior:auto}
+    .bandnav{transition:none}
+  }
+}

@@ -108,6 +108,19 @@ GRADIENT_OK = {
     # background that marks the icon slot and the trust line as identity, not as a
     # call to action. The gradient is not the affordance -- the whole tile is.
     '.t-ic', '.t-trust',
+    # Mobile shelf tile (2026-11-14). The mobile-only image slot at the top of a
+    # shelf tile, which is the SAME slot as the allowlisted .guide-ic above, just
+    # written with the descendant path the mobile block needs so it can beat the
+    # desktop rule without !important. Same --grad-soft wash, same role: it marks
+    # the picture slot as identity, not as an action.
+    '.guide-grid .guide-card .guide-ic, .sys-grid.parts-grid .sys-card .sys-head',
+    # The photo scrim. A functional gradient, not a decorative one: it is the
+    # controlled darkening that keeps a label or an arrow legible over a
+    # photograph (T, 2026-11-14 -- "make sure the overlays over any imagery
+    # good"). White ink vanishes on a bright photo and dark ink on a dark one, so
+    # the scrim is the guarantee, drawn under the ink whatever the image does. It
+    # has no colour of its own and is invisible until an image sits under it.
+    '.guide-grid .guide-card .guide-ic::after, .sys-grid.parts-grid .sys-card .sys-head::after',
 }
 
 # Ratchets - the count today, from `--discover`. Lower them by hand as the collapse lands.
