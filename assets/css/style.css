@@ -4836,8 +4836,28 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
   .bandnav svg{width:20px;height:20px}
   .bandnav:hover{background:rgba(15,23,42,.46)}
   .bandnav:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-  .bandnav--prev{left:var(--space-2)}
-  .bandnav--next{right:var(--space-2)}
+  /* WHERE THE ARROWS SIT, and why the rules are on the ARROW rather than the box.
+     The box is one tile wide and 1:1 tall so the arrows land in the centre of the
+     PHOTO, not the centre of the card (see above). That width is not free to
+     change, so it cannot also carry the horizontal placement: measured at 393px,
+     `right:var(--space-2)` on the box put the right arrow 70px short of the row's
+     right edge on an 82% row and 125px short on the 66% row, because the offset
+     resolved against the TILE's edge instead of the row's. T read that as the
+     arrow sitting near the centre of the container.
+     The box's children are as wide as the box (its border box), so `82% - 100%`
+     reaches from the tile's right edge back to the row's right edge: on a 283px
+     box that is -51px, which closes the 70px gap, and the remaining 8px is the
+     row's own end inset (--space-2), k for both sides.
+     The percentage lives in ONE place per row width: change the tile width and the
+     arrow follows, no second constant to recompute. `.band--compare` needs its own
+     pair because its tile is 66%, and the box it targets is a SIBLING of the grid,
+     so the modifier has to ride on the box, not on a descendant. */
+  .bandnav--prev{left:0}
+  .bandnav--next{right:0}
+  .bandnavbox > .bandnav--next{left:auto;right:calc(82% - 100% - var(--space-2))}
+  .bandnavbox > .bandnav--prev{right:auto;left:calc(82% - 100% + var(--space-2))}
+  .band--compare + .bandnavbox > .bandnav--next{right:calc(66% - 100% - var(--space-2))}
+  .band--compare + .bandnavbox > .bandnav--prev{left:calc(66% - 100% + var(--space-2))}
   /* the end you cannot pass goes GONE, not merely dimmed (T, 2026-11-14) */
   .bandnav.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
 
