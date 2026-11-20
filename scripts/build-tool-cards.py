@@ -29,6 +29,11 @@ SOURCE = ROOT / "_data" / "source" / "tools-hub-cards.html"
 # A card's photograph, in the same 44px slot the icon sits in. Relative on purpose: every page
 # carries <base href="/"> and verify.py's photo-credit check only reads src="assets/img/...",
 # so an absolute /assets/... path would render identically and hide from the gate.
+#
+# OFF (2026-11-20, T): the card photographs are reverted to line icons. See the same switch in
+# scripts/build-manuals-pages.py -- the slots were half photo and half icon, so one grid showed
+# two visual languages. Flip this to True and re-run to restore the photographs.
+USE_CARD_PHOTOS = False
 SLOT_PHOTO = '<img class="slot-photo" src="%s" alt="" loading="lazy">'
 
 
@@ -43,7 +48,7 @@ def card_photo(slug):
     and not the subject.
     """
     path = ROOT / "_data" / "card-images.json"
-    if not path.exists():
+    if not USE_CARD_PHOTOS or not path.exists():
         return None
     for row in json.loads(path.read_text(encoding="utf-8")):
         if row.get("page") == "tools/index.html" and row.get("href", "").endswith("/" + slug):

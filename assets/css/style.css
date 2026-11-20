@@ -4765,24 +4765,10 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
     position:absolute;top:var(--space-3);right:var(--space-3);
     margin:0;z-index:2;
   }
-  /* the scrim: any ink that sits ON this slot needs a controlled darkening, or a
-     bright photo hides it and a dark one does too. Drawn under the ink always. */
-  .guide-grid .guide-card .guide-ic::after,
-  .sys-grid.parts-grid .sys-card .sys-head::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(180deg,rgba(15,23,42,.06) 0%,rgba(15,23,42,0) 40%,rgba(15,23,42,0) 62%,rgba(15,23,42,.28) 100%);
-  }
-  /* ---- the slot's photograph --------------------------------------------
-     On a tile with a real photo, the photo fills the 1:1 slot and the icon is
-     not drawn. object-fit:cover because the photos arrive in many aspect ratios
-     and the square must be filled with no letterboxing. z-index:0 keeps the
-     image BELOW the ::after scrim, which is the ink layer. */
-  .guide-grid .guide-card .guide-ic .slot-photo,
-  .sys-grid.parts-grid .sys-card .sys-head .slot-photo{
-    position:absolute;inset:0;width:100%;height:100%;
-    object-fit:cover;z-index:0;display:block;
-    border-radius:0;padding:0;background:none;border:0;
-  }
+  /* the scrim and the photograph rules that lived here were removed with the
+     card photographs (2026-11-20): every slot is a line icon again, and the
+     scrim only existed to darken a bright photo under the ink. The square slot
+     itself stays, because it is the mobile shelf tile shape, not an image rule. */
 
   /* ---- the text under the slot ------------------------------------------ */
   .guide-grid .guide-card .guide-body,

@@ -81,6 +81,13 @@ SPRITE = "assets/img/icons/sprite.svg"
 # A card's photograph, in the same 1:1 slot the icon sits in. Relative on purpose: every page
 # carries <base href="/"> and verify.py's photo-credit check only reads src="assets/img/...",
 # so an absolute /assets/... path would render identically and hide from the gate.
+#
+# OFF (2026-11-20, T): the card photographs are reverted to line icons. The slots were mixed --
+# 30 slots carried a photo and the rest kept an icon, so one grid showed two visual languages.
+# T called it, the whole hub goes back to the icon family it had before the 2026-11-15 photo
+# pass, and card_photo() below is kept so the images can be switched back on in one place.
+# Flip this to True and re-run to restore the photographs.
+USE_CARD_PHOTOS = False
 SLOT_PHOTO = '<img class="slot-photo" src="%s" alt="" loading="lazy">'
 
 
@@ -99,7 +106,7 @@ def card_photo(slug):
     only candidate is the tire sidewall, which the tires card already uses.
     """
     path = ROOT / "_data" / "card-images.json"
-    if not path.exists():
+    if not USE_CARD_PHOTOS or not path.exists():
         return None
     for row in json.loads(path.read_text(encoding="utf-8")):
         if row.get("page") == "manuals/index.html" and row.get("href", "").endswith("/" + slug):
