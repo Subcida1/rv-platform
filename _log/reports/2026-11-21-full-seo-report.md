@@ -94,10 +94,12 @@ budget on URLs that should not exist when crawl budget is the constraint.
 
 **3. Internal linking from the strongest family down was, until yesterday, near zero.** The
 2026-11-21 commit fixed the state-to-town direction: 46 of 50 state pages now link down to their
-town pages (California 109, Texas 103, Washington 53). Four low-town states (Connecticut, Hawaii,
-New Jersey, Vermont) still link to zero. The remaining gap is **guide-to-guide**: 54 of 62 guides
-carry zero in-body links to another guide, so the guides that rank (pos 6 to 11) pass no equity to
-the ones that do not.
+town pages (California 109, Texas 103, Washington 53). The four states showing zero town links do
+so correctly: Connecticut, New Jersey and Vermont have only single-listing towns that fall below
+the generator's deliberate `MIN_LISTINGS = 2` gate, and Hawaii has four listings. This is settled
+behaviour (`build-town-pages.py`), not a defect. The remaining real gap is **guide-to-guide**: 54
+of 62 guides carry zero in-body links to another guide, so the guides that rank (pos 6 to 11) pass
+no equity to the ones that do not.
 
 **4. The strongest pages rank, but the mass of pages does not.** Head terms sit at position 50 to
 90 (roof leak family: `how to repair leaking rv roof` 63.2, `rv roof leak repair` 74.2, `rv roof

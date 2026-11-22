@@ -2,13 +2,101 @@
  "submitted": [
   "https://originrv.com/",
   "https://originrv.com/directory/",
+  "https://originrv.com/directory/alabama",
+  "https://originrv.com/directory/alabama/alabaster",
+  "https://originrv.com/directory/alabama/bessemer",
+  "https://originrv.com/directory/alabama/birmingham",
+  "https://originrv.com/directory/alabama/calera",
+  "https://originrv.com/directory/alabama/chelsea",
+  "https://originrv.com/directory/alabama/cullman",
+  "https://originrv.com/directory/alabama/decatur",
+  "https://originrv.com/directory/alabama/foley",
+  "https://originrv.com/directory/alabama/gadsden",
+  "https://originrv.com/directory/alabama/gulf-shores",
+  "https://originrv.com/directory/alabama/hoover",
+  "https://originrv.com/directory/alabama/huntsville",
+  "https://originrv.com/directory/alabama/madison",
+  "https://originrv.com/directory/alabama/mobile",
+  "https://originrv.com/directory/alabama/opelika",
+  "https://originrv.com/directory/alabama/orange-beach",
+  "https://originrv.com/directory/alabama/pelham",
+  "https://originrv.com/directory/alabama/robertsdale",
+  "https://originrv.com/directory/alabama/trussville",
+  "https://originrv.com/directory/alabama/tuscaloosa",
+  "https://originrv.com/directory/alaska",
+  "https://originrv.com/directory/alaska/anchorage",
+  "https://originrv.com/directory/alaska/fairbanks",
+  "https://originrv.com/directory/alaska/kenai",
+  "https://originrv.com/directory/alaska/north-pole",
+  "https://originrv.com/directory/alaska/palmer",
+  "https://originrv.com/directory/alaska/soldotna",
+  "https://originrv.com/directory/alaska/wasilla",
+  "https://originrv.com/directory/arizona",
+  "https://originrv.com/directory/arizona/anthem",
+  "https://originrv.com/directory/arizona/avondale",
+  "https://originrv.com/directory/arizona/benson",
+  "https://originrv.com/directory/arizona/buckeye",
+  "https://originrv.com/directory/arizona/camp-verde",
+  "https://originrv.com/directory/arizona/cave-creek",
+  "https://originrv.com/directory/arizona/chandler",
+  "https://originrv.com/directory/arizona/cottonwood",
+  "https://originrv.com/directory/arizona/flagstaff",
+  "https://originrv.com/directory/arizona/gilbert",
+  "https://originrv.com/directory/arizona/glendale",
+  "https://originrv.com/directory/arizona/goodyear",
+  "https://originrv.com/directory/arizona/green-valley",
+  "https://originrv.com/directory/arizona/happy-jack",
+  "https://originrv.com/directory/arizona/kingman",
+  "https://originrv.com/directory/arizona/lake-havasu-city",
+  "https://originrv.com/directory/arizona/litchfield-park",
+  "https://originrv.com/directory/arizona/marana",
+  "https://originrv.com/directory/arizona/mesa",
+  "https://originrv.com/directory/arkansas",
+  "https://originrv.com/directory/california",
   "https://originrv.com/directory/colorado",
+  "https://originrv.com/directory/connecticut",
+  "https://originrv.com/directory/delaware",
+  "https://originrv.com/directory/florida",
+  "https://originrv.com/directory/georgia",
+  "https://originrv.com/directory/hawaii",
   "https://originrv.com/directory/idaho",
+  "https://originrv.com/directory/illinois",
+  "https://originrv.com/directory/indiana",
+  "https://originrv.com/directory/iowa",
+  "https://originrv.com/directory/kansas",
+  "https://originrv.com/directory/kentucky",
+  "https://originrv.com/directory/louisiana",
+  "https://originrv.com/directory/maine",
+  "https://originrv.com/directory/maryland",
+  "https://originrv.com/directory/massachusetts",
+  "https://originrv.com/directory/michigan",
+  "https://originrv.com/directory/minnesota",
+  "https://originrv.com/directory/mississippi",
+  "https://originrv.com/directory/missouri",
   "https://originrv.com/directory/montana",
+  "https://originrv.com/directory/nebraska",
+  "https://originrv.com/directory/nevada",
+  "https://originrv.com/directory/newhampshire",
+  "https://originrv.com/directory/newjersey",
   "https://originrv.com/directory/newmexico",
+  "https://originrv.com/directory/newyork",
+  "https://originrv.com/directory/northcarolina",
+  "https://originrv.com/directory/northdakota",
+  "https://originrv.com/directory/ohio",
+  "https://originrv.com/directory/oklahoma",
   "https://originrv.com/directory/oregon",
+  "https://originrv.com/directory/pennsylvania",
+  "https://originrv.com/directory/rhodeisland",
+  "https://originrv.com/directory/southcarolina",
+  "https://originrv.com/directory/southdakota",
+  "https://originrv.com/directory/tennessee",
   "https://originrv.com/directory/texas",
+  "https://originrv.com/directory/utah",
+  "https://originrv.com/directory/vermont",
+  "https://originrv.com/directory/virginia",
   "https://originrv.com/directory/washington",
+  "https://originrv.com/directory/westvirginia",
+  "https://originrv.com/directory/wisconsin",
   "https://originrv.com/directory/wyoming",
   "https://originrv.com/guides/",
   "https://originrv.com/guides/battery-winter-storage",
@@ -38,8 +126,10 @@
   "https://originrv.com/guides/rv-generator-not-charging",
   "https://originrv.com/guides/rv-generator-sizing",
   "https://originrv.com/guides/rv-heating-off-grid",
+  "https://originrv.com/guides/rv-level-towing-setup",
   "https://originrv.com/guides/rv-leveling-jacks-not-working",
   "https://originrv.com/guides/rv-lights-not-working",
+  "https://originrv.com/guides/rv-lithium-battery-not-charging",
   "https://originrv.com/guides/rv-macerator-toilet",
   "https://originrv.com/guides/rv-maintenance-schedule",
   "https://originrv.com/guides/rv-outlets-not-working",
@@ -495,6 +585,366 @@
   },
   {
    "url": "https://originrv.com/directory/wyoming",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-lithium-battery-not-charging",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/guides/rv-level-towing-setup",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/nevada",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/utah",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/california",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/louisiana",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arkansas",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/oklahoma",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/mississippi",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/tennessee",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/kentucky",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/georgia",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/florida",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/southcarolina",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/northcarolina",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/virginia",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/westvirginia",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/michigan",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/ohio",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/indiana",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/illinois",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/wisconsin",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/kansas",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/nebraska",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/northdakota",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/southdakota",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/minnesota",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/iowa",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/missouri",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/connecticut",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/delaware",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/maine",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/maryland",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/massachusetts",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/newhampshire",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/newjersey",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/newyork",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/pennsylvania",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/rhodeisland",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/vermont",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/hawaii",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/alabaster",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/bessemer",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/birmingham",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/calera",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/chelsea",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/cullman",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/decatur",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/foley",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/gadsden",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/gulf-shores",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/hoover",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/huntsville",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/madison",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/mobile",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/opelika",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/orange-beach",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/pelham",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/robertsdale",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/trussville",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alabama/tuscaloosa",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska/anchorage",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska/fairbanks",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska/kenai",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska/north-pole",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska/palmer",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska/soldotna",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/alaska/wasilla",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/anthem",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/avondale",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/benson",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/buckeye",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/camp-verde",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/cave-creek",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/chandler",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/cottonwood",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/flagstaff",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/gilbert",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/glendale",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/goodyear",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/green-valley",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/happy-jack",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/kingman",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/lake-havasu-city",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/litchfield-park",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/marana",
+   "status": 200
+  },
+  {
+   "url": "https://originrv.com/directory/arizona/mesa",
    "status": 200
   }
  ]
