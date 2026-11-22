@@ -51,6 +51,12 @@
 
   var shown = document.getElementById('parts-shown');
   var empty = document.getElementById('parts-empty');
+  /* THE COUNT LINE, READ BY ID RATHER THAN BY .closest (2026-11-21). Walking up from the span
+   * worked in a browser but threw in scripts/check-page-scripts.js, which executes every page's
+   * scripts against a stub DOM whose elements carry no .closest -- and that checker is a gate. A
+   * direct id lookup is simpler, is what every other element on this page already does, and gives
+   * the checker nothing new to stub. */
+  var countEl = document.getElementById('parts-count');
 
   /* THE PLACEHOLDER SHORTENS ON A NARROW SCREEN. At 390px the full sentence ("Search a part or a
    * symptom") is clipped mid-word by the field's own width, and a clipped word reads as a bug
@@ -147,6 +153,13 @@
 
     if (shown) shown.textContent = n;
     if (empty) empty.hidden = n > 0;
+    /* THE COUNT LINE ONLY SPEAKS WHEN THERE IS SOMETHING TO SAY (2026-11-21). At rest it read
+     * "210 of 210 shown", which restates the h1's lede and the "All 210" chip on the same screen
+     * while pushing the first part row further below the fold. It still has a job the moment a
+     * filter is on, so it is hidden at rest rather than deleted, and it stays in the accessibility
+     * tree when visible (role=status announces the change). Claude's ruling on /parts/: keep the
+     * filter, cut the count. */
+    if (countEl) countEl.hidden = (!term && !system && !rvPick);
     sysChips.forEach(function (b) {
       var on = (b.getAttribute('data-system') || '') === system;
       b.classList.toggle('on', on);

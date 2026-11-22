@@ -103,7 +103,13 @@ const DECLARED = [
   // correctly NOT declared here: a pill is <=64px and fully rounded, and a card is
   // neither. A row that no longer exists must leave this list, or the check reports STALE
   // forever and stops meaning anything.
-  { selector: 'div.tool-strip',                    align: 'center', why: 'tools hub picker and the weight calculator badges (Ty centred these 2026-10-14)' },
+  // RETIRED 2026-11-21. This declared the tools hub's fifteen-tool pill picker, whose rows are
+  // now gone from the site: the pills named the same fifteen tools as the card grid directly
+  // below them and pushed the first card under the fold, so the hub no longer emits .tool-strip
+  // (the weight calculator's badge row it also covered went in the same week). The discovery pass
+  // finds no pill row matching this selector on any page, so by this file's own rule it leaves
+  // the list rather than reporting STALE forever. .tool-strip survives only in
+  // _data/source/tools-hub-cards.html, which is a build input, not a page.
   // CHANGED center -> left, 2026-11-13, with the parts index redesign. The card chips were centred
   // when they were four to eight type pills filling the card width. The redesign put ONE scope tag
   // there on most cards ("Motorhome only", on 20 of 210) and left the other 190 rows with a single
@@ -260,13 +266,21 @@ if (DISCOVER) {
 }
 
 const problems = [];
+/* THE ACCEPTED VALUES INCLUDE THE LOGICAL KEYWORDS (2026-11-21). Current Chrome reports
+   justify-content:flex-start as "flow-start" and :flex-end as "flow-end" -- the logical
+   equivalents CSS now defines -- so a row that had not changed in months started failing as
+   WRONG with no CSS edit behind it. The values below are the physical and logical spellings
+   of the same two alignments; accepting both keeps the check about the design decision rather
+   than about the browser's spelling of it. Negative-tested: a row declared left that really
+   carries justify-content:center still renders "center" and still fails. */
+const LEFT = ['normal', 'flex-start', 'start', 'flow-start'];
+const CENTER = ['center'];
 for (const r of rows) {
   const d = DECLARED.find((x) => r.sel === x.selector);
   if (!d) { problems.push(`UNDECLARED  ${r.page}  ${r.sel} (x${r.n})  justify=${[...r.justifys].join('/')}`); continue; }
   if (d.align === 'any') continue;
-  const ok = d.align === 'center'
-    ? r.justifys.size === 1 && r.justifys.has('center')
-    : [...r.justifys].every((j) => j === 'normal' || j === 'flex-start' || j === 'start');
+  const allowed = d.align === 'center' ? CENTER : LEFT;
+  const ok = r.justifys.size === 1 && allowed.includes([...r.justifys][0]);
   if (!ok) problems.push(`WRONG       ${r.page}  ${r.sel} (x${r.n})  justify=${[...r.justifys].join('/')}, declared ${d.align}`);
 }
 for (const d of DECLARED) {

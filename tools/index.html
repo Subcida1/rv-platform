@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/tools/">
   <title>Free RV Tools: Towing Calculator, Weight Check and More</title>
   <meta name="description" content="Fifteen free RV tools: weight and towing, solar sizing, battery runtime, fuel cost, tire age, and finders for water valves, converters, recalls and filters.">
-  <link rel="stylesheet" href="assets/css/style.css?v=5c65f65d">
+  <link rel="stylesheet" href="assets/css/style.css?v=4f343881">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=aad9f751">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=a8459cee">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png?v=a80bf3fd">
@@ -43,118 +43,17 @@
   <div class="wrap page-intro">
     <h1 class="lg">Free RV tools</h1>
     <p class="lede wide">Every tool is free: no account, no paywall. <span data-claim="tools-live">15</span> live now, <span data-claim="tools-building">4</span> more in the pipeline.</p>
-    <!-- THE STRIP IS A TOOL PICKER NOW, NOT THREE BADGES. Ty, 2026-10-05: "three of those
-         buttons ... I think those would be better served as basically another way to choose
-         which tool you want, and we should link each tool through a little button like that.
-         instead of these". The three badges said 8 live, 4 building and $0 forever. Two of
-         those are still stated, as guarded counts in the line above; the third was doing no
-         work at all, because a reader who is looking at the tools page can already count
-         them. What was missing was a way to jump straight to one.
-         The pills carry the same names as the homepage's, so the two pages call each tool
-         the same thing, AND NOW THE SAME ORDER. Ty, 2026-10-10: "For the tools, I think we
-         should do the measured demand", after the homepage was ordered that way. This page
-         used to run its own order, which meant one surface said "start with the weight
-         calculator" and the other said "start with fuel cost". One rule now governs both:
-         scripts/keyword-demand.py against Bing Webmaster's keyword API, most wanted first.
-         fuel cost 20,221/mo, watts to amps 16,865, solar 5,120, rv loan 5,077, towing 5,034,
-         battery runtime 1,721, tire date 996, snow load no measurable volume. The cards below
-         follow the same order, so the two cannot disagree.
-         SIX OF THE FOURTEEN HAVE NO MEASURABLE VOLUME AND SIT TOGETHER IN THE MIDDLE: the toilet
-         valve finder, the anode rod finder, the recall lookup, the converter finder, the fridge
-         board finder and the water filter finder. Bing returns no figure for any
-         of them, so there is no measurement to order them by. They are placed next to each
-         other after the measured list rather than being given a rank the data does not support. -->
-    <div class="tool-strip">
-      <a class="chip" href="tools/#tool-fuel-cost">⛽ Fuel cost</a>
-      <a class="chip" href="tools/#tool-watts-to-amps">🔌 Watts to amps</a>
-      <a class="chip" href="tools/#tool-solar-sizing">☀️ Solar sizing</a>
-      <a class="chip" href="tools/#tool-rv-loan">🏦 RV loan</a>
-      <a class="chip" href="tools/#tool-weight-calculator">⚖️ Weight calculator</a>
-      <a class="chip" href="tools/#tool-rv-toilet-valve">🚽 Toilet valve</a>
-      <a class="chip" href="tools/#tool-rv-recall-lookup">📋 Recall check</a>
-      <a class="chip" href="tools/#tool-rv-anode-rod">🔩 Anode rod</a>
-      <a class="chip" href="tools/#tool-rv-converter-finder">⚡ Converter finder</a>
-      <a class="chip" href="tools/#tool-rv-appliance-board-finder">🧊 Appliance board</a>
-      <a class="chip" href="tools/#tool-rv-water-filter">🚰 Water filter</a>
-      <a class="chip" href="tools/#tool-battery-runtime">🔋 Battery runtime</a>
-      <a class="chip" href="tools/#tool-tire-date-code">🛞 Tire age</a>
-      <a class="chip" href="tools/#tool-snow-load">🏔️ Snow load</a>
-      <a class="chip" href="tools/#tool-state-trailer-brake-laws">🛑 Brake laws</a>
-    </div>
+    <!-- THE STRIP IS GONE (2026-11-21). It was fifteen pills, one per tool, directly above a grid
+         of fifteen cards that name the same tools in the same order. Measured at 1280x900: the
+         pills and the page intro filled the fold, so the first tool card a reader could see
+         started below it, on a page whose entire job is "get the reader to the right tool". Two
+         selectors for one set of fifteen things is one too many, and the pills were the weaker
+         of the two: a chip is a name, a card carries the name, the verb, what the tool answers
+         and a captured example. The history of the pills is kept in git; nothing here needs it.
+         The card order below still comes from scripts/keyword-demand.py and still matches the
+         homepage, which was the only thing the pills were holding together. -->
   </div>
 
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
- <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
-     grown too long... put them into smaller cards at fitting multiple tools onto the screen at
-     once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.
-     After: 9 tiles per screen, page under four. Same 15 tools, same copy, same 32 captured
-     examples, same order from scripts/keyword-demand.py. The long explanation for each tool is
-     on the tool's own page, which already runs 1,600-2,000 words; the hub's job is to get a
-     reader to the right one. Built by scripts/build-tool-cards.py -- do not hand-edit.
-     The whole tile is the link (Google's model), and the action verb under the title is kept
-     because a scanner reads a label's first two words (_todo/UX.md). -->
  <!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
      grown too long... put them into smaller cards at fitting multiple tools onto the screen at
      once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.

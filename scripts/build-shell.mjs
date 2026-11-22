@@ -184,6 +184,31 @@ function breadcrumbFor(rel, html) {
     'manuals/index.html': 'Manuals', 'directory/index.html': 'Directory'
   };
 
+  /* A TOOL PAGE'S CRUMB IS THE TOOL'S OWN SHORT NAME, NOT ITS H1 (2026-11-21). All fifteen tool
+     pages pushed their full <h1> into the trail: "RV towing calculator: towing capacity, payload
+     and tongue weight" is 64 characters of crumb on a page whose crumb is meant to be a map label,
+     and the same fault ran on guides and manuals. Tools are fixed here because that is the scoped
+     change; the names are the ones the site already uses for these tools in nav.main and on the
+     tools hub, so a reader who arrived through the menu sees the same word twice, not two names for
+     one page. This is the same reasoning the state-page branch below already carries. */
+  const TOOL_CRUMB = {
+    'tools/fuel-cost.html': 'Fuel cost',
+    'tools/watts-to-amps.html': 'Watts to amps',
+    'tools/solar-sizing.html': 'Solar sizing',
+    'tools/rv-loan.html': 'RV loan',
+    'tools/weight-calculator.html': 'Weight and towing',
+    'tools/battery-runtime.html': 'Battery runtime',
+    'tools/rv-toilet-valve.html': 'Toilet water valve',
+    'tools/rv-recall-lookup.html': 'Recall lookup',
+    'tools/rv-anode-rod.html': 'Anode rod',
+    'tools/rv-converter-finder.html': 'Converter finder',
+    'tools/rv-appliance-board-finder.html': 'Appliance control board',
+    'tools/rv-water-filter.html': 'Water filter',
+    'tools/tire-date-code.html': 'Tire date code',
+    'tools/snow-load.html': 'Roof snow load',
+    'tools/state-trailer-brake-laws.html': 'State brake laws'
+  };
+
   if (isGuide) crumbs.push({ name: 'Guides', href: '/guides/' });
   else if (rel.startsWith('manuals/') && rel !== 'manuals/index.html') crumbs.push({ name: 'Manuals', href: '/manuals/' });
   else if (rel.startsWith('directory/') && rel !== 'directory/index.html') crumbs.push({ name: 'Directory', href: '/directory/' });
@@ -240,7 +265,7 @@ function breadcrumbFor(rel, html) {
     crumbs.push({ name: stateName, href: null });
   } else if (head && (isGuide || rel.startsWith('guides/') || rel.startsWith('manuals/') ||
                rel.startsWith('tools/') || rel.startsWith('parts/') || rel === 'directory/index.html')) {
-    crumbs.push({ name: head, href: null });
+    crumbs.push({ name: TOOL_CRUMB[rel] || head, href: null });
   }
   // The three top-level pages get their crumb by name, not by H1: about's H1 is a sentence
   // ("Built from inside an RV"), not a page name. Added 2026-10-14 (about/contact/privacy carried

@@ -418,7 +418,7 @@ def build():
     ]
 
     out = [head(title, desc, SITE + "/parts/index.html", schemas)]
-    out.append('''<div class="wrap page-intro w-820">
+    out.append('''<div class="wrap page-intro w-820 parts-intro">
 <h1>Every part of an RV</h1>
 <p class="lede">An RV is <span data-claim="parts-total">%d</span> parts across <span data-claim="parts-systems">%d</span> systems. Each part: what it does, the names people use for it, which RVs have one, and where to go next. <span data-claim="parts-linked">%d</span> of them link to a repair guide, a tool, or the maker's documentation, <span data-claim="parts-covered">%d</span> of those to a guide on this site, and the remaining <span data-claim="parts-unlinked">%d</span> are here so you can put a name to the thing that broke.</p>
 </div>
@@ -476,7 +476,10 @@ def build():
     <div class="parts-syschips" id="parts-syschips" role="group" aria-label="Filter parts by system">
       <button type="button" class="chip js-sys on" data-system="" aria-pressed="true">All <i>%d</i></button>
 %s    </div>
-    <p class="parts-count" role="status"><span id="parts-shown">%d</span> of %d shown</p>
+    <!-- Hidden at rest: "210 of 210 shown" restates the lede and the All chip and pushes the first
+         part row below the fold. parts.js reveals it the moment a search, an RV or a system chip is
+         active, which is when the number carries information. -->
+    <p class="parts-count" id="parts-count" role="status" hidden><span id="parts-shown">%d</span> of %d shown</p>
     <p class="parts-empty" id="parts-empty" role="status" hidden>Nothing on the list matches that. Try fewer words, or set the filters back to all.</p>
   </div>
 ''' % (total,

@@ -32,6 +32,10 @@ FILTERS = """    <div class="t-filters" role="group" aria-label="Filter tools by
 
 
 def section(cards_fragment):
+    # THE PILL STRIP IS NOT BUILT ANY MORE (2026-11-21). It used to sit between the intro and
+    # this grid: fifteen chips naming the same fifteen tools, pushing the first real card below
+    # the fold on a page whose whole job is to reach a tool. See the note in tools/index.html.
+    # --force now rebuilds the grid WITHOUT restoring the pills, which is the point.
     return """<!-- THE HUB IS A GRID OF TILES, NOT A STACK OF ARTICLES. Ty, 2026-11-13: "the list has
      grown too long... put them into smaller cards at fitting multiple tools onto the screen at
      once". Measured before: ~1.2 tools per screen at 1280x900, page fifteen screens tall.

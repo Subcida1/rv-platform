@@ -75,6 +75,17 @@ LEDE_START, LEDE_END = "<!-- LEDE:START -->", "<!-- LEDE:END -->"
 # markers the way the nav and the footer are, so the hub can take a claim and there is no
 # thirteenth copy to keep in step.
 CLAIM_START, CLAIM_END = "<!-- CLAIM:START -->", "<!-- CLAIM:END -->"
+# THE TOWN INDEX (2026-11-21). 950 generated town pages were reachable only from the
+# sitemap and from each other: 0 of 50 state pages carried a single link to any of their
+# own town pages, and Google had indexed 0 of 789 inspected town URLs ("Discovered,
+# currently not indexed"). The state pages are the strongest pages in the directory, so the
+# fix is a plain list of every town in the state, one link each, emitted here as its own
+# block. It sits after the intro/finder and before the regional business groupings: the
+# regions are a business taxonomy with no town with a single listing in them, so nesting
+# towns under regions orphans exactly the pages this is here to link. Written against
+# _data/towns.json, the same file build-town-pages.py reads, so the list and the sitemap
+# cannot drift. See references/state-town-links.md for the measurement.
+TOWNS_START, TOWNS_END = "<!-- LISTINGS:TOWNS-START -->", "<!-- LISTINGS:TOWNS-END -->"
 # NO "Free forever" BADGE IN THIS CARD (2026-10-13). It sat beside "Free, permanent, yours to
 # control" and said the same thing twice; a chip that repeats the sentence next to it is
 # furniture, and this one had been flagged three times before it came out. The note lives here
@@ -451,6 +462,55 @@ def topic_sentence(st):
             'before every trip.')
 
 
+def towns_for(st):
+    """The generated town pages for one state code, from the same manifest
+    build-town-pages.py writes. Returns [] when the manifest is absent, so a checkout
+    that has not run the town builder degrades instead of failing the whole state build.
+    """
+    path = ROOT / "_data" / "towns.json"
+    if not path.exists():
+        return []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    rows = [t for t in data.get("towns", []) if t.get("state") == st]
+    return sorted(rows, key=lambda t: t["town"].lower())
+
+
+def towns_text(data, slug, st):
+    """A plain index of every town page in this state, one link each.
+
+    The 950 town pages were reachable only from the sitemap and from one another: no state
+    page linked down to a single one of them, and Google had indexed none of the town URLs it
+    had inspected. This is the link path down from the strongest pages in the directory.
+
+    Two deliberate choices, both from the measurement rather than taste: a full visible list
+    rather than a collapsible one, because content behind a toggle is weighted lower and the
+    average state has about 19 towns; and one flat list rather than nesting under the regional
+    headings above it, because the regions are a business taxonomy with no town that carries a
+    single listing in them, which is exactly how a town ends up orphaned again.
+    """
+    rows = towns_for(st)
+    if not rows:
+        return ""
+    name = data["name"]
+    # "1 town" reads as a typo on the small states, so the number is spelled for the
+    # singular and the plural is used only where it is true.
+    n = len(rows)
+    lead = ("The %s has %s that %s at least one listed repair business."
+            % (name, "one town" if n == 1 else "%d towns" % n,
+               "carries" if n == 1 else "carry"))
+    items = "\n".join(
+        '          <li><a href="%s">RV repair in %s</a></li>'
+        % (esc(t["url"]), esc(t["town"])) for t in rows)
+    return (
+        '<div class="sec prose sp-34">\n'
+        '    <div class="wrap">\n'
+        '      <h2 class="sp-44">Towns in %s with RV repair</h2>\n'
+        '      <p class="lede wide">%s</p>\n'
+        '      <ul class="town-index">\n%s\n      </ul>\n'
+        '    </div>\n'
+        '  </div>' % (esc(name), lead, items))
+
+
 def regions_text(data, slug):
     """The browse view: every business, grouped by region, in plain HTML.
 
@@ -604,6 +664,7 @@ def build(kind):
         out[(slug, "shard")] = shard_text(data)
         out[(slug, "schema")] = schema_text(data, slug)
         out[(slug, "regions")] = regions_text(data, slug)
+        out[(slug, "towns")] = towns_text(data, slug, st)
         out[(slug, "counts")] = counts(data["listings"])
         out[(slug, "lede")] = lede_text(data)
         out[(slug, "script-tags")] = fix_script_tags(
@@ -644,6 +705,18 @@ def build(kind):
         # the script tags, inside markers, written by nobody else
         text = replace_between(text, TAGS_START, TAGS_END, out[(slug, "script-tags")], "scripts")
         text = replace_between(text, SCHEMA_START, SCHEMA_END, out[(slug, "schema")], "schema")
+        # THE TOWN INDEX IS SEEDED ONCE, THEN FILLED EVERY RUN. Pages built before this
+        # block existed carry no markers, so the first pass inserts an empty marker pair
+        # immediately before the regions block and every later pass substitutes against
+        # the CURRENT bytes (idempotent: a correct page comes back byte-identical). The
+        # empty case is real for a state with no town pages, and it must not leave a
+        # stray empty <div> behind, so the markers are kept and the body is blank.
+        if TOWNS_START not in text:
+            text, n = re.subn(r"([ \t]*)(<!-- LISTINGS:REGIONS-START -->)",
+                              r"\g<1>" + TOWNS_START + "\n" + TOWNS_END + "\n\n" + r"\g<1>\g<2>",
+                              text, count=1)
+            assert n == 1, "%s: no regions marker to seed the town index before" % slug
+        text = replace_between(text, TOWNS_START, TOWNS_END, out[(slug, "towns")], "towns")
         text = replace_between(text, START, END, out[(slug, "regions")], "regions")
         text = replace_between(text, CLAIM_START, CLAIM_END, CLAIM_CARD, "claim card")
         text = replace_between(text, LEDE_START, LEDE_END,

@@ -602,6 +602,19 @@ input,select,textarea{font-family:inherit}
   columns:2;column-gap:26px}
 @media(max-width:720px){.no-sources{columns:1}}
 
+/* THE TOWN INDEX ON A STATE PAGE (2026-11-21). Every town page in the state, one link each,
+   linking down from the strongest pages in the directory to the 950 town pages that had no
+   inbound internal link from their own state. Layout follows .no-sources above: two columns
+   at desktop, one at phone width, because each link stands alone and must hold the 44px tap
+   floor this site holds itself to (the same rule the symptom table cites a few lines down).
+   A link inside a sentence is exempt; these are not inside sentences. */
+.town-index{list-style:none;padding:0;margin:14px 0 4px;columns:2;column-gap:26px}
+.town-index li{break-inside:avoid}
+.town-index a{display:flex;align-items:center;min-height:44px;padding:0 4px;
+  color:var(--text-2);text-decoration:none;font-size: var(--fs-md);border-bottom:1px solid var(--border)}
+.town-index a:hover{color:var(--b1,var(--brand));text-decoration:underline}
+@media(max-width:720px){.town-index{columns:1}}
+
 /* MOBILE, WHICH IS WHERE THIS PAGE IS ACTUALLY READ. Ty, 2026-10-08: "we're focusing on mobile
    layout remember not 2k." Measured at 360px: the three-column symptom table needed 338px inside a
    312px container, so it fell back to the sideways scroll the wide-table wrapper exists for, and the
@@ -961,7 +974,13 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    "it should have its entire own element and probably even elevated above these two".
    The tint is the one the site already uses for a highlighted surface. */
 .start-here{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:32px 34px;border-color:var(--tint-edge);background:var(--tint-bg)}
-.start-here-body{flex:1;min-width:280px}
+/* min() NOT a lower fixed value (2026-11-21). At 360px this card's body overflowed its right
+   edge by 9px: min-width:280px inside a container narrower than 280px plus its padding, while
+   .start-here-p caps at 640px. min(280px,100%) caps the floor at the container width so it can
+   never exceed it, and any container 280px or wider renders exactly as it did before, so the
+   second card that shares this class does not change. A media query would need keeping in step
+   with two cards that carry different copy. */
+.start-here-body{flex:1 1 0;min-width:min(280px,100%)}
 .start-here .h-lg{margin:8px 0 0}
 .start-here-p{margin-top:10px;color:var(--text-2);font-size: var(--fs-lg);line-height:1.6;max-width:640px}
 @media(max-width:720px){
@@ -1398,6 +1417,19 @@ footer a:hover{color:var(--text-inv)}
   .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .sec{padding:64px 0}
   .util-l span{display:none}
+  /* THE PHONE'S UTILITY STRIP IS A REAL TAP TARGET NOW (2026-11-21). It was --fs-xs (12px) in a
+     7px-padded row: about 31px tall, under both the 44px tap floor this site holds itself to and
+     even the 24px WCAG 2.2 minimum, on the one strip that sits on every page of the site. The
+     pseudo-element hit area above grows the pointer target without moving anything, which is why
+     the visual size was never fixed. Here it is fixed visually, because the target that matters
+     most on this site is a thumb on a phone looking for RV service. Three things move together:
+     14px text, a 44px minimum row, and 12px of side padding per link. "Find RV service" STAYS
+     VISIBLE -- Claude's ruling, and the one link on the strip a reader arriving for repairs needs
+     before anything else. With the pair on the right already hidden at this width, the three
+     remaining labels fit a 360px line at 14px. */
+  .util{font-size:14px}
+  .util .wrap{padding-top:0;padding-bottom:0;min-height:44px}
+  .util a{padding:12px 0;min-height:44px;display:inline-flex;align-items:center}
 }
 @media(max-width:520px){
   .cat-grid,.camp-grid,.part-grid{grid-template-columns:minmax(0,1fr)}
@@ -3762,6 +3794,15 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    edge on a phone.
    ============================================================ */
 .parts-controls{margin-bottom:6px}
+/* THE PARTS HUB LIFTS ITS CONTROLS TOWARD THE FOLD (2026-11-21). At 1280x900 the page opened with
+   54px of intro padding, a four-line lede, 20px more, then 88px of section padding before the
+   search field: the first part row sat below the fold on a page whose job is to answer "what is
+   this thing called" and "where do I get one". Claude's ruling on /parts/: pull the search and the
+   filter up to where the intro ends. Both numbers are the site's own scale, just less of it: 54px
+   to 30px on the intro, and the section's own 88px top to 26px here, scoped to .parts-intro's
+   sibling so the directory and guides hubs keep their air. Nothing moves horizontally. */
+.parts-intro{padding-top:30px;padding-bottom:6px}
+.parts-intro + .sec{padding-top:26px}
 /* LINE 1: SEARCH LEFT, THE RV PICKER RIGHT, THE PAIR CENTRED AS ONE GROUP.
    Ty, 2026-11-14: "Put the search bar and the show parts for dropdown on the same area" and
    "center the buttons up top". nowrap so the two never split across lines on a desktop, and
@@ -3950,7 +3991,7 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    loses to ANY display rule, and the table row now carries a display of its own, so the filter
    needs an explicit `[hidden]` rule for each thing it hides or it would appear to do nothing.
    `.part-aka` is kept and re-scoped inside the name cell: the alias line is still on the row. */
-.part[hidden],.parts-sys[hidden],.parts-empty[hidden],.part-table[hidden]{display:none}
+.part[hidden],.parts-sys[hidden],.parts-empty[hidden],.part-table[hidden],.parts-count[hidden]{display:none}
 .parts-empty{margin-top:20px;font-size: var(--fs-md);color:var(--text-2)}
 
 
