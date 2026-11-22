@@ -615,6 +615,34 @@ input,select,textarea{font-family:inherit}
 .town-index a:hover{color:var(--b1,var(--brand));text-decoration:underline}
 @media(max-width:720px){.town-index{columns:1}}
 
+/* THE TOWN INDEX, WHICH IS THE ONE PLACE ON THE SITE A READER CAN DROWN IN LINKS. T, 2026-11-22:
+   "to go through every city at once is extremely overwhelming ... the UI for it as it stands does
+   not meet the standards set by the rest of our content." California is 109 rows in one flat list.
+   So the full list is a closed <details> and the near-you block carries the first impression.
+
+   The list stays in the HTML when closed - a <details> hides nothing from a crawler, which is the
+   entire reason the block exists, so this is presentation and not a removal. The toggle is the
+   house .no-sec summary, which already carries the 44px tap floor and the +/- marker. */
+.town-all{margin-top:18px}
+.town-all>summary{font-size: var(--fs-md);font-weight:700;color:var(--text)}
+.town-all[open]>summary{margin-bottom:2px}
+
+/* NEAR YOU. Rendered empty by the server and filled by towns-near.js, so with no JS (a crawler, or
+   a reader who blocks it) this element stays hidden and the <details> below is the whole path.
+   Nothing can be orphaned by a script that never ran. */
+.town-near{margin:20px 0 4px}
+.town-near-h{font-size: var(--fs-sm);font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--text-3);margin:0 0 10px}
+.town-near ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;
+  align-items:stretch;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr))}
+.town-near li{display:flex}
+.town-near a{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  min-height:44px;width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;
+  color:var(--text);text-decoration:none;font-weight:600;font-size: var(--fs-md)}
+.town-near a:hover{border-color:var(--b1,var(--brand));color:var(--b1,var(--brand))}
+.town-near .sm{color:var(--text-3);font-weight:400;font-size: var(--fs-sm)}
+.town-near-empty{margin:20px 0 0;color:var(--text-3);font-size: var(--fs-sm)}
+
 /* MOBILE, WHICH IS WHERE THIS PAGE IS ACTUALLY READ. Ty, 2026-10-08: "we're focusing on mobile
    layout remember not 2k." Measured at 360px: the three-column symptom table needed 338px inside a
    312px container, so it fell back to the sideways scroll the wide-table wrapper exists for, and the

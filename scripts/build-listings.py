@@ -476,17 +476,32 @@ def towns_for(st):
 
 
 def towns_text(data, slug, st):
-    """A plain index of every town page in this state, one link each.
+    """The town index: what is near you first, and the full list one tap away.
 
     The 950 town pages were reachable only from the sitemap and from one another: no state
     page linked down to a single one of them, and Google had indexed none of the town URLs it
     had inspected. This is the link path down from the strongest pages in the directory.
 
-    Two deliberate choices, both from the measurement rather than taste: a full visible list
-    rather than a collapsible one, because content behind a toggle is weighted lower and the
-    average state has about 19 towns; and one flat list rather than nesting under the regional
-    headings above it, because the regions are a business taxonomy with no town that carries a
-    single listing in them, which is exactly how a town ends up orphaned again.
+    The first version printed every town in one flat list, which on California is 109 rows of
+    undifferentiated links and reads as a wall rather than a menu. Three changes, and the
+    reasoning matters more than the markup:
+
+    - The full list is now inside a collapsed <details>, NOT removed. Content behind a toggle
+      still ships in the HTML, so every one of the 950 links stays crawlable and the SEO the
+      block exists for is untouched. Collapsing is presentation; deleting would have been the
+      fix that quietly undid itself.
+    - A short "near you" block sits ABOVE the toggle, filled in by JS from the visitor's state
+      (the /where worker returns a region only, no city or coordinates, so the honest unit here
+      is the state). It ranks by the city-size markers locate.js already carries rather than
+      alphabetically, so a reader in California gets Los Angeles and San Diego, not Acampo and
+      Acton.
+    - The list stays flat rather than nesting under the regional headings above it, because the
+      regions are a business taxonomy with no town that carries a single listing in them, which
+      is exactly how a town ends up orphaned again.
+
+    The near-you block is server-rendered EMPTY and filled by JS. Google and a reader with no
+    JS still see the complete list, which is the property that matters; a visitor with JS gets
+    the shortcut. That ordering means the block can never be the only path to a town.
     """
     rows = towns_for(st)
     if not rows:
@@ -494,21 +509,32 @@ def towns_text(data, slug, st):
     name = data["name"]
     # "1 town" reads as a typo on the small states, so the number is spelled for the
     # singular and the plural is used only where it is true.
+    #
+    # NO LEADING "The" BEFORE THE STATE NAME. The first version read "The California has 109 towns
+    # that carry at least one listed repair business", which is wrong on every one of the 46 state
+    # pages and was caught in a screenshot of the rendered block rather than by any gate. State
+    # names in this manifest are bare ("California", "Texas"), so the sentence is rebuilt around
+    # the name instead of prefixed with an article.
     n = len(rows)
-    lead = ("The %s has %s that %s at least one listed repair business."
-            % (name, "one town" if n == 1 else "%d towns" % n,
-               "carries" if n == 1 else "carry"))
+    lead = ("%s has %s with at least one listed repair business."
+            % (name, "one town" if n == 1 else "%d towns" % n))
     items = "\n".join(
-        '          <li><a href="%s">RV repair in %s</a></li>'
+        '            <li><a href="%s">RV repair in %s</a></li>'
         % (esc(t["url"]), esc(t["town"])) for t in rows)
     return (
-        '<div class="sec prose sp-34">\n'
+        '<div class="sec prose sp-34" data-towns-state="%s">\n'
         '    <div class="wrap">\n'
         '      <h2 class="sp-44">Towns in %s with RV repair</h2>\n'
         '      <p class="lede wide">%s</p>\n'
-        '      <ul class="town-index">\n%s\n      </ul>\n'
+        '      <div class="town-near" id="town-near" hidden></div>\n'
+        '      <details class="no-sec town-all">\n'
+        '        <summary>All %s in %s</summary>\n'
+        '        <ul class="town-index">\n%s\n        </ul>\n'
+        '      </details>\n'
         '    </div>\n'
-        '  </div>' % (esc(name), lead, items))
+        '  </div>'
+        % (esc(st), esc(name), lead,
+           "one town" if n == 1 else "%d towns" % n, esc(name), items))
 
 
 def regions_text(data, slug):
@@ -637,6 +663,20 @@ def fix_script_tags(block, st, slug):
                            block, count=1)
         if n != 1:
             sys.exit("FAIL  %s: could not place towns.js before locate.js" % slug)
+    # TOWNS-NEAR GOES LAST (2026-11-22). It reads RV_TOWNS (the manifest), RV_PLACES (the size
+    # markers that decide what a person would recognise) and RV_LOCATE_HOME (the state from the
+    # /where worker), so all three must have executed before it runs. Appended after locate.js
+    # rather than inserted before it, because it is a consumer of the resolver and nothing
+    # depends on it - a failure inside it must not be able to break finder.js.
+    if "assets/js/towns-near.js" not in block:
+        lines = block.split("\n")
+        at = next((i for i, ln in enumerate(lines) if "assets/js/locate.js" in ln),
+                  len(lines) - 1)
+        block = "\n".join(lines[:at + 1] +
+                          ['  <script src="assets/js/towns-near.js"></script>'] +
+                          lines[at + 1:])
+    if "assets/js/towns-near.js" not in block:
+        sys.exit("FAIL  %s: could not place towns-near.js after locate.js" % slug)
     return block.strip("\n")
 
 
