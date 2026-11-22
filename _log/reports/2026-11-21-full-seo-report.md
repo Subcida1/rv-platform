@@ -78,19 +78,30 @@ two-month-old domain gets crawled at single-digit-pages-per-day, so the town pag
 from the earlier audit; on-page structure is clean per the census above, so the indexation gap is
 volume and crawl budget, not a defect.
 
-**2. Every page is reachable at two URLs, and Google is splitting them.** Live HTTP confirms
-`/guides/rv-lights-not-working` and `/guides/rv-lights-not-working.html` BOTH return 200 with no
-redirect; only the canonical tag tells Google which to keep. Measured effect: **14 pages are
-indexed twice**, and Google's choice is inconsistent:
+**2. Every page is reachable at two URLs, and Google has already split 9 of them into two indexed
+pages.** Live HTTP confirms `/guides/rv-lights-not-working` and `/guides/rv-lights-not-working.html`
+BOTH return 200 with no redirect; only the canonical tag tells Google which to keep. Every one of
+the 1,098 files is exposed this way (GitHub Pages serves `/x` from `x.html` with no redirect), but
+13 pairs have accumulated impressions on both forms and per-URL inspection shows the outcome is
+inconsistent:
 
-- `/manuals/brands.html` -> "Alternate page with proper canonical tag", consolidated to the clean
-  form (correct).
-- `/guides/rv-lights-not-working.html` -> **"Submitted and indexed" with the `.html` form as
-  googleCanonical**, i.e. Google overrode our canonical and indexed the duplicate instead.
+- **Consolidated correctly (4 pairs):** `/manuals/brands`, `/guides/rv-leveling-jacks-not-working`,
+  `/about`, `/guides/rv-converter-not-charging` all report "Alternate page with proper canonical
+  tag" on the `.html` form, i.e. Google followed the canonical.
+- **Split, both indexed (9 pairs):** `/guides/rv-lights-not-working`, `/tools/weight-calculator`,
+  `/guides/rv-generator-not-charging`, `/guides/rv-furnace-not-working`,
+  `/guides/rv-furnace-carbon-monoxide`, `/guides/roof-snow-load`, `/guides/tires-winter`,
+  `/guides/rv-propane-furnace-wont-light`, `/manuals/towing-and-running-gear` each report
+  "Submitted and indexed" on BOTH the clean form and the `.html` form, with googleCanonical set to
+  each one's own URL. Google indexed the `.html` twin as its own page and is treating them as
+  two competitors for the same query.
 
-Combined impressions from the duplicated pairs (brands 383+111, lights 78+108, leveling 98+23,
-weight-calculator 113+4, generator 81+9): the split is real and measurable, and it spends crawl
-budget on URLs that should not exist when crawl budget is the constraint.
+The 4 consolidated pairs prove the canonical tag works and Google will obey it; the 9 split pairs
+show that once Google has already indexed the `.html` form, the canonical alone does not move it.
+That requires a hard 301, which GitHub Pages cannot emit (`scripts/clean-urls.py` documents the
+no-redirect behaviour). Note also that Google's "Request Indexing" is a Search Console UI action
+with no API (verified: `urlInspection/index:submit` returns 404), so this cannot be nudged
+programmatically — the fix is either the redirect or a manual UI pass per URL.
 
 **3. Internal linking from the strongest family down was, until yesterday, near zero.** The
 2026-11-21 commit fixed the state-to-town direction: 46 of 50 state pages now link down to their
