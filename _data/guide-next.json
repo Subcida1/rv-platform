@@ -1,0 +1,620 @@
+{
+ "note": "End-of-content link block for each guide page (the flex/gap/spread button strip). Emitted by scripts/build-guide-next.py in the shared shell step. Rule: one TOOL link when a tool is the natural next step; otherwise a sibling GUIDE plus a MANUALS section. Every href must resolve (checked by check-ux.py).",
+ "blocks": {
+  "battery-winter-storage": {
+   "links": [
+    {
+     "label": "RV battery charging problems",
+     "href": "guides/rv-battery-not-charging"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Charging diagnosis and electrical references support storage."
+  },
+  "freeze-damage-triage": {
+   "links": [
+    {
+     "label": "Winterize the water system",
+     "href": "guides/winterize-plumbing"
+    },
+    {
+     "label": "Water and plumbing manuals",
+     "href": "manuals/water-and-plumbing"
+    }
+   ],
+   "why": "Prevention and plumbing references follow freeze damage."
+  },
+  "roof-snow-load": {
+   "links": [
+    {
+     "label": "Calculate your RV roof snow load",
+     "href": "tools/snow-load"
+    }
+   ],
+   "why": "The calculator directly measures the roof's snow burden."
+  },
+  "rv-air-conditioner-not-cooling": {
+   "links": [
+    {
+     "label": "RV refrigerator not cooling",
+     "href": "guides/rv-refrigerator-not-cooling"
+    },
+    {
+     "label": "Heating and cooling manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ]
+  },
+  "rv-awning-not-working": {
+   "links": [
+    {
+     "label": "RV slide out not working",
+     "href": "guides/rv-slide-out-not-working"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Both exterior mechanisms share related service documentation."
+  },
+  "rv-battery-disconnect": {
+   "links": [
+    {
+     "label": "RV battery not charging",
+     "href": "guides/rv-battery-not-charging"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Charging faults and disconnects share electrical diagnosis."
+  },
+  "rv-battery-not-charging": {
+   "links": [
+    {
+     "label": "RV lithium battery not charging",
+     "href": "guides/rv-lithium-battery-not-charging"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Battery chemistry and wiring references extend diagnosis."
+  },
+  "rv-black-tank": {
+   "links": [
+    {
+     "label": "Black tank routines and troubleshooting",
+     "href": "guides/rv-black-tank-routine"
+    },
+    {
+     "label": "Sanitation and tank manuals",
+     "href": "manuals/sanitation-and-tanks"
+    }
+   ],
+   "why": "Routine care and manuals extend basic dumping guidance."
+  },
+  "rv-black-tank-clogged": {
+   "links": [
+    {
+     "label": "RV toilet not flushing",
+     "href": "guides/rv-toilet-not-flushing"
+    },
+    {
+     "label": "Sanitation and tank manuals",
+     "href": "manuals/sanitation-and-tanks"
+    }
+   ],
+   "why": "Toilet flow troubleshooting complements tank blockage diagnosis."
+  },
+  "rv-black-tank-routine": {
+   "links": [
+    {
+     "label": "When and how to dump your black tank",
+     "href": "guides/rv-black-tank"
+    },
+    {
+     "label": "Sanitation and tank manuals",
+     "href": "manuals/sanitation-and-tanks"
+    }
+   ],
+   "why": "The companion guide covers routine tank handling details."
+  },
+  "rv-chassis-battery-and-charging": {
+   "links": [
+    {
+     "label": "RV engine overheating",
+     "href": "guides/rv-engine-overheating"
+    },
+    {
+     "label": "Chassis and drivetrain manuals",
+     "href": "manuals/chassis-and-drivetrain"
+    }
+   ],
+   "why": "Chassis systems and drivetrain references support diagnosis."
+  },
+  "rv-condensation-inside": {
+   "links": [
+    {
+     "label": "Heating an RV off-grid",
+     "href": "guides/rv-heating-off-grid"
+    },
+    {
+     "label": "Furnace and air conditioner manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ],
+   "why": "Ventilation and heating guidance address indoor moisture."
+  },
+  "rv-delamination": {
+   "links": [
+    {
+     "label": "RV window leaking: the seal is under the flange",
+     "href": "guides/rv-window-leaking"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Body water entry starts at windows and seals, not the roof."
+  },
+  "rv-driving-motorhome": {
+   "links": [
+    {
+     "label": "RV towing capacity and limits",
+     "href": "guides/rv-towing-capacity"
+    },
+    {
+     "label": "Chassis and drivetrain manuals",
+     "href": "manuals/chassis-and-drivetrain"
+    }
+   ],
+   "why": "Weight limits and chassis references for a first motorhome."
+  },
+  "rv-engine-overheating": {
+   "links": [
+    {
+     "label": "How to drive a motorhome",
+     "href": "guides/rv-driving-motorhome"
+    },
+    {
+     "label": "Chassis and drivetrain manuals",
+     "href": "manuals/chassis-and-drivetrain"
+    }
+   ],
+   "why": "Driving conditions and chassis manuals inform overheating diagnosis."
+  },
+  "rv-entry-door-wont-latch": {
+   "links": [
+    {
+     "label": "RV entry steps not working",
+     "href": "guides/rv-entry-steps-not-working"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Adjacent entry hardware shares exterior body documentation."
+  },
+  "rv-entry-steps-not-working": {
+   "links": [
+    {
+     "label": "RV entry door won't latch",
+     "href": "guides/rv-entry-door-wont-latch"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Entry components share exterior hardware service references."
+  },
+  "rv-frame-cracks": {
+   "links": [
+    {
+     "label": "RV delamination",
+     "href": "guides/rv-delamination"
+    },
+    {
+     "label": "Chassis and drivetrain manuals",
+     "href": "manuals/chassis-and-drivetrain"
+    }
+   ]
+  },
+  "rv-fridge-leveling": {
+   "links": [
+    {
+     "label": "RV refrigerator not cooling",
+     "href": "guides/rv-refrigerator-not-cooling"
+    },
+    {
+     "label": "Refrigerator and appliance manuals",
+     "href": "manuals/kitchen-and-appliances"
+    }
+   ],
+   "why": "Cooling symptoms and appliance manuals explain leveling risks."
+  },
+  "rv-furnace-carbon-monoxide": {
+   "links": [
+    {
+     "label": "RV furnace not working",
+     "href": "guides/rv-furnace-not-working"
+    },
+    {
+     "label": "Furnace and air conditioner manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ],
+   "why": "Furnace operation guidance supports safe combustion troubleshooting."
+  },
+  "rv-furnace-not-working": {
+   "links": [
+    {
+     "label": "RV furnace will not light",
+     "href": "guides/rv-propane-furnace-wont-light"
+    },
+    {
+     "label": "Furnace and air conditioner manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ],
+   "why": "Ignition-specific diagnosis and manuals narrow furnace faults."
+  },
+  "rv-fuse-keeps-blowing": {
+   "links": [
+    {
+     "label": "RV lights not working",
+     "href": "guides/rv-lights-not-working"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Lighting circuits provide a practical related electrical example."
+  },
+  "rv-generator-not-charging": {
+   "links": [
+    {
+     "label": "RV battery not charging",
+     "href": "guides/rv-battery-not-charging"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Generator output and battery charging share electrical diagnosis."
+  },
+  "rv-heating-off-grid": {
+   "links": [
+    {
+     "label": "RV furnace not working",
+     "href": "guides/rv-furnace-not-working"
+    },
+    {
+     "label": "Furnace and air conditioner manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ],
+   "why": "Furnace troubleshooting supports safe off-grid heating choices."
+  },
+  "rv-level-towing-setup": {
+   "links": [
+    {
+     "label": "Calculate your RV weight and towing limits",
+     "href": "tools/weight-calculator"
+    }
+   ],
+   "why": "The weight calculator directly checks towing setup numbers."
+  },
+  "rv-leveling-jacks-not-working": {
+   "links": [
+    {
+     "label": "How to level your RV when towing",
+     "href": "guides/rv-level-towing-setup"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Leveling setup and exterior references help identify equipment."
+  },
+  "rv-lights-not-working": {
+   "links": [
+    {
+     "label": "RV fuse keeps blowing",
+     "href": "guides/rv-fuse-keeps-blowing"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Fuse diagnosis and wiring manuals support lighting repairs."
+  },
+  "rv-lithium-battery-not-charging": {
+   "links": [
+    {
+     "label": "RV battery not charging",
+     "href": "guides/rv-battery-not-charging"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "General charging diagnosis clarifies lithium-specific charging faults."
+  },
+  "rv-maintenance-schedule": {
+   "links": [
+    {
+     "label": "The RV pre-trip walkaround checklist",
+     "href": "guides/rv-pre-trip-walkaround"
+    },
+    {
+     "label": "RV owner's manuals by brand",
+     "href": "manuals/brands"
+    }
+   ],
+   "why": "The walkaround is the routine the schedule feeds."
+  },
+  "rv-outlets-not-working": {
+   "links": [
+    {
+     "label": "RV fuse keeps blowing",
+     "href": "guides/rv-fuse-keeps-blowing"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Circuit protection and electrical manuals support outlet diagnosis."
+  },
+  "rv-pin-weight-and-payload": {
+   "links": [
+    {
+     "label": "Calculate your RV weight and towing limits",
+     "href": "tools/weight-calculator"
+    }
+   ],
+   "why": "The calculator compares payload and pin weight limits."
+  },
+  "rv-pre-trip-walkaround": {
+   "links": [
+    {
+     "label": "RV maintenance schedule",
+     "href": "guides/rv-maintenance-schedule"
+    },
+    {
+     "label": "Hitch, axle and tire manuals",
+     "href": "manuals/towing-and-running-gear"
+    }
+   ],
+   "why": "Scheduled checks and running gear references extend inspections."
+  },
+  "rv-propane-detector-beeping": {
+   "links": [
+    {
+     "label": "RV furnace and carbon monoxide warning signs",
+     "href": "guides/rv-furnace-carbon-monoxide"
+    },
+    {
+     "label": "Furnace and air conditioner manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ],
+   "why": "Combustion safety guidance reinforces detector warning interpretation."
+  },
+  "rv-propane-furnace-wont-light": {
+   "links": [
+    {
+     "label": "RV furnace not working",
+     "href": "guides/rv-furnace-not-working"
+    },
+    {
+     "label": "Furnace and air conditioner manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ],
+   "why": "The broader furnace guide covers additional ignition causes."
+  },
+  "rv-propane-tank-wont-fill": {
+   "links": [
+    {
+     "label": "RV propane furnace won't light",
+     "href": "guides/rv-propane-furnace-wont-light"
+    },
+    {
+     "label": "Heating and cooling manuals",
+     "href": "manuals/heating-and-cooling"
+    }
+   ]
+  },
+  "rv-refrigerator-not-cooling": {
+   "links": [
+    {
+     "label": "Find your RV refrigerator control board",
+     "href": "tools/rv-appliance-board-finder"
+    }
+   ],
+   "why": "The board finder directly identifies compatible refrigerator components."
+  },
+  "rv-roof-leak-repair": {
+   "links": [
+    {
+     "label": "RV slide-out leaking",
+     "href": "guides/rv-slide-out-leaking"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Both guides address water entry through exterior structures."
+  },
+  "rv-sewer-smell": {
+   "links": [
+    {
+     "label": "RV black tank routines",
+     "href": "guides/rv-black-tank-routine"
+    },
+    {
+     "label": "Sanitation and tank manuals",
+     "href": "manuals/sanitation-and-tanks"
+    }
+   ],
+   "why": "Tank routines and sanitation manuals help trace odors."
+  },
+  "rv-slide-out-leaking": {
+   "links": [
+    {
+     "label": "Repair an RV roof leak",
+     "href": "guides/rv-roof-leak-repair"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Exterior leak diagnosis benefits from the companion guide."
+  },
+  "rv-slide-out-not-working": {
+   "links": [
+    {
+     "label": "RV awning not working",
+     "href": "guides/rv-awning-not-working"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Related moving exterior equipment shares service documentation."
+  },
+  "rv-solar-not-charging": {
+   "links": [
+    {
+     "label": "RV battery not charging",
+     "href": "guides/rv-battery-not-charging"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Battery charging diagnosis helps isolate solar system faults."
+  },
+  "rv-tank-sensors-reading-wrong": {
+   "links": [
+    {
+     "label": "RV black tank routines",
+     "href": "guides/rv-black-tank-routine"
+    },
+    {
+     "label": "Sanitation and tank manuals",
+     "href": "manuals/sanitation-and-tanks"
+    }
+   ],
+   "why": "Tank maintenance context helps interpret inaccurate sensor readings."
+  },
+  "rv-towing-trailer": {
+   "links": [
+    {
+     "label": "Calculate your tow",
+     "href": "tools/weight-calculator"
+    }
+   ],
+   "why": "The towing calculator checks the actual combination's weight limits."
+  },
+  "rv-trip-planner": {
+   "links": [
+    {
+     "label": "Estimate your RV trip fuel cost",
+     "href": "tools/fuel-cost"
+    }
+   ],
+   "why": "Fuel cost calculation directly supports practical trip budgeting."
+  },
+  "rv-two-appliances-stopped": {
+   "links": [
+    {
+     "label": "RV fuse keeps blowing",
+     "href": "guides/rv-fuse-keeps-blowing"
+    },
+    {
+     "label": "Power and electrical manuals",
+     "href": "manuals/power-and-electrical"
+    }
+   ],
+   "why": "Shared circuit faults are a likely common diagnostic path."
+  },
+  "rv-water-heater-not-heating": {
+   "links": [
+    {
+     "label": "Find the right water heater anode rod",
+     "href": "tools/rv-anode-rod"
+    }
+   ],
+   "why": "The anode finder identifies the correct compatible heater rod."
+  },
+  "rv-water-pressure": {
+   "links": [
+    {
+     "label": "RV water pump won't prime",
+     "href": "guides/rv-water-pump-wont-prime"
+    },
+    {
+     "label": "Water heater and plumbing manuals",
+     "href": "manuals/water-and-plumbing"
+    }
+   ],
+   "why": "Supply pressure and pump diagnosis share plumbing references."
+  },
+  "rv-water-pump-wont-prime": {
+   "links": [
+    {
+     "label": "RV water pressure",
+     "href": "guides/rv-water-pressure"
+    },
+    {
+     "label": "Water heater and plumbing manuals",
+     "href": "manuals/water-and-plumbing"
+    }
+   ],
+   "why": "Pressure troubleshooting provides the natural companion diagnosis."
+  },
+  "rv-window-leaking": {
+   "links": [
+    {
+     "label": "Repair an RV roof leak",
+     "href": "guides/rv-roof-leak-repair"
+    },
+    {
+     "label": "Awning and slide-out manuals",
+     "href": "manuals/exterior-and-body"
+    }
+   ],
+   "why": "Both guides trace water intrusion through exterior seals."
+  },
+  "tires-winter": {
+   "links": [
+    {
+     "label": "Check your RV tire date code",
+     "href": "tools/tire-date-code"
+    }
+   ],
+   "why": "The date decoder checks tire age before winter storage."
+  }
+ }
+}

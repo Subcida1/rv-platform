@@ -83,20 +83,91 @@ def check_vague_labels() -> int:
     return fails
 
 
-def check_guide_next_blocks() -> int:
+def check_guide_next_blocks() -> tuple[int, list]:
+    """Reports coverage AND now asserts coverage, resolution and placement.
+
+    The original version only reported missing blocks, which is how 50 guides sat broken
+    without the gate ever going red. It also could not tell a good block from a bad one: it
+    tested the wrapper class alone, so a block pointing at the generic `manuals/start-here`
+    landing page passed. Three assertions are added, all derived from SHIPPED files:
+      1. every guide has the block (was the only check);
+      2. every href in every block resolves to a real page on disk;
+      3. the block sits inside <main> (a depth-walk anchor once landed it past </footer>).
+    `_data/guide-next.json` is the source of truth, so a guide with no entry is a coverage
+    gap even when its markup happens to carry a block.
+    """
+    import json
+    import re as _re
+
     guides = [f for f in tracked("guides/*.html") if not f.endswith("index.html")]
+    real = set()
+    for d, s in (("tools", "tools/"), ("manuals", "manuals/"), ("guides", "guides/")):
+        for p in tracked(f"{d}/*.html"):
+            n = p.split("/")[-1][:-5]
+            if n != "index":
+                real.add(s + n)
+
+    problems = []
     missing = []
+    # the map is loaded first: the per-page loop compares each page's block against it.
+    blocks: dict = {}
+    try:
+        blocks = json.loads((ROOT / "_data" / "guide-next.json").read_text(encoding="utf-8"))["blocks"]
+    except Exception as e:  # a missing or malformed map is itself a failure
+        problems.append(f"_data/guide-next.json unreadable: {e}")
+
     for f in guides:
         text = (ROOT / f).read_text(encoding="utf-8", errors="replace")
         if 'class="flex between gap spread"' not in text:
             missing.append(f)
+            continue
+        close_main = text.find("</main>")
+        at = text.find('class="flex between gap spread"')
+        if close_main != -1 and at > close_main:
+            problems.append(f"{f}: link block sits outside <main>")
+        m = _re.search(r'<div class="flex between gap spread">(.*?)</div>', text, _re.S)
+        if not m:
+            problems.append(f"{f}: link block has no closing tag")
+            continue
+        for href in _re.findall(r'<a\b[^>]*href="([^"]+)"', m.group(1)):
+            if href.startswith(("http://", "https://", "#")):
+                continue
+            if href.startswith("/"):
+                problems.append(f"{f}: bare-absolute href {href} (breaks the base-href rule)")
+            elif href not in real:
+                problems.append(f"{f}: dead link in block -> {href}")
+        if "<a " not in m.group(1):
+            problems.append(f"{f}: link block is empty")
+
+        # the block must MATCH the map, not merely exist. Presence-only is how a map edit silently
+        # never ships: the page keeps its old strip while every gate stays green.
+        slug = f.split("/")[-1][:-5]
+        spec = blocks.get(slug) if isinstance(blocks, dict) else None
+        if spec is not None:
+            want = [l["href"] for l in spec.get("links", [])]
+            got = [h for h in _re.findall(r'<a\b[^>]*href="([^"]+)"', m.group(1))]
+            if want != got:
+                problems.append(f"{f}: block does not match _data/guide-next.json "
+                                f"(map {want} vs page {got})")
+
+    # the map must cover every guide that is expected to carry a block
+    gaps = []
+    slugs = {f.split("/")[-1][:-5] for f in guides}
+    gaps = sorted(set(blocks) - slugs) if blocks else []
+
     if missing:
         print(f"  {len(missing)} of {len(guides)} guides have no end-of-content link block:")
         for f in missing:
             print(f"    {f}")
     else:
         print(f"  all {len(guides)} guides end with a link block")
-    return len(missing)
+    if gaps:
+        # a map entry naming a page that does not exist is a defect, not a worklist item: the
+        # block it describes can never ship while the gate stays green.
+        for s in gaps:
+            problems.append(f"_data/guide-next.json names guides/{s}.html, which does not exist")
+
+    return len(missing), problems
 
 
 def check_bare_outline() -> int:
@@ -172,8 +243,11 @@ def main() -> int:
     if n_vague == 0:
         print("  none")
 
-    print("\n[2/4] guides with no end-of-content link block (reports)")
-    n_missing = check_guide_next_blocks()
+    print("\n[2/4] guide end-of-content link blocks (coverage reports; dead links FAIL)")
+    n_missing, n_block_problems = check_guide_next_blocks()
+    if n_block_problems:
+        for p in n_block_problems:
+            print(f"    {p}")
 
     print("\n[3/4] bare outline:none (reports)")
     n_outline = check_bare_outline()
@@ -186,12 +260,15 @@ def main() -> int:
     print("\n" + "=" * 56)
     if n_empty:
         print("%d heading(s) promise content that is not there." % n_empty)
-    if n_vague or n_empty:
-        if n_vague:
-            print(f"FAILED: {n_vague} vague link label(s) - give each link destination scent")
-        if n_empty:
-            print(f"FAILED: {n_empty} heading(s) with nothing under them - write the section or "
-                  f"drop the heading")
+    if n_vague:
+        print(f"FAILED: {n_vague} vague link label(s) - give each link destination scent")
+    if n_block_problems:
+        print(f"FAILED: {len(n_block_problems)} link-block defect(s) - a dead or misplaced "
+              f"next-step link is a real dead end, not a worklist item")
+    if n_empty:
+        print(f"FAILED: {n_empty} heading(s) with nothing under them - write the section or "
+              f"drop the heading")
+    if n_vague or n_block_problems or n_empty:
         return 1
     print(f"ok — no vague labels. ({n_missing} guides want a related block; "
           f"{n_outline} focus-ring selector(s) to eyeball.)")

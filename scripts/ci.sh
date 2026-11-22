@@ -95,12 +95,21 @@ step "build-parts-pages.py --check: the parts hub matches _data/parts.json" \
 # stale the first time a guide is added. This is what makes that impossible.
 step "build-home-schema.py --check: the homepage ItemList matches the tools and guides" \
                                                python3 scripts/build-home-schema.py --check
-# The UX doctrine gate (_todo/UX.md). Fails only on the thing that is unambiguously wrong — a
-# link whose whole label is "Read more" and so carries no destination scent — and REPORTS the
-# page-level worklist (guides missing a related/next block, focus-ring selectors to eyeball).
+# The UX doctrine gate (_todo/UX.md). Fails on anything unambiguously wrong — a link whose whole
+# label is "Read more" and so carries no destination scent, and now any end-of-content link block
+# with a DEAD or misplaced next-step link (a real dead end is not a worklist item). REPORTS the
+# page-level worklist (guides still missing a block, focus-ring selectors to eyeball).
 # A link a scanner cannot read the destination of is the cheapest way to lose a deep arrival.
 step "check-ux.py: vague link labels, related-block coverage, focus rings" \
                                                python3 scripts/check-ux.py
+# The generator that writes those blocks from _data/guide-next.json, self-test first (repo rule:
+# a bug is not closed until the gate that would have caught it exists). The self-test reconstructs
+# the insertion as data and negative-tests the two ways it went wrong: a page with no anchor, and a
+# Related card whose closing-div depth walk overshot </main> and put the strip after the footer.
+step "build-guide-next.py --self-test: link-block generator self-test" \
+                                               python3 scripts/build-guide-next.py --self-test
+step "build-guide-next.py --check: guide link blocks match _data/guide-next.json" \
+                                               python3 scripts/build-guide-next.py --check
 # The look's own gate (_todo/STYLE.md, "The four visual rules"). Centering and gradients may only
 # appear on selectors we have decided they belong on, and the literal type and space counts are
 # ratcheted so neither drifts up while the collapse onto the scales is pending. Seeded and
