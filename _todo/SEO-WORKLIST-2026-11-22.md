@@ -11,25 +11,62 @@ Source: `_log/reports/2026-11-21-full-seo-report.md`. Measured 2026-11-21/22.
   correct behaviour, not a defect. They have only single-listing towns below the generator's
   `MIN_LISTINGS = 2` gate.
 
-## Needs T (edge / DNS change, no token here)
+## Done 2026-11-23: the `.html` -> extensionless redirect is LIVE (proxy + two 302 rules)
 
-- **Cloudflare Redirect Rule: `*.html` -> 301 to the extensionless path.** DNS is on Cloudflare
-  (hera/elijah.ns.cloudflare.com) and GitHub Pages cannot 301 the `.html` form (it serves
-  `/x/y` from `y.html` with no redirect, documented in `scripts/clean-urls.py`). A Cloudflare
-  Redirect Rule is the only clean 301. This is the single highest-value fix: it stops Google
-  splitting the 14 duplicated pairs and frees crawl budget.
+Applied by T in the Cloudflare dashboard, verified from this box. What is now in place:
 
-  The 14 pairs to verify after the rule lands (impressions over 30 days, clean + .html):
-  `/manuals/brands` 383+111, `/guides/rv-lights-not-working` 78+108 (Google indexed the .html
-  form as canonical here), `/guides/rv-leveling-jacks-not-working` 98+23,
-  `/tools/weight-calculator` 113+4, `/guides/rv-generator-not-charging` 81+9,
-  `/guides/rv-furnace-not-working` 31+4, `/guides/rv-furnace-carbon-monoxide` 26+5,
-  `/guides/roof-snow-load` 5+15, `/about` 3+8, `/guides/rv-converter-not-charging` 7+4,
-  `/guides/tires-winter` 5+1, `/guides/rv-propane-furnace-wont-light` 2+1,
-  `/manuals/towing-and-running-gear` 1+2, `/` 3+1.
+- **The zone is PROXIED.** The four apex `originrv.com` A records are orange; `originrv.com` now
+  resolves to Cloudflare IPs (104.21.9.231 / 172.67.161.99) and returns `server: cloudflare`. It
+  answered `server: GitHub.com` until this change, which is why the pre-existing "Strip .html
+  extension" rule had been inert: it was authored on a zone that was never proxied.
+- **Rules → Redirect Rules, TWO rules, both currently `302` (deliberate):**
+  - `Strip .html from index pages` — `(http.host eq "originrv.com" and ends_with(http.request.uri.path, "/index.html"))` -> `concat(substring(http.request.uri.path, 0, -10), "")`.
+  - `Strip .html extension` — `(http.host eq "originrv.com" and ends_with(http.request.uri.path, ".html") and not ends_with(http.request.uri.path, "/index.html") and http.request.uri.path ne "/404.html")` -> `concat(substring(http.request.uri.path, 0, -5), "")`.
+  Both host-scoped (Redirect Rules are zone-wide), both Preserve-query-string on.
+- **Attack the two traps if you ever edit these.** (1) The ORIGINAL single rule was
+  `ends_with(".html") and ne "/404.html"` with a `-5` strip, which matches `/index.html` and produces
+  `/index` — a URL Pages serves 200, i.e. a NEW duplicate. It needs the `/index.html` split (Rule A,
+  `-10`). (2) It must be the SAME rule edited, not a second rule added alongside: the old rule left
+  enabled above Rule A catches `/index.html` first and reintroduces `/index`.
+- **Verified live 2026-11-23** (`-5`: `/guides/rv-lights-not-working.html` -> `.../rv-lights-not-working`;
+  `-10`: `/index.html` -> `/` and `/guides/index.html` -> `/guides/`; query string preserved;
+  `/404.html` NOT redirected; normal pages and homepage still 200; `http://` -> one 301 to https, no
+  loop; assets/js/sitemap/robots 200). `directory/<state>.html` lands in ONE hop, not two:
+  Cloudflare's 302 and Pages' own `/directory/texas` -> `/directory/texas/` coalesce.
+- **TXT and MX untouched** (SPF, `google-site-verification`, Cloudflare mail routes still resolve).
+- **The proxy is why the DNS-check warning in GitHub repo Settings → Pages appears. Do NOT click
+  "Remove" on the custom domain.**
+- `substring(path, 0, -N)` DOES count back from the end (zero-based, exclusive end), measured, not
+  taken from docs: `-5` strips exactly `.html`, `-10` strips exactly `/index.html`.
+
+### OPEN: flip both rules 302 -> 301 after 24-48h clean
+
+Deliberately 302 first: browsers and Google cache a wrong 301 hard, a 302 makes a mistake cheap.
+Nothing has broken since go-live; flip to **301 - Permanent Redirect** on both rules once a day or two
+has passed with no reports. A 302 that works is a 301 that works, so this is not urgent.
+
+### OPEN: the measurement that says whether it worked (~2 weeks out)
+
+`scripts/gsc.py audit` against a scratch sitemap of the `.html` URLs (the method in the PINNED section
+below). Baseline before the proxy: **26 `.html` twins indexed as their own pages**, 6 "Alternate page
+with proper canonical tag", 2 crawled-not-indexed, 64 unknown to Google. The fix is working if the 26
+consolidate toward the 6's state over weeks as Google recrawls. Do NOT change canonicals, the sitemap,
+or internal links — they were already correct, and the 301 is the only missing signal.
+
+The 14 pairs with impressions on BOTH forms over 30 days, the best single read on whether the split
+heals (clean + `.html`): `/manuals/brands` 383+111,
+`/guides/rv-lights-not-working` 78+108 (Google indexed the `.html` form as canonical here),
+`/guides/rv-leveling-jacks-not-working` 98+23, `/tools/weight-calculator` 113+4,
+`/guides/rv-generator-not-charging` 81+9, `/guides/rv-furnace-not-working` 31+4,
+`/guides/rv-furnace-carbon-monoxide` 26+5, `/guides/roof-snow-load` 5+15, `/about` 3+8,
+`/guides/rv-converter-not-charging` 7+4, `/guides/tires-winter` 5+1,
+`/guides/rv-propane-furnace-wont-light` 2+1, `/manuals/towing-and-running-gear` 1+2, `/` 3+1.
+
+## Needs T (decision only)
 
 - **Author / E-E-A-T decision.** Current byline is Organization with a name on About only.
   Named author is a stronger signal; the site's own changelog flags it as an open trust question.
+
 
 ## Needs editorial (not a bulk pass)
 
