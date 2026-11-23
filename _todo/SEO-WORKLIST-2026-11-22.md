@@ -51,3 +51,37 @@ Source: `_log/reports/2026-11-21-full-seo-report.md`. Measured 2026-11-21/22.
 - GA4 AI Assistant channel (ChatGPT) 25 sessions / 68% engaged over 30 days. Keep tracking.
 - Sitemap reconciles; 1,096 URLs; only `/404` and `_data/new-owner-sections` out of sitemap.
 - `lastmod` is one build date site-wide, so it carries no per-page freshness signal. Known, not a bug.
+
+## PINNED 2026-11-22: why the `.html` twins are indexed, measured
+
+This supersedes the mechanism given in the Nov 21 report ("Google overrode the canonical").
+
+- Every page is a file `x/y.html`, and **GitHub Pages serves BOTH `/x/y` and `/x/y.html` with
+  HTTP 200 and no redirect** (live-confirmed on 10 URLs). 1,091 named pages plus 6 index pages
+  (`/index.html`, `/directory/index.html`, `/guides/index.html`, `/manuals/index.html`,
+  `/parts/index.html`, `/tools/index.html`) = **1,097 extra live URLs**. `/guides` returns
+  `301 -> /guides/`, which proves Pages CAN redirect; it just never redirects the `.html` form.
+- The site published `.html` URLs until **2026-10-04** (commit `01326dc1` flipped canonicals,
+  the sitemap and every internal link to the extensionless form). The sitemap as submitted then
+  listed **96 `.html` URLs**. Inspecting all 98 of those today via
+  `scripts/gsc.py audit` (scratch sitemap built from `git show 01326dc1^:sitemap.xml`):
+  **26 "Submitted and indexed", 6 "Alternate page with proper canonical tag",
+  2 "Crawled - currently not indexed", 64 "URL is unknown to Google".**
+- So **26 `.html` twins are in the index as their own pages**, and the canonical hint is a **coin
+  flip, not a fix**. Fresh crawls still override it:
+  `/guides/rv-12-volt-problems.html` crawled 2026-11-18, `/guides/rv-tank-sensors-reading-wrong.html`
+  crawled 2026-11-16, `/directory/washington.html` crawled **2026-11-22** - all three report
+  `userCanonical` = the extensionless form and `googleCanonical` = the `.html` form. Google read
+  the correct canonical and kept the older URL anyway. The 6 that did consolidate show it works
+  sometimes, which is exactly why it cannot be relied on.
+- **Consequence: Request Indexing is NOT sufficient** (three of the fresh crawls still override).
+  Only a 301 is reliable, Pages cannot emit one, so it is the Cloudflare proxy or nothing.
+- No repo-side lever exists for the twins already indexed: the live sitemap has 0 `.html` entries
+  (1,088 `<loc>`), `robots.txt` lists only that sitemap, and `clean-urls.py --check` passes.
+- If the proxy lands, the rule needs TWO expressions, because the naive
+  `substring(path, 0, -5)` turns `/index.html` into `/index`, which Pages serves 200 (a new
+  duplicate). Rule A: `ends_with(path, "/index.html")` -> `substring(path, 0, -10)`.
+  Rule B: `ends_with(path, ".html") and not ends_with(path, "/index.html")` ->
+  `substring(path, 0, -5)`. Use `ends_with`/`substring`, not the regex `matches` operator,
+  which needs a Business plan. Set SSL/TLS to Full (strict) BEFORE proxying or GitHub's HTTPS
+  enforcement makes a redirect loop; rollback is the records back to DNS-only.
