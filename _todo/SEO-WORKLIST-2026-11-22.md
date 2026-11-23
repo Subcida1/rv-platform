@@ -20,9 +20,20 @@ Applied by T in the Cloudflare dashboard, verified from this box. What is now in
   answered `server: GitHub.com` until this change, which is why the pre-existing "Strip .html
   extension" rule had been inert: it was authored on a zone that was never proxied.
 - **Rules → Redirect Rules, TWO rules, both currently `302` (deliberate):**
-  - `Strip .html from index pages` — `(http.host eq "originrv.com" and ends_with(http.request.uri.path, "/index.html"))` -> `concat(substring(http.request.uri.path, 0, -10), "")`.
-  - `Strip .html extension` — `(http.host eq "originrv.com" and ends_with(http.request.uri.path, ".html") and not ends_with(http.request.uri.path, "/index.html") and http.request.uri.path ne "/404.html")` -> `concat(substring(http.request.uri.path, 0, -5), "")`.
+  - `Strip .html from index pages` — `(http.host in {"originrv.com" "www.originrv.com"} and ends_with(http.request.uri.path, "/index.html"))` -> `concat("https://originrv.com", substring(http.request.uri.path, 0, -10))`.
+  - `Strip .html extension` — `(http.host in {"originrv.com" "www.originrv.com"} and ends_with(http.request.uri.path, ".html") and not ends_with(http.request.uri.path, "/index.html") and http.request.uri.path ne "/404.html")` -> `concat("https://originrv.com", substring(http.request.uri.path, 0, -5))`.
   Both host-scoped (Redirect Rules are zone-wide), both Preserve-query-string on.
+- **The destination HARDCODES `https://originrv.com`, and that is load-bearing, not cosmetic.** With a host-relative destination an
+  `http://` request got `302 Location: http://...` (two hops: strip to http, then the HTTPS upgrade), and a `www` request chained
+  through GitHub's canonical-host 301 back onto a `.html` URL. An absolute-https destination collapses BOTH to one hop.
+  **`http.request.scheme` IS NOT A CLOUDFLARE RULES FIELD** - an expression using it is rejected with
+  `Filter parsing error (1:71): ... unknown identifier`. Fix scheme problems in the DESTINATION, never in the filter. The
+  alternative if an https test is ever genuinely needed is the boolean field `ssl` (or `starts_with(http.request.full_uri, "https://")`).
+- **`http.host in {"a" "b"}` is space-separated, no commas.** Prefer it (or an explicit `or`) over `wildcard "*.originrv.com"`,
+  which misses the apex and would rewrite future subdomains that should not be touched. There is no ordering dependency between
+  the two rules - B excludes `/index.html`, so A and B are disjoint and the list order does not matter.
+- **`www.originrv.com` must be Proxied too** (CNAME to the Pages host). Left grey, www bypasses Cloudflare, so the `.html` twins
+  survive on that host and GitHub's canonical-host 301 hands the crawler an apex `.html` URL to redirect again.
 - **Attack the two traps if you ever edit these.** (1) The ORIGINAL single rule was
   `ends_with(".html") and ne "/404.html"` with a `-5` strip, which matches `/index.html` and produces
   `/index` — a URL Pages serves 200, i.e. a NEW duplicate. It needs the `/index.html` split (Rule A,
