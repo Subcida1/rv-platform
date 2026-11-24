@@ -1383,7 +1383,7 @@ footer a:hover{color:var(--text-inv)}
 .to-top:hover,.to-top:focus-visible{background:var(--surface);color:var(--text)}
 .to-top::before{content:"\2191";margin-right:9px;font-weight:800}
 .foot-top{padding:72px 0 20px}
-.foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr 1fr;gap:40px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr 1fr 1fr;gap:40px}
 .foot-brand p{margin-top:16px;color:var(--text-2);font-size: var(--fs-md);max-width:300px}
 /* --text-inv was WHITE, and it only ever looked right because the whole brand
    name used to be a gradient span that overrode it. The footer is not dark: the
@@ -1412,6 +1412,45 @@ footer a:hover{color:var(--text-inv)}
    .page-intro and .hero-inner. verify.py now fails the build on it. */
 .foot-bottom{margin-top:48px;padding-top:24px;padding-bottom:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--text-on-dark-2);font-size: var(--fs-sm)}
 .foot-bottom .legal{display:flex;gap:22px}
+/* THE FOOTER LOSES A COLUMN'S WORTH OF DEAD SPACE (T, 2026-11-23). "we have way to many tools
+   listed on the tools thing, our footer is tall AF lets make it more compacted and less dead
+   space please." Measured before this change at 1440x1000: #site-footer was 877px tall and
+   .foot-grid 609px of it, and the Tools column's sixteen link rows were the whole 609 -- the
+   Directory and Company columns ended 460px above the grid's bottom edge, the brand block
+   155px above it. That empty band is the dead space he is pointing at.
+   Three things move together, desktop only, because the complaint is desktop:
+   1. SIX TRACKS BECOME FIVE. .foot-dir and .foot-co are two three-link sections stacked in ONE
+      track (the span rule below), which is where the dead space under them goes. The brand
+      track comes down from 1.7fr to 1.3fr -- near enough its measured 242px that the lockup is
+      unchanged -- and the width it gives up goes to the two columns whose labels were wrapping:
+      Guides at 1.2fr holds "Heating, cooling and appliances" on one line, and Tools at 1fr
+      holds "Fuel cost calculator".
+   2. THE VERTICAL RHYTHM TIGHTENS. 72px above the grid, 48px above the bottom bar and 5px of
+      padding per link row were all set when the footer was 877px tall and the spacing was not
+      what made it tall.
+   3. THE STACK. .foot-grid>* spans both rows so each stacked section gets its own; row-gap goes
+      to 0 so the two read as one block, column-gap stays at 40px.
+   Everything is inside min-width:1025px. The 1024px (three columns) and 720px (two columns,
+   brand on its own row, 12px of link padding for a 44px tap target) breakpoints are untouched,
+   and so is every link colour, which is what keeps check-link-visibility and the axe contrast
+   pass quiet. Every literal spacing value below is already in this stylesheet: check-style.py's
+   spacing ratchet has no headroom (57 of 57) and a new literal would fail the build. */
+@media(min-width:1025px){
+  .foot-grid{row-gap:0}
+  .foot-grid>*{grid-row:span 2}
+  .foot-dir{grid-column:5;grid-row:1}
+  .foot-co{grid-column:5;grid-row:2}
+  /* The stack needs a section break the six-column footer never needed, because there the two
+     three-link sections sat side by side 40px apart. The heading's own 1.67em top margin (23px)
+     put COMPANY 26px under the link above it, which is the same 27px pitch as the links
+     themselves and read as one continuous list on the render. 40px is the column gap this
+     layout just removed, so the two sections keep the separation they were designed with.
+     40px is already a literal in this stylesheet, so the ratchet does not move. */
+  .foot-co .foot-h{margin-top:40px}
+  .foot-top{padding-top:48px}
+  .foot-col a{padding:3px 0}
+  .foot-bottom{margin-top:32px}
+}
 
 /* ================= REVEAL ================= */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
