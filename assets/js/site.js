@@ -253,7 +253,6 @@
     page the reader then has to scan. No counts in the labels: a number typed into the nav
     is a number that goes stale the day a guide is added. */
  '<div class="drop drop-wide">' +
- '<a class="drop-span" href="' + R(rt.guides) + '">All guides<span class="sm">Every system, written from the symptom</span></a>' +
  '<div class="drop-col">' +
  dropLink(rt.guides + '#electrical-and-charging', 'Electrical and charging', '') +
  dropLink(rt.guides + '#heat-cool-and-appliances', 'Heating, cooling and appliances', '') +
@@ -263,7 +262,12 @@
  dropLink(rt.guides + '#body-slides-and-jacks', 'Body, slides and jacks', '') +
  dropLink(rt.guides + '#tires-towing-and-weight', 'Tires, towing and weight', '') +
  dropLink(rt.guides + '#winter-storage', 'Winter storage', '') +
- '</div></div></div>' +
+ '</div>' +
+ /* MOVED TO THE BOTTOM AND DIVIDED (T, 2026-11-24). It was the first row, spanning both columns,
+    with the same styling as an ordinary entry, so the panel's most useful link read as a header
+    for the six sections below it. It is the panel's EXIT, and it now looks like one: same place,
+    same divider and same tint as the Tools panel, whose shape T named as the target. */
+ '<a class="drop-all" href="' + R(rt.guides) + '">All guides<span class="sm">Every system, written from the symptom</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.parts) + '">Parts</a>' +
  /* THE PARTS MENU CARRIES PARTS. It used to list "Guides" and "Manuals", which both
     have their own top-level menus two items to the right, so the menu spent its
@@ -275,7 +279,6 @@
     kitchen, chassis and propane -- so a reader with a dead furnace control board or a
     propane leak had no header route to the parts for either. */
  '<div class="drop drop-wide">' +
- '<a class="drop-span" href="' + R(rt.parts) + '">Every RV part<span class="sm">By system, with what each one does</span></a>' +
  '<div class="drop-col">' +
  dropLink(rt.parts + '#towing-and-running-gear', 'Towing and running gear', 'Hitches, jacks, axles, brakes') +
  dropLink(rt.parts + '#power-and-electrical', 'Power and electrical', 'Shore power, batteries, solar, converters') +
@@ -288,7 +291,11 @@
  dropLink(rt.parts + '#kitchen-and-appliances', 'Kitchen and appliances', 'Fridges, ranges, cooktops') +
  dropLink(rt.parts + '#chassis-and-drivetrain', 'Chassis and drivetrain', 'Motorhome engine, suspension, steering') +
  dropLink(rt.parts + '#propane', 'Propane system', 'Tanks, regulators, lines, detectors') +
- '</div></div></div>' +
+ '</div>' +
+ /* MOVED TO THE BOTTOM AND DIVIDED, same change as the Guides panel (T, 2026-11-24). This panel
+    was the worst of the four: "Every RV part" sat at the top as the first row with no divider at
+    all, so nothing marked where the list started and the exit was indistinguishable from an entry. */
+ '<a class="drop-all" href="' + R(rt.parts) + '">Every RV part<span class="sm">By system, with what each one does</span></a></div></div>' +
  '<div class="nav-group"><a class="nav-link" href="' + R(rt.directory) + '">Directory</a>' +
  '<div class="drop"><a href="' + R(rt.directory) + '">Find RV service<span class="sm">Mobile techs and repair centers, all 50 states</span></a>' +
  '<a href="' + R(rt.directory) + '#claim">Claim your business<span class="sm">Free listing, you control it</span></a></div></div>' +
@@ -298,7 +305,7 @@
  '<a href="' + R(rt.manualsKitchen) + '">Kitchen and appliances<span class="sm">Fridges, ranges, cooktops</span></a>' +
  '<a href="' + R(rt.manualsBrands) + '">Owner manuals by brand<span class="sm">44 RV brands, 1973 to 2027</span></a>' +
  '<a href="' + R(rt.manualsRecalls) + '">Recalls and bulletins<span class="sm">Check a unit, and the federal bulletin file</span></a>' +
- '<a href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
+ '<a class="drop-all" href="' + R(rt.manuals) + '">All manuals<span class="sm">Every system, linked at the maker</span></a></div></div>' +
  '</div>' +
  searchFieldHTML('nav-search', 'Search guides, tools, parts', 'Site search') +
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +

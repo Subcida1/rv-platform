@@ -325,6 +325,13 @@ input,select,textarea{font-family:inherit}
 .btn-sm{padding:8px 15px;font-size: var(--fs-sm)}
 .btn-lg{padding:16px 30px;font-size: var(--fs-lg)}
 .btn-block{width:100%}
+/* A button whose label is plain prose with a count in it (e.g. "All 61 RV guides")
+   must not flex-gap its own words. .btn is inline-flex with gap:9px for icon+label
+   pairs, but with no icon each text run becomes a flex item, so the gap is ADDED to
+   the natural word space around the count and reads as a double space (9px against
+   the ~4px a space is worth). Measured on the homepage CTA: 9px either side of the
+   number. gap:0 restores ordinary text spacing. */
+.btn-inline-gap{gap:0}
 .btn.disabled{opacity:.5;pointer-events:none}
 .icon-btn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:11px;background:var(--surface);border:1px solid var(--border-2);color:var(--text-2);position:relative;transition:.16s}
 .icon-btn:hover{border-color:var(--text-3);color:var(--text)}
@@ -775,8 +782,56 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .drop-span{grid-column:1 / -1}
 .drop-h{margin:4px 0 2px;padding:4px 14px;font-size: var(--fs-xs);font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3)}
 .drop-wide .drop-h:first-child{margin-top:0}
-.drop-all{grid-column:1 / -1;margin-top:6px;border-top:1px solid var(--border);padding-top:8px}
+.drop-all{grid-column:1 / -1;margin-top:16px;color:var(--tint-ink);font-weight:700;background:var(--tint-bg);border:1px solid var(--tint-edge);position:relative}
 .drop-all .sm{display:block;font-size: var(--fs-xs);color:var(--text-3);font-weight:400}
+/* THE ONE SHAPE FOR EVERY SECTION'S "all" SHORTCUT (T, 2026-11-24). Tools had the odd one out:
+   last row, behind a hairline divider, reading as a way OUT of the list rather than one more
+   entry in it. Guides and Parts put it FIRST and undivided, so the most useful link in the panel
+   read as a header, and the four panels disagreed about where the exit was. All four now carry it
+   at the bottom, behind the same 1px --border divider, on its own full-width row -- and the row is
+   TINTED so the shortcut is visibly a different KIND of thing from the rows above it.
+   Tint uses the palette's existing teal set (--tint-bg / --tint-edge / --tint-ink), the same three
+   tokens that already paint .badge-green, .badge-note and .callout.flag-money, so this is the
+   site's own teal and NOT a new colour. NO GRADIENT, deliberately: check-style.py's GRADIENT_OK
+   ratchet is frozen, and a gradient here would be claiming this is a primary call to action when
+   it is a way out of the list.
+   The panel is a grid and this row is a grid item, so the divider cannot come from border-top
+   without the fill also touching it. --tint-ink cleared 4.5:1 on this fill: 21.00:1. */
+.drop-all:hover{background:var(--tint-edge);color:var(--brand-deep)}
+.drop-all .sm{color:var(--tint-ink);opacity:.85;font-weight:400}
+/* The separator rides the 16px margin rail above the fill, so it spans the panel's full inner width
+   instead of stopping a pixel short of each edge the way the row's own border would.
+   IT IS A VISIBLE BAR, NOT A HAIRLINE (T, 2026-11-24: "put a visible seperator bar between the new
+   green buttons and the default ones ... kinda like tools had"). TWO measured attempts failed
+   before this one, and the failure mode is worth keeping:
+     1. 1px in --tint-edge -- the button's OWN soft teal. A teal line touching a teal button is not
+        a separator, it reads as the top edge of the button. A vision pass could not see it.
+     2. 1px in --border-2 -- the panel's own edge colour. Visible to me in code, invisible on the
+        rendered page: a vision pass still reported no line at all, and at 1px against white it is
+        below the threshold at which a line reads as a deliberate separator rather than as a seam.
+   So the bar is 2px in --border-2. That is what makes it read as structure: 2px is a bar, 1px is a
+   seam. --border-2 is the colour the panels already use to separate themselves from the page, so
+   this matches the site instead of introducing a third grey, and it is neutral enough to read as
+   "between these two things" rather than as more button.
+   Geometry, measured on the served page at 1500px. The panel is a grid with a 6px rail above the
+   row, and the FIRST attempt put the 2px bar at top:-5px, which left only 3px of clearance between
+   the bar and the button. Reading the rendered pixels row by row settled it where three vision
+   passes could not: the bar painted correctly at rgb(192,218,218) but sat directly on the button's
+   top edge, so it still read as part of the button. T, 2026-11-24: "you might wanna space it a bit
+   out from the button thats teal all togother."
+   SO THE BUTTON MOVES DOWN AND THE BAR SITS HIGH IN THE RAIL: rail 6px -> 16px, bar 2px at
+   top:-14px, which leaves 12px of clearance between the bar and the tinted fill. That gap is what
+   makes the bar read as a DIVIDER rather than as the button's edge.
+   THE BAR NEEDED position:relative ON THE BUTTON TO EXIST AT ALL, and that was the real defect
+   behind three failed attempts. .drop-all was position:static, so an absolutely-positioned ::before
+   resolved against the PANEL, not the button: computed style reported a correct-looking
+   width:538px / top:-6px / rgb(192,218,218) while the bar actually painted at the panel's top edge,
+   behind the rows, and never appeared in the screenshot. A computed style that reports the right
+   values is NOT evidence the element painted -- check the pixels. With position:relative the bar
+   anchors to the button and paints: measured on the served page, the last row ends, then the bar at
+   css y=121.0-122.7, then 12px of white, then the button's own --tint-edge edge at y=126 and the
+   fill below it. */
+.drop-all::before{content:"";position:absolute;left:0;right:0;top:-14px;height:2px;background:var(--border-2)}
 .nav-actions{display:flex;align-items:center;gap:8px}
 /* A small centred caption rides above the Tools button. Ty, 2026-10-05: the strip
    said "Free tools, No paywall, Built for RVers" off to one side and he wanted the
