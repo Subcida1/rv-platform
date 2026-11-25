@@ -2270,62 +2270,12 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .btn-gb:active{transform:translateY(1px)}
 .btn-gb.btn-sm{padding:10px 16px;font-size: var(--fs-sm)}
 .btn-gb.btn-lg{padding:16px 30px;font-size: var(--fs-lg)}
-/* A HIGHLIGHT THAT CROSSES A BLUE DOOR. Ty, 2026-10-05: "develop some type of
-   animated stroke outline or something for our blue gradient buttons like the RV
-   tools button or the start here ... make them stand out a little bit more, maybe
-   like a flash ... maybe a scan across the blue outline". Opt-in via .btn-shine, so
-   it lands on the few real doors -- the nav RV tools button, Start here, and the
-   directory pair -- and not on every button on the site.
-   The sheen is a TRANSFORM, not a background animation: transform is animatable,
-   cheap, and parses under the W3C CSS checker this repo gates on, whereas
-   animating background-position or a custom property does not (both were tested
-   against vnu-jar --css on 2026-10-05 and rejected). */
-/* ON HOVER, ONCE. Two corrections from Ty in one evening. First it ran on a loop all
-   the time -- "it looks like you've just animated the buttons to just have a
-   continuous sheen effect. That should only happen on hover." Then, hover-only but
-   still repeating: "Let's make it so that sheen animation only happens one time."
-   So the FILLED buttons get one pass per hover entry, and re-entering re-arms it.
-   There is no fill mode, so the highlight parks back outside the clip when the pass
-   ends. :focus-visible gets the same treatment so a keyboard reader is not left out.
-   The keyframes now sweep across the whole duration instead of holding the second
-   half, which is what made a single pass look like it had stalled.
-   This rule does NOT touch the gradient-stroke button: its own ::after is disabled
-   below, and its outline arc stays on a loop because Ty asked for that explicitly --
-   "The only one that does make sense being on a loop is the one for find RV service.
-   How it just goes around the stroke edge on the outside, that one looks fine
-   looping." */
-.btn-shine{position:relative;overflow:hidden;isolation:isolate}
-.btn-shine::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;pointer-events:none;
-  background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);
-  transform:translateX(-170%) skewX(-18deg)}
-.btn-shine:hover::after,
-.btn-shine:focus-visible::after{animation:btn-sheen .9s ease-out 1}
-@keyframes btn-sheen{
-  0%{transform:translateX(-170%) skewX(-18deg)}
-  100%{transform:translateX(330%) skewX(-18deg)}
-}
-/* .btn-gb wears a white face, so a white sheen on it is invisible. Its blue STROKE
-   carries the travelling highlight instead: a bright arc laid over the gradient in
-   the border box. Layer order matters -- the surface face is first so it paints on
-   top, then the arc, then the gradient underneath it.
-   THIS ONE LOOPS, and that is deliberate. Ty, 2026-10-05: "The only one that does
-   make sense being on a loop is the one for find RV service. How it just goes around
-   the stroke edge on the outside, that one looks fine looping." The arc layer exists
-   only while hovered; at rest this is an ordinary .btn-gb. */
-.btn-gb.btn-shine::after{content:none}
-.btn-gb.btn-shine:hover,
-.btn-gb.btn-shine:focus-visible{
-  background:
-    linear-gradient(var(--surface),var(--surface)) padding-box,
-    conic-gradient(from var(--sp-angle),transparent 0deg,rgba(255,255,255,.9) 14deg,transparent 38deg) border-box,
-    var(--grad) border-box;
-  animation:sp-scroll 1.8s linear infinite}
-@media(prefers-reduced-motion:reduce){
-  .btn-shine::after{content:none;animation:none}
-  .btn-gb.btn-shine:hover,
-  .btn-gb.btn-shine:focus-visible{animation:none;
-    background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box}
-}
+/* REMOVED 2026-11-24, at T's request: "Remove the animated shine effect on the darker
+   green buttons across the website, i dont think it looks good anymore." The hover
+   sweep was opt-in via .btn-shine and is gone from the markup, so the class rule, its
+   ::after, @keyframes btn-sheen, the reduced-motion overrides and the gradient-stroke
+   variant's looping arc came out with it. No button on the site wore that arc, and
+   .btn-gb itself (the gradient-stroke button) is unchanged. */
 .btn-gb.btn-block{width:100%}
 .btn-gb .route-arrow{width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid currentColor;margin-left:10px;display:inline-block}
 .btn-grad-bg{background:var(--btn-grad, var(--grad));color:var(--text-inv)}

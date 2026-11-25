@@ -311,7 +311,7 @@
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
  /* The button says where it goes ("RV tools"); the caption above it carries the
     "free" promise that used to live in the utility strip. Ty, 2026-10-05. */
- '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm btn-shine" href="' + R(rt.tools) + '">RV tools</a></span>' +
+ '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm" href="' + R(rt.tools) + '">RV tools</a></span>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search guides, tools, parts, or a ZIP', 'Site search, mobile menu') +

@@ -88,10 +88,12 @@ CENTER_OK = {
 # somewhere or identifies the brand. This set is wider than that - it grew one convenient
 # `--grad-soft` at a time and nobody was measuring. It is pinned here so it cannot grow further;
 # narrowing it to the rule is a visual pass of its own, and the ratchet comes down as it lands.
+# REMOVED 2026-11-24: '.btn-shine::after' and '.btn-gb.btn-shine:hover, .btn-gb.btn-shine:focus-visible'.
+# The hover sheen was retired, so neither selector paints a gradient any more.
 GRADIENT_OK = {
     '.acct-nav a.active', '.badge-grad', '.badge-soft', '.band-tint', '.band-tint-2',
-    '.big-card .ic', '.big-card .num', '.btn-gb', '.btn-gb.btn-shine:hover, .btn-gb.btn-shine:focus-visible',
-    '.btn-grad-bg', '.btn-primary', '.btn-primary:hover', '.btn-shine::after', '.btn-snow::after',
+    '.big-card .ic', '.big-card .num', '.btn-gb',
+    '.btn-grad-bg', '.btn-primary', '.btn-primary:hover', '.btn-snow::after',
     '.btn-snow::before', '.calc .out', '.callout', '.card-tag.hot', '.cart-badge', '.cat-card .meta',
     '.cat-card::after', '.cat-ic', '.centerline', '.checks li::before', '.chip.on', '.com-card .ic',
     '.com-card .stat', '.cta', '.deck-card .deck-ic', '.deck-card.live .deck-ic', '.deck-go',
