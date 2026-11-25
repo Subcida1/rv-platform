@@ -695,10 +695,10 @@
     "claims": "b42c5240ff3f3533"
   },
   "guides/rv-maintenance-schedule.html": {
-    "hash": "ba44e3e9c0064582",
+    "hash": "e061bb9a5992bc8b",
     "status": "verified",
-    "verified_by": "2026-11-21: a related-links block was appended at the foot of the page (one or two buttons: a sibling guide and/or its manuals hub or the tool that answers the same question), and in most cases the reviewed date moved to Nov 19. Prose, headings, tables, callouts, figures and every source line are unchanged, which is proved by the diff: the only additions are the anchors and their wrapper. Nothing this page was verified for was edited.",
-    "verified_at": "2026-11-21",
+    "verified_by": "2026-11-24: six additions to a page verified 2026-11-21 - a towable-vs-motorhome scope paragraph; the 12.7 V DC full-charge figure on the monthly battery row; a new generator-exercise row (50 percent load, two hours, every four weeks, per the Jayco 2027 towable manual); a generator paragraph linking guides/rv-generator-sizing and scoping the disable-autostart note to electrical work; a new printable-checklist H2 restating the same jobs as a write-in form; and the generator-sizing link. All prose, headings, tables, callouts, figures and every source line already on the page are unchanged, proved by the diff: the only additions are the six blocks above. No spec exists for this guide (waived, as on the 2026-11-21 verdict). Re-verified by an independent lane (qwen, job 20261124-233526) against the page's own table: the checklist restates every job and interval and nothing is missing. Three findings from earlier review passes were fixed before this verdict: the checklist dropped the two after-trip water jobs; the vent row omitted the refrigerator-and-tank-vent check; the bearing row omitted the Lippert 36,000-mile exception.",
+    "verified_at": "2026-11-24",
     "sources": [],
     "spec": null,
     "spec_waived": true,
