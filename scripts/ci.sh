@@ -212,6 +212,16 @@ step "row alignment"                          node scripts/check-alignment.mjs
 # no margin-top, and one rule fixed all 669 -- which is exactly the kind of thing that creeps back
 # one page at a time. It brings its own browser and server, like the a11y step above.
 step "heading space"                          node scripts/check-heading-space.mjs
+# THE SPACE IN THE MARKUP IS NOT THE SPACE ON THE SCREEN. Ty, 2026-11-24: "For the 'all 61 rv
+# guides grouped by system' button the all 61 RV appears like theres no spaces -- All61RV guides,
+# grouped by system." An inline-flex container STRIPS the whitespace at the edge of each text run,
+# so `All <span>61</span> RV guides...` with gap:0 rendered "All61RV guides" -- and the markup was
+# right, the DOM text was right, and every check in this file passed. It takes measuring the render
+# against the markup. Negative-tested both ways: with gap:0 put back it names both homepage buttons
+# at both widths and exits 1, and a --self-test step of its own zeroes the gaps so a later edit to
+# the probe cannot quietly turn it into an instrument that agrees with a broken page.
+step "word spacing can still catch a swallowed space" node scripts/check-word-spacing.mjs --self-test
+step "word spacing: the space in the markup reaches the screen" node scripts/check-word-spacing.mjs
 python3 scripts/test-link-opportunities.py
 step "directory rendering"                     node scripts/test-directory.js
 step "every state page wires its own data"    node scripts/test-state-pages.js

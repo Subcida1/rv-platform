@@ -325,13 +325,18 @@ input,select,textarea{font-family:inherit}
 .btn-sm{padding:8px 15px;font-size: var(--fs-sm)}
 .btn-lg{padding:16px 30px;font-size: var(--fs-lg)}
 .btn-block{width:100%}
-/* A button whose label is plain prose with a count in it (e.g. "All 61 RV guides")
-   must not flex-gap its own words. .btn is inline-flex with gap:9px for icon+label
-   pairs, but with no icon each text run becomes a flex item, so the gap is ADDED to
-   the natural word space around the count and reads as a double space (9px against
-   the ~4px a space is worth). Measured on the homepage CTA: 9px either side of the
-   number. gap:0 restores ordinary text spacing. */
-.btn-inline-gap{gap:0}
+/* A BUTTON WHOSE LABEL IS PROSE WITH A COUNT IN IT BUYS ITS SPACING WITH THE GAP.
+   .btn is inline-flex with gap:9px for icon+label pairs, but with no icon each text
+   run around the count becomes a flex item of its own -- and flex DROPS the whitespace
+   at the edges of a text run. The two spaces in "All 61 RV guides" are not merely
+   un-gapped, they are gone: measured on the live homepage CTA, the space after the
+   count is 0px wide and the label paints as "All61RV guides, grouped by system".
+   So on this button the gap IS the space, and it has to be ONE word space: not zero
+   (the old value here, and the bug Ty found on 2026-11-24), and not the 9px the icon
+   pair wants either, because 9px against the ~4.45px an Inter space at 16px/600 is
+   worth reads as a double space. .278em is that measurement kept as a ratio, so the
+   label still gets exactly one space if it is ever set at .btn-sm or .btn-lg size. */
+.btn-inline-gap{gap:.278em}
 .btn.disabled{opacity:.5;pointer-events:none}
 .icon-btn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:11px;background:var(--surface);border:1px solid var(--border-2);color:var(--text-2);position:relative;transition:.16s}
 .icon-btn:hover{border-color:var(--text-3);color:var(--text)}
