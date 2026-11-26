@@ -41,6 +41,42 @@ TOKENS = Path(__file__).resolve().parent / "brand-tokens.json"
 
 BEGIN = "/* --- GENERATED BRAND TOKENS: edit scripts/brand-tokens.json, then run"
 END = "/* --- END GENERATED BRAND TOKENS --- */"
+DARK_BEGIN = "/* --- GENERATED BRAND TOKENS, DARK: edit scripts/brand-tokens.json, then run"
+DARK_END = "/* --- END GENERATED BRAND TOKENS, DARK --- */"
+
+
+def dark_rule(dark_body):
+    """The dark block as it lands in the file: two rules, both fed by one body.
+
+    Two selectors, because a comma-joined list cannot express an at-rule. The
+    :not([data-mode="light"]) guard is load-bearing: without it, a reader on a
+    dark OS who has pressed the button back to DAY would be dragged back to
+    night by the media query, and the button would look broken.
+    """
+    ind = "\n".join("  " + ln if ln.strip() else ln for ln in dark_body.splitlines())
+    return "\n".join([
+        DARK_BEGIN,
+        '/*  NIGHT. Every value here is the "dark" field of the matching token in',
+        '    scripts/brand-tokens.json. Nothing is invented at this layer.',
+        '',
+        '    Selector 1: the reader pressed the button. It wins outright.',
+        '    Selector 2: the OS prefers dark AND the reader has not chosen day.',
+        '    Both bodies are the same text, emitted twice because an at-rule cannot',
+        '    share a selector list with a normal rule. */',
+        ':root[data-mode="dark"]{',
+        dark_body,
+        '}',
+        '@media (prefers-color-scheme: dark){',
+        ' :root:not([data-mode="light"]){',
+        ind,
+        ' }',
+        '}',
+        DARK_END,
+    ])
+
+
+def current_dark_block(css):
+    return re.search(re.escape(DARK_BEGIN) + r".*?" + re.escape(DARK_END), css, re.S)
 
 
 def load():
@@ -85,11 +121,22 @@ def generated_block(t):
     out.append("     so verify.py requires each to be at least ten points cooler than red. ---- */")
     out.append("  --bg:#ffffff;")
     for name, d in t["surface"].items():
+        # A token with no "hex" is a DERIVATION and is emitted by hand below, where
+        # its expression can reference the tokens it derives from. Skipping it here
+        # is what keeps it out of the literal scan too: the palette gate attributes
+        # a literal to whichever token claims that hex, and a derivation claims none.
+        if not d.get("hex"):
+            continue
         if "cooler_than_red" in d:
             out.append("  %s:%s;  /* %d cooler than red */" % (name, d["hex"], d["cooler_than_red"]))
         else:
             out.append("  %s:%s;  /* %s */" % (name, d["hex"], d.get("role", "")))
     out.append("  --surface:#ffffff;")
+    out.append("  /* the sticky nav's glass: --bg at 86%, so the bar can never disagree with the")
+    out.append("     page it floats on. Derived rather than declared, because a separate")
+    out.append("     value is a second thing to keep in sync with --bg, and it went stale once:")
+    out.append("     the bar stayed light in night mode. */")
+    out.append("  --nav-glass:color-mix(in srgb,var(--bg) 86%,transparent);")
     out.append("")
     out.append("  /* ---- TEXT: the ink ramp. Fixed across a rebrand, but it lives here so the")
     out.append("     generated block declares EVERY token the site uses. It did not, once: --text-inv")
@@ -103,9 +150,109 @@ def generated_block(t):
         val = d["hex"] if d.get("hex") else d["value"]
         out.append("  %s:%s;  /* %s */" % (name, val, d["role"]))
     out.append("")
-    out.append("  /* ---- ACCENT: the mark's own gold. ---- */")
+    out.append("  /* ---- ACCENT: the mark's own gold, and the two functional accents. ---- */")
     for name, d in t["accent"].items():
-        out.append("  %s:%s;  /* %.2f:1 vs white - %s */" % (name, d["hex"], d["ratio_white"], d["role"]))
+        if "ratio_white" in d:
+            out.append("  %s:%s;  /* %.2f:1 vs white - %s */" % (name, d["hex"], d["ratio_white"], d["role"]))
+        else:
+            out.append("  %s:%s;  /* %s */" % (name, d["hex"], d["role"]))
+    # STATUS and MAP are emitted here too when they carry a dark value, so the
+    # generated light block stays the complete declaration of every token. The
+    # file already had them further down; these lines are the authoritative copy
+    # and the later ones become the same values, which keeps verify.py's
+    # "declared once" rule satisfied without moving 200 lines of the file.
+    if "status" in t:
+        out.append("")
+        out.append("  /* ---- STATUS: red means a real failure and nothing else. ---- */")
+        for name, d in t["status"].items():
+            out.append("  %s:%s;  /* %s */" % (name, d["hex"], d["role"]))
+    return "\n".join(out)
+
+
+def strip_comments(s):
+    """The file with /* ... */ removed.
+
+    Brace matching must run on comment-free text. The insert bug that corrupted
+    the light block came from matching a brace INSIDE a comment, which put the
+    dark rules in the middle of a declaration (`--bg-` + the dark banner). Every
+    index from this function is valid on the original string, because comments are
+    replaced by spaces of identical length rather than deleted.
+    """
+    out = list(s)
+    i = 0
+    while True:
+        a = s.find("/*", i)
+        if a == -1:
+            break
+        b = s.find("*/", a + 2)
+        if b == -1:
+            break
+        for k in range(a, b + 2):
+            if out[k] != "\n":
+                out[k] = " "
+        i = b + 2
+    return "".join(out)
+
+
+def light_root_close(s):
+    """Index of the '}' that closes the FIRST :root block, or -1.
+
+    THE LIGHT BLOCK IS NOT SMALL. It also holds the whole legacy token cluster, so
+    it closes far below the END marker, and anchoring the dark block to the marker
+    nested it inside the light block (the browser then discards both). Brace
+    matching on comment-free text is the reliable way to find the real close.
+    """
+    clean = strip_comments(s)
+    i = clean.find(":root{")
+    if i == -1:
+        return -1
+    depth = 0
+    for j in range(i, len(clean)):
+        c = clean[j]
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                return j
+    return -1
+
+
+def generated_dark_block(t):
+    """The dark half: the SAME token names, the 'dark' value from each.
+
+    Emitted as a second block immediately after the light one, inside its own
+    markers, so `--check` can compare it and a rebrand moves both. It carries
+    only the tokens that HAVE a dark value: --bg and the map group are mode-
+    invariant by decision (see _dark_doc in brand-tokens.json), and --bg is
+    emitted here separately because the light block hardcodes it in the surface
+    section rather than reading the file.
+
+    The selectors are the two the site already uses, joined:
+
+      :root[data-mode="dark"]        the reader pressed the button
+      @media (prefers-color-scheme)  the OS says night and the reader has not
+
+    The media query has to be a separate rule, not a comma-joined selector, so
+    both are written. The :not() guards are what stop a reader who has explicitly
+    chosen DAY from being overridden by a dark OS setting.
+    """
+    out = []
+    out.append('  --bg:#0f172a;')
+    # --surface is the light block's other hardcoded value (it is written as a
+    # literal there, not read from the file, because it is always pure white in
+    # light). Missing it here left the utility strip and every white card on the
+    # site still white in dark mode: --surface is what .util, .card and .tile all
+    # paint with.
+    out.append('  --surface:#151f31;')
+    # The nav glass derives from --bg, so it must be re-derived here. It cannot
+    # ride the light block's value: --bg changes in this block, and a derived
+    # token is only computed once, at the point it is declared.
+    out.append('  --nav-glass:color-mix(in srgb,var(--bg) 86%,transparent);')
+    for grp in ("brand", "accent", "tint", "surface", "text", "status"):
+        for name, d in t[grp].items():
+            if isinstance(d, dict) and d.get("dark"):
+                out.append("  %s:%s;" % (name, d["dark"]))
     return "\n".join(out)
 
 
@@ -152,32 +299,70 @@ def main():
         return 0
 
     m = current_block(css)
+    m_dark = current_dark_block(css)
+    new_body = generated_dark_block(t)
+    new_dark = dark_rule(new_body)
     if m:
         current = m.group(0)
         if a.check:
-            if _norm(current) == _norm(new):
-                print("brand tokens: style.css matches scripts/brand-tokens.json")
+            ok = _norm(current) == _norm(new)
+            if ok:
+                if not m_dark:
+                    print("brand tokens: style.css has NO dark block; run --write")
+                    return 1
+                if _norm(m_dark.group(0)) != _norm(new_dark):
+                    print("brand tokens: dark block differs from scripts/brand-tokens.json")
+                    print("  run: python3 scripts/apply-brand-tokens.py --write")
+                    return 1
+                print("brand tokens: style.css matches scripts/brand-tokens.json (light + dark)")
                 return 0
             print("brand tokens: style.css differs from scripts/brand-tokens.json")
             print("  run: python3 scripts/apply-brand-tokens.py --write")
             return 1
         if a.write:
-            if _norm(current) == _norm(new):
+            changed = _norm(current) != _norm(new)
+            dark_changed = (not m_dark) or _norm(m_dark.group(0)) != _norm(new_dark)
+            if not changed and not dark_changed:
                 print("brand tokens: unchanged")
                 return 0
-            # Keep the markers: they are the block's anchors on the NEXT run. The
-            # first version replaced the whole match, markers included, so the
-            # second run could not find the block and reported "nothing to do"
-            # while the file still held the old palette.
-            out = css[: m.start()] + BEGIN + "\n" + new + "\n" + END + css[m.end():]
-            # A rewritten token layer must still be ONE :root block. The first
-            # version of this script emitted a block carrying its own ":root{",
-            # so a write nested a second one and the whole layer went invalid.
+            out = css
+            if changed:
+                out = out[: m.start()] + BEGIN + "\n" + new + "\n" + END + out[m.end():]
+            # RE-FIND THE DARK BLOCK. Its span was computed against the ORIGINAL
+            # css, and rewriting the light block moves every offset after it, so
+            # using the stale span spliced the dark block into the wrong place
+            # (measured: the assertion below caught it landing inside the light
+            # block). Every index has to come from the CURRENT text.
+            m_dark_now = current_dark_block(out)
+            if m_dark_now:
+                if _norm(m_dark_now.group(0)) != _norm(new_dark):
+                    out = out[: m_dark_now.start()] + new_dark + out[m_dark_now.end():]
+            else:
+                close = light_root_close(out)
+                if close == -1:
+                    print("refusing: could not find the close of the light :root block")
+                    return 1
+                out = out[: close + 1] + "\n" + new_dark + out[close + 1:]
+            # STRUCTURAL ASSERTIONS. Each one is a bug this script has actually
+            # shipped, so each one is a check rather than a hope:
+            #   1. exactly one ":root{"  - the dark block must not nest
+            #   2. braces balanced      - a mid-declaration insert corrupts the file
+            #   3. the dark block lands AFTER the light close, never inside it
             if out.count(":root{") != 1:
                 print("refusing: write would leave %d ':root{' blocks, expected 1" % out.count(":root{"))
                 return 1
+            if strip_comments(out).count("{") != strip_comments(out).count("}"):
+                print("refusing: write would leave braces unbalanced ({ %d vs } %d)"
+                      % (strip_comments(out).count("{"), strip_comments(out).count("}")))
+                return 1
+            close_after = light_root_close(out)
+            dark_at = out.find(DARK_BEGIN)
+            if close_after != -1 and dark_at != -1 and dark_at < close_after:
+                print("refusing: the dark block would land INSIDE the light :root (pos %d < close %d)"
+                      % (dark_at, close_after))
+                return 1
             CSS.write_text(out, encoding="utf-8")
-            print("brand tokens: rewrote the block from scripts/brand-tokens.json")
+            print("brand tokens: rewrote the block from scripts/brand-tokens.json (light + dark)")
             return 0
     print("no generated token block found; nothing to do")
     return 1

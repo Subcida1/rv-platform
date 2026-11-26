@@ -1286,11 +1286,61 @@ css_src = (ROOT / "assets" / "css" / "style.css").read_text(encoding="utf-8")
 token_start = css_src.index(":root{")
 token_end = css_src.index("\n}\n", css_src.index("/* ---- LEGACY ALIASES.")) + 3
 token_block, rest = css_src[:token_end], css_src[token_end:]
+# THE DARK BLOCK IS THE TOKEN LAYER'S SECOND HALF, so it is not "below the layer".
+# It sits after token_end because the light :root is much taller than its name
+# suggests (it swallows the legacy alias cluster), and it is generated from the
+# same JSON as the light block -- the 'dark' column. Scanning it here reported
+# every dark token as a leaked literal, which is the opposite of the defect this
+# check exists to catch. Blanked, not removed: the slice keeps its line numbering.
+_dark_a = css_src.find("/* --- GENERATED BRAND TOKENS, DARK")
+# <=, NOT <. The dark block begins at EXACTLY token_end: the light block's closing
+# brace is the last character before it, so a strict < was false and the exemption
+# never ran, leaving every dark token reported as a leaked literal.
+if _dark_a != -1 and _dark_a <= token_end:
+    _dark_b = css_src.find("/* --- END GENERATED BRAND TOKENS, DARK --- */", _dark_a)
+    if _dark_b != -1:
+        _dark_end = _dark_b + len("/* --- END GENERATED BRAND TOKENS, DARK --- */")
+        rest = rest[:_dark_a - token_end] + re.sub(r"[^\n]", " ", rest[_dark_a - token_end:_dark_end - token_end]) \
+               + rest[_dark_end - token_end:]
 # COMMENTS ARE STRIPPED BEFORE SCANNING, because a hex in a comment cannot paint anything. Found
 # 2026-10-04: a comment explaining the breadcrumb contrast fix named the two colours it replaced,
 # and the check failed the build for a sentence rather than a colour. An instrument that flags
 # correct behaviour is worse than none -- it teaches the reader to ignore the output.
+# COMMENTS ARE STRIPPED BEFORE SCANNING (this is the line that creates
+# rest_for_colour; the print exemption below consumes it).
 rest_for_colour = re.sub(r"/\*.*?\*/", " ", rest, flags=re.S)
+# THE PRINT SHEET IS EXEMPT TOO, and for a reason that cannot rot: it re-pins the
+# light palette by name so a page printed from night mode does not carry the dark
+# surface onto paper, and a token cannot do that job because print has no
+# data-mode. check-brand-tokens.py exempts the same block. Brace-matched, so only
+# the print block is blanked -- a `.*` with re.S would swallow the whole tail of
+# the file, including anything planted there by a self-test.
+def _blank_print_spans(s):
+    out = s
+    i = 0
+    while True:
+        m = re.search(r"@media\s+print\s*\{", out[i:])
+        if not m:
+            break
+        a = i + m.start()
+        j = i + m.end() - 1
+        depth = 0
+        while j < len(out):
+            if out[j] == "{":
+                depth += 1
+            elif out[j] == "}":
+                depth -= 1
+                if depth == 0:
+                    break
+            j += 1
+        if j >= len(out):
+            break
+        out = out[:a] + re.sub(r"[^\n]", " ", out[a:j + 1]) + out[j + 1:]
+        i = j + 1
+    return out
+
+
+rest_for_colour = _blank_print_spans(rest_for_colour)
 # Line numbers must point at the FILE, not at the slice. Both loops below used to count
 # newlines in `rest`, so every line they printed was short by the token block's own height --
 # the check reported #fff at line 350 and line 350 was an empty rule. Found 2026-10-03.

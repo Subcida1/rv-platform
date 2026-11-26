@@ -309,9 +309,18 @@
  '</div>' +
  searchFieldHTML('nav-search', 'Search guides, tools, parts', 'Site search') +
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
- /* The button says where it goes ("RV tools"); the caption above it carries the
-    "free" promise that used to live in the utility strip. Ty, 2026-10-05. */
- '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm" href="' + R(rt.tools) + '">RV tools</a></span>' +
+ /* THE NAV BUTTON IS THE DAY/NIGHT SWITCH (T, 2026-11-25). It replaces the
+    "RV tools" button that used to sit here. Tools are still one click away in
+    the menu beside it, so nothing is lost, and the switch is now on every one
+    of the 1,097 pages because the nav is generated.
+
+    A <button>, not a link: it changes the page in place, it does not navigate.
+    aria-pressed carries the state; the label carries the action. Both are set
+    by initTheme() in assets/js/site.js, so the markup here only needs the hook. */
+ '<button type="button" class="mode-toggle" data-mode-toggle aria-pressed="false" aria-label="Switch to night mode" title="Night mode">' +
+ '<svg class="mode-icon mode-icon-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>' +
+ '<svg class="mode-icon mode-icon-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 12.4A6.8 6.8 0 0 1 7.6 3.5a6.8 6.8 0 1 0 8.9 8.9Z"/></svg>' +
+ '<span class="mode-label">Night</span></button>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search guides, tools, parts, or a ZIP', 'Site search, mobile menu') +
@@ -353,7 +362,11 @@
    ['Owner manuals by brand', rt.manualsBrands],
    ['Recalls and bulletins', rt.manualsRecalls]]) +
  '<a class="mm-top" href="' + R(rt.about) + '">About</a>' +
-      signinLink('mm-top') +
+     signinLink('mm-top') +
+ /* Day/night, in the phone menu as well as the nav bar. The bar's own button is
+    icon-only below 900px, so without this row a phone reader gets a switch with
+    no words on it. Same hook data-mode-toggle, so one listener drives both. */
+ '<button type="button" class="mm-top mm-mode" data-mode-toggle aria-pressed="false" aria-label="Switch to night mode"><span class="js-mm-mode-text">Night mode</span><span class="mm-mode-state" aria-hidden="true">Off</span></button>' +
  '<a class="mm-top" href="' + R(rt.contact) + '">Contact</a>' +
  '</div></nav>';
  }
@@ -788,6 +801,193 @@ function playVideo(btn) {
 }
 
 /* ---------- init ---------- */
+/*  ---------- theme (day / night) ----------
+
+  THE WHOLE SITE HAS ONE MODE, AND THIS IS WHERE IT IS DECIDED.
+
+  The colors themselves live in assets/css/style.css, in the token block that
+  scripts/brand-tokens.json generates. That block carries a light value and a
+  dark value for every color in the design. Nothing here duplicates a color;
+  this function only decides WHICH set of values is in play, and tells the page.
+
+  Three callers, in priority order:
+
+    1. The reader pressed the button. Stored in localStorage('rv-mode'), and it
+       wins from then on, including against the operating system.
+    2. No stored choice. Follow the OS: the media query inside style.css does
+       this on its own, so we only need to know the answer to label the button.
+    3. Nothing set. Light, which is the site as it has always been.
+
+  The pre-paint script in each page's <head> has already put data-mode on the
+  root before first paint, so there is no flash of the wrong theme. This
+  function only has to wire the button and to keep the page in step afterwards.
+
+  THE CALCULATOR. tools/weight-calculator mounts a built React bundle whose dark
+  theme keys off a .dark ancestor (Tailwind's convention). That class is set
+  here rather than in the page, so the vendored app cannot drift from the rest
+  of the site: one decision, one place. */
+var MODE_KEY = 'rv-mode';
+var _themeMql = null;
+
+function storedMode() {
+ try { var v = localStorage.getItem(MODE_KEY); return (v === 'dark' || v === 'light') ? v : null; }
+ catch (e) { return null; }   /* private mode, or storage disabled: treat as no preference */
+}
+
+function osMode() {
+ try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+ catch (e) { return 'light'; }
+}
+
+function currentMode() { return storedMode() || osMode(); }
+
+/* Push the mode onto the document AND onto the calculator's mount point. The
+   calculator is the only surface on the site that cannot read our tokens, so it
+   is the only one that needs the class mirrored. */
+function applyMode(mode) {
+ var root = document.documentElement;
+ /* THE SITE'S OWN SMOKE TEST RUNS THIS FILE IN A DOM-LESS SANDBOX, and so does
+    build-shell.mjs when it renders the shell. Neither provides documentElement,
+    so the mode cannot be applied there -- and does not need to be, because
+    neither renders a page. Guard, the same way initPrint() and initTheme() guard
+    their own DOM use, rather than making the instrument fake a DOM it has no
+    reason to have. */
+ if (!root || typeof root.setAttribute !== 'function') { return; }
+ root.setAttribute('data-mode', mode);
+ var mounts = document.querySelectorAll('#towsafe-app');
+ for (var i = 0; i < mounts.length; i++) {
+  if (mode === 'dark') { mounts[i].classList.add('dark'); }
+  else { mounts[i].classList.remove('dark'); }
+ }
+ swapWordmark(mode);
+ var btns = document.querySelectorAll('[data-mode-toggle]');
+ for (var j = 0; j < btns.length; j++) { labelModeButton(btns[j], mode); }
+}
+
+/* THE WORDMARK IS TWO FILES, SWAPPED AT THE SRC.
+
+   The lockup is a bitmap whose words sit in near-black ink. On the dark page the
+   words vanish and only the gold pin and the two-tone "RV" survive, so
+   build-brand-lockup.py --variant dark writes a twin PNG: same geometry, same pin,
+   same "RV", only the ink color changed.
+
+   This is done here rather than in CSS. `content:url()` on an <img> that already
+   carries a src is not dependable: the computed value updates, and Chrome still
+   paints the original (measured: content resolved to the dark PNG while the
+   element kept rendering lockup-960.png). Setting src is a swap the browser
+   cannot ignore.
+
+   The nav is baked into 1,097 pages, so the swap has to happen at runtime: there
+   is no markup to change, and regenerating every page for one image would be the
+   tail wagging the dog. The original src is remembered on the element the first
+   time, so returning to day mode restores exactly what the page shipped with. */
+function swapWordmark(mode) {
+ /* The NAV logo carries class .logo-lockup and the FOOTER one carries .logo-word.
+    They are easy to transpose, and doing so is silent: the page still renders a
+    logo, just the wrong one for the mode. Measured against the live pages, the nav
+    image sits at y=48 with class "logo-lockup" and the footer at y=7583 with
+    "logo-word". Both are swapped by filename, which covers either being renamed. */
+ var imgs = document.querySelectorAll('img.logo-lockup, img.logo-word, .logo img, .foot-logo img');
+ for (var i = 0; i < imgs.length; i++) {
+  var img = imgs[i];
+  if (!img.getAttribute('data-src-light')) {
+   img.setAttribute('data-src-light', img.getAttribute('src') || '');
+  }
+  var light = img.getAttribute('data-src-light');
+  if (!light) { continue; }
+  /* Swap the filename only, keeping the cache-busting stamp the page shipped
+     with. Hardcoding a second URL here would go stale the first time the asset
+     pipeline re-stamped, and nothing would catch it.
+
+     The stamp is dropped rather than carried over: light and dark have different
+     contents, so one hash cannot be correct for both, and a copied stamp would pin
+     the dark image to a version that was never generated. A bare URL is honest. */
+  var want = light.replace(/(lockup-960|logo-lockup)(\.png)/, '$1-dark$2');
+  if (want === light) { continue; }
+  var target = (mode === 'dark') ? want : light;
+  var current = img.getAttribute('src');
+  if (current !== target) { img.setAttribute('src', target); }
+ }
+}
+
+/* The button is also its own status: aria-pressed says whether night is on, and
+   the label says what pressing it will DO (the next state, not the current one),
+   which is the convention a reader expects from a toggle. */
+function labelModeButton(btn, mode) {
+ var night = mode === 'dark';
+ btn.setAttribute('aria-pressed', night ? 'true' : 'false');
+ btn.setAttribute('aria-label', night ? 'Switch to day mode' : 'Switch to night mode');
+ btn.setAttribute('title', night ? 'Day mode' : 'Night mode');
+ /* The phone-menu row carries a visible On/Off, because a bare switch in a list
+    of links reads as one more link. The nav-bar button has no such span, so this
+    is a no-op there. */
+ var state = btn.querySelector('.mm-mode-state');
+ if (state) { state.textContent = night ? 'On' : 'Off'; }
+ var text = btn.querySelector('.js-mm-mode-text');
+ if (text) { text.textContent = night ? 'Day mode' : 'Night mode'; }
+}
+
+function setMode(mode, persist) {
+ if (persist) { try { localStorage.setItem(MODE_KEY, mode); } catch (e) {} }
+ applyMode(mode);
+}
+
+function toggleMode() { setMode(currentMode() === 'dark' ? 'light' : 'dark', true); }
+
+function initTheme() {
+ /* build-shell.mjs runs this file in a sandbox to extract the nav markup, and
+    that sandbox has no DOM: it has window.addEventListener but not
+    document.getElementById. Same guard initPrint() uses, for the same reason. */
+ if (typeof document.getElementById !== 'function') { return; }
+
+ /* Follow the OS while the reader has not chosen, and stop following the moment
+    they have: a stored preference is an instruction, not a suggestion. */
+ try {
+  _themeMql = window.matchMedia('(prefers-color-scheme: dark)');
+  var onOsChange = function () { if (!storedMode()) { applyMode(osMode()); } };
+  if (_themeMql.addEventListener) { _themeMql.addEventListener('change', onOsChange); }
+  else if (_themeMql.addListener) { _themeMql.addListener(onOsChange); }
+ } catch (e) {}
+
+ /* BIND THE BUTTONS, DO NOT ADD A SECOND DOCUMENT LISTENER.
+    A document-level delegated listener was the first shape here, and it replaced
+    the analytics click handler: the shell's own instrument keeps ONE handler per
+    event type (this._ev[t] = fn), so the toggle silently took over outbound_click
+    and the site stopped recording which maker a reader left for. A browser would
+    have kept both, which is exactly why the smoke test caught it and a page-load
+    check would not.
+
+    The shell is built at build time, so both buttons are in the DOM by the time
+    this runs and need no delegation. Bound directly, they cannot collide with
+    anything. */
+ var toggles = document.querySelectorAll('[data-mode-toggle]');
+ for (var k = 0; k < toggles.length; k++) {
+  (function (btn) {
+   btn.addEventListener('click', function (ev) {
+    if (typeof ev.preventDefault === 'function') { ev.preventDefault(); }
+    toggleMode();
+   });
+  })(toggles[k]);
+ }
+
+ /* The calculator mounts after this script runs, so re-apply when it appears
+    and whenever storage changes in another tab. */
+ var mounts = document.querySelectorAll('#towsafe-app');
+ if (mounts.length) {
+  applyMode(currentMode());
+ } else if (document.getElementById('towsafe-app') && typeof MutationObserver === 'function') {
+  var obs = new MutationObserver(function () { applyMode(currentMode()); obs.disconnect(); });
+  obs.observe(document.getElementById('towsafe-app'), { childList: true });
+ }
+ if (typeof window.addEventListener === 'function') {
+  window.addEventListener('storage', function (ev) {
+   if (ev.key === MODE_KEY) { applyMode(currentMode()); }
+  });
+ }
+
+ applyMode(currentMode());
+}
+
  window.RV = {
  brand: CFG.brand,
  contactEmail: CFG.contact ? CFG.contact.email : '',
@@ -797,7 +997,10 @@ function playVideo(btn) {
  track: track,
  claimMailto: claimMailto,
  claimSubmit: claimSubmit,
- playVideo: playVideo
+ playVideo: playVideo,
+ mode: currentMode,
+ setMode: setMode,
+ toggleMode: toggleMode
  };
  injectShell();
  initReveal();
@@ -807,4 +1010,5 @@ function playVideo(btn) {
  initTracking();
  initClaimForm();
  initPrint();
+ initTheme();
 })();

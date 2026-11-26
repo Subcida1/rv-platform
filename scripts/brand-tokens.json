@@ -15,91 +15,123 @@
     "--brand": {
       "hex": "#008080",
       "ratio_white": 4.77,
-      "role": "THE MARK'S OWN TEAL, unchanged from pin-100.svg"
+      "role": "THE MARK'S OWN TEAL, unchanged from pin-100.svg",
+      "dark": "#14b8a6"
     },
     "--brand-2": {
       "hex": "#007a7a",
       "ratio_white": 5.17,
-      "role": "brand gradient stop 2"
+      "role": "brand gradient stop 2",
+      "dark": "#0fa79a"
     },
     "--brand-3": {
       "hex": "#007474",
       "ratio_white": 5.6,
-      "role": "brand gradient stop 3"
+      "role": "brand gradient stop 3",
+      "dark": "#0d968a"
     },
     "--brand-deep": {
       "hex": "#006b6b",
       "ratio_white": 6.33,
-      "role": "link ink and CTA gradient start"
+      "role": "link ink and CTA gradient start",
+      "dark": "#2dd4bf"
     },
     "--brand-deep-2": {
       "hex": "#005f5f",
       "ratio_white": 7.49,
-      "role": "CTA gradient stop 2"
+      "role": "CTA gradient stop 2",
+      "dark": "#5eead4"
     },
     "--brand-deep-3": {
       "hex": "#005656",
       "ratio_white": 8.52,
-      "role": "CTA gradient stop 3"
+      "role": "CTA gradient stop 3",
+      "dark": "#7ff0dd"
     }
   },
   "accent": {
     "--gold": {
       "hex": "#d4af37",
       "ratio_white": 2.1,
-      "role": "the mark's gold. DECORATION ONLY: never a label, never behind white text"
+      "role": "the mark's gold. DECORATION ONLY: never a label, never behind white text",
+      "dark": "#e6c96b"
     },
     "--gold-deep": {
       "hex": "#8a6d1f",
       "ratio_white": 4.9,
-      "role": "gold that has to carry text"
+      "role": "gold that has to carry text",
+      "dark": "#e0bf55"
     },
     "--gold-edge": {
       "hex": "#d4af37",
       "ratio_white": 2.1,
-      "role": "the primary button's edge"
+      "role": "the primary button's edge",
+      "dark": "#e6c96b"
+    },
+    "--sky": {
+      "hex": "#0ea5e9",
+      "dark": "#4cc2f1",
+      "role": "the info accent; lifts on dark"
+    },
+    "--indigo": {
+      "hex": "#6366f1",
+      "dark": "#9aa2f7",
+      "role": "the second accent; lifts on dark"
     }
   },
   "tint": {
     "--tint-bg": {
       "hex": "#e6f4f4",
-      "role": "every informational chip, badge and quiet panel"
+      "role": "every informational chip, badge and quiet panel",
+      "dark": "#14283a"
     },
     "--tint-edge": {
       "hex": "#c9e4e4",
-      "role": "that panel's edge"
+      "role": "that panel's edge",
+      "dark": "#25455c"
     },
     "--tint-ink": {
       "hex": "#006b6b",
       "ratio_white": 6.33,
-      "role": "text on the tint"
+      "role": "text on the tint",
+      "dark": "#7dd3c8"
     }
   },
   "surface": {
     "--bg-2": {
       "hex": "#ebf6f6",
-      "cooler_than_red": 11
+      "cooler_than_red": 11,
+      "dark": "#151f31"
     },
     "--bg-3": {
       "hex": "#e5f2f2",
-      "cooler_than_red": 13
+      "cooler_than_red": 13,
+      "dark": "#1b2637"
     },
     "--surface-2": {
       "hex": "#eef8f8",
-      "cooler_than_red": 10
+      "cooler_than_red": 10,
+      "dark": "#1a2434"
     },
     "--border": {
       "hex": "#d3e7e7",
-      "cooler_than_red": 20
+      "cooler_than_red": 20,
+      "dark": "#2b3a52"
     },
     "--border-2": {
       "hex": "#c0dada",
-      "cooler_than_red": 26
+      "cooler_than_red": 26,
+      "dark": "#35485f"
     },
     "--line": {
       "hex": "#d3e7e7",
       "cooler_than_red": 20,
-      "role": "the rule above a page's byline"
+      "role": "the rule above a page's byline",
+      "dark": "#2b3a52"
+    },
+    "--nav-glass": {
+      "value": "color-mix(in srgb,var(--bg) 86%,transparent)",
+      "role": "the sticky nav's translucent glass; derived from --bg per mode so the bar can never stay light in night mode"
     }
   },
   "unchanged": [
@@ -110,19 +142,23 @@
   "text": {
     "--text": {
       "hex": "#0f172a",
-      "role": "body ink"
+      "role": "body ink",
+      "dark": "#f1f5f9"
     },
     "--text-2": {
       "hex": "#55627a",
-      "role": "secondary ink"
+      "role": "secondary ink",
+      "dark": "#b9c4d4"
     },
     "--text-3": {
       "hex": "#67748e",
-      "role": "tertiary ink and captions"
+      "role": "tertiary ink and captions",
+      "dark": "#9aa8bd"
     },
     "--text-inv": {
       "hex": "#ffffff",
-      "role": "ink that sits ON the brand; the button label"
+      "role": "ink that sits ON the brand; the button label",
+      "dark": "#04211f"
     }
   },
   "map": {
@@ -191,5 +227,70 @@
     "#006468",
     "#006f73"
   ],
-  "_superseded_note": "The blue ladder and its tint family, retired 2026-11-05. Listed so the checker can refuse them if a rebrand forgets a token; a stale value in the layer is exactly how #mark stayed blue."
+  "_superseded_note": "The blue ladder and its tint family, retired 2026-11-05. Listed so the checker can refuse them if a rebrand forgets a token; a stale value in the layer is exactly how #mark stayed blue.",
+  "_dark_doc": [
+    "Day/night. Every colour token above carries a 'dark' value; the generator emits a",
+    "second block after the light one, and assets/js/site.js decides which is in play",
+    "by putting data-mode on the root. One file, one run, both themes.",
+    "",
+    "The MAP group is deliberately absent: a highway map is not a light/dark surface.",
+    "Recolouring asphalt, signage and the route ribbon for dark would break the map's",
+    "own legibility (white sign text on a lifted sign, a route ribbon that has to stay",
+    "the signature teal). The map is identical in both modes by decision, not by",
+    "oversight. --map-fade and --route-fade are fractions, not colours, so they have",
+    "no dark value for the same reason --bg does not have two.",
+    "",
+    "Contrast, measured against the dark page #0f172a:",
+    "  --text #f1f5f9 15.07:1   --text-2 #b9c4d4 9.36:1   --text-3 #9aa8bd 6.85:1",
+    "  --brand #14b8a6 7.17:1   (the light #008080 scored 3.74:1 here and FAILED)",
+    "  white on the dark --brand #14b8a6 does NOT pass, which is why --text-inv is",
+    "  near-black in dark mode: the button label flips with the fill it sits on."
+  ],
+  "status": {
+    "--danger": {
+      "hex": "#b42338",
+      "dark": "#ff8b96",
+      "role": "the ink and edge of a failed verdict (lint: on dark it must LIFT, not darken)"
+    },
+    "--danger-bg": {
+      "hex": "#fdeeee",
+      "dark": "#3a1620",
+      "role": "the failed callout's wash"
+    },
+    "--danger-edge": {
+      "hex": "#f2b8be",
+      "dark": "#6b2f3c",
+      "role": "that callout's edge"
+    },
+    "--danger-soft": {
+      "hex": "#f43f5e",
+      "dark": "#ff6b81",
+      "role": "the rose used for error borders and dots"
+    },
+    "--maps-red": {
+      "hex": "#ea4335",
+      "dark": "#ea4335",
+      "role": "the map marker red: decorative, reads on both, so it does NOT flip"
+    },
+    "--warn": {
+      "hex": "#8a5a00",
+      "dark": "#f0c04a",
+      "role": "caution ink (lint: dark amber on a dark wash, the light value would vanish)"
+    },
+    "--warn-bg": {
+      "hex": "#fef8e3",
+      "dark": "#33280a",
+      "role": "the caution wash"
+    },
+    "--warn-edge": {
+      "hex": "#f2dd9e",
+      "dark": "#6b5518",
+      "role": "that wash's edge"
+    },
+    "--warn-soft": {
+      "hex": "#c98a04",
+      "dark": "#e8b23c",
+      "role": "the caution dot"
+    }
+  }
 }

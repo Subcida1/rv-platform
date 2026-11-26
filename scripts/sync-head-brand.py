@@ -38,8 +38,31 @@ CANON = "https://originrv.com"
 # already branded kept whatever colour it was born with, which is how all 28
 # hand-written pages stayed on the retired rose while the 11 generated ones were
 # already #3d7fc2.
-THEME_COLOR = C.THEME_COLOR
-THEME_META_RE = re.compile(r'<meta name="theme-color" content="[^"]*">')
+from site_constants import THEME_COLOR, THEME_COLOR_DARK, PREPAINT  # noqa: E402
+
+# Every theme-color tag, with or without a media attribute, so a re-run replaces
+# rather than stacks them.
+THEME_META_RE = re.compile(r'[ \t]*<meta name="theme-color"[^>]*>\n?')
+# The pre-paint block, matched by its own unique marker so it can be replaced on a
+# re-run and cannot accumulate.
+PREPAINT_RE = re.compile(r'[ \t]*<script>\(function\(\)\{try\{var m=localStorage'
+                         r'\.getItem\(\'rv-mode\'\).*?</script>\n?', re.S)
+
+
+def head_indent(html):
+    """The indentation the page's own </head> sits at.
+
+    Pages in this tree are not uniformly indented (the hand-written ones nested the
+    head one level deeper than the generated ones), so writing a fixed indent put
+    the injected lines at a different depth from their neighbours. Reading it from
+    the anchor keeps the output tidy on every page without touching the anchor.
+    """
+    i = html.find("</head>")
+    if i == -1:
+        return "  "
+    ls = html.rfind("\n", 0, i) + 1
+    return html[ls:i]
+
 
 # The analytics beacon, shared with the manuals generator so a generator re-run
 # cannot drop it. See scripts/site_constants.py for why the token is public.
@@ -112,10 +135,27 @@ for page in pages:
     # Runs on every page every time, deliberately outside the skip-if-branded
     # guard above: a page that already had its icon links kept whatever
     # theme-color it was born with, which is how 28 pages stayed rose.
-    html, n_theme = THEME_META_RE.subn(
-        '<meta name="theme-color" content="%s">' % THEME_COLOR, html)
+    #
+    # TWO theme-color TAGS, one per mode, each with a media attribute. This is how
+    # the address-bar tint follows the theme: a single tag can only name one colour,
+    # so night-mode readers got a light-teal bar above a navy page. The media
+    # attribute is the OS preference, which is the right signal here -- the address
+    # bar is drawn before any script runs, so it cannot consult the stored choice.
+    # Where they disagree (reader chose dark on a light OS) the bar is briefly the
+    # wrong tint, which is far better than the wrong page colour.
+    html, n_theme = THEME_META_RE.subn("", html)
     if n_theme == 0:
         raise SystemExit("no theme-color meta in %s" % rel)
+    theme_meta = ('<meta name="theme-color" content="%s" media="(prefers-color-scheme: light)">\n'
+                  '%s<meta name="theme-color" content="%s" media="(prefers-color-scheme: dark)">'
+                  % (THEME_COLOR, head_indent(html), THEME_COLOR_DARK))
+    html = html.replace("</head>", theme_meta + "\n" + head_indent(html) + "</head>", 1)
+
+    # THE PRE-PAINT THEME SCRIPT, last in head so everything else is already parsed
+    # and it still runs before the body paints. Removed and re-added every run so a
+    # changed copy replaces rather than stacks.
+    html = PREPAINT_RE.sub("", html)
+    html = html.replace("</head>", PREPAINT + "\n</head>", 1)
 
     if "og-default.png" not in html:
         if OG_ANCHOR not in html:

@@ -406,7 +406,8 @@ def head(title, desc, canonical, schemas):
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="{theme}">
+  <meta name="theme-color" content="{theme_light}" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="{theme_dark}" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{title} | OriginRV">
   <meta property="og:description" content="{desc}">
@@ -422,12 +423,14 @@ def head(title, desc, canonical, schemas):
   <meta name="twitter:title" content="{title} | OriginRV">
   <meta name="twitter:description" content="{desc}">
 {ld}
+{prepaint}
 {ga4}</head>
 <body class="g-theme-mist">
   <div id="site-nav"><!-- nav:start --><!-- nav:end --></div>
  <main id="main">
 """.format(canonical=canonical, title=esc(title), desc=esc(desc), site=SITE, ld=ld,
-           theme=C.THEME_COLOR, ga4=C.ga4_block("  "))
+           theme_light=C.THEME_COLOR, theme_dark=C.THEME_COLOR_DARK,
+           prepaint=C.PREPAINT, ga4=C.ga4_block("  "))
 
 
 def foot(script):

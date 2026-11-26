@@ -55,7 +55,14 @@ def brand_hexes(t):
     out = {}
     for group in ("brand", "accent", "tint", "surface"):
         for name, d in t.get(group, {}).items():
-            out[name] = d["hex"].lower()
+            hx = d.get("hex")
+            # A token may carry a derivation ("value") instead of a colour, and an
+            # author may legitimately write a non-hex colour function here. Only
+            # #rrggbb can be compared against the file's literals, so anything else
+            # is skipped rather than parsed: int(hx[1:3], 16) raised on
+            # "rgba(255,255,255,.86)" and took the whole palette gate down with it.
+            if isinstance(hx, str) and re.fullmatch(r"#[0-9a-fA-F]{6}", hx):
+                out[name] = hx.lower()
     return out
 
 
@@ -80,6 +87,39 @@ def check_css_matches_source(t):
     return []
 
 
+def _blank_print_blocks(body):
+    """body with every @media print block blanked (spaces, newlines kept).
+
+    Brace-matched rather than matched to end-of-string: an earlier `.*` with re.S
+    swallowed every rule after the first print block, which silently disarmed the
+    literal scan for the whole tail of the file.
+    """
+    out = body
+    i = 0
+    while True:
+        m = re.search(r"@media\s+print\s*\{", out[i:])
+        if not m:
+            break
+        a = i + m.start()
+        b = i + m.end() - 1  # the '{' we just matched
+        depth = 0
+        j = b
+        while j < len(out):
+            if out[j] == "{":
+                depth += 1
+            elif out[j] == "}":
+                depth -= 1
+                if depth == 0:
+                    break
+            j += 1
+        if j >= len(out):
+            break
+        span = out[a:j + 1]
+        out = out[:a] + re.sub(r"[^\n]", " ", span) + out[j + 1:]
+        i = j + 1
+    return out
+
+
 def check_no_brand_literals_outside_layer(t):
     """2. No brand colour restated as a literal in the rules below the block."""
     css = CSS.read_text(encoding="utf-8")
@@ -88,6 +128,18 @@ def check_no_brand_literals_outside_layer(t):
         return ["style.css: no end marker, cannot locate the rules below the token layer"]
     body = css[i + len(END):]
     body = re.sub(r"/\*.*?\*/", " ", body, flags=re.S)
+    # THE PRINT SHEET IS EXEMPT, BY DESIGN. It re-pins the light palette by name so
+    # that printing from night mode does not hand the printer a dark --surface (and
+    # most browsers drop background colour anyway, so the page would come out pale
+    # ink on white). Those literals are the light column of brand-tokens.json,
+    # restated on purpose, and they cannot follow a token: print has no data-mode.
+    #
+    # It must be BLANKED, NOT TRUNCATED. `@media\s+print\s*\{.*` with re.S matches
+    # to end-of-string, so it also swallowed everything appended after the print
+    # block -- which is exactly where a planted literal goes, so the self-test could
+    # no longer catch one and reported "a restated brand hex was NOT caught". Find
+    # the block's real close by brace-matching and blank that span only.
+    body = _blank_print_blocks(body)
     bad = []
     for name, hx in brand_hexes(t).items():
         for m in re.finditer(re.escape(hx), body, re.I):

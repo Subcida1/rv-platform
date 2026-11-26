@@ -52,7 +52,8 @@ SVG_MASTER = SRC / "pin-100.svg"
 NOTO_BOLD = "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
 DEJAVU_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
-INK = (15, 23, 42)          # --text
+INK = (15, 23, 42)          # --text: the wordmark ink in LIGHT mode
+INK_DARK = (241, 245, 249)  # --text in the dark theme: the same role, flipped
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from brand_palette import GOLD, TEAL, recolour   # noqa: E402  (path set above)
@@ -123,7 +124,7 @@ def hx(c):
     return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
 
 
-def compose(pin: Image.Image, size: int = WORK) -> Image.Image:
+def compose(pin: Image.Image, size: int = WORK, ink_ink=INK) -> Image.Image:
     f1 = ImageFont.truetype(NOTO_BOLD, size)
     c1 = cap_height(f1)
     probe = ImageFont.truetype(DEJAVU_BOLD, size)
@@ -147,7 +148,7 @@ def compose(pin: Image.Image, size: int = WORK) -> Image.Image:
 
     rb = ink(f1, WORD1, (ox, oy))
     x_rigin = round(px + p.width + PIN_GAP * o_w - (rb[0] - ox))
-    d.text((x_rigin, oy), WORD1, font=f1, fill=INK + (255,), anchor="ls")
+    d.text((x_rigin, oy), WORD1, font=f1, fill=ink_ink + (255,), anchor="ls")
 
     vvb0 = ink(f2, "R", (ox, oy))
     adv = f1.getlength(WORD1) + f1.getlength(" ") * WORD_SPACES
@@ -184,17 +185,33 @@ def compose(pin: Image.Image, size: int = WORK) -> Image.Image:
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--variant", choices=("light", "dark", "both"), default="both",
+                    help="which colourway to write; default both")
+    a = ap.parse_args()
+
     pin = render_pin()
-    master = compose(pin)
-    for w in WIDTHS:
-        out = SRC / ("lockup-%d.png" % w)
-        master.resize((w, max(1, round(master.height * w / master.width))),
-                      Image.LANCZOS).save(out, "PNG", optimize=True)
-        with Image.open(out) as im:
-            print("  wrote  %-44s %4dx%-4d %7d bytes"
-                  % (out.relative_to(ROOT), im.width, im.height, out.stat().st_size))
-    print("  master %dx%d  (aspect %.3f)"
-          % (master.width, master.height, master.width / master.height))
+    jobs = []
+    if a.variant in ("light", "both"):
+        jobs.append(("", INK))                    # lockup-480.png / lockup-960.png
+    if a.variant in ("dark", "both"):
+        # A DARK VARIANT IS NOT AN INVERTED LIGHT ONE. The wordmark ink flips to the
+        # dark theme's --text; the pin keeps its own gold and teal, because those are
+        # the mark, and the RV cut keeps its split. Only the neutral ink moves.
+        jobs.append(("-dark", INK_DARK))
+
+    for suffix, ink_colour in jobs:
+        master = compose(pin, ink_ink=ink_colour)
+        for w in WIDTHS:
+            out = SRC / ("lockup-%d%s.png" % (w, suffix))
+            master.resize((w, max(1, round(master.height * w / master.width))),
+                          Image.LANCZOS).save(out, "PNG", optimize=True)
+            with Image.open(out) as im:
+                print("  wrote  %-44s %4dx%-4d %7d bytes"
+                      % (out.relative_to(ROOT), im.width, im.height, out.stat().st_size))
+        print("  master %dx%d  (aspect %.3f)"
+              % (master.width, master.height, master.width / master.height))
 
 
 if __name__ == "__main__":

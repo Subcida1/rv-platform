@@ -95,6 +95,12 @@ COPIES = [
     # is what the word-cutout files above held.
     ("lockup-480.png", "logo-lockup.png"),
     ("lockup-960.png", "lockup-960.png"),
+    # The DARK colourway, for day/night mode. Same dimensions as the pair above, so
+    # the nav img's width/height attributes stay valid and nothing shifts. Swapped by
+    # CSS `content:`, not by markup: the nav is baked into 1,106 pages by
+    # build-shell.mjs, and a markup swap would cost a full regeneration.
+    ("lockup-480-dark.png", "logo-lockup-dark.png"),
+    ("lockup-960-dark.png", "lockup-960-dark.png"),
 ]
 
 # Retired by this handover: the SVG favicon was a rebuild of the geometry, and

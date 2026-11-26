@@ -62,6 +62,11 @@
   --border-2:#c0dada;  /* 26 cooler than red */
   --line:#d3e7e7;  /* 20 cooler than red */
   --surface:#ffffff;
+  /* the sticky nav's glass: --bg at 86%, so the bar can never disagree with the
+     page it floats on. Derived rather than declared, because a separate
+     value is a second thing to keep in sync with --bg, and it went stale once:
+     the bar stayed light in night mode. */
+  --nav-glass:color-mix(in srgb,var(--bg) 86%,transparent);
 
   /* ---- TEXT: the ink ramp. Fixed across a rebrand, but it lives here so the
      generated block declares EVERY token the site uses. It did not, once: --text-inv
@@ -84,10 +89,23 @@
   --map-fade:100%;  /* map fade fraction */
   --route-fade:100%;  /* route fade fraction */
 
-  /* ---- ACCENT: the mark's own gold. ---- */
+  /* ---- ACCENT: the mark's own gold, and the two functional accents. ---- */
   --gold:#d4af37;  /* 2.10:1 vs white - the mark's gold. DECORATION ONLY: never a label, never behind white text */
   --gold-deep:#8a6d1f;  /* 4.90:1 vs white - gold that has to carry text */
   --gold-edge:#d4af37;  /* 2.10:1 vs white - the primary button's edge */
+  --sky:#0ea5e9;  /* the info accent; lifts on dark */
+  --indigo:#6366f1;  /* the second accent; lifts on dark */
+
+  /* ---- STATUS: red means a real failure and nothing else. ---- */
+  --danger:#b42338;  /* the ink and edge of a failed verdict (lint: on dark it must LIFT, not darken) */
+  --danger-bg:#fdeeee;  /* the failed callout's wash */
+  --danger-edge:#f2b8be;  /* that callout's edge */
+  --danger-soft:#f43f5e;  /* the rose used for error borders and dots */
+  --maps-red:#ea4335;  /* the map marker red: decorative, reads on both, so it does NOT flip */
+  --warn:#8a5a00;  /* caution ink (lint: dark amber on a dark wash, the light value would vanish) */
+  --warn-bg:#fef8e3;  /* the caution wash */
+  --warn-edge:#f2dd9e;  /* that wash's edge */
+  --warn-soft:#c98a04;  /* the caution dot */
 /* --- END GENERATED BRAND TOKENS --- */
 /* ---- STATUS: red means a real failure and nothing else. ---- */
   --danger:#b42338;        /* the ink and edge of a failed verdict */
@@ -116,9 +134,12 @@
   --warn-edge:#f2dd9e;
   --warn-soft:#c98a04;
 
-  /* ---- ACCENTS: links and one highlight. Nothing else earns a colour. ---- */
-  --sky:#0ea5e9;
-  --indigo:#6366f1;
+  /* ---- ACCENTS: links and one highlight. Nothing else earns a colour. ----
+     --sky and --indigo were declared here until 2026-11-26. The generated layer
+     above now owns both (it has to, so they can carry a dark value), and a second
+     declaration down here is the exact drift the palette gate exists to catch: it
+     wins on source order, so a rebrand would move the token and not this copy.
+     The indigo-deep note still belongs here; the value lives in the layer. */
   /* indigo-600. --indigo measures 4.47:1 on white, a hair under the 4.5 AA floor, so TEXT
      uses this one; fills and borders keep the brighter --indigo. Found 2026-09-27 by
      running axe across all 48 pages, not the six templates it had been sampled on. */
@@ -232,6 +253,93 @@
   --tint-blue-faint:#eff6ff;
   --border-soft:#e2e8f0;
 }
+/* --- GENERATED BRAND TOKENS, DARK: edit scripts/brand-tokens.json, then run
+/*  NIGHT. Every value here is the "dark" field of the matching token in
+    scripts/brand-tokens.json. Nothing is invented at this layer.
+
+    Selector 1: the reader pressed the button. It wins outright.
+    Selector 2: the OS prefers dark AND the reader has not chosen day.
+    Both bodies are the same text, emitted twice because an at-rule cannot
+    share a selector list with a normal rule. */
+:root[data-mode="dark"]{
+  --bg:#0f172a;
+  --surface:#151f31;
+  --nav-glass:color-mix(in srgb,var(--bg) 86%,transparent);
+  --brand:#14b8a6;
+  --brand-2:#0fa79a;
+  --brand-3:#0d968a;
+  --brand-deep:#2dd4bf;
+  --brand-deep-2:#5eead4;
+  --brand-deep-3:#7ff0dd;
+  --gold:#e6c96b;
+  --gold-deep:#e0bf55;
+  --gold-edge:#e6c96b;
+  --sky:#4cc2f1;
+  --indigo:#9aa2f7;
+  --tint-bg:#14283a;
+  --tint-edge:#25455c;
+  --tint-ink:#7dd3c8;
+  --bg-2:#151f31;
+  --bg-3:#1b2637;
+  --surface-2:#1a2434;
+  --border:#2b3a52;
+  --border-2:#35485f;
+  --line:#2b3a52;
+  --text:#f1f5f9;
+  --text-2:#b9c4d4;
+  --text-3:#9aa8bd;
+  --text-inv:#04211f;
+  --danger:#ff8b96;
+  --danger-bg:#3a1620;
+  --danger-edge:#6b2f3c;
+  --danger-soft:#ff6b81;
+  --maps-red:#ea4335;
+  --warn:#f0c04a;
+  --warn-bg:#33280a;
+  --warn-edge:#6b5518;
+  --warn-soft:#e8b23c;
+}
+@media (prefers-color-scheme: dark){
+ :root:not([data-mode="light"]){
+    --bg:#0f172a;
+    --surface:#151f31;
+    --nav-glass:color-mix(in srgb,var(--bg) 86%,transparent);
+    --brand:#14b8a6;
+    --brand-2:#0fa79a;
+    --brand-3:#0d968a;
+    --brand-deep:#2dd4bf;
+    --brand-deep-2:#5eead4;
+    --brand-deep-3:#7ff0dd;
+    --gold:#e6c96b;
+    --gold-deep:#e0bf55;
+    --gold-edge:#e6c96b;
+    --sky:#4cc2f1;
+    --indigo:#9aa2f7;
+    --tint-bg:#14283a;
+    --tint-edge:#25455c;
+    --tint-ink:#7dd3c8;
+    --bg-2:#151f31;
+    --bg-3:#1b2637;
+    --surface-2:#1a2434;
+    --border:#2b3a52;
+    --border-2:#35485f;
+    --line:#2b3a52;
+    --text:#f1f5f9;
+    --text-2:#b9c4d4;
+    --text-3:#9aa8bd;
+    --text-inv:#04211f;
+    --danger:#ff8b96;
+    --danger-bg:#3a1620;
+    --danger-edge:#6b2f3c;
+    --danger-soft:#ff6b81;
+    --maps-red:#ea4335;
+    --warn:#f0c04a;
+    --warn-bg:#33280a;
+    --warn-edge:#6b5518;
+    --warn-soft:#e8b23c;
+ }
+}
+/* --- END GENERATED BRAND TOKENS, DARK --- */
 
 *{margin:0;padding:0;box-sizing:border-box}
 /* SMOOTH SCROLLING IS OPT-OUT FOR ANYONE WHO ASKED FOR LESS MOTION. It was unconditional, so
@@ -717,7 +825,7 @@ input,select,textarea{font-family:inherit}
    Found while planning the jump-nav for the new-owner guide, where the same bug would have made
    the navigation worse than nothing. */
 [id]{scroll-margin-top:108px}
-nav.main{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav.main{position:sticky;top:0;z-index:200;background:var(--nav-glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px}
 .logo{display:flex;align-items:center;gap:11px}
 /* The lockup is the PIN AS THE O (T, 2026-11-04), composed by
@@ -868,6 +976,49 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .cart-badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:var(--grad);color:var(--text-inv);font-size: var(--fs-xs);font-weight:800;display:grid;place-items:center}
 .burger{display:none;background:none;border:1px solid var(--border-2);border-radius:10px;padding:8px 10px}
 .burger svg{width:20px;height:20px;stroke:var(--text)}
+/* THE DAY/NIGHT SWITCH. It replaced the "RV tools" button in the nav (T,
+   2026-11-25), and it is the only control on the site that changes a colour
+   without leaving the page.
+
+   It is built from the same parts as the burger beside it -- 1px --border-2
+   edge, 10px radius, min-height 40px for a thumb -- so it reads as one of the
+   nav's controls rather than a thing bolted on. Every colour here is a token,
+   which is what lets the switch style itself in both modes with no second rule.
+
+   Both icons ship in the markup and CSS reveals one. That is deliberate: the
+   SVG is small, and swapping it in CSS keeps the button's own markup free of a
+   state that JavaScript owns. The rule keys off :root[data-mode] exactly as the
+   rest of the token layer does, so the two can never disagree. */
+.mode-toggle{display:inline-flex;align-items:center;gap:7px;background:none;
+ border:1px solid var(--border-2);border-radius:10px;padding:8px 12px;
+ color:var(--text);font:inherit;cursor:pointer;min-height:40px;
+ transition:background .15s ease,border-color .15s ease}
+.mode-toggle:hover{background:var(--surface-2);border-color:var(--text-3)}
+.mode-toggle:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+/* The phone-menu row. It sits in a column of links, so it has to look like one
+   of them (same padding, same height) while still being a button. The state
+   pushed to the right edge is what stops it reading as a link to another page. */
+.mm-mode{display:flex;align-items:center;justify-content:space-between;width:100%;
+ background:none;border:0;font:inherit;color:var(--text);text-align:left;cursor:pointer}
+.mm-mode-state{font-size: var(--fs-sm);font-weight:700;color:var(--text-3);
+ border:1px solid var(--border-2);border-radius:999px;padding:2px 10px}
+.mm-mode[aria-pressed="true"] .mm-mode-state{color:var(--brand);border-color:var(--brand)}
+.mode-icon{width:18px;height:18px;flex:none;stroke:currentColor;fill:none}
+.mode-label{font-size: var(--fs-sm);font-weight:600;line-height:1}
+/* Day is showing: offer the moon. Night is showing: offer the sun. */
+:root[data-mode="dark"] .mode-icon-sun{display:none}
+:root:not([data-mode="dark"]) .mode-icon-moon{display:none}
+/* Before the pre-paint script runs there is no data-mode; default to the moon
+   for the same reason the default theme is light. */
+@media (prefers-color-scheme: dark){
+ :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-sun{display:none}
+ :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-moon{display:inline}
+}
+@media (max-width:900px){
+ /* On a phone the label costs more room than it earns; the icon carries it. */
+ .mode-label{display:none}
+ .mode-toggle{padding:8px 10px}
+}
 /* The mobile menu: grouped, not a flat list. A heading links to its section index
    and its children sit indented under it. Padding is 24px to match the .wrap
    gutter of the logo directly above it; at 20px the menu sat 4px off the column
@@ -1222,7 +1373,7 @@ div.page-foot{background:var(--surface);border:1px solid var(--border);border-ra
    above it and two rules one pixel apart read as a seam. The chips change with it -- a white chip
    on a white bar is not a chip -- so they take the tint family's face and edge, which is the same
    pill language the fits tags and the type pills use. Hover still goes solid --tint-ink. */
-.hub-jump{position:sticky;top:85px;z-index:120;margin-top:26px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.hub-jump{position:sticky;top:85px;z-index:120;margin-top:26px;background:var(--nav-glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
 /* A ROW THAT DOES NOT FILL IS CENTRED. Ty, 2026-10-10: "can we center the buttons that don't run a
    full row?" Nine systems on the parts hub wrap to eight and one, and the one sat hard against the
    left edge; the guides hub does the same with six. justify-content:center is the same answer the
@@ -2266,7 +2417,6 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .logo-name .rv{color:var(--brand-deep);padding:0 1px}
 .deck-panel-head .dot{background:var(--brand);box-shadow:0 0 0 4px var(--glow)}
 
-
 /* ===== FINAL selective-gradient enforcement (2026-09-17) =====
    Vivid gradient is reserved for: CTA button, hero H1 span, logo.
    All stat numbers, totals, section labels, and card meta are
@@ -2731,9 +2881,6 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .pb-60{padding:0 0 60px}
 .card.promo{display:block;padding:26px;max-width:860px}
 .sp-8{margin-top:8px}
-
-
-
 
 /* The guides hub is a page of cards, not prose. It shares the header treatment
    and nothing else, so the .prose rules cannot reach the guide cards through
@@ -3666,8 +3813,21 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   .tool-viz .viz-shot{display:none !important}
   .tool-viz .viz-shot:first-child{display:block !important}
 
-  /* ---- 2. the page becomes a document: full width, black on white ---- */
-  html,body{background:var(--surface) !important;color:var(--ink-black)}
+  /* ---- 2. the page becomes a document: full width, black on white ----
+     THE PRINT SHEET PINS THE LIGHT PALETTE ON PURPOSE. It used to just say
+     var(--surface)/var(--ink-black), which was safe while there was one palette.
+     Now that --surface has a dark value, printing from night mode would force the
+     DARK surface, and most browsers drop background colour on paper anyway, which
+     would leave pale ink on white: a guide that prints blank. So the token layer
+     is re-pinned to its light values here, by name, and the dark block cannot
+     reach print. The values are the light column of scripts/brand-tokens.json. */
+  html,body{background:#ffffff !important;color:#0f172a !important;
+    --bg:#ffffff;--surface:#ffffff;--bg-2:#ebf6f6;--bg-3:#e5f2f2;--surface-2:#eef8f8;
+    --text:#0f172a;--text-2:#55627a;--text-3:#67748e;--text-inv:#ffffff;
+    --border:#d3e7e7;--border-2:#c0dada;--line:#d3e7e7;
+    --tint-bg:#e6f4f4;--tint-edge:#c9e4e4;--tint-ink:#006b6b;
+    --brand:#008080;--brand-deep:#006b6b;
+    --nav-glass:#ffffff}
   .wrap,.wrap.wide,.wrap.narrow,.wrap.page-intro,
   .wrap.w-520,.wrap.w-680,.wrap.w-720,.wrap.w-820,
   .prose .narrow,.w-820,.w-720,.page-intro.narrow{
@@ -3746,7 +3906,6 @@ body.is-embed .embed-credit a{font-weight:800;color:var(--b1)}
   /* ---- 9. diagrams keep their colour ---- */
   figure svg{print-color-adjust:exact;-webkit-print-color-adjust:exact}
 }
-
 
 /* ---------- a pill that states a number goes where the number points ----------
    Ty, 2026-09-28: "little pill button looking things ... about how many guides we
@@ -4091,7 +4250,6 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
 .part[hidden],.parts-sys[hidden],.parts-empty[hidden],.part-table[hidden],.parts-count[hidden]{display:none}
 .parts-empty{margin-top:20px;font-size: var(--fs-md);color:var(--text-2)}
 
-
 /* ============================================================
    THE FLAT A-Z LIST ON THE DIRECTORY HUB (2026-10-26).
    Region grouping was the ONLY browse path on this page, and the site's own _todo/UX.md says
@@ -4145,7 +4303,6 @@ a.tchip:focus-visible{outline:2px solid var(--b1,var(--brand));outline-offset:2p
    offset .guide-group already uses on the guides and parts hubs. Without it the jump
    lands with the heading hidden behind the bar that sent you. */
 .hub-page h2.region-h{scroll-margin-top:168px}
-
 
 /* ============================================================
    REPEATING ELEMENTS THAT HAD ALL TAKEN THE SAME SHAPE (2026-10-08).
@@ -4780,8 +4937,6 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
    -webkit-line-clamp is the property that does this; the -webkit- prefix is
    required by every engine in use, including Firefox and Chrome. Without it the
    paragraph pushes the card to 480px and only three tiles fit a screen. */
-
-
 
 /* ============================================================================
    MOBILE SIDE-SCROLL SHELVES  (added 2026-11-14)
