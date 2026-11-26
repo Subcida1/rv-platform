@@ -930,6 +930,13 @@ function labelModeButton(btn, mode) {
  if (state) { state.textContent = night ? 'On' : 'Off'; }
  var text = btn.querySelector('.js-mm-mode-text');
  if (text) { text.textContent = night ? 'Day mode' : 'Night mode'; }
+ /* The strip button's own word, and it is the same rule as the label above: it
+    names what pressing it DOES, not what mode is on. In night mode it says
+    "Day", which is what a reader pressing it gets (T, 2026-11-26). The markup
+    ships "Night" as the light-mode default; this keeps it honest the moment the
+    mode changes, including on load from a stored preference. */
+ var word = btn.querySelector('.mode-label');
+ if (word) { word.textContent = night ? 'Day' : 'Night'; }
 }
 
 function setMode(mode, persist) {
