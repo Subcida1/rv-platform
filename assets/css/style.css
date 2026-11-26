@@ -282,6 +282,26 @@ button{font-family:inherit;cursor:pointer}
 input,select,textarea{font-family:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .wrap.wide{max-width:1400px}
+/* THE TOOL MOUNT. A calculator is an APP, not a page of prose, so it does not live inside .wrap.
+   Two modes, one element:
+     phone  (<1024px): edge to edge. No shell gutter, no cap, no centring. The tool IS the screen;
+                       the app's own wrapper supplies the inset so there is one gutter, not two.
+     desktop(>=1024px): re-centre a readable column at the site width, matching the site's own tool
+                       pages, so it reads as a native web app in a window rather than a stretched
+                       mobile view.
+   Measured cause: .wrap put the app inside 24px gutters and a 1200px cap, and the app centred its
+   own column inside that, which on a 390px phone left a 310px content column inside 80px of
+   gutter - the "web page nested in a web page" look. */
+.tool-fullbleed{width:100%}
+@media(min-width:1024px){.tool-fullbleed{max-width:var(--maxw);margin:0 auto;padding:0 24px}}
+/* The tool page's intro is the header OF AN APP, not the top of a prose page: tighter top space so
+   the tool starts sooner, and it inherits the same full-bleed-to-centred behaviour as the mount so
+   the title and the tool share one column. Scoped to .tool-intro so the site's other page headings
+   are untouched. */
+.tool-intro{padding-top:28px;padding-bottom:12px}
+@media(min-width:1024px){.tool-intro{padding-top:44px;max-width:var(--maxw);margin:0 auto}}
+.tool-intro h1.lg{font-size:clamp(24px,3vw,34px);margin-top:0}
+.tool-intro .lede{margin-top:10px}
 .hidden{display:none!important}
 .muted{color:var(--text-2)}
 .flex{display:flex;align-items:center}

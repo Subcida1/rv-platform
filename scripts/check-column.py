@@ -45,6 +45,11 @@ ALLOW = {
     "hub-jump": "the sticky jump bar, which has to span the viewport to stay stuck",
     "hero": "the homepage hero, full-bleed by design",
     "phone-bar": "the mobile action bar",
+    "tool-fullbleed": "the calculator mount. A tool is an app, not a block of prose, so on a phone "
+                      "it must run to the viewport edge rather than sit inside the 24px-gutter "
+                      "content column; it re-centres itself at 1024px. Wrapping it in .wrap put "
+                      "the app in two stacked centred columns and left a 310px content column on "
+                      "a 390px screen",
 }
 # A tag that opens a box. Everything else at depth 0 is a leaf and is judged on its own.
 BOX = re.compile(r"<(/?)(div|section|main|nav|article|aside)\b", re.I)
