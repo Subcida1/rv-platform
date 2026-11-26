@@ -457,5 +457,17 @@ window.RV_LISTINGS_MI = [
    "carp lake",
    "cedarville"
   ],  "region": "eastern Upper Peninsula",  "spec": "Located in the eastern Upper Peninsula May through October annually; site states it will not service the eastern Upper Peninsula of Michigan for the 2026 season. Does not service solar systems, brakes on motorized equipment, transmissions, engines, tires, generators, or major body repairs.",  "reg": "up-mi"
+ },
+ {  "n": "Michigan RV Repair",  "c": "Grand Rapids, MI",  "p": "(616) 290-3592",  "u": "https://michigan-rv-repair.com/",  "t": "mobile",  "e": true,  "r": false,  "d": "Michigan RV Repair is a mobile-only RV repair business based in Grand Rapids that comes to a customer's driveway, campsite, or storage lot. It lists electrical, plumbing, and roof repair, winterization and de-winterization, inspections, and emergency service for a power failure, a water leak, a stuck slide-out, or an RV that will not heat. It also takes on interior remodeling and custom work, including cabinetry, welding, upholstery, drapes, and 3D-printed replacement parts. Standard mobile labor runs $150 an hour, with a $95 travel charge past 15 miles and higher weekend and holiday emergency rates. It has no walk-in storefront and serves Grand Rapids, Wyoming, Kentwood, Byron Center, Holland, Rockford, and Grand Haven across West Michigan.",  "g": [
+   "mobile tech"
+  ],  "base": "grand rapids",  "areas": [
+   "grand rapids",
+   "wyoming",
+   "kentwood",
+   "byron center",
+   "holland",
+   "rockford",
+   "grand haven"
+  ],  "region": "West Michigan",  "spec": null,  "reg": "west-mi"
  }
 ];

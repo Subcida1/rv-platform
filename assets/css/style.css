@@ -490,6 +490,20 @@ input,select,textarea{font-family:inherit}
 .util a{white-space:nowrap}
 .util a:hover{color:var(--text)}
 .util .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--brand);margin-right:6px}
+/* THE DAY/NIGHT SWITCH IS A STRIP CONTROL, NOT A BOXED BUTTON (T, 2026-11-26).
+   It moved here from the nav actions, where it was a bordered, padded button in a
+   row of buttons. In this strip it sits beside About and Contact, which are plain
+   text with no chrome, so the same treatment would have made a 40px-tall box the
+   loudest thing on a 31px row. It is styled as a strip link instead: same size,
+   same color, same quiet weight, with the icon as the only ornament. The hit area
+   is grown by the shared pseudo-element below, like the links beside it. */
+.util .mode-toggle{display:inline-flex;align-items:center;gap:6px;background:none;
+ border:0;padding:0;margin:0;color:inherit;font:inherit;cursor:pointer;white-space:nowrap}
+.util .mode-toggle:hover{color:var(--text)}
+.util .mode-toggle:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:4px}
+.util .mode-toggle::after{content:"";position:absolute;inset:-8px -6px}
+.util .mode-toggle{position:relative}
+.util .mode-icon{width:14px;height:14px}
 /* Tap targets. Inline links in this strip and in the footer legal row are 20-21px
    tall, under the 24px minimum WCAG 2.2 sets and well under the 44px Apple
    recommends, and they are the same on every page of the site. Adding padding to
@@ -976,33 +990,15 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .cart-badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:var(--grad);color:var(--text-inv);font-size: var(--fs-xs);font-weight:800;display:grid;place-items:center}
 .burger{display:none;background:none;border:1px solid var(--border-2);border-radius:10px;padding:8px 10px}
 .burger svg{width:20px;height:20px;stroke:var(--text)}
-/* THE DAY/NIGHT SWITCH. It replaced the "RV tools" button in the nav (T,
-   2026-11-25), and it is the only control on the site that changes a colour
-   without leaving the page.
-
-   It is built from the same parts as the burger beside it -- 1px --border-2
-   edge, 10px radius, min-height 40px for a thumb -- so it reads as one of the
-   nav's controls rather than a thing bolted on. Every colour here is a token,
-   which is what lets the switch style itself in both modes with no second rule.
+/* THE DAY/NIGHT SWITCH. It is the only control on the site that changes a colour
+   without leaving the page. It lives in the utility strip, beside About and
+   Contact (T, 2026-11-26); the strip styling is up with the strip's own rules,
+   next to .util a, because that is the context it has to match.
 
    Both icons ship in the markup and CSS reveals one. That is deliberate: the
    SVG is small, and swapping it in CSS keeps the button's own markup free of a
    state that JavaScript owns. The rule keys off :root[data-mode] exactly as the
    rest of the token layer does, so the two can never disagree. */
-.mode-toggle{display:inline-flex;align-items:center;gap:7px;background:none;
- border:1px solid var(--border-2);border-radius:10px;padding:8px 12px;
- color:var(--text);font:inherit;cursor:pointer;min-height:40px;
- transition:background .15s ease,border-color .15s ease}
-.mode-toggle:hover{background:var(--surface-2);border-color:var(--text-3)}
-.mode-toggle:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-/* The phone-menu row. It sits in a column of links, so it has to look like one
-   of them (same padding, same height) while still being a button. The state
-   pushed to the right edge is what stops it reading as a link to another page. */
-.mm-mode{display:flex;align-items:center;justify-content:space-between;width:100%;
- background:none;border:0;font:inherit;color:var(--text);text-align:left;cursor:pointer}
-.mm-mode-state{font-size: var(--fs-sm);font-weight:700;color:var(--text-3);
- border:1px solid var(--border-2);border-radius:999px;padding:2px 10px}
-.mm-mode[aria-pressed="true"] .mm-mode-state{color:var(--brand);border-color:var(--brand)}
 .mode-icon{width:18px;height:18px;flex:none;stroke:currentColor;fill:none}
 .mode-label{font-size: var(--fs-sm);font-weight:600;line-height:1}
 /* Day is showing: offer the moon. Night is showing: offer the sun. */
@@ -1014,11 +1010,14 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
  :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-sun{display:none}
  :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-moon{display:inline}
 }
-@media (max-width:900px){
- /* On a phone the label costs more room than it earns; the icon carries it. */
- .mode-label{display:none}
- .mode-toggle{padding:8px 10px}
-}
+/* The phone-menu row. It sits in a column of links, so it has to look like one
+   of them (same padding, same height) while still being a button. The state
+   pushed to the right edge is what stops it reading as a link to another page. */
+.mm-mode{display:flex;align-items:center;justify-content:space-between;width:100%;
+ background:none;border:0;font:inherit;color:var(--text);text-align:left;cursor:pointer}
+.mm-mode-state{font-size: var(--fs-sm);font-weight:700;color:var(--text-3);
+ border:1px solid var(--border-2);border-radius:999px;padding:2px 10px}
+.mm-mode[aria-pressed="true"] .mm-mode-state{color:var(--brand);border-color:var(--brand)}
 /* The mobile menu: grouped, not a flat list. A heading links to its section index
    and its children sit indented under it. Padding is 24px to match the .wrap
    gutter of the logo directly above it; at 20px the menu sat 4px off the column
@@ -1702,12 +1701,18 @@ footer a:hover{color:var(--text-inv)}
   .acct-nav{position:static;flex-direction:row;flex-wrap:wrap}
 }
 @media(max-width:720px){
-  .nav-links,.util-r span{display:none}
+  .nav-links{display:none}
   /* About and Contact are already in the burger menu, and the three links on the left do
      not leave room for them at this width. Hiding the pair is what keeps the strip to one
      line instead of letting all five squeeze. Measured at 360px: three labels need about
-     230px of a 312px line, and the pair needs a further 98px. */
-  .util-r{display:none}
+     230px of a 312px line, and the pair needs a further 98px. The hide itself is stated
+     lower in this block, after the rule that shows every strip link. */
+  /* THE SWITCH STAYS ON A PHONE (T, 2026-11-26). About and Contact can hide because the
+     burger menu carries them; the day/night switch has no other home, so hiding the pair
+     must not take it too. It drops its word and keeps the icon, about 14px. */
+  .util-r{display:flex}
+  .util-r .mode-toggle{display:inline-flex}
+  .util-r .mode-label{display:none}
   .nav-cta-cap{display:none}
   .burger{display:block}
   .cat-grid,.camp-grid,.part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -1728,9 +1733,42 @@ footer a:hover{color:var(--text-inv)}
   .util{font-size:14px}
   .util .wrap{padding-top:0;padding-bottom:0;min-height:44px}
   .util a{padding:12px 0;min-height:44px;display:inline-flex;align-items:center}
+  /* THE ROW HAS TO FIT A 360px PHONE WITH THE SWITCH ON IT (T, 2026-11-26). The three
+     left links measure 316px and the switch 14px; with the strip's own 22px link gaps
+     and the 16px column gap that is 346px of content in 312px of usable line at 360px,
+     so the icon was clipped by 10px. Nothing is dropped: the gaps tighten instead. The
+     labels are the text a reader is reading, and the icon is the control; the space
+     between them is the only part that was ever decoration. 12px between links and 10px
+     between the two halves recovers 42px, which fits 360 with room to spare. */
+  .util-l,.util-r{gap:12px}
+  .util .wrap{gap:10px}
+  /* HIDING ABOUT AND CONTACT HAS TO BE SAID HERE, AFTER THE RULE ABOVE (T, 2026-11-26).
+     The line directly above sets display:inline-flex on EVERY strip link. A .util-r a
+     rule placed earlier in this block has equal specificity and loses to it, so About
+     and Contact stayed visible at 390px, the strip ran 509px wide against a 390px
+     viewport, and the day/night icon was pushed off the right edge. Order is the whole
+     fix: the hide comes after the show. */
+  .util-r a{display:none}
+  /* The switch gets the same treatment as the links it sits among: 44px tall, and side
+     padding so the icon is not a 14px sliver on a 360px row. It is a button, so the
+     .util a rule above does not reach it. */
+  .util .mode-toggle{padding:12px 0;min-height:44px}
+  .util .mode-toggle::after{inset:-2px -10px}
 }
 @media(max-width:520px){
   .cat-grid,.camp-grid,.part-grid{grid-template-columns:minmax(0,1fr)}
+}
+/* A 320px PHONE STILL FITS (T, 2026-11-26). The strip's three links plus the day/night
+   icon need 346px of content; at 360 the tightened gaps above fit it in 312px of line.
+   At 320 there are only 272px, and the 24px gutters either side are what is left to
+   give: the strip is its own full-width band, so it does not have to line up with the
+   page column the way body copy does. The gutter drops to 16px here, which is 288px of
+   line, and the icon lands inside it. This is the smallest viewport the site supports;
+   below it the strip would need a link removed, which is a content decision, not a
+   CSS one. */
+@media(max-width:340px){
+  .util .wrap{padding-left:16px;padding-right:16px}
+  .util-l,.util-r{gap:10px}
 }
 
 /* ============================================================

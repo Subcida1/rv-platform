@@ -1974,6 +1974,45 @@
         "licence": null
       },
       "reg": "up-mi"
+    },
+    {
+      "n": "Michigan RV Repair",
+      "c": "Grand Rapids, MI",
+      "p": "(616) 290-3592",
+      "u": "https://michigan-rv-repair.com/",
+      "t": "mobile",
+      "e": true,
+      "r": false,
+      "d": "Michigan RV Repair is a mobile-only RV repair business based in Grand Rapids that comes to a customer's driveway, campsite, or storage lot. It lists electrical, plumbing, and roof repair, winterization and de-winterization, inspections, and emergency service for a power failure, a water leak, a stuck slide-out, or an RV that will not heat. It also takes on interior remodeling and custom work, including cabinetry, welding, upholstery, drapes, and 3D-printed replacement parts. Standard mobile labor runs $150 an hour, with a $95 travel charge past 15 miles and higher weekend and holiday emergency rates. It has no walk-in storefront and serves Grand Rapids, Wyoming, Kentwood, Byron Center, Holland, Rockford, and Grand Haven across West Michigan.",
+      "g": [
+        "mobile tech"
+      ],
+      "base": "Grand Rapids",
+      "areas": [
+        "Grand Rapids",
+        "Wyoming",
+        "Kentwood",
+        "Byron Center",
+        "Holland",
+        "Rockford",
+        "Grand Haven"
+      ],
+      "region": "West Michigan",
+      "spec": null,
+      "reg": "west-mi",
+      "evidence": {
+        "checked": "https://michigan-rv-repair.com/",
+        "phone_quote": "616-290-3592",
+        "coverage_quotes": [
+          "MOBILE RV REPAIR EXPERTS · WE COME TO YOU. GRAND RAPIDS & WEST MICHIGAN",
+          "Serving central Grand Rapids, including ZIP 49503, and nearby communities.",
+          "We are a mobile business and do not operate a customer walk-in storefront. ZIP 49503 describes a covered service area, not a published business mailing or street address."
+        ],
+        "type_quote": "Mobile RV Repair Grand Rapids MI",
+        "emergency_quote": "Power failure, water leaks, a stuck slide-out or an RV that won't heat? Tell us what happened and where you're parked. Emergency requests are prioritized as availability allows.",
+        "roadside_quote": null,
+        "licence": null
+      }
     }
   ]
 }

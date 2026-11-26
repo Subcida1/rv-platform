@@ -210,7 +210,17 @@
  // link, and a bare <a> with no href is a lint complaint on 125 pages.
  return '<span id="top"></span><div class="util" role="navigation" aria-label="Utility"><div class="wrap">' +
  '<div class="util-l"><span class="dot"></span><a href="' + R(rt.directory) + '">Find RV service</a><a href="' + R(rt.guides) + '">Winter guides</a><a href="' + R(rt.manuals) + '">Manuals</a></div>' +
- '<div class="util-r"><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a></div>' +
+ /* THE DAY/NIGHT SWITCH SITS IN THE UTILITY BAR (T, 2026-11-26). It began in the
+   nav actions, replacing the "RV tools" button, which cost the site its most
+   prominent call to action. The switch is a site-wide control, not a product
+   button, so it belongs with the other site-wide links rather than in the row
+   of things a reader clicks to go somewhere. The RV tools button is back where
+   it was. */
+'<div class="util-r"><a href="' + R(rt.about) + '">About</a><a href="' + R(rt.contact) + '">Contact</a>' +
+'<button type="button" class="mode-toggle" data-mode-toggle aria-pressed="false" aria-label="Switch to night mode" title="Night mode">' +
+'<svg class="mode-icon mode-icon-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>' +
+'<svg class="mode-icon mode-icon-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 12.4A6.8 6.8 0 0 1 7.6 3.5a6.8 6.8 0 1 0 8.9 8.9Z"/></svg>' +
+'<span class="mode-label">Night</span></button></div>' +
  '</div></div>' +
  '<nav class="main" aria-label="Main"><div class="wrap">' +
  logoHTML() +
@@ -309,18 +319,13 @@
  '</div>' +
  searchFieldHTML('nav-search', 'Search guides, tools, parts', 'Site search') +
  '<div class="nav-actions">' + signinLink('btn btn-outline btn-sm') +
- /* THE NAV BUTTON IS THE DAY/NIGHT SWITCH (T, 2026-11-25). It replaces the
-    "RV tools" button that used to sit here. Tools are still one click away in
-    the menu beside it, so nothing is lost, and the switch is now on every one
-    of the 1,097 pages because the nav is generated.
-
-    A <button>, not a link: it changes the page in place, it does not navigate.
-    aria-pressed carries the state; the label carries the action. Both are set
-    by initTheme() in assets/js/site.js, so the markup here only needs the hook. */
- '<button type="button" class="mode-toggle" data-mode-toggle aria-pressed="false" aria-label="Switch to night mode" title="Night mode">' +
- '<svg class="mode-icon mode-icon-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>' +
- '<svg class="mode-icon mode-icon-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 12.4A6.8 6.8 0 0 1 7.6 3.5a6.8 6.8 0 1 0 8.9 8.9Z"/></svg>' +
- '<span class="mode-label">Night</span></button>' +
+ /* THE RV TOOLS BUTTON IS BACK (T, 2026-11-26). It was replaced by the day/night
+    switch during the theme build, which traded the site's most prominent call to
+    action for a control that fits better in the utility bar anyway. Tools are
+    still one click away in the menu beside it, but the button earns its place:
+    it is the only filled CTA in the header and the one thing that names what the
+    site is for. */
+ '<span class="nav-cta"><span class="nav-cta-cap">Free tools</span><a class="btn btn-primary btn-sm" href="' + R(rt.tools) + '">RV tools</a></span>' +
  '<button type="button" class="burger" aria-label="Menu" onclick="RV.toggleMenu()"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h12M4 10h12M4 14h12"/></svg></button></div>' +
  '</div>' +
  '<div class="mobile-menu">' + searchFieldHTML('mm-search', 'Search guides, tools, parts, or a ZIP', 'Site search, mobile menu') +
