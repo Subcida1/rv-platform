@@ -805,7 +805,10 @@ async function sendClaimantMail(env, to, token, business) {
       body: JSON.stringify({
         from,
         to,
-        reply_to: env.CLAIM_REPLY_TO || 'hello@originrv.com',
+        // Replies must land somewhere a person reads. CLAIM_REPLY_TO overrides; otherwise the
+        // same verified inbox that gets the claim notices is used, so a reply can never bounce
+        // because an alias was assumed to exist.
+        reply_to: env.CLAIM_REPLY_TO || env.DESTINATION || 'hello@originrv.com',
         subject: 'Confirm your OriginRV listing: ' + business,
         text,
       }),
@@ -894,7 +897,15 @@ async function handleNewClaim(request, env, allowed) {
   if (!env.DB) return json({ ok: false, error: 'storage not configured' }, 500, allowed);
 
   if (env.TURNSTILE_SECRET && !(await turnstileOk(request, env, data.turnstile))) {
-    return json({ ok: false, error: 'Verification failed' }, 400, allowed);
+    // A REFUSAL MUST BE ACTIONABLE. The check cannot pass without a token, and a browser
+    // that blocks the widget (an extension, a locked-down work machine, an old browser)
+    // would otherwise be told nothing. The address here is the same inbox a claim lands
+    // in, so a blocked owner still has a path that a person answers.
+    return json({
+      ok: false,
+      error: 'We could not verify this browser. Try again, or email contact@originrv.com '
+        + 'with the business name, town and phone and we will add the listing by hand.',
+    }, 400, allowed);
   }
 
   const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
