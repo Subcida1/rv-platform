@@ -104,7 +104,6 @@ const PROBE = `(() => {
    browser someone else started works at a desk and fails in CI, and two checks sharing one debug
    port corrupt each other's runs -- this repo has the screenshots to prove it. */
 const HTTP = await freePort();
-const CDP = await freePort();
 const PROFILE_LEAF = `cdp-heading-${process.pid}`;
 /* serve-static.py, NOT `python3 -m http.server`. The plain server answers only exact file paths, and
    this site publishes EXTENSIONLESS URLs (clean-urls.py rewrote 7,877 of them), so every page in the
@@ -115,74 +114,230 @@ const server = spawn('python3', ['scripts/serve-static.py', String(HTTP)],
   { cwd: ROOT, stdio: 'ignore', detached: true });
 server.unref();
 warnIfRuntimeFull();
-removeProfile(PROFILE_LEAF);
-const CHROME_ARGS = ['--headless=new', `--remote-debugging-port=${CDP}`, `--user-data-dir=/tmp/${PROFILE_LEAF}`,
-  '--no-first-run', '--no-default-browser-check', '--disable-gpu', '--window-size=1400,1000', 'about:blank'];
-const [cmd, ...pre] = (process.env.CHROME_BIN || 'flatpak').split(/\s+/);
-const chromeArgs = process.env.CHROME_BIN ? [...pre, ...CHROME_ARGS] : ['run', 'com.google.Chrome', ...CHROME_ARGS];
-const chrome = spawn(cmd, chromeArgs, { stdio: 'ignore', detached: true });
-chrome.unref();
-function cleanup() {
-  for (const pid of [chrome.pid, server.pid]) {
-    try { process.kill(-pid, 'SIGKILL'); } catch { try { process.kill(pid, 'SIGKILL'); } catch {} }
-  }
-  removeProfile(PROFILE_LEAF);
-}
-process.on('exit', cleanup);
 
-let target = null;
-for (let i = 0; i < 60; i++) {
-  try {
-    const list = await (await fetch(`http://127.0.0.1:${CDP}/json/list`)).json();
-    target = list.find((t) => t.type === 'page');
-    if (target) break;
-  } catch {}
-  await sleep(500);
-}
-if (!target) { console.error('no page target after 30s'); cleanup(); process.exit(2); }
 const BASE = argOf('--base', `http://127.0.0.1:${HTTP}/`);
-const ws = new WebSocket(target.webSocketDebuggerUrl);
-await new Promise((r) => (ws.onopen = r));
-let id = 0; const pending = new Map();
-ws.onmessage = (ev) => { const m = JSON.parse(ev.data);
-  if (m.id && pending.has(m.id)) { const pp = pending.get(m.id); pending.delete(m.id);
-    m.error ? pp.reject(new Error(JSON.stringify(m.error))) : pp.resolve(m.result); } };
-const send = (method, params = {}) => { const n = ++id;
-  return new Promise((resolve, reject) => { pending.set(n, { resolve, reject });
-    ws.send(JSON.stringify({ id: n, method, params })); }); };
+const pages0 = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)]
+  .map((m) => m[1].replace(/^https?:\/\/[^/]+\//, '')).filter((u) => !/\.(xml|txt)$/.test(u));
+let pages = argOf('--page', null) ? [argOf('--page')] : pages0;
+
+/* TEST HOOKS, refused under CI. HS_LIMIT caps the sweep so the death/relaunch path can be exercised
+   on a handful of pages; HS_FAULT=<n> kills the browser's session right after page index n so the
+   detection and relaunch are proven for real rather than argued about. Neither can run in CI: the
+   stage is unsampled by design and a fault hook in the gate would be a hazard. */
+const HS_LIMIT = Number(process.env.HS_LIMIT || 0);
+const HS_FAULT = process.env.HS_FAULT ? Number(process.env.HS_FAULT) : -1;
+if ((HS_LIMIT || HS_FAULT >= 0) && process.env.CI) {
+  console.error('heading space: FATAL HS_LIMIT/HS_FAULT set under CI (the stage is unsampled by design)');
+  process.exit(3);
+}
+if (HS_LIMIT) pages = pages.slice(0, HS_LIMIT);
+
+/* ---- BROWSER LIFECYCLE, WITH DEATH DETECTION AND RELAUNCH ----
+   THIS DEFECT, measured 2026-11-26: one headless Chrome serving all 1,090 pages stops answering
+   partway through -- seen at pages ~150, ~230 and ~341, and once it ran the whole sweep. When it
+   wedges, the CDP socket stays OPEN but no reply ever arrives, so `await evalJs(PROBE)` never
+   settles; node then exits with "Detected unsettled top-level await" (rc=13) and the stage reports
+   FAILED with no page named. The pattern (dying later when the sweep is private, earlier when other
+   Chrome work competes) points at ACCUMULATION -- a renderer, fd or /tmp-profile leak across a long
+   single-profile run -- not at one bad page.
+
+   THE FIX, in two parts, neither of which may skip a page:
+     1. RECYCLE. Replace the browser every RECYCLE_EVERY pages, before the leak can wedge it. This
+        is the primary fix: it turns "will it die?" into "it cannot get far enough to die".
+     2. DETECT. Every CDP call carries a timeout and the socket's close/error events reject every
+        in-flight call with BrowserDead. On BrowserDead the current page is retried on a fresh
+        browser from the SAME index -- never skipped, never double-counted (checked/findings live
+        outside the session).
+   A page that kills the browser MAX_ATTEMPTS times, or a run that exhausts MAX_RELAUNCHES, exits 3
+   with the page NAMED. A timeout that skipped the page would read as progress and would let a
+   genuinely broken page pass unseen -- the "clean result from an instrument that never loaded the
+   page" failure this repo keeps writing down. So it relaunches instead. */
+const RECYCLE_EVERY = Number(process.env.HS_RECYCLE_EVERY || 100);
+const MAX_RELAUNCHES = Number(process.env.HS_MAX_RELAUNCHES || 12);
+const MAX_ATTEMPTS_PER_PAGE = 3;
+const SEND_TIMEOUT_MS = 20_000;
+class BrowserDead extends Error { constructor(m) { super(m); this.name = 'BrowserDead'; } }
+
+let chrome = null, ws = null, sessionLive = false;
+let cdpPort = 0, leaf = '';
+let id = 0; let pending = new Map();
+const liveSessions = new Set();
+
+function killSession(sess) {
+  if (!sess) return;
+  liveSessions.delete(sess);
+  try { sess.ws && (sess.ws.onclose = sess.ws.onerror = sess.ws.onmessage = null, sess.ws.close()); } catch {}
+  try { sess.chrome && process.kill(-sess.chrome.pid, 'SIGKILL'); } catch {
+    try { sess.chrome && process.kill(sess.chrome.pid, 'SIGKILL'); } catch {} }
+  if (sess.leaf) removeProfile(sess.leaf);
+}
+
+function failAll(cause) {
+  const err = cause instanceof BrowserDead ? cause : new BrowserDead(cause);
+  for (const [, pp] of pending) { clearTimeout(pp.timer); pp.reject(err); }
+  pending.clear();
+}
+
+async function launchBrowser() {
+  cdpPort = await freePort();
+  leaf = `${PROFILE_LEAF}-${cdpPort}`;
+  removeProfile(leaf);
+  const CHROME_ARGS = ['--headless=new', `--remote-debugging-port=${cdpPort}`, `--user-data-dir=/tmp/${leaf}`,
+    '--no-first-run', '--no-default-browser-check', '--disable-gpu', '--window-size=1400,1000', 'about:blank'];
+  const [cmd, ...pre] = (process.env.CHROME_BIN || 'flatpak').split(/\s+/);
+  const chromeArgs = process.env.CHROME_BIN ? [...pre, ...CHROME_ARGS] : ['run', 'com.google.Chrome', ...CHROME_ARGS];
+  const c = spawn(cmd, chromeArgs, { stdio: 'ignore', detached: true });
+  c.unref();
+  const sess = { chrome: c, leaf, ws: null };
+  liveSessions.add(sess);
+
+  let target = null;
+  for (let i = 0; i < 60 && !target; i++) {
+    try { const l = await (await fetch(`http://127.0.0.1:${cdpPort}/json/list`)).json();
+      target = l.find((t) => t.type === 'page'); } catch {}
+    if (!target) await sleep(500);
+  }
+  if (!target) { killSession(sess); throw new BrowserDead(`no CDP page target on port ${cdpPort} after 30s`); }
+
+  const w = new WebSocket(target.webSocketDebuggerUrl);
+  sess.ws = w;
+  await new Promise((res, rej) => {
+    const t = setTimeout(() => rej(new BrowserDead('ws open timeout')), 10_000);
+    w.onopen = () => { clearTimeout(t); res(); };
+    w.onerror = () => { clearTimeout(t); rej(new BrowserDead('ws open error')); };
+  });
+  w.onmessage = (ev) => { const m = JSON.parse(ev.data);
+    if (m.id && pending.has(m.id)) { const pp = pending.get(m.id); pending.delete(m.id);
+      clearTimeout(pp.timer);
+      m.error ? pp.reject(new Error(JSON.stringify(m.error))) : pp.resolve(m.result); } };
+  w.onclose = (ev) => failAll(`ws closed (code ${ev.code})`);
+  w.onerror = () => failAll('ws error');
+  chrome = c; ws = w; sessionLive = true;
+  /* Per-session CDP setup. These must run on EVERY session (the original ran them once, before the
+     sweep): Runtime.enable is what makes Runtime.evaluate answer at all, and the device-metrics
+     override is what pins the 1440px width the spacing rule is measured at. */
+  try {
+    await send('Page.enable'); await send('Runtime.enable');
+    await send('Network.setCacheDisabled', { cacheDisabled: true });
+    await send('Emulation.setDeviceMetricsOverride', { width: W, height: 1000, deviceScaleFactor: 1, mobile: false });
+  } catch (e) {
+    killSession(sess); chrome = null; ws = null; sessionLive = false;
+    throw new BrowserDead(`CDP setup failed on port ${cdpPort}: ${e.message}`);
+  }
+}
+
+async function teardownBrowser() {
+  sessionLive = false;
+  failAll('teardown');
+  killSession({ chrome, ws, leaf });
+  chrome = null; ws = null;
+}
+
+const send = (method, params = {}) => new Promise((resolve, reject) => {
+  if (!sessionLive || !ws || ws.readyState !== 1) return reject(new BrowserDead(`socket not open before ${method}`));
+  const n = ++id;
+  const timer = setTimeout(() => { pending.delete(n);
+    reject(new BrowserDead(`${method}: no reply in ${SEND_TIMEOUT_MS}ms`)); }, SEND_TIMEOUT_MS);
+  pending.set(n, { resolve, reject, timer });
+  try { ws.send(JSON.stringify({ id: n, method, params })); }
+  catch (e) { clearTimeout(timer); pending.delete(n); reject(new BrowserDead(`send threw: ${e.message}`)); }
+});
 const evalJs = async (e) => {
   const r = await send('Runtime.evaluate', { expression: e, returnByValue: true, awaitPromise: true });
   if (r.exceptionDetails) throw new Error(JSON.stringify(r.exceptionDetails).slice(0, 300));
   return r.result.value;
 };
 
-await send('Page.enable'); await send('Runtime.enable');
-await send('Network.setCacheDisabled', { cacheDisabled: true });
-await send('Emulation.setDeviceMetricsOverride', { width: W, height: 1000, deviceScaleFactor: 1, mobile: false });
+function cleanup() { for (const s of [...liveSessions]) killSession(s);
+  try { process.kill(-server.pid, 'SIGKILL'); } catch { try { process.kill(server.pid, 'SIGKILL'); } catch {} } }
+process.on('exit', cleanup);
+process.on('unhandledRejection', (e) => {
+  console.error(`\nheading space: FATAL unhandled rejection: ${e && e.message ? e.message : e}`);
+  cleanup(); process.exit(3);
+});
 
-let pages = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)]
-  .map((m) => m[1].replace(/^https?:\/\/[^/]+\//, '')).filter((u) => !/\.(xml|txt)$/.test(u));
-if (argOf('--page', null)) pages = [argOf('--page')];
-
-let checked = 0; const findings = [];
-for (const p of pages) {
+/* ONE PAGE, ONE SESSION. Returns the probe result, or throws BrowserDead if the browser wedged and
+   a plain Error if the page itself could not be probed (a page error is reported, never swallowed:
+   the old `.catch(() => null)` + `continue` silently dropped both a dead browser AND a real probe
+   exception, which is how a broken page could pass unseen). */
+async function probePage(p) {
   await send('Page.navigate', { url: BASE + p + '?cb=' + Date.now() });
-  for (let i = 0; i < 80; i++) { await new Promise((r) => setTimeout(r, 100));
-    if ((await evalJs('document.readyState')) === 'complete') break; }
-  await new Promise((r) => setTimeout(r, 250));
-  const res = await evalJs(PROBE).catch(() => null);
-  process.stdout.write('.');
-  if (!res) continue;
-  checked += res.checked;
-  if (res.findings.length) findings.push({ page: p, ...res });
+  let complete = false;
+  for (let i = 0; i < 80 && !complete; i++) { await sleep(100);
+    complete = (await evalJs('document.readyState')) === 'complete'; }
+  if (!complete) throw new Error('readyState never reached complete in 8s');
+  await sleep(250);
+  return await evalJs(PROBE);
+}
+
+const total0 = pages.length;
+let checked = 0; const findings = []; const unprobed = [];
+let idx = 0, sinceRecycle = 0, relaunches = 0, recycled = 0;
+let faultDone = false;
+const attempts = new Map();
+
+try { await launchBrowser(); }
+catch (e) { console.error(`\nheading space: FATAL initial launch failed: ${e.message}`); cleanup(); process.exit(3); }
+
+while (idx < pages.length) {
+  if (sinceRecycle >= RECYCLE_EVERY && idx < pages.length) {   // part 1: proactive recycle
+    await teardownBrowser(); recycled++; sinceRecycle = 0;
+    try { await launchBrowser(); }
+    catch (e) { console.error(`\nheading space: FATAL recycle ${recycled} failed at page ${idx + 1}/${total0} (${pages[idx]}): ${e.message}`); cleanup(); process.exit(3); }
+  }
+  const p = pages[idx];
+  if (idx === HS_FAULT && !faultDone) {         // test-only: simulate the observed wedge, ONCE
+    faultDone = true;
+    console.error(`\n[HS_FAULT] simulating browser death before page ${idx + 1} (${p})`);
+    /* The observed failure is the browser ceasing to answer. Killing the chrome process reproduces
+       the real event (socket closes or goes silent) rather than only rejecting what is in flight. */
+    try { process.kill(-chrome.pid, 'SIGKILL'); } catch { try { process.kill(chrome.pid, 'SIGKILL'); } catch {} }
+  }
+  try {
+    const res = await probePage(p);
+    checked += res.checked; sinceRecycle++;
+    if (res.findings.length) findings.push({ page: p, ...res });
+    process.stdout.write('.');
+    idx++;
+  } catch (e) {
+    if (!(e instanceof BrowserDead)) {          // page-level: reported at the end, stage fails
+      unprobed.push({ page: p, error: e.message });
+      process.stdout.write('!'); idx++; sinceRecycle++;
+      continue;
+    }
+    const n = (attempts.get(idx) ?? 0) + 1; attempts.set(idx, n);
+    console.error(`\n[browser-death] page ${idx + 1}/${total0} ${p}: ${e.message}`);
+    if (n >= MAX_ATTEMPTS_PER_PAGE) {
+      console.error(`\nheading space: FATAL browser-death-unrecoverable: page ${p} (index ${idx}) killed the browser ${n} times; last cause: ${e.message}`);
+      cleanup(); process.exit(3);
+    }
+    if (relaunches >= MAX_RELAUNCHES) {
+      console.error(`\nheading space: FATAL browser-death-unrecoverable: relaunch budget ${MAX_RELAUNCHES} exhausted at page ${p} (index ${idx})`);
+      cleanup(); process.exit(3);
+    }
+    relaunches++;
+    console.error(`[browser-death] relaunch ${relaunches}/${MAX_RELAUNCHES}; resuming at page ${idx + 1} (${idx} pages done, ${checked} headings so far)`);
+    await teardownBrowser();
+    try { await launchBrowser(); sinceRecycle = 0; }
+    catch (le) { console.error(`\nheading space: FATAL browser-death-unrecoverable: relaunch ${relaunches} failed at page ${p} (index ${idx}): ${le.message}`); cleanup(); process.exit(3); }
+    /* idx is untouched: the SAME page is retried on the fresh browser, so nothing is skipped. */
+  }
 }
 process.stdout.write('\n');
-fs.writeFileSync(OUT, JSON.stringify({ base: BASE, width: W, minAbove: MIN_ABOVE, checked, findings }, null, 1));
+
+if (unprobed.length) {
+  console.log(`heading space: FAILED, ${unprobed.length} page(s) could not be probed:`);
+  for (const u of unprobed) console.log(`  ${u.page}: ${u.error}`);
+  console.log(`\n(detail: ${OUT}; ${checked} headings checked across ${idx - unprobed.length} pages, ${recycled} recycle(s), ${relaunches} relaunch(es))`);
+  fs.writeFileSync(OUT, JSON.stringify({ base: BASE, width: W, minAbove: MIN_ABOVE, checked, findings, unprobed, recycled, relaunches }, null, 1));
+  cleanup(); process.exit(1);
+}
+fs.writeFileSync(OUT, JSON.stringify({ base: BASE, width: W, minAbove: MIN_ABOVE, checked, findings, recycled, relaunches }, null, 1));
 
 const total = findings.reduce((n, f) => n + f.findings.length, 0);
 if (!total) {
-  console.log(`heading space: clean (${checked} headings with something above them, minimum ${MIN_ABOVE}px)`);
-  ws.close(); process.exit(0);
+  console.log(`heading space: clean (${checked} headings with something above them, minimum ${MIN_ABOVE}px; ${recycled} recycle(s), ${relaunches} relaunch(es))`);
+  cleanup(); process.exit(0);
 }
 console.log(`heading space: ${total} crowded heading(s) across ${findings.length} page(s)\n`);
 for (const f of findings) {
@@ -192,5 +347,5 @@ for (const f of findings) {
   if (f.findings.length > 6) console.log(`    ... and ${f.findings.length - 6} more`);
 }
 console.log(`\nfull detail: ${OUT}`);
-ws.close();
+cleanup();
 process.exit(1);

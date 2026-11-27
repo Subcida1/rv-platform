@@ -21,6 +21,22 @@ step() {                        # step <label> <command...>
   fi
 }
 
+# --------------------------------------------------------------------------
+# SWEEP ORPHANED CHROME PROFILES ON THE WAY OUT, WHATEVER THE WAY OUT IS.
+# The browser stages below each delete their own profile in a cleanup() wired to
+# process.on('exit'), and that is not enough: it does not fire on SIGTERM/SIGKILL, and the
+# flatpak Chrome runs inside bubblewrap, reparented OUTSIDE the process group the check
+# tries to kill -- so a stage that dies by signal or a cancelled run leaves a live headless
+# Chrome holding a cdp-* profile. Four such orphans once filled a 1.6 GB tmpfs and made
+# every later flatpak fail with "fallocate: No space left on device". A trap runs the sweep
+# on normal exit AND on INT/TERM, so the class of leak is closed regardless of which stage
+# died and how. See scripts/lib/chrome-profile.mjs.
+sweep_profiles() {
+  command -v node >/dev/null 2>&1 \
+    && node scripts/lib/chrome-profile.mjs --sweep >/dev/null 2>&1 || true
+}
+trap sweep_profiles EXIT INT TERM
+
 # ---------------------------------------------------------------- 1. our own gates
 step "verify.py: the site's own checks"        python3 scripts/verify.py
 step "verify-content.py: verdicts still match the pages they cover" \
