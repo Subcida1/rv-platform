@@ -160,6 +160,42 @@ def state_file(state_code):
     return None, None
 
 
+def record_owner_names(state_code, key):
+    """Names in the state's data whose listing key equals this one. The claim carries a key
+    derived from text the claimant typed, so a typo ("Michigan RV Repair LLC") lands on a key
+    no record has, and an approval then writes an override nothing ever reads. This is the
+    check that turns that silent miss into a sentence."""
+    _path, data = state_file(state_code)
+    if not data:
+        return None
+    want = str(key).split(":", 1)[-1]
+    hits = []
+    for row in data.get("listings", []):
+        name = row.get("n", "")
+        slugged = re.sub(r"[^a-z0-9]+", "-", str(name).lower().replace("&", " and ")
+                         .replace("'", "")).strip("-")
+        if slugged == want:
+            hits.append(name)
+    return hits
+
+
+def closest_names(state_code, key, limit=5):
+    """The nearest record names, so the reviewer can see what the claimant probably meant."""
+    import difflib
+    _path, data = state_file(state_code)
+    if not data:
+        return []
+    names = [row.get("n", "") for row in data.get("listings", []) if row.get("n")]
+    want = str(key).split(":", 1)[-1]
+    scored = []
+    for name in names:
+        slugged = re.sub(r"[^a-z0-9]+", "-", str(name).lower().replace("&", " and ")
+                         .replace("'", "")).strip("-")
+        scored.append((difflib.SequenceMatcher(None, want, slugged).ratio(), name))
+    scored.sort(reverse=True)
+    return [n for r, n in scored[:limit] if r > 0.55]
+
+
 def sql_approve_new(claim, payload, tier, proof, note, now):
     """Publish a NEW business. Same three-statement shape as sql_approve, but the row
     lands in listing_new, whose payload the builder merges into the state's listings.
@@ -355,6 +391,19 @@ def cmd_show(args):
         print("type          %s" % (r.get("type") or "(none)"))
         print("services      %s" % (r.get("services") or "(none)"))
         print("service area  %s" % (r.get("areas") or "(none)"))
+    kind = r.get("kind") or "claim"
+    if kind == "claim":
+        hits = record_owner_names(r.get("state"), r.get("listing_key"))
+        if hits is None:
+            print("match         cannot check: no _data/listings file for %s here" % r.get("state"))
+        elif not hits:
+            near = closest_names(r.get("state"), r.get("listing_key"))
+            print("match         NO RECORD carries this key. The name as typed does not slug to "
+                  "an existing listing, so an approval would go nowhere.")
+            if near:
+                print("              closest records: %s" % "; ".join(near))
+            print("              Ask them to resubmit the exact name, or approve the change by "
+                  "hand on the right record.")
     print("new phone     %s" % (r.get("new_phone") or "(none)"))
     print("new website   %s" % (r.get("new_website") or "(none)"))
     if r.get("photo_urls"):
@@ -459,6 +508,14 @@ def cmd_approve(args):
             sys.exit("tier=verified with proof=manual is a verification claim with no evidence. "
                      "Name how you checked it (domain_email, callback) or pass --force.")
         return cmd_approve_new(claim, args)
+    hits = record_owner_names(claim.get("state"), claim.get("listing_key"))
+    if hits == [] and not args.force:
+        near = closest_names(claim.get("state"), claim.get("listing_key"))
+        sys.exit("claim %s is for listing key %s, which NO record carries. Approving it would "
+                 "write an override nothing reads.\n  closest records: %s\n  Fix the key "
+                 "(reject and ask them to resubmit the exact name), or --force if you are "
+                 "certain the record should be created first."
+                 % (claim["id"][:8], claim.get("listing_key"), "; ".join(near) or "none"))
     phone = args.phone if args.phone is not None else claim.get("new_phone")
     website = args.website if args.website is not None else claim.get("new_website")
     if not phone and not website:
