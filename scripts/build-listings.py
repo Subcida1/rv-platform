@@ -56,6 +56,10 @@ PAGES = {slug: code.upper() for code, slug in C.state_shards().items()}
 # on data that is correct.
 REQUIRED = ("n", "c", "p", "d", "t")
 OPTIONAL = ("u", "e", "r", "g", "base", "areas", "radius", "region", "spec", "reg",
+            # owner-submitted: `own` marks a listing that came through the claim form and
+            # was approved by a person, `ph` is its rehosted photo(s). Both are written by
+            # scripts/apply-claims.py, never by hand.
+            "own", "ph",
             # provenance: what the finder recorded as evidence for this record. Not
             # shipped, see shard_text.
             "evidence")
@@ -93,11 +97,16 @@ TOWNS_START, TOWNS_END = "<!-- LISTINGS:TOWNS-START -->", "<!-- LISTINGS:TOWNS-E
 CLAIM_CARD = """      <div class="form-card  sp-34" id="claim">
         <div class="flex between gap">
           <div>
-            <h3>Claim your listing</h3>
-            <p class="form-sub">Free, permanent, yours to control. No middleman, no commission.</p>
+            <h3>List your RV business</h3>
+            <p class="form-sub">Free, permanent, yours to control. A person checks every listing before it goes up.</p>
           </div>
         </div>
+        <div class="claim-tabs" role="group" aria-label="Is your business already listed">
+          <label class="claim-tab"><input type="radio" name="cl-kind" value="claim" checked><span>My business is already listed</span></label>
+          <label class="claim-tab"><input type="radio" name="cl-kind" value="new"><span>Add my business</span></label>
+        </div>
         <form id="claim-form" class="form-stack sp-16" novalidate>
+          <input type="hidden" id="cl-idem" value="">
           <div class="fld">
             <label for="cl-name">Business name<span class="req">*</span></label>
             <input id="cl-name" type="text" placeholder="e.g. Cascade Mobile RV Repair" autocomplete="organization" required>
@@ -105,35 +114,155 @@ CLAIM_CARD = """      <div class="form-card  sp-34" id="claim">
           </div>
           <div class="form-row-2">
             <div class="fld">
-              <label for="cl-city">City<span class="req">*</span></label>
-              <input id="cl-city" type="text" placeholder="e.g. Eugene" autocomplete="address-level2" required>
+              <label for="cl-city">City</label>
+              <input id="cl-city" type="text" placeholder="e.g. Eugene" autocomplete="address-level2">
               <span class="err" id="cl-city-err"></span>
             </div>
             <div class="fld">
               <label for="cl-st">State<span class="req">*</span></label>
               <input id="cl-st" type="text" placeholder="OR" maxlength="2" class="upper" required>
+              <span class="err" id="cl-st-err"></span>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="fld">
+              <label for="cl-who">Your name<span class="req">*</span></label>
+              <input id="cl-who" type="text" placeholder="Owner or manager" autocomplete="name" required>
+              <span class="err" id="cl-who-err"></span>
+            </div>
+            <div class="fld">
+              <label for="cl-email">Email<span class="req">*</span></label>
+              <input id="cl-email" type="email" placeholder="you@your-business.com" autocomplete="email" required>
+              <span class="err" id="cl-email-err"></span>
             </div>
           </div>
           <div class="fld">
-            <label for="cl-phone">Phone<span class="req">*</span></label>
-            <input id="cl-phone" type="tel" placeholder="(541) 555-0123" autocomplete="tel" required>
+            <label for="cl-phone">Phone<span class="req only-new">*</span></label>
+            <input id="cl-phone" type="tel" placeholder="(616) 555-0123" autocomplete="tel">
+            <span class="hint" id="cl-phone-hint">The number on the listing now, or the correct one. A change is confirmed before it goes live, so leave it blank if it is already right.</span>
+            <span class="err" id="cl-phone-err"></span>
           </div>
           <div class="fld">
             <label for="cl-site">Website</label>
             <input id="cl-site" type="url" placeholder="https://your-site.com" autocomplete="url">
             <span class="hint">Optional. A working link helps more nearby RVers find you.</span>
           </div>
+          <div class="fld only-new">
+            <label for="cl-type">What kind of business<span class="req">*</span></label>
+            <select id="cl-type">
+              <option value="">Choose one</option>
+              <option value="mobile">Mobile technician, comes to the RV</option>
+              <option value="center">Shop or service center</option>
+              <option value="both">Both</option>
+            </select>
+            <span class="err" id="cl-type-err"></span>
+          </div>
+          <div class="fld only-new">
+            <label for="cl-services">What you work on</label>
+            <input id="cl-services" type="text" placeholder="e.g. appliances, slide-outs, roof reseal">
+            <span class="hint">A few words. These become the tags a reader filters by.</span>
+          </div>
+          <div class="fld only-new">
+            <label for="cl-areas">Towns you cover</label>
+            <input id="cl-areas" type="text" placeholder="e.g. Grand Rapids, Wyoming, Kentwood">
+          </div>
+          <div class="fld">
+            <label for="cl-note">Anything we should know</label>
+            <textarea id="cl-note" rows="3" maxlength="500" placeholder="Optional. Never shown on the site."></textarea>
+          </div>
+          <fieldset class="claim-photos">
+            <legend>Photos <span class="claim-opt">Optional. A shopfront, a service truck, or a job in progress.</span></legend>
+            <div class="form-row-2">
+              <div class="fld">
+                <label for="cl-photo1">Photo 1</label>
+                <input id="cl-photo1" data-photo type="file" accept="image/jpeg,image/png,image/webp">
+              </div>
+              <div class="fld">
+                <label for="cl-photo2">Photo 2</label>
+                <input id="cl-photo2" data-photo type="file" accept="image/jpeg,image/png,image/webp">
+              </div>
+            </div>
+            <div class="fld">
+              <label for="cl-photos-url">Or a link to your photos</label>
+              <input id="cl-photos-url" type="text" placeholder="https://... (up to three, separated by spaces)">
+              <span class="hint">A page or post with your photos is fine. We copy the image, so it does not depend on that page staying up.</span>
+            </div>
+            <label class="claim-license"><input type="checkbox" id="cl-license"> <span>These photos are mine, or I have permission to let OriginRV publish them on this listing.</span></label>
+            <span class="err" id="cl-license-err"></span>
+          </fieldset>
+          <div class="cf-turnstile" id="cl-turnstile" data-sitekey="" data-size="flexible" hidden></div>
           <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" aria-hidden="true">
-          <button class="btn btn-gb btn-block sp-4" type="submit">Claim my listing</button>
+          <p class="hint">We email you to confirm it is really you, then a person checks the listing before it goes live. Nothing appears on the site until that check is done. We keep your email and what you sent only for that; a claim we do not use is deleted after about 90 days. See <a href="/privacy">privacy</a>.</p>
+          <button class="btn btn-gb btn-block sp-4" type="submit" id="cl-submit">Claim my listing</button>
         </form>
       </div>"""
+
+
+CLAIMS = ROOT / "_data" / "claims.json"
+
+
+def claim_slug(name):
+    """The name half of a listing key. MUST match slug() in workers/claim-form.js: a
+    mismatch does not raise, it quietly files an owner's correction under a key no
+    record carries, so the override silently never renders."""
+    s = str(name or "")
+    for a, b in (("&amp;", "&"), ("&#39;", "'"), ("&#x27;", "'"), ("&quot;", '"'),
+                 ("&lt;", "<"), ("&gt;", ">")):
+        s = s.replace(a, b)
+    s = s.lower().replace("&", " and ").replace("'", "").replace("\u2019", "")
+    s = re.sub(r"[^a-z0-9]+", "-", s)
+    return s.strip("-")
+
+
+def merge_claims(data):
+    """Apply _data/claims.json to the state's records.
+
+    This is the ONE place owner data enters a build, which is why it lives in
+    read_state(): every generated surface (state page, town pages, the JS shard, the
+    schema block) reads through here, so an approved phone reaches all of them or none.
+    The file is written by scripts/apply-claims.py from the Worker's /claim/export,
+    which can only see approved rows. If the file is absent or empty the build is
+    byte-identical to one from before the claim form existed.
+    """
+    if not CLAIMS.exists():
+        return data
+    try:
+        claims = json.loads(CLAIMS.read_text(encoding="utf-8"))
+    except ValueError:
+        sys.exit("FAIL  _data/claims.json is not valid JSON")
+    st = str(data.get("state", "")).upper()
+    overrides = claims.get("overrides") or {}
+    applied = 0
+    for row in data["listings"]:
+        key = claim_slug(row.get("n"))
+        o = overrides.get(st.lower() + ":" + key) if key else None
+        if not o:
+            continue
+        if o.get("phone"):
+            row["p"] = o["phone"]
+        if o.get("website"):
+            row["u"] = o["website"]
+        row["own"] = True
+        applied += 1
+    fresh = (claims.get("new_listings") or {}).get(st, [])
+    have = {r.get("n") for r in data["listings"]}
+    for payload in fresh:
+        rec = {k: v for k, v in payload.items() if not k.startswith("_")}
+        if rec.get("n") in have:
+            sys.exit("FAIL  _data/claims.json adds %r to %s, but that name is already a "
+                     "record. Reject or merge the claim instead." % (rec.get("n"), st))
+        data["listings"].append(rec)
+        have.add(rec.get("n"))
+    if applied or fresh:
+        print("claims   %s: %d override(s), %d owner listing(s)" % (st, applied, len(fresh)))
+    return data
 
 
 def read_state(slug):
     src = DATA / ("%s.json" % slug)
     if not src.exists():
         sys.exit("no %s (run: python3 scripts/build-listings.py --import)" % src.relative_to(ROOT))
-    return json.loads(src.read_text(encoding="utf-8"))
+    return merge_claims(json.loads(src.read_text(encoding="utf-8")))
 
 
 def regions_of(data, row):

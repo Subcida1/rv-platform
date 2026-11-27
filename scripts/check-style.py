@@ -60,6 +60,11 @@ CENTER_OK = {
     # heading because a centred heading over a left-aligned line of its own label is the
     # ragged look the change was meant to fix.
     '.guide-group', '.guide-group-note', '.parts-sys-count',
+    # ADDED 2026-11-27: the claim card's two intent tabs. A segmented control IS two
+    # equal-width labels centred in their own pill; left-aligning one makes the pair read
+    # as a button next to a paragraph. Scoped to the span, so the tab is the only thing
+    # centred and nothing inside the form moves.
+    '.claim-tab span',
     # ADDED 2026-10-26: .az-h, the "All fifty states, A to Z" heading over the new flat list
     # on the directory hub. Centred for the reason above -- it is the same class of heading as
     # .hub-page h2.region-h, which sits a few hundred lines below it on the same page.

@@ -191,7 +191,12 @@ def main():
         # it must carry noindex (it does) and its own address is not a published URL anyone should
         # index or link as canonical. Flagging it would be an instrument reporting correct
         # behaviour as a failure, which teaches the reader to skim the output.
-        EXEMPT = {"404.html"}
+        EXEMPT = {"404.html",
+                  # The claim confirmation page. It is noindex by design (it is only ever
+                  # reached from an emailed link), so the "a page must be indexable"
+                  # assertion is the wrong shape for it rather than a fault. It is in the
+                  # sitemap's UNLISTED set for the same reason.
+                  "claim/confirm.html"}
         rels = []
         for p in sorted(ROOT.rglob("*.html")):
             rel = p.relative_to(ROOT)

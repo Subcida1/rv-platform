@@ -659,60 +659,252 @@ function footLogoHTML() {
  /* ---------- claim form ----------
    Two ways to deliver a claim, in order of preference:
 
-   1. POST to the form endpoint (Web3Forms by default). This works for every
-      visitor, including the many who have no mail client configured.
-   2. A mailto handoff, which needs the visitor's own mail client.
+   1. POST to the claim endpoint (the Worker's /claim route). Every visitor can
+      use it, including the many who have no mail client configured. It is the
+      ONLY path that writes a row and sends the confirmation email, so it is the
+      only path T can act on.
+   2. A mailto handoff, which needs the visitor's own mail client. It reaches the
+      same inbox, but no row is written and no confirmation is sent.
 
    It never claims success it did not achieve: if neither path is available the
    page says plainly that nothing was sent. Returns a promise for
-   'sent' | 'mailto' | 'none'. */
+   'sent' | 'mailto' | 'none'.
+
+   THE EMAIL IS REQUIRED AND THE PHONE IS NOT (2026-11-26). The old card made the
+   phone required and collected no email, so the one fact an owner usually wants
+   corrected was the field that could not be omitted, and there was no address to
+   reply to. `state` is the required half now because the claim's key is built
+   from it -- listingKey(state, business) -- and the city is review-only. */
+ /* THE TABS SIT OUTSIDE THE <form> (they are a segmented control above it), so every
+   lookup for the chosen intent goes through the CARD, not the form. Reading them off
+   the form found nothing and silently pinned every submission to 'claim'. */
+ function claimCard(form) {
+ return (form.closest && form.closest('#claim')) || form;
+ }
+
  function claimFields(form) {
  function v(id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; }
- var st = v('cl-st');
+ var st = v('cl-st').toUpperCase();
+ var city = v('cl-city');
+ var pick = claimCard(form).querySelector('input[name="cl-kind"]:checked');
+ var kind = pick && pick.value === 'new' ? 'new' : 'claim';
+ var lic = form.querySelector('#cl-license');
  return {
+ // KIND IS THE DIFFERENCE BETWEEN CORRECTING A RECORD AND CREATING ONE. The Worker
+ // treats 'new' as a business with no listing to match, so it requires a phone, a
+ // town and a type, and the reviewer gets a different checklist.
+ kind: kind,
  business: v('cl-name'),
- city: v('cl-city') + (st ? ', ' + st.toUpperCase() : ''),
+ city: city,
+ state: st,
+ cityLine: city + (st ? ', ' + st : ''),
+ claimant: v('cl-who'),
+ email: v('cl-email'),
  phone: v('cl-phone'),
- website: v('cl-site')
+ website: v('cl-site'),
+ type: v('cl-type'),
+ services: v('cl-services'),
+ areas: v('cl-areas'),
+ note: v('cl-note'),
+ photoUrls: v('cl-photos-url'),
+ license: !!(lic && lic.checked)
  };
+ }
+
+ /* ---------- photos ----------
+   SHRUNK IN THE BROWSER, then POSTed as multipart. A phone photo is 4 MB and the
+   Worker refuses over 1.5 MB per file, so the resize is not an optimisation: without
+   it the upload path simply does not work. 1400 px on the long edge at JPEG 0.82 is
+   around 300 KB for a shopfront and is still more pixels than a card ever draws. */
+ function claimPhotoInputs(form) {
+ return form.querySelectorAll ? form.querySelectorAll('input[data-photo]') : [];
+ }
+
+ function claimPhotoFiles(form) {
+ var out = [];
+ var inputs = claimPhotoInputs(form);
+ for (var i = 0; i < inputs.length && out.length < 2; i++) {
+ var f = inputs[i].files && inputs[i].files[0];
+ if (f) out.push(f);
+ }
+ return out;
+ }
+
+ function claimShrinkPhoto(file) {
+ return new Promise(function (resolve) {
+ if (!window.FileReader || typeof document.createElement !== 'function' || !/^image\//.test(file.type || '')) {
+ resolve(file);
+ return;
+ }
+ var img = new Image();
+ var url = URL.createObjectURL(file);
+ function give(blob) {
+ try { URL.revokeObjectURL(url); } catch (e) {}
+ if (!blob) { resolve(file); return; }
+ // Only accept the re-encode when it actually helped, and keep the extension honest.
+ resolve(blob.size && blob.size < file.size ? new File([blob], 'photo.jpg', { type: 'image/jpeg' }) : file);
+ }
+ img.onload = function () {
+ try {
+ var max = 1400, w = img.width, h = img.height;
+ if (w > max) { h = Math.round(h * max / w); w = max; }
+ var c = document.createElement('canvas');
+ c.width = w; c.height = h;
+ c.getContext('2d').drawImage(img, 0, 0, w, h);
+ if (c.toBlob) c.toBlob(give, 'image/jpeg', 0.82);
+ else give(null);
+ } catch (e) { give(null); }
+ };
+ img.onerror = function () { give(null); };
+ img.src = url;
+ });
+ }
+
+ /* ONE KEY PER PAGE LOAD, not per click. A double click, a back-button resubmit
+   and a retried request then all land on one row, because the Worker inserts
+   with ON CONFLICT(idem_key) DO NOTHING. crypto.randomUUID needs a secure
+   context, which every originrv.com page is; the getRandomValues fallback keeps
+   a local http:// preview working and still clears the Worker's 8-char floor. */
+ function claimIdem(form) {
+ var el = form.querySelector('#cl-idem');
+ if (!el) return '';
+ if (!el.value) {
+ var v = '';
+ if (window.crypto && crypto.randomUUID) v = crypto.randomUUID();
+ else if (window.crypto && crypto.getRandomValues) {
+ var b = new Uint8Array(16); crypto.getRandomValues(b);
+ for (var i = 0; i < b.length; i++) v += ('0' + b[i].toString(16)).slice(-2);
+ }
+ // A key that is never empty, because an empty one is a 400 from the Worker.
+ // This is a dedup key, not a token: unguessability is not the property it
+ // needs, and a context without crypto (an old browser, a test harness) still
+ // gets a key that clears the 8-character floor.
+ if (!v) v = 'k' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+ el.value = v;
+ }
+ return el.value;
+ }
+
+ /* The Turnstile token when the widget is on the page. Cloudflare renders an
+   input named cf-turnstile-response; with no site key configured there is no
+   widget, this returns '', and the Worker skips siteverify. */
+ function claimTurnstile() {
+ var el = document.querySelector('[name="cf-turnstile-response"]');
+ return el ? String(el.value || '') : '';
  }
 
  function claimMailto(form) {
  var to = (CFG.contact && CFG.contact.email) || '';
  if (!to) return false;
  var f = claimFields(form);
- var body = ['Business: ' + f.business, 'City: ' + f.city, 'Phone: ' + f.phone,
- 'Website: ' + f.website, '', 'Sent from the claim form at originrv.com'].join('\n');
+ var lines = ['Business: ' + f.business];
+ lines.push(f.kind === 'new' ? 'Kind: new business (not listed yet)' : 'Kind: claim on an existing listing');
+ if (f.cityLine) lines.push('City: ' + f.cityLine);
+ if (f.kind === 'new') {
+ if (f.type) lines.push('Type: ' + f.type);
+ if (f.services) lines.push('Services: ' + f.services);
+ if (f.areas) lines.push('Service area: ' + f.areas);
+ }
+ if (f.claimant) lines.push('Your name: ' + f.claimant);
+ if (f.email) lines.push('Email: ' + f.email);
+ if (f.phone) lines.push('Correct phone: ' + f.phone);
+ if (f.website) lines.push('Website: ' + f.website);
+ if (f.photoUrls) lines.push('Photo links: ' + f.photoUrls);
+ if (f.license) lines.push('Photos: claimant says they own them or have permission to publish');
+ if (f.note) lines.push('Note: ' + f.note);
+ lines.push('', 'Sent from the claim form at originrv.com');
+ var body = lines.join('\n');
  window.location.href = 'mailto:' + to +
  '?subject=' + encodeURIComponent('Listing claim: ' + f.business) +
  '&body=' + encodeURIComponent(body);
  return true;
  }
 
+ // The Worker's own message when it refuses a photo ("each photo must be under 1.5 MB"),
+ // so the page can repeat it instead of a generic failure. Cleared per submit.
+ var lastError = '';
+
+ function claimError() { return lastError; }
+
  function claimSubmit(form) {
  var cfg = CFG.contact || {};
- var endpoint = cfg.formEndpoint || '';
+ lastError = '';
+ var endpoint = cfg.claimEndpoint || '';
  if (!endpoint || typeof fetch !== 'function') {
  return Promise.resolve(claimMailto(form) ? 'mailto' : 'none');
  }
  var f = claimFields(form);
  var hp = form.querySelector('[name="botcheck"]');
  var payload = {
- Business: f.business,
- City: f.city,
- Phone: f.phone,
- Website: f.website,
+ kind: f.kind,
+ business: f.business,
+ city: f.city,
+ state: f.state,
+ email: f.email,
+ claimant_name: f.claimant,
+ new_phone: f.phone,
+ new_website: f.website,
+ type: f.type,
+ services: f.services,
+ areas: f.areas,
+ note: f.note,
+ photo_urls: f.photoUrls,
+ license: f.license ? 'true' : '',
+ idem_key: claimIdem(form),
+ turnstile: claimTurnstile(),
  botcheck: hp && hp.checked ? 'true' : ''
  };
- if (cfg.formKey) payload.access_key = cfg.formKey; // only providers that need one
- function fallback() { return claimMailto(form) ? 'mailto' : 'none'; }
- return fetch(endpoint, {
+ function post(url, body) {
+ return fetch(url, {
  method: 'POST',
  headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
- body: JSON.stringify(payload)
- }).then(function (r) { return r.json(); })
- .then(function (j) { return j && j.success ? 'sent' : fallback(); })
- .catch(fallback);
+ body: JSON.stringify(body)
+ }).then(function (r) { return r.json(); });
+ }
+ /* THE INTERIM PATH IS GONE (2026-11-27). It used to POST the old bare endpoint
+    whenever /claim did not answer, which was right while the Worker carrying /claim
+    was undeployed and wrong the moment it went live: a 400 for a missing field would
+    have been silently converted into an email, so the visitor saw "sent" for a claim
+    that never got a row, a token or a confirmation. /claim answers now (measured:
+    405 on GET, 400 with a message on a bad POST), so a refusal is repeated to the
+    visitor and nothing is retried behind their back. */
+ // The reply that means "a mail was sent" is the same shape the Worker answers with,
+ // j.success is the older provider's. Both are read so a worker deploy and a
+ // provider swap cannot silently turn a delivery into a fallback.
+ function sent(j) { return !!(j && (j.ok || j.success)); }
+ function toMailto() { return claimMailto(form) ? 'mailto' : 'none'; }
+ /* WITH PHOTOS, THE BODY IS MULTIPART and the Content-Type header is left alone so
+    the browser can set the boundary. Without photos the request stays JSON, which is
+    what the mailto/legacy fallbacks below expect. A photo that will not shrink still
+    goes up: the Worker checks the bytes and answers with a message a person can act on. */
+ var files = claimPhotoFiles(form);
+ if (files.length) {
+ return Promise.all(files.map(claimShrinkPhoto)).then(function (shrunk) {
+ var fd = new FormData();
+ Object.keys(payload).forEach(function (k) { fd.append(k, payload[k] == null ? '' : payload[k]); });
+ for (var i = 0; i < shrunk.length && i < 2; i++) {
+ fd.append('photo' + (i + 1), shrunk[i], 'photo-' + (i + 1) + '.jpg');
+ }
+ return fetch(endpoint, { method: 'POST', headers: { Accept: 'application/json' }, body: fd })
+ .then(function (r) { return r.json(); })
+ .then(function (j) {
+ if (sent(j)) return 'sent';
+ // A photo the Worker refused is a real answer, not a reason to silently retry
+ // without the photos: the visitor would think they were sent.
+ if (j && j.error) { lastError = j.error; return 'none'; }
+ return toMailto();
+ })
+ .catch(function () { return fallback(); });
+ });
+ }
+ function fallback() { return toMailto(); }
+ return post(endpoint, payload)
+ .then(function (j) {
+ if (sent(j)) return 'sent';
+ if (j && j.error) { lastError = j.error; return 'none'; }
+ return toMailto();
+ })
+ .catch(function () { return toMailto(); });
  }
 
  /* ---------- the claim form's submit handler ----------
@@ -742,19 +934,121 @@ function footLogoHTML() {
  document.body.appendChild(out);
  setTimeout(function () { out.remove(); }, 4200);
  }
+ function val(id) { var el = form.querySelector('#' + id); return el ? el.value.trim() : ''; }
+
+ /* TURNSTILE IS LOADED ONLY WHEN A SITE KEY IS CONFIGURED. The card is on a
+   thousand directory pages, and a third-party script fetched by all of them to
+   protect one form is the wrong trade; with no key the widget stays hidden, no
+   script is fetched, and the Worker skips siteverify entirely. The script is
+   injected rather than linked so a page with no key carries no reference to
+   Cloudflare at all. */
+ (function initTurnstile() {
+ var key = (CFG.contact && CFG.contact.turnstileSitekey) || '';
+ var box = form.querySelector('#cl-turnstile');
+ if (!key || !box || typeof document.createElement !== 'function') return;
+ box.hidden = false;
+ box.setAttribute('data-sitekey', key);
+ var s = document.createElement('script');
+ s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+ s.async = true; s.defer = true;
+ s.onload = function () {
+ if (window.turnstile && window.turnstile.render) window.turnstile.render(box, { sitekey: key });
+ };
+ (document.head || document.documentElement).appendChild(s);
+ })();
+
+ /* ONE CLAIM IN FLIGHT AT A TIME. The page key makes a repeat idempotent on the
+   Worker, but the visitor should also see the button stop, and a second submit
+   while the first is still open is never what they meant. */
+ /* ---------- the two intents ----------
+    "My business is already listed" and "Add my business" are the same form with a
+    different review checklist, so the page switches the required fields, the button
+    label and the placeholder rather than sending the visitor to a second page. The
+    fields that only a NEW business needs are hidden with .only-new and a class on the
+    form, so no JavaScript means the shorter version is what renders. */
+ function kindNow() {
+ var pick = claimCard(form).querySelector('input[name="cl-kind"]:checked');
+ return pick && pick.value === 'new' ? 'new' : 'claim';
+ }
+ function paintKind() {
+ var isNew = kindNow() === 'new';
+ if (form.classList) form.classList.toggle('as-new', isNew);
+ var btn = form.querySelector('#cl-submit');
+ if (btn) btn.textContent = isNew ? 'Add my business' : 'Claim my listing';
+ var hint = form.querySelector('#cl-phone-hint');
+ if (hint) {
+ hint.textContent = isNew
+ ? 'The number customers should call. It is not published until a person confirms the business.'
+ : 'The number on the listing now, or the correct one. A change is confirmed before it goes live, so leave it blank if it is already right.';
+ }
+ var name = form.querySelector('#cl-name');
+ if (name) name.placeholder = isNew ? 'e.g. Michigan RV Repair' : 'e.g. Cascade Mobile RV Repair';
+ }
+ var kinds = claimCard(form).querySelectorAll ? claimCard(form).querySelectorAll('input[name="cl-kind"]') : [];
+ for (var ki = 0; ki < kinds.length; ki++) kinds[ki].addEventListener('change', paintKind);
+ paintKind();
+
+ var busy = false;
  form.addEventListener('submit', function (e) {
  e.preventDefault();
- var nameEl = form.querySelector('#cl-name'), cityEl = form.querySelector('#cl-city');
- var n = nameEl ? nameEl.value.trim() : '', c = cityEl ? cityEl.value.trim() : '', ok = true;
- if (n.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; }
+ if (busy) return;
+ var business = val('cl-name'), state = val('cl-st').toUpperCase();
+ var who = val('cl-who'), email = val('cl-email'), ok = true;
+ if (business.length < 2) { setErr('cl-name-err', 'Add the business name'); ok = false; }
  else setErr('cl-name-err', '');
- if (c.length < 2) { setErr('cl-city-err', 'Add the city'); ok = false; }
+ if (!/^[A-Za-z]{2}$/.test(state)) { setErr('cl-st-err', 'Two-letter state, e.g. OR'); ok = false; }
+ else setErr('cl-st-err', '');
+ if (who.length < 2) { setErr('cl-who-err', 'Who are we talking to?'); ok = false; }
+ else setErr('cl-who-err', '');
+ if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { setErr('cl-email-err', 'A valid email, so we can confirm it is you'); ok = false; }
+ else setErr('cl-email-err', '');
+ var isNew = kindNow() === 'new';
+ if (isNew) {
+ // A business we do not have yet has to arrive with the three facts a reader needs:
+ // a town it files under, a phone that reaches it, and what kind of business it is.
+ if (val('cl-city').length < 2) { setErr('cl-city-err', 'The town the business is based in'); ok = false; }
  else setErr('cl-city-err', '');
+ if (val('cl-phone').replace(/\D/g, '').length < 7) { setErr('cl-phone-err', 'A phone number customers can call'); ok = false; }
+ else setErr('cl-phone-err', '');
+ if (!val('cl-type')) { setErr('cl-type-err', 'Mobile, a shop, or both'); ok = false; }
+ else setErr('cl-type-err', '');
+ } else {
+ setErr('cl-city-err', '');
+ setErr('cl-phone-err', '');
+ setErr('cl-type-err', '');
+ }
+ // A PHOTO WITHOUT PERMISSION IS NOT SHIPPABLE. The tick is what lets us publish it,
+ // so it is required exactly when a photo is offered, not as general paperwork.
+ var offered = claimPhotoFiles(form).length > 0 || val('cl-photos-url').length > 0;
+ var licEl = form.querySelector('#cl-license');
+ if (offered && !(licEl && licEl.checked)) {
+ setErr('cl-license-err', 'Tick the box so we know the photos are yours to publish');
+ ok = false;
+ } else setErr('cl-license-err', '');
  if (!ok) return;
+ claimIdem(form); // fixed for this submission, so a retry cannot double the row
+ var btn = form.querySelector('button[type="submit"]');
+ busy = true;
+ if (btn) btn.disabled = true;
  claimSubmit(form).then(function (how) {
- if (how === 'sent') { track('listing_claim', { method: 'sent', page: location.pathname }); toast('Request sent. It is in our inbox now.'); form.reset(); }
- else if (how === 'mailto') { track('listing_claim', { method: 'mailto', page: location.pathname }); toast('Your email app is opening with the details filled in. Send it and the request reaches us.'); form.reset(); }
- else { toast('Nothing was sent: there is no contact route available right now.', true); }
+ busy = false;
+ if (btn) btn.disabled = false;
+ if (how === 'sent') {
+ track('listing_claim', { method: 'sent', page: location.pathname });
+ // Deliberately does NOT say an email was sent: the Worker answers the same
+ // whether it mailed or held the claim for a manual reply. It says what is
+ // true in both branches -- nothing changes on the listing unconfirmed.
+ toast('Request received. A person reviews it before anything on your listing changes.');
+ form.reset();
+ } else if (how === 'mailto') {
+ track('listing_claim', { method: 'mailto', page: location.pathname });
+ toast('Your email app is opening with the details filled in. Send it and the request reaches us.');
+ form.reset();
+ } else if (claimError()) {
+ toast(claimError(), true);
+ } else {
+ toast('Nothing was sent: there is no contact route available right now.', true);
+ }
  });
  });
  }
@@ -1009,6 +1303,7 @@ function initTheme() {
  track: track,
  claimMailto: claimMailto,
  claimSubmit: claimSubmit,
+ claimError: claimError,
  playVideo: playVideo,
  mode: currentMode,
  setMode: setMode,

@@ -78,7 +78,7 @@ function context(attrs) {
   sandbox.__fetchCalls = [];
   sandbox.fetch = (url, opts) => {
     sandbox.__fetchCalls.push({ url, opts });
-    return Promise.resolve({ json: () => Promise.resolve({ success: true }) });
+    return Promise.resolve({ json: () => Promise.resolve({ ok: true, success: true }) });
   };
   vm.createContext(sandbox);
   return sandbox;
@@ -103,9 +103,11 @@ try {
 }
 
 // 2c. the claim form must produce a real mailto to the published address,
-//     carrying the fields. There is no backend, so this handoff IS the delivery.
+//     carrying the fields. This is the FALLBACK path now, and it still has to
+//     work when the Worker is unreachable or no claim endpoint is configured.
 if (sb.window.RV && typeof sb.window.RV.claimMailto === 'function') {
   const fields = { 'cl-name': 'Cascade Mobile RV Repair', 'cl-city': 'Bend', 'cl-st': 'or',
+                   'cl-who': 'Dana Reyes', 'cl-email': 'dana@cascade.example',
                    'cl-phone': '541-555-0123', 'cl-site': 'https://cascade.example' };
   const fakeForm = { querySelector: sel => ({ value: fields[sel.replace('#', '')] || '' }) };
   const before = String(sb.location.href);
@@ -115,7 +117,9 @@ if (sb.window.RV && typeof sb.window.RV.claimMailto === 'function') {
   const okAddr = href.startsWith('mailto:contact@originrv.com?');
   const okBody = href.includes(encodeURIComponent('Business: Cascade Mobile RV Repair')) &&
                  href.includes(encodeURIComponent('City: Bend, OR')) &&
-                 href.includes(encodeURIComponent('Phone: 541-555-0123')) &&
+                 href.includes(encodeURIComponent('Your name: Dana Reyes')) &&
+                 href.includes(encodeURIComponent('Email: dana@cascade.example')) &&
+                 href.includes(encodeURIComponent('Correct phone: 541-555-0123')) &&
                  href.includes(encodeURIComponent('Website: https://cascade.example'));
   if (handled && okAddr && okBody) console.log('  ok   claim form builds a mailto carrying every field');
   else {
@@ -125,40 +129,90 @@ if (sb.window.RV && typeof sb.window.RV.claimMailto === 'function') {
   }
 } else { console.log('  FAIL RV.claimMailto is not exposed'); failed++; }
 
-// 2d. with a form endpoint configured, a claim must POST there instead of
-//     depending on the visitor's mail client. A separate sandbox, because the
+// 2d. with a claim endpoint configured, a claim must POST the JSON the Worker
+//     reads -- business/state/email/claimant plus a page-load idem key -- rather
+//     than a mail-provider-shaped payload. A separate sandbox, because the
 //     endpoint has to be in place before site.js reads the config. Async, so it
 //     is collected and awaited before the summary below.
 const pending = [];
 {
   const fields = { 'cl-name': 'Cascade Mobile RV Repair', 'cl-city': 'Bend', 'cl-st': 'or',
-                   'cl-phone': '541-555-0123', 'cl-site': 'https://cascade.example' };
+                   'cl-who': 'Dana Reyes', 'cl-email': 'dana@cascade.example',
+                   'cl-phone': '541-555-0123', 'cl-site': 'https://cascade.example',
+                   'cl-type': 'mobile', 'cl-services': 'appliances, slide-outs',
+                   'cl-areas': 'Bend, Redmond', 'cl-idem': '' };
   const postForm = {
-    querySelector: sel => sel.startsWith('#')
-      ? { value: fields[sel.replace('#', '')] || '' }
-      : (sel === '[name="botcheck"]' ? { checked: false } : null),
+    querySelector: sel => sel === 'input[name="cl-kind"]:checked'
+      ? { value: 'new' }
+      : (sel.startsWith('#')
+        ? { value: fields[sel.replace('#', '')] || '' }
+        : (sel === '[name="botcheck"]' ? { checked: false } : null)),
   };
   const sb2 = context();
   runIn(sb2, 'assets/js/config.js');
-  sb2.window.RV_CONFIG.contact.formEndpoint = 'https://claim.example/submit';
+  sb2.window.RV_CONFIG.contact.claimEndpoint = 'https://claim.example/claim';
   runIn(sb2, 'assets/js/site.js');
   pending.push(sb2.window.RV.claimSubmit(postForm).then(how => {
     const call = sb2.__fetchCalls[0];
     const body = call ? JSON.parse(call.opts.body) : {};
-    const ok = how === 'sent' && call && call.url === 'https://claim.example/submit' &&
-               call.opts.method === 'POST' && body.Business === 'Cascade Mobile RV Repair' &&
-               body.City === 'Bend, OR' && body.Phone === '541-555-0123' &&
-               body.Website === 'https://cascade.example' && !('access_key' in body);
-    if (ok) console.log('  ok   a configured form endpoint POSTs the claim to it');
+    const ok = how === 'sent' && call && call.url === 'https://claim.example/claim' &&
+               call.opts.method === 'POST' &&
+               body.business === 'Cascade Mobile RV Repair' &&
+               body.city === 'Bend' && body.state === 'OR' &&
+               body.email === 'dana@cascade.example' &&
+               body.claimant_name === 'Dana Reyes' &&
+               body.new_phone === '541-555-0123' &&
+               body.new_website === 'https://cascade.example' &&
+               body.kind === 'new' && body.type === 'mobile' &&
+               body.services === 'appliances, slide-outs' &&
+               typeof body.idem_key === 'string' && body.idem_key.length >= 8 &&
+               !('access_key' in body);
+    if (ok) console.log('  ok   a configured claim endpoint POSTs the Worker payload');
     else {
       console.log('  FAIL claim POST: how=' + how + ' url=' + (call && call.url) +
-                   ' body=' + JSON.stringify(body).slice(0, 120));
+                   ' body=' + JSON.stringify(body).slice(0, 160));
       failed++;
     }
   }).catch(e => { console.log('  FAIL claimSubmit threw: ' + e.message); failed++; }));
 }
 
-// 2e. the shell must expose what pages depend on
+// 2e. a refusal from the Worker is REPEATED and nothing is retried behind the
+//     visitor's back (2026-11-27). The interim bare-endpoint fallback was removed
+//     once /claim went live: it turned a 400 into a silent email, so the page said
+//     "sent" for a claim that never got a row, a token or a confirmation.
+{
+  const fields = { 'cl-name': 'Cascade Mobile RV Repair', 'cl-city': 'Bend', 'cl-st': 'or',
+                   'cl-who': 'Dana Reyes', 'cl-email': 'dana@cascade.example',
+                   'cl-phone': '541-555-0123', 'cl-site': 'https://cascade.example',
+                   'cl-idem': '' };
+  const postForm = {
+    querySelector: sel => sel.startsWith('#')
+      ? { value: fields[sel.replace('#', '')] || '' }
+      : (sel === '[name="botcheck"]' ? { checked: false } : null),
+  };
+  const sb3 = context();
+  runIn(sb3, 'assets/js/config.js');
+  sb3.window.RV_CONFIG.contact.claimEndpoint = 'https://claim.example/claim';
+  runIn(sb3, 'assets/js/site.js');
+  sb3.__fetchCalls = [];
+  sb3.fetch = (url, opts) => {
+    sb3.__fetchCalls.push({ url, opts });
+    return Promise.resolve({ json: () => Promise.resolve({ ok: false, error: 'A valid email is required' }) });
+  };
+  pending.push(sb3.window.RV.claimSubmit(postForm).then(how => {
+    const calls = sb3.__fetchCalls;
+    const ok = how === 'none' && calls.length === 1 &&
+               sb3.window.RV.claimError() === 'A valid email is required';
+    if (ok) console.log('  ok   a Worker refusal is surfaced, with no second POST');
+    else {
+      console.log('  FAIL worker refusal: how=' + how + ' calls=' + JSON.stringify(calls.map(c => c.url)) +
+                   ' err=' + sb3.window.RV.claimError());
+      failed++;
+    }
+  }).catch(e => { console.log('  FAIL worker refusal threw: ' + e.message); failed++; }));
+}
+
+// 2f. the shell must expose what pages depend on
 if (sb.window.RV) {
   for (const fn of ['toggleMenu', 'searchRoute']) {
     if (typeof sb.window.RV[fn] === 'function') console.log('  ok   RV.' + fn + ' exposed');

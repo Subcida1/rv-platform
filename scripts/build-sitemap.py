@@ -46,6 +46,12 @@ NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 # serve it. Everything else on disk is expected in the sitemap.
 UNLISTED = {
     "404.html",
+    # The claim confirmation page. It carries noindex by design: it is reached only
+    # from a link in an email, its address means nothing to anyone who is not
+    # holding a live token, and it is the one page on the site a crawler must never
+    # be taught to fetch. Listed here so the sitemap and the page agree instead of
+    # the gate discovering the disagreement first.
+    "claim/confirm.html",
     # A placeholder for a feature that has not shipped. The nav door is already shut
     # (CFG.showSignin), so nothing links to it, but it was still listed here at priority
     # 0.2 - which asks Google to index a page whose only content is disabled inputs.

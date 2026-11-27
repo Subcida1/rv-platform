@@ -1001,14 +1001,18 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    rest of the token layer does, so the two can never disagree. */
 .mode-icon{width:18px;height:18px;flex:none;stroke:currentColor;fill:none}
 .mode-label{font-size: var(--fs-sm);font-weight:600;line-height:1}
-/* Day is showing: offer the moon. Night is showing: offer the sun. */
-:root[data-mode="dark"] .mode-icon-sun{display:none}
-:root:not([data-mode="dark"]) .mode-icon-moon{display:none}
-/* Before the pre-paint script runs there is no data-mode; default to the moon
-   for the same reason the default theme is light. */
+/* The WHOLE control names its DESTINATION: press it and you get the mode the
+   icon and the word both point at. Day is showing -> offer the moon ("Night").
+   Night is showing -> offer the sun ("Day"). The word is set by labelModeButton
+   in site.js to the same rule, so the two can never point opposite ways. */
+:root[data-mode="dark"] .mode-icon-moon{display:none}
+:root:not([data-mode="dark"]) .mode-icon-sun{display:none}
+/* Before the pre-paint script runs there is no data-mode. When the OS prefers
+   dark the token layer is already dark, so offer the sun; otherwise the page is
+   light and the base rule above already offers the moon. */
 @media (prefers-color-scheme: dark){
- :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-sun{display:none}
- :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-moon{display:inline}
+ :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-moon{display:none}
+ :root:not([data-mode="light"]):not([data-mode="dark"]) .mode-icon-sun{display:inline}
 }
 /* The phone-menu row. It sits in a column of links, so it has to look like one
    of them (same padding, same height) while still being a button. The state
@@ -2381,6 +2385,17 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .fld input:focus,.fld select:focus,.fld textarea:focus{background:var(--surface);border-color:var(--b1);box-shadow:0 0 0 3px var(--glow),0 2px 4px rgba(16,24,40,.06)}
 .fld input.error{border-color:var(--c-rose);box-shadow:0 0 0 1px rgba(244,63,94,.5)}
 .fld .err{font-size: var(--fs-xs);color:var(--c-rose);font-weight:600}
+/* A LINK IN A FORM HINT LOOKS LIKE A LINK (2026-11-26). The claim card's closing hint is
+   the site's first in-hint link. The reset renders every anchor plain, and the content-link
+   rule above is scoped to .prose, .card and their siblings -- a hint inside a .form-card is
+   in none of them -- so "privacy" painted exactly like the sentence around it and
+   directory/index.html failed check-link-visibility.mjs. Same fix, same reason, as .crumbs a. */
+.hint a{color:var(--b1);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.hint a:hover{text-decoration-thickness:2px}
+/* The Turnstile slot. Hidden until a site key is configured and the script loads. Declared
+   here because the generated claim card carries the class, and a class with no rule is an
+   orphan that verify.py fails on. */
+.cf-turnstile{margin:0 0 2px}
 .fld input[type=tel]{font-variant-numeric:tabular-nums}
 .fld input:disabled{background:var(--surface);color:var(--text-3);cursor:not-allowed}
 .form-stack{display:flex;flex-direction:column;gap:14px;max-width:100%}
@@ -5185,3 +5200,28 @@ html[data-theme="dark"] .hero h1 .hl{color:var(--b2)}
     .bandnav{transition:none}
   }
 }
+
+/* ---------- the claim card's two intents, photos, and a listing photo ----------
+   2026-11-27. "My business is already listed" and "Add my business" share one form;
+   `.as-new` is what the page sets when the second is chosen, and it reveals the
+   fields only a new business needs. No JavaScript leaves the shorter version, which
+   is the one that works for a claim. */
+.claim-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}
+.claim-tab{position:relative;flex:1 1 200px;min-width:0}
+.claim-tab input{position:absolute;width:1px;height:1px;opacity:0}
+.claim-tab span{display:block;padding:10px 12px;border:1px solid var(--border-2);border-radius:var(--radius);font-size:var(--fs-sm);font-weight:700;text-align:center;color:var(--text-2);cursor:pointer;transition:border-color .16s ease,color .16s ease}
+.claim-tab input:checked+span{border-color:var(--brand);background:var(--tint-bg);color:var(--text);box-shadow:inset 0 0 0 1px var(--brand)}
+.claim-tab input:focus-visible+span{outline:2px solid var(--brand);outline-offset:2px}
+.only-new{display:none}
+#claim-form.as-new .only-new{display:block}
+.req.only-new{display:none}
+#claim-form.as-new .req.only-new{display:inline}
+.claim-photos{border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin:0;display:flex;flex-direction:column;gap:12px}
+.claim-photos legend{padding:0 6px;font-size:var(--fs-sm);font-weight:800}
+.claim-opt{font-weight:400;color:var(--text-3);font-size:var(--fs-xs)}
+.claim-license{display:flex;gap:9px;align-items:flex-start;font-size:var(--fs-sm);color:var(--text-2);line-height:1.45}
+.claim-license input{margin-top:3px;flex:none}
+.listing-photo{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:calc(var(--radius) - 4px);background:var(--border)}
+#claim-form input[type=file]{width:100%;font-size:var(--fs-sm);color:var(--text-2)}
+#claim-form input[type=file]::file-selector-button{margin-right:10px;padding:8px 12px;border:1px solid var(--border-2);border-radius:999px;background:var(--surface);color:var(--text);font:inherit;font-size:var(--fs-xs);font-weight:700;cursor:pointer}
+#claim-form input[type=file]::file-selector-button:hover{border-color:var(--brand)}

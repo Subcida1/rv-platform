@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://originrv.com/directory/california">
   <title>RV Repair in California: 143 Providers (72 Mobile)</title>
   <meta name="description" content="Find RV repair in California: mobile technicians who come to you, service centers you can drive to, and roadside help for breakdowns across the state.">
-  <link rel="stylesheet" href="assets/css/style.css?v=6403cb75">
+  <link rel="stylesheet" href="assets/css/style.css?v=4f8fe9b7">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png?v=aad9f751">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/brand/favicon-16.png?v=a8459cee">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/brand/apple-touch-icon.png?v=a80bf3fd">
@@ -458,11 +458,16 @@ document.documentElement.setAttribute('data-mode',m);}catch(e){}})();</script>
       <div class="form-card  sp-34" id="claim">
         <div class="flex between gap">
           <div>
-            <h3>Claim your listing</h3>
-            <p class="form-sub">Free, permanent, yours to control. No middleman, no commission.</p>
+            <h3>List your RV business</h3>
+            <p class="form-sub">Free, permanent, yours to control. A person checks every listing before it goes up.</p>
           </div>
         </div>
+        <div class="claim-tabs" role="group" aria-label="Is your business already listed">
+          <label class="claim-tab"><input type="radio" name="cl-kind" value="claim" checked><span>My business is already listed</span></label>
+          <label class="claim-tab"><input type="radio" name="cl-kind" value="new"><span>Add my business</span></label>
+        </div>
         <form id="claim-form" class="form-stack sp-16" novalidate>
+          <input type="hidden" id="cl-idem" value="">
           <div class="fld">
             <label for="cl-name">Business name<span class="req">*</span></label>
             <input id="cl-name" type="text" placeholder="e.g. Cascade Mobile RV Repair" autocomplete="organization" required>
@@ -470,26 +475,86 @@ document.documentElement.setAttribute('data-mode',m);}catch(e){}})();</script>
           </div>
           <div class="form-row-2">
             <div class="fld">
-              <label for="cl-city">City<span class="req">*</span></label>
-              <input id="cl-city" type="text" placeholder="e.g. Eugene" autocomplete="address-level2" required>
+              <label for="cl-city">City</label>
+              <input id="cl-city" type="text" placeholder="e.g. Eugene" autocomplete="address-level2">
               <span class="err" id="cl-city-err"></span>
             </div>
             <div class="fld">
               <label for="cl-st">State<span class="req">*</span></label>
               <input id="cl-st" type="text" placeholder="OR" maxlength="2" class="upper" required>
+              <span class="err" id="cl-st-err"></span>
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="fld">
+              <label for="cl-who">Your name<span class="req">*</span></label>
+              <input id="cl-who" type="text" placeholder="Owner or manager" autocomplete="name" required>
+              <span class="err" id="cl-who-err"></span>
+            </div>
+            <div class="fld">
+              <label for="cl-email">Email<span class="req">*</span></label>
+              <input id="cl-email" type="email" placeholder="you@your-business.com" autocomplete="email" required>
+              <span class="err" id="cl-email-err"></span>
             </div>
           </div>
           <div class="fld">
-            <label for="cl-phone">Phone<span class="req">*</span></label>
-            <input id="cl-phone" type="tel" placeholder="(541) 555-0123" autocomplete="tel" required>
+            <label for="cl-phone">Phone<span class="req only-new">*</span></label>
+            <input id="cl-phone" type="tel" placeholder="(616) 555-0123" autocomplete="tel">
+            <span class="hint" id="cl-phone-hint">The number on the listing now, or the correct one. A change is confirmed before it goes live, so leave it blank if it is already right.</span>
+            <span class="err" id="cl-phone-err"></span>
           </div>
           <div class="fld">
             <label for="cl-site">Website</label>
             <input id="cl-site" type="url" placeholder="https://your-site.com" autocomplete="url">
             <span class="hint">Optional. A working link helps more nearby RVers find you.</span>
           </div>
+          <div class="fld only-new">
+            <label for="cl-type">What kind of business<span class="req">*</span></label>
+            <select id="cl-type">
+              <option value="">Choose one</option>
+              <option value="mobile">Mobile technician, comes to the RV</option>
+              <option value="center">Shop or service center</option>
+              <option value="both">Both</option>
+            </select>
+            <span class="err" id="cl-type-err"></span>
+          </div>
+          <div class="fld only-new">
+            <label for="cl-services">What you work on</label>
+            <input id="cl-services" type="text" placeholder="e.g. appliances, slide-outs, roof reseal">
+            <span class="hint">A few words. These become the tags a reader filters by.</span>
+          </div>
+          <div class="fld only-new">
+            <label for="cl-areas">Towns you cover</label>
+            <input id="cl-areas" type="text" placeholder="e.g. Grand Rapids, Wyoming, Kentwood">
+          </div>
+          <div class="fld">
+            <label for="cl-note">Anything we should know</label>
+            <textarea id="cl-note" rows="3" maxlength="500" placeholder="Optional. Never shown on the site."></textarea>
+          </div>
+          <fieldset class="claim-photos">
+            <legend>Photos <span class="claim-opt">Optional. A shopfront, a service truck, or a job in progress.</span></legend>
+            <div class="form-row-2">
+              <div class="fld">
+                <label for="cl-photo1">Photo 1</label>
+                <input id="cl-photo1" data-photo type="file" accept="image/jpeg,image/png,image/webp">
+              </div>
+              <div class="fld">
+                <label for="cl-photo2">Photo 2</label>
+                <input id="cl-photo2" data-photo type="file" accept="image/jpeg,image/png,image/webp">
+              </div>
+            </div>
+            <div class="fld">
+              <label for="cl-photos-url">Or a link to your photos</label>
+              <input id="cl-photos-url" type="text" placeholder="https://... (up to three, separated by spaces)">
+              <span class="hint">A page or post with your photos is fine. We copy the image, so it does not depend on that page staying up.</span>
+            </div>
+            <label class="claim-license"><input type="checkbox" id="cl-license"> <span>These photos are mine, or I have permission to let OriginRV publish them on this listing.</span></label>
+            <span class="err" id="cl-license-err"></span>
+          </fieldset>
+          <div class="cf-turnstile" id="cl-turnstile" data-sitekey="" data-size="flexible" hidden></div>
           <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" aria-hidden="true">
-          <button class="btn btn-gb btn-block sp-4" type="submit">Claim my listing</button>
+          <p class="hint">We email you to confirm it is really you, then a person checks the listing before it goes live. Nothing appears on the site until that check is done. We keep your email and what you sent only for that; a claim we do not use is deleted after about 90 days. See <a href="/privacy">privacy</a>.</p>
+          <button class="btn btn-gb btn-block sp-4" type="submit" id="cl-submit">Claim my listing</button>
         </form>
       </div>
 <!-- CLAIM:END -->
@@ -527,16 +592,16 @@ document.documentElement.setAttribute('data-mode',m);}catch(e){}})();</script>
 
  <div id="site-footer" role="contentinfo"><!-- footer:start --><a class="to-top" href="/directory/california#top" onclick="return RV.toTop()">Back to top</a><div class="foot-top"><div class="wrap"><div class="foot-grid"><div class="foot-brand"><a class="logo foot-logo" href="/"><img class="logo-word" src="/assets/img/brand/lockup-960.png?v=668d5a2d" alt="OriginRV" width="960" height="270"></a><p>Every mile of the RV life, one toolkit.</p></div><div class="foot-col"><p class="foot-h">Tools</p><a href="/tools/fuel-cost">Fuel cost calculator</a><a href="/tools/watts-to-amps">Watts to amps</a><a href="/tools/solar-sizing">Solar sizing</a><a href="/tools/battery-runtime">Battery runtime</a><a href="/tools/weight-calculator">Weight &amp; towing</a><a href="/tools/rv-loan">RV loan</a><a href="/tools/rv-recall-lookup">Recall lookup</a><a href="/tools/tire-date-code">Tire date code</a><a href="/tools/">All 15 tools</a></div><div class="foot-col"><p class="foot-h">Guides</p><a href="/guides/">All guides</a><a href="/guides/#electrical-and-charging">Electrical and charging</a><a href="/guides/#heat-cool-and-appliances">Heating, cooling and appliances</a><a href="/guides/#water-and-plumbing">Water and plumbing</a><a href="/guides/#body-slides-and-jacks">Body, slides and jacks</a><a href="/guides/#tires-towing-and-weight">Tires, towing and weight</a><a href="/guides/#winter-storage">Winter storage</a></div><div class="foot-col foot-dir"><p class="foot-h">Directory</p><a href="/directory/">Find RV service</a><a href="/directory/#claim">Claim your business</a><a href="/directory/#seed">What a listing carries</a></div><div class="foot-col"><p class="foot-h">Manuals</p><a href="/manuals/">All RV manuals</a><a href="/manuals/brands">Owner manuals by brand</a><a href="/manuals/recalls">Recalls and bulletins</a><a href="/manuals/power-and-electrical">Electrical manuals</a><a href="/manuals/towing-and-running-gear">Towing manuals</a><a href="/manuals/kitchen-and-appliances">Kitchen manuals</a></div><div class="foot-col foot-co"><p class="foot-h">Company</p><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a></div></div></div><div class="wrap foot-bottom"><span>© 2026 OriginRV. All rights reserved.</span><span class="foot-credit">Third-party photographs appear under the licenses credited beside each one, resized for display.</span><span class="legal"><a href="/">Home</a><a href="/directory/">Directory</a><a href="/guides/">Guides</a><a href="/privacy">Privacy</a></span></div></div><!-- footer:end --></div>
 <!-- LISTINGS:SCRIPTS-START -->
-  <script src="assets/js/config.js?v=e01b4086"></script>
+  <script src="assets/js/config.js?v=c8a66afe"></script>
   <script src="assets/js/coords-ca.js?v=ffa3fd24"></script>
   <script src="assets/js/listings/listings-ca.js?v=ba42f9c9"></script>
-  <script src="assets/js/site.js?v=a0379134"></script>
+  <script src="assets/js/site.js?v=b42a2e0c"></script>
   <script src="assets/js/places.js?v=794b2a03"></script>
   <script src="assets/js/location-data.js?v=395afcf3"></script>
   <script src="assets/js/towns.js?v=5a13e56a"></script>
   <script src="assets/js/locate.js?v=e8bd2dd4"></script>
   <script src="assets/js/towns-near.js?v=b79faab1"></script>
-  <script src="assets/js/finder.js?v=a76ab542"></script>
+  <script src="assets/js/finder.js?v=b2a2b104"></script>
   
 <!-- LISTINGS:SCRIPTS-END -->
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3727183603b6402b9249de33fa381acd"}'></script><!-- End Cloudflare Web Analytics -->

@@ -11,10 +11,24 @@ window.RV_CONFIG = {
  },
  contact: {
  email: 'contact@originrv.com', // Cloudflare Email Routing forwards this to Ty's inbox
- // Claim form endpoint: a Cloudflare Worker (workers/claim-form.js) that emails
- // the submission to the address above. Leave empty to fall back to a mailto.
- formEndpoint: 'https://originrv-claim.ty-g-brandes.workers.dev',
- formKey: '', // only for providers that require an access key; the Worker does not
+ // Claim form endpoint: the Worker's POST /claim route (workers/claim-form.js).
+ // It writes the claim row, emails Ty, and (once RESEND_API_KEY is set) sends the
+ // claimant a confirmation link. Leave it EMPTY and the card falls back to a
+ // mailto handoff, so shipping with it blank is inert rather than broken.
+ claimEndpoint: 'https://originrv-claim.ty-g-brandes.workers.dev/claim',
+ // The confirm route, on the same Worker. Kept beside the claim endpoint rather than
+ // derived from it by string surgery, so emptying one cannot silently leave the other
+ // pointing at a Worker that is not deployed.
+ claimConfirmEndpoint: 'https://originrv-claim.ty-g-brandes.workers.dev/claim/confirm',
+ // The pre-Phase-1 route (POST to the bare Worker URL) was RETIRED 2026-11-27, the
+ // day /claim went live: kept as a fallback it converted a refused claim into a
+ // silent email, so the page could say "sent" for a request that got no row and no
+ // confirmation. /claim answers now, and a refusal is shown as a refusal.
+ // Turnstile site key (public half). EMPTY UNTIL T CREATES THE KEYS: with no
+ // key, site.js fetches no Cloudflare script and the widget stays hidden, and
+ // the Worker skips siteverify. Fill this the same day TURNSTILE_SECRET is set
+ // on the Worker, or the form is unprotected on the intake route.
+ turnstileSitekey: '',
  routesTo: 'contact' // where the navbar "Contact" link goes
  },
  /* The click counter endpoint. Same Worker as the claim form

@@ -283,11 +283,19 @@
       var site = x.u
         ? '<a class="listing-go" href="' + esc(x.u) + '" target="_blank" rel="noopener" data-lk="' + lkn + '" data-lk-st="' + esc(ST) + '" data-lk-kind="site">Visit site &rarr;</a>'
         : '';
+      // A photo the OWNER supplied, rehosted by scripts/apply-claims.py. It is the one
+      // piece of a card that says "a real business, still trading" faster than prose.
+      // 16:9 box reserved by CSS so the reserved space does not shift as it loads, and
+      // lazy, because a state page can hold sixty of them and most are below the fold.
+      var photo = (x.ph && x.ph.length)
+        ? '<img class="listing-photo" src="' + esc(x.ph[0]) + '" alt="" loading="lazy" decoding="async" width="960" height="540">'
+        : '';
       return '<div class="card listing-card">' +
         '<div class="listing-top"><div class="listing-ic">' + (x.t === 'center' ? '&#127970;' : '&#128295;') + '</div>' +
         '<div class="listing-head"><div class="listing-name">' + name + '</div>' +
         '<div class="listing-loc">' + esc(x.c) + '</div></div>' +
         badge + '</div>' +
+        photo +
         flags +
         '<p class="listing-desc">' + esc(x.d) + '</p>' +
         '<div class="listing-tags">' + tags + '</div>' +
