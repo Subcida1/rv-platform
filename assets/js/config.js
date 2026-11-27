@@ -28,7 +28,7 @@ window.RV_CONFIG = {
  // key, site.js fetches no Cloudflare script and the widget stays hidden, and
  // the Worker skips siteverify. Fill this the same day TURNSTILE_SECRET is set
  // on the Worker, or the form is unprotected on the intake route.
- turnstileSitekey: '',
+ turnstileSitekey: '0x4AAAAAAGVYUFn4BpLGobpl',
  routesTo: 'contact' // where the navbar "Contact" link goes
  },
  /* The click counter endpoint. Same Worker as the claim form
