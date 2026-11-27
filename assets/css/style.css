@@ -892,15 +892,47 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    enough: the pointer left .nav-group on the way down, hover ended, and the panel
    closed before the pointer reached it -- which is why the menu "sometimes
    disappears" depending on how fast you move. Ty, 2026-10-05: "it's too sensitive
-   right now". The ::before spans the strip and, being a child of .drop, keeps the
-   whole .nav-group hovered while the pointer crosses it. It only exists while the
-   panel is open, because .drop is pointer-events:none when closed.
+   right now". The ::before spans the strip and, being inside the group's own link,
+   keeps the whole .nav-group hovered while the pointer crosses it. It only exists
+   while the panel is open, because it is pointer-events:none until the group is
+   hovered or open.
    VERIFIED with a real pointer on 2026-10-05, not reasoned about: pointing at the
    gap leaves elementFromPoint=.drop / group:hover / panel opacity 1; neutralising
    this rule gives elementFromPoint=.nav-links / group NOT hovered / opacity 0.
    Headless Chrome cannot report :hover from CSS alone, so the test drives
    Input.dispatchMouseEvent and reads the computed opacity. */
-.drop::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+/* THE BRIDGE MOVED OFF THE PANEL (2026-11-27). It worked for a year as .drop::before and then
+   stopped, and the reason is one rule added later in this same file: on 2026-11-02 the wide
+   panels gained max-height + overflow-y:auto, and a scroll container clips its absolutely
+   positioned descendants to its OWN padding box. The bridge sat 12px ABOVE that box, so it was
+   clipped down to nothing and the dead strip came back -- the panel closed as the pointer crossed
+   it, which is exactly the "sometimes the dropdown disappears" report that first put the bridge
+   here. It cannot be fixed on .drop: any overflow clips it, and the overflow is load-bearing (a
+   fifteen-row Tools panel is 771px tall against a 717px gap on a laptop, so it has to scroll).
+   MEASURED on the served page at 1440x900, Tools group, link bottom 94.4 / panel top 99.0:
+   with overflow:auto, elementFromPoint at y=94..97 returned .nav-links (dead); with
+   overflow:visible it returned .drop for the same rows. Root cause, not a guess.
+   IT HANGS OFF THE LINK, NOT THE GROUP, which is the second half of the fix. The group's own box
+   stops at the link's line box (88.98) while the link's padding carries it down to 94.39, so a
+   bridge starting at the group's bottom would lie across the last 5px of the link row and, once
+   it outranks the neighbouring links, stop a sideways move from switching menus. Anchored to
+   `.nav-group>.nav-link`, `top:100%` is the link's real bottom, which is where the dead strip
+   actually begins: 94.39 to 98.98, the 4.6px the 2026-10-05 note measured.
+   IT NEEDS z-index:1 (the second defect, same night). The search form is a LATER sibling whose
+   box [887,53,1147,99] reaches past the link row and into the strip, so it won the hit test
+   there -- and the only panel whose x-range reaches that column is the rightmost narrow one
+   (Manuals, 678..908), which is why that one menu still closed on a straight move down while the
+   others did not. Nothing is painted: the bridge has no background, so raising it changes no
+   pixel (proved by rendering the open menu with and without the fix and diffing the frames), and
+   the panel's first row starts at 108, clear of the bridge's 106.4.
+   The gate is unchanged in effect: pointer-events:none until the group is hovered or open, so
+   the strip only exists while the panel is up. The width is the widest panel (540px, the wide
+   menus) so a diagonal move to a far column never steps off it; the narrow panels get a wider
+   strip than they need, which costs nothing since only the hovered group's bridge is live. */
+.nav-group>.nav-link{position:relative}
+.nav-group>.nav-link::before{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);
+  width:540px;height:12px;pointer-events:none;z-index:1}
+.nav-group:hover>.nav-link::before,.nav-group.open>.nav-link::before{pointer-events:auto}
 .nav-group .caret{display:inline-block;margin-left:4px;font-size: var(--fs-xs);color:var(--text-3);transition:transform .16s}
 .nav-group:hover .caret,.nav-group.open .caret{transform:rotate(180deg)}
 /* No shadow on the dropdown. Ty, 2026-09-22: "its the shading around the dropdown".
