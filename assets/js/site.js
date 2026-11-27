@@ -988,6 +988,17 @@ function footLogoHTML() {
  for (var ki = 0; ki < kinds.length; ki++) kinds[ki].addEventListener('change', paintKind);
  paintKind();
 
+ /* AN ERROR CLEARS WHEN THE FIELD IS FIXED. Without this the red line under "State"
+    survives the correction and the visitor is told they are still wrong while looking
+    at a field they have already filled in. */
+ function clearFieldErr(e) {
+ var t = e && e.target;
+ if (!t || !t.id) return;
+ setErr(t.id + '-err', '');
+ }
+ form.addEventListener('input', clearFieldErr, true);
+ form.addEventListener('change', clearFieldErr, true);
+
  var busy = false;
  form.addEventListener('submit', function (e) {
  e.preventDefault();
