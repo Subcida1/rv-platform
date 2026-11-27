@@ -126,6 +126,7 @@ let pages = argOf('--page', null) ? [argOf('--page')] : pages0;
    stage is unsampled by design and a fault hook in the gate would be a hazard. */
 const HS_LIMIT = Number(process.env.HS_LIMIT || 0);
 const HS_FAULT = process.env.HS_FAULT ? Number(process.env.HS_FAULT) : -1;
+const HS_FAULT_EVERY = !!process.env.HS_FAULT_EVERY;   // re-kill on every pass at the fault page
 if ((HS_LIMIT || HS_FAULT >= 0) && process.env.CI) {
   console.error('heading space: FATAL HS_LIMIT/HS_FAULT set under CI (the stage is unsampled by design)');
   process.exit(3);
@@ -262,10 +263,14 @@ process.on('unhandledRejection', (e) => {
    exception, which is how a broken page could pass unseen). */
 async function probePage(p) {
   await send('Page.navigate', { url: BASE + p + '?cb=' + Date.now() });
+  /* readyState poll budget. 8s was too tight under cron load: on a busy run ONE page
+     (directory/southdakota/watertown) hit "never reached complete in 8s" while the site was fine,
+     because the poll competes with the other gate stages for the box. The poll is 60 x 250ms = 15s,
+     which still fails loudly and NAMES the page if a page genuinely never settles. */
   let complete = false;
-  for (let i = 0; i < 80 && !complete; i++) { await sleep(100);
+  for (let i = 0; i < 60 && !complete; i++) { await sleep(250);
     complete = (await evalJs('document.readyState')) === 'complete'; }
-  if (!complete) throw new Error('readyState never reached complete in 8s');
+  if (!complete) throw new Error('readyState never reached complete in 15s');
   await sleep(250);
   return await evalJs(PROBE);
 }
@@ -286,7 +291,7 @@ while (idx < pages.length) {
     catch (e) { console.error(`\nheading space: FATAL recycle ${recycled} failed at page ${idx + 1}/${total0} (${pages[idx]}): ${e.message}`); cleanup(); process.exit(3); }
   }
   const p = pages[idx];
-  if (idx === HS_FAULT && !faultDone) {         // test-only: simulate the observed wedge, ONCE
+  if (idx === HS_FAULT && (HS_FAULT_EVERY || !faultDone)) {   // test-only: simulate the observed wedge
     faultDone = true;
     console.error(`\n[HS_FAULT] simulating browser death before page ${idx + 1} (${p})`);
     /* The observed failure is the browser ceasing to answer. Killing the chrome process reproduces
@@ -300,8 +305,17 @@ while (idx < pages.length) {
     process.stdout.write('.');
     idx++;
   } catch (e) {
-    if (!(e instanceof BrowserDead)) {          // page-level: reported at the end, stage fails
-      unprobed.push({ page: p, error: e.message });
+    if (!(e instanceof BrowserDead)) {          // page-level failure: recorded and fails the stage at the end, never silent
+      /* ONE re-attempt for a page that did not settle. readyState timeouts are load-sensitive (the
+         poll competes with other gate stages), so a single retry removes the flake without weakening
+         the guarantee: a page that truly cannot be probed still fails the stage, NAMED. */
+      const n = (attempts.get(idx) ?? 0) + 1; attempts.set(idx, n);
+      if (n < MAX_ATTEMPTS_PER_PAGE) {
+        console.error(`\n[page-retry] page ${idx + 1}/${total0} ${p}: ${e.message} (attempt ${n}/${MAX_ATTEMPTS_PER_PAGE})`);
+        await sleep(500);
+        continue;                               // idx untouched: retry the same page
+      }
+      unprobed.push({ page: p, error: `${e.message} (after ${n} attempts)` });
       process.stdout.write('!'); idx++; sinceRecycle++;
       continue;
     }
