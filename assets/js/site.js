@@ -245,7 +245,7 @@
  dropLink(rt.toolSnow, 'Roof Snow Load', "Snow's weight on the roof") +
  dropLink(rt.toolTireAge, 'Tire Date Code', 'The week a tire was made') +
  '</div>' +
- '<div class="drop-col">' + dropHead('Finders') +
+ '<div class="drop-col">' + dropHead('Parts and lookups') +
  dropLink(rt.toolToilet, 'Toilet Water Valve', 'The valve a freeze breaks') +
  dropLink(rt.toolRecall, 'Recall Lookup', 'A recall by VIN range') +
  dropLink(rt.toolAnode, 'Anode Rod', 'Which heaters take one') +
@@ -333,18 +333,21 @@
  /* THE PHONE MENU CARRIES THE SAME LISTS AS THE DESKTOP ONE (2026-11-02). It is the only
     navigation below 900px, so a menu that names 7 of 15 tools costs a phone reader eight
     pages they cannot reach at all. Fifteen rows under one heading is the thing to avoid,
-    so the tools keep the desktop panel's split into Calculators and Finders -- but as
+    so the tools keep the desktop panel's split into Calculators and Parts and lookups -- but as
     SUB-HEADINGS inside one Tools group, not as two top-level groups of their own. T,
     2026-11-28: the two headings read as two main-nav sections when they are one page
     (/tools/), so the phone nav said "six sections" where the desktop said "Tools". The
     outer group is the section; the inner labels just divide its fifteen rows by the
-    question they answer. Both, and the outer head, link the hub. */
- mmToolsGroup(rt.tools,
+    question they answer. Every group is collapsed by default, so the hub line ("All 15
+    tools") is the panel's FIRST row, exactly as "All guides" and "Every RV part" lead
+    their panels. */
+ mmGroup('Tools', rt.tools,
+   [['All 15 tools', rt.tools]],
    [['Calculators', [['Fuel cost', rt.toolFuel], ['Watts to amps', rt.toolWatts],
      ['Solar sizing', rt.toolSolar], ['RV loan', rt.toolLoan],
      ['Weight & towing', rt.calculator], ['Battery runtime', rt.toolBattery],
      ['Roof snow load', rt.toolSnow], ['Tire date code', rt.toolTireAge]]],
-    ['Finders', [['Toilet water valve', rt.toolToilet], ['Recall lookup', rt.toolRecall],
+    ['Parts and lookups', [['Toilet water valve', rt.toolToilet], ['Recall lookup', rt.toolRecall],
      ['Anode rod', rt.toolAnode], ['Converter and power center', rt.toolConverter],
      ['Appliance control board', rt.toolBoard], ['Water filter', rt.toolFilter],
      ['State brake laws', rt.toolBrakeLaws]]]]) +
@@ -382,44 +385,47 @@
  '</div></nav>';
  }
 
- /* One block of the mobile menu: a heading that goes to the section index, then
-    its children indented under it. This replaces a flat run of nineteen links in
-    which the children were marked with a literal ". " in front of the label, so
-    "Guides" and ". Tires through winter" rendered identically and nothing said
-    which page belonged to which section. */
- function mmGroup(title, href, items) {
- return '<div class="mm-group"><a class="mm-head" href="' + R(href) + '">' + esc(title) + '</a>' +
- items.map(function (it) {
- return '<a class="mm-sub" href="' + R(it[1]) + '">' + esc(it[0]) + '</a>';
- }).join('') + '</div>';
- }
+ /* One block of the mobile menu: a COLLAPSIBLE heading that goes to the section index,
+    then its children indented under it, hidden until the heading is tapped. This
+    replaces a flat run of nineteen links in which the children were marked with a
+    literal ". " in front of the label, so "Guides" and ". Tires through winter" rendered
+    identically and nothing said which page belonged to which section.
 
- /* THE TOOLS GROUP IS THE ONE COLLAPSIBLE SECTION (T, 2026-11-28, variant B).
-    Every other group in the phone menu is a short list that can just sit open. Tools
-    is fifteen rows, so it starts COLLAPSED behind its own heading and expands on tap,
-    and only it carries a chevron. Calculators and Finders are sub-headings INSIDE the
-    panel -- non-links that divide the rows by the question they answer -- so the phone
-    menu reads one section where it used to read two ("Calculators" and "Finders" as
-    separate top-level groups, when both are /tools/). The heading itself, and each
-    sub-heading's rows, keep their destinations; the heading still links the hub.
+    EVERY GROUP IS COLLAPSED BY DEFAULT (T, 2026-11-28). It began as Tools-only, because
+    Tools is the long one at fifteen rows; T asked for uniformity ("make them all
+    collapsed by default"), so every section now opens on tap and the phone menu is a
+    short list of section names until a reader chooses one. Uniform also means honest:
+    every head carries the same chevron and behaves the same way, so the marker never
+    says "this one is different" about a section that is not. Nothing is added to the
+    tap cost that was not there before -- the section index used to be the first row of
+    every group anyway, and it is still the head.
 
     A DISCLOSURE, NOT A NAV ROW. The head is a <button aria-expanded> so it opens in
     place and never navigates; a screen reader hears a collapsed control, and the panel
     is hidden with [hidden] rather than by class so it is out of the a11y tree until
-    opened. The "All 15 tools" line at the bottom is the exit to the hub, mirroring the
-    desktop panel's drop-all. */
- function mmToolsGroup(href, sections) {
- var inner = sections.map(function (sec) {
+    opened.
+
+    SUB-SECTIONS ARE OPTIONAL. Tools passes `sections` -- [label, [[text, href], ...]]
+    pairs that render as non-link sub-headings dividing its rows by the question they
+    answer (Calculators, Parts and lookups). Every other group passes a flat `items` list and gets
+    no sub-headings. The head, and the group's own index line at the bottom, link the
+    section hub; the sub-headings do not, because they name a division, not a page. */
+ function mmGroup(title, href, items, sections) {
+ var body = sections ? sections.map(function (sec) {
  return '<p class="mm-subhead">' + esc(sec[0]) + '</p>' +
  sec[1].map(function (it) {
  return '<a class="mm-sub" href="' + R(it[1]) + '">' + esc(it[0]) + '</a>';
  }).join('');
+ }).join('') : items.map(function (it) {
+ return '<a class="mm-sub" href="' + R(it[1]) + '">' + esc(it[0]) + '</a>';
  }).join('');
+ /* The panel id is derived from the title, lowercased and stripped to word characters,
+    so aria-controls names a real element and no two groups can collide. */
+ var pid = 'mm-panel-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
  return '<div class="mm-group">' +
- '<button type="button" class="mm-head mm-toggle" aria-expanded="false" aria-controls="mm-tools-panel" onclick="RV.toggleMmGroup(this)">' +
- 'Tools<span class="mm-chev" aria-hidden="true"></span></button>' +
- '<div class="mm-panel" id="mm-tools-panel" hidden>' + inner +
- '<a class="mm-sub mm-sub-all" href="' + R(href) + '">All 15 tools</a></div></div>';
+ '<button type="button" class="mm-head mm-toggle" aria-expanded="false" aria-controls="' + pid + '" onclick="RV.toggleMmGroup(this)">' +
+ esc(title) + '<span class="mm-chev" aria-hidden="true"></span></button>' +
+ '<div class="mm-panel" id="' + pid + '" hidden>' + body + '</div></div>';
  }
 
  /* ---------- back to top ----------

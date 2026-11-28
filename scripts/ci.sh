@@ -22,7 +22,8 @@ fail=0
 # real (non-flatpak) Chrome instead; the scripts already honour CHROME_BIN, and --no-sandbox
 # is required for a headless Chrome to run as a normal user on this box. Guarded on the file
 # existing so a machine without it (or CI with its own Chrome) still uses the default.
-for _cb in /home/user/.hermes/tools/chromium-1248/chrome-linux64/chrome \
+for _cb in /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome \
+           /home/user/.hermes/tools/chromium-1248/chrome-linux64/chrome \
            /home/user/.hermes/tools/chromium-1208/chrome-linux64/chrome; do
   if [ -x "$_cb" ]; then export CHROME_BIN="$_cb --no-sandbox"; break; fi
 done

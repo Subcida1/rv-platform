@@ -207,9 +207,33 @@ ws.addEventListener('message', (ev) => {
   const m = JSON.parse(ev.data);
   if (m.id && pending.has(m.id)) { pending.get(m.id)(m); pending.delete(m.id); }
 });
-const send = (method, params = {}) => new Promise((res) => {
-  const i = ++msgId; pending.set(i, res); ws.send(JSON.stringify({ id: i, method, params }));
+const send = (method, params = {}) => new Promise((res, rej) => {
+  const i = ++msgId;
+  const t = setTimeout(() => {
+    if (pending.has(i)) { pending.delete(i); rej(new Error(`CDP ${method} timed out`)); }
+  }, 8000);
+  pending.set(i, (m) => { clearTimeout(t); res(m); });
+  try { ws.send(JSON.stringify({ id: i, method, params })); }
+  catch (e) { clearTimeout(t); pending.delete(i); rej(e); }
 });
+
+// A socket that dies mid-run (headless Chrome can be killed by a colliding flatpak
+// instance) used to hang the top-level await and surface as "Detected unsettled
+// top-level await" -- a red gate that names no site defect. Fail loudly instead, and
+// let the caller retry the page. See the CHROME_BIN note in ci.sh: the root cause is
+// fixed there; this is the backstop for any other death.
+let socketDead = false;
+ws.addEventListener('close', () => { socketDead = true; });
+ws.addEventListener('error', () => { socketDead = true; });
+const evaluate = async (expression) => {
+  const r = await Promise.race([
+    send('Runtime.evaluate', { expression, returnByValue: true }),
+    sleep(8000).then(() => 'TIMEOUT'),
+  ]);
+  if (r === 'TIMEOUT') throw new Error('Runtime.evaluate timed out');
+  if (r?.error) throw new Error(r.error.message || 'Runtime.evaluate failed');
+  return r;
+};
 await new Promise((r) => ws.addEventListener('open', r));
 await send('Page.enable');
 await send('Network.enable');
@@ -240,10 +264,25 @@ const FIND = `(() => {
 
 const found = [];
 for (const p of PAGES) {
-  await send('Page.navigate', { url: `http://127.0.0.1:${HTTP}/${p}` });
-  await sleep(1400);
-  const r = await send('Runtime.evaluate', { expression: FIND, returnByValue: true });
-  for (const row of r.result?.result?.value || []) found.push({ page: p, ...row });
+  // Retry the PAGE, not the whole run: a browser death costs one page, not the gate.
+  let done = false;
+  for (let attempt = 0; attempt < 3 && !done; attempt++) {
+    try {
+      await send('Page.navigate', { url: `http://127.0.0.1:${HTTP}/${p}` });
+      await sleep(1400);
+      const r = await evaluate(FIND);
+      for (const row of r.result?.result?.value || []) found.push({ page: p, ...row });
+      done = true;
+    } catch (e) {
+      if (socketDead) {
+        console.error(`[align] browser socket died on ${p}; cannot retry with this connection`);
+        break;
+      }
+      console.error(`[align] retry ${attempt + 1}/3 on ${p}: ${e.message}`);
+      await sleep(600);
+    }
+  }
+  if (!done && !socketDead) console.error(`[align] gave up on ${p}`);
 }
 ws.close();
 

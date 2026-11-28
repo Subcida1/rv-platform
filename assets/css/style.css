@@ -279,6 +279,7 @@
   --tint-bg:#14283a;
   --tint-edge:#25455c;
   --tint-ink:#7dd3c8;
+  --ink:#7dd3c8;  /* dark-theme band heading ink; the light --ink #006b6b is only 2.6:1 on --surface */
   --bg-2:#151f31;
   --bg-3:#1b2637;
   --surface-2:#1a2434;
@@ -318,6 +319,7 @@
     --tint-bg:#14283a;
     --tint-edge:#25455c;
     --tint-ink:#7dd3c8;
+    --ink:#7dd3c8;
     --bg-2:#151f31;
     --bg-3:#1b2637;
     --surface-2:#1a2434;
@@ -1121,10 +1123,17 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
    to sit under the group head, so an open panel and a closed one both read as one
    block rather than a floating list. */
 .mm-panel{border-top:1px solid var(--border)}
-.mm-subhead{margin:0;padding:12px 0 4px 18px;font-size:var(--fs-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3)}
-/* The exit line matches the hub link's weight, not a section head's: it is a sibling of
-   the rows, sitting last, and it is the route to the page they all belong to. */
-.mm-sub-all{font-weight:700;color:var(--text)}
+/* A THIN RULE ABOVE EACH SUB-HEADING GROUP (T, 2026-11-28). The heading has to read as
+   a division of the panel, not as one more row, so it carries a divider above it -- the
+   same 1px border the rows use, tuned down to a lighter ink so the label sits between
+   two lines rather than competing with the panel's own top border. The FIRST sub-heading
+   is the exception: the panel's top border is directly above it, so a second rule there
+   would draw a double line. :first-child skips it. */
+.mm-subhead{margin:0;padding:13px 0 5px 18px;font-size:var(--fs-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);border-top:1px solid var(--border)}
+/* The first heading sits under the panel's own top border, so it needs no rule of its
+   own AND a little more air above it: without the extra padding the panel border and
+   the label crowded into one band. */
+.mm-subhead:first-child{border-top:none;padding-top:16px}
 
 /* ============================================================
    SITE-WIDE SEARCH (2026-09-22)
