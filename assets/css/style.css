@@ -1108,6 +1108,23 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;gap
 .mm-sub{display:block;padding:13px 0 13px 18px;font-size: var(--fs-md);font-weight:500;color:var(--text-2);border-top:1px solid var(--border)}
 .mm-top:last-child{border-bottom:none}
 .mobile-menu a:hover{color:var(--text)}
+/* THE TOOLS DISCLOSURE (T, 2026-11-28). The head is a <button>, not a link, so it
+   needs the same type reset an <a> never needs: inherit the font, kill the default
+   button chrome, and turn the whole row into the tap target. The chevron is a CSS
+   triangle (no image, no font glyph) that rotates when aria-expanded flips, which is
+   the button's own state -- so the arrow can never disagree with the panel. */
+.mm-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;background:none;border:0;border-bottom:none;font:inherit;font-size:var(--fs-lg);font-weight:700;color:var(--text);cursor:pointer}
+.mm-toggle:hover{color:var(--text)}
+.mm-chev{width:9px;height:9px;flex:none;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .18s;margin-right:4px}
+.mm-toggle[aria-expanded="true"] .mm-chev{transform:rotate(-135deg)}
+/* The panel carries the sub-headings and rows. Its top border is the divider that used
+   to sit under the group head, so an open panel and a closed one both read as one
+   block rather than a floating list. */
+.mm-panel{border-top:1px solid var(--border)}
+.mm-subhead{margin:0;padding:12px 0 4px 18px;font-size:var(--fs-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3)}
+/* The exit line matches the hub link's weight, not a section head's: it is a sibling of
+   the rows, sitting last, and it is the route to the page they all belong to. */
+.mm-sub-all{font-weight:700;color:var(--text)}
 
 /* ============================================================
    SITE-WIDE SEARCH (2026-09-22)

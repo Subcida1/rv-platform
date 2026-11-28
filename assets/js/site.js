@@ -333,16 +333,21 @@
  /* THE PHONE MENU CARRIES THE SAME LISTS AS THE DESKTOP ONE (2026-11-02). It is the only
     navigation below 900px, so a menu that names 7 of 15 tools costs a phone reader eight
     pages they cannot reach at all. Fifteen rows under one heading is the thing to avoid,
-    so the tools split the way the desktop panel splits them: two headings, each still
-    linking the hub. */
- mmGroup('Calculators', rt.tools, [['Fuel cost', rt.toolFuel], ['Watts to amps', rt.toolWatts],
-   ['Solar sizing', rt.toolSolar], ['RV loan', rt.toolLoan],
-   ['Weight & towing', rt.calculator], ['Battery runtime', rt.toolBattery],
-   ['Roof snow load', rt.toolSnow], ['Tire date code', rt.toolTireAge]]) +
- mmGroup('Finders', rt.tools, [['Toilet water valve', rt.toolToilet], ['Recall lookup', rt.toolRecall],
-   ['Anode rod', rt.toolAnode], ['Converter and power center', rt.toolConverter],
-   ['Appliance control board', rt.toolBoard], ['Water filter', rt.toolFilter],
-   ['State brake laws', rt.toolBrakeLaws]]) +
+    so the tools keep the desktop panel's split into Calculators and Finders -- but as
+    SUB-HEADINGS inside one Tools group, not as two top-level groups of their own. T,
+    2026-11-28: the two headings read as two main-nav sections when they are one page
+    (/tools/), so the phone nav said "six sections" where the desktop said "Tools". The
+    outer group is the section; the inner labels just divide its fifteen rows by the
+    question they answer. Both, and the outer head, link the hub. */
+ mmToolsGroup(rt.tools,
+   [['Calculators', [['Fuel cost', rt.toolFuel], ['Watts to amps', rt.toolWatts],
+     ['Solar sizing', rt.toolSolar], ['RV loan', rt.toolLoan],
+     ['Weight & towing', rt.calculator], ['Battery runtime', rt.toolBattery],
+     ['Roof snow load', rt.toolSnow], ['Tire date code', rt.toolTireAge]]],
+    ['Finders', [['Toilet water valve', rt.toolToilet], ['Recall lookup', rt.toolRecall],
+     ['Anode rod', rt.toolAnode], ['Converter and power center', rt.toolConverter],
+     ['Appliance control board', rt.toolBoard], ['Water filter', rt.toolFilter],
+     ['State brake laws', rt.toolBrakeLaws]]]]) +
  mmGroup('Guides', rt.guides, [['All guides', rt.guides],
    ['Electrical and charging', rt.guides + '#electrical-and-charging'],
    ['Heating, cooling and appliances', rt.guides + '#heat-cool-and-appliances'],
@@ -368,10 +373,11 @@
    ['Recalls and bulletins', rt.manualsRecalls]]) +
  '<a class="mm-top" href="' + R(rt.about) + '">About</a>' +
      signinLink('mm-top') +
- /* Day/night, in the phone menu as well as the nav bar. The bar's own button is
-    icon-only below 900px, so without this row a phone reader gets a switch with
-    no words on it. Same hook data-mode-toggle, so one listener drives both. */
- '<button type="button" class="mm-top mm-mode" data-mode-toggle aria-pressed="false" aria-label="Switch to night mode"><span class="js-mm-mode-text">Night mode</span><span class="mm-mode-state" aria-hidden="true">Off</span></button>' +
+ /* NO DAY/NIGHT ROW IN THE PHONE MENU (T, 2026-11-28). It sat between About and
+    Contact and read as one more nav link rather than a control, so T took it out of
+    the hamburger. The bar's own switch (icon-only below 900px) is now the only one
+    and it carries the mode; labelModeButton still guards the .mm-mode-state and
+    .js-mm-mode-text spans, so their absence is a no-op there. */
  '<a class="mm-top" href="' + R(rt.contact) + '">Contact</a>' +
  '</div></nav>';
  }
@@ -386,6 +392,34 @@
  items.map(function (it) {
  return '<a class="mm-sub" href="' + R(it[1]) + '">' + esc(it[0]) + '</a>';
  }).join('') + '</div>';
+ }
+
+ /* THE TOOLS GROUP IS THE ONE COLLAPSIBLE SECTION (T, 2026-11-28, variant B).
+    Every other group in the phone menu is a short list that can just sit open. Tools
+    is fifteen rows, so it starts COLLAPSED behind its own heading and expands on tap,
+    and only it carries a chevron. Calculators and Finders are sub-headings INSIDE the
+    panel -- non-links that divide the rows by the question they answer -- so the phone
+    menu reads one section where it used to read two ("Calculators" and "Finders" as
+    separate top-level groups, when both are /tools/). The heading itself, and each
+    sub-heading's rows, keep their destinations; the heading still links the hub.
+
+    A DISCLOSURE, NOT A NAV ROW. The head is a <button aria-expanded> so it opens in
+    place and never navigates; a screen reader hears a collapsed control, and the panel
+    is hidden with [hidden] rather than by class so it is out of the a11y tree until
+    opened. The "All 15 tools" line at the bottom is the exit to the hub, mirroring the
+    desktop panel's drop-all. */
+ function mmToolsGroup(href, sections) {
+ var inner = sections.map(function (sec) {
+ return '<p class="mm-subhead">' + esc(sec[0]) + '</p>' +
+ sec[1].map(function (it) {
+ return '<a class="mm-sub" href="' + R(it[1]) + '">' + esc(it[0]) + '</a>';
+ }).join('');
+ }).join('');
+ return '<div class="mm-group">' +
+ '<button type="button" class="mm-head mm-toggle" aria-expanded="false" aria-controls="mm-tools-panel" onclick="RV.toggleMmGroup(this)">' +
+ 'Tools<span class="mm-chev" aria-hidden="true"></span></button>' +
+ '<div class="mm-panel" id="mm-tools-panel" hidden>' + inner +
+ '<a class="mm-sub mm-sub-all" href="' + R(href) + '">All 15 tools</a></div></div>';
  }
 
  /* ---------- back to top ----------
@@ -493,6 +527,18 @@ function footLogoHTML() {
  var m = $('.mobile-menu');
  if (!m) return;
  m.style.display = (m.style.display === 'flex') ? 'none' : 'flex';
+ }
+
+ /* The Tools disclosure in the phone menu. Opens the panel in place; the button is not
+    a link, so this never navigates. aria-expanded is the single source of truth for
+    the chevron's rotation (CSS keys off it), so there is no second class to keep in
+    sync. */
+ function toggleMmGroup(btn) {
+ var panel = btn && btn.parentNode ? btn.parentNode.querySelector('.mm-panel') : null;
+ if (!panel) return;
+ var open = panel.hasAttribute('hidden');
+ if (open) { panel.removeAttribute('hidden'); } else { panel.setAttribute('hidden', ''); }
+ btn.setAttribute('aria-expanded', open ? 'true' : 'false');
  }
 
  /* ---------- reveal on scroll ---------- */
@@ -1309,6 +1355,7 @@ function initTheme() {
  brand: CFG.brand,
  contactEmail: CFG.contact ? CFG.contact.email : '',
  toggleMenu: toggleMenu,
+ toggleMmGroup: toggleMmGroup,
  toTop: toTop,
  searchRoute: searchRoute,
  track: track,
