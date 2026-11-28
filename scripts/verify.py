@@ -1212,8 +1212,26 @@ if leaks:
 # A page without the mist class renders the whole site in the retired sunset
 # gradient, because that is what :root still holds. Cheaper to check than to
 # notice.
+# MATCH THE CLASS TOKEN, NOT THE WHOLE ATTRIBUTE (2026-11-27). This tested for the
+# exact string class="g-theme-mist", so the moment a page's body carried a SECOND
+# class (the tool pages' class="g-theme-mist tool-page" from the mobile pass) it
+# reported "no g-theme-mist body class on" for 15 pages that all carry the class.
+# The property is "the body tag names g-theme-mist", and a substring of one exact
+# spelling is not that property - the same presence-vs-property trap as this file's
+# own notes warn about. Read the body's OPENING TAG and require the token as a
+# whole word inside its class list.
+def _mist_on_body(html):
+    m = re.search(r"<body\b[^>]*>", html, re.I)
+    if not m:
+        return False
+    tag = m.group(0)
+    cm = re.search(r'class\s*=\s*"([^"]*)"', tag, re.I)
+    if not cm:
+        return False
+    return "g-theme-mist" in cm.group(1).split()
+
 no_mist = [str(p.relative_to(ROOT)) for p in pages
-           if 'class="g-theme-mist"' not in p.read_text(encoding="utf-8")]
+           if not _mist_on_body(p.read_text(encoding="utf-8"))]
 if no_mist:
     bad_theme.append("no g-theme-mist body class on: %s" % ", ".join(no_mist[:8]))
 

@@ -410,6 +410,43 @@ input,select,textarea{font-family:inherit}
 @media(min-width:1024px){.tool-intro{padding-top:44px;max-width:var(--maxw);margin:0 auto}}
 .tool-intro h1.lg{font-size:clamp(24px,3vw,34px);margin-top:0}
 .tool-intro .lede{margin-top:10px}
+/* THE TOOL PAGE ON A PHONE: the app-like pass of 2026-11-27, the same one the towing calculator got
+   translated onto this stylesheet. On a phone the tool is an app, not a column of prose, so:
+     - its cards own the width of the screen, 12px from each edge. That is the figure measured on the
+       calculator at 390px; in .wrap's 24px gutter the tool read as a web page inside a web page.
+     - the cards carry the app's radius, --radius-lg, which is the calculator's rounded-3xl.
+     - the intro above them behaves like an app header so the tool is on the first screen. .tool-intro
+       already declares that and never landed (see the note above .page-intro); these are its own
+       numbers, 28px and 12px, not new ones.
+   Scoped to body.tool-page, which is 15 of the 16 pages under /tools/ (the exception is the vendored
+   towing calculator, which is the app this pass copies and which carries none of the selectors
+   below), and to screen so print keeps the page geometry. Only the cards move, not the container: on
+   the finder pages the same .prose also carries the article under the tool, and article text keeps
+   the 24px gutter. No card nests inside another card on these pages (measured); a nested one would
+   need its own inset. */
+@media screen and (max-width:600px){
+  body.tool-page .wrap.page-intro{padding-top:28px;padding-bottom:12px}
+  body.tool-page main .sec.pad-30{padding-top:20px}
+  body.tool-page main .panel,
+  body.tool-page main .card,
+  body.tool-page main .t-grid{margin-inline:-12px}
+  /* The panel keeps its own edge but gives the padding back, so the 12px inset lands as usable
+     width rather than as inset plus 24px of the same. 18px at 393, 14.7px at 320: the content
+     inset (12 + 1 + padding) is 31px at 393, against the 49px the 24px gutter plus 24px padding
+     gave. Below 14px the text starts to crowd the 24px radius. */
+  body.tool-page main .panel,
+  body.tool-page main .card{padding:clamp(14px,4.6vw,20px)}
+  /* THE SAVE ROW GOES WITH THE CARD. "Print or save as PDF" is the tool's own action, and on 13 of
+     the 15 pages it is a sibling of the card, not inside it, so it would sit 12px in from the card
+     edge the moment the card moved out. Scoped to the two containers it actually lives in: a
+     .tool-save inside a card (tire-date-code) is already aligned to the card's content and must not
+     move twice. */
+  body.tool-page main .wc-layout > .tool-save,
+  body.tool-page main .prose > .tool-save{margin-inline:-12px}
+  body.tool-page main .panel,
+  body.tool-page main .card,
+  body.tool-page main .t-card{border-radius:var(--radius-lg)}
+}
 .hidden{display:none!important}
 .muted{color:var(--text-2)}
 .flex{display:flex;align-items:center}
@@ -2634,6 +2671,10 @@ details.faq p{color:var(--text-2);font-size: var(--fs-lg);line-height:1.7;paddin
 .waste-box{display:flex;align-items:center;gap:8px;font-size: var(--fs-sm);color:var(--text);font-weight:700;cursor:pointer;padding:8px 12px;min-height:44px;border:1px solid var(--border);border-radius:9px;background:var(--surface)}
 .waste-box:hover{border-color:var(--border-2)}
 .waste-box input{width:17px;height:17px;accent-color:var(--c-sky);cursor:pointer}
+/* THE APPLIANCE FIGURE IS THE HALF OF THE ROW THAT GETS COMPARED. watts-to-amps prints it in <small>
+   inside a 13px label, and the browser default sizes <small> at 10.8px, which made it the smallest
+   text on the page. 12px, --fs-xs, is this site's floor. Found by the mobile audit, 2026-11-27. */
+.waste-box small{font-size:var(--fs-xs)}
 /* A CHECKBOX THAT ASKS A YES/NO QUESTION INSIDE A TOOL FIELD, 2026-11-02. Its own class and not
    .waste-box: that one belongs to the towing calculator's waste-water list, and a rule named after
    one page's subject borrowed by another page is how a retired class goes on being load-bearing. */

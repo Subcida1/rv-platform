@@ -147,7 +147,14 @@ SIZE_CEILING = 30
 # .parts-sys, and 90 -> 108 for the generic [id] target (90 is still used elsewhere, so
 # it stays in the count). That is 150 and 210 out, 108, 168 and 228 in, so the
 # set is one larger. The values are measured against the new bar, not chosen from a menu.
-SPACE_CEILING = 57
+# RAISED 57 -> 58 ON 2026-11-27, same reason, and this scale counts a responsive value
+# exactly as the type scale above already does: that ratchet carries 16 clamp() font sizes
+# as literals, so treating a clamp() as "not a literal" here would make the two scales
+# disagree on the same question. The new value is the tool page's card padding,
+# clamp(14px,4.6vw,20px) - a fluid expression, not a fixed step, tracking the same
+# app-like card the towing calculator uses. 14px and 20px are its own bounds and land on
+# the space scale (--space-4 and --space-5), so this is one fluid value, not drift.
+SPACE_CEILING = 58
 
 
 def collect_centers():

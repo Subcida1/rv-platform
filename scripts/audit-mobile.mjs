@@ -219,7 +219,17 @@ const PROBE = `(function(){
 
   var out = { vw: vw, vh: vh, edge: [], tight: [], tiny: [], taps: [], gutters: [], overflow: 0, offenders: [], height: 0 };
 
-  out.overflow = document.documentElement.scrollWidth - vw;
+  /* A FIGURE THAT CANNOT MEAN WHAT IT SAYS. At 320px, emulated mobile Chrome reports
+     documentElement.scrollWidth as window.innerWidth (330) while clientWidth is 320, so the plain
+     subtraction reported a 10px "pages scrolling sideways" on all 16 tool pages on 2026-11-27.
+     It was measured false: nothing in the DOM crossed the layout viewport, hiding scrollbars with
+     Emulation.setScrollbarsHidden changed nothing, and scrollLeft = 999 left scrollLeft at 0.
+     scrollWidth has a floor of max(clientWidth, innerWidth) under this emulation, so only a figure
+     ABOVE that floor is content. The extent is still reported against the layout viewport, so a real
+     overflow keeps its true value: a deliberate 360px box at a 320 viewport reports 40, not 30. */
+  var reach = Math.max(vw, window.innerWidth);
+  out.overflow = document.documentElement.scrollWidth > reach
+    ? document.documentElement.scrollWidth - vw : 0;
   /* The offender sweep runs whether or not the PAGE scrolls, because
      body{overflow-x:hidden} makes documentElement.scrollWidth report the viewport
      width no matter what is sticking out. Gating this on out.overflow > 2 meant
