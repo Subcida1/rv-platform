@@ -10,6 +10,22 @@ set -uo pipefail
 cd "$(dirname "$0")/.."
 
 fail=0
+# ---------------------------------------------------------------- 0. which browser
+# The browser stages (a11y, link visibility, word spacing, heading space, alignment) all
+# launch a headless Chrome and talk CDP to it. By default they reach for FLATPAK Chrome,
+# which is fragile here: a flatpak Chrome runs inside bubblewrap and is reparented OUTSIDE
+# the process group the check tries to kill (see the sweep note below), and when ANY flatpak
+# Chrome is already running a new `flatpak run` just hands off to that instance and IGNORES
+# --remote-debugging-port, so the check connects to a browser that is not its own and hangs
+# on the first Runtime.evaluate with "unsettled top-level await" -- a red gate that looks
+# like a site defect but is the harness failing to start a browser. Point every stage at a
+# real (non-flatpak) Chrome instead; the scripts already honour CHROME_BIN, and --no-sandbox
+# is required for a headless Chrome to run as a normal user on this box. Guarded on the file
+# existing so a machine without it (or CI with its own Chrome) still uses the default.
+for _cb in /home/user/.hermes/tools/chromium-1248/chrome-linux64/chrome \
+           /home/user/.hermes/tools/chromium-1208/chrome-linux64/chrome; do
+  if [ -x "$_cb" ]; then export CHROME_BIN="$_cb --no-sandbox"; break; fi
+done
 step() {                        # step <label> <command...>
   local label="$1"; shift
   printf '\n=== %s\n' "$label"
